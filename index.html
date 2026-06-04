@@ -1,0 +1,1254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio Dashboard</title>
+  <meta name="theme-color" content="#0f1723" />
+  <link rel="manifest" href="manifest.json" />
+  <style>
+    /* ── RESET & TOKENS ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0f1723;
+      --bg2: #1a2234;
+      --bg3: #222e44;
+      --border: #2d3d56;
+      --text: #e8edf5;
+      --text2: #8fa4c0;
+      --text3: #5c7a9a;
+      --green: #22c55e;
+      --green-bg: #0d2618;
+      --green-text: #4ade80;
+      --red: #ef4444;
+      --red-bg: #2a0f0f;
+      --red-text: #f87171;
+      --amber: #f59e0b;
+      --amber-bg: #2d1e06;
+      --amber-text: #fbbf24;
+      --blue: #3b82f6;
+      --blue-bg: #0c1f3d;
+      --blue-text: #60a5fa;
+      --purple: #a855f7;
+      --purple-bg: #1e0d38;
+      --purple-text: #c084fc;
+      --wide-color: #22c55e;
+      --narrow-color: #3b82f6;
+      --pending-color: #f59e0b;
+      --radius: 10px;
+      --shadow: 0 2px 12px rgba(0,0,0,.4);
+      --font: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+      --mono: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+    }
+
+    body {
+      font-family: var(--font);
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      padding-bottom: 2rem;
+    }
+
+    /* ── HEADER ── */
+    .header {
+      background: var(--bg2);
+      border-bottom: 1px solid var(--border);
+      padding: 1rem 1.25rem 0.75rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .header-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .header h1 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: -.3px;
+    }
+    .header h1 span { color: var(--blue); }
+    .last-updated {
+      font-size: 0.72rem;
+      color: var(--text3);
+    }
+
+    /* ── SUMMARY BAR ── */
+    .summary-bar {
+      background: var(--bg2);
+      border-bottom: 1px solid var(--border);
+      padding: 0.6rem 1.25rem;
+      display: flex;
+      gap: 1.5rem;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    .summary-bar::-webkit-scrollbar { height: 3px; }
+    .summary-bar::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+    .stat {
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .stat-label {
+      font-size: 0.65rem;
+      color: var(--text3);
+      text-transform: uppercase;
+      letter-spacing: .5px;
+    }
+    .stat-value {
+      font-size: 0.9rem;
+      font-weight: 700;
+      font-family: var(--mono);
+      color: var(--text);
+    }
+    .stat-value.green { color: var(--green-text); }
+    .stat-value.red   { color: var(--red-text); }
+    .stat-divider {
+      width: 1px;
+      background: var(--border);
+      flex-shrink: 0;
+      align-self: stretch;
+      margin: 2px 0;
+    }
+
+    /* ── FILTER / SEARCH BAR ── */
+    .filter-bar {
+      padding: 0.75rem 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+    .chip {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      color: var(--text2);
+      border-radius: 20px;
+      padding: 0.3rem 0.8rem;
+      font-size: 0.75rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all .15s;
+      white-space: nowrap;
+    }
+    .chip:hover { border-color: var(--blue); color: var(--text); }
+    .chip.active { background: var(--blue); border-color: var(--blue); color: #fff; }
+    .chip.chip-wide.active   { background: var(--wide-color); border-color: var(--wide-color); }
+    .chip.chip-narrow.active { background: var(--narrow-color); border-color: var(--narrow-color); }
+    .chip.chip-high.active   { background: var(--purple); border-color: var(--purple); }
+    .chip.chip-profit.active { background: var(--green); border-color: var(--green); color: #000; }
+    .chip.chip-loss.active   { background: var(--red); border-color: var(--red); }
+
+    .search-wrap { position: relative; flex: 1; min-width: 160px; max-width: 300px; }
+    .search-icon {
+      position: absolute;
+      left: 0.6rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text3);
+      font-size: 0.85rem;
+      pointer-events: none;
+    }
+    #search {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      color: var(--text);
+      font-size: 0.78rem;
+      padding: 0.35rem 0.75rem 0.35rem 2rem;
+      width: 100%;
+      outline: none;
+      transition: border-color .15s;
+    }
+    #search::placeholder { color: var(--text3); }
+    #search:focus { border-color: var(--blue); }
+
+    .sort-wrap { display: flex; align-items: center; gap: 0.4rem; margin-left: auto; }
+    .sort-label { font-size: 0.7rem; color: var(--text3); white-space: nowrap; }
+    #sort-select {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      color: var(--text2);
+      border-radius: 6px;
+      padding: 0.3rem 0.5rem;
+      font-size: 0.72rem;
+      outline: none;
+      cursor: pointer;
+    }
+
+    /* ── RESULTS COUNT ── */
+    .results-count {
+      padding: 0 1.25rem 0.5rem;
+      font-size: 0.72rem;
+      color: var(--text3);
+    }
+
+    /* ── CARDS GRID ── */
+    #cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(370px, 1fr));
+      gap: 1rem;
+      padding: 0 1rem 1rem;
+    }
+
+    /* ── CARD ── */
+    .card {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      transition: border-color .15s, transform .15s;
+    }
+    .card:hover { border-color: var(--blue); transform: translateY(-1px); }
+    .card.pending-card { border-color: var(--amber); }
+
+    /* Pending banner */
+    .pending-banner {
+      background: var(--amber-bg);
+      border-bottom: 1px solid var(--amber);
+      padding: 0.35rem 0.75rem;
+      font-size: 0.7rem;
+      color: var(--amber-text);
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    /* Card header */
+    .card-header {
+      padding: 0.85rem 0.9rem 0.6rem;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 0.5rem;
+    }
+    .card-title-group { flex: 1; min-width: 0; }
+    .card-ticker {
+      font-size: 0.95rem;
+      font-weight: 800;
+      font-family: var(--mono);
+      color: var(--text);
+      letter-spacing: .5px;
+    }
+    .card-name {
+      font-size: 0.78rem;
+      color: var(--text2);
+      margin-top: 1px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .card-badges {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 0.3rem;
+      flex-shrink: 0;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+      border-radius: 4px;
+      padding: 2px 7px;
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: .3px;
+      text-transform: uppercase;
+    }
+    .badge-sector  { background: var(--bg3); color: var(--text2); border: 1px solid var(--border); }
+    .badge-wide    { background: var(--green-bg); color: var(--green-text); border: 1px solid #22c55e33; }
+    .badge-narrow  { background: var(--blue-bg);  color: var(--blue-text);  border: 1px solid #3b82f633; }
+    .badge-pending { background: var(--amber-bg); color: var(--amber-text); border: 1px solid #f59e0b33; }
+
+    /* Conviction meter */
+    .conviction-row {
+      padding: 0 0.9rem 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .conviction-label { font-size: 0.65rem; color: var(--text3); white-space: nowrap; }
+    .conviction-bar-wrap {
+      flex: 1;
+      height: 5px;
+      background: var(--bg3);
+      border-radius: 3px;
+      overflow: hidden;
+    }
+    .conviction-bar {
+      height: 100%;
+      border-radius: 3px;
+      transition: width .3s;
+    }
+    .conviction-score {
+      font-size: 0.72rem;
+      font-weight: 700;
+      font-family: var(--mono);
+      min-width: 28px;
+      text-align: right;
+    }
+    .conv-high  { background: var(--green); color: var(--green-text); }
+    .conv-mid   { background: var(--amber); color: var(--amber-text); }
+    .conv-low   { background: var(--red);   color: var(--red-text); }
+    .conv-zero  { background: var(--border); color: var(--text3); }
+
+    /* Price row */
+    .price-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 0;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .price-cell {
+      padding: 0.55rem 0.9rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .price-cell + .price-cell { border-left: 1px solid var(--border); }
+    .price-cell-label {
+      font-size: 0.6rem;
+      color: var(--text3);
+      text-transform: uppercase;
+      letter-spacing: .4px;
+    }
+    .price-cell-value {
+      font-size: 0.85rem;
+      font-weight: 700;
+      font-family: var(--mono);
+      color: var(--text);
+    }
+    .price-cell-value.green { color: var(--green-text); }
+    .price-cell-value.red   { color: var(--red-text); }
+    .price-cell-sub {
+      font-size: 0.65rem;
+      font-family: var(--mono);
+      color: var(--text3);
+    }
+    .price-cell-sub.green { color: var(--green-text); }
+    .price-cell-sub.red   { color: var(--red-text); }
+
+    /* Holdings row */
+    .holdings-row {
+      padding: 0.35rem 0.9rem;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      gap: 1rem;
+      font-size: 0.68rem;
+      color: var(--text3);
+    }
+    .holdings-row span { color: var(--text2); font-weight: 600; font-family: var(--mono); }
+
+    /* Card body */
+    .card-body { padding: 0.75rem 0.9rem; display: flex; flex-direction: column; gap: 0.65rem; }
+
+    .section-label {
+      font-size: 0.6rem;
+      text-transform: uppercase;
+      letter-spacing: .5px;
+      color: var(--text3);
+      margin-bottom: 2px;
+    }
+    .moat-text {
+      font-size: 0.75rem;
+      color: var(--text2);
+      line-height: 1.5;
+    }
+
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; }
+
+    .pill-row { display: flex; flex-wrap: wrap; gap: 4px; }
+    .pill {
+      display: inline-block;
+      border-radius: 12px;
+      padding: 2px 9px;
+      font-size: 0.65rem;
+      font-weight: 500;
+      line-height: 1.6;
+    }
+    .pill-green  { background: var(--green-bg); color: var(--green-text); border: 1px solid #22c55e22; }
+    .pill-red    { background: var(--red-bg);   color: var(--red-text);   border: 1px solid #ef444422; }
+    .pill-blue   { background: var(--blue-bg);  color: var(--blue-text);  border: 1px solid #3b82f622; }
+    .pill-amber  { background: var(--amber-bg); color: var(--amber-text); border: 1px solid #f59e0b22; }
+
+    /* No results */
+    #no-results {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 3rem 1rem;
+      color: var(--text3);
+      font-size: 0.9rem;
+    }
+
+    /* Loading */
+    #loading {
+      text-align: center;
+      padding: 4rem 1rem;
+      color: var(--text3);
+    }
+    .spinner {
+      width: 32px;
+      height: 32px;
+      border: 3px solid var(--border);
+      border-top-color: var(--blue);
+      border-radius: 50%;
+      animation: spin .7s linear infinite;
+      margin: 0 auto 1rem;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* ── ASK CLAUDE BUTTON (inside pending banner) ── */
+    .pending-banner {
+      justify-content: space-between;
+    }
+    .ask-claude-btn {
+      background: linear-gradient(135deg, #7c3aed, #4f46e5);
+      border: none;
+      border-radius: 5px;
+      color: #fff;
+      cursor: pointer;
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: .3px;
+      padding: 3px 9px;
+      white-space: nowrap;
+      transition: opacity .15s;
+      flex-shrink: 0;
+    }
+    .ask-claude-btn:hover { opacity: .85; }
+    .ask-claude-btn:disabled { opacity: .4; cursor: default; }
+
+    /* ── HEADER ACTION BUTTONS ── */
+    .header-actions { display: flex; align-items: center; gap: 0.5rem; flex-shrink: 0; }
+    .hdr-btn {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      color: var(--text2);
+      cursor: pointer;
+      font-size: 0.7rem;
+      font-weight: 600;
+      padding: 0.3rem 0.65rem;
+      transition: all .15s;
+      white-space: nowrap;
+    }
+    .hdr-btn:hover { border-color: var(--blue); color: var(--text); }
+    .hdr-btn.export { border-color: #22c55e44; color: var(--green-text); }
+    .hdr-btn.export:hover { background: var(--green-bg); border-color: var(--green); }
+    .hdr-btn.paste { border-color: #7c3aed44; color: #c084fc; }
+    .hdr-btn.paste:hover { background: #1e0d38; border-color: #7c3aed; }
+
+    /* ── LOADING SPINNER ON CARD ── */
+    .ask-claude-btn.loading {
+      background: var(--bg3);
+      color: var(--text3);
+      pointer-events: none;
+      animation: pulse 1s ease-in-out infinite alternate;
+    }
+    @keyframes pulse { from { opacity:.4 } to { opacity:1 } }
+
+    /* ── MODAL ── */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,.7);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+    }
+    .modal-overlay.open { display: flex; }
+    .modal-box {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      width: 100%;
+      max-width: 580px;
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .modal-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+    .modal-sub {
+      font-size: 0.75rem;
+      color: var(--text2);
+      line-height: 1.6;
+    }
+    .modal-sub code {
+      background: var(--bg3);
+      border-radius: 4px;
+      padding: 1px 5px;
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      color: var(--amber-text);
+    }
+    .modal-textarea {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      color: var(--text);
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      height: 180px;
+      outline: none;
+      padding: 0.75rem;
+      resize: vertical;
+      width: 100%;
+      transition: border-color .15s;
+    }
+    .modal-textarea:focus { border-color: var(--blue); }
+    .modal-textarea::placeholder { color: var(--text3); }
+    .modal-actions { display: flex; gap: 0.5rem; justify-content: flex-end; }
+    .modal-btn {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      color: var(--text2);
+      cursor: pointer;
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 0.4rem 1rem;
+      transition: all .15s;
+    }
+    .modal-btn:hover { border-color: var(--blue); color: var(--text); }
+    .modal-btn.primary {
+      background: linear-gradient(135deg, #7c3aed, #4f46e5);
+      border-color: #7c3aed;
+      color: #fff;
+    }
+    .modal-btn.primary:hover { opacity: .88; }
+    .modal-error {
+      background: var(--red-bg);
+      border: 1px solid var(--red);
+      border-radius: 6px;
+      color: var(--red-text);
+      font-size: 0.72rem;
+      padding: 0.5rem 0.75rem;
+      display: none;
+    }
+    .modal-error.show { display: block; }
+
+    /* ── TOAST ── */
+    .toast {
+      position: fixed;
+      bottom: 1.5rem;
+      left: 50%;
+      transform: translateX(-50%) translateY(4rem);
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      color: var(--text);
+      font-size: 0.78rem;
+      font-weight: 500;
+      padding: 0.55rem 1.25rem;
+      z-index: 2000;
+      transition: transform .25s ease, opacity .25s ease;
+      opacity: 0;
+      pointer-events: none;
+      white-space: nowrap;
+      box-shadow: var(--shadow);
+    }
+    .toast.show { transform: translateX(-50%) translateY(0); opacity: 1; }
+    .toast.green { border-color: var(--green); color: var(--green-text); }
+    .toast.red   { border-color: var(--red);   color: var(--red-text); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 600px) {
+      #cards { grid-template-columns: 1fr; padding: 0 0.5rem 1rem; }
+      .filter-bar { padding: 0.6rem 0.75rem; }
+      .summary-bar { padding: 0.5rem 0.75rem; gap: 1rem; }
+      .header { padding: 0.75rem 0.75rem 0.6rem; }
+      .sort-wrap { width: 100%; margin-left: 0; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="header-top">
+    <h1>📈 <span>Portfolio</span> Dashboard</h1>
+    <div class="header-actions">
+      <button class="hdr-btn paste" onclick="showPasteModal()">📋 Paste Claude Response</button>
+      <button class="hdr-btn export" onclick="exportStocksJSON()">⬇ Export stocks.json</button>
+      <div class="last-updated" id="last-updated">Loading…</div>
+    </div>
+  </div>
+</header>
+
+<!-- SUMMARY BAR -->
+<div class="summary-bar" id="summary-bar">
+  <div class="stat">
+    <div class="stat-label">Invested</div>
+    <div class="stat-value" id="sum-invested">—</div>
+  </div>
+  <div class="stat-divider"></div>
+  <div class="stat">
+    <div class="stat-label">Current Value</div>
+    <div class="stat-value" id="sum-current">—</div>
+  </div>
+  <div class="stat-divider"></div>
+  <div class="stat">
+    <div class="stat-label">Overall P&L ₹</div>
+    <div class="stat-value" id="sum-pnl-abs">—</div>
+  </div>
+  <div class="stat-divider"></div>
+  <div class="stat">
+    <div class="stat-label">Overall P&L %</div>
+    <div class="stat-value" id="sum-pnl-pct">—</div>
+  </div>
+  <div class="stat-divider"></div>
+  <div class="stat">
+    <div class="stat-label">Holdings</div>
+    <div class="stat-value" id="sum-count">—</div>
+  </div>
+  <div class="stat-divider"></div>
+  <div class="stat">
+    <div class="stat-label">In Profit</div>
+    <div class="stat-value green" id="sum-profit">—</div>
+  </div>
+  <div class="stat-divider"></div>
+  <div class="stat">
+    <div class="stat-label">In Loss</div>
+    <div class="stat-value red" id="sum-loss">—</div>
+  </div>
+</div>
+
+<!-- FILTER BAR -->
+<div class="filter-bar">
+  <button class="chip active" data-filter="all">All</button>
+  <button class="chip chip-wide"   data-filter="wide">Wide Moat</button>
+  <button class="chip chip-narrow" data-filter="narrow">Narrow Moat</button>
+  <button class="chip chip-high"   data-filter="high">High Conviction (8+)</button>
+  <button class="chip chip-profit" data-filter="profit">In Profit</button>
+  <button class="chip chip-loss"   data-filter="loss">In Loss</button>
+  <div class="search-wrap">
+    <span class="search-icon">🔍</span>
+    <input type="search" id="search" placeholder="Ticker or company…" autocomplete="off" />
+  </div>
+  <div class="sort-wrap">
+    <span class="sort-label">Sort:</span>
+    <select id="sort-select">
+      <option value="pnl_pct_desc" selected>P&L % ↓</option>
+      <option value="pnl_pct_asc">P&L % ↑</option>
+      <option value="pnl_abs_desc">P&L ₹ ↓</option>
+      <option value="conviction_desc">Conviction ↓</option>
+      <option value="ticker_asc">Ticker A→Z</option>
+    </select>
+  </div>
+</div>
+
+<div class="results-count" id="results-count"></div>
+
+<!-- CARDS -->
+<div id="loading">
+  <div class="spinner"></div>
+  <div>Fetching portfolio data…</div>
+</div>
+<div id="cards" style="display:none;"></div>
+
+<!-- API KEY SETUP MODAL -->
+<div class="modal-overlay" id="paste-modal" onclick="if(event.target===this)closePasteModal()">
+  <div class="modal-box">
+    <div class="modal-title">📋 Paste Claude's Analysis</div>
+    <div class="modal-sub">
+      Paste the JSON block Claude returned below.
+      It will be applied to the matching ticker automatically.
+    </div>
+    <textarea class="modal-textarea" id="paste-textarea"
+      placeholder='Paste Claude JSON here…
+
+Example:
+{
+  "ticker": "DEEDEV",
+  "moat_type": "Narrow",
+  "moat_class": "narrow",
+  "conviction": 6,
+  "moat": "...",
+  "leadership": "...",
+  "non_rep": "...",
+  "tailwinds": ["..."],
+  "risks": ["..."],
+  "track": ["..."]
+}'></textarea>
+    <div class="modal-error" id="paste-error"></div>
+    <div class="modal-actions">
+      <button class="modal-btn" onclick="closePasteModal()">Cancel</button>
+      <button class="modal-btn primary" onclick="applyPastedAnalysis()">✅ Apply Analysis</button>
+    </div>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<script>
+// ── Utilities ──────────────────────────────────────────────────────────────
+const fmt = (n, digits=2) =>
+  n == null ? '—' : n.toLocaleString('en-IN', {minimumFractionDigits: digits, maximumFractionDigits: digits});
+const fmtRs = (n) =>
+  n == null ? '—' : '₹' + fmt(Math.abs(n), 0);
+const fmtPct = (n) =>
+  n == null ? '—' : (n >= 0 ? '+' : '') + fmt(n, 2) + '%';
+
+function convictionClass(c) {
+  if (!c || c === 0) return 'conv-zero';
+  if (c >= 8) return 'conv-high';
+  if (c >= 6) return 'conv-mid';
+  return 'conv-low';
+}
+
+function moatBadge(moat_class, moat_type) {
+  if (moat_class === 'wide')    return `<span class="badge badge-wide">▲ Wide Moat</span>`;
+  if (moat_class === 'narrow')  return `<span class="badge badge-narrow">◆ Narrow Moat</span>`;
+  return `<span class="badge badge-pending">⏳ ${moat_type || 'Pending'}</span>`;
+}
+
+function pills(arr, cls) {
+  if (!arr || arr.length === 0) return '<span class="moat-text">—</span>';
+  return arr.map(t => `<span class="pill pill-${cls}">${esc(t)}</span>`).join('');
+}
+
+function esc(s) {
+  if (!s) return '';
+  return String(s)
+    .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
+    .replace(/"/g,'&quot;');
+}
+
+// ── Render a single card ──────────────────────────────────────────────────
+function renderCard(s) {
+  const pnlPos  = s.pnl_pct != null && s.pnl_pct >= 0;
+  const pnlNeg  = s.pnl_pct != null && s.pnl_pct < 0;
+  const pending = s.moat_class === 'pending' || s.moat_type === 'Pending';
+  const cc      = convictionClass(s.conviction);
+  const convPct = s.conviction ? Math.round(s.conviction / 10 * 100) : 0;
+
+  const pendingBanner = pending
+    ? `<div class="pending-banner">⚠️ Fundamental analysis pending<button class="ask-claude-btn" onclick="askClaude('${esc(s.ticker)}',event)">✨ Ask Claude</button></div>`
+    : '';
+
+  const ltp     = s.ltp != null ? '₹' + fmt(s.ltp) : '—';
+  const buyAvg  = s.buy_avg ? '₹' + fmt(s.buy_avg) : '—';
+  const pnlPct  = s.pnl_pct != null ? fmtPct(s.pnl_pct) : '—';
+  const pnlAbs  = s.pnl_abs != null
+    ? (s.pnl_abs >= 0 ? '+' : '-') + '₹' + fmt(Math.abs(s.pnl_abs), 0)
+    : '—';
+  const qty     = s.quantity != null ? s.quantity.toLocaleString('en-IN') : '—';
+  const invested = (s.buy_avg && s.quantity) ? '₹' + fmt(s.buy_avg * s.quantity, 0) : '—';
+
+  const pnlPctColor = pnlPos ? 'green' : (pnlNeg ? 'red' : '');
+  const pnlAbsColor = pnlPos ? 'green' : (pnlNeg ? 'red' : '');
+
+  return `
+<div class="card ${pending ? 'pending-card' : ''}" data-ticker="${esc(s.ticker)}" data-moat="${esc(s.moat_class)}" data-conviction="${s.conviction || 0}" data-pnl-pct="${s.pnl_pct ?? -9999}" data-pnl-abs="${s.pnl_abs ?? -999999}">
+  ${pendingBanner}
+  <div class="card-header">
+    <div class="card-title-group">
+      <div class="card-ticker">${esc(s.ticker)}</div>
+      <div class="card-name" title="${esc(s.name)}">${esc(s.name || '—')}</div>
+    </div>
+    <div class="card-badges">
+      ${moatBadge(s.moat_class, s.moat_type)}
+      <span class="badge badge-sector">${esc(s.sector || 'Unknown')}</span>
+    </div>
+  </div>
+
+  <div class="conviction-row">
+    <span class="conviction-label">Conviction</span>
+    <div class="conviction-bar-wrap">
+      <div class="conviction-bar ${cc}" style="width:${convPct}%"></div>
+    </div>
+    <span class="conviction-score ${cc}">${s.conviction ? s.conviction + '/10' : 'N/A'}</span>
+  </div>
+
+  <div class="price-row">
+    <div class="price-cell">
+      <div class="price-cell-label">LTP</div>
+      <div class="price-cell-value">${ltp}</div>
+    </div>
+    <div class="price-cell">
+      <div class="price-cell-label">Buy Avg</div>
+      <div class="price-cell-value">${buyAvg}</div>
+    </div>
+    <div class="price-cell">
+      <div class="price-cell-label">P&amp;L %</div>
+      <div class="price-cell-value ${pnlPctColor}">${pnlPct}</div>
+      <div class="price-cell-sub ${pnlAbsColor}">${pnlAbs}</div>
+    </div>
+  </div>
+
+  <div class="holdings-row">
+    Qty: <span>${qty}</span>&nbsp;&nbsp;Invested: <span>${invested}</span>
+  </div>
+
+  ${pending ? `<div class="card-body"><p class="moat-text" style="color:var(--amber-text)">Analysis pending. Add fundamental details to stocks.json for this ticker.</p></div>` : `
+  <div class="card-body">
+    ${s.moat ? `<div>
+      <div class="section-label">Economic Moat</div>
+      <div class="moat-text">${esc(s.moat)}</div>
+    </div>` : ''}
+
+    <div class="two-col">
+      ${s.leadership ? `<div>
+        <div class="section-label">Market Leadership</div>
+        <div class="moat-text">${esc(s.leadership)}</div>
+      </div>` : ''}
+      ${s.non_rep ? `<div>
+        <div class="section-label">Non-Replicable Edge</div>
+        <div class="moat-text">${esc(s.non_rep)}</div>
+      </div>` : ''}
+    </div>
+
+    ${s.tailwinds && s.tailwinds.length ? `<div>
+      <div class="section-label">Tailwinds</div>
+      <div class="pill-row">${pills(s.tailwinds, 'green')}</div>
+    </div>` : ''}
+
+    ${s.risks && s.risks.length ? `<div>
+      <div class="section-label">Risks</div>
+      <div class="pill-row">${pills(s.risks, 'red')}</div>
+    </div>` : ''}
+
+    ${s.track && s.track.length ? `<div>
+      <div class="section-label">Tracking KPIs</div>
+      <div class="pill-row">${pills(s.track, 'blue')}</div>
+    </div>` : ''}
+  </div>`}
+</div>`.trim();
+}
+
+// ── User edits (persisted in localStorage) ────────────────────────────────
+let userEdits = {};
+try {
+  const saved = localStorage.getItem('portfolio_edits');
+  if (saved) userEdits = JSON.parse(saved);
+} catch(e) {}
+
+function saveUserEdits() {
+  try { localStorage.setItem('portfolio_edits', JSON.stringify(userEdits)); } catch(e) {}
+}
+
+function applyUserEdits(stocks) {
+  stocks.forEach(s => {
+    const edit = userEdits[s.ticker];
+    if (edit) Object.assign(s, edit);
+  });
+}
+
+// ── Toast ──────────────────────────────────────────────────────────────────
+let toastTimer = null;
+function showToast(msg, type = '') {
+  const el = document.getElementById('toast');
+  el.textContent = msg;
+  el.className = 'toast show' + (type ? ' ' + type : '');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => { el.className = 'toast'; }, 3000);
+}
+
+// ── Ask Claude — copy prompt + open claude.ai ────────────────────────────
+function askClaude(ticker, event) {
+  const btn = event && event.currentTarget;
+  const s = allStocks.find(x => x.ticker === ticker);
+  if (!s) return;
+
+  const ltp     = s.ltp     ? '₹' + s.ltp.toFixed(2)     : 'N/A';
+  const buyAvg  = s.buy_avg ? '₹' + s.buy_avg.toFixed(2) : 'N/A';
+  const pnl     = s.pnl_pct != null
+    ? (s.pnl_pct >= 0 ? '+' : '') + s.pnl_pct.toFixed(1) + '%'
+    : 'N/A';
+
+  const prompt = `You are a senior equity analyst specialising in Indian listed companies. Analyse the stock below with maximum depth and return ONLY a single JSON object at the end — no markdown, no explanation, no extra text before or after the JSON block.
+
+===== STOCK =====
+Ticker  : ${s.ticker}
+Name    : ${s.name || 'Unknown'}
+Sector  : ${s.sector || 'Unknown'}
+LTP     : ${ltp}
+Buy Avg : ${buyAvg}
+P&L     : ${pnl}
+=================
+
+Use the analytical framework below to inform each JSON field:
+
+## 1. OVERVIEW
+Provide the full legal company name, sector, sub-sector, and HQ city/state.
+
+## 2. MOAT ANALYSIS
+Identify the PRIMARY moat type:
+- Switching costs — how painful is it for customers to leave?
+- Network effects — does value grow as more users join?
+- Cost advantages — structural cost edge (scale, process, location)?
+- Intangible assets — patents, brands, regulatory licences?
+- Efficient scale — niche market that only supports one player?
+Rate it: Narrow / Wide / Very Wide.
+Justify with ONE concrete data point (e.g. "93% gross retention", "23 bn API calls/day", "FDA exclusivity until 2031").
+
+## 3. MARKET LEADERSHIP & REVENUE CONCENTRATION
+- Current market share % in the primary addressable market.
+- Is this company #1 or #2? How defensible vs. the #2 player?
+- Flag if a single product, geography, or customer accounts for >70% of revenue — concentration risk or dominance signal?
+
+## 4. NON-REPLICABLE CHARACTERISTICS
+Answer all four:
+a) What would it cost (time + capital) for a well-funded rival to replicate their core product today?
+b) Has anyone tried and failed? Who and why?
+c) What specific assets are truly hard to copy — data flywheels, proprietary models, physical infrastructure, talent density, regulatory approvals?
+d) Growth quality — is revenue growth driven by pricing power, volume, or new markets? Which is most sustainable?
+
+## 5. STRUCTURAL TAILWINDS
+List 2–3 macro/sector tailwinds:
+- Name the trend (e.g. "India fintech penetration", "domestic defence indigenisation", "specialty chemical China+1")
+- Approximate TAM size/growth rate
+- How directly does this company capture it vs. being an indirect beneficiary?
+- Expected duration: 1–3 yrs / 3–7 yrs / decade+
+
+## 6. KEY METRICS TO FLAG
+For the JSON "track" field, choose the 2–3 metrics most critical for this specific business:
+- Revenue growth YoY (is the top line accelerating?)
+- Gross margin % (pricing power proxy)
+- FCF margin % (real cash generation)
+- Net Revenue Retention / repeat purchase rate / order book
+- Any company-specific KPI (e.g. bed occupancy for hospitals, AUM growth for AMCs, utilisation for chemicals)
+
+## 7. RISKS
+List the top 3 genuine risks — not generic boilerplate. Be specific to this company.
+
+---
+
+Now return ONLY this JSON (fill every field; be specific, not generic):
+{
+  "ticker": "${s.ticker}",
+  "name": "Full legal company name",
+  "sector": "Sector | Sub-sector",
+  "moat_type": "Wide | Narrow | None",
+  "moat_class": "wide | narrow | none",
+  "conviction": <integer 1-10>,
+  "moat": "Primary moat type — one concrete justification with a data point",
+  "leadership": "Market share %, #1/#2 position, defensibility vs. nearest rival",
+  "non_rep": "The single most non-replicable asset and the specific reason it cannot be copied",
+  "tailwinds": [
+    "Tailwind 1: name, TAM/growth, direct vs indirect, duration",
+    "Tailwind 2: name, TAM/growth, direct vs indirect, duration",
+    "Tailwind 3: name, TAM/growth, direct vs indirect, duration"
+  ],
+  "risks": [
+    "Risk 1 — specific to this company",
+    "Risk 2 — specific to this company",
+    "Risk 3 — specific to this company"
+  ],
+  "track": [
+    "KPI 1 to monitor and why",
+    "KPI 2 to monitor and why"
+  ]
+}`;
+
+  navigator.clipboard.writeText(prompt).then(() => {
+    if (btn) {
+      btn.textContent = '✅ Prompt copied!';
+      setTimeout(() => { btn.textContent = '✨ Ask Claude'; }, 2500);
+    }
+    showToast('✅ Detailed prompt copied — paste it in Claude, then paste JSON back here', 'green');
+  }).catch(() => {
+    // Clipboard blocked — show fallback
+    showPasteModal();
+    document.getElementById('paste-textarea').value = prompt;
+    showToast('Clipboard blocked — copy the prompt from the box below', '');
+  });
+
+  window.open('https://claude.ai', '_blank', 'noopener');
+}
+
+// ── Paste modal ────────────────────────────────────────────────────────────
+function showPasteModal() {
+  document.getElementById('paste-modal').classList.add('open');
+  document.getElementById('paste-textarea').value = '';
+  document.getElementById('paste-error').classList.remove('show');
+  setTimeout(() => document.getElementById('paste-textarea').focus(), 100);
+}
+
+function closePasteModal() {
+  document.getElementById('paste-modal').classList.remove('open');
+}
+
+function applyPastedAnalysis() {
+  const raw = document.getElementById('paste-textarea').value.trim();
+  const errEl = document.getElementById('paste-error');
+  errEl.classList.remove('show');
+
+  // Strip markdown code fences if present
+  let jsonStr = raw;
+  const fenceMatch = raw.match(/```(?:json)?\s*([\s\S]*?)```/);
+  if (fenceMatch) jsonStr = fenceMatch[1].trim();
+  const braceMatch = jsonStr.match(/\{[\s\S]*\}/);
+  if (braceMatch) jsonStr = braceMatch[0];
+
+  let data;
+  try { data = JSON.parse(jsonStr); }
+  catch(e) { errEl.textContent = '❌ Could not parse JSON: ' + e.message; errEl.classList.add('show'); return; }
+
+  if (!data.ticker) {
+    errEl.textContent = '❌ JSON must contain a "ticker" field.';
+    errEl.classList.add('show');
+    return;
+  }
+
+  const ticker = data.ticker.toUpperCase();
+  if (data.moat_type && !data.moat_class) {
+    data.moat_class = data.moat_type.toLowerCase().split(' ')[0];
+  }
+
+  const idx = allStocks.findIndex(s =>
+    s.ticker === ticker ||
+    s.ticker === ticker + '-T' ||
+    s.ticker === ticker + '-X' ||
+    s.ticker === ticker + '-E'
+  );
+
+  if (idx === -1) {
+    errEl.textContent = `❌ Ticker "${ticker}" not found in portfolio (${allStocks.length} stocks loaded).`;
+    errEl.classList.add('show');
+    return;
+  }
+
+  const priceFields = new Set(['ltp','buy_avg','quantity','pnl_pct','pnl_abs','updated']);
+  const update = {};
+  Object.entries(data).forEach(([k, v]) => { if (!priceFields.has(k)) update[k] = v; });
+
+  Object.assign(allStocks[idx], update);
+  const key = allStocks[idx].ticker;
+  userEdits[key] = Object.assign(userEdits[key] || {}, update);
+  saveUserEdits();
+
+  closePasteModal();
+  renderAll();
+  showToast(`✅ Analysis applied to ${key}`, 'green');
+}
+
+// ── Export stocks.json ─────────────────────────────────────────────────────
+function exportStocksJSON() {
+  const priceFields = new Set(['ltp','buy_avg','quantity','pnl_pct','pnl_abs','updated']);
+  const exportData = allStocks.map(s => {
+    const out = {};
+    Object.entries(s).forEach(([k,v]) => { if (!priceFields.has(k)) out[k] = v; });
+    return out;
+  });
+  const blob = new Blob([JSON.stringify(exportData, null, 2)], {type: 'application/json'});
+  const url  = URL.createObjectURL(blob);
+  const a    = document.createElement('a');
+  a.href = url; a.download = 'stocks.json'; a.click();
+  URL.revokeObjectURL(url);
+  showToast('⬇ stocks.json downloaded — replace file in Dashboard folder', 'green');
+}
+
+// ── State ──────────────────────────────────────────────────────────────────
+let allStocks = [];
+let activeFilter = 'all';
+let searchQuery  = '';
+let sortKey = 'pnl_pct_desc';
+
+// ── Summary bar ────────────────────────────────────────────────────────────
+function updateSummary(stocks) {
+  let invested = 0, current = 0, inProfit = 0, inLoss = 0;
+  let countWithPrice = 0;
+
+  stocks.forEach(s => {
+    if (s.buy_avg && s.quantity) {
+      invested += s.buy_avg * s.quantity;
+    }
+    if (s.ltp && s.quantity) {
+      current += s.ltp * s.quantity;
+      countWithPrice++;
+    }
+    if (s.pnl_pct != null) {
+      if (s.pnl_pct >= 0) inProfit++;
+      else inLoss++;
+    }
+  });
+
+  const pnlAbs = current - invested;
+  const pnlPct = invested > 0 ? (pnlAbs / invested * 100) : 0;
+
+  document.getElementById('sum-invested').textContent = '₹' + fmt(invested, 0);
+  document.getElementById('sum-current').textContent  = '₹' + fmt(current, 0);
+
+  const pnlAbsEl = document.getElementById('sum-pnl-abs');
+  const pnlPctEl = document.getElementById('sum-pnl-pct');
+  pnlAbsEl.textContent = (pnlAbs >= 0 ? '+' : '-') + '₹' + fmt(Math.abs(pnlAbs), 0);
+  pnlAbsEl.className = 'stat-value ' + (pnlAbs >= 0 ? 'green' : 'red');
+  pnlPctEl.textContent = fmtPct(pnlPct);
+  pnlPctEl.className = 'stat-value ' + (pnlPct >= 0 ? 'green' : 'red');
+
+  document.getElementById('sum-count').textContent  = stocks.length;
+  document.getElementById('sum-profit').textContent = inProfit;
+  document.getElementById('sum-loss').textContent   = inLoss;
+}
+
+// ── Filter + Sort + Render ─────────────────────────────────────────────────
+function renderAll() {
+  let visible = allStocks.filter(s => {
+    if (activeFilter === 'wide')   return s.moat_class === 'wide';
+    if (activeFilter === 'narrow') return s.moat_class === 'narrow';
+    if (activeFilter === 'high')   return (s.conviction || 0) >= 8;
+    if (activeFilter === 'profit') return s.pnl_pct != null && s.pnl_pct >= 0;
+    if (activeFilter === 'loss')   return s.pnl_pct != null && s.pnl_pct < 0;
+    return true;
+  });
+
+  if (searchQuery) {
+    const q = searchQuery.toLowerCase();
+    visible = visible.filter(s =>
+      (s.ticker || '').toLowerCase().includes(q) ||
+      (s.name   || '').toLowerCase().includes(q) ||
+      (s.sector || '').toLowerCase().includes(q)
+    );
+  }
+
+  // Sort
+  visible.sort((a, b) => {
+    const nullLast = (v) => v == null ? -Infinity : v;
+    switch (sortKey) {
+      case 'pnl_pct_desc':  return nullLast(b.pnl_pct)  - nullLast(a.pnl_pct);
+      case 'pnl_pct_asc':   return nullLast(a.pnl_pct)  - nullLast(b.pnl_pct);
+      case 'pnl_abs_desc':  return nullLast(b.pnl_abs)  - nullLast(a.pnl_abs);
+      case 'conviction_desc': return (b.conviction || 0) - (a.conviction || 0);
+      case 'ticker_asc':    return (a.ticker || '').localeCompare(b.ticker || '');
+      default: return 0;
+    }
+  });
+
+  const container = document.getElementById('cards');
+  document.getElementById('results-count').textContent = `Showing ${visible.length} of ${allStocks.length} holdings`;
+
+  if (visible.length === 0) {
+    container.innerHTML = `<div id="no-results">No stocks match your filters.</div>`;
+  } else {
+    container.innerHTML = visible.map(renderCard).join('');
+  }
+}
+
+// ── Load data ──────────────────────────────────────────────────────────────
+async function loadData() {
+  const [stocksRes, pricesRes] = await Promise.all([
+    fetch('stocks.json'),
+    fetch('prices.json'),
+  ]);
+
+  if (!stocksRes.ok) throw new Error('stocks.json not found — run fetch_prices.py first');
+  if (!pricesRes.ok) throw new Error('prices.json not found — run fetch_prices.py first');
+
+  const stocks = await stocksRes.json();
+  const prices = await pricesRes.json();
+
+  // Apply any locally-saved edits (from Claude paste)
+  applyUserEdits(stocks);
+
+  // Merge prices into stocks
+  stocks.forEach(s => {
+    const p = prices[s.ticker];
+    if (p) {
+      s.ltp      = p.ltp;
+      s.buy_avg  = p.buy_avg  || s.buy_avg;
+      s.quantity = p.quantity || 0;
+      s.pnl_pct  = p.pnl_pct;
+      s.pnl_abs  = p.pnl_abs;
+      s.updated  = p.updated;
+    }
+  });
+
+  // Determine last-updated time
+  const updatedTimes = stocks.map(s => s.updated).filter(Boolean);
+  const lastUpdated = updatedTimes.length > 0 ? updatedTimes[0] : null;
+  if (lastUpdated) {
+    document.getElementById('last-updated').textContent = '🕐 ' + lastUpdated;
+  } else {
+    document.getElementById('last-updated').textContent = 'No price data — run fetch_prices.py';
+  }
+
+  return stocks;
+}
+
+// ── Init ───────────────────────────────────────────────────────────────────
+async function init() {
+  try {
+    allStocks = await loadData();
+
+    // Cache in localStorage for offline use
+    try {
+      localStorage.setItem('portfolio_stocks', JSON.stringify(allStocks));
+      localStorage.setItem('portfolio_ts', Date.now().toString());
+    } catch (e) {}
+
+    updateSummary(allStocks);
+    document.getElementById('loading').style.display = 'none';
+    document.getElementById('cards').style.display   = 'grid';
+    renderAll();
+  } catch (err) {
+    // Try to load from localStorage cache
+    const cached = localStorage.getItem('portfolio_stocks');
+    if (cached) {
+      allStocks = JSON.parse(cached);
+      const ts = localStorage.getItem('portfolio_ts');
+      const age = ts ? Math.round((Date.now() - parseInt(ts)) / 60000) : '?';
+      document.getElementById('last-updated').textContent = `⚠️ Cached data (${age} min old)`;
+      updateSummary(allStocks);
+      document.getElementById('loading').style.display = 'none';
+      document.getElementById('cards').style.display   = 'grid';
+      renderAll();
+    } else {
+      document.getElementById('loading').innerHTML =
+        `<div style="color:var(--red-text);padding:2rem;text-align:center;">
+          <div style="font-size:2rem;margin-bottom:1rem;">⚠️</div>
+          <strong>Could not load data</strong><br/>
+          <span style="font-size:0.8rem;color:var(--text3);margin-top:.5rem;display:block;">
+            Run: <code>python scripts/fetch_prices.py</code><br/>
+            Then serve: <code>python -m http.server 8000</code><br/>
+            Error: ${err.message}
+          </span>
+        </div>`;
+    }
+  }
+}
+
+// ── Event listeners ────────────────────────────────────────────────────────
+document.querySelectorAll('.chip[data-filter]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.chip[data-filter]').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    activeFilter = btn.dataset.filter;
+    renderAll();
+  });
+});
+
+document.getElementById('search').addEventListener('input', e => {
+  searchQuery = e.target.value.trim();
+  renderAll();
+});
+
+document.getElementById('sort-select').addEventListener('change', e => {
+  sortKey = e.target.value;
+  renderAll();
+});
+
+// ── Boot ───────────────────────────────────────────────────────────────────
+document.addEventListener('DOMContentLoaded', init);
+</script>
+</body>
+</html>

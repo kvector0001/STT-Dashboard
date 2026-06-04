@@ -1,0 +1,35 @@
+name: Refresh Stock Prices
+
+on:
+  schedule:
+    - cron: '30 10 * * 1-5'   # 4:00 PM IST, Mon–Fri (10:30 UTC)
+  workflow_dispatch:            # Manual trigger from GitHub Actions tab
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install yfinance pandas openpyxl
+
+      - name: Fetch prices
+        run: python scripts/fetch_prices.py
+
+      - name: Commit and push prices.json + stocks.json
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add prices.json stocks.json
+          git diff --staged --quiet || git commit -m "chore: refresh prices $(date -u +'%Y-%m-%d %H:%M UTC')"
+          git push

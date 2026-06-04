@@ -1,0 +1,21 @@
+{
+  "name": "Portfolio Dashboard",
+  "short_name": "Portfolio",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#0f1723",
+  "theme_color": "#0f1723",
+  "description": "Self-hosted Indian stock portfolio fundamental analysis dashboard",
+  "icons": [
+    {
+      "src": "https://fav.farm/📈",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://fav.farm/📈",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

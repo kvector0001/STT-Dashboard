@@ -1,0 +1,3605 @@
+[
+  {
+    "ticker": "AEROFLEX",
+    "name": "Aeroflex Industries",
+    "sector": "Industrials",
+    "nse_symbol": "AEROFLEX",
+    "buy_avg": 187.2,
+    "moat_type": "Wide",
+    "moat_class": "wide",
+    "conviction": 8,
+    "moat": "Only Indian manufacturer of SS metallic flexible hoses at scale — 2,938 SKUs, exports to 90+ countries. BIS QCO (2022) raised entry barrier significantly.",
+    "leadership": "~75% domestic organized market share. 26% domestic / 74% export revenue split.",
+    "non_rep": "Capital-intensive precision manufacturing + NABL-accredited R&D lab. Robotic welding lines approved Dec 2025. Expanding into data centre liquid cooling skids.",
+    "tailwinds": [
+      "India infra & gas pipeline buildout",
+      "EV thermal mgmt & H2 mobility",
+      "Data centre cooling demand"
+    ],
+    "risks": [
+      "SS commodity price volatility",
+      "Chinese competition in export markets"
+    ],
+    "track": [
+      "Export revenue growth >20% QoQ",
+      "Gross margin >35%",
+      "Aerospace/robotics order wins"
+    ]
+  },
+  {
+    "ticker": "SANSERA",
+    "name": "Sansera Engineering",
+    "sector": "Auto Ancillary",
+    "nse_symbol": "SANSERAENG",
+    "buy_avg": 1524.46,
+    "moat_type": "Wide",
+    "moat_class": "wide",
+    "conviction": 8,
+    "moat": "Top-10 global supplier of precision forged components. Supplies 9 of 10 top Indian OEMs. 5-7yr supply contracts create high switching cost.",
+    "leadership": "Dominant in precision forged auto components in India. New order book ₹24,124 Mn. Non-auto targeting 40% mix.",
+    "non_rep": "16 manufacturing facilities incl. Sweden. ₹5,911 Mn capex in FY25. 249 LOIs across 71 auto and 33 non-auto customers.",
+    "tailwinds": [
+      "India auto volume growth",
+      "Aerospace & defence PLI",
+      "EV agnostic precision components"
+    ],
+    "risks": [
+      "Bajaj Auto >20% concentration risk",
+      "ICE-to-EV disruption on connecting rods"
+    ],
+    "track": [
+      "Non-auto revenue moving toward 40%",
+      "Aerospace facility Bengaluru ramp",
+      "Quarterly order book"
+    ]
+  },
+  {
+    "ticker": "GESHIP",
+    "name": "GE Shipping",
+    "sector": "Shipping",
+    "nse_symbol": "GESHIP",
+    "buy_avg": 1040.96,
+    "moat_type": "Narrow",
+    "moat_class": "narrow",
+    "conviction": 6,
+    "moat": "India's largest private shipping company (est. 1948). Fleet of ~42 ships — tankers, product carriers, gas carriers, dry bulk. Consistent dividend payer.",
+    "leadership": "#1 private sector shipping co in India. Revenue ₹42 Bn TTM. Offshore subsidiary Greatship for E&P services.",
+    "non_rep": "Scale, fleet age, and balance sheet strength. Cash reserves provide downside protection through freight cycles.",
+    "tailwinds": [
+      "India crude import growth",
+      "Domestic petroleum product demand",
+      "LPG expansion",
+      "Offshore O&G capex revival"
+    ],
+    "risks": [
+      "Freight rate cyclicality",
+      "Geopolitical disruption to shipping lanes",
+      "Chinese fleet overcapacity"
+    ],
+    "track": [
+      "Day rates vs break-even",
+      "Fleet utilization %",
+      "Dividend sustainability"
+    ]
+  },
+  {
+    "ticker": "THERMAX",
+    "name": "Thermax",
+    "sector": "Capital Goods",
+    "nse_symbol": "THERMAX",
+    "buy_avg": 4430.55,
+    "moat_type": "Wide",
+    "moat_class": "wide",
+    "conviction": 8,
+    "moat": "Asia's leading vapor absorption cooling manufacturer. World leader in FGD systems. 70% order book from green industrial solutions. 30 geographies, 14 mfg locations.",
+    "leadership": "India's only integrated energy+environment solutions provider at this scale. FY25 revenue ₹10,694 Cr. Order balance ₹11,593 Cr.",
+    "non_rep": "Domain expertise across boilers, chillers, EPC power plants, water treatment under one roof. JV with Babcock & Wilcox (TBWES).",
+    "tailwinds": [
+      "India industrial capex supercycle",
+      "Green steel & FGD mandates",
+      "Captive power plant demand",
+      "Energy transition / green hydrogen"
+    ],
+    "risks": [
+      "Project execution risk on large EPC",
+      "Commodity cost margin pressure",
+      "Slow order-to-revenue conversion"
+    ],
+    "track": [
+      "Order booking >₹3,000 Cr/quarter",
+      "Green solutions revenue %",
+      "TBWES order wins"
+    ]
+  },
+  {
+    "ticker": "TRITURBINE",
+    "name": "Triveni Turbine",
+    "sector": "Capital Goods",
+    "nse_symbol": "TRITURBINE",
+    "buy_avg": 551.14,
+    "moat_type": "Wide",
+    "moat_class": "wide",
+    "conviction": 8,
+    "moat": "India's dominant small-to-mid steam turbine maker (up to 100 MW). Deep application engineering for industrial process heat. Strong after-market spares creating recurring revenue.",
+    "leadership": "#1 in industrial steam turbines in India. Exports to Europe, SEA, Middle East growing. ~24.5% ROE forecast.",
+    "non_rep": "Customized products per installation — high switching cost. Spares and service lock-in for 20+ year asset life.",
+    "tailwinds": [
+      "India captive power growth (PLI, infra)",
+      "Waste heat recovery / green energy",
+      "Global de-carbonisation of process industries"
+    ],
+    "risks": [
+      "Slower India industrial capex",
+      "Growth forecast ~11% — below market average",
+      "Slightly overvalued vs intrinsic estimates"
+    ],
+    "track": [
+      "After-market revenue % of total",
+      "International order bookings",
+      "Export backlog value"
+    ]
+  },
+  {
+    "ticker": "ELGIEQUIP",
+    "name": "Elgi Equipment",
+    "sector": "Industrials",
+    "nse_symbol": "ELGIEQUIP",
+    "buy_avg": 552.93,
+    "moat_type": "Wide",
+    "moat_class": "wide",
+    "conviction": 7,
+    "moat": "60+ years of air compressor expertise. Global player across 100+ countries. Oil-free screw compressor technology is IP-backed. Railway compressor supply to Indian Railways.",
+    "leadership": "Top-5 global air compressor manufacturer. India market leader. Mkt cap ₹15,819 Cr.",
+    "non_rep": "Deep application engineering + global distribution + gas compressor seal patent (2023). Indian Railways institutional relationship.",
+    "tailwinds": [
+      "India manufacturing/PLI compressed air demand",
+      "Global energy efficiency regulations for oil-free compressors",
+      "Automotive and pharma industry growth"
+    ],
+    "risks": [
+      "Revenue growth modest at 5-7% YoY",
+      "Atlas Copco competition in premium segment",
+      "Europe slowdown impacting exports"
+    ],
+    "track": [
+      "International revenue %",
+      "Oil-free compressor mix",
+      "EV segment product launches"
+    ]
+  },
+  {
+    "ticker": "INOXINDIA",
+    "name": "INOX India",
+    "sector": "Industrial Equipment",
+    "nse_symbol": "INOXINDIA",
+    "buy_avg": 1182.81,
+    "moat_type": "Wide",
+    "moat_class": "wide",
+    "conviction": 8,
+    "moat": "India's largest cryogenic equipment manufacturer. Only Indian company with full cryogenic value chain for LNG, industrial gas, hydrogen, space, and medical oxygen.",
+    "leadership": "~$169M TTM revenue. Only large-scale domestic cryogenic manufacturer. Competitors are foreign (Cryofab, Cryolor, Linde India).",
+    "non_rep": "ISO/ASME/PED approved. 2-3 year qualification cycles for LNG or space applications create near-impenetrable entry barriers.",
+    "tailwinds": [
+      "India LNG terminal expansion",
+      "Green hydrogen infrastructure",
+      "Space sector ISRO + private launches",
+      "Industrial gas demand pharma/food"
+    ],
+    "risks": [
+      "Capital goods ordering delays",
+      "ISRO/space project delays",
+      "Helium supply chain disruptions"
+    ],
+    "track": [
+      "Order intake hydrogen/LNG verticals",
+      "Space program awarding",
+      "Revenue per segment shift"
+    ]
+  },
+  {
+    "ticker": "KENNAMET",
+    "name": "Kennametal India",
+    "sector": "Industrials",
+    "nse_symbol": "KENNAMET",
+    "buy_avg": 2476.12,
+    "moat_type": "Narrow",
+    "moat_class": "narrow",
+    "conviction": 6,
+    "moat": "India subsidiary of Kennametal Inc (USA). Tungsten carbide cutting tools with global parent IP and technology transfer. Premium brand moat.",
+    "leadership": "Premium cutting tools market leader in India. 75% promoter holding. Revenue ₹1,392 Cr, PAT ₹256 Cr.",
+    "non_rep": "Tungsten carbide IP + global R&D from US parent. 19x book value premium reflects franchise quality.",
+    "tailwinds": [
+      "India advanced manufacturing aerospace/defence/auto EV",
+      "PLI for precision components",
+      "Metal cutting demand from capex cycle"
+    ],
+    "risks": [
+      "High valuation — limited margin of safety",
+      "Parent company strategy dependency",
+      "Cyclical demand from auto/aerospace"
+    ],
+    "track": [
+      "Aerospace/defence order book",
+      "Revenue growth vs global Kennametal",
+      "EBITDA margins vs global parent"
+    ]
+  },
+  {
+    "ticker": "PARKHOSPS",
+    "name": "The Park Hotels",
+    "sector": "Hospitality",
+    "nse_symbol": "PARKHOTELS",
+    "buy_avg": 158.81,
+    "moat_type": "Narrow",
+    "moat_class": "narrow",
+    "conviction": 6,
+    "moat": "Boutique luxury hotel chain — 30 properties, 20 Indian cities. Art-forward contemporary luxury brand. Prime real estate ownership in metros.",
+    "leadership": "Multi-brand: The Park, Zone by the Park, Zone Connect. India luxury hotel market CAGR 11.3% to 2031.",
+    "non_rep": "Prime real estate in Kolkata, Chennai, Delhi, Hyderabad — recreation cost is prohibitive. National Tourism Award holder.",
+    "tailwinds": [
+      "India domestic travel boom",
+      "Rising UHNW population",
+      "Structural 'revenge travel' shift",
+      "G20/global events driving premium demand"
+    ],
+    "risks": [
+      "International chain competition in India",
+      "GST changes on F&B margins",
+      "Capex-heavy with slow ROI"
+    ],
+    "track": [
+      "RevPAR growth",
+      "Occupancy rate",
+      "New property addition pipeline"
+    ]
+  },
+  {
+    "ticker": "NLCINDIA",
+    "name": "NLC India",
+    "sector": "PSU Power",
+    "nse_symbol": "NLCINDIA",
+    "buy_avg": 255.12,
+    "moat_type": "Narrow",
+    "moat_class": "narrow",
+    "conviction": 5,
+    "moat": "Government-owned lignite miner and power generator. Captive fuel supply is cost advantage. 6,032 MW installed capacity across thermal and solar.",
+    "leadership": "India's only significant lignite-based power generator. PSU with sovereign backing. Expanding into solar/wind aggressively.",
+    "non_rep": "Captive mines + multi-decade mining rights. Pivoting to 10,000+ MW renewable capacity target. Sovereign backing provides financing advantage.",
+    "tailwinds": [
+      "India power demand growth 8-10% p.a.",
+      "Renewable energy expansion mandate",
+      "Government capex into power sector"
+    ],
+    "risks": [
+      "Lignite is polluting — regulatory transition risk",
+      "Delayed RE project execution",
+      "PSU bureaucracy slowing transition"
+    ],
+    "track": [
+      "Renewable capacity addition vs target",
+      "EBITDA per unit solar vs thermal",
+      "Govt policy on lignite pricing"
+    ]
+  },
+  {
+    "ticker": "PFC",
+    "name": "Power Finance Corporation",
+    "sector": "PSU Finance",
+    "nse_symbol": "PFC",
+    "buy_avg": 431.44,
+    "moat_type": "Narrow",
+    "moat_class": "narrow",
+    "conviction": 6,
+    "moat": "India's largest infrastructure finance company for power sector. ~₹10 Lakh Cr loan book. Sovereign backing. Mandated for Govt power programs.",
+    "leadership": "#1 power sector financier alongside REC. Direct beneficiary of PM-KUSUM, Smart Metering, RDSS schemes.",
+    "non_rep": "Access to low-cost sovereign-backed borrowings. Long-term relationships with DISCOMs, NTPC, NHPC. Earns 3-4% spread reliably.",
+    "tailwinds": [
+      "₹11.21 Lakh Cr India infra budget FY27",
+      "500 GW renewable capacity target 2030",
+      "DISCOM restructuring loans",
+      "Smart metering program"
+    ],
+    "risks": [
+      "DISCOM credit quality structurally weak",
+      "Rising NPA risk if state utilities default",
+      "Interest rate sensitivity on long-duration loans"
+    ],
+    "track": [
+      "NPA levels and PCR",
+      "Loan book growth rate",
+      "Disbursements under Govt schemes"
+    ]
+  },
+  {
+    "ticker": "SJVN",
+    "name": "SJVN",
+    "sector": "PSU Power",
+    "nse_symbol": "SJVN",
+    "buy_avg": 74.72,
+    "moat_type": "Narrow",
+    "moat_class": "narrow",
+    "conviction": 5,
+    "moat": "Navratna PSU — hydropower, solar, wind. 2,282 MW hydro capacity. Concession-based hydro sites are geographically fixed — competition cannot enter once dam is built.",
+    "leadership": "Key hydro developer in Himachal Pradesh and Uttarakhand. Expanding into Nepal and Bhutan. 25,000 MW capacity target by 2030.",
+    "non_rep": "Hydro concessions are permanent and non-replicable. Very long-duration assets with 40-50yr useful life once operational.",
+    "tailwinds": [
+      "India renewable capacity mandate",
+      "Hydro as baseload for intermittent solar/wind",
+      "Cross-border power trade Nepal/Bhutan"
+    ],
+    "risks": [
+      "Execution delays on large hydro (environmental clearances)",
+      "Monsoon variability affects generation",
+      "8-12 year gestation periods for hydro projects"
+    ],
+    "track": [
+      "MW capacity addition vs timeline",
+      "PPAs signed for new capacity",
+      "Revenue growth from operational projects"
+    ]
+  },
+  {
+    "ticker": "ISGEC",
+    "name": "ISGEC Heavy Engineering",
+    "sector": "Capital Goods",
+    "nse_symbol": "ISGEC",
+    "buy_avg": 1054.87,
+    "moat_type": "Narrow",
+    "moat_class": "narrow",
+    "conviction": 6,
+    "moat": "Multi-product heavy engineering conglomerate — boilers, presses, sugar equipment, process equipment. Deep domain expertise across niche industrial verticals across 80+ countries.",
+    "leadership": "Significant player in sugar plant equipment globally. Heat exchangers and pressure vessels. Exports to 80+ countries.",
+    "non_rep": "Diversified mix across specialised categories. JV with Hitachi (boilers) gives technology access. Global customer base.",
+    "tailwinds": [
+      "India infrastructure capex",
+      "Sugar sector modernization India/Africa",
+      "Defence manufacturing"
+    ],
+    "risks": [
+      "Currently -14% in portfolio — price correction ongoing",
+      "Project-based lumpy revenues",
+      "Competition from L&T, Bharat Forge in heavy engineering"
+    ],
+    "track": [
+      "Order book value and execution pace",
+      "Sugar equipment export orders",
+      "Margin recovery trajectory"
+    ]
+  },
+  {
+    "ticker": "NESCO",
+    "name": "NESCO Mumbai",
+    "sector": "Real Estate",
+    "nse_symbol": "NESCO",
+    "buy_avg": 1213.45,
+    "moat_type": "Wide",
+    "moat_class": "wide",
+    "conviction": 7,
+    "moat": "Owns Bombay Exhibition Centre (BEC) — India's premium exhibition/convention venue. Irreplaceable 25-acre land bank in Goregaon, Mumbai. Exhibition + IT park + hospitality.",
+    "leadership": "Dominant Mumbai convention/exhibition venue. IT Park occupancy consistently >90%. Recurring annuity-like income from long-term leases.",
+    "non_rep": "25-acre Mumbai land cannot be replicated at any price. BEC hosts India's largest trade fairs. Asset-light model post-construction.",
+    "tailwinds": [
+      "India MICE industry growth",
+      "Mumbai commercial real estate premiums",
+      "IT/ITES leasing demand"
+    ],
+    "risks": [
+      "Revenue concentration — Mumbai only",
+      "YASHOBHOOMI Delhi competing for national events",
+      "Cyclical nature of exhibitions in recessions"
+    ],
+    "track": [
+      "Exhibition days per year",
+      "IT park occupancy and lease renewal",
+      "New IT park phase development"
+    ]
+  },
+  {
+    "ticker": "HEG",
+    "name": "HEG",
+    "sector": "Materials",
+    "nse_symbol": "HEG",
+    "buy_avg": 540.91,
+    "moat_type": "Narrow",
+    "moat_class": "narrow",
+    "conviction": 6,
+    "moat": "One of ~6 global players in UHP graphite electrodes with captive needle coke, large-diameter machining. 100,000 MT/yr capacity. 65-70% production exported globally.",
+    "leadership": "India's largest graphite electrode exporter. 8.23% stake in GrafTech International (NYSE). Joint patents with Graphite India.",
+    "non_rep": "UHP electrode production requires specialized graphitization — capital-intensive, 2-3yr build time. Needle coke supply controlled by few global suppliers.",
+    "tailwinds": [
+      "EAF steelmaking transition (28% → 41% by 2030)",
+      "Green steel demand Europe and India",
+      "Graphite anodes for EV battery supply chains"
+    ],
+    "risks": [
+      "Electrode prices under pressure vs rising needle coke costs",
+      "Cyclical earnings correlated to steel demand",
+      "Chinese dumping of cheaper electrodes"
+    ],
+    "track": [
+      "Electrode realization price/tonne",
+      "Needle coke input cost",
+      "Anode business revenue ramp"
+    ]
+  },
+  {
+    "ticker": "INGERRAND",
+    "name": "Ingersoll Rand India",
+    "sector": "Industrials",
+    "nse_symbol": "INGERRAND",
+    "buy_avg": 4330.32,
+    "moat_type": "Narrow",
+    "moat_class": "narrow",
+    "conviction": 6,
+    "moat": "India subsidiary of Ingersoll Rand (US). Manufactures and services industrial compressors, air tools, fluid management. Global parent provides technology and brand premium.",
+    "leadership": "75% promoter holding. Revenue ₹1,392 Cr. High margin business. Premium pricing power from US parent brand.",
+    "non_rep": "Parent technology + 43% CAGR stock return over 5 years. Service and aftermarket creates customer stickiness.",
+    "tailwinds": [
+      "India manufacturing PLI schemes",
+      "Industrial automation boom",
+      "Energy-efficient compressed air demand"
+    ],
+    "risks": [
+      "Currently -14% in portfolio",
+      "Parent restructuring post Gardner Denver spin-off",
+      "Cyclicality in industrial capex"
+    ],
+    "track": [
+      "Revenue growth vs industrial capex index",
+      "Service revenue as % of total",
+      "New product introductions from parent"
+    ]
+  },
+  {
+    "ticker": "WELCORP",
+    "name": "Welspun Corp",
+    "sector": "Steel Pipes",
+    "nse_symbol": "WELCORP",
+    "buy_avg": 1099.22,
+    "moat_type": "Narrow",
+    "moat_class": "narrow",
+    "conviction": 6,
+    "moat": "India's only large-diameter pipe manufacturer with both SAW and ERW capabilities + USA manufacturing. Serves oil/gas, water, hydrogen, nuclear, defence sectors.",
+    "leadership": "₹10,078 Cr revenue FY23. 20.47% ROE. Manufacturing in Anjar, Bhopal, Mandya, and Arkansas USA — US oil & gas capex access.",
+    "non_rep": "Acquired Sintex for building materials diversification. DI pipes capacity at Anjar for water infra. USA plant gives access to US pipeline replacement cycle.",
+    "tailwinds": [
+      "Jal Jeevan Mission water pipeline infra",
+      "US LNG/oil pipeline replacement cycle",
+      "Hydrogen pipeline globally",
+      "Defence speciality tubes"
+    ],
+    "risks": [
+      "Steel price volatility compresses margins",
+      "Oil price sensitivity on US pipeline orders",
+      "Sintex integration execution risk"
+    ],
+    "track": [
+      "Order book from water/DI pipes",
+      "US revenue vs India mix",
+      "Sintex EBITDA contribution"
+    ]
+  },
+  {
+    "ticker": "JNKINDIA",
+    "name": "JNK India",
+    "sector": "Capital Goods",
+    "nse_symbol": "JNKINDIA",
+    "buy_avg": 283.62,
+    "moat_type": "Wide",
+    "moat_class": "wide",
+    "conviction": 7,
+    "moat": "JV with JNK Heaters Korea — exclusive technology for process-fired heaters, reformers, cracking furnaces in India. Only Indian company with this technology indigenized.",
+    "leadership": "Serves IOC, Tata Projects, RCF, Numaligarh Refinery. Revenue ₹756 Cr. New JV 'JNK Chemdist' for green hydrogen tech.",
+    "non_rep": "Technology co-developed with Korean parent. Manufacturing SEZ in Mundra. Expanding into flares, incinerators, solar EPC, H2 production.",
+    "tailwinds": [
+      "India petrochemical/refinery expansion",
+      "Green hydrogen economy",
+      "Fertilizer plant modernization",
+      "Export EPC projects Nigeria/Mexico"
+    ],
+    "risks": [
+      "Project-based revenue — lumpy quarters",
+      "Small company ₹2,160 Cr mkt cap",
+      "Korean parent technology dependency"
+    ],
+    "track": [
+      "Order book and execution timeline",
+      "Green hydrogen JV progress",
+      "Export revenue %"
+    ]
+  },
+  {
+    "ticker": "LATENTVIEW",
+    "name": "LatentView Analytics",
+    "sector": "IT / Analytics",
+    "nse_symbol": "LATENTVIEW",
+    "buy_avg": 448.98,
+    "moat_type": "Narrow",
+    "moat_class": "narrow",
+    "conviction": 5,
+    "moat": "Pure-play data analytics firm serving Fortune 500 in US tech, BFSI, CPG. Chennai-based global delivery. ~23% PAT margins. FY26 revenue ₹10,602 Mn (+22% YoY).",
+    "leadership": "Among few listed pure-play analytics companies in India. 65.1% promoter. Revenue growing 22% YoY.",
+    "non_rep": "Deep embedded analytics with large US tech companies. Healtheon AI (healthcare GenAI) — early mover. However currently -26% in portfolio.",
+    "tailwinds": [
+      "Enterprise AI/data spending boom",
+      "GenAI consulting demand",
+      "US tech analytics outsourcing to India"
+    ],
+    "risks": [
+      "Currently -26% in portfolio",
+      "ROE only 12% — low capital efficiency",
+      "Valuation elevated vs intrinsic estimates"
+    ],
+    "track": [
+      "Revenue growth sustaining >20%",
+      "US client concentration",
+      "GenAI project wins"
+    ]
+  },
+  {
+    "ticker": "POWERICA",
+    "name": "Powerica",
+    "sector": "Power Equipment",
+    "nse_symbol": "POWERICA",
+    "buy_avg": 511.33,
+    "moat_type": "Narrow",
+    "moat_class": "narrow",
+    "conviction": 6,
+    "moat": "India's largest independent DG set dealer and after-market services provider. Exclusive Cummins distributor for large industrial DG sets (>750 kVA segment).",
+    "leadership": "Dominant in >750 kVA DG set segment. Installed base of 25,000+ DG sets. AMC revenues create recurring income.",
+    "non_rep": "Exclusive Cummins distribution rights. After-market AMC revenues — high switching cost on existing installed base.",
+    "tailwinds": [
+      "India data centre boom",
+      "Power unreliability driving backup power",
+      "Hospital/pharma expansion",
+      "Industrial capex"
+    ],
+    "risks": [
+      "Grid reliability improvement could reduce DG demand long-term",
+      "Battery storage as eventual DG replacement",
+      "Margin pressure if Cummins changes pricing"
+    ],
+    "track": [
+      "Data centre order wins",
+      "AMC revenue growth",
+      "Hybrid power product lines"
+    ]
+  },
+  {
+    "ticker": "TEGA",
+    "name": "TEGA Industries",
+    "sector": "Mining Equipment",
+    "nse_symbol": "TEGA",
+    "buy_avg": 2033.06,
+    "moat_type": "Wide",
+    "moat_class": "wide",
+    "conviction": 7,
+    "moat": "Global niche leader in mineral processing wear parts and mill liners. #2 globally by revenue for grinding mill liners. Proprietary rubber/polymer composite formulations — IP-backed.",
+    "leadership": "400+ clients across 70+ countries. ~55% domestic, ~45% export revenue split.",
+    "non_rep": "Rubber compound formulations for abrasion-resistant liners are proprietary. Requalification takes 12-18 months — very high switching cost.",
+    "tailwinds": [
+      "Global mining capex copper/lithium/iron ore for EV transition",
+      "India steel and cement capacity expansion",
+      "Critical minerals boom for battery supply chains"
+    ],
+    "risks": [
+      "Currently -10% in portfolio",
+      "Mining capex highly cyclical",
+      "Competition from Metso Outotec and Weir Group"
+    ],
+    "track": [
+      "Export order book",
+      "New product wins in lithium/copper mines",
+      "EBITDA margin stability"
+    ]
+  },
+  {
+    "ticker": "ASHIANA",
+    "name": "Ashiana Housing",
+    "sector": "Real Estate",
+    "nse_symbol": "ASHIANA",
+    "buy_avg": 362.06,
+    "moat_type": "Narrow",
+    "moat_class": "narrow",
+    "conviction": 5,
+    "moat": "Niche real estate developer focused on mid-income housing in satellite towns + senior living communities. Disciplined landbank strategy. First-mover in senior living.",
+    "leadership": "Operates in 12 cities. Senior living as a category is nascent — very few credible players in India.",
+    "non_rep": "Brand in Tier-2/3 markets that mid-income buyers trust. Senior living first-mover advantage. Unique area-sell revenue model.",
+    "tailwinds": [
+      "India urbanization and housing deficit",
+      "Senior living — India aging demographics",
+      "Tier-2 city housing demand",
+      "Affordable housing demand"
+    ],
+    "risks": [
+      "Real estate is capital-intensive and cyclical",
+      "RERA and state-level regulatory risk",
+      "Small land parcels = execution constraints"
+    ],
+    "track": [
+      "Area booked per quarter",
+      "Senior living units pipeline",
+      "Cash flow from operations vs land acquisition"
+    ]
+  },
+  {
+    "ticker": "SCI",
+    "name": "Shipping Corp of India",
+    "sector": "PSU Shipping",
+    "nse_symbol": "SCI",
+    "buy_avg": 302.02,
+    "moat_type": "Narrow",
+    "moat_class": "narrow",
+    "conviction": 4,
+    "moat": "India's only PSU shipping company. Fleet of tankers, bulk carriers, LPG and container vessels. Government-guaranteed cargo access for strategic shipments.",
+    "leadership": "Subsidized fuel/port access as PSU. Strategic importance for India energy security. Less commercially competitive vs private peers.",
+    "non_rep": "Government-guaranteed cargo (defence, strategic petroleum). However PSU inefficiency limits commercial upside.",
+    "tailwinds": [
+      "India crude import growth",
+      "Coastal shipping policy",
+      "PSU privatization could unlock value"
+    ],
+    "risks": [
+      "PSU inefficiency — lower margins vs GESHIP",
+      "Privatization overhang uncertainty",
+      "Freight rate cyclicality"
+    ],
+    "track": [
+      "Fleet renewal capex",
+      "Privatization announcement",
+      "Revenue per vessel vs GESHIP"
+    ]
+  },
+  {
+    "ticker": "CARBORUNIV",
+    "name": "Carborundum Universal",
+    "sector": "Abrasives & Ceramics",
+    "nse_symbol": "CARBORUNIV",
+    "buy_avg": 1097.89,
+    "moat_type": "Wide",
+    "moat_class": "wide",
+    "conviction": 7,
+    "moat": "India's largest abrasives company. Part of Murugappa Group. 70+ years manufacturing expertise. Segments: bonded abrasives, coated abrasives, ceramics, electrominerals.",
+    "leadership": "Market leader in Indian abrasives. Exports to 50+ countries. Mkt cap ~₹20,000 Cr.",
+    "non_rep": "Electro-minerals (Silicon Carbide) are high-purity, high-investment products. Ceramics segment serves aerospace and defence. Full-stack abrasive-to-ceramic manufacturing.",
+    "tailwinds": [
+      "India manufacturing boom auto/aerospace/defence",
+      "Advanced ceramics for semiconductors and EVs",
+      "Renewable energy components using SiC",
+      "EV abrasive demand"
+    ],
+    "risks": [
+      "Currently -8% in portfolio",
+      "Cyclical demand from auto/industrial",
+      "SiC competition from global chemical companies"
+    ],
+    "track": [
+      "Advanced ceramics revenue %",
+      "SiC capacity utilization",
+      "Export revenue defence/aerospace"
+    ]
+  },
+  {
+    "ticker": "ENTERO",
+    "name": "Entero Healthcare",
+    "sector": "Healthcare Distribution",
+    "nse_symbol": "ENTERO",
+    "buy_avg": 1111.19,
+    "moat_type": "Narrow",
+    "moat_class": "narrow",
+    "conviction": 6,
+    "moat": "Tech-enabled pharma distribution platform. Connects 7,000+ pharma brands to 250,000+ healthcare providers. Route density advantage in fragmented ₹2.7 Lakh Cr market.",
+    "leadership": "One of India's largest B2B pharma distribution companies by volume. Consolidating fragmented market rapidly.",
+    "non_rep": "Dense route network + proprietary order management technology + cold chain. Multi-city presence creates scale advantage over local distributors.",
+    "tailwinds": [
+      "India pharma market growth 10-12% p.a.",
+      "B2B distribution consolidation",
+      "Healthcare spending increase",
+      "Digital ordering by chemists"
+    ],
+    "risks": [
+      "Low margin business by nature",
+      "Competition from Medline and direct pharma distribution arms",
+      "Working capital intensive"
+    ],
+    "track": [
+      "Revenue growth and EBITDA margin expansion",
+      "New cities/districts",
+      "Pharmacy client retention rate"
+    ]
+  },
+  {
+    "ticker": "SIEMENS",
+    "name": "Siemens India",
+    "sector": "Capital Goods",
+    "nse_symbol": "SIEMENS",
+    "buy_avg": 3807.82,
+    "moat_type": "Wide",
+    "moat_class": "wide",
+    "conviction": 8,
+    "moat": "India subsidiary of Siemens AG. Access to world-class automation, electrification, digitalization. Products span power distribution, railway electrification, building automation, industrial software.",
+    "leadership": "One of India's most trusted industrial technology companies. 75%+ revenue from products (higher quality). Revenue ~₹21,000 Cr.",
+    "non_rep": "Siemens global R&D, SIMATIC PLC, SCADA, digital twin platforms — none replicable domestically. National Railway corridor electrification contracts.",
+    "tailwinds": [
+      "India railway modernization Vande Bharat/metro/electrification",
+      "Smart grid and power distribution upgrades",
+      "India smart city and building automation",
+      "Industry 4.0"
+    ],
+    "risks": [
+      "Currently -3% in portfolio",
+      "Parent Siemens AG India Energy Business demerger pending",
+      "Premium valuation vs domestic peers"
+    ],
+    "track": [
+      "Railway and metro order wins",
+      "Energy business demerger timeline",
+      "Digital/software revenue as % of total"
+    ]
+  },
+  {
+    "ticker": "HONAUT",
+    "name": "Honeywell Automation India",
+    "sector": "Automation",
+    "nse_symbol": "HONAUT",
+    "buy_avg": 35975.0,
+    "moat_type": "Wide",
+    "moat_class": "wide",
+    "conviction": 7,
+    "moat": "India subsidiary of Honeywell International (Fortune 500). Leader in process automation, building solutions, combustion controls. Replacing a Honeywell DCS in a refinery takes 12-18 months and full plant shutdown.",
+    "leadership": "#1 in integrated industrial automation in India. Promoter: Honeywell Asia Pacific. Revenue growing steadily.",
+    "non_rep": "Technology sharing from parent for process solutions, sensing, building controls. Extreme switching cost on installed DCS base.",
+    "tailwinds": [
+      "India refinery and petrochemical capacity expansion",
+      "Smart buildings and green building mandates",
+      "Industrial safety/compliance regulations driving DCS upgrades"
+    ],
+    "risks": [
+      "Small float — illiquid stock",
+      "Parent dependent for all technology",
+      "Very high unit price — position sizing constraints"
+    ],
+    "track": [
+      "Revenue from engineering services exports",
+      "Process solutions order intake",
+      "Building solutions growth"
+    ]
+  },
+  {
+    "ticker": "GRINDWELL",
+    "name": "Grindwell Norton",
+    "sector": "Abrasives",
+    "nse_symbol": "GRINDWELL",
+    "buy_avg": 1886.49,
+    "moat_type": "Wide",
+    "moat_class": "wide",
+    "conviction": 7,
+    "moat": "India subsidiary of Saint-Gobain (France). Manufactures bonded abrasives, superabrasives, performance ceramics. Premium product range in diamond/CBN tools.",
+    "leadership": "#2 in Indian abrasives alongside Carborundum Universal. 74% promoter holding (Saint-Gobain).",
+    "non_rep": "Saint-Gobain technology for high-purity ceramics, superabrasives, performance plastics. Ceramic bearings for railways — critical safety application.",
+    "tailwinds": [
+      "India railway expansion 20,000 km target",
+      "Aerospace manufacturing",
+      "Advanced manufacturing for EVs",
+      "Defence components"
+    ],
+    "risks": [
+      "Currently -2% in portfolio",
+      "Cyclical with manufacturing capex",
+      "Carborundum Universal domestic competition"
+    ],
+    "track": [
+      "Superabrasive new product launches",
+      "Railway and aerospace order mix",
+      "EBITDA margins vs Carborundum Universal"
+    ]
+  },
+  {
+    "ticker": "3MINDIA",
+    "name": "3M India",
+    "sector": "Diversified Industrials",
+    "nse_symbol": "3MINDIA",
+    "buy_avg": 32853.95,
+    "moat_type": "Wide",
+    "moat_class": "wide",
+    "conviction": 7,
+    "moat": "India subsidiary of 3M Company (USA). 60,000+ products, 1000+ patents globally. #1 or #2 in reflective films, respiratory protection, adhesive tapes, dental products.",
+    "leadership": "Market leader in multiple micro-niches. India highway boom direct beneficiary via reflective films. Medical device and pharma grade products.",
+    "non_rep": "3M global R&D spend $1.8 Bn/year with India trickle-down. Product portfolio breadth near-impossible to replicate. Compound pricing power.",
+    "tailwinds": [
+      "India highway expansion (reflective films)",
+      "PPE/safety market growth",
+      "Medical device regulation driving quality standards",
+      "Semiconductor packaging materials"
+    ],
+    "risks": [
+      "PFAS litigation overhang on global parent",
+      "3M US Health business demerger may change India strategy",
+      "Premium valuation for slow-growth diversified conglomerate"
+    ],
+    "track": [
+      "India revenue growth vs global 3M",
+      "Safety & Industrial India infra wins",
+      "Healthcare regulatory approval pipeline"
+    ]
+  },
+  {
+    "ticker": "SKFINDUS",
+    "name": "SKF India",
+    "sector": "Bearings",
+    "nse_symbol": "SKFINDIA",
+    "buy_avg": 2147.0,
+    "moat_type": "Wide",
+    "moat_class": "wide",
+    "conviction": 7,
+    "moat": "India subsidiary of SKF AB (Sweden). #1 or #2 bearing manufacturer in India. Critical component in every rotating machine. ~24-25% market share in organized bearings market.",
+    "leadership": "Revenue ~₹4,500 Cr. Strong after-market sales — bearings are consumables with repeat buying. Railway bearing supply to Indian Railways locked in.",
+    "non_rep": "SKF global metallurgy R&D, seal technologies, condition monitoring (digital twin for bearings) cannot be domestically replicated.",
+    "tailwinds": [
+      "India railway rolling stock expansion Vande Bharat/metro/freight",
+      "Wind energy turbine bearings",
+      "EV drivetrain precision bearings",
+      "Industrial automation"
+    ],
+    "risks": [
+      "Competition from Timken, NSK, Schaeffler",
+      "Auto sector slowdown near-term impact",
+      "Steel commodity cost impact on margins"
+    ],
+    "track": [
+      "Railway order intake",
+      "Wind energy bearing revenues",
+      "EV-specific bearing product launches"
+    ]
+  },
+  {
+    "ticker": "MAFANG",
+    "name": "Mirae Asset NYSE FANG+ETF",
+    "sector": "Pending",
+    "nse_symbol": "MAFANG",
+    "buy_avg": 50.33,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "NH",
+    "name": "Narayana Hrudayalaya Limited",
+    "sector": "Healthcare",
+    "nse_symbol": "NH",
+    "buy_avg": 497.01,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "HCG",
+    "name": "HealthCare Global Enterprises Limited",
+    "sector": "Healthcare",
+    "nse_symbol": "HCG",
+    "buy_avg": 314.21,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "SONACOMS",
+    "name": "Sona BLW Precision Forgings Limited",
+    "sector": "Consumer Cyclical",
+    "nse_symbol": "SONACOMS",
+    "buy_avg": 543.57,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "SYRMA",
+    "name": "Syrma SGS Technology Limited",
+    "sector": "Technology",
+    "nse_symbol": "SYRMA",
+    "buy_avg": 430.8,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "MTARTECH",
+    "name": "MTAR Technologies Limited",
+    "sector": "Industrials",
+    "nse_symbol": "MTARTECH",
+    "buy_avg": 1514.93,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "DEEDEV-T",
+    "name": "DEE DEVELOPMENT ENG LTD",
+    "sector": "Industrials",
+    "nse_symbol": "DEEDEV-T",
+    "buy_avg": 261.86,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "POWERINDIA",
+    "name": "Hitachi Energy India Limited",
+    "sector": "Industrials",
+    "nse_symbol": "POWERINDIA",
+    "buy_avg": 2195.91,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "ASTRAMICRO",
+    "name": "Astra Microwave Products Limited",
+    "sector": "Technology",
+    "nse_symbol": "ASTRAMICRO",
+    "buy_avg": 224.73,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "ASTERDM",
+    "name": "Aster DM Healthcare Limited",
+    "sector": "Healthcare",
+    "nse_symbol": "ASTERDM",
+    "buy_avg": 283.78,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "NEPHROPLUS",
+    "name": "NEPHROCARE HEALTH SERV L",
+    "sector": "Healthcare",
+    "nse_symbol": "NEPHROPLUS",
+    "buy_avg": 606.55,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "NEULANDLAB",
+    "name": "Neuland Laboratories Limited",
+    "sector": "Healthcare",
+    "nse_symbol": "NEULANDLAB",
+    "buy_avg": 1031.85,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "AVANTEL",
+    "name": "Avantel Limited",
+    "sector": "Technology",
+    "nse_symbol": "AVANTEL",
+    "buy_avg": 13.39,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "SOUTHWEST",
+    "name": "South West Pinnacle Exploration Limited",
+    "sector": "Energy",
+    "nse_symbol": "SOUTHWEST",
+    "buy_avg": 165.99,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "DLINKINDIA",
+    "name": "D-Link (India) Limited",
+    "sector": "Technology",
+    "nse_symbol": "DLINKINDIA",
+    "buy_avg": 480.82,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "TRIVENI",
+    "name": "Triveni Engineering & Industries Limited",
+    "sector": "Consumer Defensive",
+    "nse_symbol": "TRIVENI",
+    "buy_avg": 384.17,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "GALAPREC",
+    "name": "GALA PRECISION ENG LTD",
+    "sector": "Industrials",
+    "nse_symbol": "GALAPREC",
+    "buy_avg": 768.77,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "MODISONLTD-T",
+    "name": "Modison Limited",
+    "sector": "Industrials",
+    "nse_symbol": "MODISONLTD-T",
+    "buy_avg": 171.27,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "HAPPYFORGE",
+    "name": "HAPPY FORGINGS LIMITED",
+    "sector": "Industrials",
+    "nse_symbol": "HAPPYFORGE",
+    "buy_avg": 1056.13,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "NIFTYBEES",
+    "name": "Nippon India ETF Nifty 50 BeES",
+    "sector": "Pending",
+    "nse_symbol": "NIFTYBEES",
+    "buy_avg": 220.39,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "HBLENGINE",
+    "name": "HBL ENGINEERING LTD",
+    "sector": "Industrials",
+    "nse_symbol": "HBLENGINE",
+    "buy_avg": 290.95,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "SASKEN",
+    "name": "Sasken Technologies Limited",
+    "sector": "Technology",
+    "nse_symbol": "SASKEN",
+    "buy_avg": 1504.07,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "ENRIN",
+    "name": "Siemens Energy India Limited",
+    "sector": "Utilities",
+    "nse_symbol": "ENRIN",
+    "buy_avg": 3292.31,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "ARE&M",
+    "name": "Amara Raja Energy & Mobility Limited",
+    "sector": "Industrials",
+    "nse_symbol": "ARE&M",
+    "buy_avg": 903.4,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "INDUSTOWER",
+    "name": "Indus Towers Limited",
+    "sector": "Communication Services",
+    "nse_symbol": "INDUSTOWER",
+    "buy_avg": 402.08,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "INDGN",
+    "name": "INDEGENE LIMITED",
+    "sector": "Healthcare",
+    "nse_symbol": "INDGN",
+    "buy_avg": 545.81,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "RIR",
+    "name": "Rir Power Electronics Limited",
+    "sector": "Technology",
+    "nse_symbol": "RIR",
+    "buy_avg": 91.09,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "SCODATUBES",
+    "name": "Scoda Tubes Limited",
+    "sector": "Basic Materials",
+    "nse_symbol": "SCODATUBES",
+    "buy_avg": 135.91,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "SALZERELEC",
+    "name": "Salzer Electronics Limited",
+    "sector": "Industrials",
+    "nse_symbol": "SALZERELEC",
+    "buy_avg": 846.21,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "MENONBE",
+    "name": "Menon Bearings Limited",
+    "sector": "Consumer Cyclical",
+    "nse_symbol": "MENONBE",
+    "buy_avg": 147.23,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "RUBICON",
+    "name": "RUBICON RESEARCH LIMITED",
+    "sector": "Healthcare",
+    "nse_symbol": "RUBICON",
+    "buy_avg": 722.52,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "INDNIPPON",
+    "name": "India Nippon Electricals Limited",
+    "sector": "Consumer Cyclical",
+    "nse_symbol": "INDNIPPON",
+    "buy_avg": 953.02,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "RKSWAMY",
+    "name": "R K SWAMY LIMITED",
+    "sector": "Communication Services",
+    "nse_symbol": "RKSWAMY",
+    "buy_avg": 97.49,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "RATEGAIN",
+    "name": "RateGain Travel Technologies Limited",
+    "sector": "Technology",
+    "nse_symbol": "RATEGAIN",
+    "buy_avg": 724.23,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "GMDCLTD",
+    "name": "Gujarat Mineral Development Corporation Limited",
+    "sector": "Energy",
+    "nse_symbol": "GMDCLTD",
+    "buy_avg": 529.68,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "TREL",
+    "name": "Transindia Real Estate Limited",
+    "sector": "Real Estate",
+    "nse_symbol": "TREL",
+    "buy_avg": 26.43,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "EIMCOELECO",
+    "name": "Eimco Elecon (India) Limited",
+    "sector": "Industrials",
+    "nse_symbol": "EIMCOELECO",
+    "buy_avg": 1823.31,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "BLUEJET",
+    "name": "Blue Jet Healthcare Limited",
+    "sector": "Healthcare",
+    "nse_symbol": "BLUEJET",
+    "buy_avg": 550.05,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "SHREEJISPG",
+    "name": "SHREEJI SHIPPING GLOBAL L",
+    "sector": "Industrials",
+    "nse_symbol": "SHREEJISPG",
+    "buy_avg": 267.98,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "NETWEB",
+    "name": "Netweb Technologies India Limited",
+    "sector": "Technology",
+    "nse_symbol": "NETWEB",
+    "buy_avg": 3066.43,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "RAMCOSYS",
+    "name": "Ramco Systems Limited",
+    "sector": "Technology",
+    "nse_symbol": "RAMCOSYS",
+    "buy_avg": 458.8,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "STALLION",
+    "name": "STALLION IND FLUOROCHEM L",
+    "sector": "Basic Materials",
+    "nse_symbol": "STALLION",
+    "buy_avg": 182.99,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "RPTECH",
+    "name": "Rashi Peripherals Limited",
+    "sector": "Technology",
+    "nse_symbol": "RPTECH",
+    "buy_avg": 331.82,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "SIGNPOST",
+    "name": "Signpost India Limited",
+    "sector": "Communication Services",
+    "nse_symbol": "SIGNPOST",
+    "buy_avg": 264.23,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "EXPLEOSOL",
+    "name": "Expleo Solutions Limited",
+    "sector": "Technology",
+    "nse_symbol": "EXPLEOSOL",
+    "buy_avg": 1008.5,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "BOROSCI",
+    "name": "Borosil Scientific Limited",
+    "sector": "Consumer Cyclical",
+    "nse_symbol": "BOROSCI",
+    "buy_avg": 137.08,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "GMMPFAUDLR",
+    "name": "GMM Pfaudler Limited",
+    "sector": "Industrials",
+    "nse_symbol": "GMMPFAUDLR",
+    "buy_avg": 1096.25,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "MAPMYINDIA",
+    "name": "C. E. Info Systems Limited",
+    "sector": "Technology",
+    "nse_symbol": "MAPMYINDIA",
+    "buy_avg": 1165.79,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "YATHARTH",
+    "name": "Yatharth Hospital & Trauma Care Services Limited",
+    "sector": "Healthcare",
+    "nse_symbol": "YATHARTH",
+    "buy_avg": 820.32,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "VASCONEQ-T",
+    "name": "Vascon Engineers Limited",
+    "sector": "Industrials",
+    "nse_symbol": "VASCONEQ-T",
+    "buy_avg": 65.92,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "FRACTAL",
+    "name": "FRACTAL ANALYTICS LIMITED",
+    "sector": "Technology",
+    "nse_symbol": "FRACTAL",
+    "buy_avg": 934.45,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "PROTEAN",
+    "name": "Protean eGov Technologies Limited",
+    "sector": "Technology",
+    "nse_symbol": "PROTEAN",
+    "buy_avg": 729.68,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "UNIVCABLES",
+    "name": "Universal Cables Limited",
+    "sector": "Industrials",
+    "nse_symbol": "UNIVCABLES",
+    "buy_avg": 702.63,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "RAYMOND",
+    "name": "Raymond Limited",
+    "sector": "Industrials",
+    "nse_symbol": "RAYMOND",
+    "buy_avg": 527.58,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "GRAPHITE",
+    "name": "Graphite India Limited",
+    "sector": "Industrials",
+    "nse_symbol": "GRAPHITE",
+    "buy_avg": 579.24,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "URBANCO",
+    "name": "Urban Company Limited",
+    "sector": "Technology",
+    "nse_symbol": "URBANCO",
+    "buy_avg": 134.11,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "GMRAIRPORT",
+    "name": "GMR Airports Limited",
+    "sector": "Industrials",
+    "nse_symbol": "GMRAIRPORT",
+    "buy_avg": 97.19,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "LAXMIDENTL",
+    "name": "LAXMI DENTAL LIMITED",
+    "sector": "Healthcare",
+    "nse_symbol": "LAXMIDENTL",
+    "buy_avg": 209.26,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "BIOCON",
+    "name": "Biocon Limited",
+    "sector": "Healthcare",
+    "nse_symbol": "BIOCON",
+    "buy_avg": 387.23,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "ANURAS",
+    "name": "Anupam Rasayan India Ltd",
+    "sector": "Basic Materials",
+    "nse_symbol": "ANURAS",
+    "buy_avg": 1099.4,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "SHANKARA-T",
+    "name": "Shankara Building Products Limited",
+    "sector": "Consumer Cyclical",
+    "nse_symbol": "SHANKARA-T",
+    "buy_avg": 136.74,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "INCAP-X",
+    "name": "Incap Limited",
+    "sector": "Technology",
+    "nse_symbol": "INCAP-X",
+    "buy_avg": 41.79,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "SHILPAMED",
+    "name": "Shilpa Medicare Limited",
+    "sector": "Healthcare",
+    "nse_symbol": "SHILPAMED",
+    "buy_avg": 333.15,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "ECOSMOBLTY-T",
+    "name": "ECOS (INDIA) MOB & HOSP L",
+    "sector": "Industrials",
+    "nse_symbol": "ECOSMOBLTY-T",
+    "buy_avg": 139.03,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "KIRLPNU",
+    "name": "Kirloskar Pneumatic Company Limited",
+    "sector": "Industrials",
+    "nse_symbol": "KIRLPNU",
+    "buy_avg": 1526.68,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "PTC",
+    "name": "PTC India Limited",
+    "sector": "Utilities",
+    "nse_symbol": "PTC",
+    "buy_avg": 160.5,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "LANDMARK",
+    "name": "Landmark Cars Limited",
+    "sector": "Consumer Cyclical",
+    "nse_symbol": "LANDMARK",
+    "buy_avg": 576.82,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "FREDUN-X",
+    "name": "Fredun Pharmaceuticals Limited",
+    "sector": "Healthcare",
+    "nse_symbol": "FREDUN-X",
+    "buy_avg": 1395.0,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "CMSINFO",
+    "name": "CMS Info Systems Limited",
+    "sector": "Industrials",
+    "nse_symbol": "CMSINFO",
+    "buy_avg": 374.48,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "DIFFNKG",
+    "name": "DIFFUSION ENGINEERS LTD",
+    "sector": "Industrials",
+    "nse_symbol": "DIFFNKG",
+    "buy_avg": 311.35,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "MOSCHIP",
+    "name": "MOSCHIP TECHNOLOGIES LTD",
+    "sector": "Technology",
+    "nse_symbol": "MOSCHIP",
+    "buy_avg": 173.53,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "GULFOILLUB",
+    "name": "Gulf Oil Lubricants India Limited",
+    "sector": "Basic Materials",
+    "nse_symbol": "GULFOILLUB",
+    "buy_avg": 1220.91,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "DATAPATTNS",
+    "name": "Data Patterns (India) Limited",
+    "sector": "Industrials",
+    "nse_symbol": "DATAPATTNS",
+    "buy_avg": 2134.6,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "TOTEM-X",
+    "name": "Forbes Precision Tools and Machine Parts Limited",
+    "sector": "Industrials",
+    "nse_symbol": "TOTEM-X",
+    "buy_avg": 194.63,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "CYIENTDLM",
+    "name": "Cyient DLM Limited",
+    "sector": "Technology",
+    "nse_symbol": "CYIENTDLM",
+    "buy_avg": 451.6,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "MMP",
+    "name": "MMP Industries Limited",
+    "sector": "Basic Materials",
+    "nse_symbol": "MMP",
+    "buy_avg": 275.75,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "BBL",
+    "name": "Bharat Bijlee Limited",
+    "sector": "Industrials",
+    "nse_symbol": "BBL",
+    "buy_avg": 3125.67,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "CESC",
+    "name": "CESC Limited",
+    "sector": "Utilities",
+    "nse_symbol": "CESC",
+    "buy_avg": 181.04,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "OMINFRAL",
+    "name": "Om Infra Limited",
+    "sector": "Industrials",
+    "nse_symbol": "OMINFRAL",
+    "buy_avg": 126.22,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "WHIRLPOOL",
+    "name": "Whirlpool of India Limited",
+    "sector": "Consumer Cyclical",
+    "nse_symbol": "WHIRLPOOL",
+    "buy_avg": 1205.77,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "PITTIENG",
+    "name": "Pitti Engineering Limited",
+    "sector": "Industrials",
+    "nse_symbol": "PITTIENG",
+    "buy_avg": 988.13,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "RAYMONDREL",
+    "name": "Raymond Realty Limited",
+    "sector": "Real Estate",
+    "nse_symbol": "RAYMONDREL",
+    "buy_avg": 619.5,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "NIITLTD",
+    "name": "NIIT Limited",
+    "sector": "Consumer Defensive",
+    "nse_symbol": "NIITLTD",
+    "buy_avg": 94.74,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "ORIENTCER",
+    "name": "Orient Ceratech Limited",
+    "sector": "Basic Materials",
+    "nse_symbol": "ORIENTCER",
+    "buy_avg": 43.8,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "RUSTOMJEE",
+    "name": "Keystone Realtors Limited",
+    "sector": "Real Estate",
+    "nse_symbol": "RUSTOMJEE",
+    "buy_avg": 430.98,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "INTERARCH",
+    "name": "Interarch Building Solutions Limited",
+    "sector": "Industrials",
+    "nse_symbol": "INTERARCH",
+    "buy_avg": 1963.23,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "FMGOETZE",
+    "name": "Federal-Mogul Goetze (India) Limited",
+    "sector": "Consumer Cyclical",
+    "nse_symbol": "FMGOETZE",
+    "buy_avg": 498.93,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "CAPACITE",
+    "name": "Capacit'e Infraprojects Limited",
+    "sector": "Industrials",
+    "nse_symbol": "CAPACITE",
+    "buy_avg": 278.55,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "RAILTEL",
+    "name": "RailTel Corporation of India Limited",
+    "sector": "Communication Services",
+    "nse_symbol": "RAILTEL",
+    "buy_avg": 292.7,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "AMBER",
+    "name": "Amber Enterprises India Limited",
+    "sector": "Consumer Cyclical",
+    "nse_symbol": "AMBER",
+    "buy_avg": 6635.5,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "AFFLE",
+    "name": "Affle 3i Limited",
+    "sector": "Communication Services",
+    "nse_symbol": "AFFLE",
+    "buy_avg": 975.8,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "SKFINDIA",
+    "name": "SKF India Limited",
+    "sector": "Industrials",
+    "nse_symbol": "SKFINDIA",
+    "buy_avg": 1722.96,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "TEJASNET",
+    "name": "Tejas Networks Limited",
+    "sector": "Technology",
+    "nse_symbol": "TEJASNET",
+    "buy_avg": 369.7,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "VSTTILLERS",
+    "name": "V.S.T. Tillers Tractors Limited",
+    "sector": "Industrials",
+    "nse_symbol": "VSTTILLERS",
+    "buy_avg": 5480.0,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "ASALCBR",
+    "name": "Associated Alcohols & Breweries Limited",
+    "sector": "Consumer Defensive",
+    "nse_symbol": "ASALCBR",
+    "buy_avg": 1023.34,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "GREAVESCOT",
+    "name": "Greaves Cotton Limited",
+    "sector": "Industrials",
+    "nse_symbol": "GREAVESCOT",
+    "buy_avg": 174.16,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "GLOBUSSPR",
+    "name": "Globus Spirits Limited",
+    "sector": "Consumer Defensive",
+    "nse_symbol": "GLOBUSSPR",
+    "buy_avg": 1105.88,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "CYIENT",
+    "name": "Cyient Limited",
+    "sector": "Industrials",
+    "nse_symbol": "CYIENT",
+    "buy_avg": 907.98,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "ELDEHSG",
+    "name": "Eldeco Housing and Industries Limited",
+    "sector": "Real Estate",
+    "nse_symbol": "ELDEHSG",
+    "buy_avg": 855.63,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "ARIS",
+    "name": "Arisinfra Solutions Limited",
+    "sector": "Industrials",
+    "nse_symbol": "ARIS",
+    "buy_avg": 158.81,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "QUESS",
+    "name": "Quess Corp Limited",
+    "sector": "Industrials",
+    "nse_symbol": "QUESS",
+    "buy_avg": 238.76,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "AVALON",
+    "name": "Avalon Technologies Limited",
+    "sector": "Technology",
+    "nse_symbol": "AVALON",
+    "buy_avg": 1395.0,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "GIPCL",
+    "name": "Gujarat Industries Power Company Limited",
+    "sector": "Utilities",
+    "nse_symbol": "GIPCL",
+    "buy_avg": 166.1,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "TVSELECT",
+    "name": "TVS Electronics Limited",
+    "sector": "Technology",
+    "nse_symbol": "TVSELECT",
+    "buy_avg": 369.45,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "AEROENTER",
+    "name": "Aeroflex Enterprises Limited",
+    "sector": "Basic Materials",
+    "nse_symbol": "AEROENTER",
+    "buy_avg": 108.55,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "EMBDL",
+    "name": "Embassy Developments Limited",
+    "sector": "Real Estate",
+    "nse_symbol": "EMBDL",
+    "buy_avg": 67.59,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "LAKSELEC-X",
+    "name": "Lakshmi Electrical Control Systems Limited",
+    "sector": "Industrials",
+    "nse_symbol": "LAKSELEC-X",
+    "buy_avg": 1486.09,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "TATACOMM",
+    "name": "Tata Communications Limited",
+    "sector": "Communication Services",
+    "nse_symbol": "TATACOMM",
+    "buy_avg": 1154.83,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "UNIECOM",
+    "name": "UNICOMMERCE ESOLUTIONS L",
+    "sector": "Technology",
+    "nse_symbol": "UNIECOM",
+    "buy_avg": 379.94,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "SHK",
+    "name": "S H Kelkar and Company Limited",
+    "sector": "Basic Materials",
+    "nse_symbol": "SHK",
+    "buy_avg": 205.31,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "SUVEN",
+    "name": "Suven Life Sciences Limited",
+    "sector": "Healthcare",
+    "nse_symbol": "SUVEN",
+    "buy_avg": 80.54,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "WOCKPHARMA",
+    "name": "Wockhardt Limited",
+    "sector": "Healthcare",
+    "nse_symbol": "WOCKPHARMA",
+    "buy_avg": 415.9,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "EIHOTEL",
+    "name": "EIH Limited",
+    "sector": "Consumer Cyclical",
+    "nse_symbol": "EIHOTEL",
+    "buy_avg": 394.42,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "KPITTECH",
+    "name": "KPIT Technologies Limited",
+    "sector": "Technology",
+    "nse_symbol": "KPITTECH",
+    "buy_avg": 1526.5,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "USHAMART",
+    "name": "Usha Martin Limited",
+    "sector": "Basic Materials",
+    "nse_symbol": "USHAMART",
+    "buy_avg": 53.6,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "MSTCLTD",
+    "name": "MSTC Limited",
+    "sector": "Industrials",
+    "nse_symbol": "MSTCLTD",
+    "buy_avg": 262.0,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "MON100-E",
+    "name": "Motilal Oswal NASDAQ 100 ETF",
+    "sector": "Pending",
+    "nse_symbol": "MON100-E",
+    "buy_avg": 119.7,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "VIYASH",
+    "name": "Viyash Scientific Limited",
+    "sector": "Healthcare",
+    "nse_symbol": "VIYASH",
+    "buy_avg": 165.85,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "REDINGTON",
+    "name": "Redington Limited",
+    "sector": "Technology",
+    "nse_symbol": "REDINGTON",
+    "buy_avg": 142.65,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "BOROLTD",
+    "name": "Borosil Limited",
+    "sector": "Consumer Cyclical",
+    "nse_symbol": "BOROLTD",
+    "buy_avg": 111.28,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "RITES",
+    "name": "RITES Limited",
+    "sector": "Industrials",
+    "nse_symbol": "RITES",
+    "buy_avg": 258.35,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "HUHTAMAKI",
+    "name": "Huhtamaki India Limited",
+    "sector": "Consumer Cyclical",
+    "nse_symbol": "HUHTAMAKI",
+    "buy_avg": 379.7,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "GAUDIUMIVF-T",
+    "name": "GAUDIUM IVF N WOMEN H L",
+    "sector": "Healthcare",
+    "nse_symbol": "GAUDIUMIVF-T",
+    "buy_avg": 116.0,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "ORIENTHOT",
+    "name": "Oriental Hotels Limited",
+    "sector": "Consumer Cyclical",
+    "nse_symbol": "ORIENTHOT",
+    "buy_avg": 25.25,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "ABLBL",
+    "name": "ADITYA BIRLA LIFES BRAN L",
+    "sector": "Consumer Cyclical",
+    "nse_symbol": "ABLBL",
+    "buy_avg": 51.86,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  }
+]

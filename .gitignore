@@ -1,0 +1,22 @@
+__pycache__/
+*.pyc
+*.pyo
+.env
+.DS_Store
+Thumbs.db
+node_modules/
+.vscode/
+*.log
+
+# Temp/debug output files
+err.txt
+output.txt
+output2.txt
+
+# Raw portfolio data — contains personal financial info, kept local only
+Data/
+Portfolio.xlsx
+
+# Instruction/prompt files not needed in repo
+CLAUDE_CODE_INSTRUCTIONS*.md
+CLAUDE_CODE_PROMPT.md
