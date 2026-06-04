@@ -27,6 +27,10 @@ jobs:
       - name: Fetch prices
         run: python scripts/fetch_prices.py
 
+      - name: Fetch extended data (Daily at 9:15 AM)
+        if: github.event.schedule == '45 3 * * 1-5' || github.event_name == 'workflow_dispatch'
+        run: python scripts/fetch_extended_data.py
+
       - name: Commit and push prices.json + stocks.json
         run: |
           git config user.name "github-actions[bot]"

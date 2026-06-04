@@ -458,6 +458,62 @@
     }
     @keyframes pulse { from { opacity:.4 } to { opacity:1 } }
 
+    /* ── TABS ── */
+    .tabs-bar {
+      display: flex;
+      background: var(--bg2);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      padding: 0 1rem;
+    }
+    .tab-item {
+      padding: 1rem 1.5rem;
+      cursor: pointer;
+      font-weight: 600;
+      color: var(--text3);
+      border-bottom: 3px solid transparent;
+      transition: 0.2s;
+      font-size: 0.9rem;
+    }
+    .tab-item:hover { color: var(--text2); }
+    .tab-item.active {
+      color: var(--blue);
+      border-bottom-color: var(--blue);
+    }
+    .tab-content { display: none; }
+    .tab-content.active { display: block; }
+
+    /* ── ANALYSIS TABLE ── */
+    .analysis-table-container {
+      padding: 1rem;
+      overflow-x: auto;
+    }
+    .analysis-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.8rem;
+      background: var(--bg2);
+      border-radius: 8px;
+    }
+    .analysis-table th, .analysis-table td {
+      padding: 0.75rem;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+      white-space: nowrap;
+    }
+    .analysis-table th {
+      background: var(--bg3);
+      color: var(--text3);
+      font-weight: 600;
+      position: sticky;
+      top: 0;
+    }
+    .analysis-table tr:hover { background: #1e293b; }
+    .neg { color: var(--red-text); }
+    .pos { color: var(--green-text); }
+
     /* ── MODAL ── */
     .modal-overlay {
       display: none;
@@ -581,8 +637,14 @@
 </head>
 <body>
 
-<!-- HEADER -->
-<header class="header">
+<div class="tabs-bar">
+  <div class="tab-item active" id="tab-btn-dashboard" onclick="switchTab('dashboard')">📈 Dashboard</div>
+  <div class="tab-item" id="tab-btn-analysis" onclick="switchTab('analysis')">📊 Deep Analysis</div>
+</div>
+
+<div id="view-dashboard" class="tab-content active">
+  <!-- HEADER -->
+  <header class="header">
   <div class="header-top">
     <h1>📈 <span>Portfolio</span> Dashboard</h1>
     <div class="header-actions">
@@ -663,6 +725,44 @@
   <div>Fetching portfolio data…</div>
 </div>
 <div id="cards" style="display:none;"></div>
+</div> <!-- End view-dashboard -->
+
+<div id="view-analysis" class="tab-content">
+  <div class="analysis-table-container">
+    <table class="analysis-table">
+      <thead>
+        <tr>
+          <th>Symbol</th>
+          <th>Qty.</th>
+          <th>Buy Value</th>
+          <th>Present Value</th>
+          <th>P&L</th>
+          <th>P&L %</th>
+          <th>Market Cap (Cr)</th>
+          <th>P/E</th>
+          <th>ROE %</th>
+          <th>Op. Cash Flow</th>
+          <th>1D Ret</th>
+          <th>1M Ret</th>
+          <th>6M Ret</th>
+          <th>1Y Ret</th>
+          <th>3Y Ret</th>
+          <th>5Y Ret</th>
+          <th>PAT Growth CAGR</th>
+          <th>Rev Growth CAGR</th>
+          <th>MCap Growth 3Y</th>
+          <th>Debt/Equity</th>
+          <th>EPS</th>
+          <th>Book Value</th>
+          <th>Div Yield %</th>
+        </tr>
+      </thead>
+      <tbody id="analysis-tbody">
+        <!-- populated by JS -->
+      </tbody>
+    </table>
+  </div>
+</div>
 
 <!-- API KEY SETUP MODAL -->
 <div class="modal-overlay" id="paste-modal" onclick="if(event.target===this)closePasteModal()">
@@ -1058,6 +1158,65 @@ function exportStocksJSON() {
   showToast('⬇ stocks.json downloaded — replace file in Dashboard folder', 'green');
 }
 
+// ── Tabs ───────────────────────────────────────────────────────────────────
+function switchTab(tab) {
+  document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+  document.querySelectorAll('.tab-item').forEach(i => i.classList.remove('active'));
+
+  document.getElementById('view-' + tab).classList.add('active');
+  document.getElementById('tab-btn-' + tab).classList.add('active');
+
+  if (tab === 'analysis') {
+    renderAnalysisTable();
+  }
+}
+
+// ── Rendering Analysis Table ────────────────────────────────────────────────
+function renderAnalysisTable() {
+  const tbody = document.getElementById('analysis-tbody');
+  tbody.innerHTML = '';
+
+  const stocks = [...allStocks].sort((a, b) => (b.pnl_abs || 0) - (a.pnl_abs || 0));
+
+  stocks.forEach(s => {
+    const buyValue = (s.buy_avg || 0) * (s.quantity || 0);
+    const presValue = (s.ltp || 0) * (s.quantity || 0);
+    const pnlAbs = (s.pnl_abs || 0);
+    const pnlPct = (s.pnl_pct || 0);
+
+    const f = (val, dec=0) => val != null ? val.toLocaleString('en-IN', {minimumFractionDigits: dec, maximumFractionDigits: dec}) : '—';
+    const pc = (val) => val != null ? (val >= 0 ? 'pos' : 'neg') : '';
+
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+      <td><strong>${s.ticker}</strong></td>
+      <td>${f(s.quantity)}</td>
+      <td>₹${f(buyValue)}</td>
+      <td>₹${f(presValue)}</td>
+      <td class="${pc(pnlAbs)}">₹${f(pnlAbs)}</td>
+      <td class="${pc(pnlPct)}">${f(pnlPct,1)}%</td>
+      <td>${f(s.mcap_cr)}</td>
+      <td>${f(s.pe, 1)}</td>
+      <td>${f(s.roe, 1)}%</td>
+      <td>${f(s.ocf_cr)}</td>
+      <td class="${pc(s.ret_1d)}">${f(s.ret_1d, 1)}%</td>
+      <td class="${pc(s.ret_1m)}">${f(s.ret_1m, 1)}%</td>
+      <td class="${pc(s.ret_6m)}">${f(s.ret_6m, 1)}%</td>
+      <td class="${pc(s.ret_1y)}">${f(s.ret_1y, 1)}%</td>
+      <td class="${pc(s.ret_3y)}">${f(s.ret_3y, 1)}%</td>
+      <td class="${pc(s.ret_5y)}">${f(s.ret_5y, 1)}%</td>
+      <td class="${pc(s.pat_cagr)}">${f(s.pat_cagr, 1)}%</td>
+      <td class="${pc(s.rev_cagr)}">${f(s.rev_cagr, 1)}%</td>
+      <td class="${pc(s.mcap_3y)}">${f(s.mcap_3y, 1)}%</td>
+      <td>${f(s.debt_to_equity, 2)}</td>
+      <td>${f(s.eps, 2)}</td>
+      <td>${f(s.book_value, 2)}</td>
+      <td>${f(s.div_yield, 2)}%</td>
+    `;
+    tbody.appendChild(tr);
+  });
+}
+
 // ── State ──────────────────────────────────────────────────────────────────
 let allStocks = [];
 let activeFilter = 'all';
@@ -1160,16 +1319,11 @@ async function loadData() {
   // Apply any locally-saved edits (from Claude paste)
   applyUserEdits(stocks);
 
-  // Merge prices into stocks
+  // Merge prices and return data into stocks
   stocks.forEach(s => {
     const p = prices[s.ticker];
     if (p) {
-      s.ltp      = p.ltp;
-      s.buy_avg  = p.buy_avg  || s.buy_avg;
-      s.quantity = p.quantity || 0;
-      s.pnl_pct  = p.pnl_pct;
-      s.pnl_abs  = p.pnl_abs;
-      s.updated  = p.updated;
+      Object.assign(s, p);
     }
   });
 
