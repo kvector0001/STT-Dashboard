@@ -2,7 +2,8 @@ name: Refresh Stock Prices
 
 on:
   schedule:
-    - cron: '30 10 * * 1-5'   # 4:00 PM IST, Mon–Fri (10:30 UTC)
+    - cron: '45 3 * * 1-5'      # 9:15 AM IST, Mon–Fri
+    - cron: '*/15 4-10 * * 1-5'  # Every 15 mins till 4:15 PM IST
   workflow_dispatch:            # Manual trigger from GitHub Actions tab
 
 jobs:
