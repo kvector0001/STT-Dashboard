@@ -4,18 +4,24 @@ Simple Flask server for Portfolio Dashboard
 - Provides /api/refresh endpoint to run fetch_prices.py
 """
 
-from flask import Flask, jsonify
+from flask import Flask, jsonify, send_from_directory
 import subprocess
 import os
 import json
 from datetime import datetime
 
-app = Flask(__name__, static_folder='.', static_url_path='')
+app = Flask(__name__)
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 @app.route('/')
 def serve_index():
     """Serve the main dashboard"""
-    return app.send_static_file('index.html')
+    return send_from_directory(BASE_DIR, 'index.html')
+
+@app.route('/<path:filename>')
+def serve_static(filename):
+    """Serve all other static files"""
+    return send_from_directory(BASE_DIR, filename)
 
 @app.route('/api/refresh', methods=['POST'])
 def refresh_data():
@@ -28,10 +34,11 @@ def refresh_data():
         
         # Run the fetch_prices.py script
         result = subprocess.run(
-            ['python', 'scripts/fetch_prices.py'],
+            [os.path.join(os.environ.get('PYTHON_PATH', 'python')), 'scripts/fetch_prices.py'],
             capture_output=True,
             text=True,
-            timeout=180  # 3 minute timeout
+            timeout=180,  # 3 minute timeout
+            cwd=BASE_DIR
         )
         
         # Check if script succeeded
@@ -40,7 +47,7 @@ def refresh_data():
             
             # Read updated data to return to frontend
             try:
-                with open('prices.json', 'r', encoding='utf-8') as f:
+                with open(os.path.join(BASE_DIR, 'prices.json'), 'r', encoding='utf-8') as f:
                     prices = json.load(f)
                 return jsonify({
                     'success': True,
@@ -77,11 +84,6 @@ def refresh_data():
             'message': f'❌ Error: {str(e)[:100]}',
             'timestamp': datetime.now().isoformat()
         }), 500
-
-@app.route('/<path:path>')
-def serve_static(path):
-    """Serve all other static files"""
-    return app.send_static_file(path)
 
 if __name__ == '__main__':
     print("🚀 Starting Portfolio Dashboard server...")
