@@ -1,67 +1,67 @@
 {
   "NH": {
-    "ltp": 1969.5,
+    "ltp": 1971.9,
     "buy_avg": 497.01,
     "quantity": 369.0,
-    "pnl_pct": 296.27,
-    "pnl_abs": 543348.81,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": 296.75,
+    "pnl_abs": 544234.41,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "3MINDIA": {
-    "ltp": 31820.0,
+    "ltp": 31965.0,
     "buy_avg": 32853.95,
     "quantity": 12.0,
-    "pnl_pct": -3.15,
-    "pnl_abs": -12407.4,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": -2.71,
+    "pnl_abs": -10667.4,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "HCG": {
-    "ltp": 632.4,
+    "ltp": 632.2,
     "buy_avg": 314.21,
     "quantity": 609.0,
-    "pnl_pct": 101.27,
-    "pnl_abs": 193777.71,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": 101.2,
+    "pnl_abs": 193655.91,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "AEROFLEX": {
-    "ltp": 414.0,
+    "ltp": 417.1,
     "buy_avg": 187.2,
     "quantity": 960.0,
-    "pnl_pct": 121.15,
-    "pnl_abs": 217728.0,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": 122.81,
+    "pnl_abs": 220704.0,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "SONACOMS": {
-    "ltp": 601.85,
+    "ltp": 602.9,
     "buy_avg": 543.57,
     "quantity": 568.0,
-    "pnl_pct": 10.72,
-    "pnl_abs": 33103.04,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": 10.91,
+    "pnl_abs": 33699.44,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "SYRMA": {
-    "ltp": 1217.0,
+    "ltp": 1221.3,
     "buy_avg": 430.8,
     "quantity": 289.0,
-    "pnl_pct": 182.5,
-    "pnl_abs": 227211.8,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": 183.5,
+    "pnl_abs": 228454.5,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "PARKHOSPS": {
-    "ltp": 114.88,
+    "ltp": 282.15,
     "buy_avg": 158.81,
     "quantity": 896.0,
-    "pnl_pct": -27.66,
-    "pnl_abs": -39361.28,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": 77.67,
+    "pnl_abs": 110512.64,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "MTARTECH": {
-    "ltp": 7503.5,
+    "ltp": 7517.0,
     "buy_avg": 1514.93,
     "quantity": 26.0,
-    "pnl_pct": 395.3,
-    "pnl_abs": 155702.82,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": 396.19,
+    "pnl_abs": 156053.82,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "DEEDEV": {
     "ltp": 671.15,
@@ -69,151 +69,151 @@
     "quantity": 255.0,
     "pnl_pct": 156.3,
     "pnl_abs": 104368.95,
-    "updated": "2026-06-05 08:15 UTC"
+    "updated": "2026-06-05 08:33 UTC"
   },
   "SANSERA": {
-    "ltp": 2928.6,
+    "ltp": 2942.1,
     "buy_avg": 1524.46,
     "quantity": 56.0,
-    "pnl_pct": 92.11,
-    "pnl_abs": 78631.84,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": 92.99,
+    "pnl_abs": 79387.84,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "TRITURBINE": {
-    "ltp": 682.0,
+    "ltp": 682.3,
     "buy_avg": 551.14,
     "quantity": 230.0,
-    "pnl_pct": 23.74,
-    "pnl_abs": 30097.8,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": 23.8,
+    "pnl_abs": 30166.8,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "THERMAX": {
-    "ltp": 4830.4,
+    "ltp": 4810.2,
     "buy_avg": 4430.55,
     "quantity": 30.0,
-    "pnl_pct": 9.02,
-    "pnl_abs": 11995.5,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": 8.57,
+    "pnl_abs": 11389.5,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "ELGIEQUIP": {
-    "ltp": 611.6,
+    "ltp": 612.5,
     "buy_avg": 552.93,
     "quantity": 245.0,
-    "pnl_pct": 10.61,
-    "pnl_abs": 14374.15,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": 10.77,
+    "pnl_abs": 14594.65,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "POWERINDIA": {
-    "ltp": 36680.0,
+    "ltp": 36720.0,
     "buy_avg": 2195.91,
     "quantity": 4.0,
-    "pnl_pct": 1570.38,
-    "pnl_abs": 137936.36,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": 1572.2,
+    "pnl_abs": 138096.36,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "ASTRAMICRO": {
-    "ltp": 1419.1,
+    "ltp": 1418.1,
     "buy_avg": 224.73,
     "quantity": 101.0,
-    "pnl_pct": 531.47,
-    "pnl_abs": 120631.37,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": 531.02,
+    "pnl_abs": 120530.37,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "INGERRAND": {
-    "ltp": 3950.4,
+    "ltp": 3950.0,
     "buy_avg": 4330.32,
     "quantity": 36.0,
-    "pnl_pct": -8.77,
-    "pnl_abs": -13677.12,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": -8.78,
+    "pnl_abs": -13691.52,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "ASTERDM": {
-    "ltp": 747.55,
+    "ltp": 748.2,
     "buy_avg": 283.78,
     "quantity": 183.0,
-    "pnl_pct": 163.43,
-    "pnl_abs": 84869.91,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": 163.65,
+    "pnl_abs": 84988.86,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "SJVN": {
-    "ltp": 73.24,
+    "ltp": 73.4,
     "buy_avg": 74.72,
     "quantity": 1465.0,
-    "pnl_pct": -1.98,
-    "pnl_abs": -2168.2,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": -1.77,
+    "pnl_abs": -1933.8,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "NEPHROPLUS": {
-    "ltp": 669.75,
+    "ltp": 670.75,
     "buy_avg": 606.55,
     "quantity": 164.0,
-    "pnl_pct": 10.42,
-    "pnl_abs": 10364.8,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": 10.58,
+    "pnl_abs": 10528.8,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "NEULANDLAB": {
-    "ltp": 16853.0,
+    "ltp": 16835.0,
     "buy_avg": 1031.85,
     "quantity": 6.0,
-    "pnl_pct": 1533.28,
-    "pnl_abs": 94926.9,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": 1531.54,
+    "pnl_abs": 94818.9,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "INOXINDIA": {
-    "ltp": 1540.0,
+    "ltp": 1545.9,
     "buy_avg": 1182.81,
     "quantity": 68.0,
-    "pnl_pct": 30.2,
-    "pnl_abs": 24288.92,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": 30.7,
+    "pnl_abs": 24690.12,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "AVANTEL": {
-    "ltp": 169.64,
+    "ltp": 169.5,
     "buy_avg": 13.39,
     "quantity": 540.0,
-    "pnl_pct": 1166.92,
-    "pnl_abs": 84375.0,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": 1165.87,
+    "pnl_abs": 84299.4,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "SOUTHWEST": {
-    "ltp": 260.9,
+    "ltp": 261.5,
     "buy_avg": 165.99,
     "quantity": 350.0,
-    "pnl_pct": 57.18,
-    "pnl_abs": 33218.5,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": 57.54,
+    "pnl_abs": 33428.5,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "DLINKINDIA": {
-    "ltp": 475.8,
+    "ltp": 474.5,
     "buy_avg": 480.82,
     "quantity": 190.0,
-    "pnl_pct": -1.04,
-    "pnl_abs": -953.8,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": -1.31,
+    "pnl_abs": -1200.8,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "TRIVENI": {
-    "ltp": 362.9,
+    "ltp": 363.1,
     "buy_avg": 384.17,
     "quantity": 246.0,
-    "pnl_pct": -5.54,
-    "pnl_abs": -5232.42,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": -5.48,
+    "pnl_abs": -5183.22,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "GALAPREC": {
-    "ltp": 905.3,
+    "ltp": 908.95,
     "buy_avg": 768.77,
     "quantity": 97.0,
-    "pnl_pct": 17.76,
-    "pnl_abs": 13243.41,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": 18.23,
+    "pnl_abs": 13597.46,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "ISGEC": {
-    "ltp": 923.5,
+    "ltp": 921.9,
     "buy_avg": 1054.87,
     "quantity": 97.0,
-    "pnl_pct": -12.45,
-    "pnl_abs": -12742.89,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": -12.61,
+    "pnl_abs": -12898.09,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "MODISONLTD": {
     "ltp": 362.7,
@@ -221,15 +221,15 @@
     "quantity": 269.0,
     "pnl_pct": 111.77,
     "pnl_abs": 51494.67,
-    "updated": "2026-06-05 08:15 UTC"
+    "updated": "2026-06-05 08:33 UTC"
   },
   "HAPPYFORGE": {
-    "ltp": 1382.3,
+    "ltp": 1382.2,
     "buy_avg": 1056.13,
     "quantity": 59.0,
-    "pnl_pct": 30.88,
-    "pnl_abs": 19244.03,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": 30.87,
+    "pnl_abs": 19238.13,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "NESCO": {
     "ltp": 1124.2,
@@ -237,31 +237,31 @@
     "quantity": 69.0,
     "pnl_pct": -7.36,
     "pnl_abs": -6158.25,
-    "updated": "2026-06-05 08:15 UTC"
+    "updated": "2026-06-05 08:33 UTC"
   },
   "NIFTYBEES": {
-    "ltp": 264.5,
+    "ltp": 264.74,
     "buy_avg": 220.39,
     "quantity": 300.0,
-    "pnl_pct": 20.01,
-    "pnl_abs": 13233.0,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": 20.12,
+    "pnl_abs": 13305.0,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "HBLENGINE": {
-    "ltp": 791.5,
+    "ltp": 793.0,
     "buy_avg": 290.95,
     "quantity": 100.0,
-    "pnl_pct": 172.04,
-    "pnl_abs": 50055.0,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": 172.56,
+    "pnl_abs": 50205.0,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "SASKEN": {
-    "ltp": 2188.4,
+    "ltp": 2179.8,
     "buy_avg": 1504.07,
     "quantity": 33.0,
-    "pnl_pct": 45.5,
-    "pnl_abs": 22582.89,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": 44.93,
+    "pnl_abs": 22299.09,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "PFC": {
     "ltp": 429.8,
@@ -269,87 +269,87 @@
     "quantity": 184.0,
     "pnl_pct": -0.38,
     "pnl_abs": -301.76,
-    "updated": "2026-06-05 08:15 UTC"
+    "updated": "2026-06-05 08:33 UTC"
   },
   "ENRIN": {
-    "ltp": 3650.0,
+    "ltp": 3640.0,
     "buy_avg": 3292.31,
     "quantity": 21.0,
-    "pnl_pct": 10.86,
-    "pnl_abs": 7511.49,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": 10.56,
+    "pnl_abs": 7301.49,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "ARE&M": {
-    "ltp": 851.3,
+    "ltp": 852.5,
     "buy_avg": 903.4,
     "quantity": 87.0,
-    "pnl_pct": -5.77,
-    "pnl_abs": -4532.7,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": -5.63,
+    "pnl_abs": -4428.3,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "JNKINDIA": {
-    "ltp": 422.65,
+    "ltp": 424.0,
     "buy_avg": 283.62,
     "quantity": 205.0,
-    "pnl_pct": 49.02,
-    "pnl_abs": 28501.15,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": 49.5,
+    "pnl_abs": 28777.9,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "KENNAMET": {
-    "ltp": 2890.8,
+    "ltp": 2856.2,
     "buy_avg": 2476.12,
     "quantity": 26.0,
-    "pnl_pct": 16.75,
-    "pnl_abs": 10781.68,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": 15.35,
+    "pnl_abs": 9882.08,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "NLCINDIA": {
-    "ltp": 336.2,
+    "ltp": 336.5,
     "buy_avg": 255.12,
     "quantity": 215.0,
-    "pnl_pct": 31.78,
-    "pnl_abs": 17432.2,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": 31.9,
+    "pnl_abs": 17496.7,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "INDUSTOWER": {
-    "ltp": 430.85,
+    "ltp": 430.7,
     "buy_avg": 402.08,
     "quantity": 171.0,
-    "pnl_pct": 7.16,
-    "pnl_abs": 4919.67,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": 7.12,
+    "pnl_abs": 4894.02,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "INDGN": {
-    "ltp": 519.35,
+    "ltp": 521.25,
     "buy_avg": 545.81,
     "quantity": 139.0,
-    "pnl_pct": -4.85,
-    "pnl_abs": -3677.94,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": -4.5,
+    "pnl_abs": -3413.84,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "RIR": {
-    "ltp": 170.55,
+    "ltp": 170.05,
     "buy_avg": 91.09,
     "quantity": 401.0,
-    "pnl_pct": 87.23,
-    "pnl_abs": 31863.46,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": 86.68,
+    "pnl_abs": 31662.96,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "WELCORP": {
-    "ltp": 1395.6,
+    "ltp": 1391.8,
     "buy_avg": 1099.22,
     "quantity": 51.0,
-    "pnl_pct": 26.96,
-    "pnl_abs": 15115.38,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": 26.62,
+    "pnl_abs": 14921.58,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "TEGA": {
-    "ltp": 1835.9,
+    "ltp": 1839.3,
     "buy_avg": 2033.06,
     "quantity": 37.0,
-    "pnl_pct": -9.7,
-    "pnl_abs": -7294.92,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": -9.53,
+    "pnl_abs": -7169.12,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "SCODATUBES": {
     "ltp": 123.0,
@@ -357,63 +357,63 @@
     "quantity": 546.0,
     "pnl_pct": -9.5,
     "pnl_abs": -7048.86,
-    "updated": "2026-06-05 08:15 UTC"
+    "updated": "2026-06-05 08:33 UTC"
   },
   "POWERICA": {
-    "ltp": 500.9,
+    "ltp": 502.7,
     "buy_avg": 511.33,
     "quantity": 115.0,
-    "pnl_pct": -2.04,
-    "pnl_abs": -1199.45,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": -1.69,
+    "pnl_abs": -992.45,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "SALZERELEC": {
-    "ltp": 616.25,
+    "ltp": 617.0,
     "buy_avg": 846.21,
     "quantity": 94.0,
-    "pnl_pct": -27.18,
-    "pnl_abs": -21616.24,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": -27.09,
+    "pnl_abs": -21545.74,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "MENONBE": {
-    "ltp": 138.11,
+    "ltp": 138.41,
     "buy_avg": 147.23,
     "quantity": 405.0,
-    "pnl_pct": -6.19,
-    "pnl_abs": -3693.6,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": -5.99,
+    "pnl_abs": -3572.1,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "HEG": {
-    "ltp": 540.9,
+    "ltp": 541.0,
     "buy_avg": 540.91,
     "quantity": 102.0,
-    "pnl_pct": -0.0,
-    "pnl_abs": -1.02,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": 0.02,
+    "pnl_abs": 9.18,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "ASHIANA": {
-    "ltp": 355.3,
+    "ltp": 356.3,
     "buy_avg": 362.06,
     "quantity": 145.0,
-    "pnl_pct": -1.87,
-    "pnl_abs": -980.2,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": -1.59,
+    "pnl_abs": -835.2,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "RUBICON": {
-    "ltp": 1304.6,
+    "ltp": 1297.2,
     "buy_avg": 722.52,
     "quantity": 43.0,
-    "pnl_pct": 80.56,
-    "pnl_abs": 25029.44,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": 79.54,
+    "pnl_abs": 24711.24,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "INDNIPPON": {
-    "ltp": 903.65,
+    "ltp": 906.65,
     "buy_avg": 953.02,
     "quantity": 58.0,
-    "pnl_pct": -5.18,
-    "pnl_abs": -2863.46,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": -4.87,
+    "pnl_abs": -2689.46,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "RKSWAMY": {
     "ltp": 101.45,
@@ -421,79 +421,79 @@
     "quantity": 516.0,
     "pnl_pct": 4.06,
     "pnl_abs": 2043.36,
-    "updated": "2026-06-05 08:15 UTC"
+    "updated": "2026-06-05 08:33 UTC"
   },
   "SCI": {
-    "ltp": 310.7,
+    "ltp": 307.55,
     "buy_avg": 302.02,
     "quantity": 172.0,
-    "pnl_pct": 2.87,
-    "pnl_abs": 1492.96,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": 1.83,
+    "pnl_abs": 951.16,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "RATEGAIN": {
-    "ltp": 761.6,
+    "ltp": 762.1,
     "buy_avg": 724.23,
     "quantity": 63.0,
-    "pnl_pct": 5.16,
-    "pnl_abs": 2354.31,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": 5.23,
+    "pnl_abs": 2385.81,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "GMDCLTD": {
-    "ltp": 658.6,
+    "ltp": 657.65,
     "buy_avg": 529.68,
     "quantity": 72.0,
-    "pnl_pct": 24.34,
-    "pnl_abs": 9282.24,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": 24.16,
+    "pnl_abs": 9213.84,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "TREL": {
-    "ltp": 25.5,
+    "ltp": 25.51,
     "buy_avg": 26.43,
     "quantity": 1891.0,
-    "pnl_pct": -3.52,
-    "pnl_abs": -1758.63,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": -3.48,
+    "pnl_abs": -1739.72,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "EIMCOELECO": {
-    "ltp": 1543.7,
+    "ltp": 1542.7,
     "buy_avg": 1823.31,
     "quantity": 30.0,
-    "pnl_pct": -15.34,
-    "pnl_abs": -8388.3,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": -15.39,
+    "pnl_abs": -8418.3,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "BLUEJET": {
-    "ltp": 462.55,
+    "ltp": 464.85,
     "buy_avg": 550.05,
     "quantity": 102.0,
-    "pnl_pct": -15.91,
-    "pnl_abs": -8925.0,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": -15.49,
+    "pnl_abs": -8690.4,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "LATENTVIEW": {
-    "ltp": 313.55,
+    "ltp": 313.3,
     "buy_avg": 448.98,
     "quantity": 134.0,
-    "pnl_pct": -30.16,
-    "pnl_abs": -18147.62,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": -30.22,
+    "pnl_abs": -18181.12,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "CARBORUNIV": {
-    "ltp": 1039.0,
+    "ltp": 1042.9,
     "buy_avg": 1097.89,
     "quantity": 43.0,
-    "pnl_pct": -5.36,
-    "pnl_abs": -2532.27,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": -5.01,
+    "pnl_abs": -2364.57,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "SHREEJISPG": {
-    "ltp": 472.3,
+    "ltp": 471.1,
     "buy_avg": 267.98,
     "quantity": 94.0,
-    "pnl_pct": 76.24,
-    "pnl_abs": 19206.08,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": 75.8,
+    "pnl_abs": 19093.28,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "ENTERO": {
     "ltp": 1120.0,
@@ -501,207 +501,207 @@
     "quantity": 38.0,
     "pnl_pct": 0.79,
     "pnl_abs": 334.78,
-    "updated": "2026-06-05 08:15 UTC"
+    "updated": "2026-06-05 08:33 UTC"
   },
   "NETWEB": {
-    "ltp": 4668.7,
+    "ltp": 4668.5,
     "buy_avg": 3066.43,
     "quantity": 9.0,
     "pnl_pct": 52.25,
-    "pnl_abs": 14420.43,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_abs": 14418.63,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "RAMCOSYS": {
-    "ltp": 540.7,
+    "ltp": 551.35,
     "buy_avg": 458.8,
     "quantity": 86.0,
-    "pnl_pct": 17.85,
-    "pnl_abs": 7043.4,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": 20.17,
+    "pnl_abs": 7959.3,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "STALLION": {
-    "ltp": 188.03,
+    "ltp": 189.05,
     "buy_avg": 182.99,
     "quantity": 218.0,
-    "pnl_pct": 2.75,
-    "pnl_abs": 1098.72,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": 3.31,
+    "pnl_abs": 1321.08,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "RPTECH": {
-    "ltp": 543.95,
+    "ltp": 545.95,
     "buy_avg": 331.82,
     "quantity": 70.0,
-    "pnl_pct": 63.93,
-    "pnl_abs": 14849.1,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": 64.53,
+    "pnl_abs": 14989.1,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "SIGNPOST": {
-    "ltp": 265.0,
+    "ltp": 264.0,
     "buy_avg": 264.23,
     "quantity": 132.0,
-    "pnl_pct": 0.29,
-    "pnl_abs": 101.64,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": -0.09,
+    "pnl_abs": -30.36,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "SIEMENS": {
-    "ltp": 3677.7,
+    "ltp": 3674.9,
     "buy_avg": 3807.82,
     "quantity": 10.0,
-    "pnl_pct": -3.42,
-    "pnl_abs": -1301.2,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": -3.49,
+    "pnl_abs": -1329.2,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "EXPLEOSOL": {
-    "ltp": 852.9,
+    "ltp": 852.05,
     "buy_avg": 1008.5,
     "quantity": 40.0,
-    "pnl_pct": -15.43,
-    "pnl_abs": -6224.0,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": -15.51,
+    "pnl_abs": -6258.0,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "HONAUT": {
-    "ltp": 34575.0,
+    "ltp": 34550.0,
     "buy_avg": 35975.0,
     "quantity": 1.0,
-    "pnl_pct": -3.89,
-    "pnl_abs": -1400.0,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": -3.96,
+    "pnl_abs": -1425.0,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "GRINDWELL": {
-    "ltp": 1959.9,
+    "ltp": 1952.6,
     "buy_avg": 1886.49,
     "quantity": 19.0,
-    "pnl_pct": 3.89,
-    "pnl_abs": 1394.79,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": 3.5,
+    "pnl_abs": 1256.09,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "BOROSCI": {
-    "ltp": 150.59,
+    "ltp": 150.45,
     "buy_avg": 137.08,
     "quantity": 222.0,
-    "pnl_pct": 9.86,
-    "pnl_abs": 2999.22,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": 9.75,
+    "pnl_abs": 2968.14,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "GMMPFAUDLR": {
-    "ltp": 785.75,
+    "ltp": 787.95,
     "buy_avg": 1096.25,
     "quantity": 43.0,
-    "pnl_pct": -28.32,
-    "pnl_abs": -13351.5,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": -28.12,
+    "pnl_abs": -13256.9,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "MAPMYINDIA": {
-    "ltp": 847.3,
+    "ltp": 852.4,
     "buy_avg": 1165.79,
     "quantity": 39.0,
-    "pnl_pct": -27.32,
-    "pnl_abs": -12421.11,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": -26.88,
+    "pnl_abs": -12222.21,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "YATHARTH": {
-    "ltp": 808.4,
+    "ltp": 809.1,
     "buy_avg": 820.32,
     "quantity": 42.0,
-    "pnl_pct": -1.45,
-    "pnl_abs": -500.64,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": -1.37,
+    "pnl_abs": -471.24,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "VASCONEQ": {
-    "ltp": 31.92,
+    "ltp": 31.95,
     "buy_avg": 65.92,
     "quantity": 1006.0,
-    "pnl_pct": -51.58,
-    "pnl_abs": -34204.0,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": -51.53,
+    "pnl_abs": -34173.82,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "FRACTAL": {
-    "ltp": 1006.6,
+    "ltp": 1004.0,
     "buy_avg": 934.45,
     "quantity": 32.0,
-    "pnl_pct": 7.72,
-    "pnl_abs": 2308.8,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": 7.44,
+    "pnl_abs": 2225.6,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "PROTEAN": {
-    "ltp": 615.55,
+    "ltp": 616.25,
     "buy_avg": 729.68,
     "quantity": 53.0,
-    "pnl_pct": -15.64,
-    "pnl_abs": -6048.89,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": -15.55,
+    "pnl_abs": -6011.79,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "UNIVCABLES": {
-    "ltp": 1213.3,
+    "ltp": 1216.2,
     "buy_avg": 702.63,
     "quantity": 28.0,
-    "pnl_pct": 72.68,
-    "pnl_abs": 14298.76,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": 73.09,
+    "pnl_abs": 14379.96,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "RAYMOND": {
-    "ltp": 511.95,
+    "ltp": 512.65,
     "buy_avg": 527.58,
     "quantity": 60.0,
-    "pnl_pct": -2.96,
-    "pnl_abs": -937.8,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": -2.83,
+    "pnl_abs": -895.8,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "GRAPHITE": {
-    "ltp": 706.9,
+    "ltp": 705.2,
     "buy_avg": 579.24,
     "quantity": 43.0,
-    "pnl_pct": 22.04,
-    "pnl_abs": 5489.38,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": 21.75,
+    "pnl_abs": 5416.28,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "URBANCO": {
-    "ltp": 124.58,
+    "ltp": 124.57,
     "buy_avg": 134.11,
     "quantity": 249.0,
     "pnl_pct": -7.11,
-    "pnl_abs": -2372.97,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_abs": -2375.46,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "GMRAIRPORT": {
-    "ltp": 102.02,
+    "ltp": 101.88,
     "buy_avg": 97.19,
     "quantity": 307.0,
-    "pnl_pct": 4.97,
-    "pnl_abs": 1482.81,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": 4.83,
+    "pnl_abs": 1439.83,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "GESHIP": {
-    "ltp": 1464.7,
+    "ltp": 1463.8,
     "buy_avg": 1040.96,
     "quantity": 20.0,
-    "pnl_pct": 40.71,
-    "pnl_abs": 8474.8,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": 40.62,
+    "pnl_abs": 8456.8,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "LAXMIDENTL": {
-    "ltp": 228.5,
+    "ltp": 228.98,
     "buy_avg": 209.26,
     "quantity": 127.0,
-    "pnl_pct": 9.19,
-    "pnl_abs": 2443.48,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": 9.42,
+    "pnl_abs": 2504.44,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "BIOCON": {
-    "ltp": 413.15,
+    "ltp": 413.3,
     "buy_avg": 387.23,
     "quantity": 66.0,
-    "pnl_pct": 6.69,
-    "pnl_abs": 1710.72,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": 6.73,
+    "pnl_abs": 1720.62,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "ANURAS": {
-    "ltp": 1324.6,
+    "ltp": 1328.3,
     "buy_avg": 1099.4,
     "quantity": 20.0,
-    "pnl_pct": 20.48,
-    "pnl_abs": 4504.0,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": 20.82,
+    "pnl_abs": 4578.0,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "SHANKARA": {
     "ltp": 114.5,
@@ -709,7 +709,7 @@
     "quantity": 226.0,
     "pnl_pct": -16.26,
     "pnl_abs": -5026.24,
-    "updated": "2026-06-05 08:15 UTC"
+    "updated": "2026-06-05 08:33 UTC"
   },
   "INCAP": {
     "ltp": 88.0,
@@ -717,159 +717,159 @@
     "quantity": 298.0,
     "pnl_pct": 110.58,
     "pnl_abs": 13770.58,
-    "updated": "2026-06-05 08:15 UTC"
+    "updated": "2026-06-05 08:33 UTC"
   },
   "SHILPAMED": {
-    "ltp": 531.95,
+    "ltp": 534.15,
     "buy_avg": 333.15,
     "quantity": 49.0,
-    "pnl_pct": 59.67,
-    "pnl_abs": 9741.2,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": 60.33,
+    "pnl_abs": 9849.0,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "ECOSMOBLTY": {
-    "ltp": 126.18,
+    "ltp": 127.49,
     "buy_avg": 139.03,
     "quantity": 186.0,
-    "pnl_pct": -9.24,
-    "pnl_abs": -2390.1,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": -8.3,
+    "pnl_abs": -2146.44,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "KIRLPNU": {
-    "ltp": 1558.4,
+    "ltp": 1556.5,
     "buy_avg": 1526.68,
     "quantity": 15.0,
-    "pnl_pct": 2.08,
-    "pnl_abs": 475.8,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": 1.95,
+    "pnl_abs": 447.3,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "PTC": {
-    "ltp": 183.9,
+    "ltp": 184.03,
     "buy_avg": 160.5,
     "quantity": 124.0,
-    "pnl_pct": 14.58,
-    "pnl_abs": 2901.6,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": 14.66,
+    "pnl_abs": 2917.72,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "LANDMARK": {
-    "ltp": 414.9,
+    "ltp": 416.35,
     "buy_avg": 576.82,
     "quantity": 59.0,
-    "pnl_pct": -28.07,
-    "pnl_abs": -9553.28,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": -27.82,
+    "pnl_abs": -9467.73,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "FREDUN": {
-    "ltp": 2322.75,
+    "ltp": 2343.95,
     "buy_avg": 1395.0,
     "quantity": 9.0,
-    "pnl_pct": 66.51,
-    "pnl_abs": 8349.75,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": 68.03,
+    "pnl_abs": 8540.55,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "CMSINFO": {
-    "ltp": 304.15,
+    "ltp": 304.5,
     "buy_avg": 374.48,
     "quantity": 67.0,
-    "pnl_pct": -18.78,
-    "pnl_abs": -4712.11,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": -18.69,
+    "pnl_abs": -4688.66,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "DIFFNKG": {
-    "ltp": 323.2,
+    "ltp": 322.9,
     "buy_avg": 311.35,
     "quantity": 63.0,
-    "pnl_pct": 3.81,
-    "pnl_abs": 746.55,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": 3.71,
+    "pnl_abs": 727.65,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "MOSCHIP": {
-    "ltp": 219.4,
+    "ltp": 219.32,
     "buy_avg": 173.53,
     "quantity": 91.0,
-    "pnl_pct": 26.43,
-    "pnl_abs": 4174.17,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": 26.39,
+    "pnl_abs": 4166.89,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "GULFOILLUB": {
-    "ltp": 904.75,
+    "ltp": 904.45,
     "buy_avg": 1220.91,
     "quantity": 21.0,
-    "pnl_pct": -25.9,
-    "pnl_abs": -6639.36,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": -25.92,
+    "pnl_abs": -6645.66,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "DATAPATTNS": {
-    "ltp": 4207.5,
+    "ltp": 4215.0,
     "buy_avg": 2134.6,
     "quantity": 5.0,
-    "pnl_pct": 97.11,
-    "pnl_abs": 10364.5,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": 97.46,
+    "pnl_abs": 10402.0,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "TOTEM": {
-    "ltp": 154.2,
+    "ltp": 155.0,
     "buy_avg": 194.63,
     "quantity": 125.0,
-    "pnl_pct": -20.77,
-    "pnl_abs": -5053.75,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": -20.36,
+    "pnl_abs": -4953.75,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "CYIENTDLM": {
-    "ltp": 452.55,
+    "ltp": 454.05,
     "buy_avg": 451.6,
     "quantity": 44.0,
-    "pnl_pct": 0.21,
-    "pnl_abs": 41.8,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": 0.54,
+    "pnl_abs": 107.8,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "MMP": {
-    "ltp": 263.65,
+    "ltp": 263.5,
     "buy_avg": 275.75,
     "quantity": 72.0,
-    "pnl_pct": -4.39,
-    "pnl_abs": -871.2,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": -4.44,
+    "pnl_abs": -882.0,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "BBL": {
-    "ltp": 2823.1,
+    "ltp": 2827.0,
     "buy_avg": 3125.67,
     "quantity": 7.0,
-    "pnl_pct": -9.68,
-    "pnl_abs": -2117.99,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": -9.56,
+    "pnl_abs": -2090.69,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "CESC": {
-    "ltp": 177.94,
+    "ltp": 177.86,
     "buy_avg": 181.04,
     "quantity": 110.0,
-    "pnl_pct": -1.71,
-    "pnl_abs": -341.0,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": -1.76,
+    "pnl_abs": -349.8,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "OMINFRAL": {
-    "ltp": 84.54,
+    "ltp": 85.39,
     "buy_avg": 126.22,
     "quantity": 221.0,
-    "pnl_pct": -33.02,
-    "pnl_abs": -9211.28,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": -32.35,
+    "pnl_abs": -9023.43,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "SKFINDUS": {
-    "ltp": 1605.3,
+    "ltp": 1609.0,
     "buy_avg": 2147.0,
     "quantity": 9.0,
-    "pnl_pct": -25.23,
-    "pnl_abs": -4875.3,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": -25.06,
+    "pnl_abs": -4842.0,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "WHIRLPOOL": {
-    "ltp": 803.35,
+    "ltp": 801.6,
     "buy_avg": 1205.77,
     "quantity": 23.0,
-    "pnl_pct": -33.37,
-    "pnl_abs": -9255.66,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": -33.52,
+    "pnl_abs": -9295.91,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "PITTIENG": {
     "ltp": 932.25,
@@ -877,191 +877,191 @@
     "quantity": 20.0,
     "pnl_pct": -5.66,
     "pnl_abs": -1117.6,
-    "updated": "2026-06-05 08:15 UTC"
+    "updated": "2026-06-05 08:33 UTC"
   },
   "RAYMONDREL": {
-    "ltp": 611.6,
+    "ltp": 614.7,
     "buy_avg": 619.5,
     "quantity": 32.0,
-    "pnl_pct": -1.28,
-    "pnl_abs": -252.8,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": -0.77,
+    "pnl_abs": -153.6,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "NIITLTD": {
-    "ltp": 93.61,
+    "ltp": 93.67,
     "buy_avg": 94.74,
     "quantity": 228.0,
-    "pnl_pct": -1.19,
-    "pnl_abs": -257.64,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": -1.13,
+    "pnl_abs": -243.96,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "ORIENTCER": {
-    "ltp": 38.14,
+    "ltp": 38.19,
     "buy_avg": 43.8,
     "quantity": 456.0,
-    "pnl_pct": -12.92,
-    "pnl_abs": -2580.96,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": -12.81,
+    "pnl_abs": -2558.16,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "RUSTOMJEE": {
-    "ltp": 387.25,
+    "ltp": 387.9,
     "buy_avg": 430.98,
     "quantity": 46.0,
-    "pnl_pct": -10.15,
-    "pnl_abs": -2011.58,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": -10.0,
+    "pnl_abs": -1981.68,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "INTERARCH": {
-    "ltp": 1773.7,
+    "ltp": 1770.4,
     "buy_avg": 1963.23,
     "quantity": 10.0,
-    "pnl_pct": -9.65,
-    "pnl_abs": -1895.3,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": -9.82,
+    "pnl_abs": -1928.3,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "FMGOETZE": {
-    "ltp": 427.0,
+    "ltp": 428.4,
     "buy_avg": 498.93,
     "quantity": 40.0,
-    "pnl_pct": -14.42,
-    "pnl_abs": -2877.2,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": -14.14,
+    "pnl_abs": -2821.2,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "CAPACITE": {
-    "ltp": 221.76,
+    "ltp": 221.28,
     "buy_avg": 278.55,
     "quantity": 72.0,
-    "pnl_pct": -20.39,
-    "pnl_abs": -4088.88,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": -20.56,
+    "pnl_abs": -4123.44,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "RAILTEL": {
-    "ltp": 313.15,
+    "ltp": 313.1,
     "buy_avg": 292.7,
     "quantity": 50.0,
-    "pnl_pct": 6.99,
-    "pnl_abs": 1022.5,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": 6.97,
+    "pnl_abs": 1020.0,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "AFFLE": {
-    "ltp": 1477.6,
+    "ltp": 1475.8,
     "buy_avg": 975.8,
     "quantity": 10.0,
-    "pnl_pct": 51.42,
-    "pnl_abs": 5018.0,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": 51.24,
+    "pnl_abs": 5000.0,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "SKFINDIA": {
-    "ltp": 1605.3,
+    "ltp": 1609.0,
     "buy_avg": 1722.96,
     "quantity": 9.0,
-    "pnl_pct": -6.83,
-    "pnl_abs": -1058.94,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": -6.61,
+    "pnl_abs": -1025.64,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "TEJASNET": {
-    "ltp": 574.65,
+    "ltp": 573.55,
     "buy_avg": 369.7,
     "quantity": 27.0,
-    "pnl_pct": 55.44,
-    "pnl_abs": 5533.65,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": 55.14,
+    "pnl_abs": 5503.95,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "VSTTILLERS": {
-    "ltp": 4629.2,
+    "ltp": 4632.2,
     "buy_avg": 5480.0,
     "quantity": 3.0,
-    "pnl_pct": -15.53,
-    "pnl_abs": -2552.4,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": -15.47,
+    "pnl_abs": -2543.4,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "ASALCBR": {
-    "ltp": 827.9,
+    "ltp": 828.05,
     "buy_avg": 1023.34,
     "quantity": 15.0,
-    "pnl_pct": -19.1,
-    "pnl_abs": -2931.6,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": -19.08,
+    "pnl_abs": -2929.35,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "GREAVESCOT": {
-    "ltp": 188.28,
+    "ltp": 188.54,
     "buy_avg": 174.16,
     "quantity": 68.0,
-    "pnl_pct": 8.11,
-    "pnl_abs": 960.16,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": 8.26,
+    "pnl_abs": 977.84,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "GLOBUSSPR": {
-    "ltp": 865.0,
+    "ltp": 864.7,
     "buy_avg": 1105.88,
     "quantity": 13.0,
-    "pnl_pct": -21.78,
-    "pnl_abs": -3131.44,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": -21.81,
+    "pnl_abs": -3135.34,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "ELDEHSG": {
-    "ltp": 790.95,
+    "ltp": 782.2,
     "buy_avg": 855.63,
     "quantity": 14.0,
-    "pnl_pct": -7.56,
-    "pnl_abs": -905.52,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": -8.58,
+    "pnl_abs": -1028.02,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "ARIS": {
-    "ltp": 113.88,
+    "ltp": 114.1,
     "buy_avg": 158.81,
     "quantity": 95.0,
-    "pnl_pct": -28.29,
-    "pnl_abs": -4268.35,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": -28.15,
+    "pnl_abs": -4247.45,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "QUESS": {
-    "ltp": 232.93,
+    "ltp": 234.54,
     "buy_avg": 238.76,
     "quantity": 50.0,
-    "pnl_pct": -2.44,
-    "pnl_abs": -291.5,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": -1.77,
+    "pnl_abs": -211.0,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "AVALON": {
-    "ltp": 1594.8,
+    "ltp": 1604.3,
     "buy_avg": 1395.0,
     "quantity": 7.0,
-    "pnl_pct": 14.32,
-    "pnl_abs": 1398.6,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": 15.0,
+    "pnl_abs": 1465.1,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "GIPCL": {
-    "ltp": 168.6,
+    "ltp": 168.61,
     "buy_avg": 166.1,
     "quantity": 59.0,
     "pnl_pct": 1.51,
-    "pnl_abs": 147.5,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_abs": 148.09,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "TVSELECT": {
-    "ltp": 467.6,
+    "ltp": 468.9,
     "buy_avg": 369.45,
     "quantity": 20.0,
-    "pnl_pct": 26.57,
-    "pnl_abs": 1963.0,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": 26.92,
+    "pnl_abs": 1989.0,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "AEROENTER": {
-    "ltp": 100.97,
+    "ltp": 101.5,
     "buy_avg": 108.55,
     "quantity": 92.0,
-    "pnl_pct": -6.98,
-    "pnl_abs": -697.36,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": -6.49,
+    "pnl_abs": -648.6,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "EMBDL": {
-    "ltp": 58.5,
+    "ltp": 58.86,
     "buy_avg": 67.59,
     "quantity": 148.0,
-    "pnl_pct": -13.45,
-    "pnl_abs": -1345.32,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": -12.92,
+    "pnl_abs": -1292.04,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "LAKSELEC": {
     "ltp": 753.05,
@@ -1069,38 +1069,46 @@
     "quantity": 8.0,
     "pnl_pct": -49.33,
     "pnl_abs": -5864.32,
-    "updated": "2026-06-05 08:15 UTC"
+    "updated": "2026-06-05 08:33 UTC"
   },
   "TATACOMM": {
-    "ltp": 1987.5,
+    "ltp": 1990.6,
     "buy_avg": 1154.83,
     "quantity": 3.0,
-    "pnl_pct": 72.1,
-    "pnl_abs": 2498.01,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": 72.37,
+    "pnl_abs": 2507.31,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "UNIECOM": {
-    "ltp": 86.27,
+    "ltp": 86.49,
     "buy_avg": 379.94,
     "quantity": 39.0,
-    "pnl_pct": -77.29,
-    "pnl_abs": -11453.13,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": -77.24,
+    "pnl_abs": -11444.55,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "SHK": {
-    "ltp": 125.07,
+    "ltp": 125.22,
     "buy_avg": 205.31,
     "quantity": 26.0,
-    "pnl_pct": -39.08,
-    "pnl_abs": -2086.24,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": -39.01,
+    "pnl_abs": -2082.34,
+    "updated": "2026-06-05 08:33 UTC"
   },
   "SUVEN": {
-    "ltp": 240.0,
+    "ltp": 240.9,
     "buy_avg": 80.54,
     "quantity": 11.0,
-    "pnl_pct": 197.99,
-    "pnl_abs": 1754.06,
-    "updated": "2026-06-05 08:15 UTC"
+    "pnl_pct": 199.11,
+    "pnl_abs": 1763.96,
+    "updated": "2026-06-05 08:33 UTC"
+  },
+  "MAFANG": {
+    "ltp": 206.92,
+    "buy_avg": 50.33,
+    "quantity": 6123.0,
+    "pnl_pct": 311.13,
+    "pnl_abs": 958800.57,
+    "updated": "2026-06-05 08:33 UTC"
   }
 }
