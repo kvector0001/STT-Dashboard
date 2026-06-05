@@ -1815,13 +1815,28 @@ async function refreshDataBtn() {
   const originalText = '🔄 Refresh Data';
   
   try {
-    if (btn) btn.textContent = '⏳ Loading...';
-    if (btnAn) btnAn.textContent = '⏳ Loading...';
+    if (btn) btn.textContent = '⏳ Fetching from Google Sheet...';
+    if (btnAn) btnAn.textContent = '⏳ Fetching from Google Sheet...';
     
-    // Force a fresh fetch from the server
+    // Step 1: Call backend to run fetch_prices.py
+    const response = await fetch('/api/refresh', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' }
+    });
+    
+    const result = await response.json();
+    
+    if (!response.ok) {
+      throw new Error(result.message || 'Backend refresh failed');
+    }
+    
+    if (btn) btn.textContent = '⏳ Reloading dashboard...';
+    if (btnAn) btnAn.textContent = '⏳ Reloading dashboard...';
+    
+    // Step 2: Reload UI with fresh data
     await init();
     
-    showToast('✅ Data refreshed successfully');
+    showToast(result.message || '✅ Portfolio updated successfully');
   } catch (err) {
     showToast('❌ Refresh failed: ' + err.message);
   } finally {
