@@ -1783,6 +1783,27 @@ document.querySelectorAll('.sort-btn').forEach(btn => {
   });
 });
 
+async function refreshDataBtn() {
+  const btn = document.getElementById('refresh-btn');
+  const btnAn = document.getElementById('refresh-btn-analysis');
+  const originalText = '🔄 Refresh Data';
+  
+  try {
+    if (btn) btn.textContent = '⏳ Loading...';
+    if (btnAn) btnAn.textContent = '⏳ Loading...';
+    
+    // Force a fresh fetch from the server
+    await init();
+    
+    showToast('✅ Data refreshed successfully');
+  } catch (err) {
+    showToast('❌ Refresh failed: ' + err.message);
+  } finally {
+    if (btn) btn.textContent = originalText;
+    if (btnAn) btnAn.textContent = originalText;
+  }
+}
+
 // Initialize button arrows on load
 updateSortButtons();
 
