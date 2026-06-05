@@ -825,15 +825,24 @@
     </div>
     <div class="stat">
       <div class="stat-label">Day's PL%</div>
-      <div class="stat-value" id="ana-sum-day-pnl">—</div>
+      <div id="ana-sum-day-group" style="display: flex; gap: 8px; align-items: baseline;">
+        <div class="stat-value" id="ana-sum-day-abs">—</div>
+        <div class="stat-value" id="ana-sum-day-pct">—</div>
+      </div>
     </div>
     <div class="stat">
       <div class="stat-label">1 Month P&L (%)</div>
-      <div class="stat-value" id="ana-sum-1m-pnl">—</div>
+      <div id="ana-sum-1m-group" style="display: flex; gap: 8px; align-items: baseline;">
+        <div class="stat-value" id="ana-sum-1m-abs">—</div>
+        <div class="stat-value" id="ana-sum-1m-pct">—</div>
+      </div>
     </div>
     <div class="stat">
       <div class="stat-label">1 Year P&L (%)</div>
-      <div class="stat-value" id="ana-sum-1y-pnl">—</div>
+      <div id="ana-sum-1y-group" style="display: flex; gap: 8px; align-items: baseline;">
+        <div class="stat-value" id="ana-sum-1y-abs">—</div>
+        <div class="stat-value" id="ana-sum-1y-pct">—</div>
+      </div>
     </div>
     <div class="stat">
       <div class="stat-label">Win/Loss</div>
@@ -1522,14 +1531,21 @@ function updateSummary(stocks) {
     aPnlPct.textContent = `(${fmtPct(pnlPct)})`;
     aPnlPct.className = 'stat-value ' + (pnlAbs >= 0 ? 'green' : 'red');
 
-    const setChg = (id, pct) => {
-      const el = document.getElementById(id);
-      el.textContent = fmtPct(pct);
-      el.className = 'stat-value ' + (pct >= 0 ? 'green' : 'red');
+    const setChg = (absId, pctId, absVal, pctVal) => {
+      const elAbs = document.getElementById(absId);
+      const elPct = document.getElementById(pctId);
+      const cls = absVal >= 0 ? 'green' : 'red';
+      
+      elAbs.textContent = (absVal >= 0 ? '+' : '-') + '₹' + fmt(Math.abs(absVal), 0);
+      elAbs.className = 'stat-value ' + cls;
+      
+      elPct.textContent = `(${fmtPct(pctVal)})`;
+      elPct.className = 'stat-value ' + cls;
     };
-    setChg('ana-sum-day-pnl', dayPct);
-    setChg('ana-sum-1m-pnl', m1Pct);
-    setChg('ana-sum-1y-pnl', y1Pct);
+
+    setChg('ana-sum-day-abs', 'ana-sum-day-pct', dayChgVal, dayPct);
+    setChg('ana-sum-1m-abs',  'ana-sum-1m-pct',  m1ChgVal,  m1Pct);
+    setChg('ana-sum-1y-abs',  'ana-sum-1y-pct',  y1ChgVal,  y1Pct);
 
     document.getElementById('ana-sum-count').textContent  = stocks.length;
     document.getElementById('ana-sum-profit').textContent = inProfit;
