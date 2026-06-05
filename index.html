@@ -649,7 +649,8 @@
     <h1>📈 <span>Portfolio</span> Dashboard</h1>
     <div class="header-actions">
       <button class="hdr-btn paste" onclick="showPasteModal()">📋 Paste Claude Response</button>
-      <button class="hdr-btn export" onclick="exportStocksJSON()">⬇ Export stocks.json</button>
+      <button class="hdr-btn export" onclick="exportPendingJSON()">⬇ Export Pending for Claude</button>
+      <button class="hdr-btn export" style="opacity:0.6;" onclick="exportStocksJSON()">⬇ Export ALL</button>
       <div class="last-updated" id="last-updated">Loading…</div>
     </div>
   </div>
@@ -711,7 +712,13 @@
       <option value="pnl_pct_desc" selected>P&L % ↓</option>
       <option value="pnl_pct_asc">P&L % ↑</option>
       <option value="pnl_abs_desc">P&L ₹ ↓</option>
+      <option value="pnl_abs_asc">P&L ₹ ↑</option>
+      <option value="current_val_desc">Current Value ↓</option>
+      <option value="current_val_asc">Current Value ↑</option>
+      <option value="invested_val_desc">Invested Value ↓</option>
+      <option value="invested_val_asc">Invested Value ↑</option>
       <option value="conviction_desc">Conviction ↓</option>
+      <option value="conviction_asc">Conviction ↑</option>
       <option value="ticker_asc">Ticker A→Z</option>
     </select>
   </div>
@@ -1146,6 +1153,28 @@ function applyPastedAnalysis() {
 }
 
 // ── Export stocks.json ─────────────────────────────────────────────────────
+function exportPendingJSON() {
+  const pending = allStocks.filter(s => s.moat_class === 'pending' || s.moat_type === 'Pending');
+  if (pending.length === 0) {
+    showToast('✨ No pending stocks found!', 'green');
+    return;
+  }
+  
+  const priceFields = new Set(['ltp','buy_avg','quantity','pnl_pct','pnl_abs','updated','mcap_cr','pe','roe','ocf_cr','ret_1d','ret_1m','ret_6m','ret_1y','ret_3y','ret_5y','debt_to_equity','eps','book_value','div_yield','pat_cagr','rev_cagr','mcap_3y']);
+  const exportData = pending.map(s => {
+    const out = {};
+    Object.entries(s).forEach(([k,v]) => { if (!priceFields.has(k)) out[k] = v; });
+    return out;
+  });
+  
+  const blob = new Blob([JSON.stringify(exportData, null, 2)], {type: 'application/json'});
+  const url  = URL.createObjectURL(blob);
+  const a    = document.createElement('a');
+  a.href = url; a.download = `pending_analysis_${new Date().toISOString().slice(0,10)}.json`; a.click();
+  URL.revokeObjectURL(url);
+  showToast(`⬇ Exported ${pending.length} pending stocks`, 'green');
+}
+
 function exportStocksJSON() {
   const priceFields = new Set(['ltp','buy_avg','quantity','pnl_pct','pnl_abs','updated']);
   const exportData = allStocks.map(s => {
@@ -1286,11 +1315,23 @@ function renderAll() {
   // Sort
   visible.sort((a, b) => {
     const nullLast = (v) => v == null ? -Infinity : v;
+    const getVal = (s, key) => {
+      if (key === 'current') return (s.ltp || 0) * (s.quantity || 0);
+      if (key === 'invested') return (s.buy_avg || 0) * (s.quantity || 0);
+      return s[key];
+    };
+
     switch (sortKey) {
       case 'pnl_pct_desc':  return nullLast(b.pnl_pct)  - nullLast(a.pnl_pct);
       case 'pnl_pct_asc':   return nullLast(a.pnl_pct)  - nullLast(b.pnl_pct);
       case 'pnl_abs_desc':  return nullLast(b.pnl_abs)  - nullLast(a.pnl_abs);
+      case 'pnl_abs_asc':   return nullLast(a.pnl_abs)  - nullLast(b.pnl_abs);
+      case 'current_val_desc':  return getVal(b, 'current') - getVal(a, 'current');
+      case 'current_val_asc':   return getVal(a, 'current') - getVal(b, 'current');
+      case 'invested_val_desc': return getVal(b, 'invested') - getVal(a, 'invested');
+      case 'invested_val_asc':  return getVal(a, 'invested') - getVal(b, 'invested');
       case 'conviction_desc': return (b.conviction || 0) - (a.conviction || 0);
+      case 'conviction_asc':  return (a.conviction || 0) - (b.conviction || 0);
       case 'ticker_asc':    return (a.ticker || '').localeCompare(b.ticker || '');
       default: return 0;
     }
