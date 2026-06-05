@@ -1183,39 +1183,6 @@
     "mcap_3y": -10.4
   },
   {
-    "ticker": "MAFANG",
-    "name": "Mirae Asset NYSE FANG+ETF",
-    "sector": "Pending",
-    "nse_symbol": "MAFANG",
-    "buy_avg": 50.33,
-    "moat_type": "Pending",
-    "moat_class": "pending",
-    "conviction": 0,
-    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
-    "leadership": "Pending",
-    "non_rep": "Pending",
-    "tailwinds": [
-      "Pending analysis"
-    ],
-    "risks": [
-      "Pending analysis"
-    ],
-    "track": [
-      "Add tracking KPIs"
-    ],
-    "mcap_cr": 0.0,
-    "pe": 37.080612,
-    "roe": 0,
-    "ocf_cr": 0.0,
-    "debt_to_equity": null,
-    "eps": null,
-    "book_value": null,
-    "div_yield": 0,
-    "pat_cagr": 0,
-    "rev_cagr": 0,
-    "mcap_3y": 311.87
-  },
-  {
     "ticker": "NH",
     "name": "Narayana Hrudayalaya Limited",
     "sector": "Healthcare",

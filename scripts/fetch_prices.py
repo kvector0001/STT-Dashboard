@@ -98,6 +98,8 @@ existing_tickers = {s["ticker"] for s in stocks}
 
 # Add placeholder entries for tickers not in stocks.json
 new_stubs = []
+portfolio_tickers = set(str(row["symbol"]).strip() for _, row in portfolio.iterrows())
+
 for _, row in portfolio.iterrows():
     sym = str(row["symbol"]).strip()
     if sym not in existing_tickers:
@@ -125,6 +127,15 @@ if new_stubs:
     with open(stocks_path, "w", encoding="utf-8") as f:
         json.dump(stocks, f, indent=2, ensure_ascii=False)
     print(f"✅ Added {len(new_stubs)} new placeholder entries to stocks.json\n")
+
+# Remove stocks from stocks.json that are no longer in the portfolio (unless marked as "pending")
+# This ensures deleted rows in Google Sheet are removed from the dashboard
+initial_stock_count = len(stocks)
+stocks_to_keep = [s for s in stocks if s.get("ticker") in portfolio_tickers]
+removed_count = initial_stock_count - len(stocks_to_keep)
+if removed_count > 0:
+    stocks = stocks_to_keep
+    print(f"🗑️  Removed {removed_count} stocks no longer in portfolio\n")
 
 # ── Fetch prices ──────────────────────────────────────────────────────────────
 prices = {}
