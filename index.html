@@ -1337,8 +1337,20 @@ async function loadData() {
     arr.forEach(s => {
       if (!s.ticker) return;
       if (stocksMap.has(s.ticker)) {
-        // Merge if duplicate ticker (later files override earlier ones)
-        Object.assign(stocksMap.get(s.ticker), s);
+        const existing = stocksMap.get(s.ticker);
+        // MERGE LOGIC: If existing is "pending" but new one is not, the new one wins.
+        const isPending = (obj) => obj.moat_class === 'pending' || obj.moat_type === 'Pending';
+        
+        if (isPending(existing) && !isPending(s)) {
+          // New data has real analysis, replace the pending one
+          stocksMap.set(s.ticker, {...s});
+        } else if (!isPending(existing) && isPending(s)) {
+          // Existing has real analysis, keep it, don't let pending overwrite
+          return;
+        } else {
+          // Both are real or both are pending; newer file (later in array) wins
+          Object.assign(existing, s);
+        }
       } else {
         stocksMap.set(s.ticker, {...s});
       }
