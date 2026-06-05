@@ -1,0 +1,6 @@
+@echo off
+cd /d "c:\Users\krunal.kapadiya\OneDrive - PUMA\BACKUPS\Krunal\0. STT - Port\Dashboard"
+git add .
+git commit -m "Add: Catalyst events analysis feature with GPT integration to Deep Analysis cards; Fix: Extended historical data fetch to 5y for 6M/3Y/5Y returns; Tab swap to prioritize Deep Analysis view"
+git push origin main
+pause

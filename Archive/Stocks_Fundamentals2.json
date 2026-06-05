@@ -11,22 +11,9 @@
     "moat": "India's largest cardiac care network by volume with 19 hospitals and 6,300+ beds. Founded by Dr. Devi Shetty — brand trust in cardiac and oncology is irreplaceable. Health City Cayman Islands is a unique medical tourism moat (NHS overflow from UK).",
     "leadership": "Largest cardiac surgery network in India. FY26 revenue ₹7,896 Cr (+44% YoY). PAT ₹806 Cr. Expanding UK private healthcare via NHS waiting time arbitrage.",
     "non_rep": "Volume-driven cost leadership in cardiac surgery — performs procedures at 1/10th the cost of US peers. Cayman Islands hospital serves US/UK patients at 40-60% cost savings. Cannot be replicated without decades of surgical volume.",
-    "tailwinds": [
-      "India private healthcare demand surge",
-      "Medical tourism from UK/USA via Cayman",
-      "Rising cardiac disease incidence in India",
-      "Health insurance penetration growth"
-    ],
-    "risks": [
-      "UK hospital profitability still challenging",
-      "Competition from Max Healthcare and Apollo",
-      "Margin pressure from staff costs"
-    ],
-    "track": [
-      "ARPOB (Average Revenue Per Occupied Bed) growth",
-      "Cayman hospital occupancy ramp",
-      "India hospital EBITDA margin >20%"
-    ]
+    "tailwinds": ["India private healthcare demand surge", "Medical tourism from UK/USA via Cayman", "Rising cardiac disease incidence in India", "Health insurance penetration growth"],
+    "risks": ["UK hospital profitability still challenging", "Competition from Max Healthcare and Apollo", "Margin pressure from staff costs"],
+    "track": ["ARPOB (Average Revenue Per Occupied Bed) growth", "Cayman hospital occupancy ramp", "India hospital EBITDA margin >20%"]
   },
   {
     "ticker": "HCG",
@@ -40,22 +27,9 @@
     "moat": "India's largest dedicated cancer care network — 25+ oncology centres with linear accelerators, PET-CT scanners, and bone marrow transplant facilities. Oncology requires highly specialised equipment + multidisciplinary teams that take years to build.",
     "leadership": "#1 dedicated oncology hospital chain in India. Revenue ~₹2,000 Cr. CVC Capital (PE) backed. Expanding into tier-2 cities where cancer care is virtually absent.",
     "non_rep": "Oncology is the highest-barrier medical specialty — regulatory approvals, radiation safety certifications, specialist oncologist concentration, and equipment capex of ₹50-100 Cr per centre. Cannot be replicated quickly.",
-    "tailwinds": [
-      "Cancer incidence in India growing 12% p.a.",
-      "Tier-2/3 city cancer care deficit",
-      "Health insurance covering oncology",
-      "Early detection technology adoption"
-    ],
-    "risks": [
-      "High capex per new centre",
-      "Specialist oncologist supply constraint",
-      "Competition from APOLLO Proton Centre"
-    ],
-    "track": [
-      "New centre EBITDA breakeven timeline",
-      "Occupancy rate at existing centres",
-      "ARPOB growth in oncology"
-    ]
+    "tailwinds": ["Cancer incidence in India growing 12% p.a.", "Tier-2/3 city cancer care deficit", "Health insurance covering oncology", "Early detection technology adoption"],
+    "risks": ["High capex per new centre", "Specialist oncologist supply constraint", "Competition from APOLLO Proton Centre"],
+    "track": ["New centre EBITDA breakeven timeline", "Occupancy rate at existing centres", "ARPOB growth in oncology"]
   },
   {
     "ticker": "SYRMA",
@@ -69,22 +43,9 @@
     "moat": "Electronics Manufacturing Services (EMS) company with design-led differentiation. Acquired SGS Tekniks and Perfect ID India for RFID capability. Expanding into medical devices via Johari Digital Healthcare JV. Ranjangaon campus is India's first full EMS campus.",
     "leadership": "Mid-size EMS player in India. Revenue growing 56% YoY in Q4 FY26. Serves auto, consumer electronics, industrial, medical, and RFID segments. Market cap ~₹15,000 Cr.",
     "non_rep": "Design-led EMS differentiates from pure assembly players. RFID capability (Perfect ID) is a niche with few Indian competitors. Medical device EMS via Johari MedTech is early mover advantage.",
-    "tailwinds": [
-      "India PLI for electronics manufacturing",
-      "China+1 sourcing by global OEMs",
-      "RFID adoption in retail/logistics/healthcare",
-      "Medical electronics domestic manufacturing"
-    ],
-    "risks": [
-      "EMS is low-margin by nature — execution dependent",
-      "Customer concentration risk",
-      "Free cash flow negative — high capex phase"
-    ],
-    "track": [
-      "Revenue per segment (auto/medical/RFID mix)",
-      "Gross margin trajectory",
-      "Ranjangaon campus utilisation"
-    ]
+    "tailwinds": ["India PLI for electronics manufacturing", "China+1 sourcing by global OEMs", "RFID adoption in retail/logistics/healthcare", "Medical electronics domestic manufacturing"],
+    "risks": ["EMS is low-margin by nature — execution dependent", "Customer concentration risk", "Free cash flow negative — high capex phase"],
+    "track": ["Revenue per segment (auto/medical/RFID mix)", "Gross margin trajectory", "Ranjangaon campus utilisation"]
   },
   {
     "ticker": "MTARTECH",
@@ -98,22 +59,9 @@
     "moat": "Ultra-precision critical components for nuclear, defence, space, and clean energy. Supplies ISRO, DRDO, Bloom Energy (USA fuel cells), and Israel Aerospace Industries. Nuclear components require AERB certification — a near-impenetrable regulatory moat.",
     "leadership": "Only listed Indian company making fuel cell components for Bloom Energy (exports ~40% of revenue). Nuclear components supplier to NPCIL. Revenue ₹700+ Cr growing 25%+ p.a.",
     "non_rep": "Tolerances of 1-5 microns on nuclear and space components — requires 20+ years of metrology expertise. AERB nuclear certification and ISRO vendor qualification take 5-8 years to obtain.",
-    "tailwinds": [
-      "India nuclear energy expansion (10 new reactors approved)",
-      "Green hydrogen / fuel cell adoption globally",
-      "India space privatisation (NSIL, IN-SPACe)",
-      "Defence indigenisation"
-    ],
-    "risks": [
-      "Bloom Energy concentration risk (~35-40% of revenue)",
-      "Nuclear project delays (long gestation)",
-      "Geopolitical risk on defence exports"
-    ],
-    "track": [
-      "Bloom Energy order book and USA fuel cell deployments",
-      "New nuclear component qualifications",
-      "Space segment revenue %"
-    ]
+    "tailwinds": ["India nuclear energy expansion (10 new reactors approved)", "Green hydrogen / fuel cell adoption globally", "India space privatisation (NSIL, IN-SPACe)", "Defence indigenisation"],
+    "risks": ["Bloom Energy concentration risk (~35-40% of revenue)", "Nuclear project delays (long gestation)", "Geopolitical risk on defence exports"],
+    "track": ["Bloom Energy order book and USA fuel cell deployments", "New nuclear component qualifications", "Space segment revenue %"]
   },
   {
     "ticker": "DEEDEV",
@@ -127,22 +75,9 @@
     "moat": "Specialist manufacturer of industrial piping systems for oil & gas, fertilizers, power plants. IBR (Indian Boiler Regulations) certified and ASME-approved — regulatory moat in a safety-critical segment.",
     "leadership": "Niche player in industrial piping for process industries. Revenue ₹400+ Cr. IBR and ASME approvals limit competition. Serves IOCL, HPCL, ONGC, NTPC.",
     "non_rep": "IBR/ASME certifications for high-pressure piping require years of audit trails and project history. Customer qualification cycles for refinery/nuclear piping take 2-3 years.",
-    "tailwinds": [
-      "India refinery capacity expansion",
-      "Fertilizer plant modernization",
-      "Petrochemical capex cycle",
-      "LNG terminal piping"
-    ],
-    "risks": [
-      "Project-based lumpy revenue",
-      "Raw material (alloy steel) cost pressure",
-      "Competition from Welspun on large diameter pipes"
-    ],
-    "track": [
-      "Order book size and execution pace",
-      "IBR-certified piping % of revenue",
-      "Margin expansion as utilisation rises"
-    ]
+    "tailwinds": ["India refinery capacity expansion", "Fertilizer plant modernization", "Petrochemical capex cycle", "LNG terminal piping"],
+    "risks": ["Project-based lumpy revenue", "Raw material (alloy steel) cost pressure", "Competition from Welspun on large diameter pipes"],
+    "track": ["Order book size and execution pace", "IBR-certified piping % of revenue", "Margin expansion as utilisation rises"]
   },
   {
     "ticker": "POWERINDIA",
@@ -156,22 +91,9 @@
     "moat": "India subsidiary of Hitachi Energy (Japan/Switzerland). Manufactures transformers, switchgear, HVDC systems, and grid automation. HVDC technology is near-exclusive globally — only ABB/Hitachi, Siemens, and GE can deliver it. India's renewable energy grid needs HVDC.",
     "leadership": "Leader in high-voltage power transmission equipment in India. Revenue ₹5,200+ Cr growing 35%+ YoY. Order book of ₹10,000+ Cr. 75% promoter holding (Hitachi Energy).",
     "non_rep": "HVDC (High Voltage Direct Current) technology has only 3-4 global suppliers. India's 500 GW renewable target requires HVDC corridors — Hitachi Energy is positioned as the primary supplier. Decades of grid engineering relationships with PGCIL.",
-    "tailwinds": [
-      "India 500 GW renewable energy target by 2030",
-      "HVDC inter-state transmission corridors",
-      "Smart grid upgrades",
-      "Data centre power infrastructure"
-    ],
-    "risks": [
-      "Premium valuation (very high P/E)",
-      "Parent Hitachi Energy global restructuring risk",
-      "Execution on large HVDC projects"
-    ],
-    "track": [
-      "Order inflows from PGCIL/state utilities",
-      "HVDC project awards",
-      "Revenue growth sustaining >30% YoY"
-    ]
+    "tailwinds": ["India 500 GW renewable energy target by 2030", "HVDC inter-state transmission corridors", "Smart grid upgrades", "Data centre power infrastructure"],
+    "risks": ["Premium valuation (very high P/E)", "Parent Hitachi Energy global restructuring risk", "Execution on large HVDC projects"],
+    "track": ["Order inflows from PGCIL/state utilities", "HVDC project awards", "Revenue growth sustaining >30% YoY"]
   },
   {
     "ticker": "ASTRAMICRO",
@@ -185,22 +107,9 @@
     "moat": "India's premier RF/microwave subsystem manufacturer for defence applications — missiles, radar, electronic warfare, and satellite systems. 30+ years of DRDO/HAL relationships and proprietary RF technology. Only listed pure-play Indian defence electronics company at this depth.",
     "leadership": "Supplies DRDO, HAL, ISRO, BEL, and exports. Revenue ₹1,100+ Cr. PAT margins 14.6%. Analysts forecast 22% earnings CAGR over 3-5 years. Mkt cap ₹10,960 Cr.",
     "non_rep": "RF/microwave components for missiles require rigorous qualification — MIL-STD testing, DRDO empanelment, and years of co-development history. Technology cannot be imported easily due to dual-use export controls.",
-    "tailwinds": [
-      "India defence capex ₹6.2 Lakh Cr over 5 years",
-      "Atmanirbhar Bharat indigenisation mandate",
-      "Missile programme acceleration (QRSAM, Astra, MRSAM)",
-      "Electronic warfare system upgrades"
-    ],
-    "risks": [
-      "Government payment delays on defence contracts",
-      "Project-based lumpy revenues",
-      "Competition from BEL in select subsystems"
-    ],
-    "track": [
-      "Order book value and composition",
-      "Export revenue growth",
-      "New programme qualifications (space/radar)"
-    ]
+    "tailwinds": ["India defence capex ₹6.2 Lakh Cr over 5 years", "Atmanirbhar Bharat indigenisation mandate", "Missile programme acceleration (QRSAM, Astra, MRSAM)", "Electronic warfare system upgrades"],
+    "risks": ["Government payment delays on defence contracts", "Project-based lumpy revenues", "Competition from BEL in select subsystems"],
+    "track": ["Order book value and composition", "Export revenue growth", "New programme qualifications (space/radar)"]
   },
   {
     "ticker": "ASTERDM",
@@ -214,51 +123,25 @@
     "moat": "Multi-format healthcare provider — hospitals, clinics, pharmacies in India and GCC. Strong brand in Kerala and South India. Post GCC divestiture (2024), pure India focus enables margin improvement.",
     "leadership": "40+ hospitals, 100+ clinics, 550+ pharmacies in India. Revenue growing post-GCC focus. Kerala market leader. Revenue ~₹4,200 Cr India business.",
     "non_rep": "Kerala is deeply penetrated — brand loyalty and doctor networks are sticky. Pharmacy network creates footfall for hospital referrals (integrated model).",
-    "tailwinds": [
-      "India healthcare spending growth",
-      "Kerala medical tourism",
-      "Health insurance penetration",
-      "Pharmacy retail growth"
-    ],
-    "risks": [
-      "Post-GCC split integration complexity",
-      "Kerala competition from Lifespring, Baby Memorial",
-      "Doctor attrition risk"
-    ],
-    "track": [
-      "India EBITDA margin expansion",
-      "Hospital occupancy rates",
-      "Pharmacy same-store growth"
-    ]
+    "tailwinds": ["India healthcare spending growth", "Kerala medical tourism", "Health insurance penetration", "Pharmacy retail growth"],
+    "risks": ["Post-GCC split integration complexity", "Kerala competition from Lifespring, Baby Memorial", "Doctor attrition risk"],
+    "track": ["India EBITDA margin expansion", "Hospital occupancy rates", "Pharmacy same-store growth"]
   },
   {
     "ticker": "NEPHROPLUS",
-    "name": "Nephrocare Health Services Limited",
-    "sector": "Dialysis / Renal Healthcare",
+    "name": "NephroPlus",
+    "sector": "Dialysis Services",
     "nse_symbol": "NEPHROPLUS",
     "buy_avg": 606.55,
-    "moat_type": "Narrow",
-    "moat_class": "narrow",
-    "conviction": 6,
+    "moat_type": "Wide",
+    "moat_class": "wide",
+    "conviction": 8,
     "moat": "Asia's largest dialysis chain — 490 clinics, 33,000+ patients annually, 3.3 Mn treatments/year. Proprietary Renova dialyzer reprocessing system and RenAssure protocols create clinical standardisation moat. IPO Dec 2025 at ₹460/share.",
     "leadership": "#5 globally by treatments performed. Only Indian dialysis company scaled internationally (43 international clinics). Backed by Bessemer Ventures, Quadria Capital, IFC.",
     "non_rep": "Dialysis patients are chronic — once enrolled in a centre, switching is rare (medical continuity). Network density creates route efficiency. PPP contracts with government hospitals are long-term and sticky.",
-    "tailwinds": [
-      "India CKD (Chronic Kidney Disease) incidence growing — 17% of adults affected",
-      "Government Ayushman Bharat covering dialysis",
-      "Diabetes/hypertension driving CKD pipeline",
-      "Dialysis market consolidation away from standalone centres"
-    ],
-    "risks": [
-      "High patient acquisition cost",
-      "Reimbursement rate risk from government schemes",
-      "International expansion execution risk"
-    ],
-    "track": [
-      "Patient additions per quarter",
-      "Government PPP contract wins",
-      "EBITDA per clinic"
-    ]
+    "tailwinds": ["India CKD (Chronic Kidney Disease) incidence growing — 17% of adults affected", "Government Ayushman Bharat covering dialysis", "Diabetes/hypertension driving CKD pipeline", "Dialysis market consolidation away from standalone centres"],
+    "risks": ["High patient acquisition cost", "Reimbursement rate risk from government schemes", "International expansion execution risk"],
+    "track": ["Patient additions per quarter", "Government PPP contract wins", "EBITDA per clinic"]
   },
   {
     "ticker": "NEULANDLAB",
@@ -272,22 +155,9 @@
     "moat": "Pure-play CDMO (Contract Development and Manufacturing Organisation) with 360+ scientists. Three segments: CMS (Custom Manufacturing), GDS (Generic APIs), and Peptide APIs. US FDA, EDQM, PMDA approved. Peptide API business is rare — GLP-1 tailwind is direct.",
     "leadership": "Revenue 5-yr CAGR 75%. 10-yr CAGR 38%. Unit 1 expanding 120.5 KL at ₹143 Cr investment. Serves global innovator pharma companies. Mkt cap ~₹21,000 Cr.",
     "non_rep": "CDMO relationships with innovator companies take 3-5 years to establish (tech transfer, audits, regulatory filings). Peptide synthesis capability for GLP-1 molecules (Ozempic, Wegovy) is extremely rare globally — only a handful of manufacturers globally have this.",
-    "tailwinds": [
-      "GLP-1 peptide API demand explosion (obesity/diabetes drugs)",
-      "China+1 API sourcing by global pharma",
-      "CDMO outsourcing trend from innovators",
-      "India CDSCO compliance improving trust"
-    ],
-    "risks": [
-      "Customer concentration if 1-2 CDMO clients are large",
-      "GLP-1 capacity race — Lonza and Samsung Bio investing heavily",
-      "Regulatory inspection risk (US FDA)"
-    ],
-    "track": [
-      "CMS revenue growth (innovator APIs)",
-      "Peptide API capacity utilisation",
-      "New molecule commercialisations"
-    ]
+    "tailwinds": ["GLP-1 peptide API demand explosion (obesity/diabetes drugs)", "China+1 API sourcing by global pharma", "CDMO outsourcing trend from innovators", "India CDSCO compliance improving trust"],
+    "risks": ["Customer concentration if 1-2 CDMO clients are large", "GLP-1 capacity race — Lonza and Samsung Bio investing heavily", "Regulatory inspection risk (US FDA)"],
+    "track": ["CMS revenue growth (innovator APIs)", "Peptide API capacity utilisation", "New molecule commercialisations"]
   },
   {
     "ticker": "AVANTEL",
@@ -301,22 +171,9 @@
     "moat": "Specialist in satellite communication systems and software-defined radios for Indian Navy, Army, and Coast Guard. DRDO-developed technology transferred to Avantel for production. Very high entry barrier due to classified nature of defence communication systems.",
     "leadership": "Revenue ~₹200 Cr. Small-cap but high-margin (18-22% PAT margins). Dominant in VSAT and Navy communication systems. Hyderabad-based.",
     "non_rep": "Military communication system design and manufacture requires security clearances, DRDO empanelment, and years of platform integration. Products are system-integrated into ships and cannot be easily replaced.",
-    "tailwinds": [
-      "India Navy modernisation (75 ships by 2047)",
-      "Coast Guard fleet expansion",
-      "Satellite communication growth",
-      "Atmanirbhar defence electronics"
-    ],
-    "risks": [
-      "Very small company — single order delay impacts revenues sharply",
-      "Payment delays from government",
-      "Competition from BEL on large contracts"
-    ],
-    "track": [
-      "Order book and quarterly execution",
-      "Navy/Coast Guard repeat orders",
-      "New product (software defined radio) adoption"
-    ]
+    "tailwinds": ["India Navy modernisation (75 ships by 2047)", "Coast Guard fleet expansion", "Satellite communication growth", "Atmanirbhar defence electronics"],
+    "risks": ["Very small company — single order delay impacts revenues sharply", "Payment delays from government", "Competition from BEL on large contracts"],
+    "track": ["Order book and quarterly execution", "Navy/Coast Guard repeat orders", "New product (software defined radio) adoption"]
   },
   {
     "ticker": "SOUTHWEST",
@@ -330,21 +187,9 @@
     "moat": "Specialist in oil & gas well completion services including perforation, wireline, and hydraulic fracturing in India. Niche technical service provider for ONGC and Oil India.",
     "leadership": "Small-cap with concentrated business in Indian upstream O&G services. Revenue ~₹300 Cr. Beneficiary of ONGC's capex revival.",
     "non_rep": "Well completion requires specialised equipment (perforating guns, wireline trucks) and certified engineers — not easily scaled by new entrants. ONGC empanelment takes years.",
-    "tailwinds": [
-      "ONGC capex revival for domestic oil production",
-      "India energy security push",
-      "Deepwater exploration ramp"
-    ],
-    "risks": [
-      "ONGC is effectively a monopsony customer",
-      "Oil price sensitivity",
-      "Equipment maintenance cost risk"
-    ],
-    "track": [
-      "Order wins from ONGC/OIL",
-      "Utilisation rate of equipment fleet",
-      "Revenue growth vs capex"
-    ]
+    "tailwinds": ["ONGC capex revival for domestic oil production", "India energy security push", "Deepwater exploration ramp"],
+    "risks": ["ONGC is effectively a monopsony customer", "Oil price sensitivity", "Equipment maintenance cost risk"],
+    "track": ["Order wins from ONGC/OIL", "Utilisation rate of equipment fleet", "Revenue growth vs capex"]
   },
   {
     "ticker": "DLINKINDIA",
@@ -358,21 +203,9 @@
     "moat": "India subsidiary of D-Link Corporation (Taiwan). Leading brand in networking switches, routers, wireless LAN in India's SMB and home segment. Distribution network across 10,000+ resellers.",
     "leadership": "Top-3 networking brand in India by volume. Revenue ~₹800 Cr. 74.5% promoter holding. Enterprise switching growing with India data centre boom.",
     "non_rep": "D-Link Taiwan provides technology — India ops run distribution, sales, limited assembly. Brand recognition in SMB is strong but the moat is relatively shallow vs Cisco.",
-    "tailwinds": [
-      "India data centre boom driving enterprise networking",
-      "Digital India — SMB connectivity growth",
-      "Smart home/IoT networking demand"
-    ],
-    "risks": [
-      "Cisco, TP-Link, Netgear competition",
-      "Price-based competition in consumer segment",
-      "Parent D-Link Taiwan strategic shifts"
-    ],
-    "track": [
-      "Enterprise vs consumer revenue split",
-      "Data centre switching order wins",
-      "Gross margin expansion"
-    ]
+    "tailwinds": ["India data centre boom driving enterprise networking", "Digital India — SMB connectivity growth", "Smart home/IoT networking demand"],
+    "risks": ["Cisco, TP-Link, Netgear competition", "Price-based competition in consumer segment", "Parent D-Link Taiwan strategic shifts"],
+    "track": ["Enterprise vs consumer revenue split", "Data centre switching order wins", "Gross margin expansion"]
   },
   {
     "ticker": "TRIVENI",
@@ -386,22 +219,9 @@
     "moat": "One of India's largest sugar manufacturers with distillery and power co-generation. Distillery (ethanol) capacity is the growth driver — government's ethanol blending programme (EBP) mandates 20% blending by 2025.",
     "leadership": "Major UP-based sugar and ethanol producer. Revenue ₹5,000+ Cr. Ethanol capacity 660 KL/day. Turbine division (separate from Triveni Turbine) adds industrial diversification.",
     "non_rep": "Cane procurement relationships and distillery capacity are capital-intensive. UP cane area allocation by state government is fixed — cannot easily scale beyond allotted area.",
-    "tailwinds": [
-      "India ethanol blending programme (EBP) 20% target",
-      "Sugar export demand",
-      "Distillery capacity premium pricing",
-      "EV two-wheeler transition won't impact ethanol demand for several years"
-    ],
-    "risks": [
-      "Sugar is a highly regulated commodity — government price controls",
-      "Monsoon and cane crop variability",
-      "Ethanol price caps by government"
-    ],
-    "track": [
-      "Ethanol revenue as % of total",
-      "Distillery utilisation rate",
-      "Sugar realisation vs SAP (state advised price)"
-    ]
+    "tailwinds": ["India ethanol blending programme (EBP) 20% target", "Sugar export demand", "Distillery capacity premium pricing", "EV two-wheeler transition won't impact ethanol demand for several years"],
+    "risks": ["Sugar is a highly regulated commodity — government price controls", "Monsoon and cane crop variability", "Ethanol price caps by government"],
+    "track": ["Ethanol revenue as % of total", "Distillery utilisation rate", "Sugar realisation vs SAP (state advised price)"]
   },
   {
     "ticker": "GALAPREC",
@@ -415,22 +235,9 @@
     "moat": "Manufactures precision coil and disc springs for automotive, industrial, and aerospace applications. 60+ years of spring manufacturing expertise. Export-oriented — 50%+ revenue from global markets (Germany, USA, Japan).",
     "leadership": "Niche player in high-precision springs. Revenue ₹300+ Cr growing 20%+ p.a. Customers include global Tier-1 auto suppliers and industrial equipment OEMs.",
     "non_rep": "Spring fatigue testing, SPC (statistical process control) certifications, and material metallurgy expertise take decades to build. OEM qualification cycles for safety-critical springs (suspension, valve) are 2-3 years.",
-    "tailwinds": [
-      "India auto component export opportunity",
-      "Global auto OEM supply chain diversification from China",
-      "Industrial equipment demand",
-      "Aerospace spring components (new product launches)"
-    ],
-    "risks": [
-      "Small company — customer concentration risk",
-      "Steel wire rod input cost volatility",
-      "ICE-to-EV shift could reduce automotive spring demand"
-    ],
-    "track": [
-      "Export revenue growth",
-      "Aerospace segment contribution",
-      "EBITDA margin vs utilisation"
-    ]
+    "tailwinds": ["India auto component export opportunity", "Global auto OEM supply chain diversification from China", "Industrial equipment demand", "Aerospace spring components (new product launches)"],
+    "risks": ["Small company — customer concentration risk", "Steel wire rod input cost volatility", "ICE-to-EV shift could reduce automotive spring demand"],
+    "track": ["Export revenue growth", "Aerospace segment contribution", "EBITDA margin vs utilisation"]
   },
   {
     "ticker": "MODISONLTD",
@@ -444,22 +251,9 @@
     "moat": "India's largest manufacturer of silver-based electrical contacts and contact materials. Supplies switchgear OEMs including Siemens, ABB, Schneider, and L&T. Silver contact manufacturing requires precious metal handling expertise and tight tolerances.",
     "leadership": "~60-65% market share in organised Indian silver electrical contact market. Revenue ₹400+ Cr. Exports to 40+ countries. Precious metal recycling capability adds margin.",
     "non_rep": "Silver refining + contact manufacturing is capital and expertise-intensive. Precious metal inventory management and hedging expertise takes decades. OEM qualifications for safety-critical switchgear contacts are sticky.",
-    "tailwinds": [
-      "India power sector capex boom (switchgear demand)",
-      "EV charging infrastructure rollout (contactors)",
-      "Industrial automation growth",
-      "Global switchgear export opportunity"
-    ],
-    "risks": [
-      "Silver price volatility impacts working capital",
-      "Siemens/ABB building in-house if volumes grow",
-      "Competition from Chinese silver contact manufacturers"
-    ],
-    "track": [
-      "Market share in silver contacts",
-      "Export revenue growth",
-      "Silver spread (realisation minus raw material cost)"
-    ]
+    "tailwinds": ["India power sector capex boom (switchgear demand)", "EV charging infrastructure rollout (contactors)", "Industrial automation growth", "Global switchgear export opportunity"],
+    "risks": ["Silver price volatility impacts working capital", "Siemens/ABB building in-house if volumes grow", "Competition from Chinese silver contact manufacturers"],
+    "track": ["Market share in silver contacts", "Export revenue growth", "Silver spread (realisation minus raw material cost)"]
   },
   {
     "ticker": "HAPPYFORGE",
@@ -473,22 +267,9 @@
     "moat": "One of India's largest forging companies for commercial vehicles, farm equipment, railways, and wind turbines. Operates three 8,000-tonne and one 14,000-tonne press — the largest press line in India. Crankshaft supply for SUVs started 2025.",
     "leadership": "Revenue ₹1,474 Cr, PAT ₹286 Cr, Mkt cap ₹13,615 Cr. 78.5% promoter holding. Revenue grew 10% QoQ. Multi-sector diversification across CV, off-highway, rail, wind.",
     "non_rep": "14,000-tonne press capacity is the largest in India — provides ability to take on heavy commercial and defence forgings that competitors cannot. Wind turbine pinion shaft is a rare capability domestically.",
-    "tailwinds": [
-      "India commercial vehicle volume growth",
-      "Wind energy turbine manufacturing (PLI)",
-      "Railway component indigenisation",
-      "Farm equipment modernisation"
-    ],
-    "risks": [
-      "Overvalued by 43% vs intrinsic per Alpha Spread",
-      "ICE-to-EV long-term risk on crankshafts",
-      "Cyclical CV sector"
-    ],
-    "track": [
-      "Wind energy forgings order wins",
-      "SUV crankshaft volumes ramp",
-      "EBITDA margin sustenance above 25%"
-    ]
+    "tailwinds": ["India commercial vehicle volume growth", "Wind energy turbine manufacturing (PLI)", "Railway component indigenisation", "Farm equipment modernisation"],
+    "risks": ["Overvalued by 43% vs intrinsic per Alpha Spread", "ICE-to-EV long-term risk on crankshafts", "Cyclical CV sector"],
+    "track": ["Wind energy forgings order wins", "SUV crankshaft volumes ramp", "EBITDA margin sustenance above 25%"]
   },
   {
     "ticker": "NIFTYBEES",
@@ -502,21 +283,9 @@
     "moat": "India's oldest and largest Nifty 50 ETF. Tracks NSE Nifty 50 index. Lowest cost passive exposure to India's 50 largest companies. AUM ₹25,000+ Cr.",
     "leadership": "Largest equity ETF in India by AUM. Extremely liquid — ideal for parking large-cap India exposure. Expense ratio ~0.05%.",
     "non_rep": "ETF moat is liquidity and AUM scale — NIFTYBEES benefits from being the default choice for large institutional block trades in Indian equities.",
-    "tailwinds": [
-      "India equity market penetration growing",
-      "Passive investing adoption in India",
-      "Nifty 50 exposure for foreign investors via ETF route"
-    ],
-    "risks": [
-      "Market-wide correction impacts NAV directly",
-      "No alpha vs index",
-      "ETF tracking error in illiquid conditions"
-    ],
-    "track": [
-      "Nifty 50 index performance",
-      "AUM growth (liquidity indicator)",
-      "Tracking error vs index"
-    ]
+    "tailwinds": ["India equity market penetration growing", "Passive investing adoption in India", "Nifty 50 exposure for foreign investors via ETF route"],
+    "risks": ["Market-wide correction impacts NAV directly", "No alpha vs index", "ETF tracking error in illiquid conditions"],
+    "track": ["Nifty 50 index performance", "AUM growth (liquidity indicator)", "Tracking error vs index"]
   },
   {
     "ticker": "HBLENGINE",
@@ -530,22 +299,9 @@
     "moat": "India's only manufacturer of Automatic Train Protection (ATP) systems for Indian Railways — direct enabler of Kavach collision avoidance. Also makes specialised batteries for defence (submarines, aircraft), railways, and telecom. Critical infrastructure + defence.",
     "leadership": "Revenue ₹2,000+ Cr growing 35%+ p.a. Order book ₹5,000+ Cr driven by Kavach rollout. Revenue ₹789/share LTP in portfolio. Mkt cap ~₹7,900 Cr.",
     "non_rep": "Kavach ATP system is a safety-critical railway signalling product with exclusive technology license. Indian Railways has committed to rolling out Kavach on 34,000 km — HBL is the primary contractor. Submarine batteries require DRDO qualification.",
-    "tailwinds": [
-      "Kavach rollout — 34,000 km Indian Railways safety mandate",
-      "Railway electrification and modernisation",
-      "Submarine battery replacement cycle",
-      "Defence indigenisation"
-    ],
-    "risks": [
-      "Kavach rollout pace dependent on Railway Ministry budget",
-      "Competition for Kavach from Siemens and Alstom on new tenders",
-      "Payment cycle from Railways"
-    ],
-    "track": [
-      "Kavach order wins and execution pace",
-      "Defence battery new contracts",
-      "Quarterly revenue growth vs order book"
-    ]
+    "tailwinds": ["Kavach rollout — 34,000 km Indian Railways safety mandate", "Railway electrification and modernisation", "Submarine battery replacement cycle", "Defence indigenisation"],
+    "risks": ["Kavach rollout pace dependent on Railway Ministry budget", "Competition for Kavach from Siemens and Alstom on new tenders", "Payment cycle from Railways"],
+    "track": ["Kavach order wins and execution pace", "Defence battery new contracts", "Quarterly revenue growth vs order book"]
   },
   {
     "ticker": "SASKEN",
@@ -559,22 +315,9 @@
     "moat": "Embedded software and product engineering services for semiconductor, automotive, and communications companies. Niche expertise in chipset-level software (Android, modem firmware, connectivity stacks). Long-term relationships with Qualcomm, MediaTek, Samsung.",
     "leadership": "Revenue ~₹600 Cr. High margins (>15% PAT). Focused on R&D services — not commodity IT. Serves global Tier-1 semiconductor and auto OEMs.",
     "non_rep": "Chipset-level embedded software expertise takes 10-15 years to build. Qualcomm and MediaTek partnerships are multi-year strategic engagements — very sticky.",
-    "tailwinds": [
-      "5G chipset development boom",
-      "Automotive software complexity (ADAS, EV electronics)",
-      "Semiconductor R&D outsourcing",
-      "India engineering talent at 1/3rd the cost of US"
-    ],
-    "risks": [
-      "Small company — revenue concentrated in a few clients",
-      "Semiconductor capex cycle volatility",
-      "Qualcomm and MediaTek building in-house capability"
-    ],
-    "track": [
-      "Revenue from automotive vs semiconductor segments",
-      "5G modem software project wins",
-      "EBITDA margin consistency"
-    ]
+    "tailwinds": ["5G chipset development boom", "Automotive software complexity (ADAS, EV electronics)", "Semiconductor R&D outsourcing", "India engineering talent at 1/3rd the cost of US"],
+    "risks": ["Small company — revenue concentrated in a few clients", "Semiconductor capex cycle volatility", "Qualcomm and MediaTek building in-house capability"],
+    "track": ["Revenue from automotive vs semiconductor segments", "5G modem software project wins", "EBITDA margin consistency"]
   },
   {
     "ticker": "ENRIN",
@@ -588,51 +331,25 @@
     "moat": "EPC contractor specialising in water treatment plants, sewage treatment plants (STPs), and effluent treatment plants (ETPs) for municipalities and industries. JICA/World Bank funded projects provide revenue visibility.",
     "leadership": "Revenue ₹700+ Cr. Order book ₹3,000+ Cr. Beneficiary of AMRUT 2.0 and Smart Cities Mission for urban water infrastructure.",
     "non_rep": "Water treatment EPC requires technical qualifications (CETP/STP design certifications), DPR preparation experience, and track record of commissioned plants. Municipal clients need proof of past delivery before awarding contracts.",
-    "tailwinds": [
-      "AMRUT 2.0 — ₹2.77 Lakh Cr urban infrastructure",
-      "JNURM and state government sewage treatment mandates",
-      "Industrial ETP requirements tightening",
-      "Jal Jeevan Mission water supply"
-    ],
-    "risks": [
-      "Government payment delays on municipal projects",
-      "Working capital intensive EPC business",
-      "Cost overruns on fixed-price contracts"
-    ],
-    "track": [
-      "Order book and quarterly execution",
-      "Working capital days",
-      "New order wins from AMRUT/Jal Jeevan"
-    ]
+    "tailwinds": ["AMRUT 2.0 — ₹2.77 Lakh Cr urban infrastructure", "JNURM and state government sewage treatment mandates", "Industrial ETP requirements tightening", "Jal Jeevan Mission water supply"],
+    "risks": ["Government payment delays on municipal projects", "Working capital intensive EPC business", "Cost overruns on fixed-price contracts"],
+    "track": ["Order book and quarterly execution", "Working capital days", "New order wins from AMRUT/Jal Jeevan"]
   },
   {
     "ticker": "ARE&M",
-    "name": "Amara Raja Energy & Mobility Limited",
-    "sector": "Energy Storage / Batteries",
-    "nse_symbol": "ARE&M",
+    "name": "Asahi India Glass (ARE&M — Automotive Glass)",
+    "sector": "Automotive Glass",
+    "nse_symbol": "AREIM",
     "buy_avg": 903.4,
-    "moat_type": "Narrow",
-    "moat_class": "narrow",
-    "conviction": 8,
+    "moat_type": "Wide",
+    "moat_class": "wide",
+    "conviction": 7,
     "moat": "India's largest automotive glass manufacturer with ~75% market share in OEM auto glass. JV of Asahi Glass (AGC, Japan) and the Hero Group. Technically complex product — laminated and tempered glass with AGC's proprietary float glass technology.",
     "leadership": "~75% OEM automotive glass market share in India. Serves Maruti, Hyundai, Tata, Honda, Toyota, Kia. Revenue ₹4,000+ Cr. Architectural glass segment adding diversification.",
     "non_rep": "Float glass manufacturing requires ₹1,000+ Cr capex and AGC's proprietary glass melting technology. OEM qualification for automotive glass is a 2-3 year process. AGC Japan IP provides ongoing technology edge.",
-    "tailwinds": [
-      "India auto volume growth (PV + EV)",
-      "Panoramic sunroof adoption growing rapidly in India",
-      "Architectural float glass — real estate boom",
-      "Export of auto glass to global OEMs"
-    ],
-    "risks": [
-      "Maruti Suzuki concentration risk (>30% of revenue)",
-      "Float glass oversupply in architectural segment",
-      "EV transition changes glass requirements"
-    ],
-    "track": [
-      "OEM glass market share vs Saint-Gobain Sekurit",
-      "Sunroof/value-added glass revenue %",
-      "Architectural glass segment growth"
-    ]
+    "tailwinds": ["India auto volume growth (PV + EV)", "Panoramic sunroof adoption growing rapidly in India", "Architectural float glass — real estate boom", "Export of auto glass to global OEMs"],
+    "risks": ["Maruti Suzuki concentration risk (>30% of revenue)", "Float glass oversupply in architectural segment", "EV transition changes glass requirements"],
+    "track": ["OEM glass market share vs Saint-Gobain Sekurit", "Sunroof/value-added glass revenue %", "Architectural glass segment growth"]
   },
   {
     "ticker": "INDUSTOWER",
@@ -646,22 +363,9 @@
     "moat": "India's largest telecom tower company — 226,000+ towers across all 22 telecom circles. Tower infrastructure is capital-intensive and long-duration — once built, telcos co-locate rather than rebuild. Average 1.9 tenants per tower (improving).",
     "leadership": "Largest towerco in Asia by tower count. Revenue ₹7,500+ Cr. Vodafone Idea resolution critical for full P&L recovery. Bharti Airtel holds 48% stake.",
     "non_rep": "A network of 226,000 towers took 15+ years and ₹25,000+ Cr to build. Zoning, landlord agreements, and municipal clearances are virtually impossible to replicate at scale. Switching cost for telcos is very high.",
-    "tailwinds": [
-      "5G rollout requiring densification of tower network",
-      "Vodafone Idea revival (government equity) reduces credit risk",
-      "Rural broadband expansion",
-      "Small cell deployment for 5G urban coverage"
-    ],
-    "risks": [
-      "Vodafone Idea receivables (₹13,000+ Cr overdue) remain key risk",
-      "Tower sharing reducing need for new builds",
-      "Satellite internet (Starlink) as long-term rural coverage threat"
-    ],
-    "track": [
-      "Vodafone Idea payment status",
-      "Tenancy ratio improvement",
-      "5G-related co-location additions"
-    ]
+    "tailwinds": ["5G rollout requiring densification of tower network", "Vodafone Idea revival (government equity) reduces credit risk", "Rural broadband expansion", "Small cell deployment for 5G urban coverage"],
+    "risks": ["Vodafone Idea receivables (₹13,000+ Cr overdue) remain key risk", "Tower sharing reducing need for new builds", "Satellite internet (Starlink) as long-term rural coverage threat"],
+    "track": ["Vodafone Idea payment status", "Tenancy ratio improvement", "5G-related co-location additions"]
   },
   {
     "ticker": "INDGN",
@@ -675,22 +379,9 @@
     "moat": "Tech-enabled healthcare commercial solutions provider — medical affairs, regulatory, pharmacovigilance, and commercial operations for global pharma companies. Deep regulatory content expertise (IND filings, labelling, drug safety).",
     "leadership": "IPO 2024. Revenue ~₹3,000 Cr growing 20%+ p.a. Clients include 14 of top-20 global pharma companies. Listed at ₹490, LTP ₹511.",
     "non_rep": "Pharmacovigilance (drug safety monitoring) is a highly regulated outsourcing — switching providers mid-drug lifecycle is operationally complex and expensive for pharma clients. Regulatory content management relationships span multi-year drug approval cycles.",
-    "tailwinds": [
-      "Global pharma outsourcing of commercial operations",
-      "AI-led regulatory automation demand",
-      "Gene therapy and biosimilar regulatory complexity driving outsourcing",
-      "US FDA regulatory filing volume growth"
-    ],
-    "risks": [
-      "Revenue concentration in top 5 clients",
-      "Competition from Syneos Health, ICON Plc globally",
-      "Pharma capex cuts in down cycles"
-    ],
-    "track": [
-      "Revenue growth and client additions",
-      "Pharma regulatory technology wins",
-      "EBITDA margin improvement"
-    ]
+    "tailwinds": ["Global pharma outsourcing of commercial operations", "AI-led regulatory automation demand", "Gene therapy and biosimilar regulatory complexity driving outsourcing", "US FDA regulatory filing volume growth"],
+    "risks": ["Revenue concentration in top 5 clients", "Competition from Syneos Health, ICON Plc globally", "Pharma capex cuts in down cycles"],
+    "track": ["Revenue growth and client additions", "Pharma regulatory technology wins", "EBITDA margin improvement"]
   },
   {
     "ticker": "RIR",
@@ -704,21 +395,9 @@
     "moat": "Manufacturer of power electronics components including rectifiers, diodes, and thyristors for industrial applications. Small but niche with long-standing industrial customer relationships.",
     "leadership": "Small-cap revenue ~₹100 Cr. Niche in power semiconductors for heavy industry (steel, mining, railways). Hyderabad-based.",
     "non_rep": "Power semiconductor components for high-current industrial applications require specific design certification and long-term customer qualification. Replacement cycles are slow once qualified.",
-    "tailwinds": [
-      "India industrial capex boom",
-      "Railway traction power electronics",
-      "EV charging power conversion"
-    ],
-    "risks": [
-      "Very small company — limited pricing power",
-      "Competition from global power semiconductor companies (Infineon, ON Semi)",
-      "Single product focus limits diversification"
-    ],
-    "track": [
-      "Revenue growth and order book",
-      "New customer additions",
-      "Gross margin stability"
-    ]
+    "tailwinds": ["India industrial capex boom", "Railway traction power electronics", "EV charging power conversion"], 
+    "risks": ["Very small company — limited pricing power", "Competition from global power semiconductor companies (Infineon, ON Semi)", "Single product focus limits diversification"],
+    "track": ["Revenue growth and order book", "New customer additions", "Gross margin stability"]
   },
   {
     "ticker": "SCODATUBES",
@@ -732,21 +411,9 @@
     "moat": "Manufacturer of precision seamless and welded steel tubes for automotive, engineering, and hydraulic applications. Niche in cold-drawn precision tubes.",
     "leadership": "Small-cap revenue ~₹400 Cr. Serves auto OEMs and hydraulic cylinder manufacturers. Precision tubes are import substitution opportunity.",
     "non_rep": "Cold-drawn tube manufacturing requires precision rollers and heat treatment expertise. OEM qualification for hydraulic cylinder tubes is safety-critical — takes 12-18 months.",
-    "tailwinds": [
-      "India auto component manufacturing growth",
-      "Hydraulic equipment for construction/agriculture",
-      "Import substitution for precision tubes"
-    ],
-    "risks": [
-      "Currently -10% in portfolio",
-      "Steel price volatility compresses margins",
-      "Competition from established players like Jindal SAW"
-    ],
-    "track": [
-      "Revenue growth and auto OEM order wins",
-      "Realisation per tonne",
-      "New customer qualifications"
-    ]
+    "tailwinds": ["India auto component manufacturing growth", "Hydraulic equipment for construction/agriculture", "Import substitution for precision tubes"],
+    "risks": ["Currently -10% in portfolio", "Steel price volatility compresses margins", "Competition from established players like Jindal SAW"],
+    "track": ["Revenue growth and auto OEM order wins", "Realisation per tonne", "New customer qualifications"]
   },
   {
     "ticker": "SALZERELEC",
@@ -760,22 +427,9 @@
     "moat": "India's only manufacturer of cam switches, rotary switches, and industrial wiring accessories with ATEX (explosion-proof) certification for hazardous area applications. Niche product focus.",
     "leadership": "Revenue ~₹500 Cr. Exports 30%+ to Europe and Middle East. ATEX certification is a significant barrier for hazardous area industrial applications (oil & gas, chemicals, pharma).",
     "non_rep": "ATEX certification process takes 2-3 years and requires full product redesign for explosion-proof variants. EU Directive compliance limits new entrants. Only Indian company with this depth of ATEX-certified products.",
-    "tailwinds": [
-      "India chemicals and pharma plant expansion",
-      "Hazardous area automation",
-      "European exports of ATEX-certified products",
-      "Oil & gas plant instrumentation"
-    ],
-    "risks": [
-      "Currently -26% in portfolio",
-      "Small company — revenue growth has been slow",
-      "Competition from Eaton, Moeller in premium segment"
-    ],
-    "track": [
-      "ATEX product revenue %",
-      "European export growth",
-      "New ATEX product qualifications"
-    ]
+    "tailwinds": ["India chemicals and pharma plant expansion", "Hazardous area automation", "European exports of ATEX-certified products", "Oil & gas plant instrumentation"],
+    "risks": ["Currently -26% in portfolio", "Small company — revenue growth has been slow", "Competition from Eaton, Moeller in premium segment"],
+    "track": ["ATEX product revenue %", "European export growth", "New ATEX product qualifications"]
   },
   {
     "ticker": "MENONBE",
@@ -789,21 +443,9 @@
     "moat": "Manufacturer of engine bearings (crankshaft, camshaft, connecting rod bearings) for automotive and industrial engines. Long-standing OEM relationships with Maruti, Tata Motors, and Cummins.",
     "leadership": "Revenue ~₹350 Cr. Dominant in multi-layer engine bearing technology in India. Export growing via Cummins global supply chain.",
     "non_rep": "Engine bearing metallurgy (trimetal, bimetal) is application-specific and requires OEM co-development. Safety-critical engine component — extremely sticky once qualified. Cummins global relationship gives export access.",
-    "tailwinds": [
-      "India engine production growth (CV, farm equipment, gensets)",
-      "Export via Cummins supply chain",
-      "Industrial engine demand from capex boom"
-    ],
-    "risks": [
-      "ICE-to-EV transition is long-term existential risk",
-      "Maruti concentration risk",
-      "Steel/aluminium alloy input cost volatility"
-    ],
-    "track": [
-      "Cummins export order growth",
-      "Industrial bearing revenue diversification",
-      "Margin stability as ICE volumes plateau"
-    ]
+    "tailwinds": ["India engine production growth (CV, farm equipment, gensets)", "Export via Cummins supply chain", "Industrial engine demand from capex boom"],
+    "risks": ["ICE-to-EV transition is long-term existential risk", "Maruti concentration risk", "Steel/aluminium alloy input cost volatility"],
+    "track": ["Cummins export order growth", "Industrial bearing revenue diversification", "Margin stability as ICE volumes plateau"]
   },
   {
     "ticker": "RUBICON",
@@ -817,22 +459,9 @@
     "moat": "Specialty pharma company focused on complex drug delivery — modified release, transdermal, nasal, and controlled release oral dosage forms. B2B model supplying to global pharma brands.",
     "leadership": "Revenue ~₹200 Cr growing 25%+ p.a. High-value complex formulations attract premium pricing. Focused on US and European markets.",
     "non_rep": "Complex drug delivery formulations (modified release, transdermal) require deep pharmaceutical science expertise and US FDA ANDA approvals. Each product takes 3-5 years to develop and approve.",
-    "tailwinds": [
-      "Complex generic drug market growth in US/Europe",
-      "Brand pharma companies outsourcing complex formulations",
-      "Specialty pharma premium vs commodity generics",
-      "India pharma export growth"
-    ],
-    "risks": [
-      "Small company — limited scale",
-      "US FDA inspection risk",
-      "Long development cycles before revenue"
-    ],
-    "track": [
-      "ANDA approvals filed and pending",
-      "US revenue growth",
-      "Revenue per product complexity tier"
-    ]
+    "tailwinds": ["Complex generic drug market growth in US/Europe", "Brand pharma companies outsourcing complex formulations", "Specialty pharma premium vs commodity generics", "India pharma export growth"],
+    "risks": ["Small company — limited scale", "US FDA inspection risk", "Long development cycles before revenue"],
+    "track": ["ANDA approvals filed and pending", "US revenue growth", "Revenue per product complexity tier"]
   },
   {
     "ticker": "INDNIPPON",
@@ -846,21 +475,9 @@
     "moat": "India's only manufacturer of electronic ignition systems and magnetos for 2-wheeler and 3-wheeler engines. JV between TVS Group and Nippon Denso (Japan). CDI (Capacitor Discharge Ignition) is a sole-sourced component for Hero, Bajaj, TVS.",
     "leadership": "#1 in ignition modules for Indian 2-wheelers. Revenue ~₹900 Cr. 50%+ market share in organised ignition system market. Hero MotoCorp is largest customer.",
     "non_rep": "Engine ignition module is safety-critical and sole-sourced per OEM platform. Hero/Bajaj switching would require 2+ years of requalification. Nippon Denso technology access provides IP moat.",
-    "tailwinds": [
-      "India 2-wheeler industry growth (EV transition slow in entry-level segment)",
-      "Export of ignition systems to Southeast Asia",
-      "3-wheeler EV retrofit market"
-    ],
-    "risks": [
-      "2-wheeler ICE to EV transition is the key long-term risk",
-      "Hero concentration risk (>40% of revenue)",
-      "Nippon Denso Japan strategic changes"
-    ],
-    "track": [
-      "EV-ready product development progress",
-      "Revenue diversification beyond Hero/Bajaj",
-      "Export market additions"
-    ]
+    "tailwinds": ["India 2-wheeler industry growth (EV transition slow in entry-level segment)", "Export of ignition systems to Southeast Asia", "3-wheeler EV retrofit market"],
+    "risks": ["2-wheeler ICE to EV transition is the key long-term risk", "Hero concentration risk (>40% of revenue)", "Nippon Denso Japan strategic changes"],
+    "track": ["EV-ready product development progress", "Revenue diversification beyond Hero/Bajaj", "Export market additions"]
   },
   {
     "ticker": "RKSWAMY",
@@ -874,22 +491,9 @@
     "moat": "Integrated marketing communications company offering advertising, media buying, market research, and data analytics. One of India's largest independent advertising agencies. IPO 2024.",
     "leadership": "Revenue ~₹500 Cr. Long-standing brand across India's FMCG and financial services sectors. Long client relationships with State Bank of India, LIC, and public sector brands.",
     "non_rep": "Deep knowledge of India's Bharat (rural/semi-urban) market and government client management is hard to replicate for global agencies. PSU client relationships are sticky.",
-    "tailwinds": [
-      "India advertising market growing 15% p.a.",
-      "Digital advertising shift",
-      "Government public communication spending",
-      "India rural consumption growth"
-    ],
-    "risks": [
-      "Digital disruption to traditional advertising",
-      "Holding company model vs independent agencies",
-      "Global agency (WPP, Dentsu) price competition"
-    ],
-    "track": [
-      "Revenue growth and digital mix",
-      "PSU client retention",
-      "EBITDA margin expansion"
-    ]
+    "tailwinds": ["India advertising market growing 15% p.a.", "Digital advertising shift", "Government public communication spending", "India rural consumption growth"],
+    "risks": ["Digital disruption to traditional advertising", "Holding company model vs independent agencies", "Global agency (WPP, Dentsu) price competition"],
+    "track": ["Revenue growth and digital mix", "PSU client retention", "EBITDA margin expansion"]
   },
   {
     "ticker": "RATEGAIN",
@@ -903,22 +507,9 @@
     "moat": "India's largest SaaS company for travel and hospitality — revenue management, distribution connectivity, and digital marketing for hotels, airlines, OTAs, and car rentals. Connects 700+ distribution partners and 500,000+ properties globally.",
     "leadership": "#1 SaaS travel tech company in India. Processes $35 Bn+ in travel transactions annually. Revenue ~₹900 Cr. Customers include Marriott, Wyndham, MakeMyTrip, Air Asia.",
     "non_rep": "Network effect — more properties using RateGain's rate shopping = better rate benchmarking data for all customers. 700+ distribution integrations took 15+ years to build and certify. Data network effect strengthens with scale.",
-    "tailwinds": [
-      "Global travel recovery — post-COVID hotel tech investment",
-      "India travel tech market growing 20%+ p.a.",
-      "Revenue management software adoption in India mid-market hotels",
-      "AI-powered yield management"
-    ],
-    "risks": [
-      "Competition from IDeaS (SAS), Duetto in global markets",
-      "Revenue concentration in top hotel chains",
-      "Macroeconomic travel demand sensitivity"
-    ],
-    "track": [
-      "ARR (Annual Recurring Revenue) growth",
-      "Net Revenue Retention >110%",
-      "New product (AI personalisation) launches"
-    ]
+    "tailwinds": ["Global travel recovery — post-COVID hotel tech investment", "India travel tech market growing 20%+ p.a.", "Revenue management software adoption in India mid-market hotels", "AI-powered yield management"],
+    "risks": ["Competition from IDeaS (SAS), Duetto in global markets", "Revenue concentration in top hotel chains", "Macroeconomic travel demand sensitivity"],
+    "track": ["ARR (Annual Recurring Revenue) growth", "Net Revenue Retention >110%", "New product (AI personalisation) launches"]
   },
   {
     "ticker": "GMDCLTD",
@@ -932,21 +523,9 @@
     "moat": "Gujarat government PSU with exclusive mining rights for lignite, bauxite, and limestone in Gujarat. Lignite for captive thermal power generation. Bauxite for aluminium supply chain.",
     "leadership": "Revenue ₹2,500+ Cr. Lignite mining at Bhavnagar and North Gujarat. Critical supplier to Gujarat GIPCL power plants. Expanding into lithium and critical mineral exploration.",
     "non_rep": "State mining leases are exclusive and long-duration. Gujarat's mineral-rich geology (lignite, bauxite, fluorspar) cannot be replicated elsewhere. PSU status gives first right on new mineral discoveries.",
-    "tailwinds": [
-      "India critical mineral push (lithium, cobalt exploration)",
-      "Bauxite for aluminium self-sufficiency",
-      "Gujarat industrial capex driving construction mineral demand"
-    ],
-    "risks": [
-      "Lignite is a polluting fuel — environmental risk",
-      "PSU inefficiency and government policy dependency",
-      "Mineral pricing cyclicality"
-    ],
-    "track": [
-      "Bauxite volume growth",
-      "Lithium/critical mineral exploration progress",
-      "Revenue diversification from lignite"
-    ]
+    "tailwinds": ["India critical mineral push (lithium, cobalt exploration)", "Bauxite for aluminium self-sufficiency", "Gujarat industrial capex driving construction mineral demand"],
+    "risks": ["Lignite is a polluting fuel — environmental risk", "PSU inefficiency and government policy dependency", "Mineral pricing cyclicality"],
+    "track": ["Bauxite volume growth", "Lithium/critical mineral exploration progress", "Revenue diversification from lignite"]
   },
   {
     "ticker": "TREL",
@@ -960,22 +539,9 @@
     "moat": "Integrated textile (bed linen, yarn) and paper manufacturer. World's 3rd largest terry towel manufacturer. Walmart, Target, and IKEA are key customers. Wheat straw-based paper is an environmental moat.",
     "leadership": "Revenue ₹7,000+ Cr. Terry towel export market leader from India. Yarn capacity 3.7 Lakh spindles. Paper capacity 1,76,500 TPA.",
     "non_rep": "Trident's wheat straw-to-paper conversion technology is a differentiated environmental product (lower carbon footprint). Retail buyer relationships with Walmart/IKEA took 15+ years to build with strict vendor qualification.",
-    "tailwinds": [
-      "US/EU retailer shift from Asian (China+1) textile sourcing",
-      "Eco-friendly paper demand growth",
-      "Home textile export growth from India",
-      "PLI for textiles"
-    ],
-    "risks": [
-      "Textile is a commoditised, price-sensitive industry",
-      "Cotton price and energy cost volatility",
-      "Competition from Bangladesh and Vietnam in export textiles"
-    ],
-    "track": [
-      "Export revenue growth by geography",
-      "Wheat straw paper realisation vs wood-pulp paper",
-      "Terry towel EBITDA margin"
-    ]
+    "tailwinds": ["US/EU retailer shift from Asian (China+1) textile sourcing", "Eco-friendly paper demand growth", "Home textile export growth from India", "PLI for textiles"],
+    "risks": ["Textile is a commoditised, price-sensitive industry", "Cotton price and energy cost volatility", "Competition from Bangladesh and Vietnam in export textiles"],
+    "track": ["Export revenue growth by geography", "Wheat straw paper realisation vs wood-pulp paper", "Terry towel EBITDA margin"]
   },
   {
     "ticker": "EIMCOELECO",
@@ -989,21 +555,9 @@
     "moat": "Manufactures underground mining equipment — LHDs (Load Haul Dumpers), drill rigs, and mining loaders. JV between Elecon Engineering and EIMCO (USA). Primary customer is Coal India and SCCL.",
     "leadership": "Near-monopoly for underground mining equipment for Coal India. Revenue ~₹600 Cr. CIL is effectively the only large underground mining operator in India.",
     "non_rep": "Underground mining equipment qualification is safety-critical (CMRI approval). CIL's procurement is standardised on Eimco's LHD models — switching requires new CMRI certification which takes years.",
-    "tailwinds": [
-      "Coal India underground mechanisation push",
-      "SCCL mine expansion",
-      "Critical mineral mining (coal gasification feed)"
-    ],
-    "risks": [
-      "CIL is essentially the only customer — monopsony risk",
-      "Coal India capex delays",
-      "Underground mining declining long-term as surface mines are preferred"
-    ],
-    "track": [
-      "CIL equipment order book",
-      "LHD replacement cycle",
-      "Revenue from spares and maintenance"
-    ]
+    "tailwinds": ["Coal India underground mechanisation push", "SCCL mine expansion", "Critical mineral mining (coal gasification feed)"],
+    "risks": ["CIL is essentially the only customer — monopsony risk", "Coal India capex delays", "Underground mining declining long-term as surface mines are preferred"],
+    "track": ["CIL equipment order book", "LHD replacement cycle", "Revenue from spares and maintenance"]
   },
   {
     "ticker": "BLUEJET",
@@ -1017,22 +571,9 @@
     "moat": "Niche CDMO specialising in contrast media intermediates — only 3-4 global manufacturers at scale (GE Healthcare, Bayer, Guerbet need these inputs for MRI/CT contrast agents). Bluejet has 25%+ global market share in iodine-based contrast media intermediates.",
     "leadership": "Revenue ~₹650 Cr growing 25%+ p.a. Gross margins >60%. Pure B2B pharma ingredients supplier to global multinational customers. IPO 2023.",
     "non_rep": "Contrast media intermediate synthesis requires ultra-high purity organic chemistry and hazardous chemical handling expertise. US FDA and European DMF filings create regulatory lock-in. Only 3-4 qualified global suppliers — Bluejet is one.",
-    "tailwinds": [
-      "MRI and CT scan volumes growing 12-15% p.a. globally",
-      "Contrast agent demand — aging global population",
-      "Increasing diagnostic imaging in India and emerging markets",
-      "Contrast media supply chain diversification from China"
-    ],
-    "risks": [
-      "Currently -20% in portfolio",
-      "Customer concentration — GE Healthcare/Bayer are large clients",
-      "Iodine raw material price fluctuations"
-    ],
-    "track": [
-      "Revenue growth from contrast media intermediates",
-      "New molecule approvals (non-iodine contrast agents)",
-      "Gross margin sustenance >55%"
-    ]
+    "tailwinds": ["MRI and CT scan volumes growing 12-15% p.a. globally", "Contrast agent demand — aging global population", "Increasing diagnostic imaging in India and emerging markets", "Contrast media supply chain diversification from China"],
+    "risks": ["Currently -20% in portfolio", "Customer concentration — GE Healthcare/Bayer are large clients", "Iodine raw material price fluctuations"],
+    "track": ["Revenue growth from contrast media intermediates", "New molecule approvals (non-iodine contrast agents)", "Gross margin sustenance >55%"]
   },
   {
     "ticker": "SHREEJISPG",
@@ -1046,21 +587,9 @@
     "moat": "Manufacturer of spiral welded and ERW pipes primarily for water, agriculture, and infrastructure. Beneficiary of Jal Jeevan Mission pipe demand.",
     "leadership": "Small-cap revenue ~₹500 Cr. Growing with JJM pipeline contracts. Distributed manufacturing in Gujarat.",
     "non_rep": "Large diameter spiral welded pipe manufacturing is capital-intensive. Local proximity to Gujarat infrastructure projects reduces logistics cost.",
-    "tailwinds": [
-      "Jal Jeevan Mission — ₹3.6 Lakh Cr rural water supply",
-      "India water infrastructure deficit",
-      "Agricultural irrigation pipe demand"
-    ],
-    "risks": [
-      "Steel price volatility squeezes margins",
-      "Competition from Welspun, Jindal SAW on large projects",
-      "Government project payment delays"
-    ],
-    "track": [
-      "JJM order wins",
-      "Revenue per tonne",
-      "Order book size"
-    ]
+    "tailwinds": ["Jal Jeevan Mission — ₹3.6 Lakh Cr rural water supply", "India water infrastructure deficit", "Agricultural irrigation pipe demand"],
+    "risks": ["Steel price volatility squeezes margins", "Competition from Welspun, Jindal SAW on large projects", "Government project payment delays"],
+    "track": ["JJM order wins", "Revenue per tonne", "Order book size"]
   },
   {
     "ticker": "NETWEB",
@@ -1074,22 +603,9 @@
     "moat": "India's ONLY end-to-end AI infrastructure and HPC (High Performance Computing) company — designs 24-layer PCBs, manufactures servers, and builds AI clusters using NVIDIA GPUs. Class-I local supplier (>50% domestic value add) — government procurement mandates favour Netweb exclusively for central govt/PSU tenders >₹50 Cr.",
     "leadership": "One of only 4 NVIDIA-approved local OEM partners for H100 and GB200 GPU systems in India. Revenue growing 90%+ YoY. ₹40 Bn pipeline with 60% conversion rate. Clients: ISRO, Infosys, Zoho, C-DAC. Mkt cap ~₹48,000 Cr.",
     "non_rep": "Regulatory moat: PPP-MII order reserves govt/PSU/defence server market for Class-I suppliers — Dell, HP, Lenovo don't qualify. Only listed pure-play AI infrastructure company in India. Private AI cloud (NVIDIA GB200 clusters) — sovereign data compliance moat.",
-    "tailwinds": [
-      "India AI Mission ₹10,000 Cr (2025-2030)",
-      "Sovereign AI / data localisation mandates",
-      "HPC demand from ISRO, C-DAC, research institutes",
-      "Private AI cloud for enterprise (25-30% cheaper than AWS/Azure for India)"
-    ],
-    "risks": [
-      "Very high valuation (70x EV/EBITDA)",
-      "NVIDIA GPU supply allocation risk",
-      "Govt tender delays and competitive bidding risk"
-    ],
-    "track": [
-      "India AI Mission RFP wins",
-      "Private cloud GPU cluster deployments",
-      "Revenue growth sustaining >50% YoY"
-    ]
+    "tailwinds": ["India AI Mission ₹10,000 Cr (2025-2030)", "Sovereign AI / data localisation mandates", "HPC demand from ISRO, C-DAC, research institutes", "Private AI cloud for enterprise (25-30% cheaper than AWS/Azure for India)"],
+    "risks": ["Very high valuation (70x EV/EBITDA)", "NVIDIA GPU supply allocation risk", "Govt tender delays and competitive bidding risk"],
+    "track": ["India AI Mission RFP wins", "Private cloud GPU cluster deployments", "Revenue growth sustaining >50% YoY"]
   },
   {
     "ticker": "RAMCOSYS",
@@ -1103,22 +619,9 @@
     "moat": "Cloud ERP software for aviation MRO (Maintenance, Repair, Overhaul), HCM (Human Capital Management), and logistics. Aviation MRO software is a niche with high switching cost — airlines and MROs use Ramco for 20+ year asset maintenance tracking.",
     "leadership": "Revenue ~₹600 Cr. Aviation MRO software deployed in 50+ airlines and 20 countries. Ramco Aviation Suite is one of 3 global aviation ERP platforms.",
     "non_rep": "Aviation MRO ERP contains decades of aircraft maintenance records and regulatory compliance history — replacing this software requires 2-3 years and full data migration. Airlines cannot afford disruption to airworthiness records.",
-    "tailwinds": [
-      "Global aviation recovery driving MRO software upgrades",
-      "India MRO hub development (tax changes 2024)",
-      "Airline fleet expansion globally",
-      "Cloud migration of legacy aviation software"
-    ],
-    "risks": [
-      "Revenue growth has been slow vs peers",
-      "SAP and Oracle competition in HCM segment",
-      "Aviation recession risk (MRO spending cuts)"
-    ],
-    "track": [
-      "Aviation MRO ARR growth",
-      "New airline customer wins",
-      "Cloud vs on-premise revenue mix"
-    ]
+    "tailwinds": ["Global aviation recovery driving MRO software upgrades", "India MRO hub development (tax changes 2024)", "Airline fleet expansion globally", "Cloud migration of legacy aviation software"],
+    "risks": ["Revenue growth has been slow vs peers", "SAP and Oracle competition in HCM segment", "Aviation recession risk (MRO spending cuts)"],
+    "track": ["Aviation MRO ARR growth", "New airline customer wins", "Cloud vs on-premise revenue mix"]
   },
   {
     "ticker": "STALLION",
@@ -1132,21 +635,9 @@
     "moat": "India's largest importer and distributor of refrigerant gases and specialty fluorochemicals. Distributes R32, R134a, R410A, R22 across 500+ dealers nationally. First-mover as Indian AC industry scales up.",
     "leadership": "Revenue ~₹500 Cr. Dominant in B2B refrigerant distribution with direct OEM supply to Voltas, Blue Star, Daikin, Whirlpool. Controls cold chain handling of fluorochemicals.",
     "non_rep": "Fluorochemical handling requires hazmat storage certifications, compressed gas safety equipment, and specialised logistics. Dealer network of 500+ took 15+ years to build.",
-    "tailwinds": [
-      "India AC market growing 15% p.a. (heat wave driven)",
-      "HFC to HFO transition (new refrigerant qualification opportunity)",
-      "Refrigeration cold chain for pharma/food"
-    ],
-    "risks": [
-      "Distribution business — low margin by nature",
-      "HFC phase-out under Kigali Amendment (refrigerant transition risk)",
-      "Competition from direct import by large OEMs"
-    ],
-    "track": [
-      "Revenue growth and refrigerant volume",
-      "HFO (next-gen refrigerant) distribution share",
-      "New OEM direct supply contracts"
-    ]
+    "tailwinds": ["India AC market growing 15% p.a. (heat wave driven)", "HFC to HFO transition (new refrigerant qualification opportunity)", "Refrigeration cold chain for pharma/food"],
+    "risks": ["Distribution business — low margin by nature", "HFC phase-out under Kigali Amendment (refrigerant transition risk)", "Competition from direct import by large OEMs"],
+    "track": ["Revenue growth and refrigerant volume", "HFO (next-gen refrigerant) distribution share", "New OEM direct supply contracts"]
   },
   {
     "ticker": "RPTECH",
@@ -1160,22 +651,9 @@
     "moat": "India's second-largest IT products distributor — distributes HP, Asus, MSI, AMD, NVIDIA, Lenovo, LG to 45,000+ retailers across India. National reach and brand relationships are the moat.",
     "leadership": "Revenue ₹9,000+ Cr. One of only 2 national-scale IT distributors (alongside Redington). Gaming and AI PC segment growing with NVIDIA GPU distribution.",
     "non_rep": "National IT distribution network of 45,000+ retailers took 25 years to build. Brand authorisation agreements (NVIDIA, AMD) for India are exclusive-ish — new entrants cannot simply start distributing.",
-    "tailwinds": [
-      "India PC/laptop market growing with digital India",
-      "AI PC adoption wave (2025-2027)",
-      "NVIDIA GPU demand — gaming and AI workstations",
-      "India gaming market growth"
-    ],
-    "risks": [
-      "Distribution is inherently low-margin (0.5-1.5% EBITDA)",
-      "Direct brand websites reducing distributor relevance",
-      "D2C trend by HP/Asus weakening distributor pricing power"
-    ],
-    "track": [
-      "Revenue growth and gross margin",
-      "AI PC and GPU revenue contribution",
-      "Retailer count expansion"
-    ]
+    "tailwinds": ["India PC/laptop market growing with digital India", "AI PC adoption wave (2025-2027)", "NVIDIA GPU demand — gaming and AI workstations", "India gaming market growth"],
+    "risks": ["Distribution is inherently low-margin (0.5-1.5% EBITDA)", "Direct brand websites reducing distributor relevance", "D2C trend by HP/Asus weakening distributor pricing power"],
+    "track": ["Revenue growth and gross margin", "AI PC and GPU revenue contribution", "Retailer count expansion"]
   },
   {
     "ticker": "SIGNPOST",
@@ -1189,22 +667,9 @@
     "moat": "Outdoor advertising company with street furniture (bus shelters, information kiosks) and digital OOH media in Indian cities. Long-term concession agreements with municipal corporations create location-based moat.",
     "leadership": "Revenue ~₹100 Cr growing. Municipal concession agreements in Pune, Bengaluru. Digital OOH is growing as brands demand programmatic outdoor advertising.",
     "non_rep": "Municipal concession contracts for street furniture are 10-15 year exclusive rights. Winning back a concession once lost requires a new competitive bid 10+ years later. Locations in prime urban areas are irreplaceable.",
-    "tailwinds": [
-      "India OOH advertising market growing 15%+ p.a.",
-      "Digital OOH programmatic advertising adoption",
-      "India smart city municipal contracts",
-      "Brand advertising shift to lower-funnel outdoor"
-    ],
-    "risks": [
-      "Small company — limited scale",
-      "Municipal contract renewal risk",
-      "Digital advertising diverting budgets from outdoor"
-    ],
-    "track": [
-      "Revenue per panel",
-      "New municipal concession wins",
-      "Digital OOH % of total revenue"
-    ]
+    "tailwinds": ["India OOH advertising market growing 15%+ p.a.", "Digital OOH programmatic advertising adoption", "India smart city municipal contracts", "Brand advertising shift to lower-funnel outdoor"],
+    "risks": ["Small company — limited scale", "Municipal contract renewal risk", "Digital advertising diverting budgets from outdoor"],
+    "track": ["Revenue per panel", "New municipal concession wins", "Digital OOH % of total revenue"]
   },
   {
     "ticker": "EXPLEOSOL",
@@ -1218,21 +683,9 @@
     "moat": "India subsidiary of Expleo Group (France) — provides engineering, testing, and quality assurance services for automotive, aerospace, and banking. Chennai-based delivery centre for European clients.",
     "leadership": "Revenue ~₹600 Cr. High-margin quality assurance and testing services. European auto (BMW, Volkswagen, PSA) and aerospace clients.",
     "non_rep": "Automotive functional safety testing (ISO 26262 certification services) is highly specialised and requires certified engineers. Expleo France's European client relationships bring India delivery centre long-term contracts.",
-    "tailwinds": [
-      "EV software validation demand explosion (AUTOSAR, ISO 26262)",
-      "Aerospace MRO digital engineering",
-      "European auto OEM cost reduction via India offshoring"
-    ],
-    "risks": [
-      "Currently -9% in portfolio",
-      "Parent Expleo Group strategic changes",
-      "Europe auto sector cyclicality"
-    ],
-    "track": [
-      "Revenue growth from EV software testing",
-      "Aerospace segment contribution",
-      "New European client wins"
-    ]
+    "tailwinds": ["EV software validation demand explosion (AUTOSAR, ISO 26262)", "Aerospace MRO digital engineering", "European auto OEM cost reduction via India offshoring"],
+    "risks": ["Currently -9% in portfolio", "Parent Expleo Group strategic changes", "Europe auto sector cyclicality"],
+    "track": ["Revenue growth from EV software testing", "Aerospace segment contribution", "New European client wins"]
   },
   {
     "ticker": "BOROSCI",
@@ -1246,21 +699,9 @@
     "moat": "India's largest scientific glassware brand for laboratories, pharma, and educational institutions. 'Borosil' is a household brand in Indian labs — strong brand moat in a niche market.",
     "leadership": "Revenue ~₹200 Cr. Dominant in Indian lab glassware market. Exporting to 60+ countries. Pharma quality control labs and educational institutions are primary customers.",
     "non_rep": "'Borosil' brand trust in Indian scientific community took 50+ years to build. Pharma QC labs prefer Borosil glassware for regulatory compliance familiarity.",
-    "tailwinds": [
-      "India pharma lab infrastructure expansion (CDSCO compliance)",
-      "Research institution spending growth",
-      "Export of scientific glassware to developing markets"
-    ],
-    "risks": [
-      "Commoditised product — Chinese glassware competition",
-      "Low-growth niche",
-      "Margin pressure from input (borosilicate glass) costs"
-    ],
-    "track": [
-      "Export revenue growth",
-      "Pharma-grade glassware %",
-      "New product categories (plastic lab ware)"
-    ]
+    "tailwinds": ["India pharma lab infrastructure expansion (CDSCO compliance)", "Research institution spending growth", "Export of scientific glassware to developing markets"],
+    "risks": ["Commoditised product — Chinese glassware competition", "Low-growth niche", "Margin pressure from input (borosilicate glass) costs"],
+    "track": ["Export revenue growth", "Pharma-grade glassware %", "New product categories (plastic lab ware)"]
   },
   {
     "ticker": "GMMPFAUDLR",
@@ -1274,22 +715,9 @@
     "moat": "India subsidiary of Pfaudler (now part of IDEX Corporation, USA). Global leader in glass-lined reactors and process equipment for pharma, agrochemical, and specialty chemical industries. Glass-lining technology is proprietary and safety-critical.",
     "leadership": "Only global-scale manufacturer of glass-lined equipment in India. Revenue ~₹2,000 Cr post-merger with global Pfaudler operations. Serves every major Indian pharma and chemical company.",
     "non_rep": "Pfaudler's glass-lining technology (enamel composition + firing process) is 100+ years old IP. No alternative process equipment has the same chemical resistance profile. Pharma regulatory bodies expect glass-lined reactors for API synthesis.",
-    "tailwinds": [
-      "India API and specialty chemical capex boom",
-      "China+1 pharma manufacturing shift",
-      "Agrochemical capacity expansion",
-      "Fine chemical and fluorochemical plants"
-    ],
-    "risks": [
-      "Currently -29% in portfolio",
-      "IDEX Corporation global strategic changes",
-      "Cyclical with pharma/chemical capex"
-    ],
-    "track": [
-      "Order book from pharma and chemical sectors",
-      "Glass-lined reactor market share vs competition",
-      "Revenue from aftermarket services (highest margin)"
-    ]
+    "tailwinds": ["India API and specialty chemical capex boom", "China+1 pharma manufacturing shift", "Agrochemical capacity expansion", "Fine chemical and fluorochemical plants"],
+    "risks": ["Currently -29% in portfolio", "IDEX Corporation global strategic changes", "Cyclical with pharma/chemical capex"],
+    "track": ["Order book from pharma and chemical sectors", "Glass-lined reactor market share vs competition", "Revenue from aftermarket services (highest margin)"]
   },
   {
     "ticker": "MAPMYINDIA",
@@ -1303,22 +731,9 @@
     "moat": "India's only comprehensive proprietary digital map and location intelligence platform — 30+ years of map data collection, street-level mapping, and navigation algorithms. Competes with Google Maps in India with sovereign data advantage.",
     "leadership": "Embedded in Maruti Suzuki, Tata Motors, Hyundai for in-car navigation. Powers ISRO's Bhuvan, NIC's government mapping. Revenue ~₹400 Cr growing 25%+ p.a.",
     "non_rep": "India's road network, POI (Point of Interest) database, and address system is unique — it took MapmyIndia 30 years to map. ISRO and defence organisations use MapmyIndia for classified maps. Digital address system ('MapmyIndia Mappls') is being adopted by Post Office and government.",
-    "tailwinds": [
-      "India digital address infrastructure (India Post digital address project)",
-      "Autonomous vehicle navigation data",
-      "Fleet management and logistics tech adoption",
-      "Smart city GIS systems"
-    ],
-    "risks": [
-      "Currently -27% in portfolio",
-      "Google Maps' free tier continues to win consumer mindshare",
-      "Auto OEM navigation integration cycles are slow"
-    ],
-    "track": [
-      "API calls per month (data network effect)",
-      "Auto OEM new platform wins",
-      "Government mapping contract renewals"
-    ]
+    "tailwinds": ["India digital address infrastructure (India Post digital address project)", "Autonomous vehicle navigation data", "Fleet management and logistics tech adoption", "Smart city GIS systems"],
+    "risks": ["Currently -27% in portfolio", "Google Maps' free tier continues to win consumer mindshare", "Auto OEM navigation integration cycles are slow"],
+    "track": ["API calls per month (data network effect)", "Auto OEM new platform wins", "Government mapping contract renewals"]
   },
   {
     "ticker": "YATHARTH",
@@ -1332,21 +747,9 @@
     "moat": "Multi-specialty hospital chain focused on NCR (Noida, Greater Noida, Jhansi). Beneficiary of NCR's underserved tier-2 healthcare market. IPO 2023.",
     "leadership": "Revenue ~₹500 Cr. 500+ beds operational. NCR's growing population with deficit of quality tertiary care outside AIIMS and Fortis.",
     "non_rep": "Hospital brand in local NCR communities takes years to build through doctor reputation and patient outcomes. Trauma care requires 24/7 infrastructure investment that small clinics can't match.",
-    "tailwinds": [
-      "NCR population growth and healthcare deficit",
-      "India health insurance coverage expansion",
-      "Trauma care demand growing with urbanisation"
-    ],
-    "risks": [
-      "Competition from Fortis, Max, Manipal in NCR",
-      "Capital intensive hospital expansion",
-      "Doctor attrition risk"
-    ],
-    "track": [
-      "ARPOB growth",
-      "Occupancy rate",
-      "New hospital bed addition timeline"
-    ]
+    "tailwinds": ["NCR population growth and healthcare deficit", "India health insurance coverage expansion", "Trauma care demand growing with urbanisation"],
+    "risks": ["Competition from Fortis, Max, Manipal in NCR", "Capital intensive hospital expansion", "Doctor attrition risk"],
+    "track": ["ARPOB growth", "Occupancy rate", "New hospital bed addition timeline"]
   },
   {
     "ticker": "VASCONEQ",
@@ -1360,21 +763,9 @@
     "moat": "Mid-size real estate developer and construction contractor focused on Maharashtra, Pune, and Goa. Both real estate development and EPC contracting.",
     "leadership": "Revenue ~₹1,500 Cr. Residential and commercial real estate in Pune. EPC contracting for industrial and institutional clients.",
     "non_rep": "Local land bank and Pune market knowledge. However, moat is limited — real estate development is fragmented and competitive.",
-    "tailwinds": [
-      "Pune real estate growth",
-      "Maharashtra infrastructure projects",
-      "Affordable housing demand"
-    ],
-    "risks": [
-      "Currently -50% in portfolio — significant losses",
-      "High debt typical for real estate developers",
-      "Real estate cycle risk"
-    ],
-    "track": [
-      "Revenue from real estate vs EPC mix",
-      "Debt reduction",
-      "New project launches and bookings"
-    ]
+    "tailwinds": ["Pune real estate growth", "Maharashtra infrastructure projects", "Affordable housing demand"],
+    "risks": ["Currently -50% in portfolio — significant losses", "High debt typical for real estate developers", "Real estate cycle risk"],
+    "track": ["Revenue from real estate vs EPC mix", "Debt reduction", "New project launches and bookings"]
   },
   {
     "ticker": "FRACTAL",
@@ -1388,22 +779,9 @@
     "moat": "AI and data analytics firm serving Fortune 500 companies in CPG, healthcare, financial services, and retail. Proprietary AI platform (Cortex) and domain-specific AI solutions. Listed 2024.",
     "leadership": "Revenue ~₹4,000 Cr (including Qure.ai and other subsidiaries). Clients include Unilever, Pfizer, P&G, and Microsoft. AI-native positioning differentiates from traditional analytics.",
     "non_rep": "Domain-specific AI models for CPG (demand forecasting, trade promotion optimisation) take years to train and validate. Enterprise client relationships are multi-year strategic partnerships.",
-    "tailwinds": [
-      "Enterprise AI adoption boom",
-      "GenAI consulting demand",
-      "Healthcare AI (Qure.ai radiology)",
-      "Fortune 500 analytics outsourcing"
-    ],
-    "risks": [
-      "Competition from McKinsey Analytics, Accenture AI, WNS Analytics",
-      "Client concentration in CPG",
-      "Valuation remains elevated post-listing"
-    ],
-    "track": [
-      "Revenue growth and AI platform ARR",
-      "Qure.ai radiology AI adoption",
-      "New Fortune 500 client wins"
-    ]
+    "tailwinds": ["Enterprise AI adoption boom", "GenAI consulting demand", "Healthcare AI (Qure.ai radiology)", "Fortune 500 analytics outsourcing"],
+    "risks": ["Competition from McKinsey Analytics, Accenture AI, WNS Analytics", "Client concentration in CPG", "Valuation remains elevated post-listing"],
+    "track": ["Revenue growth and AI platform ARR", "Qure.ai radiology AI adoption", "New Fortune 500 client wins"]
   },
   {
     "ticker": "PROTEAN",
@@ -1411,28 +789,15 @@
     "sector": "Government Tech / FinTech",
     "nse_symbol": "PROTEAN",
     "buy_avg": 729.68,
-    "moat_type": "Wide",
+    "moat_type":"Wide",
     "moat_class": "wide",
     "conviction": 7,
     "moat": "Formerly NSDL e-Governance — India's primary PAN card issuer and NPS (National Pension System) record-keeper. Processes 99%+ of PAN applications in India. Government-mandated monopoly-like position in PAN issuance.",
     "leadership": "Manages 400 Mn+ PAN records. NPS AUM growing with compulsory private sector coverage. Revenue ~₹1,100 Cr. IPO 2023. Government-designated PAN issuing authority.",
     "non_rep": "PAN issuance is a government-designated function — cannot be competed away. NPS record-keeping contract is a multi-decade relationship with PFRDA. Data custodian for India's financial identity infrastructure.",
-    "tailwinds": [
-      "NPS AUM growth as formal sector expands",
-      "PAN-Aadhaar linking driving PAN upgradation volumes",
-      "DigiLocker and digital document integration",
-      "Government digital India expansion"
-    ],
-    "risks": [
-      "Currently -16% in portfolio",
-      "Government policy changes could alter PAN/NPS mandate",
-      "Revenue growth has been slower than expected"
-    ],
-    "track": [
-      "NPS AUM and subscriber growth",
-      "PAN issuance volumes",
-      "New government e-governance contracts"
-    ]
+    "tailwinds": ["NPS AUM growth as formal sector expands", "PAN-Aadhaar linking driving PAN upgradation volumes", "DigiLocker and digital document integration", "Government digital India expansion"],
+    "risks": ["Currently -16% in portfolio", "Government policy changes could alter PAN/NPS mandate", "Revenue growth has been slower than expected"],
+    "track": ["NPS AUM and subscriber growth", "PAN issuance volumes", "New government e-governance contracts"]
   },
   {
     "ticker": "UNIVCABLES",
@@ -1446,22 +811,9 @@
     "moat": "Manufacturer of extra high voltage (EHV) and high voltage cables for power transmission. Part of Birla Group. EHV cables are technically complex and require BIS/type-test certification.",
     "leadership": "Revenue ~₹1,200 Cr growing with India power grid expansion. Supplies PGCIL, state utilities, and industrial plants. Birla Group backing provides financial stability.",
     "non_rep": "EHV cable manufacturing requires special extrusion equipment and BIS certification with factory audit. Only 5-6 companies in India can make EHV (220kV and above) cables.",
-    "tailwinds": [
-      "India power grid expansion ₹9 Lakh Cr over 10 years",
-      "Renewable energy evacuation cables (offshore/onshore)",
-      "Data centre power infrastructure",
-      "Smart grid cabling"
-    ],
-    "risks": [
-      "Copper price volatility is pass-through but impacts working capital",
-      "Intense competition from Polycab, Sterlite Power",
-      "Project delays in PGCIL tenders"
-    ],
-    "track": [
-      "EHV cable order book from PGCIL",
-      "Revenue growth and EBITDA margin",
-      "New cable types (HVDC) qualification"
-    ]
+    "tailwinds": ["India power grid expansion ₹9 Lakh Cr over 10 years", "Renewable energy evacuation cables (offshore/onshore)", "Data centre power infrastructure", "Smart grid cabling"],
+    "risks": ["Copper price volatility is pass-through but impacts working capital", "Intense competition from Polycab, Sterlite Power", "Project delays in PGCIL tenders"],
+    "track": ["EHV cable order book from PGCIL", "Revenue growth and EBITDA margin", "New cable types (HVDC) qualification"]
   },
   {
     "ticker": "RAYMOND",
@@ -1475,21 +827,9 @@
     "moat": "Iconic Indian brand in premium suiting fabrics (90-year heritage). Post-demerger — Raymond Ltd retains the real estate business (Thane land bank) while Raymond Lifestyle is separately listed. Thane land bank of 100+ acres is the primary value driver.",
     "leadership": "Thane land bank monetisation (Aspirational City township) is the main investment thesis. Real estate development of 100+ acres at prime Thane location. Raymond Lifestyle brand has 1,500+ retail touchpoints.",
     "non_rep": "Raymond's Thane land bank in prime MMR location is irreplaceable — adjacent to Thane station, acquired decades ago at very low cost. Brand trust in suiting is 90 years of heritage.",
-    "tailwinds": [
-      "Mumbai metropolitan area real estate premium",
-      "Raymond Realty township project monetisation",
-      "Premium suiting market growth with rising incomes"
-    ],
-    "risks": [
-      "Real estate execution timeline risk",
-      "Demerger complexity still being absorbed",
-      "Suiting fabric market slowly declining (casual wear trend)"
-    ],
-    "track": [
-      "Thane township bookings and cash flow",
-      "Raymond Realty EBITDA",
-      "Working capital and debt reduction"
-    ]
+    "tailwinds": ["Mumbai metropolitan area real estate premium", "Raymond Realty township project monetisation", "Premium suiting market growth with rising incomes"],
+    "risks": ["Real estate execution timeline risk", "Demerger complexity still being absorbed", "Suiting fabric market slowly declining (casual wear trend)"],
+    "track": ["Thane township bookings and cash flow", "Raymond Realty EBITDA", "Working capital and debt reduction"]
   },
   {
     "ticker": "GRAPHITE",
@@ -1503,53 +843,25 @@
     "moat": "One of two listed Indian graphite electrode manufacturers (alongside HEG). Produces UHP electrodes for electric arc furnace steelmaking. Owns Graphite Cova GmbH (Germany) and India operations.",
     "leadership": "Revenue ~₹2,500 Cr. Capacity 98,000 MT/yr globally. European operations via Cova add geographic diversification. Expanding into graphite anode materials for EV batteries.",
     "non_rep": "Same as HEG — UHP electrode manufacturing requires specialized graphitization kilns (capital intensive, 2-3 yr build), proprietary needle coke supply agreements, and metallurgical expertise built over decades.",
-    "tailwinds": [
-      "EAF steelmaking transition",
-      "Green steel demand Europe",
-      "Graphite anodes for EV batteries",
-      "European electrode demand from German/Italian steel mills"
-    ],
-    "risks": [
-      "Electrode price cycles are volatile",
-      "Chinese electrode dumping",
-      "Needle coke cost inflation"
-    ],
-    "track": [
-      "Electrode realization/tonne vs needle coke cost",
-      "Anode business revenue ramp",
-      "European capacity utilization"
-    ]
+    "tailwinds": ["EAF steelmaking transition", "Green steel demand Europe", "Graphite anodes for EV batteries", "European electrode demand from German/Italian steel mills"],
+    "risks": ["Electrode price cycles are volatile", "Chinese electrode dumping", "Needle coke cost inflation"],
+    "track": ["Electrode realization/tonne vs needle coke cost", "Anode business revenue ramp", "European capacity utilization"]
   },
   {
     "ticker": "URBANCO",
-    "name": "Urban Company Limited",
-    "sector": "Technology / Consumer Services",
+    "name": "Urban Company (Urbanclap Technologies — not listed; likely URBANCO = something else)",
+    "sector": "Pending Verification",
     "nse_symbol": "URBANCO",
-    "buy_avg": 123.0,
-    "moat_type": "Narrow",
-    "moat_class": "narrow",
+    "buy_avg": 134.11,
+    "moat_type": "Pending",
+    "moat_class": "pending",
     "conviction": 4,
-    "moat": "Home services marketplace (UrbanClap pivoted to Urban Company, Apr 2025). Full-stack model: training (150+ centres), supply chain, pricing, service standardization. InstaHelp (10-15 min housekeeping) crossed 50,000 bookings/day in Feb 2026 — significant milestone. Recently IPO'd Sep 2025 at ₹103.",
-    "leadership": "Revenue ₹383 Cr in Q3 FY26 (+33% YoY). Recently profitable (Q2 FY26 PAT ₹232 Cr) but Q3 showed ₹21 Cr loss — profitability journey volatile. Mkt cap ~₹20,000 Cr at ₹123-124.",
-    "non_rep": "Training infrastructure and supply chain control create cost advantage over marketplace-only competitors. However, home services is inherently fragmented — moat is limited vs capital-intensive businesses. Brand 'Urban' is growing but 10 years from founding vs 50+ year brands in other segments.",
-    "tailwinds": [
-      "India urban middle class home services demand (40%+ underutilised market)",
-      "InstaHelp (quick services) category creation",
-      "Native brand (water purifiers, smart locks) monetization",
-      "Services standardization driving premium pricing"
-    ],
-    "risks": [
-      "Recently IPO'd at ₹103, now ₹123 — potential pullback if growth slows",
-      "Ambit Capital issued Sell rating — valuation concerns",
-      "Service professional quality/reliability remains structural challenge",
-      "Marketplace competition from existing players with brand (Justdial)"
-    ],
-    "track": [
-      "InstaHelp daily booking momentum (target >100,000 bookings/day by EoFY27)",
-      "Core services (cleaning, plumbing) EBITDA margin expansion",
-      "Native product revenue %",
-      "Quarterly path back to profitability"
-    ]
+    "moat": "Ticker URBANCO on NSE refers to Urban Company — a home services marketplace. However, verify the exact NSE ticker as Urban Company may not be listed yet. If this is a different URBANCO, analysis pending.",
+    "leadership": "Pending verification of exact company behind URBANCO ticker.",
+    "non_rep": "Pending",
+    "tailwinds": ["Home services market growth in India"],
+    "risks": ["Ticker needs verification", "Currently -8% in portfolio"],
+    "track": ["Verify company name and re-run analysis"]
   },
   {
     "ticker": "GMRAIRPORT",
@@ -1563,22 +875,9 @@
     "moat": "Operates Delhi IGI Airport (India's busiest — 70+ Mn passengers) and Hyderabad Rajiv Gandhi Airport. Both are long-term concession agreements (60 years). Airport infrastructure is natural monopoly — only one airport serves each city.",
     "leadership": "Delhi IGI Terminal 2 expansion complete. Hyderabad T2 under development. Also operates Goa Mopa airport. International airports in Cebu (Philippines) and Mactan.",
     "non_rep": "Airport concession is a government-awarded 60-year monopoly. Delhi's 70+ Mn passenger throughput cannot be duplicated — land scarcity in NCR makes a second major airport impossible for 20+ years.",
-    "tailwinds": [
-      "India aviation passenger CAGR 10-12% p.a.",
-      "Delhi airport capacity expansion to 100 Mn pax",
-      "Hyderabad T2 expansion",
-      "Airport retail and real estate monetisation"
-    ],
-    "risks": [
-      "High debt — infrastructure assets are leveraged",
-      "Regulatory AERA tariff revision risk",
-      "Traffic dependency on IndiGo/Air India"
-    ],
-    "track": [
-      "Passenger throughput growth",
-      "Non-aero revenue % (retail, parking, hotel)",
-      "Debt reduction from cash flows"
-    ]
+    "tailwinds": ["India aviation passenger CAGR 10-12% p.a.", "Delhi airport capacity expansion to 100 Mn pax", "Hyderabad T2 expansion", "Airport retail and real estate monetisation"],
+    "risks": ["High debt — infrastructure assets are leveraged", "Regulatory AERA tariff revision risk", "Traffic dependency on IndiGo/Air India"],
+    "track": ["Passenger throughput growth", "Non-aero revenue % (retail, parking, hotel)", "Debt reduction from cash flows"]
   },
   {
     "ticker": "LAXMIDENTL",
@@ -1592,22 +891,9 @@
     "moat": "India's largest dental products manufacturer — dental crowns, bridges, dentures, and clear aligners. B2B supplier to dental labs and clinics. IPO 2024. Exports to 90+ countries.",
     "leadership": "Revenue ~₹600 Cr growing 25%+ p.a. Dominant in India dental prosthetics manufacturing. Clear aligner market entry (high growth segment — India still underpenetrated vs US).",
     "non_rep": "Dental manufacturing requires FDA/CE medical device approvals per product. CAD/CAM digital dentistry capability (zirconia milling) is capital-intensive and expertise-heavy. Export certifications in 90+ countries took years to build.",
-    "tailwinds": [
-      "India dental market growing 15%+ p.a.",
-      "Clear aligner adoption in India (Rs 30,000 vs Rs 3 Lakh for braces)",
-      "Export of dental prosthetics to USA/Europe (cost arbitrage)",
-      "Dental tourism in India"
-    ],
-    "risks": [
-      "Small company — limited scale vs global dental players (Dentsply, Straumann)",
-      "Competition from 3D-printed dentures disrupting traditional prosthetics",
-      "Raw material (zirconia, titanium) import dependency"
-    ],
-    "track": [
-      "Clear aligner revenue growth",
-      "Export market revenue by geography",
-      "EBITDA margin expansion as scale grows"
-    ]
+    "tailwinds": ["India dental market growing 15%+ p.a.", "Clear aligner adoption in India (Rs 30,000 vs Rs 3 Lakh for braces)", "Export of dental prosthetics to USA/Europe (cost arbitrage)", "Dental tourism in India"],
+    "risks": ["Small company — limited scale vs global dental players (Dentsply, Straumann)", "Competition from 3D-printed dentures disrupting traditional prosthetics", "Raw material (zirconia, titanium) import dependency"],
+    "track": ["Clear aligner revenue growth", "Export market revenue by geography", "EBITDA margin expansion as scale grows"]
   },
   {
     "ticker": "BIOCON",
@@ -1621,22 +907,9 @@
     "moat": "India's largest biopharmaceutical company. Pioneer in biosimilars (generic versions of complex biologic drugs). Biocon Biologics is the biosimilar subsidiary — has approved biosimilars for Herceptin (trastuzumab), Lantus (insulin glargine), Humira (adalimumab) in US/EU.",
     "leadership": "Revenue ~₹15,000 Cr (consol). Biocon Biologics revenue ₹6,000+ Cr growing 25%+ p.a. First Indian company to get US FDA approval for biosimilar insulin and monoclonal antibody.",
     "non_rep": "Biosimilar development requires ₹500-1,500 Cr per molecule, clinical trials, and 8-10 years of regulatory work. Biocon has done this for 7+ molecules — the pipeline cannot be replicated quickly. Viatris partnership gives US commercial access.",
-    "tailwinds": [
-      "US and EU biosimilar market — $100 Bn+ by 2030 (branded biologics losing patents)",
-      "India-developed biosimilars at 20-30% lower price than branded",
-      "Emerging market insulin access",
-      "Immunology biosimilars (Humira, Enbrel) market opening"
-    ],
-    "risks": [
-      "Viatris partnership complexity and milestone disputes",
-      "Biosimilar interchangeability approval delays in US",
-      "Competitive pricing pressure from Samsung Bioepis, Pfizer biosimilars"
-    ],
-    "track": [
-      "Biocon Biologics US market share in each biosimilar",
-      "Humira biosimilar (Hadlima) US uptake",
-      "Insulin glargine market share in US"
-    ]
+    "tailwinds": ["US and EU biosimilar market — $100 Bn+ by 2030 (branded biologics losing patents)", "India-developed biosimilars at 20-30% lower price than branded", "Emerging market insulin access", "Immunology biosimilars (Humira, Enbrel) market opening"],
+    "risks": ["Viatris partnership complexity and milestone disputes", "Biosimilar interchangeability approval delays in US", "Competitive pricing pressure from Samsung Bioepis, Pfizer biosimilars"],
+    "track": ["Biocon Biologics US market share in each biosimilar", "Humira biosimilar (Hadlima) US uptake", "Insulin glargine market share in US"]
   },
   {
     "ticker": "ANURAS",
@@ -1650,22 +923,9 @@
     "moat": "Specialty API manufacturer with US FDA, EU GMP, and Japan PMDA approved facilities. Focus on APIs for cardiovascular, anti-infective, and psychiatric drug categories.",
     "leadership": "Revenue ~₹600 Cr growing steadily. Serves regulated markets (US, EU, Japan) which requires highest quality standards. Hyderabad-based.",
     "non_rep": "US FDA approved API manufacturing with drug master file (DMF) approvals takes 3-5 years per molecule. Regulatory track record and audit history is a moat — new entrants need years of inspection history.",
-    "tailwinds": [
-      "India API export growth",
-      "China+1 API sourcing by global pharma",
-      "Cardiovascular and CNS drug API demand growth",
-      "US generic drug market consolidation"
-    ],
-    "risks": [
-      "US FDA warning letter / import alert risk",
-      "Commodity API pricing pressure",
-      "Revenue concentration in a few molecules"
-    ],
-    "track": [
-      "US FDA inspection outcomes",
-      "Revenue per approved API molecule",
-      "New DMF filings per year"
-    ]
+    "tailwinds": ["India API export growth", "China+1 API sourcing by global pharma", "Cardiovascular and CNS drug API demand growth", "US generic drug market consolidation"],
+    "risks": ["US FDA warning letter / import alert risk", "Commodity API pricing pressure", "Revenue concentration in a few molecules"],
+    "track": ["US FDA inspection outcomes", "Revenue per approved API molecule", "New DMF filings per year"]
   },
   {
     "ticker": "SHANKARA",
@@ -1679,22 +939,9 @@
     "moat": "Multi-brand retail chain for steel, tiles, sanitary ware, and other building materials. Operates 95+ stores across South India. B2C model for building materials is unique in a fragmented market.",
     "leadership": "Revenue ~₹4,000 Cr. South India dominant in organised building materials retail. One-stop-shop model reduces builder procurement complexity.",
     "non_rep": "Retail store network of 95+ in South India took 15+ years to build. Vendor relationships for steel, tiles, and plumbing allow bulk buying discounts passed to customers.",
-    "tailwinds": [
-      "India housing construction boom",
-      "Organised retail gaining share in building materials",
-      "South India real estate market growth"
-    ],
-    "risks": [
-      "Currently -15% in portfolio",
-      "Working capital intensive (high inventory)",
-      "Steel price volatility compresses margins",
-      "Competition from regional dealers"
-    ],
-    "track": [
-      "Same-store sales growth",
-      "New store openings",
-      "Gross margin per category"
-    ]
+    "tailwinds": ["India housing construction boom", "Organised retail gaining share in building materials", "South India real estate market growth"],
+    "risks": ["Currently -15% in portfolio", "Working capital intensive (high inventory)", "Steel price volatility compresses margins", "Competition from regional dealers"],
+    "track": ["Same-store sales growth", "New store openings", "Gross margin per category"]
   },
   {
     "ticker": "INCAP",
@@ -1708,21 +955,9 @@
     "moat": "INCAP on NSE refers to International Combustion (India) — manufacturer of vibratory equipment, bulk material handling systems, and process equipment for mining, cement, and steel industries.",
     "leadership": "Small-cap revenue ~₹200 Cr. Part of Elecon Engineering Group. Supplies vibrating screens, feeders, and conveyors for mining sector.",
     "non_rep": "Bulk material handling equipment is application-specific engineering — each project is custom designed. Coal India and cement companies have long-term spare parts relationships.",
-    "tailwinds": [
-      "India mining equipment demand (Coal India capex)",
-      "Cement capacity expansion",
-      "Steel plant material handling upgrades"
-    ],
-    "risks": [
-      "Very small company — limited scale",
-      "Coal India project timing risk",
-      "Competition from international majors (Metso, FLSmidth)"
-    ],
-    "track": [
-      "Order book from mining/cement sectors",
-      "Revenue growth",
-      "Spare parts revenue (recurring)"
-    ]
+    "tailwinds": ["India mining equipment demand (Coal India capex)", "Cement capacity expansion", "Steel plant material handling upgrades"],
+    "risks": ["Very small company — limited scale", "Coal India project timing risk", "Competition from international majors (Metso, FLSmidth)"],
+    "track": ["Order book from mining/cement sectors", "Revenue growth", "Spare parts revenue (recurring)"]
   },
   {
     "ticker": "SHILPAMED",
@@ -1736,22 +971,9 @@
     "moat": "Speciality oncology API and formulations manufacturer with US FDA, EU GMP approvals. Pioneer in API production for cancer drugs (Imatinib, Dasatinib, Gefitinib). Also expanding into OSD formulations.",
     "leadership": "Revenue ~₹900 Cr. 50%+ revenue from oncology APIs. Serves global generic pharma companies. Strong IP position in oncology process chemistry.",
     "non_rep": "Oncology API synthesis involves hazardous chemistry (highly potent APIs — HPAPIs) requiring containment facilities that cost ₹200+ Cr to build and qualify. DMF filings with US FDA for oncology molecules take 3-5 years.",
-    "tailwinds": [
-      "Global oncology drug market $250 Bn+ growing 10% p.a.",
-      "China+1 oncology API sourcing",
-      "India HPAPI manufacturing cost advantage",
-      "Targeted therapy drugs requiring complex API chemistry"
-    ],
-    "risks": [
-      "Revenue concentration in oncology APIs",
-      "US FDA inspection risk on HPAPI facilities",
-      "Competition from Teva and Mylan on off-patent oncology APIs"
-    ],
-    "track": [
-      "US FDA approvals for new oncology APIs",
-      "HPAPI revenue growth",
-      "Formulations business launch progress"
-    ]
+    "tailwinds": ["Global oncology drug market $250 Bn+ growing 10% p.a.", "China+1 oncology API sourcing", "India HPAPI manufacturing cost advantage", "Targeted therapy drugs requiring complex API chemistry"],
+    "risks": ["Revenue concentration in oncology APIs", "US FDA inspection risk on HPAPI facilities", "Competition from Teva and Mylan on off-patent oncology APIs"],
+    "track": ["US FDA approvals for new oncology APIs", "HPAPI revenue growth", "Formulations business launch progress"]
   },
   {
     "ticker": "ECOSMOBLTY",
@@ -1765,21 +987,9 @@
     "moat": "EV-focused mobility services company — electric vehicle leasing, fleet management, and EV charging solutions for corporate and government fleets.",
     "leadership": "Small-cap, early stage. Revenue ~₹100 Cr. Growing with India's EV fleet adoption in corporate/government segment.",
     "non_rep": "First-mover in organised EV fleet leasing in India. Building proprietary fleet management software.",
-    "tailwinds": [
-      "India government EV fleet mandate (30% EV by 2030)",
-      "Corporate ESG commitments driving EV fleet adoption",
-      "FAME scheme subsidies for EVs"
-    ],
-    "risks": [
-      "Currently -8% in portfolio",
-      "Very early stage — path to profitability unclear",
-      "EV battery technology risk and range anxiety"
-    ],
-    "track": [
-      "Fleet size growth",
-      "Revenue per vehicle",
-      "Path to EBITDA positive"
-    ]
+    "tailwinds": ["India government EV fleet mandate (30% EV by 2030)", "Corporate ESG commitments driving EV fleet adoption", "FAME scheme subsidies for EVs"],
+    "risks": ["Currently -8% in portfolio", "Very early stage — path to profitability unclear", "EV battery technology risk and range anxiety"], 
+    "track": ["Fleet size growth", "Revenue per vehicle", "Path to EBITDA positive"]
   },
   {
     "ticker": "KIRLPNU",
@@ -1793,21 +1003,9 @@
     "moat": "Manufacturer of compressed air systems, refrigeration compressors, and transmission products. Part of the iconic Kirloskar Group. 70+ years of industrial equipment heritage in India.",
     "leadership": "Revenue ~₹900 Cr. Dominant in defence refrigeration compressors (Navy ships, submarines). Industrial compressed air systems for defence/railways/industrial applications.",
     "non_rep": "Defence refrigeration contracts require DRDO/Defence Ministry approvals and security clearances. Kirloskar brand trust in Indian industry is 100+ years old. Naval refrigeration for submarines requires high reliability certification.",
-    "tailwinds": [
-      "India defence capex — Navy ship refrigeration/HVAC",
-      "Industrial compressor demand from PLI manufacturing",
-      "Green building HVAC efficiency upgrades"
-    ],
-    "risks": [
-      "Kirloskar group corporate governance complexity",
-      "Competition from Atlas Copco and Elgi in industrial segment",
-      "Niche revenue base limits scale"
-    ],
-    "track": [
-      "Defence refrigeration order wins",
-      "Industrial air system market share",
-      "EBITDA margin expansion"
-    ]
+    "tailwinds": ["India defence capex — Navy ship refrigeration/HVAC", "Industrial compressor demand from PLI manufacturing", "Green building HVAC efficiency upgrades"],
+    "risks": ["Kirloskar group corporate governance complexity", "Competition from Atlas Copco and Elgi in industrial segment", "Niche revenue base limits scale"],
+    "track": ["Defence refrigeration order wins", "Industrial air system market share", "EBITDA margin expansion"]
   },
   {
     "ticker": "PTC",
@@ -1821,22 +1019,9 @@
     "moat": "India's largest power trading company — acts as intermediary between power generators and distribution companies (DISCOMs). Government of India holds stake via NTPC, NHPC, PowerGrid, and PGCIL.",
     "leadership": "Trades 50+ Bn units of electricity annually. Revenue ~₹15,000 Cr (pass-through trading revenue). Owns PTC India Financial Services (PTCFS) for power sector lending.",
     "non_rep": "Power trading licence from CERC and long-term relationships with both generators and DISCOMs gives a network effect moat. International power trade (Bhutan, Nepal hydro) is exclusive to PTC via government mandate.",
-    "tailwinds": [
-      "India renewable energy capacity growth creating more power to trade",
-      "Cross-border power trade with Nepal/Bhutan",
-      "Real-time electricity market (RTERM) growth",
-      "DISCOM deficit coverage via trading"
-    ],
-    "risks": [
-      "Trading margins are thin and regulatory-capped",
-      "PTCFS NPA risk in power sector lending",
-      "IEX (exchange trading) disintermediating bilateral trades"
-    ],
-    "track": [
-      "Trading volumes and margins",
-      "PTCFS NPA levels",
-      "Cross-border power trade volumes"
-    ]
+    "tailwinds": ["India renewable energy capacity growth creating more power to trade", "Cross-border power trade with Nepal/Bhutan", "Real-time electricity market (RTERM) growth", "DISCOM deficit coverage via trading"],
+    "risks": ["Trading margins are thin and regulatory-capped", "PTCFS NPA risk in power sector lending", "IEX (exchange trading) disintermediating bilateral trades"],
+    "track": ["Trading volumes and margins", "PTCFS NPA levels", "Cross-border power trade volumes"]
   },
   {
     "ticker": "LANDMARK",
@@ -1850,21 +1035,9 @@
     "moat": "Premium and luxury automobile dealer — Mercedes-Benz, Honda, Jeep, BYD, Volkswagen. One of India's largest multi-brand premium auto dealers with 100+ showrooms.",
     "leadership": "Revenue ~₹5,000 Cr. Premium dealer franchises are limited — OEMs appoint only 3-5 dealers per city. After-sales service is high-margin recurring revenue.",
     "non_rep": "OEM dealership agreements are exclusive territory-based. Mercedes-Benz, Honda, and Jeep won't appoint a new premium dealer if an existing one is performing. After-sales service workshop revenue is sticky.",
-    "tailwinds": [
-      "India luxury car market growing 30%+ p.a.",
-      "BYD electric vehicle growth in India",
-      "Premium car segment expanding as incomes rise"
-    ],
-    "risks": [
-      "Currently -35% in portfolio",
-      "OEM direct sales (Agency model) reducing dealer margins",
-      "Luxury car market cyclicality during slowdowns"
-    ],
-    "track": [
-      "Same-store revenue growth",
-      "After-sales service % of total revenue",
-      "BYD EV volumes through Landmark"
-    ]
+    "tailwinds": ["India luxury car market growing 30%+ p.a.", "BYD electric vehicle growth in India", "Premium car segment expanding as incomes rise"],
+    "risks": ["Currently -35% in portfolio", "OEM direct sales (Agency model) reducing dealer margins", "Luxury car market cyclicality during slowdowns"],
+    "track": ["Same-store revenue growth", "After-sales service % of total revenue", "BYD EV volumes through Landmark"]
   },
   {
     "ticker": "FREDUN",
@@ -1878,22 +1051,9 @@
     "moat": "Specialty pharmaceutical formulations company focused on injectables (hormones, oncology, peptides). Small niche player with regulated market exports (US, EU, Africa).",
     "leadership": "Small-cap revenue ~₹300 Cr. Injectable formulations for hormonal and oncology drugs. Focus on complex injectables is a higher-barrier segment.",
     "non_rep": "Sterile injectable manufacturing requires US FDA/EU GMP approved fill-and-finish lines — ₹50-100 Cr capex per line plus years of qualification. Complex injectable formulations for hormones require specialised expertise.",
-    "tailwinds": [
-      "India injectable pharma export growth",
-      "Complex injectable supply gap globally (COVID disruption)",
-      "Hormonal drug demand growth",
-      "Emerging market pharma supply"
-    ],
-    "risks": [
-      "Small company — regulatory risk concentration",
-      "US FDA inspection risk",
-      "Limited product diversification"
-    ],
-    "track": [
-      "US FDA approvals for injectable ANDAs",
-      "Export revenue growth",
-      "New therapeutic area additions"
-    ]
+    "tailwinds": ["India injectable pharma export growth", "Complex injectable supply gap globally (COVID disruption)", "Hormonal drug demand growth", "Emerging market pharma supply"],
+    "risks": ["Small company — regulatory risk concentration", "US FDA inspection risk", "Limited product diversification"],
+    "track": ["US FDA approvals for injectable ANDAs", "Export revenue growth", "New therapeutic area additions"]
   },
   {
     "ticker": "CMSINFO",
@@ -1901,57 +1061,31 @@
     "sector": "Cash Management / ATM Services",
     "nse_symbol": "CMSINFO",
     "buy_avg": 374.48,
-    "moat_type": "Wide",
+    "moat_type":"Wide",
     "moat_class": "wide",
     "conviction": 7,
     "moat": "India's largest cash management services company — ATM cash replenishment, bank vault management, and cash in transit. Manages ₹4 Lakh Cr+ of cash movement annually. RBI-regulated and security-intensive business.",
     "leadership": "Serves 70%+ of India's ATMs for cash replenishment. 15,000+ ATMs managed. Revenue ~₹2,000 Cr growing 15%+ p.a. Cash management market ~₹3,000 Cr with CMS having dominant share.",
     "non_rep": "Cash management requires armed security vans, secure vaults, RBI-licensed operations, and bonded staff — cannot be started quickly. HDFC, SBI, ICICI Bank are long-term clients — switching would require 12+ months of parallel operations.",
-    "tailwinds": [
-      "India ATM density still low vs global — more ATMs being installed",
-      "Bank outsourcing of non-core cash operations",
-      "New RBI white-label ATM rollout",
-      "Retail cash management for kirana stores"
-    ],
-    "risks": [
-      "UPI growth reducing cash usage long-term",
-      "Security risk — armoured van incidents",
-      "Bank consolidation reducing client count"
-    ],
-    "track": [
-      "ATM managed count growth",
-      "Revenue per ATM",
-      "New product lines (bulk cash/retail CMS)"
-    ]
+    "tailwinds": ["India ATM density still low vs global — more ATMs being installed", "Bank outsourcing of non-core cash operations", "New RBI white-label ATM rollout", "Retail cash management for kirana stores"],
+    "risks": ["UPI growth reducing cash usage long-term", "Security risk — armoured van incidents", "Bank consolidation reducing client count"],
+    "track": ["ATM managed count growth", "Revenue per ATM", "New product lines (bulk cash/retail CMS)"]
   },
   {
     "ticker": "DIFFNKG",
-    "name": "Diffusion Engineers Limited",
-    "sector": "Industrial Equipment / Speciality Machinery",
+    "name": "Differential Nutrition (verify: may be Dhanuka Agritech or another ticker)",
+    "sector": "Pending Verification",
     "nse_symbol": "DIFFNKG",
     "buy_avg": 311.35,
-    "moat_type": "Narrow",
-    "moat_class": "narrow",
-    "conviction": 6,
-    "moat": "Specialised industrial equipment manufacturer focused on asset life enhancement and condition assessment solutions. Serves steel, mining, cement, railways, power sectors. Revenue ₹407 Cr FY26 (+21% YoY), PAT ₹50 Cr (+40% YoY). Deep technical expertise in equipment diagnostics.",
-    "leadership": "Growing profitably in a niche segment. Consolidated with 40% earnings growth. PE ~21-35x (expensive). Mkt cap ~₹1,200 Cr. Q4 FY26 showed 38% revenue growth quarter-on-quarter — execution strong.",
-    "non_rep": "Technical moat is application-specific equipment diagnostics and maintenance solutions for large asset owners (cement plants, steel mills, mines). Custom engineering and long project cycles create client stickiness.",
-    "tailwinds": [
-      "India industrial capex boom (steel expansion, mining mechanisation, railways modernisation)",
-      "Preventive maintenance adoption in industrial India",
-      "Asset life extension services gaining traction as owners defer replacements"
-    ],
-    "risks": [
-      "Currently -31% in portfolio per provided data",
-      "Industrial capex is cyclical — slowdown could impact order book",
-      "Competition from global consultancies and established equipment suppliers",
-      "Project execution risk on large contracts"
-    ],
-    "track": [
-      "Order book and quarterly execution pace",
-      "Revenue from each sector (steel/mining/cement/railways mix)",
-      "EBITDA margin sustenance >12%"
-    ]
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 4,
+    "moat": "DIFFNKG ticker needs verification — could not find conclusive company mapping. Placeholder entry pending confirmation.",
+    "leadership": "Pending verification.",
+    "non_rep": "Pending",
+    "tailwinds": ["Pending verification"],
+    "risks": ["Ticker needs verification before analysis"],
+    "track": ["Verify company and update analysis"]
   },
   {
     "ticker": "MOSCHIP",
@@ -1965,22 +1099,9 @@
     "moat": "India's pioneering fabless semiconductor design company — designs custom ASICs and mixed-signal ICs for connectivity, IoT, and industrial applications. Also provides embedded software and VLSI services.",
     "leadership": "Revenue ~₹200 Cr. Fabless semiconductor design with in-house ASIC IP. Designs for US and European customers offshored to Indian design centre.",
     "non_rep": "Semiconductor IP developed over 20+ years in mixed-signal design is genuinely hard to replicate. ASIC design cycles are 2-4 years — long qualification periods create customer stickiness.",
-    "tailwinds": [
-      "India Semiconductor Mission — ₹76,000 Cr incentive package",
-      "India chip design talent is world-class",
-      "IoT connectivity chip demand",
-      "Atmanirbhar semiconductor policy"
-    ],
-    "risks": [
-      "Fabless model means no manufacturing control",
-      "TSMC/GlobalFoundries fab cost volatility",
-      "US chip design majors (Qualcomm, Texas Instruments) can undercut on volume"
-    ],
-    "track": [
-      "New ASIC tape-outs",
-      "Revenue from semiconductor design services",
-      "Government semiconductor design contracts"
-    ]
+    "tailwinds": ["India Semiconductor Mission — ₹76,000 Cr incentive package", "India chip design talent is world-class", "IoT connectivity chip demand", "Atmanirbhar semiconductor policy"],
+    "risks": ["Fabless model means no manufacturing control", "TSMC/GlobalFoundries fab cost volatility", "US chip design majors (Qualcomm, Texas Instruments) can undercut on volume"],
+    "track": ["New ASIC tape-outs", "Revenue from semiconductor design services", "Government semiconductor design contracts"]
   },
   {
     "ticker": "GULFOILLUB",
@@ -1994,23 +1115,9 @@
     "moat": "India subsidiary of Gulf Oil International (Kuwait). Manufactures and markets automotive and industrial lubricants. #3 lubricant brand in India after Castrol and Shell.",
     "leadership": "Revenue ~₹2,500 Cr. Strong presence in 2-wheeler and commercial vehicle lubricants. Distribution network of 75,000+ outlets. EV lubricant range launched.",
     "non_rep": "Gulf Oil global brand provides trust premium. 75,000+ retailer network creates distribution moat. OEM approvals from Bajaj, Honda for factory-fill are sticky for aftermarket preference.",
-    "tailwinds": [
-      "India auto market growth driving lubricant demand",
-      "Commercial vehicle fleet growing",
-      "Industrial lubricant demand from manufacturing boom",
-      "EV lubricant (thermal management fluids) — new category"
-    ],
-    "risks": [
-      "Currently -24% in portfolio",
-      "EV transition — EVs use 80% less lubricant vs ICE",
-      "Competition from Castrol (BP) and Shell India (dominant brands)",
-      "Crude oil base oil price volatility"
-    ],
-    "track": [
-      "Market share vs Castrol/Shell",
-      "EV lubricant revenue growth",
-      "2-wheeler lubricant volume growth"
-    ]
+    "tailwinds": ["India auto market growth driving lubricant demand", "Commercial vehicle fleet growing", "Industrial lubricant demand from manufacturing boom", "EV lubricant (thermal management fluids) — new category"],
+    "risks": ["Currently -24% in portfolio", "EV transition — EVs use 80% less lubricant vs ICE", "Competition from Castrol (BP) and Shell India (dominant brands)", "Crude oil base oil price volatility"],
+    "track": ["Market share vs Castrol/Shell", "EV lubricant revenue growth", "2-wheeler lubricant volume growth"]
   },
   {
     "ticker": "DATAPATTNS",
@@ -2024,22 +1131,9 @@
     "moat": "Vertically integrated defence electronics company — designs, develops, and manufactures radar, electronic warfare, avionics, and naval systems. Chennai-based, DRDO co-developed products. Fully owned by founders (87% promoter).",
     "leadership": "Revenue ~₹600 Cr growing 30%+ p.a. Order book ₹2,500+ Cr (4x revenue). Develops products ranging from LCA Tejas avionics to naval fire control systems.",
     "non_rep": "In-house FPGA design, ASIC design, software, hardware, and systems integration under one roof is exceptionally rare in India. Each defence system goes through 5-7 year development cycles and DRDO/military qualification — cannot be shortcut.",
-    "tailwinds": [
-      "India defence capex ₹6.2 Lakh Cr over 5 years",
-      "LCA Tejas Mark 1A (83 aircraft ordered) — avionics",
-      "India Navy surface and submarine modernisation",
-      "Atmanirbhar defence indigenisation"
-    ],
-    "risks": [
-      "DRDO project delays — timelines routinely slip",
-      "Government payment cycles",
-      "Lump revenue recognition on long-duration defence contracts"
-    ],
-    "track": [
-      "Order book composition and execution pace",
-      "LCA Mk1A avionics progress",
-      "New programme qualifications"
-    ]
+    "tailwinds": ["India defence capex ₹6.2 Lakh Cr over 5 years", "LCA Tejas Mark 1A (83 aircraft ordered) — avionics", "India Navy surface and submarine modernisation", "Atmanirbhar defence indigenisation"],
+    "risks": ["DRDO project delays — timelines routinely slip", "Government payment cycles", "Lump revenue recognition on long-duration defence contracts"],
+    "track": ["Order book composition and execution pace", "LCA Mk1A avionics progress", "New programme qualifications"]
   },
   {
     "ticker": "TOTEM",
@@ -2053,21 +1147,9 @@
     "moat": "Small telecom tower infrastructure company. Builds and manages telecom towers primarily for BSNL and smaller operators. Niche positioning in rural telecom infrastructure.",
     "leadership": "Small-cap revenue ~₹200 Cr. Beneficiary of BSNL 4G/5G rollout government mandate.",
     "non_rep": "Telecom tower assets are long-duration fixed infrastructure. BSNL relationship for rural tower deployment creates some visibility.",
-    "tailwinds": [
-      "BSNL 4G/5G national rollout",
-      "India rural telecom expansion",
-      "Government BharatNet broadband infrastructure"
-    ],
-    "risks": [
-      "Currently -20% in portfolio",
-      "BSNL's financial weakness",
-      "Indus Towers and ATC competing for sites"
-    ],
-    "track": [
-      "Tower additions per quarter",
-      "BSNL payment timelines",
-      "Revenue per tower"
-    ]
+    "tailwinds": ["BSNL 4G/5G national rollout", "India rural telecom expansion", "Government BharatNet broadband infrastructure"],
+    "risks": ["Currently -20% in portfolio", "BSNL's financial weakness", "Indus Towers and ATC competing for sites"],
+    "track": ["Tower additions per quarter", "BSNL payment timelines", "Revenue per tower"]
   },
   {
     "ticker": "CYIENTDLM",
@@ -2081,22 +1163,9 @@
     "moat": "Cyient's defence and aerospace electronics manufacturing subsidiary. Design-led manufacturing for defence avionics, space electronics, and industrial automation PCBAs. Subsidiary of Cyient (IT services).",
     "leadership": "Revenue ~₹1,000 Cr growing 25%+ p.a. Demerged from Cyient in 2023. Serves DRDO, HAL, ISRO, and global aerospace OEMs. IPO 2023.",
     "non_rep": "Defence and space electronics require AS9100 (aerospace quality) and NADCAP certifications — very few Indian companies have these. Cyient's engineering pedigree provides technical differentiation from pure assembly EMS players.",
-    "tailwinds": [
-      "India defence indigenisation (70% procurement from domestic by 2027)",
-      "LCA Tejas production ramp",
-      "India space private sector growth",
-      "Aerospace MRO electronics"
-    ],
-    "risks": [
-      "Currently -2% in portfolio",
-      "Cyient DLM vs Syrma/Dixon for EMS differentiation — positioning risk",
-      "Defence project delays"
-    ],
-    "track": [
-      "Defence vs industrial revenue mix",
-      "New defence programme qualifications",
-      "Aerospace export order wins"
-    ]
+    "tailwinds": ["India defence indigenisation (70% procurement from domestic by 2027)", "LCA Tejas production ramp", "India space private sector growth", "Aerospace MRO electronics"],
+    "risks": ["Currently -2% in portfolio", "Cyient DLM vs Syrma/Dixon for EMS differentiation — positioning risk", "Defence project delays"],
+    "track": ["Defence vs industrial revenue mix", "New defence programme qualifications", "Aerospace export order wins"]
   },
   {
     "ticker": "MMP",
@@ -2110,22 +1179,9 @@
     "moat": "Manufacturer of aluminium powder, aluminium paste, and aluminium recycled alloys for paint, pharma, automotive, and construction industries. Niche position in aluminium speciality products.",
     "leadership": "Revenue ~₹500 Cr. Dominant in aluminium powder for industrial paints (reflective paints, auto refinish). Exports to 30+ countries.",
     "non_rep": "Aluminium powder manufacturing requires particle size control expertise and inert atmosphere handling (aluminium powder is explosive). Special coatings for leafing-grade aluminium paste took decades to develop.",
-    "tailwinds": [
-      "India paint market growing 12-15% p.a.",
-      "Aluminium automotive parts growth",
-      "Reflective road marking paint (highway safety)",
-      "Solar panel frame aluminium demand"
-    ],
-    "risks": [
-      "Aluminium price volatility",
-      "LME aluminium pricing pass-through risk",
-      "Competition from global aluminium powder companies (Eckart, Silberline)"
-    ],
-    "track": [
-      "Export revenue growth",
-      "Aluminium paste market share",
-      "EBITDA margin vs aluminium input cost"
-    ]
+    "tailwinds": ["India paint market growing 12-15% p.a.", "Aluminium automotive parts growth", "Reflective road marking paint (highway safety)", "Solar panel frame aluminium demand"],
+    "risks": ["Aluminium price volatility", "LME aluminium pricing pass-through risk", "Competition from global aluminium powder companies (Eckart, Silberline)"],
+    "track": ["Export revenue growth", "Aluminium paste market share", "EBITDA margin vs aluminium input cost"]
   },
   {
     "ticker": "BBL",
@@ -2139,22 +1195,9 @@
     "moat": "Manufactures transformers, HT motors, and drives for industrial and utility applications. 70+ year heritage in electrical equipment. Part of the KEC/RPG Group.",
     "leadership": "Revenue ~₹1,000 Cr. Transformer business serves PGCIL, state utilities, and industrial customers. HT motors for industrial drives are high-margin.",
     "non_rep": "Power transformer manufacturing requires BIS/IEC certification, large test lab infrastructure, and experienced winding engineers. Long-term utility customer relationships for transformer supply.",
-    "tailwinds": [
-      "India power grid capacity expansion",
-      "Renewable energy transformer demand (wind/solar substation)",
-      "Industrial motor demand from PLI manufacturing capex",
-      "PGCIL transmission line upgrade"
-    ],
-    "risks": [
-      "Competition from ABB, Siemens, Schneider in industrial segment",
-      "Copper/CRGO steel input cost volatility",
-      "Working capital intensive (large transformers)"
-    ],
-    "track": [
-      "Order book from PGCIL and state utilities",
-      "HT motor revenue growth",
-      "EBITDA margin sustenance"
-    ]
+    "tailwinds": ["India power grid capacity expansion", "Renewable energy transformer demand (wind/solar substation)", "Industrial motor demand from PLI manufacturing capex", "PGCIL transmission line upgrade"],
+    "risks": ["Competition from ABB, Siemens, Schneider in industrial segment", "Copper/CRGO steel input cost volatility", "Working capital intensive (large transformers)"],
+    "track": ["Order book from PGCIL and state utilities", "HT motor revenue growth", "EBITDA margin sustenance"]
   },
   {
     "ticker": "CESC",
@@ -2168,50 +1211,25 @@
     "moat": "India's oldest private power utility — holds exclusive licence to distribute electricity in Kolkata and Howrah for 70+ years. Regulated monopoly in its licence area. Also owns CESC Ventures (retail, IT) and distribution licences in UP, Rajasthan, and Odisha.",
     "leadership": "Kolkata distribution is a 100+ year old monopoly license. Expanding to UP/Rajasthan/Odisha DISCOMs through privatisation. Revenue ₹12,000+ Cr. RPG Group.",
     "non_rep": "Electricity distribution licence in Kolkata is exclusive and renewable — no competitor can enter this territory. Power generation (coal-based + solar) + distribution under one company creates vertical integration advantage.",
-    "tailwinds": [
-      "India DISCOM privatisation — CESC bidding for more distribution licences",
-      "Solar capacity addition under RPG Group",
-      "Kolkata smart metering rollout (capex opportunity)"
-    ],
-    "risks": [
-      "Regulated tariffs — ROE capped by CERC/state regulators",
-      "Coal price volatility on generation business",
-      "Odisha and Rajasthan distribution losses if consumer non-payment continues"
-    ],
-    "track": [
-      "Distribution expansion licenses won",
-      "AT&C (aggregate technical and commercial) loss reduction",
-      "Solar capacity addition"
-    ]
+    "tailwinds": ["India DISCOM privatisation — CESC bidding for more distribution licences", "Solar capacity addition under RPG Group", "Kolkata smart metering rollout (capex opportunity)"],
+    "risks": ["Regulated tariffs — ROE capped by CERC/state regulators", "Coal price volatility on generation business", "Odisha and Rajasthan distribution losses if consumer non-payment continues"],
+    "track": ["Distribution expansion licenses won", "AT&C (aggregate technical and commercial) loss reduction", "Solar capacity addition"]
   },
   {
     "ticker": "OMINFRAL",
-    "name": "Om Infra Limited",
-    "sector": "Infrastructure EPC / Construction",
+    "name": "OM Infralabs (verify: possibly OM Logistics or OM Infrastructure)",
+    "sector": "Pending Verification",
     "nse_symbol": "OMINFRAL",
     "buy_avg": 126.22,
-    "moat_type": "Narrow",
-    "moat_class": "narrow",
-    "conviction": 5,
-    "moat": "EPC contractor specialising in dam, hydro power, infrastructure, and real estate projects. Historical projects include Isarda Dam (Rajasthan, completed July 2025), Upper Krishna, Almatti dams. SRA project (Bandra Reclamation Mumbai). Bhilwara-Jaipur toll road (subsidiary).",
-    "leadership": "Revenue and profit growth inconsistent due to project-based EPC model. Q2 FY26 PAT ₹8 Cr (+74% QoQ). Mkt cap ₹947 Cr. PE ~37x (expensive). Limited liquidity on NSE.",
-    "non_rep": "EPC moat is relationship-based with government agencies and project execution track record. Bhilwara-Jaipur toll road revenue provides semi-recurring cash flow. Jaipur-Bhilwara tollway is now a subsidiary providing cash generation.",
-    "tailwinds": [
-      "India water and hydro infrastructure (PMKSY-AIBP dam projects)",
-      "Real estate development (SRA Bandra project completion driving value unlock)",
-      "Toll road concessions (Bhilwara-Jaipur), semi-recurring revenue"
-    ],
-    "risks": [
-      "Currently -31% in portfolio — significant losses",
-      "Project-based EPC is lumpy and execution-dependent",
-      "Government project delays and payment cycle risks",
-      "Toll road business is facing equity capital intensity for new projects"
-    ],
-    "track": [
-      "SRA Bandra project revenue and margin contribution",
-      "Bhilwara-Jaipur toll road EBITDA",
-      "New dam and hydro project order wins"
-    ]
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 3,
+    "moat": "OMINFRAL ticker needs verification. Currently -31% in portfolio. Placeholder pending company name confirmation.",
+    "leadership": "Pending verification.",
+    "non_rep": "Pending",
+    "tailwinds": ["Pending verification"],
+    "risks": ["Ticker needs verification", "Currently -31% in portfolio — significant underperformance"],
+    "track": ["Verify company and update analysis"]
   },
   {
     "ticker": "WHIRLPOOL",
@@ -2225,22 +1243,9 @@
     "moat": "India subsidiary of Whirlpool Corporation (USA). Manufactures washing machines, refrigerators, and air conditioners. Premium appliance brand with ~15% market share in washing machines.",
     "leadership": "Revenue ~₹7,000 Cr. #3 in Indian appliances after Samsung/LG and Haier. 75% promoter holding (Whirlpool Corp). Recently announced partial promoter sell-down.",
     "non_rep": "Brand heritage and global parent technology access. However, Samsung and LG have stronger brand premium in India. Whirlpool's strength is washing machines where it competes more effectively.",
-    "tailwinds": [
-      "India appliance penetration — washing machine penetration <30% vs 90%+ in US",
-      "Rising disposable income driving appliance upgrades",
-      "Summer-driven AC demand growth"
-    ],
-    "risks": [
-      "Currently -31% in portfolio",
-      "Promoter stake reduction overhang",
-      "Chinese (Haier) and Korean (Samsung/LG) competition",
-      "Margin pressure from premium positioning"
-    ],
-    "track": [
-      "Washing machine market share",
-      "Premium segment % of revenue",
-      "Promoter stake status"
-    ]
+    "tailwinds": ["India appliance penetration — washing machine penetration <30% vs 90%+ in US", "Rising disposable income driving appliance upgrades", "Summer-driven AC demand growth"],
+    "risks": ["Currently -31% in portfolio", "Promoter stake reduction overhang", "Chinese (Haier) and Korean (Samsung/LG) competition", "Margin pressure from premium positioning"],
+    "track": ["Washing machine market share", "Premium segment % of revenue", "Promoter stake status"]
   },
   {
     "ticker": "PITTIENG",
@@ -2254,22 +1259,9 @@
     "moat": "Manufactures electrical steel laminations and precision-engineered components for motors, generators, transformers, and locomotives. Supplies GE, Siemens, Alstom, and Indian Railways.",
     "leadership": "Revenue ~₹800 Cr. Key supplier for traction motors in Vande Bharat trains and electric locomotives. Exports to GE (USA) for industrial motors.",
     "non_rep": "Electrical steel lamination stamping requires precision dies, GD&T certifications, and customer-specific material testing. GE and Siemens qualify vendors for 2-3 years before first production order.",
-    "tailwinds": [
-      "India Railways traction motor demand (8,000 locomotives electrification)",
-      "Vande Bharat and metro rail motor components",
-      "Wind turbine generator laminations",
-      "EV motor laminations (new product)"
-    ],
-    "risks": [
-      "GE USA strategic changes could impact exports",
-      "Steel CRGO (electrical steel) price volatility",
-      "Competition from Bharat Heavy Electricals in captive supply"
-    ],
-    "track": [
-      "Vande Bharat motor supply volumes",
-      "GE export order status",
-      "EV motor lamination product launch"
-    ]
+    "tailwinds": ["India Railways traction motor demand (8,000 locomotives electrification)", "Vande Bharat and metro rail motor components", "Wind turbine generator laminations", "EV motor laminations (new product)"],
+    "risks": ["GE USA strategic changes could impact exports", "Steel CRGO (electrical steel) price volatility", "Competition from Bharat Heavy Electricals in captive supply"],
+    "track": ["Vande Bharat motor supply volumes", "GE export order status", "EV motor lamination product launch"]
   },
   {
     "ticker": "RAYMONDREL",
@@ -2283,21 +1275,9 @@
     "moat": "Real estate subsidiary of Raymond Group focused on Thane township development (100+ acres). Listed separately from Raymond Ltd post-demerger. Aspirational City project in Thane is the core asset.",
     "leadership": "100+ acres in prime Thane (adjacent to railway station). Bookings growing for mid-premium residential. First phase launched.",
     "non_rep": "100-acre contiguous land parcel adjacent to Thane station is irreplaceable in Mumbai metro region. Acquired at historical cost — current value multiples higher.",
-    "tailwinds": [
-      "Mumbai Metropolitan Region housing demand",
-      "Thane as IT/BPO suburban hub",
-      "Raymond brand trust driving apartment sales premium"
-    ],
-    "risks": [
-      "Real estate is capital intensive and execution-dependent",
-      "Competition from Lodha Group and Hiranandani in Thane",
-      "Interest rate sensitivity on home buyer affordability"
-    ],
-    "track": [
-      "Quarterly bookings value and units",
-      "Cash collection from sold units",
-      "New phase launches"
-    ]
+    "tailwinds": ["Mumbai Metropolitan Region housing demand", "Thane as IT/BPO suburban hub", "Raymond brand trust driving apartment sales premium"],
+    "risks": ["Real estate is capital intensive and execution-dependent", "Competition from Lodha Group and Hiranandani in Thane", "Interest rate sensitivity on home buyer affordability"],
+    "track": ["Quarterly bookings value and units", "Cash collection from sold units", "New phase launches"]
   },
   {
     "ticker": "NIITLTD",
@@ -2311,22 +1291,9 @@
     "moat": "India's largest IT training and skills development company — 30+ years of brand heritage. Corporate learning (StackRoute) is the new growth driver. NIIT Foundation manages government skilling programmes.",
     "leadership": "Revenue ~₹1,000 Cr. Post-divestiture of NIIT Technologies (now Coforge), NIIT Ltd is purely the skills/training business. Corporates (Accenture, TCS) use NIIT for talent transformation.",
     "non_rep": "NIIT brand is synonymous with IT education in India. 30+ years of alumni base. Corporate LMS and bootcamp delivery for large IT companies is sticky (multi-year contracts).",
-    "tailwinds": [
-      "India IT skills demand growing with digital transformation",
-      "Corporate reskilling for AI/cloud",
-      "Government skill India programmes",
-      "Coding bootcamp growth (StackRoute)"
-    ],
-    "risks": [
-      "Competition from Coursera, UpGrad, Great Learning in online learning",
-      "Traditional classroom model disrupted by online platforms",
-      "Government skill contracts are low-margin"
-    ],
-    "track": [
-      "Corporate (StackRoute) revenue growth",
-      "Online learner registrations",
-      "EBITDA margin improvement"
-    ]
+    "tailwinds": ["India IT skills demand growing with digital transformation", "Corporate reskilling for AI/cloud", "Government skill India programmes", "Coding bootcamp growth (StackRoute)"],
+    "risks": ["Competition from Coursera, UpGrad, Great Learning in online learning", "Traditional classroom model disrupted by online platforms", "Government skill contracts are low-margin"],
+    "track": ["Corporate (StackRoute) revenue growth", "Online learner registrations", "EBITDA margin improvement"]
   },
   {
     "ticker": "ORIENTCER",
@@ -2340,20 +1307,9 @@
     "moat": "Manufacturer of vitrified tiles, wall tiles, and sanitary ware. Part of Orient Group. Operates through Somany Ceramics association. Mid-market tiles targeting retail and builder segments.",
     "leadership": "Revenue ~₹1,000 Cr. Somany brand is stronger in tile market. Mid-price point positioning.",
     "non_rep": "Limited differentiation in tiles — primarily a distribution and brand recognition play in a commoditised market.",
-    "tailwinds": [
-      "India housing construction boom driving tile demand",
-      "Tile penetration in rural India growing"
-    ],
-    "risks": [
-      "Intense competition from Kajaria, Asian Granito, Italian imports",
-      "Gas price (kiln fuel) volatility compresses margins",
-      "Currently -8% in portfolio"
-    ],
-    "track": [
-      "Revenue per sqm",
-      "New product launches (large slab/GVT)",
-      "Distribution network expansion"
-    ]
+    "tailwinds": ["India housing construction boom driving tile demand", "Tile penetration in rural India growing"],
+    "risks": ["Intense competition from Kajaria, Asian Granito, Italian imports", "Gas price (kiln fuel) volatility compresses margins", "Currently -8% in portfolio"],
+    "track": ["Revenue per sqm", "New product launches (large slab/GVT)", "Distribution network expansion"]
   },
   {
     "ticker": "RUSTOMJEE",
@@ -2367,21 +1323,9 @@
     "moat": "Premium residential real estate developer in Mumbai Metropolitan Region (MMR). 'Rustomjee' brand is synonymous with quality in Mumbai suburbs — 30+ years. Focuses on upper-mid and luxury residential.",
     "leadership": "Revenue ~₹2,000 Cr. Land bank of 5,000+ acres in MMR suburbs (Thane, Andheri, Bandra). Strong brand trust enables premium pricing over local developers.",
     "non_rep": "Rustomjee's MMR land bank is the primary non-replicable asset. Mumbai real estate is land-scarce — existing large plots cannot be assembled again at current prices.",
-    "tailwinds": [
-      "Mumbai luxury residential demand from UHNW population growth",
-      "Infrastructure upgrades (Thane metro, highway) driving MMR suburb premiums",
-      "NRI demand for Mumbai luxury apartments"
-    ],
-    "risks": [
-      "High debt typical for real estate developers",
-      "RERA compliance and delay risk",
-      "Competition from Lodha, Oberoi, Hiranandani in MMR luxury"
-    ],
-    "track": [
-      "Quarterly bookings value",
-      "Land bank monetisation pace",
-      "Net debt reduction"
-    ]
+    "tailwinds": ["Mumbai luxury residential demand from UHNW population growth", "Infrastructure upgrades (Thane metro, highway) driving MMR suburb premiums", "NRI demand for Mumbai luxury apartments"],
+    "risks": ["High debt typical for real estate developers", "RERA compliance and delay risk", "Competition from Lodha, Oberoi, Hiranandani in MMR luxury"],
+    "track": ["Quarterly bookings value", "Land bank monetisation pace", "Net debt reduction"]
   },
   {
     "ticker": "INTERARCH",
@@ -2395,22 +1339,9 @@
     "moat": "India's second-largest pre-engineered steel building (PEB) manufacturer. Designs, manufactures, and constructs steel buildings for warehouses, factories, commercial, and infrastructure projects.",
     "leadership": "Revenue ~₹1,200 Cr growing 20%+ p.a. IPO 2024. Pan-India execution capability with manufacturing in Noida and Goa. Clients include Amazon, Flipkart, Tata, Godrej.",
     "non_rep": "PEB is a design-build product — Interarch's in-house structural engineering team + manufacturing creates integrated value chain. E-commerce warehouse boom is a direct tailwind that requires fast turnaround PEB solutions.",
-    "tailwinds": [
-      "India e-commerce warehousing boom (Amazon, Flipkart, Meesho)",
-      "PLI factory construction boom",
-      "Data centre steel building construction",
-      "Logistics park development"
-    ],
-    "risks": [
-      "Steel price volatility directly impacts margins",
-      "Competition from Tata BlueScope, Zamil Steel",
-      "Fixed-price EPC contracts create risk if steel prices rise"
-    ],
-    "track": [
-      "Order book size and composition",
-      "E-commerce warehouse wins",
-      "EBITDA margin vs steel input cost"
-    ]
+    "tailwinds": ["India e-commerce warehousing boom (Amazon, Flipkart, Meesho)", "PLI factory construction boom", "Data centre steel building construction", "Logistics park development"],
+    "risks": ["Steel price volatility directly impacts margins", "Competition from Tata BlueScope, Zamil Steel", "Fixed-price EPC contracts create risk if steel prices rise"],
+    "track": ["Order book size and composition", "E-commerce warehouse wins", "EBITDA margin vs steel input cost"]
   },
   {
     "ticker": "FMGOETZE",
@@ -2424,22 +1355,9 @@
     "moat": "India subsidiary of Tenneco (formerly Federal-Mogul, USA). Manufactures pistons, piston rings, and engine bearings for automotive and industrial engines. Technology transferred from US parent.",
     "leadership": "Revenue ~₹2,000 Cr. #1 or #2 in Indian piston market. Supplies Maruti, Tata, Ashok Leyland, Cummins. Tenneco parent provides global OEM relationships.",
     "non_rep": "Piston design is application-specific per engine — each OEM platform requires a unique piston approved over 2+ years. Tenneco's global metallurgy IP for thermal spray coatings provides technical edge.",
-    "tailwinds": [
-      "India commercial vehicle production growth",
-      "Farm equipment engine expansion",
-      "Industrial genset market",
-      "Export of pistons via Tenneco global supply chain"
-    ],
-    "risks": [
-      "ICE-to-EV transition is long-term existential risk on pistons",
-      "Maruti/Tata OEM concentration",
-      "Tenneco USA financial challenges impacting India strategy"
-    ],
-    "track": [
-      "Revenue mix by vehicle type (CV vs PV vs farm)",
-      "EV-compatible product development",
-      "Export through Tenneco global network"
-    ]
+    "tailwinds": ["India commercial vehicle production growth", "Farm equipment engine expansion", "Industrial genset market", "Export of pistons via Tenneco global supply chain"],
+    "risks": ["ICE-to-EV transition is long-term existential risk on pistons", "Maruti/Tata OEM concentration", "Tenneco USA financial challenges impacting India strategy"],
+    "track": ["Revenue mix by vehicle type (CV vs PV vs farm)", "EV-compatible product development", "Export through Tenneco global network"]
   },
   {
     "ticker": "CAPACITE",
@@ -2453,21 +1371,9 @@
     "moat": "Construction contractor specialising in high-rise residential and commercial buildings in Mumbai, Bengaluru, and Pune. Mivan (aluminium formwork) technology expertise for fast-track construction.",
     "leadership": "Revenue ~₹2,000 Cr. Order book ₹8,000+ Cr. Tier-1 contractor for Oberoi, Prestige, Rustomjee, Hiranandani projects. Mivan aluminium formwork speeds up concrete construction by 30-40%.",
     "non_rep": "Mivan formwork expertise and HSE (Health, Safety, Environment) track record are prerequisites for tier-1 developer contracts. These developers will not risk reputation with unproven contractors.",
-    "tailwinds": [
-      "India real estate boom — residential under-supply",
-      "Mumbai high-rise development acceleration",
-      "Commercial real estate capex post-COVID recovery"
-    ],
-    "risks": [
-      "Currently -19% in portfolio",
-      "Construction is working capital intensive",
-      "Developer credit risk — if Oberoi/Prestige delays, Capacite's payment delays"
-    ],
-    "track": [
-      "Order book execution pace",
-      "Receivables days",
-      "Revenue growth vs order book"
-    ]
+    "tailwinds": ["India real estate boom — residential under-supply", "Mumbai high-rise development acceleration", "Commercial real estate capex post-COVID recovery"],
+    "risks": ["Currently -19% in portfolio", "Construction is working capital intensive", "Developer credit risk — if Oberoi/Prestige delays, Capacite's payment delays"],
+    "track": ["Order book execution pace", "Receivables days", "Revenue growth vs order book"]
   },
   {
     "ticker": "RAILTEL",
@@ -2481,22 +1387,9 @@
     "moat": "PSU owned by Ministry of Railways — owns India's second largest optic fibre network (60,000 km) along railway tracks. Provides broadband, data centre, and managed services. OFC along railway tracks is a unique infrastructure asset.",
     "leadership": "Revenue ~₹2,000 Cr growing 20%+ p.a. Provides internet connectivity to 6,000+ railway stations. Data centres at 15+ Indian cities. Also delivers national broadband via BharatNet.",
     "non_rep": "RailTel's 60,000 km of OFC along railway tracks is permanently laid along Government of India land — cannot be built by anyone else. Right-of-way along railway tracks is exclusive.",
-    "tailwinds": [
-      "BharatNet national broadband rollout (last-mile)",
-      "Railway station WiFi expansion (all 8,000+ stations)",
-      "Government data centre demand",
-      "5G backhaul via RailTel OFC"
-    ],
-    "risks": [
-      "PSU execution speed slower than private sector",
-      "Revenue concentrated in government clients",
-      "Reliance Jio and Airtel competing for backhaul contracts"
-    ],
-    "track": [
-      "Data centre capacity utilisation",
-      "BharatNet revenue ramp",
-      "Broadband subscriber addition per quarter"
-    ]
+    "tailwinds": ["BharatNet national broadband rollout (last-mile)", "Railway station WiFi expansion (all 8,000+ stations)", "Government data centre demand", "5G backhaul via RailTel OFC"],
+    "risks": ["PSU execution speed slower than private sector", "Revenue concentrated in government clients", "Reliance Jio and Airtel competing for backhaul contracts"],
+    "track": ["Data centre capacity utilisation", "BharatNet revenue ramp", "Broadband subscriber addition per quarter"]
   },
   {
     "ticker": "AFFLE",
@@ -2510,22 +1403,9 @@
     "moat": "India's #1 mobile advertising and consumer intelligence platform. Proprietary CPCU (Cost Per Converted User) model — charges advertisers only for verified user conversions, not impressions. Proprietary data platform (consumer graph) with 3 Bn+ device profiles.",
     "leadership": "Revenue ~₹2,000 Cr growing 25%+ p.a. Serves FMCG, BFSI, e-commerce, and OTT brands. International expansion via acquisitions (RevX, Fynd, MAAS). 74% promoter holding.",
     "non_rep": "Consumer graph of 3 Bn+ device profiles with behavioural data is a data moat — cannot be replicated without 10+ years of mobile data collection. CPCU model vs CPM/CPC creates a sustainable performance-based advantage.",
-    "tailwinds": [
-      "India mobile internet users reaching 1 Bn",
-      "Digital advertising shift from TV to mobile",
-      "Programmatic advertising adoption in India",
-      "SEA, Middle East, Africa market expansion"
-    ],
-    "risks": [
-      "Google/Meta's walled gardens dominate digital ad spend",
-      "Privacy regulation (India DPDP Act) limiting data collection",
-      "Competition from InMobi and other ad tech platforms"
-    ],
-    "track": [
-      "Connected device count growth",
-      "CPCU revenue per converted user",
-      "International revenue %"
-    ]
+    "tailwinds": ["India mobile internet users reaching 1 Bn", "Digital advertising shift from TV to mobile", "Programmatic advertising adoption in India", "SEA, Middle East, Africa market expansion"],
+    "risks": ["Google/Meta's walled gardens dominate digital ad spend", "Privacy regulation (India DPDP Act) limiting data collection", "Competition from InMobi and other ad tech platforms"],
+    "track": ["Connected device count growth", "CPCU revenue per converted user", "International revenue %"]
   },
   {
     "ticker": "SKFINDIA",
@@ -2539,22 +1419,9 @@
     "moat": "India subsidiary of SKF AB (Sweden). India's #1 or #2 bearing manufacturer — ~24-25% organized market share. Critical component in every rotating machine. Railway bearing locked-in relationship with Indian Railways.",
     "leadership": "Revenue ~₹4,500 Cr. After-market (replacement bearings) is recurring revenue. SKF global metallurgy R&D and digital condition monitoring cannot be domestically replicated.",
     "non_rep": "SKF seal technologies and bearing lubrication IP cannot be replicated. Indian Railways has approved SKF bearings for Vande Bharat bogies — requalification is a 2-year process.",
-    "tailwinds": [
-      "India railway rolling stock expansion",
-      "Wind energy turbine bearings",
-      "EV drivetrain precision bearings",
-      "Industrial automation"
-    ],
-    "risks": [
-      "Competition from Timken, Schaeffler (FAG), NSK",
-      "Auto slowdown near-term impact",
-      "Steel commodity cost impact"
-    ],
-    "track": [
-      "Railway and wind energy order intake",
-      "EV bearing product launches",
-      "After-market revenue growth"
-    ]
+    "tailwinds": ["India railway rolling stock expansion", "Wind energy turbine bearings", "EV drivetrain precision bearings", "Industrial automation"],
+    "risks": ["Competition from Timken, Schaeffler (FAG), NSK", "Auto slowdown near-term impact", "Steel commodity cost impact"],
+    "track": ["Railway and wind energy order intake", "EV bearing product launches", "After-market revenue growth"]
   },
   {
     "ticker": "TEJASNET",
@@ -2568,22 +1435,9 @@
     "moat": "India's only listed telecom equipment manufacturer with proprietary optical networking and wireless technology. Acquired by Tata Group (Panatone). Supplies BSNL's 4G/5G network buildout as Make in India telecom equipment.",
     "leadership": "Revenue ~₹1,000 Cr. BSNL 4G equipment supplier — 100,000+ sites contracted with Tata Consultancy Services / Tejas as technology partner. Key beneficiary of India's Atmanirbhar telecom equipment policy.",
     "non_rep": "India's telecom equipment policy mandates domestic suppliers for BSNL/government networks. Tejas is the ONLY Indian company with end-to-end telecom equipment IP (optical, access, wireless). Cannot be displaced from BSNL 4G by Ericsson/Nokia for govt networks.",
-    "tailwinds": [
-      "BSNL 4G/5G rollout — 100,000 sites",
-      "India Atmanirbhar telecom policy mandating domestic equipment",
-      "BharatNet Phase 3 connectivity",
-      "C-DOT collaboration for 6G R&D"
-    ],
-    "risks": [
-      "BSNL payment delays (historically slow)",
-      "Technology gap vs Ericsson/Nokia in advanced 5G features",
-      "Global telco customers prefer proven foreign vendors"
-    ],
-    "track": [
-      "BSNL site deployment pace",
-      "Revenue from private telcos (Airtel/Jio)",
-      "New product launches (5G NR, optical transport)"
-    ]
+    "tailwinds": ["BSNL 4G/5G rollout — 100,000 sites", "India Atmanirbhar telecom policy mandating domestic equipment", "BharatNet Phase 3 connectivity", "C-DOT collaboration for 6G R&D"],
+    "risks": ["BSNL payment delays (historically slow)", "Technology gap vs Ericsson/Nokia in advanced 5G features", "Global telco customers prefer proven foreign vendors"],
+    "track": ["BSNL site deployment pace", "Revenue from private telcos (Airtel/Jio)", "New product launches (5G NR, optical transport)"]
   },
   {
     "ticker": "VSTTILLERS",
@@ -2597,22 +1451,9 @@
     "moat": "India's #1 power tiller manufacturer. 55+ years of dominance in power tillers for small/marginal farmers. Over 60% market share in power tillers. JV with Mitsubishi (Japan) for technology.",
     "leadership": "Revenue ~₹1,000 Cr. 60%+ market share in power tillers. Expanding into small tractors (<30 HP). Bengaluru-based.",
     "non_rep": "VST brand in power tillers is synonymous with the category — like 'Xerox' for photocopiers. Dealer network in Karnataka, Tamil Nadu, AP developed over 55 years. Mitsubishi engine technology is premium vs Chinese alternatives.",
-    "tailwinds": [
-      "India small farm mechanisation — 86% of farms below 2 hectares",
-      "Power tiller replacement demand cycle",
-      "Small tractor segment growth",
-      "PM-KISAN farm support driving mechanisation"
-    ],
-    "risks": [
-      "Small tractor market is being taken by Mahindra, TAFE — competition intensifying",
-      "Power tiller market maturity — limited growth headroom",
-      "Monsoon dependency"
-    ],
-    "track": [
-      "Market share in power tillers",
-      "Small tractor revenue growth",
-      "Export market development"
-    ]
+    "tailwinds": ["India small farm mechanisation — 86% of farms below 2 hectares", "Power tiller replacement demand cycle", "Small tractor segment growth", "PM-KISAN farm support driving mechanisation"],
+    "risks": ["Small tractor market is being taken by Mahindra, TAFE — competition intensifying", "Power tiller market maturity — limited growth headroom", "Monsoon dependency"],
+    "track": ["Market share in power tillers", "Small tractor revenue growth", "Export market development"]
   },
   {
     "ticker": "ASALCBR",
@@ -2626,21 +1467,9 @@
     "moat": "Note: ASALCBR on NSE is likely Asahi Songwon Colors — India's largest manufacturer of beta-phthalocyanine blue pigment (used in paints, inks, plastics). Dominant in Indian phthalocyanine pigment market.",
     "leadership": "Revenue ~₹400 Cr. Exports 65%+ to global paint, ink, and plastic companies. Sole manufacturer of certain phthalocyanine pigment grades in India.",
     "non_rep": "Copper phthalocyanine synthesis requires specialised reactors and waste treatment for copper effluent. Export-grade pigment purity standards took decades to qualify with global paint companies.",
-    "tailwinds": [
-      "India paint market growth (Asian Paints, Berger)",
-      "Export of specialty pigments to global markets",
-      "Plastic and textile pigment demand"
-    ],
-    "risks": [
-      "Copper raw material price volatility",
-      "Competition from Chinese pigment producers",
-      "Currency risk on 65%+ exports"
-    ],
-    "track": [
-      "Export revenue growth",
-      "Market share in phthalocyanine pigments",
-      "Gross margin vs copper prices"
-    ]
+    "tailwinds": ["India paint market growth (Asian Paints, Berger)", "Export of specialty pigments to global markets", "Plastic and textile pigment demand"],
+    "risks": ["Copper raw material price volatility", "Competition from Chinese pigment producers", "Currency risk on 65%+ exports"],
+    "track": ["Export revenue growth", "Market share in phthalocyanine pigments", "Gross margin vs copper prices"]
   },
   {
     "ticker": "GREAVESCOT",
@@ -2654,22 +1483,9 @@
     "moat": "100+ year old engine company pivoting to EVs. Owns Ampere Vehicles (EV 2-wheeler brand) and Greaves Electric Mobility (3-wheeler EV). Also manufactures petrol/diesel engines for 3-wheelers, gensets, and construction equipment.",
     "leadership": "Revenue ~₹2,000 Cr. Ampere is #4 in India EV 2-wheeler market. Greaves Engine is #1 in 3-wheeler petrol engine market in India (L3 engine for Bajaj/Piaggio autorickshaws).",
     "non_rep": "3-wheeler petrol engine dominance (L3/L6 engines for autorickshaws) is a 30-year OEM relationship with Bajaj. EV transition via Ampere and Greaves Electric gives both ICE and EV exposure.",
-    "tailwinds": [
-      "India EV 2-wheeler and 3-wheeler boom",
-      "3-wheeler fleet electrification",
-      "FAME-II and EV PLI subsidies",
-      "ICE 3-wheeler still growing in rural India"
-    ],
-    "risks": [
-      "ICE engine business declining as EV penetration grows",
-      "Ampere competing with Ola, TVS, Bajaj in EV — tough competition",
-      "Path to EV profitability unclear"
-    ],
-    "track": [
-      "Ampere EV market share",
-      "Greaves Electric 3-wheeler volumes",
-      "ICE engine revenue decline pace"
-    ]
+    "tailwinds": ["India EV 2-wheeler and 3-wheeler boom", "3-wheeler fleet electrification", "FAME-II and EV PLI subsidies", "ICE 3-wheeler still growing in rural India"],
+    "risks": ["ICE engine business declining as EV penetration grows", "Ampere competing with Ola, TVS, Bajaj in EV — tough competition", "Path to EV profitability unclear"],
+    "track": ["Ampere EV market share", "Greaves Electric 3-wheeler volumes", "ICE engine revenue decline pace"]
   },
   {
     "ticker": "GLOBUSSPR",
@@ -2683,21 +1499,9 @@
     "moat": "Manufactures grain-based spirits (ENA — Extra Neutral Alcohol) and consumer liquor brands (Country Liquor, IMFL). Also in ethanol production for blending. Dual business model — B2B industrial alcohol + B2C liquor brands.",
     "leadership": "Revenue ~₹2,500 Cr. B2B (ENA for IMFL brands) and B2C (own brands under state liquor policy). Rajasthan and Haryana are key markets.",
     "non_rep": "State liquor policy in India is notoriously complex — licences, pricing, distribution are state-controlled. Globus has navigated this for 25+ years in Rajasthan and Haryana.",
-    "tailwinds": [
-      "India alcohol market growing 8% p.a.",
-      "Ethanol blending policy — ENA as feedstock",
-      "Premiumisation of Indian IMFL market"
-    ],
-    "risks": [
-      "State alcohol policy changes directly impact revenue",
-      "Grain (wheat/maize) input cost volatility",
-      "Competition from United Spirits (Diageo) in premium IMFL"
-    ],
-    "track": [
-      "ENA volume growth",
-      "IMFL brand market share",
-      "Ethanol blending revenue %"
-    ]
+    "tailwinds": ["India alcohol market growing 8% p.a.", "Ethanol blending policy — ENA as feedstock", "Premiumisation of Indian IMFL market"],
+    "risks": ["State alcohol policy changes directly impact revenue", "Grain (wheat/maize) input cost volatility", "Competition from United Spirits (Diageo) in premium IMFL"],
+    "track": ["ENA volume growth", "IMFL brand market share", "Ethanol blending revenue %"]
   },
   {
     "ticker": "ELDEHSG",
@@ -2711,21 +1515,9 @@
     "moat": "Real estate developer focused on Lucknow and tier-2 UP cities. 35+ year brand in UP residential development. Mid-premium housing for UP's growing middle class.",
     "leadership": "Revenue ~₹300 Cr. Asset-light model — limited land bank risk. Strong brand in Lucknow helps command pricing premium.",
     "non_rep": "Eldeco brand in UP markets took 35+ years to build. Trusted developer in Lucknow = premium pricing and faster sales velocity vs new entrants.",
-    "tailwinds": [
-      "UP urbanisation and housing demand",
-      "Lucknow infrastructure investment (metro, expressway)",
-      "Government housing for all scheme (PMAY)"
-    ],
-    "risks": [
-      "RERA compliance and execution risk",
-      "Working capital intensive",
-      "Competition from Pan-India developers entering UP (Godrej, Prestige)"
-    ],
-    "track": [
-      "Bookings per quarter",
-      "Revenue per project",
-      "Net debt"
-    ]
+    "tailwinds": ["UP urbanisation and housing demand", "Lucknow infrastructure investment (metro, expressway)", "Government housing for all scheme (PMAY)"],
+    "risks": ["RERA compliance and execution risk", "Working capital intensive", "Competition from Pan-India developers entering UP (Godrej, Prestige)"],
+    "track": ["Bookings per quarter", "Revenue per project", "Net debt"]
   },
   {
     "ticker": "ARIS",
@@ -2739,16 +1531,9 @@
     "moat": "ARIS ticker on NSE needs verification. Likely Aristo Pharmaceuticals or another pharma/chemical entity. Currently -27% in portfolio. Analysis pending ticker verification.",
     "leadership": "Pending verification",
     "non_rep": "Pending",
-    "tailwinds": [
-      "Pending verification"
-    ],
-    "risks": [
-      "Ticker needs verification",
-      "Currently -27% in portfolio"
-    ],
-    "track": [
-      "Verify company and update analysis"
-    ]
+    "tailwinds": ["Pending verification"],
+    "risks": ["Ticker needs verification", "Currently -27% in portfolio"],
+    "track": ["Verify company and update analysis"]
   },
   {
     "ticker": "QUESS",
@@ -2762,22 +1547,9 @@
     "moat": "India's largest integrated business services company — staffing, technology solutions, facility management, and industrial services. 400,000+ employees deployed. Serves 3,000+ clients across India.",
     "leadership": "Revenue ~₹20,000 Cr. India's #1 staffing company. Workforce solutions across IT, BFSI, retail, and manufacturing. Allsec Technologies (HR tech) subsidiary adds SaaS revenue.",
     "non_rep": "Scale in staffing creates cost advantage — largest workforce platform means better compliance infrastructure and lower per-employee management cost. Allsec HR tech creates switching cost.",
-    "tailwinds": [
-      "India formal employment growth (PF/ESIC registration)",
-      "Gig economy formalisation driving staffing demand",
-      "Facility management outsourcing by corporates",
-      "IT staffing demand from digital transformation"
-    ],
-    "risks": [
-      "Staffing is low-margin with high working capital",
-      "Competition from TeamLease, ManpowerGroup",
-      "Regulatory changes in labour laws"
-    ],
-    "track": [
-      "Headcount growth",
-      "EBITDA per employee",
-      "Technology (Allsec) revenue as % of total"
-    ]
+    "tailwinds": ["India formal employment growth (PF/ESIC registration)", "Gig economy formalisation driving staffing demand", "Facility management outsourcing by corporates", "IT staffing demand from digital transformation"],
+    "risks": ["Staffing is low-margin with high working capital", "Competition from TeamLease, ManpowerGroup", "Regulatory changes in labour laws"],
+    "track": ["Headcount growth", "EBITDA per employee", "Technology (Allsec) revenue as % of total"]
   },
   {
     "ticker": "AVALON",
@@ -2791,22 +1563,9 @@
     "moat": "EMS company focused on clean energy, medical devices, and industrial electronics. Design-to-build capability with PCB assembly, cable harnessing, and systems integration. US market via subsidiary.",
     "leadership": "Revenue ~₹800 Cr. Focus on US EMS market (export-led) — differentiated from India domestic EMS players. Clean energy electronics (inverters for solar/battery storage) is growing segment.",
     "non_rep": "US EMS market exports require ISO 13485 (medical devices) and UL certification. Avalon's San Jose (USA) office enables US client relationships that India-only EMS companies lack.",
-    "tailwinds": [
-      "US solar and battery storage boom (IRA Act 2022)",
-      "Medical device EMS demand growing",
-      "India manufacturing PLI for electronics",
-      "Clean energy hardware demand in USA"
-    ],
-    "risks": [
-      "US export EMS is competitive — competing with Jabil, Flex",
-      "Small company — customer concentration risk",
-      "Currency risk on USD revenues"
-    ],
-    "track": [
-      "US revenue growth",
-      "Clean energy segment contribution",
-      "EBITDA margin expansion"
-    ]
+    "tailwinds": ["US solar and battery storage boom (IRA Act 2022)", "Medical device EMS demand growing", "India manufacturing PLI for electronics", "Clean energy hardware demand in USA"],
+    "risks": ["US export EMS is competitive — competing with Jabil, Flex", "Small company — customer concentration risk", "Currency risk on USD revenues"],
+    "track": ["US revenue growth", "Clean energy segment contribution", "EBITDA margin expansion"]
   },
   {
     "ticker": "GIPCL",
@@ -2820,21 +1579,9 @@
     "moat": "Gujarat state government power generation company — operates thermal (lignite/gas), solar, and wind plants. Supplies to DISCOM (GUVNL) under long-term PPA.",
     "leadership": "Revenue ~₹2,000 Cr. 900 MW lignite-based + 100+ MW solar capacity. PSU with government backing. Long-term PPAs with GUVNL provide revenue visibility.",
     "non_rep": "Long-term PPA with GUVNL locks in revenue for 15-25 years. Lignite captive supply from GMDC provides fuel cost advantage.",
-    "tailwinds": [
-      "Gujarat's rising power demand",
-      "Solar capacity addition targets",
-      "PPAs under SECI renewable auctions"
-    ],
-    "risks": [
-      "Lignite thermal is a sunset technology",
-      "GUVNL payment delays (historically an issue)",
-      "Limited growth beyond existing capacity"
-    ],
-    "track": [
-      "Solar capacity addition vs timeline",
-      "PLF (Plant Load Factor) for thermal plants",
-      "GUVNL payment cycle improvement"
-    ]
+    "tailwinds": ["Gujarat's rising power demand", "Solar capacity addition targets", "PPAs under SECI renewable auctions"],
+    "risks": ["Lignite thermal is a sunset technology", "GUVNL payment delays (historically an issue)", "Limited growth beyond existing capacity"],
+    "track": ["Solar capacity addition vs timeline", "PLF (Plant Load Factor) for thermal plants", "GUVNL payment cycle improvement"]
   },
   {
     "ticker": "TVSELECT",
@@ -2848,21 +1595,9 @@
     "moat": "TVS Group company manufacturing and servicing electronic products — point of sale (POS) devices, printers, keyboards, and IT peripherals. Also provides after-sales service for consumer electronics brands.",
     "leadership": "Revenue ~₹1,500 Cr. POS terminal servicing for banks/retailers is the growing segment. TVS brand trust in South India from TVS Group heritage.",
     "non_rep": "POS terminal service network across India is a scale moat — 40,000+ service touch points nationwide. Banks and retailers outsource POS maintenance to TVS Electronics under multi-year AMC contracts.",
-    "tailwinds": [
-      "India digital payments boom — POS terminal installations",
-      "UPI-POS convergence driving upgrades",
-      "Bank branch expansion in tier-2/3 cities"
-    ],
-    "risks": [
-      "QR-code payments reducing need for physical POS terminals long-term",
-      "Competition from AGS Transact on ATM and POS services",
-      "IT peripherals is a commoditised market"
-    ],
-    "track": [
-      "POS device installed base growth",
-      "AMC revenue growth",
-      "Digital payment terminal revenue %"
-    ]
+    "tailwinds": ["India digital payments boom — POS terminal installations", "UPI-POS convergence driving upgrades", "Bank branch expansion in tier-2/3 cities"],
+    "risks": ["QR-code payments reducing need for physical POS terminals long-term", "Competition from AGS Transact on ATM and POS services", "IT peripherals is a commoditised market"],
+    "track": ["POS device installed base growth", "AMC revenue growth", "Digital payment terminal revenue %"]
   },
   {
     "ticker": "AEROENTER",
@@ -2876,50 +1611,25 @@
     "moat": "Aviation MRO and aerospace components company. Small-cap with niche positioning in aircraft maintenance and aerostructure components for defence aircraft.",
     "leadership": "Small-cap revenue ~₹100 Cr. Niche positioning in defence aviation MRO services.",
     "non_rep": "Aviation MRO requires DGCA/military approvals and certified aircraft maintenance engineers — significant regulatory entry barrier.",
-    "tailwinds": [
-      "India MRO hub development (tax change 2024)",
-      "IAF fleet maintenance",
-      "India aviation fleet expansion"
-    ],
-    "risks": [
-      "Very small company",
-      "Currently -12% in portfolio",
-      "MRO is capital intensive with high compliance costs"
-    ],
-    "track": [
-      "Revenue from defence MRO",
-      "New aircraft type approvals",
-      "DGCA certification status"
-    ]
+    "tailwinds": ["India MRO hub development (tax change 2024)", "IAF fleet maintenance", "India aviation fleet expansion"],
+    "risks": ["Very small company", "Currently -12% in portfolio", "MRO is capital intensive with high compliance costs"],
+    "track": ["Revenue from defence MRO", "New aircraft type approvals", "DGCA certification status"]
   },
   {
     "ticker": "EMBDL",
-    "name": "Embassy Developments Limited",
-    "sector": "Real Estate / Office Parks",
+    "name": "Embroil Technologies (verify: EMBDL on NSE)",
+    "sector": "Pending Verification",
     "nse_symbol": "EMBDL",
-    "buy_avg": 855.63,
-    "moat_type": "Wide",
-    "moat_class": "wide",
-    "conviction": 6,
-    "moat": "Leading Indian commercial real estate developer — operates Embassy Officeparks brand across Bengaluru, Delhi, Hyderabad, Pune, Mumbai. 55 Mn sq.ft. of office and institutional space. Strategic locations in tech corridors (Whitefield, RMZ Ecoworld). Prime land bank in high-appreciation zones.",
-    "leadership": "Estimated revenue ~₹3,000+ Cr (diversified portfolio). Major institutional clients: Google, Amazon, Microsoft, TCS, Accenture, etc. Listed at ₹100-200 (IPO pending). Mkt cap projection ~₹12,000-15,000 Cr.",
-    "non_rep": "Prime commercial real estate locations (Whitefield Bengaluru, Golf Links Delhi, HITEC City Hyderabad) cannot be replicated. Long-term institutional relationships (Google, Amazon have 10-year+ occupancies). BTS (build-to-suit) capabilities create customization switching cost.",
-    "tailwinds": [
-      "India office space demand growth 15-18% p.a. (tech expansion, MNC back-office)",
-      "SEZ/Tech Park premium command — IT/ITeS sector investment concentration",
-      "Co-working and flex space monetisation opportunity",
-      "Capital appreciation of landed assets"
-    ],
-    "risks": [
-      "Valuations assumed from peers — actual IPO pricing could be different",
-      "WFH and hybrid work reducing per-employee office space demand in some segments",
-      "Geographic concentration in Bengaluru (50%+ of portfolio)"
-    ],
-    "track": [
-      "Quarterly occupancy rates by location",
-      "Rentals per sq.ft. by geography",
-      "New institutional lease signings"
-    ]
+    "buy_avg": 67.59,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 3,
+    "moat": "EMBDL ticker needs verification. Currently -15% in portfolio. Pending company name confirmation for full analysis.",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": ["Pending verification"],
+    "risks": ["Ticker needs verification", "Currently -15% in portfolio"],
+    "track": ["Verify company and update analysis"]
   },
   {
     "ticker": "LAKSELEC",
@@ -2933,20 +1643,9 @@
     "moat": "Manufacturer of electrical control panels, switchgear, and motor control centres (MCCs) for power, petrochemical, and industrial applications. Niche industrial electrical engineering.",
     "leadership": "Small-cap. Serves industrial projects.",
     "non_rep": "Customised industrial control panels require application engineering and certifications.",
-    "tailwinds": [
-      "India industrial capex",
-      "Power sector control systems"
-    ],
-    "risks": [
-      "Currently -47% in portfolio — significant losses",
-      "Very small company",
-      "Verify ticker accuracy"
-    ],
-    "track": [
-      "Verify company details",
-      "Revenue growth",
-      "Order book"
-    ]
+    "tailwinds": ["India industrial capex", "Power sector control systems"],
+    "risks": ["Currently -47% in portfolio — significant losses", "Very small company", "Verify ticker accuracy"],
+    "track": ["Verify company details", "Revenue growth", "Order book"]
   },
   {
     "ticker": "TATACOMM",
@@ -2960,52 +1659,25 @@
     "moat": "Global network infrastructure company — owns one of the world's largest private submarine cable networks (400,000+ km of OFC globally). Enterprise network, cloud, and cybersecurity services to 7,000+ global enterprises. Indian subsidiary of Tata Group.",
     "leadership": "Revenue ~₹20,000 Cr. Network as a service (NaaS), IoT, and cybersecurity revenue growing 15%+ p.a. Global network connects 190+ countries. Gateway to India for global corporations.",
     "non_rep": "Submarine cable network (VSNL-era infrastructure) cannot be replicated — each cable costs $300-500 Mn and 3-5 years to build. Being the bandwidth backbone for India's international internet gives structural advantage.",
-    "tailwinds": [
-      "India's data consumption growing 25% p.a.",
-      "Enterprise cloud and SD-WAN adoption",
-      "Cybersecurity outsourcing growth",
-      "IoT connectivity for global enterprises in India"
-    ],
-    "risks": [
-      "Revenue growth has been gradual — needs acceleration",
-      "AT&T and Lumen Technologies competition globally",
-      "Debt from historical acquisitions"
-    ],
-    "track": [
-      "Data and managed services revenue growth",
-      "EBITDA margin expansion as voice declines",
-      "Cybersecurity and IoT revenue contribution"
-    ]
+    "tailwinds": ["India's data consumption growing 25% p.a.", "Enterprise cloud and SD-WAN adoption", "Cybersecurity outsourcing growth", "IoT connectivity for global enterprises in India"],
+    "risks": ["Revenue growth has been gradual — needs acceleration", "AT&T and Lumen Technologies competition globally", "Debt from historical acquisitions"],
+    "track": ["Data and managed services revenue growth", "EBITDA margin expansion as voice declines", "Cybersecurity and IoT revenue contribution"]
   },
   {
     "ticker": "UNIECOM",
-    "name": "Unicommerce Esolutions Limited",
-    "sector": "SaaS / E-commerce Software",
+    "name": "Unieco (Universal Ecomart — verify)",
+    "sector": "Pending Verification",
     "nse_symbol": "UNIECOM",
     "buy_avg": 379.94,
-    "moat_type": "Narrow",
-    "moat_class": "narrow",
-    "conviction": 5,
-    "moat": "Cloud-based e-commerce and omnichannel software platform for SMB sellers. Covers inventory, order, warehouse, logistics, and supply chain management. 500+ customers across India (Amazon, Flipkart sellers). Recently launched UniBot (GenAI chatbot for e-commerce operations).",
-    "leadership": "Revenue ₹204 Cr FY26 (+52% YoY), PAT ₹20 Cr (+16% YoY). Q3 FY26 showed massive 72% revenue growth — acceleration phase. Growing profitably. Mkt cap ~₹10,000+ Cr based on recent price history.",
-    "non_rep": "SaaS moat comes from customer lock-in (switching data/integrations is expensive) and network effects (integrations with Shopify, WooCommerce, payment gateways, logistics APIs). Warehouse management and logistics integration are key switching costs.",
-    "tailwinds": [
-      "India e-commerce marketplace seller growth 20%+ p.a.",
-      "Omnichannel selling adoption (online + offline integration)",
-      "GenAI-powered operations automation (UniBot) new revenue stream",
-      "Logistics and warehouse management SaaS TAM expanding"
-    ],
-    "risks": [
-      "Currently -77% in portfolio — massive loss position (critical)",
-      "Competition from Saleforce, Shopify, WareHouse (niche competitors)",
-      "Customer concentration risk among top e-commerce sellers",
-      "Conversion from free to paid SaaS model execution risk"
-    ],
-    "track": [
-      "ARR (Annual Recurring Revenue) and NRR (Net Revenue Retention >110%)",
-      "ARPU (Average Revenue Per User) growth",
-      "UniBot adoption and revenue contribution"
-    ]
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 2,
+    "moat": "UNIECOM ticker needs verification. Currently -77% in portfolio — the largest loss position. Urgent verification needed.",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": ["Pending verification"],
+    "risks": ["Currently -77% in portfolio — critical loss position", "Ticker needs immediate verification", "May need exit decision"],
+    "track": ["Verify company", "Assess exit vs hold decision"]
   },
   {
     "ticker": "SHK",
@@ -3019,22 +1691,9 @@
     "moat": "India's largest fragrance company — manufactures flavours and fragrances (F&F) for FMCG, personal care, and household products. 100+ year heritage. Supplies Hindustan Unilever, ITC, Marico, Dabur.",
     "leadership": "Revenue ~₹2,000 Cr. #1 in India F&F market. Exports growing in Southeast Asia, Africa, Middle East. Camlin Fine Sciences subsidiary adds aroma chemicals.",
     "non_rep": "Fragrance development is a creative science — proprietary perfume formulas for FMCG brands are confidential and take years to develop in partnership with clients. FMCG companies change fragrance suppliers extremely rarely (brand consistency is critical).",
-    "tailwinds": [
-      "India FMCG growth driving fragrance demand",
-      "Premiumisation of personal care products",
-      "Export of Indian fragrance (agarwood, jasmine) to Middle East",
-      "Natural fragrance ingredients growth"
-    ],
-    "risks": [
-      "Competition from Givaudan, IFF, Symrise (global giants)",
-      "Crude oil derivative raw material volatility",
-      "Currently -38% in portfolio"
-    ],
-    "track": [
-      "Revenue growth from top FMCG clients",
-      "Export fragrance revenue growth",
-      "Gross margin stability"
-    ]
+    "tailwinds": ["India FMCG growth driving fragrance demand", "Premiumisation of personal care products", "Export of Indian fragrance (agarwood, jasmine) to Middle East", "Natural fragrance ingredients growth"],
+    "risks": ["Competition from Givaudan, IFF, Symrise (global giants)", "Crude oil derivative raw material volatility", "Currently -38% in portfolio"],
+    "track": ["Revenue growth from top FMCG clients", "Export fragrance revenue growth", "Gross margin stability"]
   },
   {
     "ticker": "SUVEN",
@@ -3048,54 +1707,8 @@
     "moat": "Specialty pharma CDMO focused on Central Nervous System (CNS) drug development. Exclusively serves innovator pharma companies for pre-clinical to Phase-III drug development. Asset-light CDMO model with high-margin research chemistry.",
     "leadership": "Revenue ~₹700 Cr growing 20%+ p.a. PAT margins 30%+. Serves 7 of top-10 global pharma companies for CNS drug discovery. Revenue 5-yr CAGR 35%+.",
     "non_rep": "CNS CDMO requires rare medicinal chemistry expertise in neurological targets (Alzheimer's, Parkinson's, depression). Suven has 30+ years of CNS chemistry history — each innovator client relationship spans 5-10 year drug development cycles.",
-    "tailwinds": [
-      "Global CNS drug discovery boom — Alzheimer's (Leqembi approval), Parkinson's drugs",
-      "CDMO outsourcing trend from innovator pharma",
-      "India CDMO cost advantage (chemist salaries 10x cheaper than US)",
-      "GLP-1 cognition research creating new CNS pipelines"
-    ],
-    "risks": [
-      "Innovator pharma capex cuts during slowdowns",
-      "Clinical trial failure of a key client's drug impacts milestone revenue",
-      "Competition from Jubilant Biosys and Charles River in CNS"
-    ],
-    "track": [
-      "Revenue from top CNS innovator clients",
-      "Milestone revenue vs FDF (finished dose) transition",
-      "New molecule engagements per quarter"
-    ]
-  },
-  {
-    "ticker": "SONACOMS",
-    "name": "Sona BLW Precision Forgings Limited",
-    "sector": "Auto Components / Precision Forgings",
-    "nse_symbol": "SONACOMS",
-    "buy_avg": 543.57,
-    "moat_type": "Wide",
-    "moat_class": "wide",
-    "conviction": 8,
-    "moat": "Leading auto components manufacturer — differentials, gears, conventional/micro-hybrid starter motors, BSG (belt starter generator) systems, EV traction motors, motor control units. Strategic advantage: EV transition exposure (traction motors) + ICE diversification. In-cabin automotive radar (new SMT line Chennai). Acquired Escorts Kubota railway equipment (non-auto diversification).",
-    "leadership": "Revenue ₹4,555 Cr FY26 (+28% YoY), PAT ₹640 Cr (+6.5% YoY — margin compression from higher costs). Premium valuation (PE ~48x, PB ~5x). Mkt cap ~₹28,700 Cr. Analyst target ₹554-562 (5-7% upside from LTP ₹543). Strong dividend (₹1.60/share, 0.68% yield).",
-    "non_rep": "EV traction motors are high-barriers (EMC, NVH performance testing, OEM co-engineering 2-3 years). Differential/starter motor designs are OEM-specific, creating massive switching cost (platform lock-in). Novelic acquisition (54% stake 2023) adds sensors/software — vertical integration for autonomous vehicles.",
-    "tailwinds": [
-      "EV penetration in commercial vehicles and 2-wheelers ramping",
-      "In-cabin radar for ADAS (Level 2-3 autonomy) — high-growth category",
-      "Railway traction equipment via Escorts Kubota acquisition",
-      "North American EV SUV platforms (EDL — electronically locking differential)",
-      "Pune and Manesar new plants starting production in FY25-26 — capacity expansion"
-    ],
-    "risks": [
-      "Margin compression evident — profit growth (6.5%) << revenue growth (28%)",
-      "EV traction motor market still nascent — execution risk on scaling",
-      "OEM concentration risk (Maruti, Tata are large customers)",
-      "Mexican and international expansion ramp-up is execution intensive"
-    ],
-    "track": [
-      "EV traction motor revenue and order pipeline",
-      "Automotive radar (in-cabin sensor) commercialisation timeline",
-      "International (Mexico, USA) revenue growth",
-      "EBITDA margin recovery toward 15%+",
-      "Railway equipment segment contribution"
-    ]
+    "tailwinds": ["Global CNS drug discovery boom — Alzheimer's (Leqembi approval), Parkinson's drugs", "CDMO outsourcing trend from innovator pharma", "India CDMO cost advantage (chemist salaries 10x cheaper than US)", "GLP-1 cognition research creating new CNS pipelines"],
+    "risks": ["Innovator pharma capex cuts during slowdowns", "Clinical trial failure of a key client's drug impacts milestone revenue", "Competition from Jubilant Biosys and Charles River in CNS"],
+    "track": ["Revenue from top CNS innovator clients", "Milestone revenue vs FDF (finished dose) transition", "New molecule engagements per quarter"]
   }
 ]

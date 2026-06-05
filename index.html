@@ -999,7 +999,10 @@ function renderCard(s) {
   <div class="card-header">
     <div class="card-title-group">
       <div class="card-ticker">${esc(s.ticker)}</div>
-      <div class="card-name" title="${esc(s.name)}">${esc(s.name || '—')}</div>
+      <div style="display: flex; align-items: center; gap: 8px; flex: 1; min-width: 0;">
+        <div class="card-name" title="${esc(s.name)}">${esc(s.name || '—')}</div>
+        <a href="#" onclick="event.preventDefault(); openCatalystAnalysis('${esc(s.ticker)}', '${esc(s.name)}'); return false;" style="color: var(--blue); font-size: 12px; white-space: nowrap; text-decoration: none; border-bottom: 1px dashed var(--blue); cursor: pointer; flex-shrink: 0;" title="Analyze catalysts using GPT">🔗 Catalysts</a>
+      </div>
     </div>
     <div class="card-badges">
       ${moatBadge(s.moat_class, s.moat_type)}
@@ -1379,6 +1382,157 @@ function exportStocksJSON() {
   a.href = url; a.download = 'stocks.json'; a.click();
   URL.revokeObjectURL(url);
   showToast('⬇ stocks.json downloaded — replace file in Dashboard folder', 'green');
+}
+
+// ── Catalyst Analysis ──────────────────────────────────────────────────────
+function openCatalystAnalysis(ticker, companyName) {
+  const catalystPrompt = `You are a world-class equity research analyst specializing in identifying stock price catalysts before they are fully reflected in market prices.
+
+Analyze the company below and identify ALL current, emerging, and potential catalysts that could materially impact the stock price over the next 3, 6, 12, and 24 months.
+
+Company: ${ticker} - ${companyName}
+
+Your task is NOT to provide a generic company overview.
+
+Your primary goal is to identify:
+
+1. What events are currently driving the stock price?
+2. What future events could re-rate the stock?
+3. What catalysts is the market underestimating?
+4. What risks could cause de-rating?
+
+Search across:
+
+* Latest earnings calls
+* Investor presentations
+* Exchange filings
+* Management interviews
+* Annual reports
+* Industry reports
+* Competitor announcements
+* Government policies
+* Budget announcements
+* Regulatory changes
+* Order wins
+* Capex announcements
+* Capacity expansion plans
+* Product launches
+* Customer wins
+* Export opportunities
+* M&A activity
+* Industry demand cycles
+* Commodity cycles
+* Global developments
+* Geopolitical developments
+
+For each catalyst provide:
+
+## Catalyst
+
+Short name
+
+## Description
+
+What exactly is happening?
+
+## Timeline
+
+Expected timeline:
+
+* Immediate (<3 months)
+* Near term (3-12 months)
+* Medium term (1-2 years)
+* Long term (>2 years)
+
+## Probability
+
+* Very High
+* High
+* Medium
+* Low
+
+## Potential Impact
+
+* Massive
+* High
+* Moderate
+* Low
+
+## Direction
+
+* Bullish
+* Bearish
+
+## Market Awareness
+
+* Fully priced in
+* Partially priced in
+* Largely ignored
+* Completely overlooked
+
+## Why it matters
+
+Explain exactly how revenue, EBITDA, margins, cash flow, market share, valuation multiple, or investor sentiment could change.
+
+---
+
+Also identify the following separately:
+
+# Hidden Catalysts
+
+Events that are NOT widely discussed but could materially impact valuation.
+
+# Re-Rating Triggers
+
+Events that could cause the stock's P/E, EV/EBITDA, or P/B multiple to expand.
+
+# De-Rating Triggers
+
+Events that could cause multiple compression.
+
+# Key Monitoring Dashboard
+
+List the top 10 metrics/information points investors should track every quarter.
+
+# Most Important Upcoming Events
+
+Rank the next 10 events most likely to move the stock price.
+
+# Catalyst Score
+
+Rate from:
+
+* 1/10 = No meaningful catalysts
+* 10/10 = Multiple major catalysts converging
+
+# Final Verdict
+
+Summarize:
+
+Current Price Drivers:
+...
+
+Next Major Catalyst:
+...
+
+Most Underappreciated Catalyst:
+...
+
+Biggest Risk:
+...
+
+Probability of Significant Re-rating in Next 24 Months:
+XX%`;
+
+  // Copy prompt to clipboard
+  navigator.clipboard.writeText(catalystPrompt).then(() => {
+    showToast(`📋 Catalyst prompt copied for ${ticker}`, 'green');
+    // Open ChatGPT in new tab
+    window.open('https://chatgpt.com', '_blank');
+  }).catch(err => {
+    console.error('Failed to copy prompt:', err);
+    showToast('Failed to copy prompt', 'red');
+  });
 }
 
 // ── Tabs ───────────────────────────────────────────────────────────────────
