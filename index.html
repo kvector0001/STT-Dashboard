@@ -171,18 +171,23 @@
     #search::placeholder { color: var(--text3); }
     #search:focus { border-color: var(--blue); }
 
-    .sort-wrap { display: flex; align-items: center; gap: 0.4rem; margin-left: auto; }
-    .sort-label { font-size: 0.7rem; color: var(--text3); white-space: nowrap; }
-    #sort-select {
+    .sort-buttons { display: flex; align-items: center; gap: 0.35rem; margin-left: auto; flex-wrap: wrap; }
+    .sort-btn {
       background: var(--bg3);
       border: 1px solid var(--border);
       color: var(--text2);
       border-radius: 6px;
-      padding: 0.3rem 0.5rem;
+      padding: 0.3rem 0.6rem;
       font-size: 0.72rem;
-      outline: none;
       cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      transition: all 0.15s;
     }
+    .sort-btn:hover { border-color: var(--text3); }
+    .sort-btn.active { border-color: var(--blue); background: rgba(59, 130, 246, 0.1); color: var(--blue-text); }
+    .sort-btn .arr { font-size: 0.6rem; opacity: 0.6; }
 
     /* ── RESULTS COUNT ── */
     .results-count {
@@ -706,21 +711,13 @@
     <span class="search-icon">🔍</span>
     <input type="search" id="search" placeholder="Ticker or company…" autocomplete="off" />
   </div>
-  <div class="sort-wrap">
-    <span class="sort-label">Sort:</span>
-    <select id="sort-select">
-      <option value="pnl_pct_desc" selected>P&L % ↓</option>
-      <option value="pnl_pct_asc">P&L % ↑</option>
-      <option value="pnl_abs_desc">P&L ₹ ↓</option>
-      <option value="pnl_abs_asc">P&L ₹ ↑</option>
-      <option value="current_val_desc">Current Value ↓</option>
-      <option value="current_val_asc">Current Value ↑</option>
-      <option value="invested_val_desc">Invested Value ↓</option>
-      <option value="invested_val_asc">Invested Value ↑</option>
-      <option value="conviction_desc">Conviction ↓</option>
-      <option value="conviction_asc">Conviction ↑</option>
-      <option value="ticker_asc">Ticker A→Z</option>
-    </select>
+  <div class="sort-buttons" id="sort-buttons">
+    <button class="sort-btn" data-sort="ticker">Ticker <span class="arr"></span></button>
+    <button class="sort-btn" data-sort="current_val">Value <span class="arr"></span></button>
+    <button class="sort-btn" data-sort="invested_val">Invested <span class="arr"></span></button>
+    <button class="sort-btn" data-sort="pnl_pct">P&L % <span class="arr"></span></button>
+    <button class="sort-btn" data-sort="pnl_abs">P&L ₹ <span class="arr"></span></button>
+    <button class="sort-btn" data-sort="conviction">Conviction <span class="arr"></span></button>
   </div>
 </div>
 
@@ -1482,10 +1479,43 @@ document.getElementById('search').addEventListener('input', e => {
   renderAll();
 });
 
-document.getElementById('sort-select').addEventListener('change', e => {
-  sortKey = e.target.value;
-  renderAll();
+// ── Sorting Buttons ────────────────────────────────────────────────────────
+let currentSortBy = 'pnl_pct';
+let currentSortDir = 'desc';
+
+function updateSortButtons() {
+  document.querySelectorAll('.sort-btn').forEach(btn => {
+    const sortBy = btn.dataset.sort;
+    const arr = btn.querySelector('.arr');
+    if (sortBy === currentSortBy) {
+      btn.classList.add('active');
+      arr.textContent = currentSortDir === 'desc' ? '↓' : '↑';
+      arr.style.opacity = '1';
+    } else {
+      btn.classList.remove('active');
+      arr.textContent = '↕';
+      arr.style.opacity = '0.3';
+    }
+  });
+}
+
+document.querySelectorAll('.sort-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const sortBy = btn.dataset.sort;
+    if (currentSortBy === sortBy) {
+      currentSortDir = currentSortDir === 'desc' ? 'asc' : 'desc';
+    } else {
+      currentSortBy = sortBy;
+      currentSortDir = 'desc';
+    }
+    updateSortButtons();
+    sortKey = `${currentSortBy}_${currentSortDir}`;
+    renderAll();
+  });
 });
+
+// Initialize button arrows on load
+updateSortButtons();
 
 // ── Boot ───────────────────────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', init);
