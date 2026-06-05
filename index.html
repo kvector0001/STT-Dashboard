@@ -307,6 +307,42 @@
     .conv-low   { background: var(--red);   color: var(--red-text); }
     .conv-zero  { background: var(--border); color: var(--text3); }
 
+    /* Fundamental metrics grid */
+    .metrics-grid {
+      padding: 0.5rem 0.9rem;
+      background: rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      border-top: 1px solid var(--border);
+    }
+    .metrics-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 0.5rem;
+    }
+    .metric-item {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+    }
+    .metric-label {
+      font-size: 0.58rem;
+      color: var(--text3);
+      text-transform: uppercase;
+      letter-spacing: .2px;
+      white-space: nowrap;
+    }
+    .metric-value {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--text2);
+      font-family: var(--mono);
+    }
+    .metric-value.pos { color: var(--green-text); }
+    .metric-value.neg { color: var(--red-text); }
+
     /* Price row */
     .price-row {
       display: grid;
@@ -882,6 +918,47 @@ function renderCard(s) {
       <div class="conviction-bar ${cc}" style="width:${convPct}%"></div>
     </div>
     <span class="conviction-score ${cc}">${s.conviction ? s.conviction + '/10' : 'N/A'}</span>
+  </div>
+
+  <div class="metrics-grid">
+    <div class="metrics-row">
+      <div class="metric-item">
+        <span class="metric-label">Market Cap</span>
+        <span class="metric-value">₹${fmt(s.mcap_cr, 0)}Cr</span>
+      </div>
+      <div class="metric-item">
+        <span class="metric-label">P/E</span>
+        <span class="metric-value">${fmt(s.pe, 1)}</span>
+      </div>
+      <div class="metric-item">
+        <span class="metric-label">ROE %</span>
+        <span class="metric-value">${fmt(s.roe, 1)}%</span>
+      </div>
+    </div>
+    <div class="metrics-row">
+      <div class="metric-item">
+        <span class="metric-label">1Y Ret</span>
+        <span class="metric-value ${s.ret_1y >= 0 ? 'pos' : 'neg'}">${fmt(s.ret_1y, 1)}%</span>
+      </div>
+      <div class="metric-item">
+        <span class="metric-label">3Y Ret</span>
+        <span class="metric-value ${s.ret_3y >= 0 ? 'pos' : 'neg'}">${fmt(s.ret_3y, 1)}%</span>
+      </div>
+      <div class="metric-item">
+        <span class="metric-label">Div Yield</span>
+        <span class="metric-value">${fmt(s.div_yield, 2)}%</span>
+      </div>
+    </div>
+    <div class="metrics-row">
+      <div class="metric-item">
+        <span class="metric-label">3Y MCap Growth</span>
+        <span class="metric-value ${s.mcap_3y >= 0 ? 'pos' : 'neg'}">${fmt(s.mcap_3y, 1)}%</span>
+      </div>
+      <div class="metric-item">
+        <span class="metric-label">Op. Cash Flow</span>
+        <span class="metric-value">₹${fmt(s.ocf_cr, 0)}Cr</span>
+      </div>
+    </div>
   </div>
 
   <div class="price-row">
