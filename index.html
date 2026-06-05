@@ -529,29 +529,57 @@
     /* ── ANALYSIS TABLE ── */
     .analysis-table-container {
       padding: 1rem;
-      overflow-x: auto;
+      overflow: auto;
+      max-height: calc(100vh - 200px); /* Allow vertical scroll within container */
     }
     .analysis-table {
       width: 100%;
-      border-collapse: collapse;
+      border-collapse: separate; /* Required for sticky border overlap */
+      border-spacing: 0;
       font-size: 0.8rem;
       background: var(--bg2);
-      border-radius: 8px;
     }
     .analysis-table th, .analysis-table td {
       padding: 0.75rem;
       text-align: left;
       border-bottom: 1px solid var(--border);
+      border-right: 1px solid var(--border);
       white-space: nowrap;
     }
     .analysis-table th {
       background: var(--bg3);
-      color: var(--text3);
-      font-weight: 600;
+      color: var(--text2);
+      font-weight: 700;
       position: sticky;
       top: 0;
+      z-index: 10;
+      cursor: pointer;
+      user-select: none;
     }
-    .analysis-table tr:hover { background: #1e293b; }
+    .analysis-table th:hover { background: var(--border); }
+    
+    /* Freeze first column (Ticker) */
+    .analysis-table th:first-child,
+    .analysis-table td:first-child {
+      position: sticky;
+      left: 0;
+      z-index: 5;
+      background: var(--bg2);
+      border-right: 2px solid var(--border);
+    }
+    .analysis-table th:first-child {
+      z-index: 15; /* Top-left corner needs highest z-index */
+      background: var(--bg3);
+    }
+    
+    .sort-indicator {
+      display: inline-block;
+      margin-left: 4px;
+      font-size: 0.7rem;
+      color: #fff;
+    }
+
+    .analysis-table tr:hover td { background: #1e293b !important; }
     .neg { color: var(--red-text); }
     .pos { color: var(--green-text); }
 
@@ -768,33 +796,71 @@
 </div> <!-- End view-dashboard -->
 
 <div id="view-analysis" class="tab-content">
+  <!-- Re-use header for synchronised look -->
+  <header class="header">
+    <div class="header-top">
+      <h1>📊 <span>Deep</span> Analysis</h1>
+      <div class="header-actions">
+        <div class="last-updated" id="last-updated-analysis">Loading…</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Synchronized Summary Bar -->
+  <div class="summary-bar" id="summary-bar-analysis">
+    <div class="stat">
+      <div class="stat-label">Total Invested</div>
+      <div class="stat-value" id="ana-sum-invested">—</div>
+    </div>
+    <div class="stat">
+      <div class="stat-label">Current Value</div>
+      <div class="stat-value" id="ana-sum-current">—</div>
+    </div>
+    <div class="stat">
+      <div class="stat-label">Total P&L</div>
+      <div id="ana-sum-pnl-group" style="display: flex; gap: 8px; align-items: baseline;">
+        <div class="stat-value" id="ana-sum-pnl-abs">—</div>
+        <div class="stat-value" id="ana-sum-pnl-pct">—</div>
+      </div>
+    </div>
+    <div class="stat">
+      <div class="stat-label">Win/Loss</div>
+      <div style="display: flex; gap: 8px;">
+        <span class="stat-value green" id="ana-sum-profit">0</span>
+        <span class="stat-value red" id="ana-sum-loss">0</span>
+        <span class="stat-value" style="color:var(--text3)">/</span>
+        <span class="stat-value" id="ana-sum-count">0</span>
+      </div>
+    </div>
+  </div>
+
   <div class="analysis-table-container">
     <table class="analysis-table">
       <thead>
         <tr>
-          <th>Symbol</th>
-          <th>Qty.</th>
-          <th>Buy Value</th>
-          <th>Present Value</th>
-          <th>P&L</th>
-          <th>P&L %</th>
-          <th>Market Cap (Cr)</th>
-          <th>P/E</th>
-          <th>ROE %</th>
-          <th>Op. Cash Flow</th>
-          <th>1D Ret</th>
-          <th>1M Ret</th>
-          <th>6M Ret</th>
-          <th>1Y Ret</th>
-          <th>3Y Ret</th>
-          <th>5Y Ret</th>
-          <th>PAT Growth CAGR</th>
-          <th>Rev Growth CAGR</th>
-          <th>MCap Growth 3Y</th>
-          <th>Debt/Equity</th>
-          <th>EPS</th>
-          <th>Book Value</th>
-          <th>Div Yield %</th>
+          <th onclick="sortAnalysis('ticker')">Symbol <span id="sort-ticker" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('quantity')">Qty. <span id="sort-quantity" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('buy_value')">Buy Value <span id="sort-buy_value" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('pres_value')">Present Value <span id="sort-pres_value" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('pnl_abs')">P&L <span id="sort-pnl_abs" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('pnl_pct')">P&L % <span id="sort-pnl_pct" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('mcap_cr')">Market Cap (Cr) <span id="sort-mcap_cr" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('pe')">P/E <span id="sort-pe" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('roe')">ROE % <span id="sort-roe" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('ocf_cr')">Op. Cash Flow <span id="sort-ocf_cr" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('ret_1d')">1D Ret <span id="sort-ret_1d" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('ret_1m')">1M Ret <span id="sort-ret_1m" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('ret_6m')">6M Ret <span id="sort-ret_6m" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('ret_1y')">1Y Ret <span id="sort-ret_1y" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('ret_3y')">3Y Ret <span id="sort-ret_3y" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('ret_5y')">5Y Ret <span id="sort-ret_5y" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('pat_cagr')">PAT Growth <span id="sort-pat_cagr" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('rev_cagr')">Rev Growth <span id="sort-rev_cagr" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('mcap_3y')">MCap Growth 3Y <span id="sort-mcap_3y" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('debt_to_equity')">Debt/Equity <span id="sort-debt_to_equity" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('eps')">EPS <span id="sort-eps" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('book_value')">Book Value <span id="sort-book_value" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('div_yield')">Div Yield % <span id="sort-div_yield" class="sort-indicator"></span></th>
         </tr>
       </thead>
       <tbody id="analysis-tbody">
@@ -1278,15 +1344,55 @@ function switchTab(tab) {
 }
 
 // ── Rendering Analysis Table ────────────────────────────────────────────────
+let analysisSortBy = 'pres_value';
+let analysisSortDir = 'desc';
+
+function sortAnalysis(field) {
+  if (analysisSortBy === field) {
+    analysisSortDir = analysisSortDir === 'desc' ? 'asc' : 'desc';
+  } else {
+    analysisSortBy = field;
+    analysisSortDir = 'desc';
+  }
+  renderAnalysisTable();
+}
+
 function renderAnalysisTable() {
   const tbody = document.getElementById('analysis-tbody');
   tbody.innerHTML = '';
 
-  const stocks = [...allStocks].sort((a, b) => (b.pnl_abs || 0) - (a.pnl_abs || 0));
+  const stocks = [...allStocks].map(s => {
+    return {
+      ...s,
+      buy_value: (s.buy_avg || 0) * (s.quantity || 0),
+      pres_value: (s.ltp || 0) * (s.quantity || 0)
+    };
+  });
+
+  // Sort
+  stocks.sort((a, b) => {
+    let valA = a[analysisSortBy];
+    let valB = b[analysisSortBy];
+    
+    // Handle nulls
+    if (valA == null) return 1;
+    if (valB == null) return -1;
+
+    if (typeof valA === 'string') {
+      return analysisSortDir === 'desc' 
+        ? valB.localeCompare(valA) 
+        : valA.localeCompare(valB);
+    } else {
+      return analysisSortDir === 'desc' ? valB - valA : valA - valB;
+    }
+  });
+
+  // Update Indicators
+  document.querySelectorAll('.sort-indicator').forEach(el => el.textContent = '');
+  const activeArr = document.getElementById('sort-' + analysisSortBy);
+  if (activeArr) activeArr.textContent = analysisSortDir === 'desc' ? '↓' : '↑';
 
   stocks.forEach(s => {
-    const buyValue = (s.buy_avg || 0) * (s.quantity || 0);
-    const presValue = (s.ltp || 0) * (s.quantity || 0);
     const pnlAbs = (s.pnl_abs || 0);
     const pnlPct = (s.pnl_pct || 0);
 
@@ -1297,8 +1403,8 @@ function renderAnalysisTable() {
     tr.innerHTML = `
       <td><strong>${s.ticker}</strong></td>
       <td>${f(s.quantity)}</td>
-      <td>₹${f(buyValue)}</td>
-      <td>₹${f(presValue)}</td>
+      <td>₹${f(s.buy_value)}</td>
+      <td>₹${f(s.pres_value)}</td>
       <td class="${pc(pnlAbs)}">₹${f(pnlAbs)}</td>
       <td class="${pc(pnlPct)}">${f(pnlPct,1)}%</td>
       <td>${f(s.mcap_cr)}</td>
@@ -1321,6 +1427,11 @@ function renderAnalysisTable() {
     `;
     tbody.appendChild(tr);
   });
+
+  // Re-sync the summary and update analysis timestamp
+  updateSummary(allStocks);
+  const ts = document.getElementById('last-updated').textContent;
+  document.getElementById('last-updated-analysis').textContent = ts;
 }
 
 // ── State ──────────────────────────────────────────────────────────────────
@@ -1351,6 +1462,7 @@ function updateSummary(stocks) {
   const pnlAbs = current - invested;
   const pnlPct = invested > 0 ? (pnlAbs / invested * 100) : 0;
 
+  // Dashboard Update
   document.getElementById('sum-invested').textContent = '₹' + fmt(invested, 0);
   document.getElementById('sum-current').textContent  = '₹' + fmt(current, 0);
 
@@ -1364,6 +1476,24 @@ function updateSummary(stocks) {
   document.getElementById('sum-count').textContent  = stocks.length;
   document.getElementById('sum-profit').textContent = inProfit;
   document.getElementById('sum-loss').textContent   = inLoss;
+
+  // Analysis Update
+  const anaInv = document.getElementById('ana-sum-invested');
+  if (anaInv) {
+    anaInv.textContent = '₹' + fmt(invested, 0);
+    document.getElementById('ana-sum-current').textContent = '₹' + fmt(current, 0);
+
+    const aPnlAbs = document.getElementById('ana-sum-pnl-abs');
+    const aPnlPct = document.getElementById('ana-sum-pnl-pct');
+    aPnlAbs.textContent = (pnlAbs >= 0 ? '+' : '-') + '₹' + fmt(Math.abs(pnlAbs), 0);
+    aPnlAbs.className = 'stat-value ' + (pnlAbs >= 0 ? 'green' : 'red');
+    aPnlPct.textContent = fmtPct(pnlPct);
+    aPnlPct.className = 'stat-value ' + (pnlPct >= 0 ? 'green' : 'red');
+
+    document.getElementById('ana-sum-count').textContent  = stocks.length;
+    document.getElementById('ana-sum-profit').textContent = inProfit;
+    document.getElementById('ana-sum-loss').textContent   = inLoss;
+  }
 }
 
 // ── Filter + Sort + Render ─────────────────────────────────────────────────
@@ -1514,6 +1644,9 @@ async function init() {
     document.getElementById('loading').style.display = 'none';
     document.getElementById('cards').style.display   = 'grid';
     renderAll();
+    
+    // Auto-refresh every 15 minutes
+    setInterval(init, 15 * 60 * 1000);
   } catch (err) {
     // Try to load from localStorage cache
     const cached = localStorage.getItem('portfolio_stocks');
