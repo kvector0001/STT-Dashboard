@@ -1136,6 +1136,28 @@ function showToast(msg, type = '') {
   toastTimer = setTimeout(() => { el.className = 'toast'; }, 3000);
 }
 
+// ── Convert UTC time to IST (UTC+5:30) ─────────────────────────────────────
+function convertToIST(utcTimeStr) {
+  try {
+    // Parse "2026-06-05 08:45 UTC" format
+    const parts = utcTimeStr.match(/(\d{4})-(\d{2})-(\d{2})\s+(\d{2}):(\d{2})/);
+    if (!parts) return utcTimeStr; // Return original if parse fails
+    
+    const utcDate = new Date(`${parts[1]}-${parts[2]}-${parts[3]}T${parts[4]}:${parts[5]}:00Z`);
+    const istDate = new Date(utcDate.getTime() + 5.5 * 60 * 60 * 1000); // UTC+5:30
+    
+    const year = istDate.getUTCFullYear();
+    const month = String(istDate.getUTCMonth() + 1).padStart(2, '0');
+    const date = String(istDate.getUTCDate()).padStart(2, '0');
+    const hours = String(istDate.getUTCHours()).padStart(2, '0');
+    const minutes = String(istDate.getUTCMinutes()).padStart(2, '0');
+    
+    return `${year}-${month}-${date} ${hours}:${minutes} IST`;
+  } catch (e) {
+    return utcTimeStr; // Return original if conversion fails
+  }
+}
+
 // ── Ask Claude — copy prompt + open claude.ai ────────────────────────────
 function askClaude(ticker, event) {
   const btn = event && event.currentTarget;
@@ -1669,7 +1691,9 @@ async function loadData() {
   // Apply any locally-saved edits (from Claude paste)
   applyUserEdits(stocks);
 
+  // Filter to ONLY stocks that have prices (are in the portfolio)
   // Merge prices and return data into stocks
+  stocks = stocks.filter(s => prices.hasOwnProperty(s.ticker));
   stocks.forEach(s => {
     const p = prices[s.ticker];
     if (p) {
@@ -1677,11 +1701,12 @@ async function loadData() {
     }
   });
 
-  // Determine last-updated time
+  // Determine last-updated time and convert to IST
   const updatedTimes = stocks.map(s => s.updated).filter(Boolean);
   const lastUpdated = updatedTimes.length > 0 ? updatedTimes[0] : null;
   if (lastUpdated) {
-    document.getElementById('last-updated').textContent = '🕐 ' + lastUpdated;
+    const istTime = convertToIST(lastUpdated);
+    document.getElementById('last-updated').textContent = '🕐 ' + istTime;
   } else {
     document.getElementById('last-updated').textContent = 'No price data — run fetch_prices.py';
   }
