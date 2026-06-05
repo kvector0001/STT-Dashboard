@@ -4,7 +4,7 @@ Simple Flask server for Portfolio Dashboard
 - Provides /api/refresh endpoint to run fetch_prices.py
 """
 
-from flask import Flask, jsonify, send_from_directory
+from flask import Flask, jsonify, send_from_directory, request
 import subprocess
 import os
 import json
@@ -13,12 +13,6 @@ from datetime import datetime
 app = Flask(__name__)
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-# Debug: Log all requests
-@app.before_request
-def log_request():
-    from flask import request
-    print(f"[{datetime.now().strftime('%H:%M:%S')}] {request.method} {request.path}")
-
 @app.route('/api/refresh', methods=['POST'])
 def refresh_data():
     """
@@ -26,11 +20,16 @@ def refresh_data():
     Runs: python scripts/fetch_prices.py
     """
     try:
-        print(f"[{datetime.now().strftime('%H:%M:%S')}] Refreshing portfolio data...")
+        print(f"[{datetime.now().strftime('%H:%M:%S')}] POST /api/refresh - Refreshing portfolio data...")
+        
+        # Use absolute Python path
+        python_path = r'C:\Users\krunal.kapadiya\AppData\Local\Python\bin\python.exe'
+        if not os.path.exists(python_path):
+            python_path = 'python'  # Fallback to system python
         
         # Run the fetch_prices.py script
         result = subprocess.run(
-            [os.path.join(os.environ.get('PYTHON_PATH', 'python')), 'scripts/fetch_prices.py'],
+            [python_path, 'scripts/fetch_prices.py'],
             capture_output=True,
             text=True,
             timeout=180,  # 3 minute timeout
@@ -39,7 +38,7 @@ def refresh_data():
         
         # Check if script succeeded
         if result.returncode == 0:
-            print(f"[{datetime.now().strftime('%H:%M:%S')}] ✅ Refresh successful")
+            print(f"[{datetime.now().strftime('%H:%M:%S')}] SUCCESS: Refresh successful")
             
             # Read updated data to return to frontend
             try:
@@ -51,6 +50,7 @@ def refresh_data():
                     'timestamp': datetime.now().isoformat()
                 })
             except Exception as e:
+                print(f"[{datetime.now().strftime('%H:%M:%S')}] WARNING: Could not read prices.json: {str(e)}")
                 return jsonify({
                     'success': True,
                     'message': '✅ Portfolio refreshed',
@@ -59,22 +59,26 @@ def refresh_data():
         else:
             # Script failed
             error_msg = result.stderr or result.stdout or "Unknown error"
-            print(f"[{datetime.now().strftime('%H:%M:%S')}] ❌ Refresh failed: {error_msg[:100]}")
+            print(f"[{datetime.now().strftime('%H:%M:%S')}] ERROR: Refresh failed (returncode={result.returncode})")
+            print(f"stderr: {result.stderr[:200]}")
+            print(f"stdout: {result.stdout[:200]}")
             return jsonify({
                 'success': False,
-                'message': f'❌ Refresh failed: {error_msg[:100]}',
+                'message': f'❌ Refresh failed: Script returned {result.returncode}',
                 'timestamp': datetime.now().isoformat()
             }), 500
             
     except subprocess.TimeoutExpired:
-        print(f"[{datetime.now().strftime('%H:%M:%S')}] ❌ Refresh timeout")
+        print(f"[{datetime.now().strftime('%H:%M:%S')}] ERROR: Refresh timeout (script took too long)")
         return jsonify({
             'success': False,
             'message': '❌ Refresh timeout (took too long)',
             'timestamp': datetime.now().isoformat()
         }), 500
     except Exception as e:
-        print(f"[{datetime.now().strftime('%H:%M:%S')}] ❌ Error: {str(e)}")
+        print(f"[{datetime.now().strftime('%H:%M:%S')}] EXCEPTION: {str(e)}")
+        import traceback
+        traceback.print_exc()
         return jsonify({
             'success': False,
             'message': f'❌ Error: {str(e)[:100]}',
@@ -92,7 +96,7 @@ def serve_static(filename):
     return send_from_directory(BASE_DIR, filename)
 
 if __name__ == '__main__':
-    print("🚀 Starting Portfolio Dashboard server...")
-    print("📍 Open: http://localhost:8000")
-    print("🔄 Refresh endpoint: POST /api/refresh")
-    app.run(host='0.0.0.0', port=8000, debug=False)
+    print("Starting Portfolio Dashboard server...")
+    print("Open: http://localhost:8000")
+    print("Refresh endpoint: POST /api/refresh")
+    app.run(host='0.0.0.0', port=8000, debug=True, use_reloader=False)

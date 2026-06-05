@@ -707,11 +707,11 @@
 <body>
 
 <div class="tabs-bar">
-  <div class="tab-item active" id="tab-btn-dashboard" onclick="switchTab('dashboard')">📈 Dashboard</div>
-  <div class="tab-item" id="tab-btn-analysis" onclick="switchTab('analysis')">📊 Deep Analysis</div>
+  <div class="tab-item" id="tab-btn-dashboard" onclick="switchTab('dashboard')">📊 Deep Analysis</div>
+  <div class="tab-item active" id="tab-btn-analysis" onclick="switchTab('analysis')">📈 Dashboard</div>
 </div>
 
-<div id="view-dashboard" class="tab-content active">
+<div id="view-dashboard" class="tab-content">
   <!-- HEADER -->
   <header class="header">
   <div class="header-top">
@@ -796,7 +796,7 @@
 <div id="cards" style="display:none;"></div>
 </div> <!-- End view-dashboard -->
 
-<div id="view-analysis" class="tab-content">
+<div id="view-analysis" class="tab-content active">
   <!-- Re-use header for synchronised look -->
   <header class="header">
     <div class="header-top">
@@ -857,11 +857,17 @@
     </div>
   </div>
 
+  <div style="padding: 12px 16px; background: var(--bg2); border-bottom: 1px solid var(--border); display: flex; gap: 12px; align-items: center;">
+    <span style="color: var(--text3);">🔍</span>
+    <input type="text" id="analysis-search" placeholder="Search by ticker or company name..." style="flex: 1; padding: 8px 12px; background: var(--bg1); color: var(--text1); border: 1px solid var(--border); border-radius: 4px; font-size: 14px;">
+  </div>
+
   <div class="analysis-table-container">
     <table class="analysis-table">
       <thead>
         <tr>
           <th onclick="sortAnalysis('ticker')">Symbol <span id="sort-ticker" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('name')">Company Name <span id="sort-name" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('quantity')">Qty. <span id="sort-quantity" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('buy_value')">Buy Value <span id="sort-buy_value" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('pres_value')">Present Value <span id="sort-pres_value" class="sort-indicator"></span></th>
@@ -1406,6 +1412,12 @@ function renderAnalysisTable() {
   const tbody = document.getElementById('analysis-tbody');
   tbody.innerHTML = '';
 
+  // Clear search when rendering
+  const searchInput = document.getElementById('analysis-search');
+  if (searchInput) {
+    searchInput.value = '';
+  }
+
   const stocks = [...allStocks].map(s => {
     return {
       ...s,
@@ -1447,6 +1459,7 @@ function renderAnalysisTable() {
     const tr = document.createElement('tr');
     tr.innerHTML = `
       <td><strong>${s.ticker}</strong></td>
+      <td>${s.name || '—'}</td>
       <td>${f(s.quantity)}</td>
       <td>₹${f(s.buy_value)}</td>
       <td>₹${f(s.pres_value)}</td>
@@ -1847,6 +1860,49 @@ async function refreshDataBtn() {
 
 // Initialize button arrows on load
 updateSortButtons();
+
+// Filter analysis table by search query
+function filterAnalysisTable(searchQuery) {
+  const query = searchQuery.toLowerCase().trim();
+  const rows = document.querySelectorAll('#analysis-tbody tr');
+  let visibleCount = 0;
+
+  rows.forEach(row => {
+    // Get ticker (1st cell) and company name (2nd cell)
+    const cells = row.querySelectorAll('td');
+    if (cells.length < 2) {
+      row.style.display = 'none';
+      return;
+    }
+
+    const ticker = cells[0].textContent.toLowerCase().trim();
+    const companyName = cells[1].textContent.toLowerCase().trim();
+
+    // Show row if matches ticker OR company name
+    if (!query || ticker.includes(query) || companyName.includes(query)) {
+      row.style.display = '';
+      visibleCount++;
+    } else {
+      row.style.display = 'none';
+    }
+  });
+
+  // Update count display
+  const totalCount = document.querySelector('#ana-sum-count');
+  if (totalCount) {
+    totalCount.textContent = visibleCount;
+  }
+}
+
+// Set up search event listener when page loads
+document.addEventListener('DOMContentLoaded', function() {
+  const searchInput = document.getElementById('analysis-search');
+  if (searchInput) {
+    searchInput.addEventListener('input', function() {
+      filterAnalysisTable(this.value);
+    });
+  }
+});
 
 // ── Boot ───────────────────────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', init);

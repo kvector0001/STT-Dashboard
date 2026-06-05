@@ -22,17 +22,17 @@ REPO_PATH = "data/portfolio.xlsx"
 
 def download_portfolio():
     import requests
-    print(f"🌐 Downloading portfolio from Google Sheets...")
+    print(f"[DOWNLOAD] Downloading portfolio from Google Sheets...")
     try:
         response = requests.get(GSHEET_URL, timeout=30)
         response.raise_for_status()
         os.makedirs("data", exist_ok=True)
         with open(REPO_PATH, "wb") as f:
             f.write(response.content)
-        print(f"✅ Downloaded to {REPO_PATH}")
+        print(f"[SUCCESS] Downloaded to {REPO_PATH}")
         return REPO_PATH
     except Exception as e:
-        print(f"❌ Failed to download from Google Sheets: {e}")
+        print(f"[ERROR] Failed to download from Google Sheets: {e}")
         return None
 
 # Decide which source to use
@@ -58,12 +58,12 @@ else:
 if not portfolio_file:
     raise FileNotFoundError("Portfolio file not found and Google Sheets download failed.")
 
-print(f"📂 Reading portfolio from: {portfolio_file}")
+print(f"[INFO] Reading portfolio from: {portfolio_file}")
 # ── Copy to data/portfolio.xlsx for git tracking ─────────────────────────────
 os.makedirs("data", exist_ok=True)
 if os.path.abspath(portfolio_file) != os.path.abspath(REPO_PATH):
     shutil.copy2(portfolio_file, REPO_PATH)
-    print(f"📋 Copied to {REPO_PATH}")
+    print(f"[INFO] Copied to {REPO_PATH}")
 
 # ── Read the Excel ────────────────────────────────────────────────────────────
 df = pd.read_excel(portfolio_file, engine="openpyxl")
@@ -87,7 +87,7 @@ df["buy_avg"] = pd.to_numeric(df["buy_avg"], errors="coerce")
 df = df.dropna(subset=["qty", "buy_avg"])
 
 portfolio = df[["symbol", "qty", "buy_avg"]].reset_index(drop=True)
-print(f"📊 Found {len(portfolio)} valid holdings in portfolio\n")
+print(f"[INFO] Found {len(portfolio)} valid holdings in portfolio\n")
 
 # ── Load existing stocks.json ─────────────────────────────────────────────────
 stocks_path = "stocks.json"
@@ -126,7 +126,7 @@ if new_stubs:
     stocks.extend(new_stubs)
     with open(stocks_path, "w", encoding="utf-8") as f:
         json.dump(stocks, f, indent=2, ensure_ascii=False)
-    print(f"✅ Added {len(new_stubs)} new placeholder entries to stocks.json\n")
+    print(f"[SUCCESS] Added {len(new_stubs)} new placeholder entries to stocks.json\n")
 
 # Remove stocks from stocks.json that are no longer in the portfolio (unless marked as "pending")
 # This ensures deleted rows in Google Sheet are removed from the dashboard
@@ -135,7 +135,7 @@ stocks_to_keep = [s for s in stocks if s.get("ticker") in portfolio_tickers]
 removed_count = initial_stock_count - len(stocks_to_keep)
 if removed_count > 0:
     stocks = stocks_to_keep
-    print(f"🗑️  Removed {removed_count} stocks no longer in portfolio\n")
+    print(f"[INFO] Removed {removed_count} stocks no longer in portfolio\n")
     # Save filtered stocks immediately
     with open(stocks_path, "w", encoding="utf-8") as f:
         json.dump(stocks, f, indent=2, ensure_ascii=False)
@@ -198,37 +198,46 @@ for _, row in portfolio.iterrows():
     fetched_roe = None
     ret_1d = None
     ret_1m = None
+    ret_6m = None
     ret_1y = None
+    ret_3y = None
+    ret_5y = None
 
     for candidate in candidates:
         try:
             ticker_obj = yf.Ticker(candidate)
             
-            # Fetch historical data for returns calculation
-            hist = ticker_obj.history(period="1y")
+            # Fetch historical data for returns calculation (5 years max)
+            hist = ticker_obj.history(period="5y")
             
-            if not hist.empty:
-                price = hist['Close'].iloc[-1]
-                ltp = round(float(price), 2)
+            if not hist.empty and len(hist) > 1:
+                curr_price = hist['Close'].iloc[-1]
+                ltp = round(float(curr_price), 2)
                 
-                # Calculate returns based on historical data
-                if len(hist) > 0:
-                    curr_price = hist['Close'].iloc[-1]
-                    
-                    # 1-day return
-                    if len(hist) >= 2:
-                        prev_close = hist['Close'].iloc[-2]
-                        ret_1d = round(((curr_price - prev_close) / prev_close * 100), 2) if prev_close > 0 else 0
-                    
-                    # 1-month return (approx 21 trading days)
-                    if len(hist) >= 21:
-                        price_1m_ago = hist['Close'].iloc[-21]
-                        ret_1m = round(((curr_price - price_1m_ago) / price_1m_ago * 100), 2) if price_1m_ago > 0 else 0
-                    
-                    # 1-year return
-                    if len(hist) >= 252:  # ~252 trading days in a year
-                        price_1y_ago = hist['Close'].iloc[0]
-                        ret_1y = round(((curr_price - price_1y_ago) / price_1y_ago * 100), 2) if price_1y_ago > 0 else 0
+                # Calculate returns based on available historical data
+                # 1-day return
+                if len(hist) >= 2:
+                    ret_1d = round(((curr_price - hist['Close'].iloc[-2]) / hist['Close'].iloc[-2] * 100), 2)
+                
+                # 1-month return (~21 trading days)
+                if len(hist) >= 21:
+                    ret_1m = round(((curr_price - hist['Close'].iloc[-21]) / hist['Close'].iloc[-21] * 100), 2)
+                
+                # 6-month return (~126 trading days)
+                if len(hist) >= 126:
+                    ret_6m = round(((curr_price - hist['Close'].iloc[-126]) / hist['Close'].iloc[-126] * 100), 2)
+                
+                # 1-year return (~252 trading days)
+                if len(hist) >= 252:
+                    ret_1y = round(((curr_price - hist['Close'].iloc[-252]) / hist['Close'].iloc[-252] * 100), 2)
+                
+                # 3-year return (~756 trading days)
+                if len(hist) >= 756:
+                    ret_3y = round(((curr_price - hist['Close'].iloc[-756]) / hist['Close'].iloc[-756] * 100), 2)
+                
+                # 5-year return (~1260 trading days)
+                if len(hist) >= 1260:
+                    ret_5y = round(((curr_price - hist['Close'].iloc[-1260]) / hist['Close'].iloc[-1260] * 100), 2)
             else:
                 # Fallback to fast_info
                 fi = ticker_obj.fast_info
@@ -287,12 +296,18 @@ for _, row in portfolio.iterrows():
         prices[sym]["ret_1d"] = ret_1d
     if ret_1m is not None:
         prices[sym]["ret_1m"] = ret_1m
+    if ret_6m is not None:
+        prices[sym]["ret_6m"] = ret_6m
     if ret_1y is not None:
         prices[sym]["ret_1y"] = ret_1y
+    if ret_3y is not None:
+        prices[sym]["ret_3y"] = ret_3y
+    if ret_5y is not None:
+        prices[sym]["ret_5y"] = ret_5y
 
     if ltp is not None:
-        pnl_str = f"  P&L: {pnl_pct:+.1f}% (₹{pnl_abs:+,.0f})" if pnl_pct is not None else ""
-        print(f"✅ {sym:<18} LTP: ₹{ltp:>10,.2f}{pnl_str}")
+        pnl_str = f"  P&L: {pnl_pct:+.1f}% ({pnl_abs:+,.0f})" if pnl_pct is not None else ""
+        print(f"[SUCCESS] {sym:<18} LTP: {ltp:>10,.2f}{pnl_str}")
         success += 1
         # Update placeholder name/sector if fetched
         if fetched_name:
@@ -302,7 +317,7 @@ for _, row in portfolio.iterrows():
                     if fetched_sector and s.get("sector") in ("Pending", None, ""):
                         s["sector"] = fetched_sector
     else:
-        print(f"❌ {sym:<18} — price not available")
+        print(f"[ERROR] {sym:<18} — price not available")
         failed.append(sym)
 
 # ── Write prices.json ─────────────────────────────────────────────────────────
@@ -313,8 +328,8 @@ with open("prices.json", "w", encoding="utf-8") as f:
 with open(stocks_path, "w", encoding="utf-8") as f:
     json.dump(stocks, f, indent=2, ensure_ascii=False)
 
-print(f"\n{'─'*55}")
-print(f"✅ prices.json updated — {success}/{len(portfolio)} stocks fetched")
+print(f"\n{'='*55}")
+print(f"[SUCCESS] prices.json updated — {success}/{len(portfolio)} stocks fetched")
 if failed:
-    print(f"❌ Failed ({len(failed)}): {', '.join(failed)}")
-print(f"🕐 Updated at {now_utc}")
+    print(f"[ERROR] Failed ({len(failed)}): {', '.join(failed)}")
+print(f"[INFO] Updated at {now_utc}")
