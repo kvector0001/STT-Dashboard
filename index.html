@@ -809,7 +809,7 @@
   <!-- Synchronized Summary Bar -->
   <div class="summary-bar" id="summary-bar-analysis">
     <div class="stat">
-      <div class="stat-label">Total Invested</div>
+      <div class="stat-label">Invested</div>
       <div class="stat-value" id="ana-sum-invested">—</div>
     </div>
     <div class="stat">
@@ -817,11 +817,23 @@
       <div class="stat-value" id="ana-sum-current">—</div>
     </div>
     <div class="stat">
-      <div class="stat-label">Total P&L</div>
+      <div class="stat-label">Overall P&L ₹ (%)</div>
       <div id="ana-sum-pnl-group" style="display: flex; gap: 8px; align-items: baseline;">
         <div class="stat-value" id="ana-sum-pnl-abs">—</div>
         <div class="stat-value" id="ana-sum-pnl-pct">—</div>
       </div>
+    </div>
+    <div class="stat">
+      <div class="stat-label">Day's PL%</div>
+      <div class="stat-value" id="ana-sum-day-pnl">—</div>
+    </div>
+    <div class="stat">
+      <div class="stat-label">1 Month P&L (%)</div>
+      <div class="stat-value" id="ana-sum-1m-pnl">—</div>
+    </div>
+    <div class="stat">
+      <div class="stat-label">1 Year P&L (%)</div>
+      <div class="stat-value" id="ana-sum-1y-pnl">—</div>
     </div>
     <div class="stat">
       <div class="stat-label">Win/Loss</div>
@@ -1443,16 +1455,30 @@ let sortKey = 'pnl_pct_desc';
 // ── Summary bar ────────────────────────────────────────────────────────────
 function updateSummary(stocks) {
   let invested = 0, current = 0, inProfit = 0, inLoss = 0;
-  let countWithPrice = 0;
+  let dayChgVal = 0, m1ChgVal = 0, y1ChgVal = 0;
 
   stocks.forEach(s => {
-    if (s.buy_avg && s.quantity) {
-      invested += s.buy_avg * s.quantity;
+    const qty = s.quantity || 0;
+    const buy = s.buy_avg || 0;
+    const ltp = s.ltp || 0;
+
+    if (buy && qty) invested += buy * qty;
+    if (ltp && qty) {
+      current += ltp * qty;
+      
+      // Calculate change values based on historical % returns
+      // We assume historical prices = ltp / (1 + ret_pct/100)
+      const getHistoryVal = (retPct) => {
+        if (retPct == null) return ltp * qty;
+        const histPrice = ltp / (1 + (retPct / 100));
+        return histPrice * qty;
+      };
+
+      dayChgVal += (ltp * qty) - getHistoryVal(s.ret_1d);
+      m1ChgVal  += (ltp * qty) - getHistoryVal(s.ret_1m);
+      y1ChgVal  += (ltp * qty) - getHistoryVal(s.ret_1y);
     }
-    if (s.ltp && s.quantity) {
-      current += s.ltp * s.quantity;
-      countWithPrice++;
-    }
+    
     if (s.pnl_pct != null) {
       if (s.pnl_pct >= 0) inProfit++;
       else inLoss++;
@@ -1461,6 +1487,12 @@ function updateSummary(stocks) {
 
   const pnlAbs = current - invested;
   const pnlPct = invested > 0 ? (pnlAbs / invested * 100) : 0;
+  
+  const dayPct = current > 0 ? (dayChgVal / (current - dayChgVal) * 100) : 0;
+  const m1Pct  = current > 0 ? (m1ChgVal / (current - m1ChgVal) * 100) : 0;
+  const y1Pct  = current > 0 ? (y1ChgVal / (current - y1ChgVal) * 100) : 0;
+
+  const fmtLacs = (v) => (v / 100000).toLocaleString('en-IN', {minimumFractionDigits:2, maximumFractionDigits:2}) + ' L';
 
   // Dashboard Update
   document.getElementById('sum-invested').textContent = '₹' + fmt(invested, 0);
@@ -1477,18 +1509,27 @@ function updateSummary(stocks) {
   document.getElementById('sum-profit').textContent = inProfit;
   document.getElementById('sum-loss').textContent   = inLoss;
 
-  // Analysis Update
+  // Analysis Update (Lac format for Top Bar)
   const anaInv = document.getElementById('ana-sum-invested');
   if (anaInv) {
-    anaInv.textContent = '₹' + fmt(invested, 0);
-    document.getElementById('ana-sum-current').textContent = '₹' + fmt(current, 0);
+    anaInv.textContent = '₹' + fmtLacs(invested);
+    document.getElementById('ana-sum-current').textContent = '₹' + fmtLacs(current);
 
     const aPnlAbs = document.getElementById('ana-sum-pnl-abs');
     const aPnlPct = document.getElementById('ana-sum-pnl-pct');
     aPnlAbs.textContent = (pnlAbs >= 0 ? '+' : '-') + '₹' + fmt(Math.abs(pnlAbs), 0);
     aPnlAbs.className = 'stat-value ' + (pnlAbs >= 0 ? 'green' : 'red');
-    aPnlPct.textContent = fmtPct(pnlPct);
-    aPnlPct.className = 'stat-value ' + (pnlPct >= 0 ? 'green' : 'red');
+    aPnlPct.textContent = `(${fmtPct(pnlPct)})`;
+    aPnlPct.className = 'stat-value ' + (pnlAbs >= 0 ? 'green' : 'red');
+
+    const setChg = (id, pct) => {
+      const el = document.getElementById(id);
+      el.textContent = fmtPct(pct);
+      el.className = 'stat-value ' + (pct >= 0 ? 'green' : 'red');
+    };
+    setChg('ana-sum-day-pnl', dayPct);
+    setChg('ana-sum-1m-pnl', m1Pct);
+    setChg('ana-sum-1y-pnl', y1Pct);
 
     document.getElementById('ana-sum-count').textContent  = stocks.length;
     document.getElementById('ana-sum-profit').textContent = inProfit;
