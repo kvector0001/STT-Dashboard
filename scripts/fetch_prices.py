@@ -16,31 +16,49 @@ import yfinance as yf
 
 warnings.filterwarnings("ignore")
 
-# ── Path resolution (local OneDrive vs GitHub Actions) ──────────────────────
-LOCAL_PATH = r"C:\Users\krunal.kapadiya\OneDrive - PUMA\BACKUPS\Krunal\0. STT - Port\Dashboard\Portfolio.xlsx"
-LOCAL_DATA_PATH = r"C:\Users\krunal.kapadiya\OneDrive - PUMA\BACKUPS\Krunal\0. STT - Port\Dashboard\Data\Portfolio.xlsx"
+# ── Path resolution (Google Sheets vs local vs GitHub Actions) ──────────────
+GSHEET_URL = "https://docs.google.com/spreadsheets/d/1TSn6HIdcsux4p8cdpU0fx78zKibyxFKnwUUZTHFKfNI/export?format=xlsx"
 REPO_PATH = "data/portfolio.xlsx"
 
-if os.path.exists(REPO_PATH):
-    portfolio_file = REPO_PATH
-elif os.path.exists(LOCAL_PATH):
-    portfolio_file = LOCAL_PATH
-elif os.path.exists(LOCAL_DATA_PATH):
-    portfolio_file = LOCAL_DATA_PATH
+def download_portfolio():
+    import requests
+    print(f"🌐 Downloading portfolio from Google Sheets...")
+    try:
+        response = requests.get(GSHEET_URL, timeout=30)
+        response.raise_for_status()
+        os.makedirs("data", exist_ok=True)
+        with open(REPO_PATH, "wb") as f:
+            f.write(response.content)
+        print(f"✅ Downloaded to {REPO_PATH}")
+        return REPO_PATH
+    except Exception as e:
+        print(f"❌ Failed to download from Google Sheets: {e}")
+        return None
+
+# Decide which source to use
+portfolio_file = None
+if os.environ.get("GITHUB_ACTIONS"):
+    # Always try to download in CI
+    portfolio_file = download_portfolio() 
+    if not portfolio_file and os.path.exists(REPO_PATH):
+        portfolio_file = REPO_PATH
 else:
-    # Try any xlsx in current folder's Data subfolder
-    found = glob.glob(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "Data", "*.xlsx"))
-    if not found:
-        found = glob.glob(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "*.xlsx"))
-    if found:
-        portfolio_file = found[0]
-    else:
-        raise FileNotFoundError(
-            "Portfolio.xlsx not found. Check path or add data/portfolio.xlsx to repo."
-        )
+    # Locally, try download first, fall back to existing files
+    portfolio_file = download_portfolio()
+    if not portfolio_file:
+        LOCAL_PATH = r"C:\Users\krunal.kapadiya\OneDrive - PUMA\BACKUPS\Krunal\0. STT - Port\Dashboard\Portfolio.xlsx"
+        LOCAL_DATA_PATH = r"C:\Users\krunal.kapadiya\OneDrive - PUMA\BACKUPS\Krunal\0. STT - Port\Dashboard\Data\Portfolio.xlsx"
+        if os.path.exists(LOCAL_PATH):
+            portfolio_file = LOCAL_PATH
+        elif os.path.exists(LOCAL_DATA_PATH):
+            portfolio_file = LOCAL_DATA_PATH
+        elif os.path.exists(REPO_PATH):
+            portfolio_file = REPO_PATH
+
+if not portfolio_file:
+    raise FileNotFoundError("Portfolio file not found and Google Sheets download failed.")
 
 print(f"📂 Reading portfolio from: {portfolio_file}")
-
 # ── Copy to data/portfolio.xlsx for git tracking ─────────────────────────────
 os.makedirs("data", exist_ok=True)
 if os.path.abspath(portfolio_file) != os.path.abspath(REPO_PATH):
@@ -163,8 +181,15 @@ for _, row in portfolio.iterrows():
     for candidate in candidates:
         try:
             ticker_obj = yf.Ticker(candidate)
-            fi = ticker_obj.fast_info
-            price = fi.last_price
+            # Use history(1d) as it's more reliable than fast_info for some tickers
+            hist = ticker_obj.history(period="1d")
+            if not hist.empty:
+                price = hist['Close'].iloc[-1]
+            else:
+                # Fallback to fast_info
+                fi = ticker_obj.fast_info
+                price = fi.last_price
+            
             if price and price > 0:
                 ltp = round(float(price), 2)
                 # Try to get name/sector for placeholder stocks

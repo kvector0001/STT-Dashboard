@@ -720,6 +720,7 @@
       <button class="hdr-btn paste" onclick="showPasteModal()">📋 Paste Claude Response</button>
       <button class="hdr-btn export" onclick="exportPendingJSON()">⬇ Export Pending for Claude</button>
       <button class="hdr-btn export" style="opacity:0.6;" onclick="exportStocksJSON()">⬇ Export ALL</button>
+      <button class="hdr-btn export" onclick="refreshDataBtn()" id="refresh-btn">🔄 Refresh Data</button>
       <div class="last-updated" id="last-updated">Loading…</div>
     </div>
   </div>
@@ -801,7 +802,8 @@
     <div class="header-top">
       <h1>📊 <span>Deep</span> Analysis</h1>
       <div class="header-actions">
-        <div class="last-updated" id="last-updated-analysis">Loading…</div>
+<button class="hdr-btn export" onclick="refreshDataBtn()" id="refresh-btn-analysis">🔄 Refresh Data</button>
+      <div class="last-updated" id="last-updated-analysis">Loading…</div>
       </div>
     </div>
   </header>

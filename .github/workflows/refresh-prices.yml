@@ -25,16 +25,18 @@ jobs:
         run: pip install yfinance pandas openpyxl
 
       - name: Fetch prices
-        run: python scripts/fetch_prices.py
+        run: |
+          python -m pip install --upgrade pip
+          pip install yfinance pandas openpyxl requests
+          python scripts/fetch_prices.py
 
-      - name: Fetch extended data (Daily at 9:15 AM)
+      - name: Fetch extended data (Daily at 3:45 UTC / 9:15 AM IST)
         if: github.event.schedule == '45 3 * * 1-5' || github.event_name == 'workflow_dispatch'
         run: python scripts/fetch_extended_data.py
 
-      - name: Commit and push prices.json + stocks.json
+      - name: Commit and push changes
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add prices.json stocks.json
-          git diff --staged --quiet || git commit -m "chore: refresh prices $(date -u +'%Y-%m-%d %H:%M UTC')"
-          git push
+          git add prices.json stocks.json data/portfolio.xlsx
+          git diff --staged --quiet || (git commit -m "chore: refresh prices $(date -u +'%Y-%m-%d %H:%M UTC')" && git push)
