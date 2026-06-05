@@ -1684,7 +1684,7 @@ async function loadData() {
     });
   });
 
-  const stocks = Array.from(stocksMap.values());
+  let stocks = Array.from(stocksMap.values());
 
   if (stocks.length === 0) throw new Error('No stock data found (stocks.json or Stocks_Fundamentals*.json)');
 

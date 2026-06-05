@@ -13,15 +13,11 @@ from datetime import datetime
 app = Flask(__name__)
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-@app.route('/')
-def serve_index():
-    """Serve the main dashboard"""
-    return send_from_directory(BASE_DIR, 'index.html')
-
-@app.route('/<path:filename>')
-def serve_static(filename):
-    """Serve all other static files"""
-    return send_from_directory(BASE_DIR, filename)
+# Debug: Log all requests
+@app.before_request
+def log_request():
+    from flask import request
+    print(f"[{datetime.now().strftime('%H:%M:%S')}] {request.method} {request.path}")
 
 @app.route('/api/refresh', methods=['POST'])
 def refresh_data():
@@ -84,6 +80,16 @@ def refresh_data():
             'message': f'❌ Error: {str(e)[:100]}',
             'timestamp': datetime.now().isoformat()
         }), 500
+
+@app.route('/')
+def serve_index():
+    """Serve the main dashboard"""
+    return send_from_directory(BASE_DIR, 'index.html')
+
+@app.route('/<path:filename>')
+def serve_static(filename):
+    """Serve all other static files"""
+    return send_from_directory(BASE_DIR, filename)
 
 if __name__ == '__main__':
     print("🚀 Starting Portfolio Dashboard server...")

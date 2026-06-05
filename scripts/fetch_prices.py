@@ -193,28 +193,67 @@ for _, row in portfolio.iterrows():
     ltp = None
     fetched_name = None
     fetched_sector = None
+    fetched_mcap = None
+    fetched_pe = None
+    fetched_roe = None
+    ret_1d = None
+    ret_1m = None
+    ret_1y = None
 
     for candidate in candidates:
         try:
             ticker_obj = yf.Ticker(candidate)
-            # Use history(1d) as it's more reliable than fast_info for some tickers
-            hist = ticker_obj.history(period="1d")
+            
+            # Fetch historical data for returns calculation
+            hist = ticker_obj.history(period="1y")
+            
             if not hist.empty:
                 price = hist['Close'].iloc[-1]
+                ltp = round(float(price), 2)
+                
+                # Calculate returns based on historical data
+                if len(hist) > 0:
+                    curr_price = hist['Close'].iloc[-1]
+                    
+                    # 1-day return
+                    if len(hist) >= 2:
+                        prev_close = hist['Close'].iloc[-2]
+                        ret_1d = round(((curr_price - prev_close) / prev_close * 100), 2) if prev_close > 0 else 0
+                    
+                    # 1-month return (approx 21 trading days)
+                    if len(hist) >= 21:
+                        price_1m_ago = hist['Close'].iloc[-21]
+                        ret_1m = round(((curr_price - price_1m_ago) / price_1m_ago * 100), 2) if price_1m_ago > 0 else 0
+                    
+                    # 1-year return
+                    if len(hist) >= 252:  # ~252 trading days in a year
+                        price_1y_ago = hist['Close'].iloc[0]
+                        ret_1y = round(((curr_price - price_1y_ago) / price_1y_ago * 100), 2) if price_1y_ago > 0 else 0
             else:
                 # Fallback to fast_info
                 fi = ticker_obj.fast_info
                 price = fi.last_price
+                if price and price > 0:
+                    ltp = round(float(price), 2)
             
-            if price and price > 0:
-                ltp = round(float(price), 2)
-                # Try to get name/sector for placeholder stocks
+            if ltp and ltp > 0:
+                # Fetch company info for name, sector, market cap, P/E, ROE
                 try:
                     info = ticker_obj.info
                     fetched_name = info.get("longName") or info.get("shortName")
                     fetched_sector = info.get("sector") or info.get("industry")
-                except Exception:
+                    
+                    # Market cap in Crores (convert from actual market cap)
+                    mcap = info.get("marketCap")
+                    if mcap:
+                        fetched_mcap = round(mcap / 10_000_000, 2)  # Convert to Crores
+                    
+                    fetched_pe = info.get("trailingPE")
+                    fetched_roe = info.get("returnOnEquity")
+                    
+                except Exception as e:
                     pass
+                
                 break
         except Exception:
             continue
@@ -225,6 +264,7 @@ for _, row in portfolio.iterrows():
         pnl_abs = round((ltp - buy_avg) * qty, 2)
         pnl_pct = round((ltp - buy_avg) / buy_avg * 100, 2)
 
+    # Build prices entry with all available data
     prices[sym] = {
         "ltp": ltp,
         "buy_avg": buy_avg,
@@ -233,6 +273,22 @@ for _, row in portfolio.iterrows():
         "pnl_abs": pnl_abs,
         "updated": now_utc,
     }
+    
+    # Add fetched metadata if available
+    if fetched_mcap is not None:
+        prices[sym]["mcap_cr"] = fetched_mcap
+    if fetched_pe is not None:
+        prices[sym]["pe"] = round(fetched_pe, 2) if fetched_pe > 0 else None
+    if fetched_roe is not None:
+        prices[sym]["roe"] = round(fetched_roe * 100, 2) if fetched_roe else None
+    
+    # Add return percentages
+    if ret_1d is not None:
+        prices[sym]["ret_1d"] = ret_1d
+    if ret_1m is not None:
+        prices[sym]["ret_1m"] = ret_1m
+    if ret_1y is not None:
+        prices[sym]["ret_1y"] = ret_1y
 
     if ltp is not None:
         pnl_str = f"  P&L: {pnl_pct:+.1f}% (₹{pnl_abs:+,.0f})" if pnl_pct is not None else ""
