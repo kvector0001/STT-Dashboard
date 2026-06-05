@@ -136,6 +136,11 @@ removed_count = initial_stock_count - len(stocks_to_keep)
 if removed_count > 0:
     stocks = stocks_to_keep
     print(f"🗑️  Removed {removed_count} stocks no longer in portfolio\n")
+    # Save filtered stocks immediately
+    with open(stocks_path, "w", encoding="utf-8") as f:
+        json.dump(stocks, f, indent=2, ensure_ascii=False)
+else:
+    stocks = stocks_to_keep
 
 # ── Fetch prices ──────────────────────────────────────────────────────────────
 prices = {}
