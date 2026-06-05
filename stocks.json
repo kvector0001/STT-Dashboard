@@ -5306,5 +5306,203 @@
     "pat_cagr": 45.2,
     "rev_cagr": 11.9,
     "mcap_3y": -34.18
+  },
+  {
+    "ticker": "DEEDEV",
+    "name": "DEE DEVELOPMENT ENG LTD",
+    "sector": "Industrials",
+    "nse_symbol": "DEEDEV",
+    "buy_avg": 261.86,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "MODISONLTD",
+    "name": "Modison Limited",
+    "sector": "Industrials",
+    "nse_symbol": "MODISONLTD",
+    "buy_avg": 171.27,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "VASCONEQ",
+    "name": "Vascon Engineers Limited",
+    "sector": "Industrials",
+    "nse_symbol": "VASCONEQ",
+    "buy_avg": 65.92,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "SHANKARA",
+    "name": "Shankara Building Products Limited",
+    "sector": "Consumer Cyclical",
+    "nse_symbol": "SHANKARA",
+    "buy_avg": 136.74,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "INCAP",
+    "name": "Incap Limited",
+    "sector": "Technology",
+    "nse_symbol": "INCAP",
+    "buy_avg": 41.79,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "ECOSMOBLTY",
+    "name": "ECOS (INDIA) MOB & HOSP L",
+    "sector": "Industrials",
+    "nse_symbol": "ECOSMOBLTY",
+    "buy_avg": 139.03,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "FREDUN",
+    "name": "Fredun Pharmaceuticals Limited",
+    "sector": "Healthcare",
+    "nse_symbol": "FREDUN",
+    "buy_avg": 1395.0,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "TOTEM",
+    "name": "Forbes Precision Tools and Machine Parts Limited",
+    "sector": "Industrials",
+    "nse_symbol": "TOTEM",
+    "buy_avg": 194.63,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "LAKSELEC",
+    "name": "Lakshmi Electrical Control Systems Limited",
+    "sector": "Industrials",
+    "nse_symbol": "LAKSELEC",
+    "buy_avg": 1486.09,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
   }
 ]

@@ -1612,9 +1612,10 @@ function renderAll() {
 
 // ── Load data ──────────────────────────────────────────────────────────────
 async function loadData() {
+  const ts_qs = `?t=${Date.now()}`;
   let manifest;
   try {
-    const manifestRes = await fetch('manifest.json');
+    const manifestRes = await fetch('manifest.json' + ts_qs);
     if (manifestRes.ok) {
       manifest = await manifestRes.json();
     }
@@ -1625,8 +1626,8 @@ async function loadData() {
     stockFiles = manifest.stock_files;
   }
 
-  const stockFetches = stockFiles.map(file => fetch(file).then(r => r.ok ? r.json() : []));
-  const pricesFetch  = fetch('prices.json').then(r => r.ok ? r.json() : {});
+  const stockFetches = stockFiles.map(file => fetch(file + ts_qs).then(r => r.ok ? r.json() : []));
+  const pricesFetch  = fetch('prices.json' + ts_qs).then(r => r.ok ? r.json() : {});
 
   const [stockDataArrays, prices] = await Promise.all([
     Promise.all(stockFetches),
