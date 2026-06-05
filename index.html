@@ -852,7 +852,8 @@ function renderCard(s) {
     ? (s.pnl_abs >= 0 ? '+' : '-') + '₹' + fmt(Math.abs(s.pnl_abs), 0)
     : '—';
   const qty     = s.quantity != null ? s.quantity.toLocaleString('en-IN') : '—';
-  const invested = (s.buy_avg && s.quantity) ? '₹' + fmt(s.buy_avg * s.quantity, 0) : '—';
+  const invested = (s.buy_avg && s.quantity) ? s.buy_avg * s.quantity : 0;
+  const currentVal = (s.ltp && s.quantity) ? s.ltp * s.quantity : 0;
 
   const pnlPctColor = pnlPos ? 'green' : (pnlNeg ? 'red' : '');
   const pnlAbsColor = pnlPos ? 'green' : (pnlNeg ? 'red' : '');
@@ -881,22 +882,24 @@ function renderCard(s) {
 
   <div class="price-row">
     <div class="price-cell">
-      <div class="price-cell-label">LTP</div>
-      <div class="price-cell-value">${ltp}</div>
+      <div class="price-cell-label">Current Value</div>
+      <div class="price-cell-value">₹${fmt(currentVal, 0)}</div>
+      <div class="price-cell-sub">(LTP ${ltp})</div>
     </div>
     <div class="price-cell">
-      <div class="price-cell-label">Buy Avg</div>
-      <div class="price-cell-value">${buyAvg}</div>
+      <div class="price-cell-label">Invested Value</div>
+      <div class="price-cell-value">₹${fmt(invested, 0)}</div>
+      <div class="price-cell-sub">(Buy Avg ${buyAvg})</div>
     </div>
     <div class="price-cell">
-      <div class="price-cell-label">P&amp;L %</div>
-      <div class="price-cell-value ${pnlPctColor}">${pnlPct}</div>
-      <div class="price-cell-sub ${pnlAbsColor}">${pnlAbs}</div>
+      <div class="price-cell-label">P&L</div>
+      <div class="price-cell-value ${pnlAbsColor}">${pnlAbs}</div>
+      <div class="price-cell-sub ${pnlPctColor}">(${pnlPct})</div>
     </div>
   </div>
 
   <div class="holdings-row">
-    Qty: <span>${qty}</span>&nbsp;&nbsp;Invested: <span>${invested}</span>
+    Qty: <span>${qty}</span>
   </div>
 
   ${pending ? `<div class="card-body"><p class="moat-text" style="color:var(--amber-text)">Analysis pending. Add fundamental details to stocks.json for this ticker.</p></div>` : `
@@ -1305,16 +1308,46 @@ function renderAll() {
 
 // ── Load data ──────────────────────────────────────────────────────────────
 async function loadData() {
-  const [stocksRes, pricesRes] = await Promise.all([
-    fetch('stocks.json'),
-    fetch('prices.json'),
+  let manifest;
+  try {
+    const manifestRes = await fetch('manifest.json');
+    if (manifestRes.ok) {
+      manifest = await manifestRes.json();
+    }
+  } catch(e) {}
+
+  let stockFiles = ['stocks.json'];
+  if (manifest && manifest.stock_files && manifest.stock_files.length > 0) {
+    stockFiles = manifest.stock_files;
+  }
+
+  const stockFetches = stockFiles.map(file => fetch(file).then(r => r.ok ? r.json() : []));
+  const pricesFetch  = fetch('prices.json').then(r => r.ok ? r.json() : {});
+
+  const [stockDataArrays, prices] = await Promise.all([
+    Promise.all(stockFetches),
+    pricesFetch
   ]);
 
-  if (!stocksRes.ok) throw new Error('stocks.json not found — run fetch_prices.py first');
-  if (!pricesRes.ok) throw new Error('prices.json not found — run fetch_prices.py first');
+  // Merge all stocks.json / Stocks_Fundamentals*.json files
+  // We use a Map to ensure unique records by ticker
+  const stocksMap = new Map();
+  stockDataArrays.forEach(arr => {
+    if (!Array.isArray(arr)) return;
+    arr.forEach(s => {
+      if (!s.ticker) return;
+      if (stocksMap.has(s.ticker)) {
+        // Merge if duplicate ticker (later files override earlier ones)
+        Object.assign(stocksMap.get(s.ticker), s);
+      } else {
+        stocksMap.set(s.ticker, {...s});
+      }
+    });
+  });
 
-  const stocks = await stocksRes.json();
-  const prices = await pricesRes.json();
+  const stocks = Array.from(stocksMap.values());
+
+  if (stocks.length === 0) throw new Error('No stock data found (stocks.json or Stocks_Fundamentals*.json)');
 
   // Apply any locally-saved edits (from Claude paste)
   applyUserEdits(stocks);
