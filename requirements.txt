@@ -1,0 +1,5 @@
+flask
+pandas
+yfinance
+requests
+openpyxl

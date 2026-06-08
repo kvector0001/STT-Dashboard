@@ -314,31 +314,24 @@
   },
   {
     "ticker": "PARKHOSPS",
-    "name": "The Park Hotels",
-    "sector": "Hospitality",
+    "name": "Park Medi World Limited",
+    "sector": "Healthcare",
     "nse_symbol": "PARKHOSPS",
     "buy_avg": 158.81,
-    "moat_type": "Narrow",
-    "moat_class": "narrow",
-    "conviction": 6,
-    "moat": "Boutique luxury hotel chain — 30 properties, 20 Indian cities. Art-forward contemporary luxury brand. Prime real estate ownership in metros.",
-    "leadership": "Multi-brand: The Park, Zone by the Park, Zone Connect. India luxury hotel market CAGR 11.3% to 2031.",
-    "non_rep": "Prime real estate in Kolkata, Chennai, Delhi, Hyderabad — recreation cost is prohibitive. National Tourism Award holder.",
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending",
+    "leadership": "Pending",
+    "non_rep": "Pending",
     "tailwinds": [
-      "India domestic travel boom",
-      "Rising UHNW population",
-      "Structural 'revenge travel' shift",
-      "G20/global events driving premium demand"
+      "Pending analysis"
     ],
     "risks": [
-      "International chain competition in India",
-      "GST changes on F&B margins",
-      "Capex-heavy with slow ROI"
+      "Pending analysis"
     ],
     "track": [
-      "RevPAR growth",
-      "Occupancy rate",
-      "New property addition pipeline"
+      "Add tracking KPIs"
     ],
     "mcap_cr": 12327.31,
     "pe": 41.54294,

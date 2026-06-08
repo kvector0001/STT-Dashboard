@@ -11,10 +11,10 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --bg: #0f1723;
-      --bg2: #1a2234;
-      --bg3: #222e44;
-      --border: #2d3d56;
+      --bg: #100d1a;
+      --bg2: #1a1228;
+      --bg3: #231936;
+      --border: #3d2860;
       --text: #e8edf5;
       --text2: #8fa4c0;
       --text3: #5c7a9a;
@@ -27,14 +27,14 @@
       --amber: #f59e0b;
       --amber-bg: #2d1e06;
       --amber-text: #fbbf24;
-      --blue: #3b82f6;
-      --blue-bg: #0c1f3d;
-      --blue-text: #60a5fa;
-      --purple: #a855f7;
-      --purple-bg: #1e0d38;
-      --purple-text: #c084fc;
+      --blue: #b040f5;
+      --blue-bg: #1e0a30;
+      --blue-text: #d580ff;
+      --purple: #e040fb;
+      --purple-bg: #2a0830;
+      --purple-text: #f0aaff;
       --wide-color: #22c55e;
-      --narrow-color: #3b82f6;
+      --narrow-color: #b040f5;
       --pending-color: #f59e0b;
       --radius: 10px;
       --shadow: 0 2px 12px rgba(0,0,0,.4);
@@ -529,8 +529,7 @@
     /* ── ANALYSIS TABLE ── */
     .analysis-table-container {
       padding: 1rem;
-      overflow: auto;
-      max-height: calc(100vh - 200px); /* Allow vertical scroll within container */
+      overflow-x: auto;
     }
     .analysis-table {
       width: 100%;
@@ -551,7 +550,7 @@
       color: var(--text2);
       font-weight: 700;
       position: sticky;
-      top: 0;
+      top: 42px;
       z-index: 10;
       cursor: pointer;
       user-select: none;
@@ -582,6 +581,106 @@
     .analysis-table tr:hover td { background: #1e293b !important; }
     .neg { color: var(--red-text); }
     .pos { color: var(--green-text); }
+    .amber { color: var(--amber-text); }
+
+    /* ── TRACK KPI BUTTON ── */
+    .track-kpi-btn {
+      background: var(--purple-bg);
+      border: 1px solid var(--purple);
+      border-radius: 5px;
+      color: var(--purple-text);
+      cursor: pointer;
+      font-size: 0.62rem;
+      font-weight: 600;
+      padding: 2px 8px;
+      white-space: nowrap;
+      transition: opacity .15s;
+      flex-shrink: 0;
+    }
+    .track-kpi-btn:hover { opacity: .8; }
+
+    /* ── AI PICKER POPOVER ── */
+    .ai-picker {
+      position: fixed;
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 8px 6px;
+      z-index: 9999;
+      box-shadow: 0 4px 20px rgba(0,0,0,.6);
+      min-width: 180px;
+      display: none;
+    }
+    .ai-picker-title {
+      font-size: 0.65rem;
+      color: var(--text3);
+      text-transform: uppercase;
+      letter-spacing: .5px;
+      padding: 2px 10px 6px;
+    }
+    .ai-picker a {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      color: var(--text);
+      text-decoration: none;
+      font-size: 0.82rem;
+      font-weight: 500;
+      border-radius: 6px;
+      white-space: nowrap;
+    }
+    .ai-picker a:hover { background: var(--bg3); color: var(--purple-text); }
+
+    /* ── RESEARCH POPOVER ── */
+    .research-popover {
+      position: fixed;
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 6px 4px;
+      z-index: 9999;
+      box-shadow: 0 4px 20px rgba(0,0,0,.5);
+      min-width: 200px;
+      display: none;
+    }
+    .research-popover a {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 12px;
+      color: var(--text);
+      text-decoration: none;
+      font-size: 0.82rem;
+      border-radius: 5px;
+      white-space: nowrap;
+    }
+    .research-popover a:hover { background: var(--bg3); color: var(--blue-text); }
+
+    /* ── AI PICKER POPOVER ── */
+    .ai-picker-pop {
+      position: fixed;
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 6px 4px;
+      z-index: 9999;
+      box-shadow: 0 4px 20px rgba(0,0,0,.5);
+      min-width: 180px;
+      display: none;
+    }
+    .ai-picker-pop a {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 12px;
+      color: var(--text);
+      text-decoration: none;
+      font-size: 0.82rem;
+      border-radius: 5px;
+      white-space: nowrap;
+    }
+    .ai-picker-pop a:hover { background: var(--bg3); color: var(--purple-text); }
 
     /* ── MODAL ── */
     .modal-overlay {
@@ -707,12 +806,12 @@
 <body>
 
 <div class="tabs-bar">
-  <div class="tab-item" id="tab-btn-dashboard" onclick="switchTab('dashboard')">📊 Deep Analysis</div>
   <div class="tab-item active" id="tab-btn-analysis" onclick="switchTab('analysis')">📈 Dashboard</div>
+  <div class="tab-item" id="tab-btn-dashboard" onclick="switchTab('dashboard')">📊 Deep Analysis</div>
 </div>
 
 <div id="view-dashboard" class="tab-content">
-  <!-- HEADER -->
+  <!-- HEADER (Dashboard) -->
   <header class="header">
   <div class="header-top">
     <h1>📈 <span>Portfolio</span> Dashboard</h1>
@@ -721,6 +820,7 @@
       <button class="hdr-btn export" onclick="exportPendingJSON()">⬇ Export Pending for Claude</button>
       <button class="hdr-btn export" style="opacity:0.6;" onclick="exportStocksJSON()">⬇ Export ALL</button>
       <button class="hdr-btn export" onclick="refreshDataBtn()" id="refresh-btn">🔄 Refresh Data</button>
+      <div id="refresh-progress" style="font-size:0.68rem;color:var(--text3);font-family:var(--mono);min-width:60px;"></div>
       <div class="last-updated" id="last-updated">Loading…</div>
     </div>
   </div>
@@ -800,9 +900,10 @@
   <!-- Re-use header for synchronised look -->
   <header class="header">
     <div class="header-top">
-      <h1>📊 <span>Deep</span> Analysis</h1>
+      <h1>� <span>Portfolio</span> Dashboard</h1>
       <div class="header-actions">
 <button class="hdr-btn export" onclick="refreshDataBtn()" id="refresh-btn-analysis">🔄 Refresh Data</button>
+      <div id="refresh-progress-analysis" style="font-size:0.68rem;color:var(--text3);font-family:var(--mono);min-width:60px;"></div>
       <div class="last-updated" id="last-updated-analysis">Loading…</div>
       </div>
     </div>
@@ -890,6 +991,8 @@
           <th onclick="sortAnalysis('eps')">EPS <span id="sort-eps" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('book_value')">Book Value <span id="sort-book_value" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('div_yield')">Div Yield % <span id="sort-div_yield" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('vol_30m_ratio')">Vol 30m/Avg <span id="sort-vol_30m_ratio" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('vol_yest_ratio')">Vol Yest/Avg <span id="sort-vol_yest_ratio" class="sort-indicator"></span></th>
         </tr>
       </thead>
       <tbody id="analysis-tbody">
@@ -933,6 +1036,15 @@ Example:
 
 <!-- TOAST -->
 <div class="toast" id="toast"></div>
+
+<!-- REFRESH LOG PANEL removed -->
+<div id="refresh-log" style="display:none"></div>
+
+<!-- AI PICKER POPOVER -->
+<div class="ai-picker-pop" id="ai-picker-pop">
+  <a id="aip-claude"  href="https://claude.ai"  target="_blank" rel="noopener">🧡 Claude</a>
+  <a id="aip-chatgpt" href="https://chatgpt.com" target="_blank" rel="noopener">🟢 ChatGPT</a>
+</div>
 
 <script>
 // ── Utilities ──────────────────────────────────────────────────────────────
@@ -1001,7 +1113,11 @@ function renderCard(s) {
       <div class="card-ticker">${esc(s.ticker)}</div>
       <div style="display: flex; align-items: center; gap: 8px; flex: 1; min-width: 0;">
         <div class="card-name" title="${esc(s.name)}">${esc(s.name || '—')}</div>
-        <a href="#" onclick="event.preventDefault(); openCatalystAnalysis('${esc(s.ticker)}', '${esc(s.name)}'); return false;" style="color: var(--blue); font-size: 12px; white-space: nowrap; text-decoration: none; border-bottom: 1px dashed var(--blue); cursor: pointer; flex-shrink: 0;" title="Analyze catalysts using GPT">🔗 Catalysts</a>
+        <span style="color:var(--text3);font-size:11px;white-space:nowrap;flex-shrink:0;">
+          🔗 Catalysts
+          <a href="https://claude.ai" target="_blank" rel="noopener" onclick="copyPrompt('catalyst','${esc(s.ticker)}','${esc(s.name)}')" style="color:var(--purple-text);text-decoration:none;font-weight:700;">(1)</a>
+          <a href="https://chatgpt.com" target="_blank" rel="noopener" onclick="copyPrompt('catalyst','${esc(s.ticker)}','${esc(s.name)}')" style="color:var(--green-text);text-decoration:none;font-weight:700;">(2)</a>
+        </span>
       </div>
     </div>
     <div class="card-badges">
@@ -1036,25 +1152,57 @@ function renderCard(s) {
     <div class="metrics-row">
       <div class="metric-item">
         <span class="metric-label">1Y Ret</span>
-        <span class="metric-value ${s.ret_1y >= 0 ? 'pos' : 'neg'}">${fmt(s.ret_1y, 1)}%</span>
+        <span class="metric-value ${s.ret_1y != null ? (s.ret_1y >= 0 ? 'pos' : 'neg') : ''}">${s.ret_1y != null ? fmt(s.ret_1y,1)+'%' : '—'}</span>
       </div>
       <div class="metric-item">
         <span class="metric-label">3Y Ret</span>
-        <span class="metric-value ${s.ret_3y >= 0 ? 'pos' : 'neg'}">${fmt(s.ret_3y, 1)}%</span>
+        <span class="metric-value ${s.ret_3y != null ? (s.ret_3y >= 0 ? 'pos' : 'neg') : ''}">${s.ret_3y != null ? fmt(s.ret_3y,1)+'%' : '—'}</span>
       </div>
       <div class="metric-item">
-        <span class="metric-label">Div Yield</span>
-        <span class="metric-value">${fmt(s.div_yield, 2)}%</span>
+        <span class="metric-label">5Y Ret</span>
+        <span class="metric-value ${s.ret_5y != null ? (s.ret_5y >= 0 ? 'pos' : 'neg') : ''}">${s.ret_5y != null ? fmt(s.ret_5y,1)+'%' : '—'}</span>
       </div>
     </div>
     <div class="metrics-row">
       <div class="metric-item">
-        <span class="metric-label">3Y MCap Growth</span>
-        <span class="metric-value ${s.mcap_3y >= 0 ? 'pos' : 'neg'}">${fmt(s.mcap_3y, 1)}%</span>
+        <span class="metric-label">PAT CAGR</span>
+        <span class="metric-value ${s.pat_cagr != null ? (s.pat_cagr >= 0 ? 'pos' : 'neg') : ''}">${s.pat_cagr != null ? fmt(s.pat_cagr,1)+'%' : '—'}</span>
       </div>
       <div class="metric-item">
+        <span class="metric-label">Rev CAGR</span>
+        <span class="metric-value ${s.rev_cagr != null ? (s.rev_cagr >= 0 ? 'pos' : 'neg') : ''}">${s.rev_cagr != null ? fmt(s.rev_cagr,1)+'%' : '—'}</span>
+      </div>
+      <div class="metric-item">
+        <span class="metric-label">Div Yield</span>
+        <span class="metric-value">${s.div_yield != null ? fmt(s.div_yield,2)+'%' : '—'}</span>
+      </div>
+    </div>
+    <div class="metrics-row">
+      <div class="metric-item">
+        <span class="metric-label">EPS</span>
+        <span class="metric-value">${s.eps != null ? '₹'+fmt(s.eps,2) : '—'}</span>
+      </div>
+      <div class="metric-item">
+        <span class="metric-label">Book Value</span>
+        <span class="metric-value">${s.book_value != null ? '₹'+fmt(s.book_value,2) : '—'}</span>
+      </div>
+      <div class="metric-item">
+        <span class="metric-label">D/E</span>
+        <span class="metric-value">${s.debt_to_equity != null ? fmt(s.debt_to_equity,2) : '—'}</span>
+      </div>
+    </div>
+    <div class="metrics-row">
+      <div class="metric-item">
         <span class="metric-label">Op. Cash Flow</span>
-        <span class="metric-value">₹${fmt(s.ocf_cr, 0)}Cr</span>
+        <span class="metric-value">${s.ocf_cr != null ? '₹'+fmt(s.ocf_cr,0)+'Cr' : '—'}</span>
+      </div>
+      <div class="metric-item">
+        <span class="metric-label">Vol 30m/Avg</span>
+        <span class="metric-value ${s.vol_30m_ratio >= 5 ? 'neg' : s.vol_30m_ratio >= 2 ? '' : ''}" style="${s.vol_30m_ratio >= 5 ? '' : s.vol_30m_ratio >= 2 ? 'color:var(--amber-text)' : ''}">${s.vol_30m_ratio != null ? s.vol_30m_ratio.toFixed(1)+'x' : '—'}</span>
+      </div>
+      <div class="metric-item">
+        <span class="metric-label">Vol Yest/Avg</span>
+        <span class="metric-value" style="${s.vol_yest_ratio >= 3 ? 'color:var(--red-text)' : s.vol_yest_ratio >= 1.5 ? 'color:var(--amber-text)' : ''}">${s.vol_yest_ratio != null ? s.vol_yest_ratio.toFixed(1)+'x' : '—'}</span>
       </div>
     </div>
   </div>
@@ -1110,7 +1258,10 @@ function renderCard(s) {
     </div>` : ''}
 
     ${s.track && s.track.length ? `<div>
-      <div class="section-label">Tracking KPIs</div>
+      <div class="section-label">📊 Tracking KPIs
+        <a href="https://claude.ai" target="_blank" rel="noopener" onclick="copyPrompt('kpi','${esc(s.ticker)}','${esc(s.name || s.ticker)}')" style="color:var(--purple-text);text-decoration:none;font-weight:700;margin-left:4px;">(1)</a>
+        <a href="https://chatgpt.com" target="_blank" rel="noopener" onclick="copyPrompt('kpi','${esc(s.ticker)}','${esc(s.name || s.ticker)}')" style="color:var(--green-text);text-decoration:none;font-weight:700;">(2)</a>
+      </div>
       <div class="pill-row">${pills(s.track, 'blue')}</div>
     </div>` : ''}
   </div>`}
@@ -1354,7 +1505,7 @@ function exportPendingJSON() {
     return;
   }
   
-  const priceFields = new Set(['ltp','buy_avg','quantity','pnl_pct','pnl_abs','updated','mcap_cr','pe','roe','ocf_cr','ret_1d','ret_1m','ret_6m','ret_1y','ret_3y','ret_5y','debt_to_equity','eps','book_value','div_yield','pat_cagr','rev_cagr','mcap_3y']);
+  const priceFields = new Set(['ltp','buy_avg','quantity','pnl_pct','pnl_abs','updated','mcap_cr','pe','roe','ocf_cr','ret_1d','ret_1m','ret_6m','ret_1y','ret_3y','ret_5y','debt_to_equity','eps','book_value','div_yield','pat_cagr','rev_cagr','mcap_3y','vol_30m_ratio','vol_yest_ratio']);
   const exportData = pending.map(s => {
     const out = {};
     Object.entries(s).forEach(([k,v]) => { if (!priceFields.has(k)) out[k] = v; });
@@ -1384,8 +1535,145 @@ function exportStocksJSON() {
   showToast('⬇ stocks.json downloaded — replace file in Dashboard folder', 'green');
 }
 
+// ── copyPrompt: used by (1) Claude and (2) ChatGPT links ──────────────────
+function copyPrompt(type, ticker, companyName) {
+  const stock = allStocks.find(s => s.ticker === ticker) || {};
+  let prompt = '';
+
+  if (type === 'kpi') {
+    const kpis = stock.track || [];
+    const bullets = kpis.map(k => `• ${k}`).join('\n');
+    prompt = `You are a senior equity research analyst. Track the following KPIs for ${companyName} (${ticker}) and show how each has changed quarter-over-quarter (Q-o-Q) and year-over-year (Y-o-Y) for the last 6 quarters.
+
+KPIs to track:
+${bullets}
+
+Instructions:
+1. Search for the latest quarterly results, investor presentations and earnings call transcripts for ${companyName}.
+2. For each KPI show a table with actual values for the last 6 quarters.
+3. After each KPI add a one-line commentary on the trend.
+4. Finish with a 3-line overall summary.
+
+Format:
+
+### KPI: [Name]
+| Quarter | Value | QoQ Δ | YoY Δ |
+|---------|-------|--------|--------|
+| Q4FY26  | ...   | ...    | ...    |
+**Trend:** [one line]
+
+### Overall Summary
+- ✅ Going well: ...
+- ⚠️ Watch out: ...
+- 🔍 Next quarter focus: ...`;
+
+  } else {
+    prompt = `You are a world-class equity research analyst. Identify ALL current, emerging, and potential catalysts that could materially impact the stock price of ${companyName} (${ticker}) over the next 3, 6, 12, and 24 months.
+
+Search across latest earnings calls, investor presentations, exchange filings, management interviews, annual reports, industry reports, government policies, regulatory changes, order wins, capex announcements, M&A activity, and global developments.
+
+For each catalyst provide: Name, Description, Timeline (immediate/near/medium/long), Probability, Potential Impact, Direction (bullish/bearish), Market Awareness, and why it matters.
+
+Also identify separately:
+- Hidden Catalysts (not widely discussed)
+- Re-Rating Triggers (multiple expansion)
+- De-Rating Triggers (multiple compression)
+- Top 10 metrics to monitor every quarter
+- Next 10 events most likely to move the stock
+
+End with:
+Catalyst Score: X/10
+Current Price Drivers: ...
+Next Major Catalyst: ...
+Most Underappreciated Catalyst: ...
+Biggest Risk: ...
+Probability of Significant Re-rating in Next 24 Months: XX%`;
+  }
+
+  navigator.clipboard.writeText(prompt).catch(() => {});
+  showToast('📋 Prompt copied — paste it in the chat', 'green');
+}
+
+// ── Shared AI picker (Claude / ChatGPT) ───────────────────────────────────
+(function() {
+  document.addEventListener('click', e => {
+    const pop = document.getElementById('ai-picker-pop');
+    if (pop && !pop.contains(e.target)
+           && !e.target.classList.contains('track-kpi-btn')
+           && !e.target.closest('a[onclick*="openCatalystAnalysis"]')
+           && !e.target.closest('[onclick*="trackKPIs"]')) {
+      pop.style.display = 'none';
+    }
+  });
+})();
+
+function showAiPicker(anchorEl, prompt) {
+  const pop       = document.getElementById('ai-picker-pop');
+  const claudeEl  = document.getElementById('aip-claude');
+  const chatgptEl = document.getElementById('aip-chatgpt');
+
+  // Clone nodes to remove old listeners
+  const newClaude  = claudeEl.cloneNode(true);
+  const newChatgpt = chatgptEl.cloneNode(true);
+  claudeEl.replaceWith(newClaude);
+  chatgptEl.replaceWith(newChatgpt);
+
+  const onPick = () => {
+    navigator.clipboard.writeText(prompt).catch(() => {});
+    showToast('📋 Prompt copied — paste it in the chat', 'green');
+    pop.style.display = 'none';
+  };
+  newClaude.addEventListener('click',  onPick);
+  newChatgpt.addEventListener('click', onPick);
+
+  const r    = anchorEl.getBoundingClientRect();
+  const top  = Math.min(r.bottom + window.scrollY + 4, window.innerHeight + window.scrollY - 90);
+  const left = Math.min(r.left  + window.scrollX,      window.innerWidth  - 200);
+  pop.style.top     = top  + 'px';
+  pop.style.left    = left + 'px';
+  pop.style.display = 'block';
+}
+
+// ── KPI Tracker — mirrors Catalysts pattern exactly ──────────────────────
+function trackKPIs(ticker, companyName, el) {
+  // Look up the track array directly from allStocks — avoids HTML encoding issues
+  const stock = allStocks.find(s => s.ticker === ticker);
+  const kpis  = (stock && stock.track) || [];
+  if (!kpis.length) { showToast('No KPIs defined for this stock', ''); return; }
+
+  const kpiBullets = kpis.map(k => `• ${k}`).join('\n');
+
+  const prompt = `You are a senior equity research analyst. Track the following KPIs for ${companyName} (${ticker}) and show how each has changed quarter-over-quarter (Q-o-Q) and year-over-year (Y-o-Y) for the last 6 quarters.
+
+KPIs to track:
+${kpiBullets}
+
+Instructions:
+1. Search for the latest available quarterly results, investor presentations, and earnings call transcripts for ${companyName}.
+2. For each KPI, show a table with actual values for the last 6 quarters.
+3. After each KPI, add a one-line commentary on the trend — improving, declining, or stable?
+4. Finish with a 3-line overall summary.
+
+Format:
+
+### KPI: [Name]
+| Quarter | Value | QoQ Δ | YoY Δ |
+|---------|-------|--------|--------|
+| Q4FY26  | ...   | ...    | ...    |
+**Trend:** [one line]
+
+Repeat for each KPI, then:
+
+### Overall Summary
+- ✅ Going well: ...
+- ⚠️ Watch out: ...
+- 🔍 Next quarter focus: ...`;
+
+  showAiPicker(el, prompt);
+}
+
 // ── Catalyst Analysis ──────────────────────────────────────────────────────
-function openCatalystAnalysis(ticker, companyName) {
+function openCatalystAnalysis(ticker, companyName, anchorEl) {
   const catalystPrompt = `You are a world-class equity research analyst specializing in identifying stock price catalysts before they are fully reflected in market prices.
 
 Analyze the company below and identify ALL current, emerging, and potential catalysts that could materially impact the stock price over the next 3, 6, 12, and 24 months.
@@ -1524,15 +1812,46 @@ Biggest Risk:
 Probability of Significant Re-rating in Next 24 Months:
 XX%`;
 
-  // Copy prompt to clipboard
-  navigator.clipboard.writeText(catalystPrompt).then(() => {
-    showToast(`📋 Catalyst prompt copied for ${ticker}`, 'green');
-    // Open ChatGPT in new tab
-    window.open('https://chatgpt.com', '_blank');
-  }).catch(err => {
-    console.error('Failed to copy prompt:', err);
-    showToast('Failed to copy prompt', 'red');
+  // Show AI picker instead of directly opening ChatGPT
+  showAiPicker(anchorEl, catalystPrompt);
+}
+
+// ── Research Links popover — shows 3 direct links user can click ──────────
+const _researchPopover = (() => {
+  const el = document.createElement('div');
+  el.className = 'research-popover';
+  el.id = 'research-popover';
+  document.body.appendChild(el);
+  // Close on outside click
+  document.addEventListener('click', e => {
+    if (!el.contains(e.target) && !e.target.classList.contains('research-name')) {
+      el.style.display = 'none';
+    }
   });
+  return el;
+})();
+
+function openResearchTabs(event, ticker, companyName) {
+  event.stopPropagation();
+  const q  = encodeURIComponent(companyName);
+  const tq = encodeURIComponent(ticker);
+  const gTrendlyne = encodeURIComponent(companyName + ' trendlyne');
+  const gTijori    = encodeURIComponent(companyName + ' tijori finance');
+
+  // Tickertape has a working direct search URL.
+  // Trendlyne & Tijori don't expose simple search URLs, so use targeted Google search.
+  _researchPopover.innerHTML = `
+    <a href="https://www.tickertape.in/search?q=${q}" target="_blank" rel="noopener">📊 Tickertape</a>
+    <a href="https://www.google.com/search?q=${gTrendlyne}" target="_blank" rel="noopener">📈 Trendlyne</a>
+    <a href="https://www.google.com/search?q=${gTijori}" target="_blank" rel="noopener">🔍 Tijori Finance</a>
+  `;
+  // Position near the click
+  const r = event.target.getBoundingClientRect();
+  const top  = r.bottom + window.scrollY + 4;
+  const left = Math.min(r.left + window.scrollX, window.innerWidth - 220);
+  _researchPopover.style.top  = top + 'px';
+  _researchPopover.style.left = left + 'px';
+  _researchPopover.style.display = 'block';
 }
 
 // ── Tabs ───────────────────────────────────────────────────────────────────
@@ -1546,6 +1865,24 @@ function switchTab(tab) {
   if (tab === 'analysis') {
     renderAnalysisTable();
   }
+}
+
+// ── Navigate to card on Dashboard tab ─────────────────────────────────────
+function goToCard(ticker) {
+  // Switch to dashboard (cards) tab
+  switchTab('dashboard');
+  renderAll();
+  // Wait for cards to render, then scroll to the matching card
+  setTimeout(() => {
+    const card = document.querySelector(`.card[data-ticker="${ticker}"]`);
+    if (card) {
+      card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      // Briefly highlight it
+      card.style.outline = '2px solid var(--blue)';
+      card.style.transition = 'outline 0.3s';
+      setTimeout(() => { card.style.outline = ''; }, 2000);
+    }
+  }, 100);
 }
 
 // ── Rendering Analysis Table ────────────────────────────────────────────────
@@ -1565,12 +1902,6 @@ function sortAnalysis(field) {
 function renderAnalysisTable() {
   const tbody = document.getElementById('analysis-tbody');
   tbody.innerHTML = '';
-
-  // Clear search when rendering
-  const searchInput = document.getElementById('analysis-search');
-  if (searchInput) {
-    searchInput.value = '';
-  }
 
   const stocks = [...allStocks].map(s => {
     return {
@@ -1609,11 +1940,14 @@ function renderAnalysisTable() {
 
     const f = (val, dec=0) => val != null ? val.toLocaleString('en-IN', {minimumFractionDigits: dec, maximumFractionDigits: dec}) : '—';
     const pc = (val) => val != null ? (val >= 0 ? 'pos' : 'neg') : '';
+    const fp = (val, dec=1) => val != null ? f(val, dec) + '%' : '—';  // format percent, shows '—' not '—%'
+    const fVol = (v) => v != null ? v.toFixed(1) + 'x' : '—';
+    const volClass = (v) => v == null ? '' : v >= 5 ? 'neg' : v >= 2 ? 'amber' : '';
 
     const tr = document.createElement('tr');
     tr.innerHTML = `
-      <td><strong>${s.ticker}</strong></td>
-      <td>${s.name || '—'}</td>
+      <td><strong><span style="cursor:pointer;color:var(--blue-text);" title="View fundamental analysis card" onclick="goToCard('${esc(s.ticker)}')">${s.ticker}</span></strong></td>
+      <td><span class="research-name" style="cursor:pointer;color:var(--blue-text);text-decoration:underline dotted;" title="Click to open Tickertape, Trendlyne, Tijori" onclick="openResearchTabs(event,'${esc(s.ticker)}','${esc(s.name || s.ticker)}')">${s.name || '—'}</span></td>
       <td>${f(s.quantity)}</td>
       <td>₹${f(s.buy_value)}</td>
       <td>₹${f(s.pres_value)}</td>
@@ -1623,19 +1957,21 @@ function renderAnalysisTable() {
       <td>${f(s.pe, 1)}</td>
       <td>${f(s.roe, 1)}%</td>
       <td>${f(s.ocf_cr)}</td>
-      <td class="${pc(s.ret_1d)}">${f(s.ret_1d, 1)}%</td>
-      <td class="${pc(s.ret_1m)}">${f(s.ret_1m, 1)}%</td>
-      <td class="${pc(s.ret_6m)}">${f(s.ret_6m, 1)}%</td>
-      <td class="${pc(s.ret_1y)}">${f(s.ret_1y, 1)}%</td>
-      <td class="${pc(s.ret_3y)}">${f(s.ret_3y, 1)}%</td>
-      <td class="${pc(s.ret_5y)}">${f(s.ret_5y, 1)}%</td>
-      <td class="${pc(s.pat_cagr)}">${f(s.pat_cagr, 1)}%</td>
-      <td class="${pc(s.rev_cagr)}">${f(s.rev_cagr, 1)}%</td>
-      <td class="${pc(s.mcap_3y)}">${f(s.mcap_3y, 1)}%</td>
+      <td class="${pc(s.ret_1d)}">${fp(s.ret_1d)}</td>
+      <td class="${pc(s.ret_1m)}">${fp(s.ret_1m)}</td>
+      <td class="${pc(s.ret_6m)}">${fp(s.ret_6m)}</td>
+      <td class="${pc(s.ret_1y)}">${fp(s.ret_1y)}</td>
+      <td class="${pc(s.ret_3y)}">${fp(s.ret_3y)}</td>
+      <td class="${pc(s.ret_5y)}">${fp(s.ret_5y)}</td>
+      <td class="${pc(s.pat_cagr)}">${fp(s.pat_cagr)}</td>
+      <td class="${pc(s.rev_cagr)}">${fp(s.rev_cagr)}</td>
+      <td class="${pc(s.mcap_3y)}">${fp(s.mcap_3y)}</td>
       <td>${f(s.debt_to_equity, 2)}</td>
       <td>${f(s.eps, 2)}</td>
       <td>${f(s.book_value, 2)}</td>
-      <td>${f(s.div_yield, 2)}%</td>
+      <td>${fp(s.div_yield, 2)}</td>
+      <td class="${volClass(s.vol_30m_ratio)}">${fVol(s.vol_30m_ratio)}</td>
+      <td class="${volClass(s.vol_yest_ratio)}">${fVol(s.vol_yest_ratio)}</td>
     `;
     tbody.appendChild(tr);
   });
@@ -1896,6 +2232,9 @@ async function init() {
     document.getElementById('loading').style.display = 'none';
     document.getElementById('cards').style.display   = 'grid';
     renderAll();
+    renderAnalysisTable();
+    // Safety net: re-render table after browser settles (fixes first-load blank issue)
+    setTimeout(renderAnalysisTable, 100);
     
     // Auto-refresh every 15 minutes
     setInterval(init, 15 * 60 * 1000);
@@ -1911,6 +2250,8 @@ async function init() {
       document.getElementById('loading').style.display = 'none';
       document.getElementById('cards').style.display   = 'grid';
       renderAll();
+      renderAnalysisTable();
+      setTimeout(renderAnalysisTable, 100);
     } else {
       document.getElementById('loading').innerHTML =
         `<div style="color:var(--red-text);padding:2rem;text-align:center;">
@@ -1977,38 +2318,59 @@ document.querySelectorAll('.sort-btn').forEach(btn => {
 });
 
 async function refreshDataBtn() {
-  const btn = document.getElementById('refresh-btn');
-  const btnAn = document.getElementById('refresh-btn-analysis');
-  const originalText = '🔄 Refresh Data';
-  
+  const btn      = document.getElementById('refresh-btn');
+  const btnAn    = document.getElementById('refresh-btn-analysis');
+  const prog     = document.getElementById('refresh-progress');
+  const progAn   = document.getElementById('refresh-progress-analysis');
+
+  let fetched = 0, total = 0;
+  const setProgress = () => {
+    const pct  = total ? Math.round(fetched / total * 100) : 0;
+    const text = total ? `${pct}% (${fetched}/${total})` : '';
+    if (prog)   prog.textContent   = text;
+    if (progAn) progAn.textContent = text;
+  };
+  const setBtn = (t) => { if (btn) btn.textContent = t; if (btnAn) btnAn.textContent = t; };
+
+  setBtn('⏳ Refreshing…');
+  setProgress();
+
   try {
-    if (btn) btn.textContent = '⏳ Fetching from Google Sheet...';
-    if (btnAn) btnAn.textContent = '⏳ Fetching from Google Sheet...';
-    
-    // Step 1: Call backend to run fetch_prices.py
-    const response = await fetch('/api/refresh', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' }
+    const es = new EventSource('/api/refresh-stream');
+    let success = false;
+
+    await new Promise((resolve, reject) => {
+      es.onmessage = (e) => {
+        const msg = JSON.parse(e.data);
+        if (msg.line) {
+          if (msg.line.includes('[INFO] Found')) {
+            const m = msg.line.match(/(\d+) valid holdings/);
+            if (m) { total = parseInt(m[1]); setProgress(); }
+          }
+          if (msg.line.startsWith('[SUCCESS]') && msg.line.includes('LTP:')) {
+            fetched++;
+            setProgress();
+          }
+        }
+        if (msg.done) { success = msg.success; es.close(); resolve(); }
+      };
+      es.onerror = () => { es.close(); reject(new Error('Server connection lost')); };
     });
-    
-    const result = await response.json();
-    
-    if (!response.ok) {
-      throw new Error(result.message || 'Backend refresh failed');
-    }
-    
-    if (btn) btn.textContent = '⏳ Reloading dashboard...';
-    if (btnAn) btnAn.textContent = '⏳ Reloading dashboard...';
-    
-    // Step 2: Reload UI with fresh data
+
+    if (!success) throw new Error('Refresh failed');
+
+    setBtn('⏳ Loading…');
     await init();
-    
-    showToast(result.message || '✅ Portfolio updated successfully');
+    showToast('✅ Portfolio refreshed', 'green');
+
   } catch (err) {
-    showToast('❌ Refresh failed: ' + err.message);
+    showToast('❌ ' + err.message, 'red');
   } finally {
-    if (btn) btn.textContent = originalText;
-    if (btnAn) btnAn.textContent = originalText;
+    setBtn('🔄 Refresh Data');
+    setTimeout(() => {
+      if (prog)   prog.textContent   = '';
+      if (progAn) progAn.textContent = '';
+    }, 5000);
   }
 }
 

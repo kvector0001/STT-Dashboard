@@ -16,6 +16,16 @@ import yfinance as yf
 
 warnings.filterwarnings("ignore")
 
+# ── Hardcoded overrides for tickers that yfinance misidentifies ───────────────
+# Maps portfolio ticker → correct display name (overrides whatever yfinance returns)
+NAME_OVERRIDES = {
+    "PARKHOSPS": "Park Medi World Limited",
+}
+# Maps portfolio ticker → preferred yfinance symbol (put first in candidates list)
+YFINANCE_SYMBOL_OVERRIDES = {
+    "PARKHOSPS": "PARKHOSPS.BO",
+}
+
 # ── Path resolution (Google Sheets vs local vs GitHub Actions) ──────────────
 GSHEET_URL = "https://docs.google.com/spreadsheets/d/1TSn6HIdcsux4p8cdpU0fx78zKibyxFKnwUUZTHFKfNI/export?format=xlsx"
 REPO_PATH = "data/portfolio.xlsx"
@@ -46,8 +56,10 @@ else:
     # Locally, try download first, fall back to existing files
     portfolio_file = download_portfolio()
     if not portfolio_file:
-        LOCAL_PATH = r"C:\Users\krunal.kapadiya\OneDrive - PUMA\BACKUPS\Krunal\0. STT - Port\Dashboard\Portfolio.xlsx"
-        LOCAL_DATA_PATH = r"C:\Users\krunal.kapadiya\OneDrive - PUMA\BACKUPS\Krunal\0. STT - Port\Dashboard\Data\Portfolio.xlsx"
+        # Use relative paths from the script directory
+        BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        LOCAL_PATH = os.path.join(BASE_DIR, "Portfolio.xlsx")
+        LOCAL_DATA_PATH = os.path.join(BASE_DIR, "Data", "Portfolio.xlsx")
         if os.path.exists(LOCAL_PATH):
             portfolio_file = LOCAL_PATH
         elif os.path.exists(LOCAL_DATA_PATH):
@@ -186,6 +198,10 @@ for _, row in portfolio.iterrows():
         clean_sym + ".BO",
         clean_yf + ".BO",
     ]
+    # If there's a hardcoded yfinance symbol override, put it first
+    if sym in YFINANCE_SYMBOL_OVERRIDES:
+        preferred = YFINANCE_SYMBOL_OVERRIDES[sym]
+        candidates = [preferred] + [c for c in candidates if c != preferred]
     # Deduplicate while preserving order
     seen = set()
     candidates = [c for c in candidates if not (c in seen or seen.add(c))]
@@ -202,6 +218,15 @@ for _, row in portfolio.iterrows():
     ret_1y = None
     ret_3y = None
     ret_5y = None
+    fetched_ocf = None
+    fetched_de = None
+    fetched_eps = None
+    fetched_bv = None
+    fetched_dy = None
+    fetched_pat = None
+    fetched_rev = None
+    fetched_vol_yest_ratio = None
+    fetched_vol_30m_ratio = None
 
     for candidate in candidates:
         try:
@@ -246,7 +271,7 @@ for _, row in portfolio.iterrows():
                     ltp = round(float(price), 2)
             
             if ltp and ltp > 0:
-                # Fetch company info for name, sector, market cap, P/E, ROE
+                # Fetch company info for name, sector, market cap, P/E, ROE, and other metrics
                 try:
                     info = ticker_obj.info
                     fetched_name = info.get("longName") or info.get("shortName")
@@ -259,10 +284,60 @@ for _, row in portfolio.iterrows():
                     
                     fetched_pe = info.get("trailingPE")
                     fetched_roe = info.get("returnOnEquity")
-                    
+
+                    # Additional fundamental metrics
+                    ocf = info.get("operatingCashflow")
+                    if ocf is not None:
+                        fetched_ocf = round(ocf / 10_000_000, 2)  # Convert to Crores
+
+                    de = info.get("debtToEquity")
+                    if de is not None:
+                        fetched_de = round(de, 3)
+
+                    eps = info.get("trailingEps")
+                    if eps is not None:
+                        fetched_eps = round(eps, 2)
+
+                    bv = info.get("bookValue")
+                    if bv is not None:
+                        fetched_bv = round(bv, 2)
+
+                    dy = info.get("dividendYield")
+                    if dy is not None:
+                        fetched_dy = round(dy * 100, 2)  # Convert to %
+
+                    pat = info.get("earningsGrowth")
+                    if pat is not None:
+                        fetched_pat = round(pat * 100, 2)  # Convert to %
+
+                    rev = info.get("revenueGrowth")
+                    if rev is not None:
+                        fetched_rev = round(rev * 100, 2)  # Convert to %
+
                 except Exception as e:
                     pass
-                
+
+                # Volume ratios from already-fetched history
+                try:
+                    if hist is not None and len(hist) >= 2:
+                        yest_vol = float(hist['Volume'].iloc[-2])
+                        avg_vol  = float(hist['Volume'].tail(30).mean())
+                        if avg_vol > 0:
+                            fetched_vol_yest_ratio = round(yest_vol / avg_vol, 2)
+                except Exception:
+                    pass
+
+                # 30-min intraday volume vs avg 30-min volume
+                try:
+                    intra = ticker_obj.history(period="1d", interval="5m")
+                    if intra is not None and len(intra) > 0:
+                        last_30m_vol = float(intra['Volume'].tail(6).sum())
+                        avg_30m_vol  = float(intra['Volume'].mean()) * 6
+                        if avg_30m_vol > 0:
+                            fetched_vol_30m_ratio = round(last_30m_vol / avg_30m_vol, 2)
+                except Exception:
+                    pass
+
                 break
         except Exception:
             continue
@@ -290,6 +365,27 @@ for _, row in portfolio.iterrows():
         prices[sym]["pe"] = round(fetched_pe, 2) if fetched_pe > 0 else None
     if fetched_roe is not None:
         prices[sym]["roe"] = round(fetched_roe * 100, 2) if fetched_roe else None
+    if fetched_ocf is not None:
+        prices[sym]["ocf_cr"] = fetched_ocf
+    if fetched_de is not None:
+        prices[sym]["debt_to_equity"] = fetched_de
+    if fetched_eps is not None:
+        prices[sym]["eps"] = fetched_eps
+    if fetched_bv is not None:
+        prices[sym]["book_value"] = fetched_bv
+    if fetched_dy is not None:
+        prices[sym]["div_yield"] = fetched_dy
+    if fetched_pat is not None:
+        prices[sym]["pat_cagr"] = fetched_pat
+    if fetched_rev is not None:
+        prices[sym]["rev_cagr"] = fetched_rev
+    # mcap_3y: use 3-year price return as proxy
+    if ret_3y is not None:
+        prices[sym]["mcap_3y"] = ret_3y
+    if fetched_vol_yest_ratio is not None:
+        prices[sym]["vol_yest_ratio"] = fetched_vol_yest_ratio
+    if fetched_vol_30m_ratio is not None:
+        prices[sym]["vol_30m_ratio"] = fetched_vol_30m_ratio
     
     # Add return percentages
     if ret_1d is not None:
@@ -316,13 +412,31 @@ for _, row in portfolio.iterrows():
                     s["name"] = fetched_name
                     if fetched_sector and s.get("sector") in ("Pending", None, ""):
                         s["sector"] = fetched_sector
+        # Always apply hardcoded name override (never let yfinance overwrite it)
+        if sym in NAME_OVERRIDES:
+            for s in stocks:
+                if s["ticker"] == sym:
+                    s["name"] = NAME_OVERRIDES[sym]
+            prices[sym]["name"] = NAME_OVERRIDES[sym]
     else:
         print(f"[ERROR] {sym:<18} — price not available")
         failed.append(sym)
 
-# ── Write prices.json ─────────────────────────────────────────────────────────
+# ── Write prices.json — sanitise NaN/Inf to null so JSON stays valid ─────────
+import math
+
+def sanitise(obj):
+    """Recursively replace float NaN/Inf with None so json.dumps stays valid."""
+    if isinstance(obj, dict):
+        return {k: sanitise(v) for k, v in obj.items()}
+    if isinstance(obj, list):
+        return [sanitise(v) for v in obj]
+    if isinstance(obj, float) and (math.isnan(obj) or math.isinf(obj)):
+        return None
+    return obj
+
 with open("prices.json", "w", encoding="utf-8") as f:
-    json.dump(prices, f, indent=2, ensure_ascii=False)
+    json.dump(sanitise(prices), f, indent=2, ensure_ascii=False)
 
 # ── Save updated stocks.json (names populated for placeholders) ───────────────
 with open(stocks_path, "w", encoding="utf-8") as f:

@@ -4,7 +4,7 @@ Simple Flask server for Portfolio Dashboard
 - Provides /api/refresh endpoint to run fetch_prices.py
 """
 
-from flask import Flask, jsonify, send_from_directory, request
+from flask import Flask, jsonify, send_from_directory, request, Response, stream_with_context
 import subprocess
 import os
 import json
@@ -22,10 +22,8 @@ def refresh_data():
     try:
         print(f"[{datetime.now().strftime('%H:%M:%S')}] POST /api/refresh - Refreshing portfolio data...")
         
-        # Use absolute Python path
-        python_path = r'C:\Users\krunal.kapadiya\AppData\Local\Python\bin\python.exe'
-        if not os.path.exists(python_path):
-            python_path = 'python'  # Fallback to system python
+        # Use system Python
+        python_path = 'python'
         
         # Run the fetch_prices.py script
         result = subprocess.run(
@@ -84,6 +82,44 @@ def refresh_data():
             'message': f'❌ Error: {str(e)[:100]}',
             'timestamp': datetime.now().isoformat()
         }), 500
+
+@app.route('/api/refresh-stream')
+def refresh_stream():
+    """
+    Server-Sent Events endpoint — streams fetch_prices.py stdout line-by-line
+    so the browser can show live progress during refresh.
+    """
+    def generate():
+        try:
+            proc = subprocess.Popen(
+                ['python', '-u', 'scripts/fetch_prices.py'],
+                stdout=subprocess.PIPE,
+                stderr=subprocess.STDOUT,
+                text=True,
+                bufsize=1,
+                cwd=BASE_DIR
+            )
+            for line in proc.stdout:
+                line = line.rstrip('\n')
+                if line:
+                    yield f"data: {json.dumps({'line': line})}\n\n"
+            proc.wait()
+            if proc.returncode == 0:
+                yield f"data: {json.dumps({'done': True, 'success': True})}\n\n"
+            else:
+                yield f"data: {json.dumps({'done': True, 'success': False, 'error': f'Exit code {proc.returncode}'})}\n\n"
+        except Exception as e:
+            yield f"data: {json.dumps({'done': True, 'success': False, 'error': str(e)})}\n\n"
+
+    return Response(
+        stream_with_context(generate()),
+        mimetype='text/event-stream',
+        headers={
+            'Cache-Control': 'no-cache',
+            'X-Accel-Buffering': 'no',
+        }
+    )
+
 
 @app.route('/')
 def serve_index():
