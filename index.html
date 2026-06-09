@@ -2065,10 +2065,14 @@ function renderAnalysisTable() {
   const searchQ = (document.getElementById('analysis-search')?.value || '').toLowerCase().trim();
 
   const stocks = [...allStocks].map(s => {
+    const w52hPct = (s.week52_high && s.ltp) ? (s.ltp - s.week52_high) / s.week52_high * 100 : null;
+    const w52lPct = (s.week52_low  && s.ltp) ? (s.ltp - s.week52_low)  / s.week52_low  * 100 : null;
     return {
       ...s,
-      buy_value: (s.buy_avg || 0) * (s.quantity || 0),
-      pres_value: (s.ltp || 0) * (s.quantity || 0)
+      buy_value:       (s.buy_avg || 0) * (s.quantity || 0),
+      pres_value:      (s.ltp || 0) * (s.quantity || 0),
+      week52_high_pct: w52hPct != null ? Math.round(w52hPct * 10) / 10 : null,
+      week52_low_pct:  w52lPct != null ? Math.round(w52lPct * 10) / 10 : null,
     };
   });
 
@@ -2143,8 +2147,8 @@ function renderAnalysisTable() {
       <td>${fp(s.div_yield, 2)}</td>
       <td class="${volClass(s.vol_30m_ratio)}">${fVol(s.vol_30m_ratio)}</td>
       <td class="${volClass(s.vol_yest_ratio)}">${fVol(s.vol_yest_ratio)}</td>
-      <td class="neg">${s.week52_high != null && s.ltp != null ? (((s.ltp - s.week52_high) / s.week52_high * 100).toFixed(1) + '%') : '\u2014'}</td>
-      <td class="pos">${s.week52_low != null && s.ltp != null ? ('+' + ((s.ltp - s.week52_low) / s.week52_low * 100).toFixed(1) + '%') : '\u2014'}</td>
+      <td class="neg">${s.week52_high_pct != null ? s.week52_high_pct.toFixed(1)+'%' : '—'}</td>
+      <td class="pos">${s.week52_low_pct  != null ? '+'+s.week52_low_pct.toFixed(1)+'%'  : '—'}</td>
       <td class="${pc(s.gross_margin)}">${fp(s.gross_margin)}</td>
       <td class="${pc(s.operating_margin)}">${fp(s.operating_margin)}</td>
       <td class="${pc(s.ebitda_margin)}">${fp(s.ebitda_margin)}</td>
