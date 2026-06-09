@@ -42,6 +42,28 @@
       --mono: 'SF Mono', 'Fira Code', 'Consolas', monospace;
     }
 
+    /* ── LIGHT MODE ── */
+    body.light-mode {
+      --bg: #eef2fb;
+      --bg2: #dde6f8;
+      --bg3: #ccd5ef;
+      --border: #a0b4e0;
+      --text: #1a1a2e;
+      --text2: #3a4a70;
+      --text3: #6070a0;
+      --green-bg: #d4f5e2;
+      --green-text: #166534;
+      --red-bg: #fde8e8;
+      --red-text: #991b1b;
+      --amber-bg: #fef3c7;
+      --amber-text: #92400e;
+      --blue-bg: #ede9ff;
+      --blue-text: #7c3aed;
+      --purple-bg: #f3e8ff;
+      --purple-text: #7c3aed;
+      --shadow: 0 2px 12px rgba(0,0,0,.1);
+    }
+
     body {
       font-family: var(--font);
       background: var(--bg);
@@ -528,8 +550,10 @@
 
     /* ── ANALYSIS TABLE ── */
     .analysis-table-container {
-      padding: 1rem;
+      padding: 0 1rem 1rem;
       overflow-x: auto;
+      overflow-y: auto;
+      max-height: calc(100vh - 280px);
     }
     .analysis-table {
       width: 100%;
@@ -545,12 +569,20 @@
       border-right: 1px solid var(--border);
       white-space: nowrap;
     }
+    /* Company name column: constrain width and allow wrapping */
+    .analysis-table td:nth-child(2) {
+      white-space: normal;
+      max-width: 160px;
+      min-width: 100px;
+      word-break: break-word;
+      line-height: 1.3;
+    }
     .analysis-table th {
       background: var(--bg3);
       color: var(--text2);
       font-weight: 700;
       position: sticky;
-      top: 42px;
+      top: 0;
       z-index: 10;
       cursor: pointer;
       user-select: none;
@@ -816,6 +848,8 @@
   <div class="header-top">
     <h1>📈 <span>Portfolio</span> Dashboard</h1>
     <div class="header-actions">
+      <button class="hdr-btn" id="theme-toggle" onclick="toggleTheme()" title="Toggle dark/light mode">☀️ Light</button>
+      <button class="hdr-btn" id="lock-btn" onclick="togglePrivacy()" title="Lock/unlock private values">🔒 Lock</button>
       <button class="hdr-btn paste" onclick="showPasteModal()">📋 Paste Claude Response</button>
       <button class="hdr-btn export" onclick="exportPendingJSON()">⬇ Export Pending for Claude</button>
       <button class="hdr-btn export" style="opacity:0.6;" onclick="exportStocksJSON()">⬇ Export ALL</button>
@@ -905,6 +939,8 @@
 <button class="hdr-btn export" onclick="refreshDataBtn()" id="refresh-btn-analysis">🔄 Refresh Data</button>
       <div id="refresh-progress-analysis" style="font-size:0.68rem;color:var(--text3);font-family:var(--mono);min-width:60px;"></div>
       <div class="last-updated" id="last-updated-analysis">Loading…</div>
+      <button class="hdr-btn" id="theme-toggle-2" onclick="toggleTheme()" title="Toggle dark/light mode">☀️ Light</button>
+      <button class="hdr-btn" id="lock-btn-2" onclick="togglePrivacy()" title="Lock/unlock private values">🔒 Lock</button>
       </div>
     </div>
   </header>
@@ -1037,6 +1073,23 @@ Example:
 <!-- TOAST -->
 <div class="toast" id="toast"></div>
 
+<!-- PIN MODAL -->
+<div class="modal-overlay" id="pin-modal" onclick="if(event.target===this)closePinModal()">
+  <div class="modal-box" style="max-width:320px;text-align:center;">
+    <div class="modal-title" id="pin-modal-title">🔓 Enter PIN to Unlock</div>
+    <div style="display:flex;gap:8px;justify-content:center;margin:1rem 0;">
+      <input type="password" id="pin-input" maxlength="4" inputmode="numeric" pattern="[0-9]*"
+        style="font-size:1.8rem;letter-spacing:0.5rem;width:120px;text-align:center;background:var(--bg3);border:2px solid var(--border);border-radius:8px;color:var(--text);padding:0.5rem;"
+        onkeydown="if(event.key==='Enter')submitPin()" oninput="this.value=this.value.replace(/[^0-9]/g,'')">
+    </div>
+    <div class="modal-error" id="pin-error"></div>
+    <div class="modal-actions" style="justify-content:center;">
+      <button class="modal-btn" onclick="closePinModal()">Cancel</button>
+      <button class="modal-btn primary" onclick="submitPin()">Unlock</button>
+    </div>
+  </div>
+</div>
+
 <!-- REFRESH LOG PANEL removed -->
 <div id="refresh-log" style="display:none"></div>
 
@@ -1077,7 +1130,7 @@ function esc(s) {
   if (!s) return '';
   return String(s)
     .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
-    .replace(/"/g,'&quot;');
+    .replace(/"/g,'&quot;').replace(/'/g,'&#39;');
 }
 
 // ── Render a single card ──────────────────────────────────────────────────
@@ -1093,12 +1146,14 @@ function renderCard(s) {
     : '';
 
   const ltp     = s.ltp != null ? '₹' + fmt(s.ltp) : '—';
-  const buyAvg  = s.buy_avg ? '₹' + fmt(s.buy_avg) : '—';
+  const masked  = (typeof privacyUnlocked !== 'undefined' && !privacyUnlocked);
+  const priv    = (v) => masked ? '<span style="letter-spacing:2px;color:var(--text3)">●●●</span>' : v;
+  const buyAvg  = priv(s.buy_avg ? '₹' + fmt(s.buy_avg) : '—');
   const pnlPct  = s.pnl_pct != null ? fmtPct(s.pnl_pct) : '—';
   const pnlAbs  = s.pnl_abs != null
     ? (s.pnl_abs >= 0 ? '+' : '-') + '₹' + fmt(Math.abs(s.pnl_abs), 0)
     : '—';
-  const qty     = s.quantity != null ? s.quantity.toLocaleString('en-IN') : '—';
+  const qty     = priv(s.quantity != null ? s.quantity.toLocaleString('en-IN') : '—');
   const invested = (s.buy_avg && s.quantity) ? s.buy_avg * s.quantity : 0;
   const currentVal = (s.ltp && s.quantity) ? s.ltp * s.quantity : 0;
 
@@ -1210,18 +1265,18 @@ function renderCard(s) {
   <div class="price-row">
     <div class="price-cell">
       <div class="price-cell-label">Current Value</div>
-      <div class="price-cell-value">₹${fmt(currentVal, 0)}</div>
+      <div class="price-cell-value">${priv('₹' + fmt(currentVal, 0))}</div>
       <div class="price-cell-sub">(LTP ${ltp})</div>
     </div>
     <div class="price-cell">
       <div class="price-cell-label">Invested Value</div>
-      <div class="price-cell-value">₹${fmt(invested, 0)}</div>
+      <div class="price-cell-value">${priv('₹' + fmt(invested, 0))}</div>
       <div class="price-cell-sub">(Buy Avg ${buyAvg})</div>
     </div>
     <div class="price-cell">
       <div class="price-cell-label">P&L</div>
-      <div class="price-cell-value ${pnlAbsColor}">${pnlAbs}</div>
-      <div class="price-cell-sub ${pnlPctColor}">(${pnlPct})</div>
+      <div class="price-cell-value ${pnlAbsColor}">${priv(pnlAbs)}</div>
+      <div class="price-cell-sub ${pnlPctColor}">${priv('(' + pnlPct + ')')}</div>
     </div>
   </div>
 
@@ -1831,6 +1886,11 @@ const _researchPopover = (() => {
   return el;
 })();
 
+function openResearchTabsFromEl(event, el) {
+  // Read from data attributes — avoids all HTML/JS quoting issues
+  openResearchTabs(event, el.dataset.ticker || '', el.dataset.name || '');
+}
+
 function openResearchTabs(event, ticker, companyName) {
   event.stopPropagation();
   const q  = encodeURIComponent(companyName);
@@ -1845,10 +1905,10 @@ function openResearchTabs(event, ticker, companyName) {
     <a href="https://www.google.com/search?q=${gTrendlyne}" target="_blank" rel="noopener">📈 Trendlyne</a>
     <a href="https://www.google.com/search?q=${gTijori}" target="_blank" rel="noopener">🔍 Tijori Finance</a>
   `;
-  // Position near the click
+  // Position near the click — popover is position:fixed so use viewport coords only
   const r = event.target.getBoundingClientRect();
-  const top  = r.bottom + window.scrollY + 4;
-  const left = Math.min(r.left + window.scrollX, window.innerWidth - 220);
+  const top  = Math.min(r.bottom + 4, window.innerHeight - 120);
+  const left = Math.min(r.left, window.innerWidth - 220);
   _researchPopover.style.top  = top + 'px';
   _researchPopover.style.left = left + 'px';
   _researchPopover.style.display = 'block';
@@ -1903,6 +1963,9 @@ function renderAnalysisTable() {
   const tbody = document.getElementById('analysis-tbody');
   tbody.innerHTML = '';
 
+  // Respect current search query
+  const searchQ = (document.getElementById('analysis-search')?.value || '').toLowerCase().trim();
+
   const stocks = [...allStocks].map(s => {
     return {
       ...s,
@@ -1935,24 +1998,33 @@ function renderAnalysisTable() {
   if (activeArr) activeArr.textContent = analysisSortDir === 'desc' ? '↓' : '↑';
 
   stocks.forEach(s => {
+    // Filter by search query
+    if (searchQ) {
+      const ticker = (s.ticker || '').toLowerCase();
+      const name   = (s.name   || '').toLowerCase();
+      if (!ticker.includes(searchQ) && !name.includes(searchQ)) return;
+    }
+
     const pnlAbs = (s.pnl_abs || 0);
     const pnlPct = (s.pnl_pct || 0);
 
     const f = (val, dec=0) => val != null ? val.toLocaleString('en-IN', {minimumFractionDigits: dec, maximumFractionDigits: dec}) : '—';
     const pc = (val) => val != null ? (val >= 0 ? 'pos' : 'neg') : '';
-    const fp = (val, dec=1) => val != null ? f(val, dec) + '%' : '—';  // format percent, shows '—' not '—%'
+    const fp = (val, dec=1) => val != null ? f(val, dec) + '%' : '—';
     const fVol = (v) => v != null ? v.toFixed(1) + 'x' : '—';
     const volClass = (v) => v == null ? '' : v >= 5 ? 'neg' : v >= 2 ? 'amber' : '';
+    const locked = (typeof privacyUnlocked !== 'undefined' && !privacyUnlocked);
+    const prv = (html) => locked ? '<span style="letter-spacing:2px;color:var(--text3)">●●●</span>' : html;
 
     const tr = document.createElement('tr');
     tr.innerHTML = `
       <td><strong><span style="cursor:pointer;color:var(--blue-text);" title="View fundamental analysis card" onclick="goToCard('${esc(s.ticker)}')">${s.ticker}</span></strong></td>
-      <td><span class="research-name" style="cursor:pointer;color:var(--blue-text);text-decoration:underline dotted;" title="Click to open Tickertape, Trendlyne, Tijori" onclick="openResearchTabs(event,'${esc(s.ticker)}','${esc(s.name || s.ticker)}')">${s.name || '—'}</span></td>
-      <td>${f(s.quantity)}</td>
-      <td>₹${f(s.buy_value)}</td>
-      <td>₹${f(s.pres_value)}</td>
-      <td class="${pc(pnlAbs)}">₹${f(pnlAbs)}</td>
-      <td class="${pc(pnlPct)}">${f(pnlPct,1)}%</td>
+      <td><span class="research-name" style="cursor:pointer;color:var(--blue-text);text-decoration:underline dotted;" title="Click to open Tickertape, Trendlyne, Tijori" data-ticker="${esc(s.ticker)}" data-name="${esc(s.name || s.ticker)}" onclick="openResearchTabsFromEl(event,this)">${s.name || '—'}</span></td>
+      <td>${prv(f(s.quantity))}</td>
+      <td>${prv('₹' + f(s.buy_value))}</td>
+      <td>${prv('₹' + f(s.pres_value))}</td>
+      <td class="${pc(pnlAbs)}">${prv('₹' + f(pnlAbs))}</td>
+      <td class="${pc(pnlPct)}">${prv(f(pnlPct,1) + '%')}</td>
       <td>${f(s.mcap_cr)}</td>
       <td>${f(s.pe, 1)}</td>
       <td>${f(s.roe, 1)}%</td>
@@ -2029,54 +2101,54 @@ function updateSummary(stocks) {
   const y1Pct  = current > 0 ? (y1ChgVal / (current - y1ChgVal) * 100) : 0;
 
   const fmtLacs = (v) => (v / 100000).toLocaleString('en-IN', {minimumFractionDigits:2, maximumFractionDigits:2}) + ' L';
+  const locked = (typeof privacyUnlocked !== 'undefined' && !privacyUnlocked);
+  const pvt = (val) => locked ? '●●●' : val;
 
   // Dashboard Update
-  document.getElementById('sum-invested').textContent = '₹' + fmt(invested, 0);
-  document.getElementById('sum-current').textContent  = '₹' + fmt(current, 0);
+  document.getElementById('sum-invested').textContent = pvt('₹' + fmt(invested, 0));
+  document.getElementById('sum-current').textContent  = pvt('₹' + fmt(current, 0));
 
   const pnlAbsEl = document.getElementById('sum-pnl-abs');
   const pnlPctEl = document.getElementById('sum-pnl-pct');
-  pnlAbsEl.textContent = (pnlAbs >= 0 ? '+' : '-') + '₹' + fmt(Math.abs(pnlAbs), 0);
-  pnlAbsEl.className = 'stat-value ' + (pnlAbs >= 0 ? 'green' : 'red');
-  pnlPctEl.textContent = fmtPct(pnlPct);
-  pnlPctEl.className = 'stat-value ' + (pnlPct >= 0 ? 'green' : 'red');
+  pnlAbsEl.textContent = pvt((pnlAbs >= 0 ? '+' : '-') + '₹' + fmt(Math.abs(pnlAbs), 0));
+  pnlAbsEl.className = 'stat-value ' + (locked ? '' : (pnlAbs >= 0 ? 'green' : 'red'));
+  pnlPctEl.textContent = pvt(fmtPct(pnlPct));
+  pnlPctEl.className = 'stat-value ' + (locked ? '' : (pnlPct >= 0 ? 'green' : 'red'));
 
-  document.getElementById('sum-count').textContent  = stocks.length;
-  document.getElementById('sum-profit').textContent = inProfit;
-  document.getElementById('sum-loss').textContent   = inLoss;
+  document.getElementById('sum-count').textContent  = pvt(String(stocks.length));
+  document.getElementById('sum-profit').textContent = pvt(String(inProfit));
+  document.getElementById('sum-loss').textContent   = pvt(String(inLoss));
 
   // Analysis Update (Lac format for Top Bar)
   const anaInv = document.getElementById('ana-sum-invested');
   if (anaInv) {
-    anaInv.textContent = '₹' + fmtLacs(invested);
-    document.getElementById('ana-sum-current').textContent = '₹' + fmtLacs(current);
+    anaInv.textContent = pvt('₹' + fmtLacs(invested));
+    document.getElementById('ana-sum-current').textContent = pvt('₹' + fmtLacs(current));
 
     const aPnlAbs = document.getElementById('ana-sum-pnl-abs');
     const aPnlPct = document.getElementById('ana-sum-pnl-pct');
-    aPnlAbs.textContent = (pnlAbs >= 0 ? '+' : '-') + '₹' + fmt(Math.abs(pnlAbs), 0);
-    aPnlAbs.className = 'stat-value ' + (pnlAbs >= 0 ? 'green' : 'red');
-    aPnlPct.textContent = `(${fmtPct(pnlPct)})`;
-    aPnlPct.className = 'stat-value ' + (pnlAbs >= 0 ? 'green' : 'red');
+    aPnlAbs.textContent = pvt((pnlAbs >= 0 ? '+' : '-') + '₹' + fmt(Math.abs(pnlAbs), 0));
+    aPnlAbs.className = 'stat-value ' + (locked ? '' : (pnlAbs >= 0 ? 'green' : 'red'));
+    aPnlPct.textContent = pvt(`(${fmtPct(pnlPct)})`);
+    aPnlPct.className = 'stat-value ' + (locked ? '' : (pnlAbs >= 0 ? 'green' : 'red'));
 
     const setChg = (absId, pctId, absVal, pctVal) => {
       const elAbs = document.getElementById(absId);
       const elPct = document.getElementById(pctId);
       const cls = absVal >= 0 ? 'green' : 'red';
-      
-      elAbs.textContent = (absVal >= 0 ? '+' : '-') + '₹' + fmt(Math.abs(absVal), 0);
-      elAbs.className = 'stat-value ' + cls;
-      
-      elPct.textContent = `(${fmtPct(pctVal)})`;
-      elPct.className = 'stat-value ' + cls;
+      elAbs.textContent = pvt((absVal >= 0 ? '+' : '-') + '₹' + fmt(Math.abs(absVal), 0));
+      elAbs.className = 'stat-value ' + (locked ? '' : cls);
+      elPct.textContent = pvt(`(${fmtPct(pctVal)})`);
+      elPct.className = 'stat-value ' + (locked ? '' : cls);
     };
 
     setChg('ana-sum-day-abs', 'ana-sum-day-pct', dayChgVal, dayPct);
     setChg('ana-sum-1m-abs',  'ana-sum-1m-pct',  m1ChgVal,  m1Pct);
     setChg('ana-sum-1y-abs',  'ana-sum-1y-pct',  y1ChgVal,  y1Pct);
 
-    document.getElementById('ana-sum-count').textContent  = stocks.length;
-    document.getElementById('ana-sum-profit').textContent = inProfit;
-    document.getElementById('ana-sum-loss').textContent   = inLoss;
+    document.getElementById('ana-sum-count').textContent  = pvt(String(stocks.length));
+    document.getElementById('ana-sum-profit').textContent = pvt(String(inProfit));
+    document.getElementById('ana-sum-loss').textContent   = pvt(String(inLoss));
   }
 }
 
@@ -2379,35 +2451,8 @@ updateSortButtons();
 
 // Filter analysis table by search query
 function filterAnalysisTable(searchQuery) {
-  const query = searchQuery.toLowerCase().trim();
-  const rows = document.querySelectorAll('#analysis-tbody tr');
-  let visibleCount = 0;
-
-  rows.forEach(row => {
-    // Get ticker (1st cell) and company name (2nd cell)
-    const cells = row.querySelectorAll('td');
-    if (cells.length < 2) {
-      row.style.display = 'none';
-      return;
-    }
-
-    const ticker = cells[0].textContent.toLowerCase().trim();
-    const companyName = cells[1].textContent.toLowerCase().trim();
-
-    // Show row if matches ticker OR company name
-    if (!query || ticker.includes(query) || companyName.includes(query)) {
-      row.style.display = '';
-      visibleCount++;
-    } else {
-      row.style.display = 'none';
-    }
-  });
-
-  // Update count display
-  const totalCount = document.querySelector('#ana-sum-count');
-  if (totalCount) {
-    totalCount.textContent = visibleCount;
-  }
+  // Search is now integrated into renderAnalysisTable — just re-render
+  renderAnalysisTable();
 }
 
 // Set up search event listener when page loads
@@ -2422,6 +2467,122 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // ── Boot ───────────────────────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', init);
+
+// ── Theme toggle ──────────────────────────────────────────────────────────
+function toggleTheme() {
+  const light = document.body.classList.toggle('light-mode');
+  const label = light ? '🌙 Dark' : '☀️ Light';
+  document.querySelectorAll('#theme-toggle, #theme-toggle-2').forEach(b => b.textContent = label);
+  try { localStorage.setItem('theme', light ? 'light' : 'dark'); } catch(e) {}
+}
+// Restore saved theme
+(function() {
+  try {
+    if (localStorage.getItem('theme') === 'light') {
+      document.body.classList.add('light-mode');
+      document.querySelectorAll('#theme-toggle, #theme-toggle-2').forEach(b => b && (b.textContent = '🌙 Dark'));
+    }
+  } catch(e) {}
+})();
+
+// ── Privacy lock ──────────────────────────────────────────────────────────
+const PRIVACY_PIN = '1520';
+let privacyUnlocked = false;
+
+// Private fields: columns by index (0-based) in the analysis table
+// 2=Qty, 3=Buy Value, 4=Present Value, 5=P&L, 6=P&L%
+const PRIVATE_COL_INDICES = [2, 3, 4, 5, 6];
+
+function maskPrivateData() {
+  // Table rows
+  document.querySelectorAll('#analysis-tbody tr').forEach(row => {
+    PRIVATE_COL_INDICES.forEach(i => {
+      const td = row.cells[i];
+      if (td) {
+        if (!td.dataset.orig) td.dataset.orig = td.innerHTML;
+        td.innerHTML = '<span style="letter-spacing:2px;color:var(--text3)">●●●</span>';
+      }
+    });
+  });
+  // Summary bar: hide invested + current value + P&L + holdings counts
+  ['sum-invested','sum-current','sum-pnl-abs','sum-pnl-pct',
+   'sum-count','sum-profit','sum-loss',
+   'ana-sum-invested','ana-sum-current','ana-sum-pnl-abs','ana-sum-pnl-pct',
+   'ana-sum-day-abs','ana-sum-day-pct','ana-sum-1m-abs','ana-sum-1m-pct',
+   'ana-sum-1y-abs','ana-sum-1y-pct',
+   'ana-sum-count','ana-sum-profit','ana-sum-loss'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) {
+      if (!el.dataset.orig) el.dataset.orig = el.textContent;
+      el.textContent = '●●●';
+    }
+  });
+}
+
+function unmaskPrivateData() {
+  document.querySelectorAll('#analysis-tbody tr').forEach(row => {
+    PRIVATE_COL_INDICES.forEach(i => {
+      const td = row.cells[i];
+      if (td && td.dataset.orig) { td.innerHTML = td.dataset.orig; delete td.dataset.orig; }
+    });
+  });
+  ['sum-invested','sum-current','sum-pnl-abs','sum-pnl-pct',
+   'sum-count','sum-profit','sum-loss',
+   'ana-sum-invested','ana-sum-current','ana-sum-pnl-abs','ana-sum-pnl-pct',
+   'ana-sum-day-abs','ana-sum-day-pct','ana-sum-1m-abs','ana-sum-1m-pct',
+   'ana-sum-1y-abs','ana-sum-1y-pct',
+   'ana-sum-count','ana-sum-profit','ana-sum-loss'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el && el.dataset.orig) { el.textContent = el.dataset.orig; delete el.dataset.orig; }
+  });
+}
+
+function applyPrivacyState() {
+  // Re-render everything — masked values are baked in at render time
+  renderAnalysisTable();
+  renderAll();
+  updateSummary(allStocks);
+  if (!privacyUnlocked) {
+    document.querySelectorAll('#lock-btn, #lock-btn-2').forEach(b => b && (b.textContent = '🔒 Locked'));
+  } else {
+    document.querySelectorAll('#lock-btn, #lock-btn-2').forEach(b => b && (b.textContent = '🔓 Unlock'));
+  }
+}
+
+function togglePrivacy() {
+  if (!privacyUnlocked) {
+    // Need to unlock — show PIN modal
+    document.getElementById('pin-modal-title').textContent = '🔓 Enter PIN to Unlock';
+    document.getElementById('pin-input').value = '';
+    document.getElementById('pin-error').classList.remove('show');
+    document.getElementById('pin-modal').classList.add('open');
+    setTimeout(() => document.getElementById('pin-input').focus(), 100);
+  } else {
+    // Lock it back
+    privacyUnlocked = false;
+    applyPrivacyState();
+  }
+}
+
+function submitPin() {
+  const entered = document.getElementById('pin-input').value.trim();
+  if (entered === PRIVACY_PIN) {
+    privacyUnlocked = true;
+    closePinModal();
+    applyPrivacyState();
+    showToast('🔓 Values unlocked', 'green');
+  } else {
+    const errEl = document.getElementById('pin-error');
+    errEl.textContent = '❌ Incorrect PIN';
+    errEl.classList.add('show');
+    document.getElementById('pin-input').value = '';
+    document.getElementById('pin-input').focus();
+  }
+}
+
+function closePinModal() {
+  document.getElementById('pin-modal').classList.remove('open');
+}
 </script>
 </body>
 </html>

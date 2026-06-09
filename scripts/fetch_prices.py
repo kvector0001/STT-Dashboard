@@ -20,10 +20,13 @@ warnings.filterwarnings("ignore")
 # Maps portfolio ticker → correct display name (overrides whatever yfinance returns)
 NAME_OVERRIDES = {
     "PARKHOSPS": "Park Medi World Limited",
+    "INCAP": "Incap Limited",
 }
 # Maps portfolio ticker → preferred yfinance symbol (put first in candidates list)
 YFINANCE_SYMBOL_OVERRIDES = {
     "PARKHOSPS": "PARKHOSPS.BO",
+    "INCAP": "INCAP.BO",
+    "MAFANG": "MAFANG.NS",   # .BO only has 1 row of history; .NS has full 5y
 }
 
 # ── Path resolution (Google Sheets vs local vs GitHub Actions) ──────────────
