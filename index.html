@@ -2497,47 +2497,118 @@ document.querySelectorAll('.sort-btn').forEach(btn => {
   });
 });
 
+// ── GitHub Actions dispatch refresh ──────────────────────────────────────
+const GH_REPO  = 'kvector0001/STT-Dashboard';
+const GH_WF    = 'refresh-prices.yml';
+const GH_BRANCH = 'main';
+
+function getGhToken() {
+  return localStorage.getItem('gh_pat') || '';
+}
+
 async function refreshDataBtn() {
-  const btn      = document.getElementById('refresh-btn');
-  const btnAn    = document.getElementById('refresh-btn-analysis');
-  const prog     = document.getElementById('refresh-progress');
-  const progAn   = document.getElementById('refresh-progress-analysis');
-
-  let fetched = 0, total = 0;
-  const setProgress = () => {
-    const pct  = total ? Math.round(fetched / total * 100) : 0;
-    const text = total ? `${pct}% (${fetched}/${total})` : '';
-    if (prog)   prog.textContent   = text;
-    if (progAn) progAn.textContent = text;
-  };
+  const btn   = document.getElementById('refresh-btn');
+  const btnAn = document.getElementById('refresh-btn-analysis');
+  const prog  = document.getElementById('refresh-progress');
+  const progAn = document.getElementById('refresh-progress-analysis');
   const setBtn = (t) => { if (btn) btn.textContent = t; if (btnAn) btnAn.textContent = t; };
+  const setProgress = (t) => { if (prog) prog.textContent = t; if (progAn) progAn.textContent = t; };
 
-  setBtn('⏳ Refreshing…');
-  setProgress();
+  // Detect if running locally (Flask server available)
+  const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+
+  if (isLocal) {
+    // ── Local mode: stream from Flask ──────────────────────────────────
+    setBtn('⏳ Refreshing…');
+    let fetched = 0, total = 0;
+    try {
+      const es = new EventSource('/api/refresh-stream');
+      let success = false;
+      await new Promise((resolve, reject) => {
+        es.onmessage = (e) => {
+          const msg = JSON.parse(e.data);
+          if (msg.line) {
+            const m = msg.line.match(/(\d+) valid holdings/);
+            if (m) { total = parseInt(m[1]); }
+            if (msg.line.startsWith('[SUCCESS]') && msg.line.includes('LTP:')) {
+              fetched++;
+              setProgress(total ? `${Math.round(fetched/total*100)}% (${fetched}/${total})` : '');
+            }
+          }
+          if (msg.done) { success = msg.success; es.close(); resolve(); }
+        };
+        es.onerror = () => { es.close(); reject(new Error('Server connection lost')); };
+      });
+      if (!success) throw new Error('Refresh failed');
+      setBtn('⏳ Loading…');
+      await init();
+      showToast('✅ Portfolio refreshed', 'green');
+    } catch (err) {
+      showToast('❌ ' + err.message, 'red');
+    } finally {
+      setBtn('🔄 Refresh Data');
+      setTimeout(() => setProgress(''), 5000);
+    }
+    return;
+  }
+
+  // ── GitHub Pages mode: trigger Actions workflow via API ───────────────
+  let token = getGhToken();
+  if (!token) {
+    token = prompt(
+      'Enter your GitHub Personal Access Token (PAT).\n\n' +
+      'It will be saved locally in your browser.\n' +
+      'Create one at: github.com/settings/tokens\n' +
+      '(needs "workflow" scope, or fine-grained "Actions: write")'
+    );
+    if (!token) return;
+    localStorage.setItem('gh_pat', token.trim());
+    token = token.trim();
+  }
+
+  setBtn('⏳ Triggering refresh…');
+  setProgress('');
 
   try {
-    const es = new EventSource('/api/refresh-stream');
-    let success = false;
+    // Trigger the workflow
+    const res = await fetch(
+      `https://api.github.com/repos/${GH_REPO}/actions/workflows/${GH_WF}/dispatches`,
+      {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${token}`,
+          'Accept': 'application/vnd.github+json',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ ref: GH_BRANCH })
+      }
+    );
 
-    await new Promise((resolve, reject) => {
-      es.onmessage = (e) => {
-        const msg = JSON.parse(e.data);
-        if (msg.line) {
-          if (msg.line.includes('[INFO] Found')) {
-            const m = msg.line.match(/(\d+) valid holdings/);
-            if (m) { total = parseInt(m[1]); setProgress(); }
-          }
-          if (msg.line.startsWith('[SUCCESS]') && msg.line.includes('LTP:')) {
-            fetched++;
-            setProgress();
-          }
-        }
-        if (msg.done) { success = msg.success; es.close(); resolve(); }
-      };
-      es.onerror = () => { es.close(); reject(new Error('Server connection lost')); };
+    if (res.status === 401) {
+      localStorage.removeItem('gh_pat');
+      throw new Error('Invalid token — cleared. Click Refresh again to re-enter.');
+    }
+    if (!res.ok) throw new Error(`GitHub API error ${res.status}`);
+
+    // Poll for completion — check prices.json timestamp every 10s
+    setBtn('⏳ Fetching prices…');
+    const oldTs = allStocks[0]?.updated || '';
+    let elapsed = 0;
+    const MAX_WAIT = 180; // 3 min max
+
+    await new Promise((resolve) => {
+      const poll = setInterval(async () => {
+        elapsed += 10;
+        setProgress(`~${elapsed}s`);
+        if (elapsed >= MAX_WAIT) { clearInterval(poll); resolve(); return; }
+        try {
+          const pj = await fetch(`prices.json?t=${Date.now()}`);
+          const data = await pj.json();
+          const newTs = Object.values(data)[0]?.updated || '';
+          if (newTs && newTs !== oldTs) { clearInterval(poll); resolve(); }
+        } catch(e) {}
+      }, 10000);
     });
-
-    if (!success) throw new Error('Refresh failed');
 
     setBtn('⏳ Loading…');
     await init();
@@ -2547,10 +2618,7 @@ async function refreshDataBtn() {
     showToast('❌ ' + err.message, 'red');
   } finally {
     setBtn('🔄 Refresh Data');
-    setTimeout(() => {
-      if (prog)   prog.textContent   = '';
-      if (progAn) progAn.textContent = '';
-    }, 5000);
+    setTimeout(() => setProgress(''), 5000);
   }
 }
 
