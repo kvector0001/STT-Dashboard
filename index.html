@@ -1073,6 +1073,17 @@
           <th onclick="sortAnalysis('div_yield')">Div Yield % <span id="sort-div_yield" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('vol_30m_ratio')">Vol 30m/Avg <span id="sort-vol_30m_ratio" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('vol_yest_ratio')">Vol Yest/Avg <span id="sort-vol_yest_ratio" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('week52_high')">52W High <span id="sort-week52_high" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('week52_low')">52W Low <span id="sort-week52_low" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('gross_margin')">Gross Margin% <span id="sort-gross_margin" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('operating_margin')">Op Margin% <span id="sort-operating_margin" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('ebitda_margin')">EBITDA Margin% <span id="sort-ebitda_margin" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('profit_margin')">Profit Margin% <span id="sort-profit_margin" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('roa')">ROA% <span id="sort-roa" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('qtrly_rev_growth')">Qtrly Rev Growth <span id="sort-qtrly_rev_growth" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('qtrly_earn_growth')">Qtrly Earn Growth <span id="sort-qtrly_earn_growth" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('fcf_cr')">FCF (Cr) <span id="sort-fcf_cr" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('promoter_holding')">Promoter% <span id="sort-promoter_holding" class="sort-indicator"></span></th>
         </tr>
       </thead>
       <tbody id="analysis-tbody">
@@ -1296,12 +1307,54 @@ function renderCard(s) {
         <span class="metric-value">${s.ocf_cr != null ? '₹'+fmt(s.ocf_cr,0)+'Cr' : '—'}</span>
       </div>
       <div class="metric-item">
+        <span class="metric-label">FCF</span>
+        <span class="metric-value">${s.fcf_cr != null ? '₹'+fmt(s.fcf_cr,0)+'Cr' : '—'}</span>
+      </div>
+      <div class="metric-item">
         <span class="metric-label">Vol 30m/Avg</span>
         <span class="metric-value ${s.vol_30m_ratio >= 5 ? 'neg' : s.vol_30m_ratio >= 2 ? '' : ''}" style="${s.vol_30m_ratio >= 5 ? '' : s.vol_30m_ratio >= 2 ? 'color:var(--amber-text)' : ''}">${s.vol_30m_ratio != null ? s.vol_30m_ratio.toFixed(1)+'x' : '—'}</span>
       </div>
+    </div>
+    <div class="metrics-row">
       <div class="metric-item">
-        <span class="metric-label">Vol Yest/Avg</span>
-        <span class="metric-value" style="${s.vol_yest_ratio >= 3 ? 'color:var(--red-text)' : s.vol_yest_ratio >= 1.5 ? 'color:var(--amber-text)' : ''}">${s.vol_yest_ratio != null ? s.vol_yest_ratio.toFixed(1)+'x' : '—'}</span>
+        <span class="metric-label">Gross Margin</span>
+        <span class="metric-value ${s.gross_margin != null ? (s.gross_margin >= 0 ? 'pos' : 'neg') : ''}">${s.gross_margin != null ? fmt(s.gross_margin,1)+'%' : '—'}</span>
+      </div>
+      <div class="metric-item">
+        <span class="metric-label">EBITDA Margin</span>
+        <span class="metric-value ${s.ebitda_margin != null ? (s.ebitda_margin >= 0 ? 'pos' : 'neg') : ''}">${s.ebitda_margin != null ? fmt(s.ebitda_margin,1)+'%' : '—'}</span>
+      </div>
+      <div class="metric-item">
+        <span class="metric-label">Profit Margin</span>
+        <span class="metric-value ${s.profit_margin != null ? (s.profit_margin >= 0 ? 'pos' : 'neg') : ''}">${s.profit_margin != null ? fmt(s.profit_margin,1)+'%' : '—'}</span>
+      </div>
+    </div>
+    <div class="metrics-row">
+      <div class="metric-item">
+        <span class="metric-label">ROA %</span>
+        <span class="metric-value ${s.roa != null ? (s.roa >= 0 ? 'pos' : 'neg') : ''}">${s.roa != null ? fmt(s.roa,1)+'%' : '—'}</span>
+      </div>
+      <div class="metric-item">
+        <span class="metric-label">Op Margin</span>
+        <span class="metric-value ${s.operating_margin != null ? (s.operating_margin >= 0 ? 'pos' : 'neg') : ''}">${s.operating_margin != null ? fmt(s.operating_margin,1)+'%' : '—'}</span>
+      </div>
+      <div class="metric-item">
+        <span class="metric-label">Promoter %</span>
+        <span class="metric-value">${s.promoter_holding != null ? fmt(s.promoter_holding,1)+'%' : '—'}</span>
+      </div>
+    </div>
+    <div class="metrics-row">
+      <div class="metric-item">
+        <span class="metric-label">52W High</span>
+        <span class="metric-value">${s.week52_high != null ? '₹'+fmt(s.week52_high,2) : '—'}</span>
+      </div>
+      <div class="metric-item">
+        <span class="metric-label">52W Low</span>
+        <span class="metric-value">${s.week52_low != null ? '₹'+fmt(s.week52_low,2) : '—'}</span>
+      </div>
+      <div class="metric-item">
+        <span class="metric-label">Qtrly Rev Growth</span>
+        <span class="metric-value ${s.qtrly_rev_growth != null ? (s.qtrly_rev_growth >= 0 ? 'pos' : 'neg') : ''}">${s.qtrly_rev_growth != null ? fmt(s.qtrly_rev_growth,1)+'%' : '—'}</span>
       </div>
     </div>
   </div>
@@ -1604,7 +1657,7 @@ function exportPendingJSON() {
     return;
   }
   
-  const priceFields = new Set(['ltp','buy_avg','quantity','pnl_pct','pnl_abs','updated','mcap_cr','pe','roe','ocf_cr','ret_1d','ret_1m','ret_6m','ret_1y','ret_3y','ret_5y','debt_to_equity','eps','book_value','div_yield','pat_cagr','rev_cagr','mcap_3y','vol_30m_ratio','vol_yest_ratio']);
+  const priceFields = new Set(['ltp','buy_avg','quantity','pnl_pct','pnl_abs','updated','mcap_cr','pe','roe','ocf_cr','ret_1d','ret_1m','ret_6m','ret_1y','ret_3y','ret_5y','debt_to_equity','eps','book_value','div_yield','pat_cagr','rev_cagr','mcap_3y','vol_30m_ratio','vol_yest_ratio','gross_margin','operating_margin','ebitda_margin','profit_margin','roa','qtrly_rev_growth','qtrly_earn_growth','fcf_cr','lfcf_cr','week52_high','week52_low','promoter_holding','name']);
   const exportData = pending.map(s => {
     const out = {};
     Object.entries(s).forEach(([k,v]) => { if (!priceFields.has(k)) out[k] = v; });
@@ -2088,6 +2141,17 @@ function renderAnalysisTable() {
       <td>${fp(s.div_yield, 2)}</td>
       <td class="${volClass(s.vol_30m_ratio)}">${fVol(s.vol_30m_ratio)}</td>
       <td class="${volClass(s.vol_yest_ratio)}">${fVol(s.vol_yest_ratio)}</td>
+      <td>${f(s.week52_high, 2)}</td>
+      <td>${f(s.week52_low, 2)}</td>
+      <td class="${pc(s.gross_margin)}">${fp(s.gross_margin)}</td>
+      <td class="${pc(s.operating_margin)}">${fp(s.operating_margin)}</td>
+      <td class="${pc(s.ebitda_margin)}">${fp(s.ebitda_margin)}</td>
+      <td class="${pc(s.profit_margin)}">${fp(s.profit_margin)}</td>
+      <td class="${pc(s.roa)}">${fp(s.roa)}</td>
+      <td class="${pc(s.qtrly_rev_growth)}">${fp(s.qtrly_rev_growth)}</td>
+      <td class="${pc(s.qtrly_earn_growth)}">${fp(s.qtrly_earn_growth)}</td>
+      <td>${s.fcf_cr != null ? '₹'+f(s.fcf_cr) : '—'}</td>
+      <td>${fp(s.promoter_holding)}</td>
     `;
     tbody.appendChild(tr);
   });

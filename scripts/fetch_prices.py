@@ -317,6 +317,41 @@ for _, row in portfolio.iterrows():
                     if rev is not None:
                         fetched_rev = round(rev * 100, 2)  # Convert to %
 
+                    # ── New metrics ──────────────────────────────────────────
+                    # Margin metrics
+                    gm   = info.get("grossMargins")
+                    if gm is not None:   prices[sym]["gross_margin"]     = round(gm * 100, 2)
+                    om   = info.get("operatingMargins")
+                    if om is not None:   prices[sym]["operating_margin"]  = round(om * 100, 2)
+                    pm   = info.get("profitMargins")
+                    if pm is not None:   prices[sym]["profit_margin"]     = round(pm * 100, 2)
+                    roa  = info.get("returnOnAssets")
+                    if roa is not None:  prices[sym]["roa"]               = round(roa * 100, 2)
+                    ebitda = info.get("ebitdaMargins")
+                    if ebitda is not None: prices[sym]["ebitda_margin"]   = round(ebitda * 100, 2)
+
+                    # Growth metrics
+                    qrg = info.get("revenueQuarterlyGrowth") or info.get("quarterlyRevenueGrowth")
+                    if qrg is not None:  prices[sym]["qtrly_rev_growth"]  = round(qrg * 100, 2)
+                    qeg = info.get("earningsQuarterlyGrowth")
+                    if qeg is not None:  prices[sym]["qtrly_earn_growth"] = round(qeg * 100, 2)
+
+                    # Cash flow metrics (in Crores)
+                    fcf = info.get("freeCashflow")
+                    if fcf is not None:  prices[sym]["fcf_cr"]            = round(fcf / 10_000_000, 2)
+                    lfcf = info.get("leveredFreeCashFlow") or info.get("totalCashFromOperatingActivities")
+                    if lfcf is not None: prices[sym]["lfcf_cr"]           = round(lfcf / 10_000_000, 2)
+
+                    # Price info
+                    hi52 = info.get("fiftyTwoWeekHigh")
+                    lo52 = info.get("fiftyTwoWeekLow")
+                    if hi52 is not None: prices[sym]["week52_high"]       = round(hi52, 2)
+                    if lo52 is not None: prices[sym]["week52_low"]        = round(lo52, 2)
+
+                    # Promoter / insider holding (yfinance "heldPercentInsiders")
+                    ins = info.get("heldPercentInsiders")
+                    if ins is not None:  prices[sym]["promoter_holding"]  = round(ins * 100, 2)
+
                 except Exception as e:
                     pass
 

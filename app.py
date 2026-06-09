@@ -135,4 +135,4 @@ if __name__ == '__main__':
     print("Starting Portfolio Dashboard server...")
     print("Open: http://localhost:8000")
     print("Refresh endpoint: POST /api/refresh")
-    app.run(host='0.0.0.0', port=8000, debug=True, use_reloader=False)
+    app.run(host='0.0.0.0', port=8000, debug=False, use_reloader=False)
