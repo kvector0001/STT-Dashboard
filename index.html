@@ -554,6 +554,7 @@
       overflow-x: auto;
       overflow-y: auto;
       max-height: calc(100vh - 280px);
+      -webkit-overflow-scrolling: touch;
     }
     .analysis-table {
       width: 100%;
@@ -827,11 +828,54 @@
 
     /* ── RESPONSIVE ── */
     @media (max-width: 600px) {
+      /* Cards page */
       #cards { grid-template-columns: 1fr; padding: 0 0.5rem 1rem; }
-      .filter-bar { padding: 0.6rem 0.75rem; }
-      .summary-bar { padding: 0.5rem 0.75rem; gap: 1rem; }
-      .header { padding: 0.75rem 0.75rem 0.6rem; }
+      .filter-bar { padding: 0.6rem 0.75rem; flex-wrap: wrap; }
+      .sort-buttons { display: none; } /* hide sort buttons on mobile - use column sort in table */
       .sort-wrap { width: 100%; margin-left: 0; }
+
+      /* Summary bar — horizontal scroll, compact */
+      .summary-bar { padding: 0.5rem 0.75rem; gap: 0.75rem; }
+      .stat-value { font-size: 0.78rem; }
+      .stat-label { font-size: 0.58rem; }
+
+      /* Header — stack title and actions vertically */
+      .header { padding: 0.5rem 0.75rem; }
+      .header-top { flex-direction: column; align-items: flex-start; gap: 0.4rem; }
+      .header h1 { font-size: 1rem; }
+      .header-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.3rem;
+        width: 100%;
+      }
+      .hdr-btn { font-size: 0.62rem; padding: 0.25rem 0.5rem; }
+      .last-updated { font-size: 0.6rem; width: 100%; }
+
+      /* Tabs — full width, equal split */
+      .tabs-bar { padding: 0; }
+      .tab-item { flex: 1; text-align: center; padding: 0.75rem 0.5rem; font-size: 0.8rem; }
+
+      /* Analysis table container — touch scroll */
+      .analysis-table-container {
+        padding: 0;
+        max-height: calc(100vh - 230px);
+        -webkit-overflow-scrolling: touch;
+      }
+      .analysis-table { font-size: 0.72rem; }
+      .analysis-table th, .analysis-table td { padding: 0.5rem 0.6rem; }
+
+      /* Search bar */
+      #view-analysis > div[style*="padding: 12px"] { padding: 8px 10px !important; }
+      #analysis-search { font-size: 13px; }
+
+      /* PIN modal */
+      .modal-box { padding: 1rem; }
+    }
+
+    @media (max-width: 400px) {
+      .tab-item { font-size: 0.72rem; padding: 0.65rem 0.3rem; }
+      .hdr-btn { font-size: 0.58rem; padding: 0.2rem 0.4rem; }
     }
   </style>
 </head>
