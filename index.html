@@ -1050,6 +1050,7 @@
           <th onclick="sortAnalysis('ticker')">Symbol <span id="sort-ticker" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('name')">Company Name <span id="sort-name" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('quantity')">Qty. <span id="sort-quantity" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('ltp')">CMP <span id="sort-ltp" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('buy_value')">Buy Value <span id="sort-buy_value" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('pres_value')">Present Value <span id="sort-pres_value" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('pnl_abs')">P&L <span id="sort-pnl_abs" class="sort-indicator"></span></th>
@@ -1073,8 +1074,8 @@
           <th onclick="sortAnalysis('div_yield')">Div Yield % <span id="sort-div_yield" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('vol_30m_ratio')">Vol 30m/Avg <span id="sort-vol_30m_ratio" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('vol_yest_ratio')">Vol Yest/Avg <span id="sort-vol_yest_ratio" class="sort-indicator"></span></th>
-          <th onclick="sortAnalysis('week52_high')">52W High <span id="sort-week52_high" class="sort-indicator"></span></th>
-          <th onclick="sortAnalysis('week52_low')">52W Low <span id="sort-week52_low" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('week52_high_pct')">52W High% <span id="sort-week52_high_pct" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('week52_low_pct')">52W Low% <span id="sort-week52_low_pct" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('gross_margin')">Gross Margin% <span id="sort-gross_margin" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('operating_margin')">Op Margin% <span id="sort-operating_margin" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('ebitda_margin')">EBITDA Margin% <span id="sort-ebitda_margin" class="sort-indicator"></span></th>
@@ -1345,12 +1346,12 @@ function renderCard(s) {
     </div>
     <div class="metrics-row">
       <div class="metric-item">
-        <span class="metric-label">52W High</span>
-        <span class="metric-value">${s.week52_high != null ? '₹'+fmt(s.week52_high,2) : '—'}</span>
+        <span class="metric-label">52W High%</span>
+        <span class="metric-value neg">${s.week52_high != null && s.ltp != null ? (((s.ltp-s.week52_high)/s.week52_high*100).toFixed(1)+'%') : '—'}</span>
       </div>
       <div class="metric-item">
-        <span class="metric-label">52W Low</span>
-        <span class="metric-value">${s.week52_low != null ? '₹'+fmt(s.week52_low,2) : '—'}</span>
+        <span class="metric-label">52W Low%</span>
+        <span class="metric-value pos">${s.week52_low != null && s.ltp != null ? ('+'+((s.ltp-s.week52_low)/s.week52_low*100).toFixed(1)+'%') : '—'}</span>
       </div>
       <div class="metric-item">
         <span class="metric-label">Qtrly Rev Growth</span>
@@ -2118,6 +2119,7 @@ function renderAnalysisTable() {
       <td><strong><span style="cursor:pointer;color:var(--blue-text);" title="View fundamental analysis card" onclick="goToCard('${esc(s.ticker)}')">${s.ticker}</span></strong></td>
       <td><span class="research-name" style="cursor:pointer;color:var(--blue-text);text-decoration:underline dotted;" title="Click to open Tickertape, Trendlyne, Tijori" data-ticker="${esc(s.ticker)}" data-name="${esc(s.name || s.ticker)}" onclick="openResearchTabsFromEl(event,this)">${s.name || '—'}</span></td>
       <td>${prv(f(s.quantity))}</td>
+      <td>${s.ltp != null ? '₹'+f(s.ltp,2) : '—'}</td>
       <td>${prv('₹' + f(s.buy_value))}</td>
       <td>${prv('₹' + f(s.pres_value))}</td>
       <td class="${pc(pnlAbs)}">${prv('₹' + f(pnlAbs))}</td>
@@ -2141,8 +2143,8 @@ function renderAnalysisTable() {
       <td>${fp(s.div_yield, 2)}</td>
       <td class="${volClass(s.vol_30m_ratio)}">${fVol(s.vol_30m_ratio)}</td>
       <td class="${volClass(s.vol_yest_ratio)}">${fVol(s.vol_yest_ratio)}</td>
-      <td>${f(s.week52_high, 2)}</td>
-      <td>${f(s.week52_low, 2)}</td>
+      <td class="neg">${s.week52_high != null && s.ltp != null ? (((s.ltp - s.week52_high) / s.week52_high * 100).toFixed(1) + '%') : '\u2014'}</td>
+      <td class="pos">${s.week52_low != null && s.ltp != null ? ('+' + ((s.ltp - s.week52_low) / s.week52_low * 100).toFixed(1) + '%') : '\u2014'}</td>
       <td class="${pc(s.gross_margin)}">${fp(s.gross_margin)}</td>
       <td class="${pc(s.operating_margin)}">${fp(s.operating_margin)}</td>
       <td class="${pc(s.ebitda_margin)}">${fp(s.ebitda_margin)}</td>
