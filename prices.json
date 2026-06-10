@@ -32,7 +32,13 @@
     "fcf_cr": -122.5,
     "week52_high": 804.65,
     "week52_low": 513.3,
-    "promoter_holding": 70.64
+    "promoter_holding": 70.64,
+    "price_to_book": 6.93,
+    "ev_ebitda": 22.45,
+    "insider_pct": 70.64,
+    "ret_2y": 76.88,
+    "ret_4y": 145.9,
+    "ret_5y": 154.93
   },
   "AEROFLEX": {
     "ltp": 425.7,
@@ -66,7 +72,11 @@
     "fcf_cr": -13.92,
     "week52_high": 458.7,
     "week52_low": 158.0,
-    "promoter_holding": 69.8
+    "promoter_holding": 69.8,
+    "price_to_book": 12.32,
+    "ev_ebitda": 54.74,
+    "insider_pct": 69.8,
+    "ret_2y": 216.36
   },
   "SONACOMS": {
     "ltp": 601.85,
@@ -102,7 +112,13 @@
     "fcf_cr": -702.56,
     "week52_high": 621.8,
     "week52_low": 402.3,
-    "promoter_holding": 28.01
+    "promoter_holding": 28.01,
+    "price_to_book": 6.46,
+    "ev_ebitda": 34.34,
+    "insider_pct": 28.01,
+    "ret_2y": -7.66,
+    "ret_4y": 9.49,
+    "ret_5y": 44.03
   },
   "SYRMA": {
     "ltp": 1256.8,
@@ -138,7 +154,11 @@
     "fcf_cr": 7.27,
     "week52_high": 1260.4,
     "week52_low": 500.0,
-    "promoter_holding": 59.61
+    "promoter_holding": 59.61,
+    "price_to_book": 8.27,
+    "ev_ebitda": 43.78,
+    "insider_pct": 59.61,
+    "ret_2y": 159.08
   },
   "PARKHOSPS": {
     "ltp": 292.35,
@@ -170,7 +190,10 @@
     "fcf_cr": 161.55,
     "week52_high": 293.75,
     "week52_low": 138.15,
-    "promoter_holding": 83.94
+    "promoter_holding": 83.94,
+    "price_to_book": 5.78,
+    "ev_ebitda": 26.23,
+    "insider_pct": 83.94
   },
   "MTARTECH": {
     "ltp": 7458.0,
@@ -201,7 +224,13 @@
     "qtrly_earn_growth": 117.3,
     "week52_high": 8449.5,
     "week52_low": 1390.5,
-    "promoter_holding": 29.82
+    "promoter_holding": 29.82,
+    "price_to_book": 29.75,
+    "ev_ebitda": 158.2,
+    "insider_pct": 29.82,
+    "ret_2y": 299.7,
+    "ret_4y": 418.12,
+    "ret_5y": 394.77
   },
   "DEEDEV": {
     "ltp": 688.7,
@@ -234,7 +263,10 @@
     "fcf_cr": -336.25,
     "week52_high": 704.7,
     "week52_low": 183.0,
-    "promoter_holding": 70.18
+    "promoter_holding": 70.18,
+    "price_to_book": 5.43,
+    "ev_ebitda": 28.47,
+    "insider_pct": 70.18
   },
   "SANSERA": {
     "ltp": 2961.4,
@@ -270,7 +302,12 @@
     "fcf_cr": -211.33,
     "week52_high": 2995.0,
     "week52_low": 1216.3,
-    "promoter_holding": 30.1
+    "promoter_holding": 30.1,
+    "price_to_book": 6.31,
+    "ev_ebitda": 29.49,
+    "insider_pct": 30.1,
+    "ret_2y": 179.91,
+    "ret_4y": 336.08
   },
   "TRITURBINE": {
     "ltp": 673.2,
@@ -306,7 +343,13 @@
     "fcf_cr": -258.5,
     "week52_high": 787.6,
     "week52_low": 428.35,
-    "promoter_holding": 59.8
+    "promoter_holding": 59.8,
+    "price_to_book": 14.49,
+    "ev_ebitda": 46.25,
+    "insider_pct": 59.8,
+    "ret_2y": 13.95,
+    "ret_4y": 289.91,
+    "ret_5y": 470.21
   },
   "THERMAX": {
     "ltp": 4739.9,
@@ -342,7 +385,13 @@
     "fcf_cr": -311.12,
     "week52_high": 5075.0,
     "week52_low": 2742.7,
-    "promoter_holding": 73.67
+    "promoter_holding": 73.67,
+    "price_to_book": 9.62,
+    "ev_ebitda": 51.96,
+    "insider_pct": 73.67,
+    "ret_2y": -12.07,
+    "ret_4y": 150.67,
+    "ret_5y": 243.2
   },
   "ELGIEQUIP": {
     "ltp": 604.7,
@@ -378,7 +427,13 @@
     "fcf_cr": 252.24,
     "week52_high": 633.85,
     "week52_low": 408.25,
-    "promoter_holding": 46.16
+    "promoter_holding": 46.16,
+    "price_to_book": 8.57,
+    "ev_ebitda": 32.21,
+    "insider_pct": 46.16,
+    "ret_2y": 0.11,
+    "ret_4y": 105.77,
+    "ret_5y": 204.89
   },
   "POWERINDIA": {
     "ltp": 34610.0,
@@ -414,7 +469,13 @@
     "fcf_cr": 784.76,
     "week52_high": 38785.0,
     "week52_low": 16111.0,
-    "promoter_holding": 71.54
+    "promoter_holding": 71.54,
+    "price_to_book": 29.29,
+    "ev_ebitda": 119.12,
+    "insider_pct": 71.54,
+    "ret_2y": 216.07,
+    "ret_4y": 1009.59,
+    "ret_5y": 1628.06
   },
   "ASTRAMICRO": {
     "ltp": 1457.7,
@@ -450,7 +511,13 @@
     "fcf_cr": 306.21,
     "week52_high": 1478.8,
     "week52_low": 851.0,
-    "promoter_holding": 31.43
+    "promoter_holding": 31.43,
+    "price_to_book": 10.48,
+    "ev_ebitda": 41.58,
+    "insider_pct": 31.43,
+    "ret_2y": 68.29,
+    "ret_4y": 569.91,
+    "ret_5y": 748.03
   },
   "INGERRAND": {
     "ltp": 3955.5,
@@ -482,7 +549,13 @@
     "qtrly_earn_growth": -7.4,
     "week52_high": 4605.0,
     "week52_low": 3063.3,
-    "promoter_holding": 75.2
+    "promoter_holding": 75.2,
+    "price_to_book": 19.27,
+    "ev_ebitda": 36.23,
+    "insider_pct": 75.2,
+    "ret_2y": -5.2,
+    "ret_4y": 203.35,
+    "ret_5y": 337.52
   },
   "ASTERDM": {
     "ltp": 790.35,
@@ -518,7 +591,13 @@
     "fcf_cr": 1346.63,
     "week52_high": 807.0,
     "week52_low": 519.1,
-    "promoter_holding": 53.34
+    "promoter_holding": 53.34,
+    "price_to_book": 9.23,
+    "ev_ebitda": 46.48,
+    "insider_pct": 53.34,
+    "ret_2y": 129.69,
+    "ret_4y": 540.02,
+    "ret_5y": 562.28
   },
   "SJVN": {
     "ltp": 72.79,
@@ -552,7 +631,13 @@
     "fcf_cr": -6219.17,
     "week52_high": 105.85,
     "week52_low": 63.02,
-    "promoter_holding": 81.85
+    "promoter_holding": 81.85,
+    "price_to_book": 1.95,
+    "ev_ebitda": 17.43,
+    "insider_pct": 81.85,
+    "ret_2y": -46.48,
+    "ret_4y": 193.59,
+    "ret_5y": 209.15
   },
   "NEPHROPLUS": {
     "ltp": 709.25,
@@ -583,7 +668,10 @@
     "fcf_cr": 89.72,
     "week52_high": 724.0,
     "week52_low": 446.0,
-    "promoter_holding": 54.73
+    "promoter_holding": 54.73,
+    "price_to_book": 6.59,
+    "ev_ebitda": 29.83,
+    "insider_pct": 54.73
   },
   "NEULANDLAB": {
     "ltp": 17188.0,
@@ -615,7 +703,13 @@
     "qtrly_earn_growth": 664.8,
     "week52_high": 19747.0,
     "week52_low": 11500.0,
-    "promoter_holding": 37.76
+    "promoter_holding": 37.76,
+    "price_to_book": 11.72,
+    "ev_ebitda": 411.85,
+    "insider_pct": 37.76,
+    "ret_2y": 183.97,
+    "ret_4y": 1577.18,
+    "ret_5y": 876.47
   },
   "INOXINDIA": {
     "ltp": 1686.7,
@@ -649,7 +743,11 @@
     "fcf_cr": -59.99,
     "week52_high": 1753.0,
     "week52_low": 1065.0,
-    "promoter_holding": 75.15
+    "promoter_holding": 75.15,
+    "price_to_book": 14.49,
+    "ev_ebitda": 45.08,
+    "insider_pct": 75.15,
+    "ret_2y": 49.08
   },
   "AVANTEL": {
     "ltp": 167.98,
@@ -683,7 +781,10 @@
     "fcf_cr": -83.7,
     "week52_high": 215.0,
     "week52_low": 117.05,
-    "promoter_holding": 43.19
+    "promoter_holding": 43.19,
+    "price_to_book": 12.96,
+    "ev_ebitda": 93.71,
+    "insider_pct": 43.19
   },
   "SOUTHWEST": {
     "ltp": 260.15,
@@ -718,7 +819,13 @@
     "fcf_cr": -26.37,
     "week52_high": 275.0,
     "week52_low": 121.0,
-    "promoter_holding": 70.86
+    "promoter_holding": 70.86,
+    "price_to_book": 4.3,
+    "ev_ebitda": 14.48,
+    "insider_pct": 70.86,
+    "ret_2y": 143.85,
+    "ret_4y": 27.25,
+    "ret_5y": 219.81
   },
   "DLINKINDIA": {
     "ltp": 493.25,
@@ -754,7 +861,13 @@
     "fcf_cr": -0.62,
     "week52_high": 589.55,
     "week52_low": 367.65,
-    "promoter_holding": 61.34
+    "promoter_holding": 61.34,
+    "price_to_book": 3.59,
+    "ev_ebitda": 12.45,
+    "insider_pct": 61.34,
+    "ret_2y": 30.85,
+    "ret_4y": 352.58,
+    "ret_5y": 287.66
   },
   "TRIVENI": {
     "ltp": 375.9,
@@ -790,7 +903,13 @@
     "fcf_cr": -241.12,
     "week52_high": 443.0,
     "week52_low": 317.55,
-    "promoter_holding": 67.82
+    "promoter_holding": 67.82,
+    "price_to_book": 2.64,
+    "ev_ebitda": 18.94,
+    "insider_pct": 67.82,
+    "ret_2y": 14.58,
+    "ret_4y": 53.92,
+    "ret_5y": 119.04
   },
   "GALAPREC": {
     "ltp": 903.7,
@@ -823,7 +942,10 @@
     "fcf_cr": 18.7,
     "week52_high": 977.0,
     "week52_low": 671.2,
-    "promoter_holding": 72.84
+    "promoter_holding": 72.84,
+    "price_to_book": 3.9,
+    "ev_ebitda": 21.95,
+    "insider_pct": 72.84
   },
   "ISGEC": {
     "ltp": 900.25,
@@ -859,7 +981,13 @@
     "fcf_cr": 1561.14,
     "week52_high": 1276.7,
     "week52_low": 683.95,
-    "promoter_holding": 63.15
+    "promoter_holding": 63.15,
+    "price_to_book": 2.41,
+    "ev_ebitda": 13.12,
+    "insider_pct": 63.15,
+    "ret_2y": -8.43,
+    "ret_4y": 81.18,
+    "ret_5y": 9.1
   },
   "MODISONLTD": {
     "ltp": 327.4,
@@ -891,7 +1019,13 @@
     "qtrly_earn_growth": 277.7,
     "week52_high": 362.7,
     "week52_low": 114.0,
-    "promoter_holding": 69.73
+    "promoter_holding": 69.73,
+    "price_to_book": 3.68,
+    "ev_ebitda": 45.83,
+    "insider_pct": 69.73,
+    "ret_2y": 156.66,
+    "ret_4y": 441.96,
+    "ret_5y": 258.43
   },
   "HAPPYFORGE": {
     "ltp": 1363.0,
@@ -925,7 +1059,11 @@
     "fcf_cr": -33.0,
     "week52_high": 1490.0,
     "week52_low": 862.05,
-    "promoter_holding": 78.49
+    "promoter_holding": 78.49,
+    "price_to_book": 6.02,
+    "ev_ebitda": 27.4,
+    "insider_pct": 78.49,
+    "ret_2y": 22.57
   },
   "NESCO": {
     "ltp": 1082.4,
@@ -961,7 +1099,13 @@
     "fcf_cr": 68.46,
     "week52_high": 1638.9,
     "week52_low": 966.05,
-    "promoter_holding": 70.28
+    "promoter_holding": 70.28,
+    "price_to_book": 2.55,
+    "ev_ebitda": 13.34,
+    "insider_pct": 70.28,
+    "ret_2y": 25.83,
+    "ret_4y": 105.79,
+    "ret_5y": 72.81
   },
   "NIFTYBEES": {
     "ltp": 263.88,
@@ -980,7 +1124,10 @@
     "ret_1y": -4.55,
     "ret_3y": 32.57,
     "week52_high": 302.25,
-    "week52_low": 251.7
+    "week52_low": 251.7,
+    "ret_2y": 4.92,
+    "ret_4y": 54.19,
+    "ret_5y": 54.84
   },
   "HBLENGINE": {
     "ltp": 781.4,
@@ -1016,7 +1163,13 @@
     "fcf_cr": 379.95,
     "week52_high": 1122.0,
     "week52_low": 551.6,
-    "promoter_holding": 8.07
+    "promoter_holding": 8.07,
+    "price_to_book": 9.52,
+    "ev_ebitda": 18.83,
+    "insider_pct": 8.07,
+    "ret_2y": 55.16,
+    "ret_4y": 877.03,
+    "ret_5y": 1502.35
   },
   "SASKEN": {
     "ltp": 2314.4,
@@ -1052,7 +1205,13 @@
     "fcf_cr": 0.72,
     "week52_high": 2358.7,
     "week52_low": 991.0,
-    "promoter_holding": 57.68
+    "promoter_holding": 57.68,
+    "price_to_book": 4.25,
+    "ev_ebitda": 38.26,
+    "insider_pct": 57.68,
+    "ret_2y": 66.18,
+    "ret_4y": 248.76,
+    "ret_5y": 102.23
   },
   "PFC": {
     "ltp": 435.6,
@@ -1087,7 +1246,12 @@
     "qtrly_earn_growth": 10.8,
     "week52_high": 486.5,
     "week52_low": 329.9,
-    "promoter_holding": 56.0
+    "promoter_holding": 56.0,
+    "price_to_book": 1.09,
+    "insider_pct": 56.0,
+    "ret_2y": -3.97,
+    "ret_4y": 537.76,
+    "ret_5y": 465.46
   },
   "ENRIN": {
     "ltp": 3547.5,
@@ -1117,7 +1281,10 @@
     "qtrly_earn_growth": 52.2,
     "week52_high": 3968.0,
     "week52_low": 2115.0,
-    "promoter_holding": 27.53
+    "promoter_holding": 27.53,
+    "price_to_book": 25.89,
+    "ev_ebitda": 69.42,
+    "insider_pct": 27.53
   },
   "ARE&M": {
     "ltp": 831.7,
@@ -1153,7 +1320,13 @@
     "fcf_cr": -289.46,
     "week52_high": 1057.85,
     "week52_low": 670.0,
-    "promoter_holding": 33.28
+    "promoter_holding": 33.28,
+    "price_to_book": 1.86,
+    "ev_ebitda": 10.19,
+    "insider_pct": 33.28,
+    "ret_2y": -29.2,
+    "ret_4y": 65.97,
+    "ret_5y": 19.49
   },
   "JNKINDIA": {
     "ltp": 484.05,
@@ -1187,7 +1360,11 @@
     "fcf_cr": -45.16,
     "week52_high": 502.0,
     "week52_low": 200.92,
-    "promoter_holding": 70.92
+    "promoter_holding": 70.92,
+    "price_to_book": 4.79,
+    "ev_ebitda": 28.12,
+    "insider_pct": 70.92,
+    "ret_2y": -24.07
   },
   "KENNAMET": {
     "ltp": 2793.7,
@@ -1217,7 +1394,11 @@
     "qtrly_earn_growth": 110.7,
     "week52_high": 3400.3,
     "week52_low": 2405.2,
-    "promoter_holding": 75.15
+    "promoter_holding": 75.15,
+    "price_to_book": 7.73,
+    "ev_ebitda": 26.98,
+    "insider_pct": 75.15,
+    "ret_2y": 51.2
   },
   "NLCINDIA": {
     "ltp": 327.75,
@@ -1253,7 +1434,13 @@
     "fcf_cr": -5099.93,
     "week52_high": 387.8,
     "week52_low": 220.71,
-    "promoter_holding": 75.25
+    "promoter_holding": 75.25,
+    "price_to_book": 2.05,
+    "ev_ebitda": 10.24,
+    "insider_pct": 75.25,
+    "ret_2y": 38.9,
+    "ret_4y": 394.92,
+    "ret_5y": 524.18
   },
   "INDUSTOWER": {
     "ltp": 419.4,
@@ -1288,7 +1475,13 @@
     "fcf_cr": 4325.92,
     "week52_high": 481.5,
     "week52_low": 312.55,
-    "promoter_holding": 51.31
+    "promoter_holding": 51.31,
+    "price_to_book": 2.75,
+    "ev_ebitda": 8.25,
+    "insider_pct": 51.31,
+    "ret_2y": 18.84,
+    "ret_4y": 117.25,
+    "ret_5y": 111.62
   },
   "INDGN": {
     "ltp": 523.4,
@@ -1322,7 +1515,11 @@
     "fcf_cr": 643.81,
     "week52_high": 620.2,
     "week52_low": 414.0,
-    "promoter_holding": 57.06
+    "promoter_holding": 57.06,
+    "price_to_book": 4.04,
+    "ev_ebitda": 18.14,
+    "insider_pct": 57.06,
+    "ret_2y": 1.81
   },
   "RIR": {
     "ltp": 169.3,
@@ -1358,7 +1555,13 @@
     "fcf_cr": -14.37,
     "week52_high": 388.1,
     "week52_low": 131.9,
-    "promoter_holding": 69.06
+    "promoter_holding": 69.06,
+    "price_to_book": 8.17,
+    "ev_ebitda": 100.19,
+    "insider_pct": 69.06,
+    "ret_2y": -1.06,
+    "ret_4y": 687.58,
+    "ret_5y": 2694.69
   },
   "WELCORP": {
     "ltp": 1411.6,
@@ -1394,7 +1597,13 @@
     "fcf_cr": 151.7,
     "week52_high": 1427.0,
     "week52_low": 710.0,
-    "promoter_holding": 49.85
+    "promoter_holding": 49.85,
+    "price_to_book": 4.42,
+    "ev_ebitda": 16.13,
+    "insider_pct": 49.85,
+    "ret_2y": 153.48,
+    "ret_4y": 678.22,
+    "ret_5y": 991.56
   },
   "TEGA": {
     "ltp": 1799.3,
@@ -1430,7 +1639,12 @@
     "fcf_cr": 90.77,
     "week52_high": 2125.0,
     "week52_low": 1467.0,
-    "promoter_holding": 67.44
+    "promoter_holding": 67.44,
+    "price_to_book": 3.97,
+    "ev_ebitda": 50.63,
+    "insider_pct": 67.44,
+    "ret_2y": 17.93,
+    "ret_4y": 321.43
   },
   "SCODATUBES": {
     "ltp": 124.63,
@@ -1463,7 +1677,10 @@
     "fcf_cr": -17.51,
     "week52_high": 230.85,
     "week52_low": 110.0,
-    "promoter_holding": 70.81
+    "promoter_holding": 70.81,
+    "price_to_book": 1.9,
+    "ev_ebitda": 11.61,
+    "insider_pct": 70.81
   },
   "POWERICA": {
     "ltp": 482.25,
@@ -1494,7 +1711,10 @@
     "fcf_cr": -222.38,
     "week52_high": 586.3,
     "week52_low": 365.1,
-    "promoter_holding": 77.18
+    "promoter_holding": 77.18,
+    "price_to_book": 2.58,
+    "ev_ebitda": 12.66,
+    "insider_pct": 77.18
   },
   "SALZERELEC": {
     "ltp": 645.95,
@@ -1528,7 +1748,13 @@
     "fcf_cr": -118.25,
     "week52_high": 967.35,
     "week52_low": 488.8,
-    "promoter_holding": 44.1
+    "promoter_holding": 44.1,
+    "price_to_book": 1.92,
+    "ev_ebitda": 11.33,
+    "insider_pct": 44.1,
+    "ret_2y": -7.56,
+    "ret_4y": 262.22,
+    "ret_5y": 282.09
   },
   "MENONBE": {
     "ltp": 169.81,
@@ -1564,7 +1790,13 @@
     "fcf_cr": -17.23,
     "week52_high": 170.9,
     "week52_low": 101.5,
-    "promoter_holding": 70.84
+    "promoter_holding": 70.84,
+    "price_to_book": 5.25,
+    "ev_ebitda": 16.76,
+    "insider_pct": 70.84,
+    "ret_2y": 50.57,
+    "ret_4y": 149.17,
+    "ret_5y": 124.75
   },
   "HEG": {
     "ltp": 527.75,
@@ -1598,7 +1830,13 @@
     "fcf_cr": -135.56,
     "week52_high": 690.0,
     "week52_low": 459.8,
-    "promoter_holding": 59.49
+    "promoter_holding": 59.49,
+    "price_to_book": 2.12,
+    "ev_ebitda": 18.49,
+    "insider_pct": 59.49,
+    "ret_2y": 15.6,
+    "ret_4y": 169.39,
+    "ret_5y": 18.04
   },
   "ASHIANA": {
     "ltp": 362.2,
@@ -1634,7 +1872,13 @@
     "fcf_cr": 469.96,
     "week52_high": 389.4,
     "week52_low": 269.45,
-    "promoter_holding": 71.91
+    "promoter_holding": 71.91,
+    "price_to_book": 4.04,
+    "ev_ebitda": 16.36,
+    "insider_pct": 71.91,
+    "ret_2y": 6.47,
+    "ret_4y": 193.04,
+    "ret_5y": 115.5
   },
   "RUBICON": {
     "ltp": 1170.5,
@@ -1666,7 +1910,10 @@
     "fcf_cr": -98.27,
     "week52_high": 1370.0,
     "week52_low": 570.75,
-    "promoter_holding": 77.46
+    "promoter_holding": 77.46,
+    "price_to_book": 28.84,
+    "ev_ebitda": 48.1,
+    "insider_pct": 77.46
   },
   "INDNIPPON": {
     "ltp": 895.6,
@@ -1698,7 +1945,12 @@
     "fcf_cr": -11.52,
     "week52_high": 1099.9,
     "week52_low": 675.0,
-    "promoter_holding": 70.91
+    "promoter_holding": 70.91,
+    "price_to_book": 2.57,
+    "insider_pct": 70.91,
+    "ret_2y": 41.91,
+    "ret_4y": 148.81,
+    "ret_5y": 143.56
   },
   "RKSWAMY": {
     "ltp": 101.39,
@@ -1732,7 +1984,11 @@
     "fcf_cr": 83.91,
     "week52_high": 202.59,
     "week52_low": 67.15,
-    "promoter_holding": 69.61
+    "promoter_holding": 69.61,
+    "price_to_book": 1.93,
+    "ev_ebitda": 9.62,
+    "insider_pct": 69.61,
+    "ret_2y": -61.55
   },
   "SCI": {
     "ltp": 297.15,
@@ -1764,7 +2020,13 @@
     "qtrly_earn_growth": 118.5,
     "week52_high": 368.75,
     "week52_low": 195.55,
-    "promoter_holding": 63.8
+    "promoter_holding": 63.8,
+    "price_to_book": 1.6,
+    "ev_ebitda": 34.1,
+    "insider_pct": 63.8,
+    "ret_2y": 26.17,
+    "ret_4y": 176.16,
+    "ret_5y": 188.18
   },
   "RATEGAIN": {
     "ltp": 750.5,
@@ -1799,7 +2061,12 @@
     "fcf_cr": -11.97,
     "week52_high": 802.0,
     "week52_low": 417.6,
-    "promoter_holding": 53.94
+    "promoter_holding": 53.94,
+    "price_to_book": 4.36,
+    "ev_ebitda": 28.45,
+    "insider_pct": 53.94,
+    "ret_2y": 6.95,
+    "ret_4y": 140.89
   },
   "GMDCLTD": {
     "ltp": 627.8,
@@ -1835,7 +2102,13 @@
     "fcf_cr": -830.41,
     "week52_high": 771.9,
     "week52_low": 374.8,
-    "promoter_holding": 74.05
+    "promoter_holding": 74.05,
+    "price_to_book": 2.76,
+    "ev_ebitda": 44.51,
+    "insider_pct": 74.05,
+    "ret_2y": 63.73,
+    "ret_4y": 308.65,
+    "ret_5y": 886.43
   },
   "TREL": {
     "ltp": 25.68,
@@ -1867,7 +2140,11 @@
     "fcf_cr": -35.69,
     "week52_high": 36.9,
     "week52_low": 21.47,
-    "promoter_holding": 74.46
+    "promoter_holding": 74.46,
+    "price_to_book": 0.5,
+    "ev_ebitda": 13.82,
+    "insider_pct": 74.46,
+    "ret_2y": -40.15
   },
   "EIMCOELECO": {
     "ltp": 1566.5,
@@ -1903,7 +2180,13 @@
     "fcf_cr": -39.24,
     "week52_high": 3019.9,
     "week52_low": 1405.5,
-    "promoter_holding": 53.54
+    "promoter_holding": 53.54,
+    "price_to_book": 1.93,
+    "ev_ebitda": 20.79,
+    "insider_pct": 53.54,
+    "ret_2y": -19.63,
+    "ret_4y": 381.38,
+    "ret_5y": 243.33
   },
   "BLUEJET": {
     "ltp": 467.9,
@@ -1937,7 +2220,11 @@
     "fcf_cr": 79.55,
     "week52_high": 1027.8,
     "week52_low": 325.0,
-    "promoter_holding": 79.81
+    "promoter_holding": 79.81,
+    "price_to_book": 6.07,
+    "ev_ebitda": 26.46,
+    "insider_pct": 79.81,
+    "ret_2y": 25.03
   },
   "LATENTVIEW": {
     "ltp": 304.5,
@@ -1972,7 +2259,12 @@
     "fcf_cr": 176.56,
     "week52_high": 517.5,
     "week52_low": 248.0,
-    "promoter_holding": 71.4
+    "promoter_holding": 71.4,
+    "price_to_book": 3.56,
+    "ev_ebitda": 18.3,
+    "insider_pct": 71.4,
+    "ret_2y": -36.66,
+    "ret_4y": -22.44
   },
   "CARBORUNIV": {
     "ltp": 1040.1,
@@ -2006,7 +2298,13 @@
     "fcf_cr": 183.25,
     "week52_high": 1166.4,
     "week52_low": 735.2,
-    "promoter_holding": 40.42
+    "promoter_holding": 40.42,
+    "price_to_book": 5.0,
+    "ev_ebitda": 33.67,
+    "insider_pct": 40.42,
+    "ret_2y": -34.73,
+    "ret_4y": 43.13,
+    "ret_5y": 47.02
   },
   "SHREEJISPG": {
     "ltp": 461.9,
@@ -2039,7 +2337,10 @@
     "fcf_cr": -99.17,
     "week52_high": 482.9,
     "week52_low": 222.0,
-    "promoter_holding": 89.1
+    "promoter_holding": 89.1,
+    "price_to_book": 9.87,
+    "ev_ebitda": 30.32,
+    "insider_pct": 89.1
   },
   "ENTERO": {
     "ltp": 1147.3,
@@ -2072,7 +2373,11 @@
     "fcf_cr": 69.68,
     "week52_high": 1390.0,
     "week52_low": 944.0,
-    "promoter_holding": 66.97
+    "promoter_holding": 66.97,
+    "price_to_book": 3.03,
+    "ev_ebitda": 20.45,
+    "insider_pct": 66.97,
+    "ret_2y": 17.96
   },
   "NETWEB": {
     "ltp": 4428.2,
@@ -2106,7 +2411,11 @@
     "fcf_cr": 112.21,
     "week52_high": 4965.0,
     "week52_low": 1700.1,
-    "promoter_holding": 68.0
+    "promoter_holding": 68.0,
+    "price_to_book": 33.72,
+    "ev_ebitda": 88.24,
+    "insider_pct": 68.0,
+    "ret_2y": 83.69
   },
   "RAMCOSYS": {
     "ltp": 540.55,
@@ -2141,7 +2450,13 @@
     "fcf_cr": 56.51,
     "week52_high": 682.35,
     "week52_low": 342.1,
-    "promoter_holding": 64.02
+    "promoter_holding": 64.02,
+    "price_to_book": 6.48,
+    "ev_ebitda": 14.47,
+    "insider_pct": 64.02,
+    "ret_2y": 76.39,
+    "ret_4y": 130.29,
+    "ret_5y": 8.81
   },
   "STALLION": {
     "ltp": 186.84,
@@ -2174,7 +2489,10 @@
     "fcf_cr": -16.41,
     "week52_high": 423.8,
     "week52_low": 74.0,
-    "promoter_holding": 65.59
+    "promoter_holding": 65.59,
+    "price_to_book": 4.73,
+    "ev_ebitda": 19.63,
+    "insider_pct": 65.59
   },
   "RPTECH": {
     "ltp": 552.65,
@@ -2208,7 +2526,11 @@
     "fcf_cr": -47.2,
     "week52_high": 575.0,
     "week52_low": 275.6,
-    "promoter_holding": 75.28
+    "promoter_holding": 75.28,
+    "price_to_book": 1.94,
+    "ev_ebitda": 9.95,
+    "insider_pct": 75.28,
+    "ret_2y": 80.65
   },
   "SIGNPOST": {
     "ltp": 270.05,
@@ -2242,7 +2564,11 @@
     "fcf_cr": -75.97,
     "week52_high": 310.0,
     "week52_low": 180.37,
-    "promoter_holding": 75.96
+    "promoter_holding": 75.96,
+    "price_to_book": 5.67,
+    "ev_ebitda": 10.7,
+    "insider_pct": 75.96,
+    "ret_2y": -3.79
   },
   "SIEMENS": {
     "ltp": 3619.8,
@@ -2275,7 +2601,13 @@
     "qtrly_earn_growth": -36.4,
     "week52_high": 3937.3,
     "week52_low": 2826.0,
-    "promoter_holding": 76.82
+    "promoter_holding": 76.82,
+    "price_to_book": 9.27,
+    "ev_ebitda": 51.55,
+    "insider_pct": 76.82,
+    "ret_2y": -11.78,
+    "ret_4y": 170.51,
+    "ret_5y": 208.59
   },
   "EXPLEOSOL": {
     "ltp": 823.95,
@@ -2311,7 +2643,13 @@
     "fcf_cr": 110.71,
     "week52_high": 1370.9,
     "week52_low": 640.0,
-    "promoter_holding": 71.05
+    "promoter_holding": 71.05,
+    "price_to_book": 1.61,
+    "ev_ebitda": 5.36,
+    "insider_pct": 71.05,
+    "ret_2y": -30.62,
+    "ret_4y": -29.78,
+    "ret_5y": -28.66
   },
   "HONAUT": {
     "ltp": 35125.0,
@@ -2347,7 +2685,13 @@
     "fcf_cr": 468.21,
     "week52_high": 41450.0,
     "week52_low": 26220.0,
-    "promoter_holding": 75.16
+    "promoter_holding": 75.16,
+    "price_to_book": 7.08,
+    "ev_ebitda": 45.19,
+    "insider_pct": 75.16,
+    "ret_2y": -31.22,
+    "ret_4y": -2.93,
+    "ret_5y": -14.57
   },
   "GRINDWELL": {
     "ltp": 1933.2,
@@ -2383,7 +2727,13 @@
     "fcf_cr": 367.73,
     "week52_high": 2002.7,
     "week52_low": 1329.0,
-    "promoter_holding": 58.32
+    "promoter_holding": 58.32,
+    "price_to_book": 8.46,
+    "ev_ebitda": 35.44,
+    "insider_pct": 58.32,
+    "ret_2y": -21.54,
+    "ret_4y": 20.78,
+    "ret_5y": 61.56
   },
   "BOROSCI": {
     "ltp": 153.69,
@@ -2416,7 +2766,10 @@
     "fcf_cr": 22.15,
     "week52_high": 190.79,
     "week52_low": 96.64,
-    "promoter_holding": 73.43
+    "promoter_holding": 73.43,
+    "price_to_book": 3.11,
+    "ev_ebitda": 19.93,
+    "insider_pct": 73.43
   },
   "GMMPFAUDLR": {
     "ltp": 771.75,
@@ -2450,7 +2803,13 @@
     "fcf_cr": 163.82,
     "week52_high": 1418.0,
     "week52_low": 755.25,
-    "promoter_holding": 41.61
+    "promoter_holding": 41.61,
+    "price_to_book": 2.87,
+    "ev_ebitda": 9.57,
+    "insider_pct": 41.61,
+    "ret_2y": -38.23,
+    "ret_4y": -45.84,
+    "ret_5y": -51.65
   },
   "MAPMYINDIA": {
     "ltp": 877.55,
@@ -2486,7 +2845,12 @@
     "fcf_cr": 42.06,
     "week52_high": 1998.0,
     "week52_low": 795.0,
-    "promoter_holding": 69.48
+    "promoter_holding": 69.48,
+    "price_to_book": 5.26,
+    "ev_ebitda": 25.5,
+    "insider_pct": 69.48,
+    "ret_2y": -54.46,
+    "ret_4y": -29.96
   },
   "YATHARTH": {
     "ltp": 839.1,
@@ -2519,7 +2883,11 @@
     "fcf_cr": -88.68,
     "week52_high": 889.9,
     "week52_low": 485.0,
-    "promoter_holding": 56.94
+    "promoter_holding": 56.94,
+    "price_to_book": 4.78,
+    "ev_ebitda": 25.53,
+    "insider_pct": 56.94,
+    "ret_2y": 102.1
   },
   "VASCONEQ": {
     "ltp": 31.51,
@@ -2554,7 +2922,13 @@
     "fcf_cr": -41.1,
     "week52_high": 74.59,
     "week52_low": 26.75,
-    "promoter_holding": 47.6
+    "promoter_holding": 47.6,
+    "price_to_book": 0.66,
+    "ev_ebitda": 14.61,
+    "insider_pct": 47.6,
+    "ret_2y": -48.02,
+    "ret_4y": 39.66,
+    "ret_5y": 46.52
   },
   "FRACTAL": {
     "ltp": 982.8,
@@ -2585,7 +2959,10 @@
     "fcf_cr": 132.09,
     "week52_high": 1118.0,
     "week52_low": 733.7,
-    "promoter_holding": 64.45
+    "promoter_holding": 64.45,
+    "price_to_book": 4.94,
+    "ev_ebitda": 31.69,
+    "insider_pct": 64.45
   },
   "PROTEAN": {
     "ltp": 611.0,
@@ -2619,7 +2996,10 @@
     "fcf_cr": -12.45,
     "week52_high": 1009.3,
     "week52_low": 444.0,
-    "promoter_holding": 23.79
+    "promoter_holding": 23.79,
+    "price_to_book": 2.43,
+    "ev_ebitda": 19.39,
+    "insider_pct": 23.79
   },
   "UNIVCABLES": {
     "ltp": 1223.4,
@@ -2655,7 +3035,13 @@
     "fcf_cr": -291.74,
     "week52_high": 1302.5,
     "week52_low": 576.0,
-    "promoter_holding": 73.26
+    "promoter_holding": 73.26,
+    "price_to_book": 2.25,
+    "ev_ebitda": 20.78,
+    "insider_pct": 73.26,
+    "ret_2y": 100.07,
+    "ret_4y": 780.36,
+    "ret_5y": 585.28
   },
   "RAYMOND": {
     "ltp": 536.0,
@@ -2689,7 +3075,13 @@
     "fcf_cr": 1266.68,
     "week52_high": 783.9,
     "week52_low": 320.0,
-    "promoter_holding": 51.23
+    "promoter_holding": 51.23,
+    "price_to_book": 1.31,
+    "ev_ebitda": 12.56,
+    "insider_pct": 51.23,
+    "ret_2y": -74.52,
+    "ret_4y": -30.29,
+    "ret_5y": 27.64
   },
   "GRAPHITE": {
     "ltp": 667.1,
@@ -2723,7 +3115,13 @@
     "fcf_cr": -193.62,
     "week52_high": 802.4,
     "week52_low": 505.8,
-    "promoter_holding": 65.96
+    "promoter_holding": 65.96,
+    "price_to_book": 2.18,
+    "ev_ebitda": 52.29,
+    "insider_pct": 65.96,
+    "ret_2y": 19.53,
+    "ret_4y": 57.31,
+    "ret_5y": -3.71
   },
   "URBANCO": {
     "ltp": 123.57,
@@ -2752,7 +3150,10 @@
     "fcf_cr": -255.6,
     "week52_high": 201.18,
     "week52_low": 100.7,
-    "promoter_holding": 36.49
+    "promoter_holding": 36.49,
+    "price_to_book": 8.36,
+    "ev_ebitda": -80.14,
+    "insider_pct": 36.49
   },
   "GMRAIRPORT": {
     "ltp": 102.61,
@@ -2783,7 +3184,13 @@
     "fcf_cr": -3482.31,
     "week52_high": 110.36,
     "week52_low": 79.92,
-    "promoter_holding": 71.43
+    "promoter_holding": 71.43,
+    "price_to_book": -42.89,
+    "ev_ebitda": 24.27,
+    "insider_pct": 71.43,
+    "ret_2y": 20.57,
+    "ret_4y": 192.68,
+    "ret_5y": 300.06
   },
   "GESHIP": {
     "ltp": 1442.2,
@@ -2819,7 +3226,13 @@
     "fcf_cr": -869.63,
     "week52_high": 1798.0,
     "week52_low": 913.1,
-    "promoter_holding": 30.78
+    "promoter_holding": 30.78,
+    "price_to_book": 1.18,
+    "ev_ebitda": 4.8,
+    "insider_pct": 30.78,
+    "ret_2y": 37.68,
+    "ret_4y": 317.67,
+    "ret_5y": 405.18
   },
   "LAXMIDENTL": {
     "ltp": 224.45,
@@ -2852,7 +3265,10 @@
     "fcf_cr": -95.28,
     "week52_high": 509.95,
     "week52_low": 155.88,
-    "promoter_holding": 68.21
+    "promoter_holding": 68.21,
+    "price_to_book": 5.22,
+    "ev_ebitda": 28.29,
+    "insider_pct": 68.21
   },
   "BIOCON": {
     "ltp": 416.35,
@@ -2888,7 +3304,13 @@
     "fcf_cr": -46.61,
     "week52_high": 440.4,
     "week52_low": 331.0,
-    "promoter_holding": 54.07
+    "promoter_holding": 54.07,
+    "price_to_book": 1.95,
+    "ev_ebitda": 23.3,
+    "insider_pct": 54.07,
+    "ret_2y": 34.77,
+    "ret_4y": 31.25,
+    "ret_5y": 8.89
   },
   "ANURAS": {
     "ltp": 1267.2,
@@ -2924,7 +3346,13 @@
     "fcf_cr": -481.08,
     "week52_high": 1415.0,
     "week52_low": 1044.5,
-    "promoter_holding": 85.02
+    "promoter_holding": 85.02,
+    "price_to_book": 4.33,
+    "ev_ebitda": 32.71,
+    "insider_pct": 85.02,
+    "ret_2y": 66.69,
+    "ret_4y": 59.56,
+    "ret_5y": 77.69
   },
   "SHANKARA": {
     "ltp": 110.55,
@@ -2957,7 +3385,13 @@
     "fcf_cr": -176.1,
     "week52_high": 1209.8,
     "week52_low": 98.25,
-    "promoter_holding": 62.29
+    "promoter_holding": 62.29,
+    "price_to_book": 0.6,
+    "ev_ebitda": 14.23,
+    "insider_pct": 62.29,
+    "ret_2y": -83.35,
+    "ret_4y": -83.03,
+    "ret_5y": -83.17
   },
   "INCAP": {
     "ltp": 81.92,
@@ -2992,7 +3426,13 @@
     "fcf_cr": 4.64,
     "week52_high": 160.99,
     "week52_low": 64.0,
-    "promoter_holding": 77.76
+    "promoter_holding": 77.76,
+    "price_to_book": 2.53,
+    "ev_ebitda": 32.93,
+    "insider_pct": 77.76,
+    "ret_2y": 26.57,
+    "ret_4y": 110.67,
+    "ret_5y": 205.09
   },
   "SHILPAMED": {
     "ltp": 569.15,
@@ -3028,7 +3468,13 @@
     "fcf_cr": -142.03,
     "week52_high": 578.8,
     "week52_low": 259.5,
-    "promoter_holding": 60.52
+    "promoter_holding": 60.52,
+    "price_to_book": 4.36,
+    "ev_ebitda": 27.03,
+    "insider_pct": 60.52,
+    "ret_2y": 138.28,
+    "ret_4y": 190.72,
+    "ret_5y": 86.15
   },
   "ECOSMOBLTY": {
     "ltp": 126.14,
@@ -3062,7 +3508,10 @@
     "fcf_cr": 25.16,
     "week52_high": 358.4,
     "week52_low": 103.94,
-    "promoter_holding": 70.49
+    "promoter_holding": 70.49,
+    "price_to_book": 2.87,
+    "ev_ebitda": 6.66,
+    "insider_pct": 70.49
   },
   "KIRLPNU": {
     "ltp": 1645.0,
@@ -3098,7 +3547,11 @@
     "fcf_cr": 118.68,
     "week52_high": 1705.0,
     "week52_low": 990.1,
-    "promoter_holding": 45.75
+    "promoter_holding": 45.75,
+    "price_to_book": 8.58,
+    "ev_ebitda": 28.66,
+    "insider_pct": 45.75,
+    "ret_2y": 47.75
   },
   "PTC": {
     "ltp": 187.0,
@@ -3134,7 +3587,13 @@
     "fcf_cr": 1516.62,
     "week52_high": 229.51,
     "week52_low": 149.59,
-    "promoter_holding": 21.7
+    "promoter_holding": 21.7,
+    "price_to_book": 0.92,
+    "ev_ebitda": 4.02,
+    "insider_pct": 21.7,
+    "ret_2y": -0.23,
+    "ret_4y": 177.56,
+    "ret_5y": 145.75
   },
   "LANDMARK": {
     "ltp": 418.8,
@@ -3170,7 +3629,11 @@
     "fcf_cr": 100.37,
     "week52_high": 662.8,
     "week52_low": 339.5,
-    "promoter_holding": 55.25
+    "promoter_holding": 55.25,
+    "price_to_book": 2.93,
+    "ev_ebitda": 10.17,
+    "insider_pct": 55.25,
+    "ret_2y": -38.84
   },
   "FREDUN": {
     "ltp": 2311.25,
@@ -3206,7 +3669,13 @@
     "fcf_cr": -89.31,
     "week52_high": 2620.0,
     "week52_low": 707.9,
-    "promoter_holding": 54.9
+    "promoter_holding": 54.9,
+    "price_to_book": 4.62,
+    "ev_ebitda": 16.03,
+    "insider_pct": 54.9,
+    "ret_2y": 190.18,
+    "ret_4y": 143.49,
+    "ret_5y": 459.33
   },
   "CMSINFO": {
     "ltp": 294.6,
@@ -3242,7 +3711,12 @@
     "fcf_cr": -121.61,
     "week52_high": 541.15,
     "week52_low": 261.9,
-    "promoter_holding": 7.46
+    "promoter_holding": 7.46,
+    "price_to_book": 1.99,
+    "ev_ebitda": 8.51,
+    "insider_pct": 7.46,
+    "ret_2y": -31.59,
+    "ret_4y": 32.27
   },
   "DIFFNKG": {
     "ltp": 330.8,
@@ -3276,7 +3750,10 @@
     "fcf_cr": -32.56,
     "week52_high": 418.2,
     "week52_low": 216.8,
-    "promoter_holding": 77.54
+    "promoter_holding": 77.54,
+    "price_to_book": 3.26,
+    "ev_ebitda": 20.37,
+    "insider_pct": 77.54
   },
   "MOSCHIP": {
     "ltp": 214.11,
@@ -3309,7 +3786,10 @@
     "fcf_cr": 61.34,
     "week52_high": 288.45,
     "week52_low": 146.8,
-    "promoter_holding": 44.77
+    "promoter_holding": 44.77,
+    "price_to_book": 10.03,
+    "ev_ebitda": 68.55,
+    "insider_pct": 44.77
   },
   "GULFOILLUB": {
     "ltp": 914.2,
@@ -3345,7 +3825,13 @@
     "fcf_cr": 232.22,
     "week52_high": 1331.9,
     "week52_low": 865.0,
-    "promoter_holding": 67.68
+    "promoter_holding": 67.68,
+    "price_to_book": 2.92,
+    "ev_ebitda": 7.73,
+    "insider_pct": 67.68,
+    "ret_2y": 4.4,
+    "ret_4y": 171.28,
+    "ret_5y": 66.02
   },
   "DATAPATTNS": {
     "ltp": 4558.5,
@@ -3381,7 +3867,12 @@
     "fcf_cr": -20.99,
     "week52_high": 4620.0,
     "week52_low": 2131.0,
-    "promoter_holding": 54.57
+    "promoter_holding": 54.57,
+    "price_to_book": 14.29,
+    "ev_ebitda": 67.14,
+    "insider_pct": 54.57,
+    "ret_2y": 50.28,
+    "ret_4y": 532.89
   },
   "TOTEM": {
     "ltp": 148.1,
@@ -3411,7 +3902,10 @@
     "qtrly_earn_growth": -24.9,
     "week52_high": 235.9,
     "week52_low": 103.15,
-    "promoter_holding": 76.65
+    "promoter_holding": 76.65,
+    "price_to_book": 5.14,
+    "ev_ebitda": 14.84,
+    "insider_pct": 76.65
   },
   "CYIENTDLM": {
     "ltp": 443.65,
@@ -3444,7 +3938,11 @@
     "fcf_cr": 213.57,
     "week52_high": 505.5,
     "week52_low": 265.2,
-    "promoter_holding": 52.11
+    "promoter_holding": 52.11,
+    "price_to_book": 3.46,
+    "ev_ebitda": 27.95,
+    "insider_pct": 52.11,
+    "ret_2y": -29.77
   },
   "MMP": {
     "ltp": 268.4,
@@ -3480,7 +3978,12 @@
     "fcf_cr": -32.65,
     "week52_high": 319.98,
     "week52_low": 185.2,
-    "promoter_holding": 0.0
+    "promoter_holding": 0.0,
+    "price_to_book": 1.94,
+    "ev_ebitda": 13.31,
+    "ret_2y": -2.25,
+    "ret_4y": 49.94,
+    "ret_5y": 51.57
   },
   "BBL": {
     "ltp": 2851.5,
@@ -3516,7 +4019,13 @@
     "fcf_cr": -181.13,
     "week52_high": 3411.0,
     "week52_low": 2051.7,
-    "promoter_holding": 35.9
+    "promoter_holding": 35.9,
+    "price_to_book": 1.56,
+    "ev_ebitda": 16.39,
+    "insider_pct": 35.9,
+    "ret_2y": -33.68,
+    "ret_4y": 297.59,
+    "ret_5y": 318.73
   },
   "CESC": {
     "ltp": 171.68,
@@ -3552,7 +4061,13 @@
     "fcf_cr": -970.52,
     "week52_high": 204.5,
     "week52_low": 138.12,
-    "promoter_holding": 6.32
+    "promoter_holding": 6.32,
+    "price_to_book": 1.79,
+    "ev_ebitda": 10.89,
+    "insider_pct": 6.32,
+    "ret_2y": 22.49,
+    "ret_4y": 151.35,
+    "ret_5y": 163.49
   },
   "OMINFRAL": {
     "ltp": 82.67,
@@ -3588,7 +4103,13 @@
     "fcf_cr": -42.08,
     "week52_high": 146.12,
     "week52_low": 71.5,
-    "promoter_holding": 68.13
+    "promoter_holding": 68.13,
+    "price_to_book": 1.12,
+    "ev_ebitda": 30.06,
+    "insider_pct": 68.13,
+    "ret_2y": -22.83,
+    "ret_4y": 140.77,
+    "ret_5y": 159.13
   },
   "SKFINDUS": {
     "ltp": 1593.1,
@@ -3622,7 +4143,9 @@
     "fcf_cr": -122.33,
     "week52_high": 2766.0,
     "week52_low": 1994.1,
-    "promoter_holding": 52.58
+    "promoter_holding": 52.58,
+    "ev_ebitda": 25.01,
+    "insider_pct": 52.58
   },
   "WHIRLPOOL": {
     "ltp": 773.75,
@@ -3658,7 +4181,13 @@
     "fcf_cr": -39.39,
     "week52_high": 1473.8,
     "week52_low": 756.85,
-    "promoter_holding": 39.78
+    "promoter_holding": 39.78,
+    "price_to_book": 1.21,
+    "ev_ebitda": 18.77,
+    "insider_pct": 39.78,
+    "ret_2y": -47.55,
+    "ret_4y": -48.87,
+    "ret_5y": -63.21
   },
   "PITTIENG": {
     "ltp": 908.0,
@@ -3694,7 +4223,13 @@
     "fcf_cr": -25.93,
     "week52_high": 1044.4,
     "week52_low": 675.0,
-    "promoter_holding": 57.17
+    "promoter_holding": 57.17,
+    "price_to_book": 3.48,
+    "ev_ebitda": 11.29,
+    "insider_pct": 57.17,
+    "ret_2y": 4.65,
+    "ret_4y": 291.52,
+    "ret_5y": 361.57
   },
   "RAYMONDREL": {
     "ltp": 589.5,
@@ -3727,7 +4262,10 @@
     "fcf_cr": -1081.64,
     "week52_high": 1050.0,
     "week52_low": 349.0,
-    "promoter_holding": 55.12
+    "promoter_holding": 55.12,
+    "price_to_book": 2.95,
+    "ev_ebitda": 10.34,
+    "insider_pct": 55.12
   },
   "NIITLTD": {
     "ltp": 98.09,
@@ -3761,7 +4299,13 @@
     "fcf_cr": 18.06,
     "week52_high": 145.9,
     "week52_low": 49.0,
-    "promoter_holding": 46.59
+    "promoter_holding": 46.59,
+    "price_to_book": 1.24,
+    "ev_ebitda": 12.79,
+    "insider_pct": 46.59,
+    "ret_2y": -2.9,
+    "ret_4y": -79.37,
+    "ret_5y": -67.82
   },
   "ORIENTCER": {
     "ltp": 38.07,
@@ -3797,7 +4341,13 @@
     "fcf_cr": 23.29,
     "week52_high": 56.64,
     "week52_low": 34.0,
-    "promoter_holding": 80.18
+    "promoter_holding": 80.18,
+    "price_to_book": 1.55,
+    "ev_ebitda": 11.41,
+    "insider_pct": 80.18,
+    "ret_2y": -14.69,
+    "ret_4y": 36.74,
+    "ret_5y": 10.79
   },
   "RUSTOMJEE": {
     "ltp": 381.95,
@@ -3829,7 +4379,11 @@
     "qtrly_earn_growth": -77.6,
     "week52_high": 697.0,
     "week52_low": 358.8,
-    "promoter_holding": 75.79
+    "promoter_holding": 75.79,
+    "price_to_book": 1.71,
+    "ev_ebitda": 57.21,
+    "insider_pct": 75.79,
+    "ret_2y": -44.68
   },
   "INTERARCH": {
     "ltp": 1723.1,
@@ -3859,7 +4413,10 @@
     "qtrly_earn_growth": 32.2,
     "week52_high": 2762.6,
     "week52_low": 1600.0,
-    "promoter_holding": 60.51
+    "promoter_holding": 60.51,
+    "price_to_book": 3.59,
+    "ev_ebitda": 16.3,
+    "insider_pct": 60.51
   },
   "FMGOETZE": {
     "ltp": 421.6,
@@ -3894,7 +4451,13 @@
     "fcf_cr": 184.46,
     "week52_high": 622.0,
     "week52_low": 358.0,
-    "promoter_holding": 78.04
+    "promoter_holding": 78.04,
+    "price_to_book": 1.65,
+    "ev_ebitda": 5.28,
+    "insider_pct": 78.04,
+    "ret_2y": 15.29,
+    "ret_4y": 59.47,
+    "ret_5y": 35.68
   },
   "CAPACITE": {
     "ltp": 220.52,
@@ -3929,7 +4492,13 @@
     "fcf_cr": 268.13,
     "week52_high": 357.65,
     "week52_low": 180.0,
-    "promoter_holding": 52.1
+    "promoter_holding": 52.1,
+    "price_to_book": 1.03,
+    "ev_ebitda": 4.8,
+    "insider_pct": 52.1,
+    "ret_2y": -28.38,
+    "ret_4y": 98.99,
+    "ret_5y": -5.49
   },
   "RAILTEL": {
     "ltp": 311.95,
@@ -3965,7 +4534,13 @@
     "fcf_cr": -203.92,
     "week52_high": 478.95,
     "week52_low": 245.0,
-    "promoter_holding": 72.84
+    "promoter_holding": 72.84,
+    "price_to_book": 4.35,
+    "ev_ebitda": 14.79,
+    "insider_pct": 72.84,
+    "ret_2y": -24.57,
+    "ret_4y": 226.95,
+    "ret_5y": 141.94
   },
   "AFFLE": {
     "ltp": 1502.2,
@@ -4000,7 +4575,13 @@
     "fcf_cr": -171.67,
     "week52_high": 2185.9,
     "week52_low": 1251.3,
-    "promoter_holding": 60.16
+    "promoter_holding": 60.16,
+    "price_to_book": 5.76,
+    "ev_ebitda": 32.26,
+    "insider_pct": 60.16,
+    "ret_2y": 31.62,
+    "ret_4y": 54.81,
+    "ret_5y": 79.14
   },
   "SKFINDIA": {
     "ltp": 1593.1,
@@ -4034,7 +4615,13 @@
     "fcf_cr": 581.67,
     "week52_high": 5074.0,
     "week52_low": 1404.0,
-    "promoter_holding": 53.16
+    "promoter_holding": 53.16,
+    "price_to_book": 5.96,
+    "ev_ebitda": 16.89,
+    "insider_pct": 53.16,
+    "ret_2y": -72.62,
+    "ret_4y": -47.96,
+    "ret_5y": -41.21
   },
   "TEJASNET": {
     "ltp": 540.55,
@@ -4067,7 +4654,13 @@
     "fcf_cr": -968.13,
     "week52_high": 731.9,
     "week52_low": 294.0,
-    "promoter_holding": 1.99
+    "promoter_holding": 1.99,
+    "price_to_book": 3.35,
+    "ev_ebitda": -14.47,
+    "insider_pct": 1.99,
+    "ret_2y": -50.27,
+    "ret_4y": 36.05,
+    "ret_5y": 86.66
   },
   "VSTTILLERS": {
     "ltp": 4592.3,
@@ -4103,7 +4696,13 @@
     "fcf_cr": 85.4,
     "week52_high": 6374.0,
     "week52_low": 3611.1,
-    "promoter_holding": 56.12
+    "promoter_holding": 56.12,
+    "price_to_book": 3.73,
+    "ev_ebitda": 19.93,
+    "insider_pct": 56.12,
+    "ret_2y": 39.19,
+    "ret_4y": 89.43,
+    "ret_5y": 133.0
   },
   "ASALCBR": {
     "ltp": 823.0,
@@ -4139,7 +4738,13 @@
     "fcf_cr": -20.86,
     "week52_high": 1277.0,
     "week52_low": 660.65,
-    "promoter_holding": 65.95
+    "promoter_holding": 65.95,
+    "price_to_book": 2.27,
+    "ev_ebitda": 11.26,
+    "insider_pct": 65.95,
+    "ret_2y": 53.06,
+    "ret_4y": 85.26,
+    "ret_5y": 87.86
   },
   "GREAVESCOT": {
     "ltp": 190.23,
@@ -4171,7 +4776,13 @@
     "qtrly_earn_growth": 22.5,
     "week52_high": 244.3,
     "week52_low": 119.99,
-    "promoter_holding": 56.58
+    "promoter_holding": 56.58,
+    "price_to_book": 3.04,
+    "ev_ebitda": 14.76,
+    "insider_pct": 56.58,
+    "ret_2y": 57.01,
+    "ret_4y": 29.96,
+    "ret_5y": 21.75
   },
   "GLOBUSSPR": {
     "ltp": 846.1,
@@ -4207,7 +4818,13 @@
     "fcf_cr": 0.89,
     "week52_high": 1303.2,
     "week52_low": 800.05,
-    "promoter_holding": 56.93
+    "promoter_holding": 56.93,
+    "price_to_book": 2.22,
+    "ev_ebitda": 11.12,
+    "insider_pct": 56.93,
+    "ret_2y": 16.13,
+    "ret_4y": -29.14,
+    "ret_5y": 18.03
   },
   "ELDEHSG": {
     "ltp": 810.7,
@@ -4243,7 +4860,12 @@
     "fcf_cr": 31.08,
     "week52_high": 1044.1,
     "week52_low": 691.2,
-    "promoter_holding": 71.57
+    "promoter_holding": 71.57,
+    "price_to_book": 2.01,
+    "ev_ebitda": 22.44,
+    "insider_pct": 71.57,
+    "ret_2y": -16.71,
+    "ret_4y": 31.24
   },
   "ARIS": {
     "ltp": 115.61,
@@ -4273,7 +4895,10 @@
     "fcf_cr": 85.56,
     "week52_high": 208.5,
     "week52_low": 82.18,
-    "promoter_holding": 75.42
+    "promoter_holding": 75.42,
+    "price_to_book": 1.26,
+    "ev_ebitda": 8.13,
+    "insider_pct": 75.42
   },
   "QUESS": {
     "ltp": 237.17,
@@ -4306,7 +4931,13 @@
     "fcf_cr": 107.97,
     "week52_high": 331.7,
     "week52_low": 166.3,
-    "promoter_holding": 66.28
+    "promoter_holding": 66.28,
+    "price_to_book": 3.12,
+    "ev_ebitda": 10.9,
+    "insider_pct": 66.28,
+    "ret_2y": -53.84,
+    "ret_4y": -56.12,
+    "ret_5y": -69.49
   },
   "AVALON": {
     "ltp": 1639.5,
@@ -4341,7 +4972,11 @@
     "fcf_cr": -39.51,
     "week52_high": 1688.5,
     "week52_low": 777.3,
-    "promoter_holding": 54.7
+    "promoter_holding": 54.7,
+    "price_to_book": 14.87,
+    "ev_ebitda": 54.5,
+    "insider_pct": 54.7,
+    "ret_2y": 229.98
   },
   "GIPCL": {
     "ltp": 166.28,
@@ -4373,7 +5008,13 @@
     "qtrly_earn_growth": 368.7,
     "week52_high": 223.9,
     "week52_low": 119.9,
-    "promoter_holding": 65.53
+    "promoter_holding": 65.53,
+    "price_to_book": 0.67,
+    "ev_ebitda": 10.81,
+    "insider_pct": 65.53,
+    "ret_2y": -4.56,
+    "ret_4y": 113.7,
+    "ret_5y": 95.73
   },
   "TVSELECT": {
     "ltp": 463.35,
@@ -4406,7 +5047,13 @@
     "fcf_cr": -9.77,
     "week52_high": 739.35,
     "week52_low": 336.2,
-    "promoter_holding": 66.64
+    "promoter_holding": 66.64,
+    "price_to_book": 8.87,
+    "ev_ebitda": 46.28,
+    "insider_pct": 66.64,
+    "ret_2y": 49.42,
+    "ret_4y": 119.19,
+    "ret_5y": 139.89
   },
   "AEROENTER": {
     "ltp": 105.05,
@@ -4442,7 +5089,11 @@
     "fcf_cr": -69.12,
     "week52_high": 114.8,
     "week52_low": 62.2,
-    "promoter_holding": 67.69
+    "promoter_holding": 67.69,
+    "price_to_book": 1.5,
+    "ev_ebitda": 8.15,
+    "insider_pct": 67.69,
+    "ret_2y": 24.88
   },
   "EMBDL": {
     "ltp": 60.9,
@@ -4474,7 +5125,13 @@
     "fcf_cr": -2246.41,
     "week52_high": 128.0,
     "week52_low": 39.46,
-    "promoter_holding": 64.95
+    "promoter_holding": 64.95,
+    "price_to_book": 0.85,
+    "ev_ebitda": -26.91,
+    "insider_pct": 64.95,
+    "ret_2y": -54.89,
+    "ret_4y": -17.69,
+    "ret_5y": -60.09
   },
   "LAKSELEC": {
     "ltp": 750.6,
@@ -4510,7 +5167,13 @@
     "fcf_cr": -3.57,
     "week52_high": 1266.0,
     "week52_low": 646.1,
-    "promoter_holding": 45.72
+    "promoter_holding": 45.72,
+    "price_to_book": 0.74,
+    "ev_ebitda": 165.92,
+    "insider_pct": 45.72,
+    "ret_2y": -45.71,
+    "ret_4y": 43.61,
+    "ret_5y": 86.89
   },
   "TATACOMM": {
     "ltp": 1975.8,
@@ -4546,7 +5209,13 @@
     "fcf_cr": 2024.83,
     "week52_high": 2049.9,
     "week52_low": 1322.5,
-    "promoter_holding": 60.48
+    "promoter_holding": 60.48,
+    "price_to_book": 19.68,
+    "ev_ebitda": 14.05,
+    "insider_pct": 60.48,
+    "ret_2y": 13.2,
+    "ret_4y": 114.99,
+    "ret_5y": 38.83
   },
   "UNIECOM": {
     "ltp": 85.4,
@@ -4579,7 +5248,10 @@
     "fcf_cr": -39.81,
     "week52_high": 155.8,
     "week52_low": 78.51,
-    "promoter_holding": 48.5
+    "promoter_holding": 48.5,
+    "price_to_book": 5.16,
+    "ev_ebitda": 28.65,
+    "insider_pct": 48.5
   },
   "SHK": {
     "ltp": 123.98,
@@ -4615,7 +5287,13 @@
     "fcf_cr": -18.71,
     "week52_high": 275.5,
     "week52_low": 111.98,
-    "promoter_holding": 67.57
+    "promoter_holding": 67.57,
+    "price_to_book": 1.31,
+    "ev_ebitda": 11.29,
+    "insider_pct": 67.57,
+    "ret_2y": -34.53,
+    "ret_4y": -3.12,
+    "ret_5y": -25.66
   },
   "SUVEN": {
     "ltp": 264.45,
@@ -4647,7 +5325,13 @@
     "fcf_cr": -197.82,
     "week52_high": 299.99,
     "week52_low": 124.11,
-    "promoter_holding": 71.4
+    "promoter_holding": 71.4,
+    "price_to_book": 9.98,
+    "ev_ebitda": -19.22,
+    "insider_pct": 71.4,
+    "ret_2y": 182.51,
+    "ret_4y": 254.27,
+    "ret_5y": 222.67
   },
   "MAFANG": {
     "ltp": 190.84,
@@ -4666,7 +5350,10 @@
     "ret_1y": 40.65,
     "ret_3y": 266.01,
     "week52_high": 208.38,
-    "week52_low": 129.58
+    "week52_low": 129.58,
+    "ret_2y": 103.07,
+    "ret_4y": 385.65,
+    "ret_5y": 260.81
   },
   "NH": {
     "ltp": 1934.3,
@@ -4702,6 +5389,12 @@
     "fcf_cr": 287.02,
     "week52_high": 2370.2,
     "week52_low": 1589.0,
-    "promoter_holding": 67.23
+    "promoter_holding": 67.23,
+    "price_to_book": 8.71,
+    "ev_ebitda": 26.33,
+    "insider_pct": 67.23,
+    "ret_2y": 64.48,
+    "ret_4y": 190.27,
+    "ret_5y": 294.24
   }
 }
