@@ -2,13 +2,9 @@ name: Refresh Stock Prices
 
 on:
   schedule:
-    - cron: '45 3 * * 1-5'       # 9:15 AM IST, Mon–Fri
-    - cron: '*/15 4-10 * * 1-5'  # Every 15 mins, 9:30 AM–4:15 PM IST, Mon–Fri
-  push:
-    branches: [main]
-    paths:
-      - '.github/workflows/refresh-prices.yml'  # only re-trigger on workflow changes, not every push
-  workflow_dispatch:              # Manual trigger from GitHub Actions tab
+    - cron: '45 3 * * 1-5'      # 9:15 AM IST, Mon–Fri
+    - cron: '*/15 4-10 * * 1-5'  # Every 15 mins till 4:15 PM IST
+  workflow_dispatch:            # Manual trigger from GitHub Actions tab
 
 jobs:
   refresh:
