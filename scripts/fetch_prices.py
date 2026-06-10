@@ -219,7 +219,9 @@ for _, row in portfolio.iterrows():
     ret_1m = None
     ret_6m = None
     ret_1y = None
+    ret_2y = None
     ret_3y = None
+    ret_4y = None
     ret_5y = None
     fetched_ocf = None
     fetched_de = None
@@ -262,10 +264,18 @@ for _, row in portfolio.iterrows():
                 # 3-year return (~756 trading days)
                 if len(hist) >= 756:
                     ret_3y = round(((curr_price - hist['Close'].iloc[-756]) / hist['Close'].iloc[-756] * 100), 2)
-                
-                # 5-year return (~1260 trading days)
-                if len(hist) >= 1260:
-                    ret_5y = round(((curr_price - hist['Close'].iloc[-1260]) / hist['Close'].iloc[-1260] * 100), 2)
+
+                # 2-year return (~504 trading days)
+                if len(hist) >= 504:
+                    ret_2y = round(((curr_price - hist['Close'].iloc[-504]) / hist['Close'].iloc[-504] * 100), 2)
+
+                # 4-year return (~1008 trading days)
+                if len(hist) >= 1008:
+                    ret_4y = round(((curr_price - hist['Close'].iloc[-1008]) / hist['Close'].iloc[-1008] * 100), 2)
+
+                # 5-year return (~1200 trading days, slightly lower to account for holidays)
+                if len(hist) >= 1200:
+                    ret_5y = round(((curr_price - hist['Close'].iloc[-1200]) / hist['Close'].iloc[-1200] * 100), 2)
             else:
                 # Fallback to fast_info
                 fi = ticker_obj.fast_info
@@ -336,11 +346,40 @@ for _, row in portfolio.iterrows():
                     qeg = info.get("earningsQuarterlyGrowth")
                     if qeg is not None:  prices[sym]["qtrly_earn_growth"] = round(qeg * 100, 2)
 
-                    # Cash flow metrics (in Crores)
+                    # Cash flow metrics (latest year, in Crores)
                     fcf = info.get("freeCashflow")
                     if fcf is not None:  prices[sym]["fcf_cr"]            = round(fcf / 10_000_000, 2)
-                    lfcf = info.get("leveredFreeCashFlow") or info.get("totalCashFromOperatingActivities")
-                    if lfcf is not None: prices[sym]["lfcf_cr"]           = round(lfcf / 10_000_000, 2)
+                    ocf_val = info.get("operatingCashflow")
+                    if ocf_val is not None: prices[sym]["ocf_cr"]         = round(ocf_val / 10_000_000, 2)
+
+                    # 3-year average FCF and OCF from cashflow statement
+                    try:
+                        cf = ticker_obj.cashflow
+                        if cf is not None and not cf.empty:
+                            # Operating cash flow 3yr avg
+                            for lbl in ['Operating Cash Flow', 'Total Cash From Operating Activities', 'Cash From Operations']:
+                                rows = [r for r in cf.index if lbl.lower() in r.lower()]
+                                if rows:
+                                    vals = cf.loc[rows[0]].dropna().head(3).values
+                                    if len(vals) > 0:
+                                        prices[sym]["opcf_3yr_avg"] = round(float(vals.mean()) / 10_000_000, 2)
+                                    break
+                            # Free cash flow 3yr avg
+                            for lbl in ['Free Cash Flow', 'Levered Free Cash Flow']:
+                                rows = [r for r in cf.index if lbl.lower() in r.lower()]
+                                if rows:
+                                    vals = cf.loc[rows[0]].dropna().head(3).values
+                                    if len(vals) > 0:
+                                        prices[sym]["fcf_3yr_avg"] = round(float(vals.mean()) / 10_000_000, 2)
+                                    break
+                    except Exception:
+                        pass
+
+                    # Valuation ratios
+                    pb  = info.get("priceToBook")
+                    if pb is not None:   prices[sym]["price_to_book"]     = round(pb, 2)
+                    ev_eb = info.get("enterpriseToEbitda")
+                    if ev_eb is not None: prices[sym]["ev_ebitda"]         = round(ev_eb, 2)
 
                     # Price info
                     hi52 = info.get("fiftyTwoWeekHigh")
@@ -348,9 +387,9 @@ for _, row in portfolio.iterrows():
                     if hi52 is not None: prices[sym]["week52_high"]       = round(hi52, 2)
                     if lo52 is not None: prices[sym]["week52_low"]        = round(lo52, 2)
 
-                    # Promoter / insider holding (yfinance "heldPercentInsiders")
+                    # Insider holding (yfinance heldPercentInsiders = promoter/insider %)
                     ins = info.get("heldPercentInsiders")
-                    if ins is not None:  prices[sym]["promoter_holding"]  = round(ins * 100, 2)
+                    if ins is not None:  prices[sym]["insider_pct"]       = round(ins * 100, 2)
 
                 except Exception as e:
                     pass
@@ -359,9 +398,19 @@ for _, row in portfolio.iterrows():
                 try:
                     if hist is not None and len(hist) >= 2:
                         yest_vol = float(hist['Volume'].iloc[-2])
-                        avg_vol  = float(hist['Volume'].tail(30).mean())
+                        today_vol = float(hist['Volume'].iloc[-1])
+                        avg_vol   = float(hist['Volume'].tail(30).mean())
+                        week_avg  = float(hist['Volume'].tail(5).mean())
                         if avg_vol > 0:
                             fetched_vol_yest_ratio = round(yest_vol / avg_vol, 2)
+                        # PriceBreak: Day vol > 3x month avg AND > 3x week avg AND (change > 3% or < -1%)
+                        if avg_vol > 0 and week_avg > 0 and ret_1d is not None:
+                            price_break = (
+                                today_vol > 3 * avg_vol and
+                                today_vol > 3 * week_avg and
+                                (ret_1d > 3.0 or ret_1d < -1.0)
+                            )
+                            prices[sym]["price_break"] = "Yes" if price_break else "No"
                 except Exception:
                     pass
 
@@ -434,8 +483,12 @@ for _, row in portfolio.iterrows():
         prices[sym]["ret_6m"] = ret_6m
     if ret_1y is not None:
         prices[sym]["ret_1y"] = ret_1y
+    if ret_2y is not None:
+        prices[sym]["ret_2y"] = ret_2y
     if ret_3y is not None:
         prices[sym]["ret_3y"] = ret_3y
+    if ret_4y is not None:
+        prices[sym]["ret_4y"] = ret_4y
     if ret_5y is not None:
         prices[sym]["ret_5y"] = ret_5y
 

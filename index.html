@@ -1038,9 +1038,12 @@
     </div>
   </div>
 
-  <div style="padding: 12px 16px; background: var(--bg2); border-bottom: 1px solid var(--border); display: flex; gap: 12px; align-items: center;">
+  <div style="padding: 8px 16px; background: var(--bg2); border-bottom: 1px solid var(--border); display: flex; gap: 8px; align-items: center;">
     <span style="color: var(--text3);">🔍</span>
-    <input type="text" id="analysis-search" placeholder="Search by ticker or company name..." style="flex: 1; padding: 8px 12px; background: var(--bg1); color: var(--text1); border: 1px solid var(--border); border-radius: 4px; font-size: 14px;">
+    <div style="position:relative; width:30%;">
+      <input type="text" id="analysis-search" placeholder="Search ticker or name…" style="width:100%; padding: 6px 28px 6px 10px; background: var(--bg3); color: var(--text); border: 1px solid var(--border); border-radius: 4px; font-size: 13px;">
+      <span id="search-clear" onclick="clearAnalysisSearch()" style="display:none;position:absolute;right:6px;top:50%;transform:translateY(-50%);cursor:pointer;color:var(--text3);font-size:14px;line-height:1;" title="Clear">✕</span>
+    </div>
   </div>
 
   <div class="analysis-table-container">
@@ -1049,28 +1052,35 @@
         <tr>
           <th onclick="sortAnalysis('ticker')">Symbol <span id="sort-ticker" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('name')">Company Name <span id="sort-name" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('conviction')">Conv. <span id="sort-conviction" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('moat_class')">Moat <span id="sort-moat_class" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('quantity')">Qty. <span id="sort-quantity" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('ltp')">CMP <span id="sort-ltp" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('buy_value')">Buy Value <span id="sort-buy_value" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('pres_value')">Present Value <span id="sort-pres_value" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('pnl_abs')">P&L <span id="sort-pnl_abs" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('pnl_pct')">P&L % <span id="sort-pnl_pct" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('price_break')">PriceBreak <span id="sort-price_break" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('mcap_cr')">Market Cap (Cr) <span id="sort-mcap_cr" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('pe')">P/E <span id="sort-pe" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('price_to_book')">P/B <span id="sort-price_to_book" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('ev_ebitda')">EV/EBITDA <span id="sort-ev_ebitda" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('roe')">ROE % <span id="sort-roe" class="sort-indicator"></span></th>
-          <th onclick="sortAnalysis('ocf_cr')">Op. Cash Flow <span id="sort-ocf_cr" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('opcf_3yr_avg')">OCF 3YrAvg <span id="sort-opcf_3yr_avg" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('fcf_3yr_avg')">FCF 3YrAvg <span id="sort-fcf_3yr_avg" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('ret_1d')">1D Ret <span id="sort-ret_1d" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('ret_1m')">1M Ret <span id="sort-ret_1m" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('ret_6m')">6M Ret <span id="sort-ret_6m" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('ret_1y')">1Y Ret <span id="sort-ret_1y" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('ret_2y')">2Y Ret <span id="sort-ret_2y" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('ret_3y')">3Y Ret <span id="sort-ret_3y" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('ret_4y')">4Y Ret <span id="sort-ret_4y" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('ret_5y')">5Y Ret <span id="sort-ret_5y" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('pat_cagr')">PAT Growth <span id="sort-pat_cagr" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('rev_cagr')">Rev Growth <span id="sort-rev_cagr" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('mcap_3y')">MCap Growth 3Y <span id="sort-mcap_3y" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('debt_to_equity')">Debt/Equity <span id="sort-debt_to_equity" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('eps')">EPS <span id="sort-eps" class="sort-indicator"></span></th>
-          <th onclick="sortAnalysis('book_value')">Book Value <span id="sort-book_value" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('div_yield')">Div Yield % <span id="sort-div_yield" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('vol_30m_ratio')">Vol 30m/Avg <span id="sort-vol_30m_ratio" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('vol_yest_ratio')">Vol Yest/Avg <span id="sort-vol_yest_ratio" class="sort-indicator"></span></th>
@@ -1083,8 +1093,7 @@
           <th onclick="sortAnalysis('roa')">ROA% <span id="sort-roa" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('qtrly_rev_growth')">Qtrly Rev Growth <span id="sort-qtrly_rev_growth" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('qtrly_earn_growth')">Qtrly Earn Growth <span id="sort-qtrly_earn_growth" class="sort-indicator"></span></th>
-          <th onclick="sortAnalysis('fcf_cr')">FCF (Cr) <span id="sort-fcf_cr" class="sort-indicator"></span></th>
-          <th onclick="sortAnalysis('promoter_holding')">Promoter% <span id="sort-promoter_holding" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('insider_pct')">Insider% <span id="sort-insider_pct" class="sort-indicator"></span></th>
         </tr>
       </thead>
       <tbody id="analysis-tbody">
@@ -1658,7 +1667,7 @@ function exportPendingJSON() {
     return;
   }
   
-  const priceFields = new Set(['ltp','buy_avg','quantity','pnl_pct','pnl_abs','updated','mcap_cr','pe','roe','ocf_cr','ret_1d','ret_1m','ret_6m','ret_1y','ret_3y','ret_5y','debt_to_equity','eps','book_value','div_yield','pat_cagr','rev_cagr','mcap_3y','vol_30m_ratio','vol_yest_ratio','gross_margin','operating_margin','ebitda_margin','profit_margin','roa','qtrly_rev_growth','qtrly_earn_growth','fcf_cr','lfcf_cr','week52_high','week52_low','promoter_holding','name']);
+  const priceFields = new Set(['ltp','buy_avg','quantity','pnl_pct','pnl_abs','updated','mcap_cr','pe','roe','ocf_cr','ret_1d','ret_1m','ret_6m','ret_1y','ret_2y','ret_3y','ret_4y','ret_5y','debt_to_equity','eps','book_value','div_yield','pat_cagr','rev_cagr','mcap_3y','vol_30m_ratio','vol_yest_ratio','gross_margin','operating_margin','ebitda_margin','profit_margin','roa','qtrly_rev_growth','qtrly_earn_growth','fcf_cr','fcf_3yr_avg','opcf_3yr_avg','lfcf_cr','week52_high','week52_low','promoter_holding','insider_pct','price_to_book','ev_ebitda','price_break','name']);
   const exportData = pending.map(s => {
     const out = {};
     Object.entries(s).forEach(([k,v]) => { if (!priceFields.has(k)) out[k] = v; });
@@ -2016,13 +2025,21 @@ function openResearchTabs(event, ticker, companyName) {
 function switchTab(tab) {
   document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
   document.querySelectorAll('.tab-item').forEach(i => i.classList.remove('active'));
-
   document.getElementById('view-' + tab).classList.add('active');
   document.getElementById('tab-btn-' + tab).classList.add('active');
-
+  // Clear search on tab switch
+  clearAnalysisSearch();
   if (tab === 'analysis') {
     renderAnalysisTable();
   }
+}
+
+function clearAnalysisSearch() {
+  const inp = document.getElementById('analysis-search');
+  const clr = document.getElementById('search-clear');
+  if (inp) inp.value = '';
+  if (clr) clr.style.display = 'none';
+  renderAnalysisTable();
 }
 
 // ── Navigate to card on Dashboard tab ─────────────────────────────────────
@@ -2073,6 +2090,9 @@ function renderAnalysisTable() {
       pres_value:      (s.ltp || 0) * (s.quantity || 0),
       week52_high_pct: w52hPct != null ? Math.round(w52hPct * 10) / 10 : null,
       week52_low_pct:  w52lPct != null ? Math.round(w52lPct * 10) / 10 : null,
+      // Expose conviction/moat from stocks data for sorting
+      conviction: s.conviction || 0,
+      moat_class:  s.moat_class || '',
     };
   });
 
@@ -2117,47 +2137,62 @@ function renderAnalysisTable() {
     const volClass = (v) => v == null ? '' : v >= 5 ? 'neg' : v >= 2 ? 'amber' : '';
     const locked = (typeof privacyUnlocked !== 'undefined' && !privacyUnlocked);
     const prv = (html) => locked ? '<span style="letter-spacing:2px;color:var(--text3)">●●●</span>' : html;
+    // Color helpers
+    const roeClass = (v) => v == null ? '' : v >= 20 ? 'pos' : v < 0 ? 'neg' : 'amber';
+    const marginClass = (v) => v == null ? '' : v >= 20 ? 'pos' : v >= 10 ? 'amber' : 'neg';
+    const roaClass = (v) => v == null ? '' : v >= 10 ? 'pos' : v >= 3 ? 'amber' : 'neg';
+    const pbClass = (v) => v == null ? '' : v <= 1 ? 'pos' : v <= 3 ? 'amber' : 'neg';
+    const evClass = (v) => v == null ? '' : v <= 10 ? 'pos' : v <= 20 ? 'amber' : 'neg';
+    const deClass = (v) => v == null ? '' : v <= 30 ? 'pos' : v <= 100 ? 'amber' : 'neg';
+    const totalPortfolio = allStocks.reduce((sum, st) => sum + (st.ltp || 0) * (st.quantity || 0), 0);
+    const portPct = (totalPortfolio > 0 && s.pres_value > 0) ? (s.pres_value / totalPortfolio * 100).toFixed(1) + '%' : '';
 
     const tr = document.createElement('tr');
     tr.innerHTML = `
       <td><strong><span style="cursor:pointer;color:var(--blue-text);" title="View fundamental analysis card" onclick="goToCard('${esc(s.ticker)}')">${s.ticker}</span></strong></td>
       <td><span class="research-name" style="cursor:pointer;color:var(--blue-text);text-decoration:underline dotted;" title="Click to open Tickertape, Trendlyne, Tijori" data-ticker="${esc(s.ticker)}" data-name="${esc(s.name || s.ticker)}" onclick="openResearchTabsFromEl(event,this)">${s.name || '—'}</span></td>
+      <td style="text-align:center;">${s.conviction ? s.conviction+'/10' : '—'}</td>
+      <td style="font-size:0.7rem;">${s.moat_class === 'wide' ? '▲ Wide' : s.moat_class === 'narrow' ? '◆ Narrow' : '—'}</td>
       <td>${prv(f(s.quantity))}</td>
       <td>${s.ltp != null ? '₹'+f(s.ltp,2) : '—'}</td>
       <td>${prv('₹' + f(s.buy_value))}</td>
-      <td>${prv('₹' + f(s.pres_value))}</td>
+      <td>${prv('₹' + f(s.pres_value))}${portPct ? '<br><span style="font-size:0.65rem;color:var(--text3)">'+portPct+'</span>' : ''}</td>
       <td class="${pc(pnlAbs)}">${prv('₹' + f(pnlAbs))}</td>
       <td class="${pc(pnlPct)}">${prv(f(pnlPct,1) + '%')}</td>
+      <td style="${s.price_break === 'Yes' ? 'color:var(--amber-text);font-weight:700' : 'color:var(--text3)'}">${s.price_break || '—'}</td>
       <td>${f(s.mcap_cr)}</td>
       <td>${f(s.pe, 1)}</td>
-      <td>${f(s.roe, 1)}%</td>
-      <td>${f(s.ocf_cr)}</td>
+      <td class="${pbClass(s.price_to_book)}">${f(s.price_to_book, 1)}</td>
+      <td class="${evClass(s.ev_ebitda)}">${f(s.ev_ebitda, 1)}</td>
+      <td class="${roeClass(s.roe)}">${fp(s.roe)}</td>
+      <td>${s.opcf_3yr_avg != null ? '₹'+f(s.opcf_3yr_avg)+'Cr' : '—'}</td>
+      <td>${s.fcf_3yr_avg != null ? '₹'+f(s.fcf_3yr_avg)+'Cr' : '—'}</td>
       <td class="${pc(s.ret_1d)}">${fp(s.ret_1d)}</td>
       <td class="${pc(s.ret_1m)}">${fp(s.ret_1m)}</td>
       <td class="${pc(s.ret_6m)}">${fp(s.ret_6m)}</td>
       <td class="${pc(s.ret_1y)}">${fp(s.ret_1y)}</td>
+      <td class="${pc(s.ret_2y)}">${fp(s.ret_2y)}</td>
       <td class="${pc(s.ret_3y)}">${fp(s.ret_3y)}</td>
+      <td class="${pc(s.ret_4y)}">${fp(s.ret_4y)}</td>
       <td class="${pc(s.ret_5y)}">${fp(s.ret_5y)}</td>
       <td class="${pc(s.pat_cagr)}">${fp(s.pat_cagr)}</td>
       <td class="${pc(s.rev_cagr)}">${fp(s.rev_cagr)}</td>
       <td class="${pc(s.mcap_3y)}">${fp(s.mcap_3y)}</td>
-      <td>${f(s.debt_to_equity, 2)}</td>
+      <td class="${deClass(s.debt_to_equity)}">${f(s.debt_to_equity, 2)}</td>
       <td>${f(s.eps, 2)}</td>
-      <td>${f(s.book_value, 2)}</td>
       <td>${fp(s.div_yield, 2)}</td>
       <td class="${volClass(s.vol_30m_ratio)}">${fVol(s.vol_30m_ratio)}</td>
       <td class="${volClass(s.vol_yest_ratio)}">${fVol(s.vol_yest_ratio)}</td>
       <td class="neg">${s.week52_high_pct != null ? s.week52_high_pct.toFixed(1)+'%' : '—'}</td>
       <td class="pos">${s.week52_low_pct  != null ? '+'+s.week52_low_pct.toFixed(1)+'%'  : '—'}</td>
-      <td class="${pc(s.gross_margin)}">${fp(s.gross_margin)}</td>
-      <td class="${pc(s.operating_margin)}">${fp(s.operating_margin)}</td>
-      <td class="${pc(s.ebitda_margin)}">${fp(s.ebitda_margin)}</td>
-      <td class="${pc(s.profit_margin)}">${fp(s.profit_margin)}</td>
-      <td class="${pc(s.roa)}">${fp(s.roa)}</td>
+      <td class="${marginClass(s.gross_margin)}">${fp(s.gross_margin)}</td>
+      <td class="${marginClass(s.operating_margin)}">${fp(s.operating_margin)}</td>
+      <td class="${marginClass(s.ebitda_margin)}">${fp(s.ebitda_margin)}</td>
+      <td class="${marginClass(s.profit_margin)}">${fp(s.profit_margin)}</td>
+      <td class="${roaClass(s.roa)}">${fp(s.roa)}</td>
       <td class="${pc(s.qtrly_rev_growth)}">${fp(s.qtrly_rev_growth)}</td>
       <td class="${pc(s.qtrly_earn_growth)}">${fp(s.qtrly_earn_growth)}</td>
-      <td>${s.fcf_cr != null ? '₹'+f(s.fcf_cr) : '—'}</td>
-      <td>${fp(s.promoter_holding)}</td>
+      <td>${fp(s.insider_pct)}</td>
     `;
     tbody.appendChild(tr);
   });
@@ -2658,8 +2693,10 @@ function filterAnalysisTable(searchQuery) {
 // Set up search event listener when page loads
 document.addEventListener('DOMContentLoaded', function() {
   const searchInput = document.getElementById('analysis-search');
+  const searchClear = document.getElementById('search-clear');
   if (searchInput) {
     searchInput.addEventListener('input', function() {
+      if (searchClear) searchClear.style.display = this.value ? 'block' : 'none';
       filterAnalysisTable(this.value);
     });
   }
