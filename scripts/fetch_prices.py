@@ -129,6 +129,11 @@ print(f"[INFO] Using columns: symbol={sym_col!r}, qty={qty_col!r}, buy_avg={avg_
 df = df.rename(columns={sym_col: "symbol", qty_col: "qty", avg_col: "buy_avg"})
 df = df[["symbol", "qty", "buy_avg"]].copy()
 
+# Strip Zerodha risk-indicator suffixes like -T, -X, -E, -B, -Z etc.
+# e.g. MODISONLTD-T → MODISONLTD, LAKSELEC-X → LAKSELEC
+import re as _re_suffix
+df["symbol"] = df["symbol"].astype(str).str.replace(r'-[A-Z]$', '', regex=True)
+
 # Filter valid rows
 df = df[df["symbol"].notna()]
 df = df[~df["symbol"].astype(str).str.contains(" ")]          # remove mutual fund rows
@@ -170,11 +175,15 @@ with open(stocks_path, "r", encoding="utf-8") as f:
 existing_tickers = {s["ticker"] for s in stocks}
 
 # Add placeholder entries for tickers not in stocks.json
+import re as _re_clean
+def _clean_ticker(t):
+    return _re_clean.sub(r'-[A-Z]$', '', str(t).strip())
+
 new_stubs = []
-portfolio_tickers = set(str(row["symbol"]).strip() for _, row in portfolio.iterrows())
+portfolio_tickers = set(_clean_ticker(row["symbol"]) for _, row in portfolio.iterrows())
 
 for _, row in portfolio.iterrows():
-    sym = str(row["symbol"]).strip()
+    sym = _clean_ticker(row["symbol"])
     if sym not in existing_tickers:
         stub = {
             "ticker": sym,
@@ -219,9 +228,9 @@ else:
 prices = {}
 now_utc = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
 
-# Build lookup of buy_avg and qty from portfolio
+# Build lookup of buy_avg and qty from portfolio (use clean tickers as keys)
 portfolio_map = {
-    str(row["symbol"]).strip(): {"qty": float(row["qty"]), "buy_avg": float(row["buy_avg"])}
+    _clean_ticker(row["symbol"]): {"qty": float(row["qty"]), "buy_avg": float(row["buy_avg"])}
     for _, row in portfolio.iterrows()
 }
 
@@ -237,31 +246,30 @@ success = 0
 failed = []
 
 for _, row in portfolio.iterrows():
-    sym = str(row["symbol"]).strip()
+    raw_sym = str(row["symbol"]).strip()
     qty = float(row["qty"])
     buy_avg = float(row["buy_avg"])
 
     # Strip Zerodha-specific suffixes: -T (SME), -X (delisted/SME), -E (ETF variant), etc.
     # e.g. DEEDEV-T → DEEDEV, INCAP-X → INCAP, MON100-E → MON100
     import re as _re
-    clean_sym = _re.sub(r'-[A-Z]$', '', sym)
+    sym = _re.sub(r'-[A-Z]$', '', raw_sym)   # use clean ticker as the canonical key
 
-    yf_sym = nse_override.get(sym, sym)
+    yf_sym = nse_override.get(raw_sym, nse_override.get(sym, sym))
     clean_yf = _re.sub(r'-[A-Z]$', '', yf_sym)
 
     candidates = [
         yf_sym + ".NS",
         sym + ".NS",
-        clean_sym + ".NS",
         clean_yf + ".NS",
         yf_sym + ".BO",
         sym + ".BO",
-        clean_sym + ".BO",
         clean_yf + ".BO",
     ]
-    # If there's a hardcoded yfinance symbol override, put it first
-    if sym in YFINANCE_SYMBOL_OVERRIDES:
-        preferred = YFINANCE_SYMBOL_OVERRIDES[sym]
+    # If there's a hardcoded yfinance symbol override, put it first (check both raw and clean)
+    override_key = raw_sym if raw_sym in YFINANCE_SYMBOL_OVERRIDES else (sym if sym in YFINANCE_SYMBOL_OVERRIDES else None)
+    if override_key:
+        preferred = YFINANCE_SYMBOL_OVERRIDES[override_key]
         candidates = [preferred] + [c for c in candidates if c != preferred]
     # Deduplicate while preserving order
     seen = set()

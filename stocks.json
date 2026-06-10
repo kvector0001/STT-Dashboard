@@ -4227,77 +4227,11 @@
     ]
   },
   {
-    "ticker": "GAUDIUMIVF-T",
-    "name": "GAUDIUM IVF N WOMEN H L",
-    "sector": "Healthcare",
-    "nse_symbol": "GAUDIUMIVF-T",
-    "buy_avg": 116.0,
-    "moat_type": "Pending",
-    "moat_class": "pending",
-    "conviction": 0,
-    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
-    "leadership": "Pending",
-    "non_rep": "Pending",
-    "tailwinds": [
-      "Pending analysis"
-    ],
-    "risks": [
-      "Pending analysis"
-    ],
-    "track": [
-      "Add tracking KPIs"
-    ]
-  },
-  {
     "ticker": "KPITTECH",
     "name": "KPIT Technologies Limited",
     "sector": "Technology",
     "nse_symbol": "KPITTECH",
     "buy_avg": 1526.5,
-    "moat_type": "Pending",
-    "moat_class": "pending",
-    "conviction": 0,
-    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
-    "leadership": "Pending",
-    "non_rep": "Pending",
-    "tailwinds": [
-      "Pending analysis"
-    ],
-    "risks": [
-      "Pending analysis"
-    ],
-    "track": [
-      "Add tracking KPIs"
-    ]
-  },
-  {
-    "ticker": "LAKSELEC-X",
-    "name": "Lakshmi Electrical Control Systems Limited",
-    "sector": "Industrials",
-    "nse_symbol": "LAKSELEC-X",
-    "buy_avg": 588.9,
-    "moat_type": "Pending",
-    "moat_class": "pending",
-    "conviction": 0,
-    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
-    "leadership": "Pending",
-    "non_rep": "Pending",
-    "tailwinds": [
-      "Pending analysis"
-    ],
-    "risks": [
-      "Pending analysis"
-    ],
-    "track": [
-      "Add tracking KPIs"
-    ]
-  },
-  {
-    "ticker": "MON100-E",
-    "name": "Motilal Oswal NASDAQ 100 ETF",
-    "sector": "Pending",
-    "nse_symbol": "MON100-E",
-    "buy_avg": 119.7,
     "moat_type": "Pending",
     "moat_class": "pending",
     "conviction": 0,
@@ -4491,28 +4425,6 @@
     ]
   },
   {
-    "ticker": "FREDUN-X",
-    "name": "Fredun Pharmaceuticals Limited",
-    "sector": "Healthcare",
-    "nse_symbol": "FREDUN-X",
-    "buy_avg": 1395.0,
-    "moat_type": "Pending",
-    "moat_class": "pending",
-    "conviction": 0,
-    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
-    "leadership": "Pending",
-    "non_rep": "Pending",
-    "tailwinds": [
-      "Pending analysis"
-    ],
-    "risks": [
-      "Pending analysis"
-    ],
-    "track": [
-      "Add tracking KPIs"
-    ]
-  },
-  {
     "ticker": "IFGLEXPOR",
     "name": "IFGL Refractories Limited",
     "sector": "Basic Materials",
@@ -4557,10 +4469,120 @@
     ]
   },
   {
-    "ticker": "ECOSMOBLTY-T",
+    "ticker": "KAMDHENU",
+    "name": "Kamdhenu Limited",
+    "sector": "Basic Materials",
+    "nse_symbol": "KAMDHENU",
+    "buy_avg": 27.17,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "GAUDIUMIVF",
+    "name": "GAUDIUM IVF N WOMEN H L",
+    "sector": "Healthcare",
+    "nse_symbol": "GAUDIUMIVF",
+    "buy_avg": 116.0,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "LAKSELEC",
+    "name": "Lakshmi Electrical Control Systems Limited",
+    "sector": "Industrials",
+    "nse_symbol": "LAKSELEC",
+    "buy_avg": 588.9,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "MON100",
+    "name": "Motilal Oswal NASDAQ 100 ETF",
+    "sector": "Pending",
+    "nse_symbol": "MON100",
+    "buy_avg": 119.7,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "FREDUN",
+    "name": "Fredun Pharmaceuticals Limited",
+    "sector": "Healthcare",
+    "nse_symbol": "FREDUN",
+    "buy_avg": 1395.0,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "ECOSMOBLTY",
     "name": "ECOS (INDIA) MOB & HOSP L",
     "sector": "Industrials",
-    "nse_symbol": "ECOSMOBLTY-T",
+    "nse_symbol": "ECOSMOBLTY",
     "buy_avg": 139.03,
     "moat_type": "Pending",
     "moat_class": "pending",
@@ -4579,10 +4601,10 @@
     ]
   },
   {
-    "ticker": "SHANKARA-T",
+    "ticker": "SHANKARA",
     "name": "Shankara Building Products Limited",
     "sector": "Consumer Cyclical",
-    "nse_symbol": "SHANKARA-T",
+    "nse_symbol": "SHANKARA",
     "buy_avg": 136.74,
     "moat_type": "Pending",
     "moat_class": "pending",
@@ -4601,10 +4623,10 @@
     ]
   },
   {
-    "ticker": "DEEDEV-T",
+    "ticker": "DEEDEV",
     "name": "DEE DEVELOPMENT ENG LTD",
     "sector": "Industrials",
-    "nse_symbol": "DEEDEV-T",
+    "nse_symbol": "DEEDEV",
     "buy_avg": 261.86,
     "moat_type": "Pending",
     "moat_class": "pending",
@@ -4623,10 +4645,10 @@
     ]
   },
   {
-    "ticker": "MODISONLTD-T",
+    "ticker": "MODISONLTD",
     "name": "Modison Limited",
     "sector": "Industrials",
-    "nse_symbol": "MODISONLTD-T",
+    "nse_symbol": "MODISONLTD",
     "buy_avg": 171.27,
     "moat_type": "Pending",
     "moat_class": "pending",
@@ -4645,10 +4667,10 @@
     ]
   },
   {
-    "ticker": "INCAP-X",
+    "ticker": "INCAP",
     "name": "Incap Limited",
     "sector": "Technology",
-    "nse_symbol": "INCAP-X",
+    "nse_symbol": "INCAP",
     "buy_avg": 41.79,
     "moat_type": "Pending",
     "moat_class": "pending",
@@ -4667,33 +4689,11 @@
     ]
   },
   {
-    "ticker": "VASCONEQ-T",
+    "ticker": "VASCONEQ",
     "name": "Vascon Engineers Limited",
     "sector": "Industrials",
-    "nse_symbol": "VASCONEQ-T",
+    "nse_symbol": "VASCONEQ",
     "buy_avg": 66.21,
-    "moat_type": "Pending",
-    "moat_class": "pending",
-    "conviction": 0,
-    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
-    "leadership": "Pending",
-    "non_rep": "Pending",
-    "tailwinds": [
-      "Pending analysis"
-    ],
-    "risks": [
-      "Pending analysis"
-    ],
-    "track": [
-      "Add tracking KPIs"
-    ]
-  },
-  {
-    "ticker": "KAMDHENU",
-    "name": "Kamdhenu Limited",
-    "sector": "Basic Materials",
-    "nse_symbol": "KAMDHENU",
-    "buy_avg": 27.17,
     "moat_type": "Pending",
     "moat_class": "pending",
     "conviction": 0,
