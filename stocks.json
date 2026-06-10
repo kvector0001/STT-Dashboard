@@ -318,20 +318,26 @@
     "sector": "Healthcare",
     "nse_symbol": "PARKHOSPS",
     "buy_avg": 158.81,
-    "moat_type": "Pending",
-    "moat_class": "pending",
-    "conviction": 0,
-    "moat": "Analysis pending",
-    "leadership": "Pending",
-    "non_rep": "Pending",
+    "moat_type": "Narrow",
+    "moat_class": "narrow",
+    "conviction": 6,
+    "moat": "A regional healthcare cluster moat built on dense North India presence, specialist doctor access, hospital licences, critical-care infrastructure and referral capture. The business is not a national brand moat yet, but in its catchment areas scale and trust create meaningful entry barriers.",
+    "leadership": "Second-largest private hospital chain in North India and largest in Haryana by bed capacity, operating 14 hospitals with about 3,250 beds, 870 ICU beds and 67 OTs across key northern markets.",
+    "non_rep": "Hospitals are hard to replicate quickly because land, approvals, doctor recruitment, insurance relationships and reputation compound over time. The clustered model improves procurement, doctor utilisation and patient referral economics in a way greenfield entrants struggle to match.",
     "tailwinds": [
-      "Pending analysis"
+      "Rising tertiary-care demand and insurance penetration in North India",
+      "Occupancy and ARPOB expansion from recently added and upcoming beds",
+      "Inorganic hospital acquisitions in underpenetrated adjacent cities"
     ],
     "risks": [
-      "Pending analysis"
+      "High dependence on Haryana and North India concentration",
+      "Doctor attrition, wage inflation and clinical-talent shortages",
+      "Execution risk in integrating acquired hospitals and ramping new capacity"
     ],
     "track": [
-      "Add tracking KPIs"
+      "Occupancy, ARPOB and case-mix quality",
+      "Doctor retention and nurse productivity",
+      "RoCE on new bed additions and acquired assets"
     ],
     "mcap_cr": 12325.15,
     "pe": 41.475292,
@@ -4141,23 +4147,29 @@
   {
     "ticker": "MAFANG",
     "name": "Mirae Asset NYSE FANG+ETF",
-    "sector": "Pending",
+    "sector": "ETF",
     "nse_symbol": "MAFANG",
     "buy_avg": 50.33,
-    "moat_type": "Pending",
-    "moat_class": "pending",
-    "conviction": 0,
-    "moat": "Analysis pending â€” add manually or re-run Claude.ai analysis",
-    "leadership": "Pending",
-    "non_rep": "Pending",
+    "moat_type": "Narrow",
+    "moat_class": "narrow",
+    "conviction": 5,
+    "moat": "This is not a classic operating-company moat. The edge comes from product utility: easy listed access to an equal-weight FANG+ basket, reasonable scale, low tracking error and decent liquidity. The moat is in convenience and execution, not in unique economics.",
+    "leadership": "Tracks the NYSE FANG+ index with about Rs 3,748.74 crore AUM, 0.66% expense ratio and 0.05% tracking error, making it a credible India-listed wrapper for concentrated global tech exposure.",
+    "non_rep": "The equal-weight structure prevents excessive dominance by one or two names and offers a distinct portfolio profile versus cap-weight Nasdaq products. Still, the wrapper itself is replicable, so durability is modest.",
     "tailwinds": [
-      "Pending analysis"
+      "AI, cloud and platform-led earnings growth in underlying US tech leaders",
+      "Rupee depreciation against the US dollar",
+      "Growing Indian investor demand for simple global diversification"
     ],
     "risks": [
-      "Pending analysis"
+      "Concentration and volatility in a small set of US growth stocks",
+      "Valuation compression in megacap technology",
+      "ETF tracking, spread or liquidity slippage during sharp market moves"
     ],
     "track": [
-      "Add tracking KPIs"
+      "Tracking error and tracking difference versus benchmark",
+      "AUM growth and bid-ask liquidity on exchange",
+      "Weight changes and earnings momentum of the top constituents"
     ]
   },
   {
@@ -4188,20 +4200,26 @@
     "sector": "Consumer Cyclical",
     "nse_symbol": "ABLBL",
     "buy_avg": 51.86,
-    "moat_type": "Pending",
-    "moat_class": "pending",
-    "conviction": 0,
-    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
-    "leadership": "Pending",
-    "non_rep": "Pending",
+    "moat_type": "Narrow",
+    "moat_class": "narrow",
+    "conviction": 6,
+    "moat": "A premium apparel brand-and-distribution moat built on trusted labels, design capability, national retail relationships and merchandising scale. Fashion remains competitive, but the combination of premium brands plus channel access supports pricing and shelf-space power.",
+    "leadership": "At a glance, the company reported revenue of about Rs 7,830 crore and EBITDA of about Rs 1,269 crore as of 31 March 2025, while management highlighted industry-leading LTL growth of 9%.",
+    "non_rep": "Brand memory, franchise/store economics, visual merchandising and sourcing scale are difficult to copy. Competing with entrenched premium fashion brands requires both capital and consumer mindshare, which creates moderate stickiness.",
     "tailwinds": [
-      "Pending analysis"
+      "Premiumisation in western wear and occasion/formal consumption",
+      "Organised retail gaining share from less structured apparel channels",
+      "Omni-channel and category expansion across premium lifestyle products"
     ],
     "risks": [
-      "Pending analysis"
+      "Discretionary slowdown hurting premium apparel demand",
+      "Fashion misses, markdown pressure and inventory risk",
+      "Execution risk after demerger and portfolio scaling"
     ],
     "track": [
-      "Add tracking KPIs"
+      "Like-for-like growth and store productivity",
+      "Gross margin and markdown intensity",
+      "Working capital and return on incremental store capital"
     ]
   },
   {
@@ -4210,20 +4228,26 @@
     "sector": "Consumer Cyclical",
     "nse_symbol": "BOROLTD",
     "buy_avg": 111.28,
-    "moat_type": "Pending",
-    "moat_class": "pending",
-    "conviction": 0,
-    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
-    "leadership": "Pending",
-    "non_rep": "Pending",
+    "moat_type": "Narrow",
+    "moat_class": "narrow",
+    "conviction": 6,
+    "moat": "A category-defining specialty-glass moat in consumer and scientific products. Borosil benefits from brand trust, domestic manufacturing know-how and distribution, which together support premium positioning in borosilicate-led categories.",
+    "leadership": "FY25 consolidated revenue was about Rs 1,107.8 crore with 16.8% YoY growth. The company commissioned India’s first borosilicate pressware facility in Jaipur and doubled opalware production capacity.",
+    "non_rep": "Glass chemistry, thermal-performance consistency and consumer trust are earned over years, not quarters. Domestic specialty manufacturing plus a scientific-products legacy improve resilience versus generic kitchenware competitors.",
     "tailwinds": [
-      "Pending analysis"
+      "Premium kitchenware and home-use formalisation",
+      "Import substitution in specialty glass products",
+      "Capacity-led growth in pressware and opalware"
     ],
     "risks": [
-      "Pending analysis"
+      "Energy and furnace-cost volatility",
+      "Lower-cost imports and private-label competition",
+      "Execution risk in scaling new capacities without margin dilution"
     ],
     "track": [
-      "Add tracking KPIs"
+      "Consumer segment growth and premium mix",
+      "Capacity utilisation in new facilities",
+      "Gross margin resilience versus input cost swings"
     ]
   },
   {
@@ -4232,20 +4256,26 @@
     "sector": "Technology",
     "nse_symbol": "KPITTECH",
     "buy_avg": 1526.5,
-    "moat_type": "Pending",
-    "moat_class": "pending",
-    "conviction": 0,
-    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
-    "leadership": "Pending",
-    "non_rep": "Pending",
+    "moat_type": "Wide",
+    "moat_class": "wide",
+    "conviction": 8,
+    "moat": "A genuine specialist moat in automotive software, built on deep domain knowledge, safety-critical validation, embedded integration and long programme cycles. Once embedded in an OEM’s SDV stack, switching is expensive both technically and organisationally.",
+    "leadership": "KPIT reported FY25 revenue of USD 691 million with 18.7% constant-currency growth, 21% EBITDA margin, 19 consecutive growth quarters and USD 280 million of Q4 engagement wins, while describing itself as a leader in mobility solutions and strong among passenger-car OEMs.",
+    "non_rep": "The moat is not generic IT services; it is mobility-specific engineering depth across software-defined vehicles, middleware, propulsion and validation. That makes KPIT more comparable to a category specialist than a broad outsourcing vendor.",
     "tailwinds": [
-      "Pending analysis"
+      "Software-defined vehicle transition across OEMs globally",
+      "Rising software and electronics content per vehicle",
+      "Increasing outsourcing of automotive engineering complexity"
     ],
     "risks": [
-      "Pending analysis"
+      "OEM program delays due to auto cycle or geopolitics",
+      "Customer concentration and pricing pressure",
+      "Failure to keep moat at the frontier of automotive AI and SDV stacks"
     ],
     "track": [
-      "Add tracking KPIs"
+      "Large deal wins, especially with top OEMs",
+      "Growth in products and solutions mix versus vanilla services",
+      "Margins, attrition and offshore delivery leverage"
     ]
   },
   {
@@ -4254,20 +4284,26 @@
     "sector": "Industrials",
     "nse_symbol": "MSTCLTD",
     "buy_avg": 262.0,
-    "moat_type": "Pending",
-    "moat_class": "pending",
-    "conviction": 0,
-    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
-    "leadership": "Pending",
-    "non_rep": "Pending",
+    "moat_type": "Narrow",
+    "moat_class": "narrow",
+    "conviction": 6,
+    "moat": "A process-and-trust moat rather than a brand moat. MSTC’s edge comes from being deeply embedded in government and PSU auction workflows where transparency, bidder confidence, compliance and execution credibility matter enormously.",
+    "leadership": "The company’s public materials emphasise flagship projects, operational footprint and its position as a government enterprise running digital auction workflows across critical public-asset monetisation categories.",
+    "non_rep": "A newcomer can build auction software, but replicating institutional trust, sovereign counterparties, bidder density, and compliance-heavy operating history is much harder. That makes the moat real but not wide, because it remains policy-linked.",
     "tailwinds": [
-      "Pending analysis"
+      "Ongoing public-sector digital auction adoption",
+      "Asset monetisation, scrap sales and resource allocation through transparent platforms",
+      "Potential growth in adjacent e-commerce or digital transaction mandates"
     ],
     "risks": [
-      "Pending analysis"
+      "Policy concentration and dependence on government mandates",
+      "Pricing pressure in tenders or mandate renewals",
+      "Limited control over volume cadence of large public auctions"
     ],
     "track": [
-      "Add tracking KPIs"
+      "Gross merchandise / auction value processed",
+      "New PSU and ministry mandates",
+      "Segment margins and cash conversion quality"
     ]
   },
   {
@@ -4276,20 +4312,26 @@
     "sector": "Consumer Cyclical",
     "nse_symbol": "ORIENTHOT",
     "buy_avg": 25.25,
-    "moat_type": "Pending",
-    "moat_class": "pending",
-    "conviction": 0,
-    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
-    "leadership": "Pending",
-    "non_rep": "Pending",
+    "moat_type": "Narrow",
+    "moat_class": "narrow",
+    "conviction": 6,
+    "moat": "A regional asset-and-brand moat anchored by premium hotel properties in attractive South Indian markets and supported by the Taj ecosystem. The moat is meaningful because hotel location scarcity and premium branding create durable pricing power, but it is regional, not national.",
+    "leadership": "OHL reported highest-ever FY25 revenue of about Rs 445 crore and PAT of about Rs 45 crore. It has seven hotels, including three Taj-branded assets, and highlighted significant asset upgradation across the portfolio.",
+    "non_rep": "Prime urban and leisure hotel assets are difficult to recreate because location availability is limited and replacement cost is high. Brand affiliation with IHCL/Taj strengthens premium positioning and customer trust.",
     "tailwinds": [
-      "Pending analysis"
+      "Sustained domestic premium travel demand",
+      "ADR improvement from limited quality room supply",
+      "Benefit from completed renovation and brand migration initiatives"
     ],
     "risks": [
-      "Pending analysis"
+      "High regional concentration in South India",
+      "Hospitality cyclicality and event/travel slowdowns",
+      "Execution risk if renovated assets fail to sustain improved rates"
     ],
     "track": [
-      "Add tracking KPIs"
+      "Occupancy, ARR and RevPAR by property",
+      "F&B contribution and margin progression",
+      "Return on refurbishment capex"
     ]
   },
   {
@@ -4298,20 +4340,26 @@
     "sector": "Technology",
     "nse_symbol": "REDINGTON",
     "buy_avg": 142.65,
-    "moat_type": "Pending",
-    "moat_class": "pending",
-    "conviction": 0,
-    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
-    "leadership": "Pending",
-    "non_rep": "Pending",
+    "moat_type": "Narrow",
+    "moat_class": "narrow",
+    "conviction": 7,
+    "moat": "A scale-and-execution moat in technology distribution. Redington’s edge comes from vendor relationships, multi-country channel reach, working-capital discipline, supply-chain coordination and the ability to push products and cloud solutions through a large partner network.",
+    "leadership": "FY25 annual report highlights about Rs 99,562 crore revenue, Rs 2,257 crore EBITDA and broad geographic presence, with management framing the company as a bridge between technology innovation and scalable adoption in emerging markets.",
+    "non_rep": "Distribution looks commoditised on the surface, but large incumbents compound advantages through credit underwriting, logistics reliability, partner stickiness and value-added services. Those capabilities are difficult for smaller rivals to match consistently.",
     "tailwinds": [
-      "Pending analysis"
+      "Device refresh and enterprise IT spending",
+      "Cloud, software and solution-led distribution mix improvement",
+      "Formalisation of technology procurement across emerging markets"
     ],
     "risks": [
-      "Pending analysis"
+      "Thin structural gross margins typical of distribution",
+      "Vendor concentration and rebate pressure",
+      "Inventory and receivable risk during weak demand cycles"
     ],
     "track": [
-      "Add tracking KPIs"
+      "Cloud and value-added mix as share of gross profit",
+      "Working capital days and cash conversion",
+      "ROCE sustainability through cycle turns"
     ]
   },
   {
@@ -4320,20 +4368,26 @@
     "sector": "Basic Materials",
     "nse_symbol": "USHAMART",
     "buy_avg": 53.6,
-    "moat_type": "Pending",
-    "moat_class": "pending",
-    "conviction": 0,
-    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
-    "leadership": "Pending",
-    "non_rep": "Pending",
+    "moat_type": "Narrow",
+    "moat_class": "narrow",
+    "conviction": 7,
+    "moat": "A specialised industrial-products moat in wire rope, where qualification, safety-critical application performance and long customer relationships matter more than commodity pricing. Its moat is narrower than an FMCG brand moat, but more durable than plain steelmaking.",
+    "leadership": "The company describes itself as a leading specialty wire rope solutions provider globally, with FY25 consolidated revenue of about Rs 3,474 crore. Management also emphasises a group-wide “One Usha Martin” transformation and focus on engineering excellence.",
+    "non_rep": "For mission-critical uses such as mining, cranes, elevators and infrastructure, customers do not switch suppliers casually. Product certification, application know-how and track record create a practical switching-cost moat.",
     "tailwinds": [
-      "Pending analysis"
+      "Infrastructure, mining and industrial capex growth",
+      "Shift toward higher-value speciality rope and fibre products",
+      "Export opportunities in critical applications"
     ],
     "risks": [
-      "Pending analysis"
+      "Steel and input-cost volatility",
+      "Project-driven demand cyclicality",
+      "Competition in lower-value rope and wire categories"
     ],
     "track": [
-      "Add tracking KPIs"
+      "Share of speciality products in revenue mix",
+      "EBITDA margin per tonne and export mix",
+      "RoCE and free cash flow through the cycle"
     ]
   },
   {
@@ -4342,20 +4396,26 @@
     "sector": "Healthcare",
     "nse_symbol": "VIYASH",
     "buy_avg": 165.85,
-    "moat_type": "Pending",
-    "moat_class": "pending",
-    "conviction": 0,
-    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
-    "leadership": "Pending",
-    "non_rep": "Pending",
+    "moat_type": "Narrow",
+    "moat_class": "narrow",
+    "conviction": 7,
+    "moat": "A specialised pharma moat based on integrated manufacturing, backward integration, registrations, customer approvals and product breadth across APIs, formulations, CDMO, and animal health. This is not a blockbuster-drug moat, but it is a real execution and regulatory moat.",
+    "leadership": "Investor materials describe Viyash as a fully backward integrated pharma enterprise serving 150+ countries, with 16 manufacturing sites, 10 USFDA-approved units, 75+ commercial human APIs, 30+ vet APIs and over 85% backward integration. FY25 consolidated revenue was about Rs 15,513.7 million and PAT turned positive to Rs 322.59 million.",
+    "non_rep": "Regulatory approvals, customer qualification, technical transfer and manufacturing scale create barriers that cannot be recreated quickly. Integration across APIs and formulations improves both margin defence and reliability for customers.",
     "tailwinds": [
-      "Pending analysis"
+      "China+1 and diversified sourcing in pharma supply chains",
+      "Animal-health growth and CDMO scale-up",
+      "Operating leverage from integration and facility utilisation"
     ],
     "risks": [
-      "Pending analysis"
+      "Regulatory observations at key plants",
+      "Execution risk in post-merger integration",
+      "Debt or working-capital stress if growth quality weakens"
     ],
     "track": [
-      "Add tracking KPIs"
+      "USFDA / GMP compliance status across facilities",
+      "EBITDA margin progression and leverage reduction",
+      "API-to-formulation / CDMO mix evolution"
     ]
   },
   {
@@ -4364,20 +4424,26 @@
     "sector": "Healthcare",
     "nse_symbol": "WOCKPHARMA",
     "buy_avg": 415.9,
-    "moat_type": "Pending",
-    "moat_class": "pending",
-    "conviction": 0,
-    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
-    "leadership": "Pending",
-    "non_rep": "Pending",
+    "moat_type": "Narrow",
+    "moat_class": "narrow",
+    "conviction": 6,
+    "moat": "Wockhardt’s moat rests on innovation and anti-infective R&D rather than commodity generics. That can be powerful if commercialised well, but it is still an emerging moat rather than one already fully monetised.",
+    "leadership": "The company positions itself as a research-based global pharma and biotech enterprise, with a visible novel anti-infective franchise including Zaynich and Miqnaf, and a portfolio of differentiated products from its R&D platform.",
+    "non_rep": "Discovery led capabilities, patent-backed assets and specialist anti-infective know-how are much harder to copy than standard generics. However, the moat remains conditional on regulatory success, launch execution and balance-sheet repair.",
     "tailwinds": [
-      "Pending analysis"
+      "Potential scale-up of differentiated antibiotic portfolio",
+      "Re-rating if innovation assets deliver commercial traction",
+      "Margin improvement if legacy drag reduces and product mix improves"
     ],
     "risks": [
-      "Pending analysis"
+      "Clinical, regulatory and market-adoption risk in novel assets",
+      "Historically volatile profitability and leverage concerns",
+      "Execution gap between R&D promise and cash flow conversion"
     ],
     "track": [
-      "Add tracking KPIs"
+      "Prescription and launch trajectory of novel products",
+      "Debt reduction and financing cost trend",
+      "R&D productivity translating into commercial approvals"
     ]
   },
   {
@@ -4386,20 +4452,26 @@
     "sector": "Consumer Cyclical",
     "nse_symbol": "AMBER",
     "buy_avg": 6635.5,
-    "moat_type": "Pending",
-    "moat_class": "pending",
-    "conviction": 0,
-    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
-    "leadership": "Pending",
-    "non_rep": "Pending",
+    "moat_type": "Narrow",
+    "moat_class": "narrow",
+    "conviction": 7,
+    "moat": "A manufacturing scale moat in outsourced RAC and adjacent electronics, strengthened by backward integration, customer qualification and increasing complexity across components and systems. It is a quality execution moat rather than a consumer brand moat.",
+    "leadership": "FY25 annual report and investor materials show Amber has evolved from HVAC-focused manufacturing into a broader precision manufacturing platform across consumer durables, electronics and railway/defence, with FY25 revenue near Rs 9,973 crore and operating EBITDA of about Rs 796 crore.",
+    "non_rep": "Large OEM customers do not switch complex contract manufacturers lightly. Tooling capability, component localisation, process consistency and delivery reliability make incumbency valuable, especially as India scales import substitution.",
     "tailwinds": [
-      "Pending analysis"
+      "Rising RAC penetration and outsourcing in India",
+      "PLI and localisation-driven electronics manufacturing opportunity",
+      "Diversification into higher-value adjacencies beyond RAC"
     ],
     "risks": [
-      "Pending analysis"
+      "Seasonality and weather sensitivity in RAC demand",
+      "Customer concentration and pricing pressure from large brands",
+      "Execution complexity as the business spreads across many verticals"
     ],
     "track": [
-      "Add tracking KPIs"
+      "Outsourced RAC market share and customer additions",
+      "Electronics / EMS mix and margin quality",
+      "Working capital discipline through rapid scale-up"
     ]
   },
   {
@@ -4408,20 +4480,26 @@
     "sector": "Consumer Cyclical",
     "nse_symbol": "EIHOTEL",
     "buy_avg": 394.42,
-    "moat_type": "Pending",
-    "moat_class": "pending",
-    "conviction": 0,
-    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
-    "leadership": "Pending",
-    "non_rep": "Pending",
+    "moat_type": "Wide",
+    "moat_class": "wide",
+    "conviction": 8,
+    "moat": "One of the cleanest brand moats in listed Indian hospitality. Oberoi and Trident combine premium brand equity, service reputation and irreplaceable luxury assets to support pricing power and repeat demand over a very long cycle.",
+    "leadership": "FY25 integrated annual report highlights about Rs 25,353 million gross revenue, Rs 10,050 million EBITDA, 30 hotels and cruisers, 4,229 keys owned and managed, and a pipeline of 21 properties through 2029.",
+    "non_rep": "Luxury hospitality moats are built from decades of service culture, iconic assets and customer trust. Replacement cost is enormous and brand replication is even harder, which is why this deserves a high conviction moat rating.",
     "tailwinds": [
-      "Pending analysis"
+      "Scarcity of top-end hospitality supply in premium markets",
+      "Growth in affluent domestic travel and inbound luxury demand",
+      "Asset-light expansion through management contracts and pipeline execution"
     ],
     "risks": [
-      "Pending analysis"
+      "Macro and travel downturns can still impact occupancy and rates",
+      "Execution risk in pipeline ramp-up",
+      "Luxury valuations can price in too much optimism"
     ],
     "track": [
-      "Add tracking KPIs"
+      "ARR, RevPAR and occupancy across flagship hotels",
+      "Pipeline conversion and managed-hotel additions",
+      "Cash generation and return on capital through the cycle"
     ]
   },
   {
@@ -4430,20 +4508,26 @@
     "sector": "Basic Materials",
     "nse_symbol": "IFGLEXPOR",
     "buy_avg": 198.2,
-    "moat_type": "Pending",
-    "moat_class": "pending",
-    "conviction": 0,
-    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
-    "leadership": "Pending",
-    "non_rep": "Pending",
+    "moat_type": "Narrow",
+    "moat_class": "narrow",
+    "conviction": 6,
+    "moat": "A technical-application moat in refractory flow-control and related products used in harsh, process-critical environments. Not a glamorous moat, but one built on qualification, reliability and service embedded in steel operations.",
+    "leadership": "Company materials describe IFGL as a global manufacturer of high-performance refractory products and systems for the iron and steel industry, spanning isostatic refractories, submerged entry nozzles, slide gate systems, purging plugs and monolithic refractories, with manufacturing presence across multiple geographies.",
+    "non_rep": "Steelmakers care deeply about uptime and failure avoidance. Once a refractory supplier is qualified into continuous-casting and molten-metal handling workflows, technical service and reliability create repeat business and switching friction.",
     "tailwinds": [
-      "Pending analysis"
+      "Capacity additions and maintenance demand in steel",
+      "Global supply-chain diversification for technical inputs",
+      "Mix shift to higher-value specialised flow-control products"
     ],
     "risks": [
-      "Pending analysis"
+      "Steel-cycle dependency and global industrial slowdown",
+      "Margin pain from raw material or energy inflation",
+      "Moderate bargaining power with large industrial customers"
     ],
     "track": [
-      "Add tracking KPIs"
+      "High-value refractory mix",
+      "Export growth and plant utilisation",
+      "Gross margin resilience through steel downcycles"
     ]
   },
   {
@@ -4452,20 +4536,26 @@
     "sector": "Industrials",
     "nse_symbol": "HLEGLAS",
     "buy_avg": 353.03,
-    "moat_type": "Pending",
-    "moat_class": "pending",
-    "conviction": 0,
-    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
-    "leadership": "Pending",
-    "non_rep": "Pending",
+    "moat_type": "Narrow",
+    "moat_class": "narrow",
+    "conviction": 6,
+    "moat": "A process-equipment moat serving pharma and specialty chemicals, built on corrosion-resistant design know-how, installation base, qualification and after-sales support. The moat is strongest where process failure is expensive for the customer.",
+    "leadership": "HLE Glascoat focuses on glass-lined equipment, filtration, drying and heat transfer systems. Public disclosures cite a FY25 order book of roughly Rs 575 crore, FY25 revenue of about Rs 1,027.6 crore and PAT growth of over 50% YoY, with glass-lined equipment remaining a key profit driver.",
+    "non_rep": "Customers validate reactors, dryers and filtration systems into long-lived process setups. Once installed, switching involves downtime, revalidation and operational risk, which supports stickiness beyond what the capital-goods label suggests.",
     "tailwinds": [
-      "Pending analysis"
+      "Capex in specialty chemicals and pharmaceuticals",
+      "Import substitution in high-spec process equipment",
+      "Cross-sell across glass-lined, filtration, drying and heat-transfer lines"
     ],
     "risks": [
-      "Pending analysis"
+      "Lumpy order intake in capital equipment",
+      "Customer capex deferrals in weak cycles",
+      "Integration risk as product portfolio broadens"
     ],
     "track": [
-      "Add tracking KPIs"
+      "Order inflow and executable order book",
+      "Margins by glass-lined versus filtration businesses",
+      "Aftermarket / spares contribution and cash conversion"
     ]
   },
   {
@@ -4474,20 +4564,26 @@
     "sector": "Basic Materials",
     "nse_symbol": "KAMDHENU",
     "buy_avg": 27.17,
-    "moat_type": "Pending",
-    "moat_class": "pending",
-    "conviction": 0,
-    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
-    "leadership": "Pending",
-    "non_rep": "Pending",
+    "moat_type": "Narrow",
+    "moat_class": "narrow",
+    "conviction": 6,
+    "moat": "Kamdhenu has an asset-light distribution-and-brand moat rather than a manufacturing moat. The key edge is a franchise-led brand network in TMT bars, now complemented by adjacent building-material categories such as paints and adhesives.",
+    "leadership": "Public materials highlight an asset-light franchise model, more than 80 franchise units, a network of over 10,000 dealers and brand sales turnover of about Rs 22,000 crore, alongside FY25 PAT growth of over 21%.",
+    "non_rep": "Brand trust in construction materials matters because builders and retailers de-risk with familiar names. A wide franchise/dealer network compounds convenience and reach, though the moat is moderated because the core product remains partly commoditised.",
     "tailwinds": [
-      "Pending analysis"
+      "Housing and infrastructure demand driving TMT consumption",
+      "Shift from unorganised to branded building materials",
+      "Potential cross-sell leverage into paints and other adjacent categories"
     ],
     "risks": [
-      "Pending analysis"
+      "Commodity-linked volatility in steel spreads",
+      "Heavy competition from larger integrated steel and paint brands",
+      "Brand salience can fade if franchise execution weakens"
     ],
     "track": [
-      "Add tracking KPIs"
+      "Brand sales turnover and royalty economics",
+      "Franchise additions and dealer productivity",
+      "Success of adjacent categories beyond core TMT"
     ]
   },
   {
@@ -4496,20 +4592,26 @@
     "sector": "Healthcare",
     "nse_symbol": "GAUDIUMIVF",
     "buy_avg": 116.0,
-    "moat_type": "Pending",
-    "moat_class": "pending",
-    "conviction": 0,
-    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
-    "leadership": "Pending",
-    "non_rep": "Pending",
+    "moat_type": "Narrow",
+    "moat_class": "narrow",
+    "conviction": 6,
+    "moat": "A trust-and-outcomes moat in a highly personal healthcare category. Fertility chains create stickiness through doctor reputation, patient counselling, success rates and referral flywheels; this is narrower than a big hospital moat, but still meaningful.",
+    "leadership": "The IPO prospectus and recent filings position Gaudium as a leading fertility and women’s healthcare platform in India. FY26 press materials show revenue of about Rs 104.35 crore, up 47.56% YoY, with EBITDA margin above 36%, suggesting a scalable specialised network model.",
+    "non_rep": "Patients choose fertility providers based on trust, clinician quality and perceived success probability. That local reputation effect makes mature centres harder to dislodge than raw market-share numbers might imply.",
     "tailwinds": [
-      "Pending analysis"
+      "Low fertility-treatment penetration in India",
+      "Rising acceptance of assisted reproductive care",
+      "Network expansion into women’s health and new geographies"
     ],
     "risks": [
-      "Pending analysis"
+      "Doctor dependency and centre-level execution variability",
+      "Reputational damage from weak clinical outcomes",
+      "Valuation and scale-up risks for a newly listed specialist chain"
     ],
     "track": [
-      "Add tracking KPIs"
+      "IVF cycle volume growth and successful mature-centre ramps",
+      "EBITDA margin sustainability as network expands",
+      "Doctor retention and repeat/referral patient flow"
     ]
   },
   {
@@ -4537,23 +4639,29 @@
   {
     "ticker": "MON100",
     "name": "Motilal Oswal NASDAQ 100 ETF",
-    "sector": "Pending",
+    "sector": "ETF",
     "nse_symbol": "MON100",
     "buy_avg": 119.7,
-    "moat_type": "Pending",
-    "moat_class": "pending",
-    "conviction": 0,
-    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
-    "leadership": "Pending",
-    "non_rep": "Pending",
+    "moat_type": "Narrow",
+    "moat_class": "narrow",
+    "conviction": 5,
+    "moat": "Again, not a business moat in the classic sense. The edge lies in scale, familiarity, liquidity and ease of access for Indian investors wanting broad Nasdaq-100 exposure through an onshore listed vehicle.",
+    "leadership": "The official fund page cites AUM of about Rs 10,971.5 crore as of 31 March 2026, TER of 0.59%, tracking error of 0.73% and a long operating history going back to March 2011.",
+    "non_rep": "Compared with smaller wrappers, scale can help liquidity, tighter spreads and investor comfort. But the product itself remains replicable and ultimate returns depend on underlying Nasdaq constituents, not franchise economics.",
     "tailwinds": [
-      "Pending analysis"
+      "Long-duration secular growth in technology, software and semis",
+      "Rupee weakness versus the dollar",
+      "Retail demand for simple international equity exposure"
     ],
     "risks": [
-      "Pending analysis"
+      "High concentration in US growth and tech factors",
+      "Tracking error and temporary liquidity gaps",
+      "Sharp valuation drawdowns in the Nasdaq complex"
     ],
     "track": [
-      "Add tracking KPIs"
+      "AUM and on-exchange liquidity",
+      "Tracking error / tracking difference",
+      "Underlying earnings momentum of top Nasdaq holdings"
     ]
   },
   {
