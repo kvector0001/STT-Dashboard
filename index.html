@@ -2439,6 +2439,14 @@ async function loadData() {
   // Store raw stocks (before price filter) for Exited filter
   window._allStocksRaw = stocks;
 
+  // Check for sync error written by fetch_prices.py
+  if (prices._sync_error) {
+    showToast('⚠️ ' + prices._sync_error.split('\n')[0], 'red');
+    document.getElementById('last-updated').textContent = '❌ Sync failed — check sheet columns';
+    document.getElementById('last-updated-analysis') && (document.getElementById('last-updated-analysis').textContent = '❌ Sync failed — check sheet columns');
+    // Still try to use valid price data from prices.json if any exists
+  }
+
   // Filter to ONLY stocks that have prices (are in the portfolio)
   // Validate prices quality — if fewer than 5 stocks have prices, it's corrupt data
   const validPricedTickers = Object.keys(prices).filter(t => prices[t]?.ltp != null && !/^\d/.test(t));

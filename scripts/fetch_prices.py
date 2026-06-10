@@ -83,15 +83,51 @@ if os.path.abspath(portfolio_file) != os.path.abspath(REPO_PATH):
 # ── Read the Excel ────────────────────────────────────────────────────────────
 df = pd.read_excel(portfolio_file, engine="openpyxl")
 
-# Assign column names based on known structure
-expected_cols = [
-    "self_other", "symbol", "qty", "buy_avg", "buy_value",
-    "ltp", "present_value", "pnl", "pnl_pct",
-    "gurpreet", "remarks1", "remarks2"
-]
-# Trim or pad columns to expected length
-n = len(df.columns)
-df.columns = expected_cols[:n] + [f"extra_{i}" for i in range(n - len(expected_cols))]
+print(f"[INFO] Sheet columns: {list(df.columns)}")
+
+# ── Find required columns by searching header names (case-insensitive) ────────
+def find_col(df, keywords):
+    """Return the first column name whose header contains any of the keywords (case-insensitive)."""
+    for col in df.columns:
+        col_str = str(col).lower().strip()
+        for kw in keywords:
+            if kw in col_str:
+                return col
+    return None
+
+sym_col  = find_col(df, ["symbol", "ticker", "scrip", "stock"])
+qty_col  = find_col(df, ["qty", "quantity", "shares", "units"])
+avg_col  = find_col(df, ["buy avg", "buyavg", "avg price", "avg cost", "purchase price", "buy_avg", "avg"])
+
+missing = []
+if sym_col  is None: missing.append("Symbol/Ticker column (tried: symbol, ticker, scrip, stock)")
+if qty_col  is None: missing.append("Qty column (tried: qty, quantity, shares, units)")
+if avg_col  is None: missing.append("Buy Avg column (tried: buy avg, avg price, avg cost, purchase price)")
+
+if missing:
+    err = "SYNC FAILED — Required columns not found in Google Sheet:\n" + "\n".join(f"  - {m}" for m in missing)
+    print(f"[ERROR] {err}")
+    # Write a sync error marker so the UI can show it
+    import json as _json2
+    err_marker = {"_sync_error": err, "_sync_time": now_utc}
+    if os.path.exists("prices.json"):
+        with open("prices.json", "r", encoding="utf-8") as f:
+            try:
+                existing = _json2.load(f)
+                existing["_sync_error"] = err
+                existing["_sync_time"] = now_utc
+            except Exception:
+                existing = err_marker
+        with open("prices.json", "w", encoding="utf-8") as f:
+            _json2.dump(existing, f, indent=2, ensure_ascii=False)
+    import sys
+    sys.exit(1)
+
+print(f"[INFO] Using columns: symbol={sym_col!r}, qty={qty_col!r}, buy_avg={avg_col!r}")
+
+# Filter valid rows using detected column names
+df = df.rename(columns={sym_col: "symbol", qty_col: "qty", avg_col: "buy_avg"})
+df = df[["symbol", "qty", "buy_avg"]].copy()
 
 # Filter valid rows
 df = df[df["symbol"].notna()]
