@@ -1067,8 +1067,8 @@
           <th onclick="sortAnalysis('price_to_book')">P/B <span id="sort-price_to_book" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('ev_ebitda')">EV/EBITDA <span id="sort-ev_ebitda" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('roe')">ROE % <span id="sort-roe" class="sort-indicator"></span></th>
-          <th onclick="sortAnalysis('opcf_3yr_avg')">OCF 3YrAvg <span id="sort-opcf_3yr_avg" class="sort-indicator"></span></th>
-          <th onclick="sortAnalysis('fcf_3yr_avg')">FCF 3YrAvg <span id="sort-fcf_3yr_avg" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('opcf_3yr_avg')">Op Cash Flow <span id="sort-opcf_3yr_avg" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('fcf_3yr_avg')">Free Cash Flow <span id="sort-fcf_3yr_avg" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('ret_1d')">1D Ret <span id="sort-ret_1d" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('ret_1m')">1M Ret <span id="sort-ret_1m" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('ret_6m')">6M Ret <span id="sort-ret_6m" class="sort-indicator"></span></th>
@@ -1316,12 +1316,12 @@ function renderCard(s) {
     </div>
     <div class="metrics-row">
       <div class="metric-item">
-        <span class="metric-label">Op. Cash Flow</span>
-        <span class="metric-value">${s.ocf_cr != null ? '₹'+fmt(s.ocf_cr,0)+'Cr' : '—'}</span>
+        <span class="metric-label">Op Cash Flow${s.opcf_3yr_avg != null ? ' <span style="font-size:0.55rem;opacity:.6">3yr</span>' : ''}</span>
+        <span class="metric-value">${(s.opcf_3yr_avg ?? s.ocf_cr) != null ? '₹'+fmt(s.opcf_3yr_avg ?? s.ocf_cr,0)+'Cr' : '—'}</span>
       </div>
       <div class="metric-item">
-        <span class="metric-label">FCF</span>
-        <span class="metric-value">${s.fcf_cr != null ? '₹'+fmt(s.fcf_cr,0)+'Cr' : '—'}</span>
+        <span class="metric-label">FCF${s.fcf_3yr_avg != null ? ' <span style="font-size:0.55rem;opacity:.6">3yr</span>' : ''}</span>
+        <span class="metric-value">${(s.fcf_3yr_avg ?? s.fcf_cr) != null ? '₹'+fmt(s.fcf_3yr_avg ?? s.fcf_cr,0)+'Cr' : '—'}</span>
       </div>
       <div class="metric-item">
         <span class="metric-label">Vol 30m/Avg</span>
@@ -2168,8 +2168,8 @@ function renderAnalysisTable() {
       <td class="${pbClass(s.price_to_book)}">${f(s.price_to_book, 1)}</td>
       <td class="${evClass(s.ev_ebitda)}">${f(s.ev_ebitda, 1)}</td>
       <td class="${roeClass(s.roe)}">${fp(s.roe)}</td>
-      <td>${s.opcf_3yr_avg != null ? '₹'+f(s.opcf_3yr_avg)+'Cr' : '—'}</td>
-      <td>${s.fcf_3yr_avg != null ? '₹'+f(s.fcf_3yr_avg)+'Cr' : '—'}</td>
+      <td>${(s.opcf_3yr_avg ?? s.ocf_cr) != null ? '₹'+f(s.opcf_3yr_avg ?? s.ocf_cr)+'Cr' + (s.opcf_3yr_avg != null ? ' <span style="font-size:0.6rem;color:var(--text3)">3yr</span>' : '') : '—'}</td>
+      <td>${(s.fcf_3yr_avg ?? s.fcf_cr) != null ? '₹'+f(s.fcf_3yr_avg ?? s.fcf_cr)+'Cr' + (s.fcf_3yr_avg != null ? ' <span style="font-size:0.6rem;color:var(--text3)">3yr</span>' : '') : '—'}</td>
       <td class="${pc(s.ret_1d)}">${fp(s.ret_1d)}</td>
       <td class="${pc(s.ret_1m)}">${fp(s.ret_1m)}</td>
       <td class="${pc(s.ret_6m)}">${fp(s.ret_6m)}</td>
