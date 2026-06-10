@@ -97,6 +97,7 @@ df.columns = expected_cols[:n] + [f"extra_{i}" for i in range(n - len(expected_c
 df = df[df["symbol"].notna()]
 df = df[~df["symbol"].astype(str).str.contains(" ")]          # remove mutual fund rows
 df = df[df["qty"].apply(lambda x: str(x).replace(".", "").isdigit())]  # numeric qty only
+df = df[~df["symbol"].astype(str).str.match(r'^\d')]           # reject numeric-only symbols (Excel formatting errors)
 df["qty"] = pd.to_numeric(df["qty"], errors="coerce")
 df["buy_avg"] = pd.to_numeric(df["buy_avg"], errors="coerce")
 df = df.dropna(subset=["qty", "buy_avg"])
