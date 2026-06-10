@@ -105,6 +105,27 @@ df = df.dropna(subset=["qty", "buy_avg"])
 portfolio = df[["symbol", "qty", "buy_avg"]].reset_index(drop=True)
 print(f"[INFO] Found {len(portfolio)} valid holdings in portfolio\n")
 
+# ── Sanity check: abort if portfolio looks empty or corrupt ─────────────────
+# Load existing prices.json to use as fallback if fetch gives bad results
+prices_path = "prices.json"
+fallback_prices = {}
+try:
+    if os.path.exists(prices_path):
+        with open(prices_path, "r", encoding="utf-8") as f:
+            raw_fallback = f.read()
+        import re as _re2
+        raw_fallback = raw_fallback.replace(': NaN', ': null').replace(':NaN', ':null')
+        fallback_prices = json.loads(raw_fallback)
+        # Filter out numeric tickers from fallback too
+        fallback_prices = {k: v for k, v in fallback_prices.items() if not _re2.match(r'^\d', k)}
+except Exception:
+    pass
+
+if len(portfolio) < 5:
+    print(f"[ERROR] Portfolio has only {len(portfolio)} valid stocks — looks corrupt. Aborting to preserve existing prices.json.")
+    import sys
+    sys.exit(1)
+
 # ── Load existing stocks.json ─────────────────────────────────────────────────
 stocks_path = "stocks.json"
 with open(stocks_path, "r", encoding="utf-8") as f:
@@ -514,7 +535,19 @@ for _, row in portfolio.iterrows():
         print(f"[ERROR] {sym:<18} — price not available")
         failed.append(sym)
 
-# ── Write prices.json — sanitise NaN/Inf to null so JSON stays valid ─────────
+# ── Write prices.json — sanity check before writing ────────────────────────
+# If new prices have far fewer valid stocks than fallback, keep fallback
+import re as _re3
+valid_new = {k: v for k, v in prices.items() if not _re3.match(r'^\d', k) and v.get('ltp') is not None}
+if len(fallback_prices) > 10 and len(valid_new) < len(fallback_prices) * 0.5:
+    print(f"[WARNING] New prices have only {len(valid_new)} valid stocks vs fallback {len(fallback_prices)}. Merging to preserve data.")
+    # Merge: keep fallback as base, update with valid new prices
+    merged_prices = dict(fallback_prices)
+    merged_prices.update(valid_new)
+    prices = merged_prices
+else:
+    # Filter out any remaining numeric-ticker entries
+    prices = {k: v for k, v in prices.items() if not _re3.match(r'^\d', k)}
 import math
 
 def sanitise(obj):

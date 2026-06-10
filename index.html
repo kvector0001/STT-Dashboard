@@ -950,6 +950,7 @@
   <button class="chip chip-high"   data-filter="high">High Conviction (8+)</button>
   <button class="chip chip-profit" data-filter="profit">In Profit</button>
   <button class="chip chip-loss"   data-filter="loss">In Loss</button>
+  <button class="chip" data-filter="exited" style="border-color:#6b7280;color:#9ca3af;">📤 Exited</button>
   <div class="search-wrap">
     <span class="search-icon">🔍</span>
     <input type="search" id="search" placeholder="Ticker or company…" autocomplete="off" />
@@ -1208,6 +1209,8 @@ function renderCard(s) {
 
   const pendingBanner = pending
     ? `<div class="pending-banner">⚠️ Fundamental analysis pending<button class="ask-claude-btn" onclick="askClaude('${esc(s.ticker)}',event)">✨ Ask Claude</button></div>`
+    : s._exited
+    ? `<div class="pending-banner" style="background:rgba(107,114,128,0.15);border-color:#6b7280;color:#9ca3af;">📤 Exited — no longer in portfolio</div>`
     : '';
 
   const ltp     = s.ltp != null ? '₹' + fmt(s.ltp) : '—';
@@ -2303,6 +2306,24 @@ function updateSummary(stocks) {
 
 // ── Filter + Sort + Render ─────────────────────────────────────────────────
 function renderAll() {
+  // For 'exited': show stocks that have analysis but are no longer in portfolio (no live price)
+  if (activeFilter === 'exited') {
+    // Load all stocks from stocksMap (before price filtering) — these are stored in allStocksWithAnalysis
+    const exitedStocks = (window._allStocksRaw || []).filter(s =>
+      !allStocks.find(ps => ps.ticker === s.ticker) &&
+      s.moat_class !== 'pending' &&
+      s.moat_type !== 'Pending'
+    );
+    const container = document.getElementById('cards');
+    document.getElementById('results-count').textContent = `Showing ${exitedStocks.length} exited holdings`;
+    if (exitedStocks.length === 0) {
+      container.innerHTML = `<div id="no-results">No exited stocks with analysis found.</div>`;
+    } else {
+      container.innerHTML = exitedStocks.map(s => renderCard({...s, _exited: true})).join('');
+    }
+    return;
+  }
+
   let visible = allStocks.filter(s => {
     if (activeFilter === 'wide')   return s.moat_class === 'wide';
     if (activeFilter === 'narrow') return s.moat_class === 'narrow';
@@ -2415,9 +2436,28 @@ async function loadData() {
   // Apply any locally-saved edits (from Claude paste)
   applyUserEdits(stocks);
 
+  // Store raw stocks (before price filter) for Exited filter
+  window._allStocksRaw = stocks;
+
   // Filter to ONLY stocks that have prices (are in the portfolio)
+  // Validate prices quality — if fewer than 5 stocks have prices, it's corrupt data
+  const validPricedTickers = Object.keys(prices).filter(t => prices[t]?.ltp != null && !/^\d/.test(t));
+  if (validPricedTickers.length < 5) {
+    // prices.json is corrupt — use localStorage cache if available
+    const cached = localStorage.getItem('portfolio_stocks');
+    if (cached) {
+      console.warn('[loadData] prices.json has <5 valid stocks — using localStorage cache');
+      const cachedStocks = JSON.parse(cached);
+      const ts = localStorage.getItem('portfolio_ts');
+      const age = ts ? Math.round((Date.now() - parseInt(ts)) / 60000) : '?';
+      document.getElementById('last-updated').textContent = `⚠️ Cached (${age}m old — live refresh failed)`;
+      document.getElementById('last-updated-analysis') && (document.getElementById('last-updated-analysis').textContent = document.getElementById('last-updated').textContent);
+      return cachedStocks;
+    }
+  }
+
   // Merge prices and return data into stocks
-  stocks = stocks.filter(s => prices.hasOwnProperty(s.ticker));
+  stocks = stocks.filter(s => prices.hasOwnProperty(s.ticker) && prices[s.ticker]?.ltp != null);
   stocks.forEach(s => {
     const p = prices[s.ticker];
     if (p) {
