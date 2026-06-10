@@ -2753,6 +2753,13 @@ document.addEventListener('DOMContentLoaded', function() {
 // ── Boot ───────────────────────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', init);
 
+// Restore lock button label if already unlocked in this session
+(function() {
+  if (sessionStorage.getItem('privacy_unlocked') === '1') {
+    document.querySelectorAll('#lock-btn, #lock-btn-2').forEach(b => b && (b.textContent = '🔓 Unlock'));
+  }
+})();
+
 // ── Theme toggle ──────────────────────────────────────────────────────────
 function toggleTheme() {
   const light = document.body.classList.toggle('light-mode');
@@ -2772,7 +2779,8 @@ function toggleTheme() {
 
 // ── Privacy lock ──────────────────────────────────────────────────────────
 const PRIVACY_PIN = '1520';
-let privacyUnlocked = false;
+// Restore unlock state from sessionStorage (persists across page reloads in same tab)
+let privacyUnlocked = sessionStorage.getItem('privacy_unlocked') === '1';
 
 // Private fields: columns by index (0-based) in the analysis table
 // 2=Qty, 3=Buy Value, 4=Present Value, 5=P&L, 6=P&L%
@@ -2845,6 +2853,7 @@ function togglePrivacy() {
   } else {
     // Lock it back
     privacyUnlocked = false;
+    sessionStorage.removeItem('privacy_unlocked');
     applyPrivacyState();
   }
 }
@@ -2853,6 +2862,7 @@ function submitPin() {
   const entered = document.getElementById('pin-input').value.trim();
   if (entered === PRIVACY_PIN) {
     privacyUnlocked = true;
+    sessionStorage.setItem('privacy_unlocked', '1');
     closePinModal();
     applyPrivacyState();
     showToast('🔓 Values unlocked', 'green');
