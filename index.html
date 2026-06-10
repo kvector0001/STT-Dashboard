@@ -2032,8 +2032,18 @@ function switchTab(tab) {
   document.getElementById('tab-btn-' + tab).classList.add('active');
   // Clear search on tab switch
   clearAnalysisSearch();
+  // Reset card filter chips
+  activeFilter = 'all';
+  searchQuery = '';
+  document.querySelectorAll('.chip[data-filter]').forEach(b => b.classList.remove('active'));
+  const allChip = document.querySelector('.chip[data-filter="all"]');
+  if (allChip) allChip.classList.add('active');
+  const cardSearch = document.getElementById('search');
+  if (cardSearch) cardSearch.value = '';
   if (tab === 'analysis') {
     renderAnalysisTable();
+  } else if (tab === 'dashboard') {
+    renderAll();
   }
 }
 
@@ -2045,22 +2055,30 @@ function clearAnalysisSearch() {
   renderAnalysisTable();
 }
 
-// ── Navigate to card on Dashboard tab ─────────────────────────────────────
+// ── Navigate to card on Dashboard tab (Deep Analysis) ─────────────────────
 function goToCard(ticker) {
-  // Switch to dashboard (cards) tab
+  // Clear all Deep Analysis (cards) filters before navigating
+  activeFilter = 'all';
+  searchQuery = '';
+  document.querySelectorAll('.chip[data-filter]').forEach(b => b.classList.remove('active'));
+  const allChip = document.querySelector('.chip[data-filter="all"]');
+  if (allChip) allChip.classList.add('active');
+  const cardSearch = document.getElementById('search');
+  if (cardSearch) cardSearch.value = '';
+
+  // Switch to Deep Analysis (cards) tab
   switchTab('dashboard');
-  renderAll();
-  // Wait for cards to render, then scroll to the matching card
+
+  // Scroll to the card after render
   setTimeout(() => {
     const card = document.querySelector(`.card[data-ticker="${ticker}"]`);
     if (card) {
       card.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      // Briefly highlight it
       card.style.outline = '2px solid var(--blue)';
       card.style.transition = 'outline 0.3s';
       setTimeout(() => { card.style.outline = ''; }, 2000);
     }
-  }, 100);
+  }, 150);
 }
 
 // ── Rendering Analysis Table ────────────────────────────────────────────────
