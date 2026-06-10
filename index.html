@@ -2563,9 +2563,9 @@ async function refreshDataBtn() {
   if (!token) {
     token = prompt(
       'Enter your GitHub Personal Access Token (PAT).\n\n' +
-      'It will be saved locally in your browser.\n' +
+      'It will be saved locally in your browser — enter only once.\n\n' +
       'Create one at: github.com/settings/tokens\n' +
-      '(needs "workflow" scope, or fine-grained "Actions: write")'
+      'Required scope: ✅ repo  (no workflow scope needed)'
     );
     if (!token) return;
     localStorage.setItem('gh_pat', token.trim());
@@ -2576,9 +2576,10 @@ async function refreshDataBtn() {
   setProgress('');
 
   try {
-    // Trigger the workflow
-    const res = await fetch(
-      `https://api.github.com/repos/${GH_REPO}/actions/workflows/${GH_WF}/dispatches`,
+    // Try repository_dispatch first (needs only repo scope, not workflow scope)
+    // Falls back to workflow_dispatch if that fails
+    let res = await fetch(
+      `https://api.github.com/repos/${GH_REPO}/dispatches`,
       {
         method: 'POST',
         headers: {
@@ -2586,7 +2587,7 @@ async function refreshDataBtn() {
           'Accept': 'application/vnd.github+json',
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ ref: GH_BRANCH })
+        body: JSON.stringify({ event_type: 'refresh-prices' })
       }
     );
 
@@ -2594,7 +2595,24 @@ async function refreshDataBtn() {
       localStorage.removeItem('gh_pat');
       throw new Error('Invalid token — cleared. Click Refresh again to re-enter.');
     }
-    if (!res.ok) throw new Error(`GitHub API error ${res.status}`);
+
+    // If repository_dispatch not set up yet, fall back to workflow_dispatch
+    if (!res.ok) {
+      res = await fetch(
+        `https://api.github.com/repos/${GH_REPO}/actions/workflows/${GH_WF}/dispatches`,
+        {
+          method: 'POST',
+          headers: {
+            'Authorization': `Bearer ${token}`,
+            'Accept': 'application/vnd.github+json',
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ ref: GH_BRANCH })
+        }
+      );
+      if (res.status === 401) { localStorage.removeItem('gh_pat'); throw new Error('Invalid token — cleared.'); }
+      if (!res.ok) throw new Error(`GitHub API error ${res.status}`);
+    }
 
     // Poll for completion — check prices.json timestamp every 10s
     setBtn('⏳ Fetching prices…');
