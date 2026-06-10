@@ -298,6 +298,21 @@ for _, row in portfolio.iterrows():
     fetched_rev = None
     fetched_vol_yest_ratio = None
     fetched_vol_30m_ratio = None
+    fetched_gross_margin = None
+    fetched_op_margin = None
+    fetched_profit_margin = None
+    fetched_roa = None
+    fetched_ebitda_margin = None
+    fetched_qtrly_rev_growth = None
+    fetched_qtrly_earn_growth = None
+    fetched_fcf_cr = None
+    fetched_opcf_3yr_avg = None
+    fetched_fcf_3yr_avg = None
+    fetched_price_to_book = None
+    fetched_ev_ebitda = None
+    fetched_week52_high = None
+    fetched_week52_low = None
+    fetched_insider_pct = None
 
     for candidate in candidates:
         try:
@@ -393,69 +408,67 @@ for _, row in portfolio.iterrows():
                     if rev is not None:
                         fetched_rev = round(rev * 100, 2)  # Convert to %
 
-                    # ── New metrics ──────────────────────────────────────────
+                    # ── New metrics — store in locals, applied after prices[sym] is created ──
                     # Margin metrics
                     gm   = info.get("grossMargins")
-                    if gm is not None:   prices[sym]["gross_margin"]     = round(gm * 100, 2)
+                    if gm is not None:   fetched_gross_margin    = round(gm * 100, 2)
                     om   = info.get("operatingMargins")
-                    if om is not None:   prices[sym]["operating_margin"]  = round(om * 100, 2)
+                    if om is not None:   fetched_op_margin       = round(om * 100, 2)
                     pm   = info.get("profitMargins")
-                    if pm is not None:   prices[sym]["profit_margin"]     = round(pm * 100, 2)
+                    if pm is not None:   fetched_profit_margin   = round(pm * 100, 2)
                     roa  = info.get("returnOnAssets")
-                    if roa is not None:  prices[sym]["roa"]               = round(roa * 100, 2)
+                    if roa is not None:  fetched_roa             = round(roa * 100, 2)
                     ebitda = info.get("ebitdaMargins")
-                    if ebitda is not None: prices[sym]["ebitda_margin"]   = round(ebitda * 100, 2)
+                    if ebitda is not None: fetched_ebitda_margin = round(ebitda * 100, 2)
 
                     # Growth metrics
                     qrg = info.get("revenueQuarterlyGrowth") or info.get("quarterlyRevenueGrowth")
-                    if qrg is not None:  prices[sym]["qtrly_rev_growth"]  = round(qrg * 100, 2)
+                    if qrg is not None:  fetched_qtrly_rev_growth  = round(qrg * 100, 2)
                     qeg = info.get("earningsQuarterlyGrowth")
-                    if qeg is not None:  prices[sym]["qtrly_earn_growth"] = round(qeg * 100, 2)
+                    if qeg is not None:  fetched_qtrly_earn_growth = round(qeg * 100, 2)
 
                     # Cash flow metrics (latest year, in Crores)
                     fcf = info.get("freeCashflow")
-                    if fcf is not None:  prices[sym]["fcf_cr"]            = round(fcf / 10_000_000, 2)
+                    if fcf is not None:  fetched_fcf_cr = round(fcf / 10_000_000, 2)
                     ocf_val = info.get("operatingCashflow")
-                    if ocf_val is not None: prices[sym]["ocf_cr"]         = round(ocf_val / 10_000_000, 2)
+                    if ocf_val is not None: fetched_ocf = round(ocf_val / 10_000_000, 2)
 
                     # 3-year average FCF and OCF from cashflow statement
                     try:
                         cf = ticker_obj.cashflow
                         if cf is not None and not cf.empty:
-                            # Operating cash flow 3yr avg
                             for lbl in ['Operating Cash Flow', 'Total Cash From Operating Activities', 'Cash From Operations']:
                                 rows = [r for r in cf.index if lbl.lower() in r.lower()]
                                 if rows:
                                     vals = cf.loc[rows[0]].dropna().head(3).values
                                     if len(vals) > 0:
-                                        prices[sym]["opcf_3yr_avg"] = round(float(vals.mean()) / 10_000_000, 2)
+                                        fetched_opcf_3yr_avg = round(float(vals.mean()) / 10_000_000, 2)
                                     break
-                            # Free cash flow 3yr avg
                             for lbl in ['Free Cash Flow', 'Levered Free Cash Flow']:
                                 rows = [r for r in cf.index if lbl.lower() in r.lower()]
                                 if rows:
                                     vals = cf.loc[rows[0]].dropna().head(3).values
                                     if len(vals) > 0:
-                                        prices[sym]["fcf_3yr_avg"] = round(float(vals.mean()) / 10_000_000, 2)
+                                        fetched_fcf_3yr_avg = round(float(vals.mean()) / 10_000_000, 2)
                                     break
                     except Exception:
                         pass
 
                     # Valuation ratios
                     pb  = info.get("priceToBook")
-                    if pb is not None:   prices[sym]["price_to_book"]     = round(pb, 2)
+                    if pb is not None:   fetched_price_to_book = round(pb, 2)
                     ev_eb = info.get("enterpriseToEbitda")
-                    if ev_eb is not None: prices[sym]["ev_ebitda"]         = round(ev_eb, 2)
+                    if ev_eb is not None: fetched_ev_ebitda    = round(ev_eb, 2)
 
                     # Price info
                     hi52 = info.get("fiftyTwoWeekHigh")
                     lo52 = info.get("fiftyTwoWeekLow")
-                    if hi52 is not None: prices[sym]["week52_high"]       = round(hi52, 2)
-                    if lo52 is not None: prices[sym]["week52_low"]        = round(lo52, 2)
+                    if hi52 is not None: fetched_week52_high = round(hi52, 2)
+                    if lo52 is not None: fetched_week52_low  = round(lo52, 2)
 
-                    # Insider holding (yfinance heldPercentInsiders = promoter/insider %)
+                    # Insider holding
                     ins = info.get("heldPercentInsiders")
-                    if ins is not None:  prices[sym]["insider_pct"]       = round(ins * 100, 2)
+                    if ins is not None:  fetched_insider_pct = round(ins * 100, 2)
 
                 except Exception as e:
                     pass
@@ -539,7 +552,37 @@ for _, row in portfolio.iterrows():
         prices[sym]["vol_yest_ratio"] = fetched_vol_yest_ratio
     if fetched_vol_30m_ratio is not None:
         prices[sym]["vol_30m_ratio"] = fetched_vol_30m_ratio
-    
+    if fetched_gross_margin is not None:
+        prices[sym]["gross_margin"] = fetched_gross_margin
+    if fetched_op_margin is not None:
+        prices[sym]["operating_margin"] = fetched_op_margin
+    if fetched_profit_margin is not None:
+        prices[sym]["profit_margin"] = fetched_profit_margin
+    if fetched_roa is not None:
+        prices[sym]["roa"] = fetched_roa
+    if fetched_ebitda_margin is not None:
+        prices[sym]["ebitda_margin"] = fetched_ebitda_margin
+    if fetched_qtrly_rev_growth is not None:
+        prices[sym]["qtrly_rev_growth"] = fetched_qtrly_rev_growth
+    if fetched_qtrly_earn_growth is not None:
+        prices[sym]["qtrly_earn_growth"] = fetched_qtrly_earn_growth
+    if fetched_fcf_cr is not None:
+        prices[sym]["fcf_cr"] = fetched_fcf_cr
+    if fetched_opcf_3yr_avg is not None:
+        prices[sym]["opcf_3yr_avg"] = fetched_opcf_3yr_avg
+    if fetched_fcf_3yr_avg is not None:
+        prices[sym]["fcf_3yr_avg"] = fetched_fcf_3yr_avg
+    if fetched_price_to_book is not None:
+        prices[sym]["price_to_book"] = fetched_price_to_book
+    if fetched_ev_ebitda is not None:
+        prices[sym]["ev_ebitda"] = fetched_ev_ebitda
+    if fetched_week52_high is not None:
+        prices[sym]["week52_high"] = fetched_week52_high
+    if fetched_week52_low is not None:
+        prices[sym]["week52_low"] = fetched_week52_low
+    if fetched_insider_pct is not None:
+        prices[sym]["insider_pct"] = fetched_insider_pct
+
     # Add return percentages
     if ret_1d is not None:
         prices[sym]["ret_1d"] = ret_1d
