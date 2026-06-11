@@ -298,6 +298,9 @@ for _, row in portfolio.iterrows():
     fetched_rev = None
     fetched_vol_yest_ratio = None
     fetched_vol_30m_ratio = None
+    fetched_mover_a = None
+    fetched_mover_c = None
+    fetched_vol_today_ratio = None
     fetched_gross_margin = None
     fetched_op_margin = None
     fetched_profit_margin = None
@@ -473,23 +476,23 @@ for _, row in portfolio.iterrows():
                 except Exception as e:
                     pass
 
-                # Volume ratios from already-fetched history
+                # Volume ratios and Movers from already-fetched history
                 try:
                     if hist is not None and len(hist) >= 2:
-                        yest_vol = float(hist['Volume'].iloc[-2])
-                        today_vol = float(hist['Volume'].iloc[-1])
-                        avg_vol   = float(hist['Volume'].tail(30).mean())
-                        week_avg  = float(hist['Volume'].tail(5).mean())
-                        if avg_vol > 0:
-                            fetched_vol_yest_ratio = round(yest_vol / avg_vol, 2)
-                        # PriceBreak: Day vol > 3x month avg AND > 3x week avg AND (change > 3% or < -1%)
-                        if avg_vol > 0 and week_avg > 0 and ret_1d is not None:
-                            price_break = (
-                                today_vol > 3 * avg_vol and
-                                today_vol > 3 * week_avg and
-                                (ret_1d > 3.0 or ret_1d < -1.0)
-                            )
-                            prices[sym]["price_break"] = "Yes" if price_break else "No"
+                        today_vol  = float(hist['Volume'].iloc[-1])
+                        yest_vol   = float(hist['Volume'].iloc[-2])
+                        # Exclude today from averages so today's spike isn't diluted
+                        avg_30d = float(hist['Volume'].tail(31).iloc[:-1].mean()) if len(hist) >= 31 else float(hist['Volume'].iloc[:-1].mean())
+                        avg_5d  = float(hist['Volume'].tail(6).iloc[:-1].mean())  if len(hist) >= 6  else float(hist['Volume'].iloc[:-1].mean())
+                        if avg_30d > 0:
+                            fetched_vol_today_ratio = round(today_vol / avg_30d, 2)
+                            fetched_vol_yest_ratio  = round(yest_vol  / avg_30d, 2)
+                        # Mover A: strict — vol > 3x 30d AND > 3x 5d AND (ret > +3% OR ret < -3%)
+                        if avg_30d > 0 and avg_5d > 0 and ret_1d is not None:
+                            fetched_mover_a = (today_vol > 3 * avg_30d and today_vol > 3 * avg_5d and (ret_1d > 3.0 or ret_1d < -3.0))
+                        # Mover C: balanced — vol > 2x 30d AND (ret > +4% OR ret < -4%)
+                        if avg_30d > 0 and ret_1d is not None:
+                            fetched_mover_c = (today_vol > 2 * avg_30d and (ret_1d > 4.0 or ret_1d < -4.0))
                 except Exception:
                     pass
 
@@ -552,6 +555,20 @@ for _, row in portfolio.iterrows():
         prices[sym]["vol_yest_ratio"] = fetched_vol_yest_ratio
     if fetched_vol_30m_ratio is not None:
         prices[sym]["vol_30m_ratio"] = fetched_vol_30m_ratio
+    if fetched_vol_today_ratio is not None:
+        prices[sym]["vol_today_ratio"] = fetched_vol_today_ratio
+    if fetched_vol_yest_ratio is not None:
+        prices[sym]["vol_yest_ratio"] = fetched_vol_yest_ratio
+    # Movers: combine A and C into one field
+    if fetched_mover_a is not None and fetched_mover_c is not None:
+        if fetched_mover_a and fetched_mover_c:
+            prices[sym]["movers"] = "A+C"
+        elif fetched_mover_a:
+            prices[sym]["movers"] = "A"
+        elif fetched_mover_c:
+            prices[sym]["movers"] = "C"
+        else:
+            prices[sym]["movers"] = "No"
     if fetched_gross_margin is not None:
         prices[sym]["gross_margin"] = fetched_gross_margin
     if fetched_op_margin is not None:
