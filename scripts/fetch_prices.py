@@ -301,6 +301,11 @@ for _, row in portfolio.iterrows():
     fetched_mover_a = None
     fetched_mover_c = None
     fetched_vol_today_ratio = None
+    fetched_trend_score = None
+    fetched_trend_signal = None
+    fetched_price_to_200dma_pct = None
+    fetched_dma200_slope_30d_pct = None
+    fetched_days_above_200dma_10d = None
     fetched_gross_margin = None
     fetched_op_margin = None
     fetched_profit_margin = None
@@ -493,6 +498,64 @@ for _, row in portfolio.iterrows():
                         # Mover C: balanced — vol > 2x 30d AND (ret > +4% OR ret < -4%)
                         if avg_30d > 0 and ret_1d is not None:
                             fetched_mover_c = (today_vol > 2 * avg_30d and (ret_1d > 4.0 or ret_1d < -4.0))
+
+                        # 200DMA Trend Score (3-12 month positional framework)
+                        try:
+                            if len(hist) >= 210:  # need 200 bars + buffer
+                                close_s = hist['Close']
+                                dma200 = close_s.rolling(200).mean()
+                                dma200_today = float(dma200.iloc[-1])
+                                dma200_30d_ago = float(dma200.iloc[-31]) if len(dma200) >= 31 else None
+                                curr_close = float(close_s.iloc[-1])
+
+                                p200_pct = round((curr_close - dma200_today) / dma200_today * 100, 2)
+                                fetched_price_to_200dma_pct = p200_pct
+
+                                if dma200_30d_ago is not None and dma200_30d_ago > 0:
+                                    slope = round((dma200_today - dma200_30d_ago) / dma200_30d_ago * 100, 2)
+                                    fetched_dma200_slope_30d_pct = slope
+                                else:
+                                    slope = None
+
+                                # Days above 200DMA in last 10 sessions
+                                last10_close = close_s.iloc[-10:]
+                                last10_dma   = dma200.iloc[-10:]
+                                days_above = int((last10_close.values > last10_dma.values).sum())
+                                fetched_days_above_200dma_10d = days_above
+
+                                # Trend Score (0-100)
+                                # Component 1: Price vs 200DMA (40 pts)
+                                if   0 <= p200_pct <= 10:   c1 = 40
+                                elif 10 < p200_pct <= 20:  c1 = 28
+                                elif p200_pct > 20:         c1 = 15
+                                elif -5 <= p200_pct < 0:   c1 = 18
+                                elif -10 <= p200_pct < -5: c1 = 10
+                                else:                       c1 = 0
+
+                                # Component 2: 200DMA slope (30 pts)
+                                if slope is None:              c2 = 0
+                                elif slope > 1.0:              c2 = 30
+                                elif slope > 0.3:              c2 = 22
+                                elif slope >= 0:               c2 = 14
+                                elif slope >= -0.3:            c2 = 8
+                                else:                          c2 = 0
+
+                                # Component 3: Days above 200DMA in last 10 (30 pts)
+                                if   days_above >= 9: c3 = 30
+                                elif days_above >= 7: c3 = 22
+                                elif days_above >= 5: c3 = 14
+                                elif days_above >= 3: c3 = 7
+                                else:                 c3 = 0
+
+                                score = c1 + c2 + c3
+                                fetched_trend_score = score
+
+                                if   score >= 70: fetched_trend_signal = 'Bullish'
+                                elif score >= 55: fetched_trend_signal = 'Watch'
+                                elif score >= 35: fetched_trend_signal = 'Hold'
+                                else:             fetched_trend_signal = 'Bearish'
+                        except Exception:
+                            pass
                 except Exception:
                     pass
 
@@ -569,6 +632,17 @@ for _, row in portfolio.iterrows():
             prices[sym]["movers"] = "C"
         else:
             prices[sym]["movers"] = "No"
+    # Trend Signal (200DMA framework)
+    if fetched_trend_score is not None:
+        prices[sym]["trend_score"] = fetched_trend_score
+    if fetched_trend_signal is not None:
+        prices[sym]["trend_signal"] = fetched_trend_signal
+    if fetched_price_to_200dma_pct is not None:
+        prices[sym]["price_to_200dma_pct"] = fetched_price_to_200dma_pct
+    if fetched_dma200_slope_30d_pct is not None:
+        prices[sym]["dma200_slope_30d_pct"] = fetched_dma200_slope_30d_pct
+    if fetched_days_above_200dma_10d is not None:
+        prices[sym]["days_above_200dma_10d"] = fetched_days_above_200dma_10d
     if fetched_gross_margin is not None:
         prices[sym]["gross_margin"] = fetched_gross_margin
     if fetched_op_margin is not None:
