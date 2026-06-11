@@ -1079,7 +1079,7 @@
     <span style="font-size:0.72rem;color:var(--text3);margin-right:2px;">Filter:</span>
     <button class="analysis-chip active" data-afilter="all" onclick="setAnalysisFilter('all',this)">All</button>
     <button class="analysis-chip" data-afilter="conviction7" onclick="setAnalysisFilter('conviction7',this)">Conv 7+</button>
-    <button class="analysis-chip" data-afilter="strongmoat" onclick="setAnalysisFilter('strongmoat',this)">Strong Moat</button>
+    <button class="analysis-chip" data-afilter="widemoat" onclick="setAnalysisFilter('widemoat',this)">Wide Moat</button>
     <button class="analysis-chip" data-afilter="strongbullish" onclick="setAnalysisFilter('strongbullish',this)">Strong Bullish</button>
     <button class="analysis-chip" data-afilter="bullish" onclick="setAnalysisFilter('bullish',this)">Bullish+Watch</button>
     <button class="analysis-chip" data-afilter="profit" onclick="setAnalysisFilter('profit',this)">In Profit</button>
@@ -2079,12 +2079,20 @@ function switchTab(tab) {
   clearAnalysisSearch();
   // Reset card filter chips
   activeFilter = 'all';
+  deepActiveFilters.clear();
   searchQuery = '';
   document.querySelectorAll('.chip[data-filter]').forEach(b => b.classList.remove('active'));
-  const allChip = document.querySelector('.chip[data-filter="all"]');
-  if (allChip) allChip.classList.add('active');
+  const allChip2 = document.querySelector('.chip[data-filter="all"]');
+  if (allChip2) allChip2.classList.add('active');
   const cardSearch = document.getElementById('search');
   if (cardSearch) cardSearch.value = '';
+  // Reset Dashboard analysis filters
+  analysisFilters.clear();
+  document.querySelectorAll('.analysis-chip').forEach(b => b.classList.remove('active'));
+  const allAnalysisChip = document.querySelector('.analysis-chip[data-afilter="all"]');
+  if (allAnalysisChip) allAnalysisChip.classList.add('active');
+  const analysisSearch = document.getElementById('analysis-search');
+  if (analysisSearch) { analysisSearch.value = ''; document.getElementById('search-clear').style.display='none'; }
   if (tab === 'analysis') {
     renderAnalysisTable();
   } else if (tab === 'dashboard') {
@@ -2104,6 +2112,7 @@ function clearAnalysisSearch() {
 function goToCard(ticker) {
   // Clear all Deep Analysis (cards) filters before navigating
   activeFilter = 'all';
+  deepActiveFilters.clear();
   searchQuery = '';
   document.querySelectorAll('.chip[data-filter]').forEach(b => b.classList.remove('active'));
   const allChip = document.querySelector('.chip[data-filter="all"]');
@@ -2129,12 +2138,30 @@ function goToCard(ticker) {
 // ── Rendering Analysis Table ────────────────────────────────────────────────
 let analysisSortBy = 'pres_value';
 let analysisSortDir = 'desc';
-let analysisFilter = 'all';  // active filter chip for Dashboard table
+let analysisFilters = new Set();  // multi-select filter chips for Dashboard table
 
 function setAnalysisFilter(filter, el) {
-  analysisFilter = filter;
-  document.querySelectorAll('.analysis-chip').forEach(b => b.classList.remove('active'));
-  if (el) el.classList.add('active');
+  if (filter === 'all') {
+    analysisFilters.clear();
+    document.querySelectorAll('.analysis-chip').forEach(b => b.classList.remove('active'));
+    document.querySelector('.analysis-chip[data-afilter="all"]').classList.add('active');
+  } else {
+    if (analysisFilters.has(filter)) {
+      // Toggle off
+      analysisFilters.delete(filter);
+      if (el) el.classList.remove('active');
+    } else {
+      // Toggle on
+      analysisFilters.add(filter);
+      if (el) el.classList.add('active');
+      // Deactivate 'All' chip when any specific filter is active
+      document.querySelector('.analysis-chip[data-afilter="all"]').classList.remove('active');
+    }
+    // If nothing active, revert to All
+    if (analysisFilters.size === 0) {
+      document.querySelector('.analysis-chip[data-afilter="all"]').classList.add('active');
+    }
+  }
   renderAnalysisTable();
 }
 
@@ -2213,14 +2240,14 @@ function renderAnalysisTable() {
       const name   = (s.name   || '').toLowerCase();
       if (!ticker.includes(searchQ) && !name.includes(searchQ)) return;
     }
-    // Filter by chip
-    if (analysisFilter === 'conviction7' && (s.conviction || 0) < 7) return;
-    if (analysisFilter === 'strongmoat' && s.moat_class !== 'wide' && s.moat_class !== 'narrow') return;
-    if (analysisFilter === 'strongbullish' && s.trend_signal !== 'Strong Bullish') return;
-    if (analysisFilter === 'bullish' && s.trend_signal !== 'Strong Bullish' && s.trend_signal !== 'Bullish' && s.trend_signal !== 'Watch') return;
-    if (analysisFilter === 'profit' && (s.pnl_abs || 0) <= 0) return;
-    if (analysisFilter === 'movers' && (!s.movers || s.movers === 'No')) return;
-    if (analysisFilter === 'loss' && (s.pnl_abs || 0) >= 0) return;
+    // Filter by chips (multi-select: row must pass ALL active filters)
+    if (analysisFilters.has('conviction7') && (s.conviction || 0) < 7) return;
+    if (analysisFilters.has('widemoat') && s.moat_class !== 'wide') return;
+    if (analysisFilters.has('strongbullish') && s.trend_signal !== 'Strong Bullish') return;
+    if (analysisFilters.has('bullish') && s.trend_signal !== 'Strong Bullish' && s.trend_signal !== 'Bullish' && s.trend_signal !== 'Watch') return;
+    if (analysisFilters.has('profit') && (s.pnl_abs || 0) <= 0) return;
+    if (analysisFilters.has('movers') && (!s.movers || s.movers === 'No')) return;
+    if (analysisFilters.has('loss') && (s.pnl_abs || 0) >= 0) return;
 
     const pnlAbs = (s.pnl_abs || 0);
     const pnlPct = (s.pnl_pct || 0);
@@ -2422,11 +2449,13 @@ function renderAll() {
   }
 
   let visible = allStocks.filter(s => {
-    if (activeFilter === 'wide')   return s.moat_class === 'wide';
-    if (activeFilter === 'narrow') return s.moat_class === 'narrow';
-    if (activeFilter === 'high')   return (s.conviction || 0) >= 8;
-    if (activeFilter === 'profit') return s.pnl_pct != null && s.pnl_pct >= 0;
-    if (activeFilter === 'loss')   return s.pnl_pct != null && s.pnl_pct < 0;
+    // Multi-select: row must pass ALL active deep filters
+    if (deepActiveFilters.size === 0) return true;
+    if (deepActiveFilters.has('wide')   && s.moat_class !== 'wide') return false;
+    if (deepActiveFilters.has('narrow') && s.moat_class !== 'narrow') return false;
+    if (deepActiveFilters.has('high')   && (s.conviction || 0) < 8) return false;
+    if (deepActiveFilters.has('profit') && !(s.pnl_pct != null && s.pnl_pct >= 0)) return false;
+    if (deepActiveFilters.has('loss')   && !(s.pnl_pct != null && s.pnl_pct < 0)) return false;
     return true;
   });
 
@@ -2634,11 +2663,34 @@ async function init() {
 }
 
 // ── Event listeners ────────────────────────────────────────────────────────
+// Deep Analysis (cards) chips — multi-select toggle
+let deepActiveFilters = new Set();  // multi-select for cards tab
+
 document.querySelectorAll('.chip[data-filter]').forEach(btn => {
   btn.addEventListener('click', () => {
-    document.querySelectorAll('.chip[data-filter]').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    activeFilter = btn.dataset.filter;
+    const filter = btn.dataset.filter;
+    if (filter === 'all') {
+      deepActiveFilters.clear();
+      document.querySelectorAll('.chip[data-filter]').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      activeFilter = 'all';
+    } else {
+      if (deepActiveFilters.has(filter)) {
+        deepActiveFilters.delete(filter);
+        btn.classList.remove('active');
+      } else {
+        deepActiveFilters.add(filter);
+        btn.classList.add('active');
+        document.querySelector('.chip[data-filter="all"]').classList.remove('active');
+      }
+      if (deepActiveFilters.size === 0) {
+        document.querySelector('.chip[data-filter="all"]').classList.add('active');
+        activeFilter = 'all';
+      } else {
+        // Legacy single activeFilter for backward compat — use first in set
+        activeFilter = [...deepActiveFilters][0];
+      }
+    }
     renderAll();
   });
 });
