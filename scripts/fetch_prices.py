@@ -550,10 +550,15 @@ for _, row in portfolio.iterrows():
                                 score = c1 + c2 + c3
                                 fetched_trend_score = score
 
-                                if   score >= 70: fetched_trend_signal = 'Bullish'
-                                elif score >= 55: fetched_trend_signal = 'Watch'
-                                elif score >= 35: fetched_trend_signal = 'Hold'
-                                else:             fetched_trend_signal = 'Bearish'
+                                # Signal considers BOTH score AND price zone
+                                # Only stocks in 0-10% zone (sweet spot) can be Bullish/Strong Bullish
+                                in_sweet_zone = 0 <= p200_pct <= 10
+                                if   score >= 85 and in_sweet_zone: fetched_trend_signal = 'Strong Bullish'
+                                elif score >= 70 and in_sweet_zone: fetched_trend_signal = 'Bullish'
+                                elif score >= 70:                    fetched_trend_signal = 'Extended'
+                                elif score >= 55:                    fetched_trend_signal = 'Watch'
+                                elif score >= 35:                    fetched_trend_signal = 'Hold'
+                                else:                               fetched_trend_signal = 'Bearish'
                         except Exception:
                             pass
                 except Exception:
