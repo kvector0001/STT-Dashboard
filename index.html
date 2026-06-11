@@ -612,6 +612,14 @@
     }
 
     /* Column header tooltip on hover */
+    .analysis-chip {
+      padding: 3px 10px; border-radius: 12px; border: 1px solid var(--border);
+      background: var(--bg3); color: var(--text3); font-size: 0.72rem; cursor: pointer;
+      transition: all 0.15s;
+    }
+    .analysis-chip.active, .analysis-chip:hover {
+      background: var(--purple); color: #fff; border-color: var(--purple);
+    }
     .analysis-table th[title] { cursor: help; }
     .analysis-table th[title]:hover::after {
       content: attr(title);
@@ -1066,6 +1074,16 @@
       <input type="text" id="analysis-search" placeholder="Search ticker or name…" style="width:100%; padding: 6px 28px 6px 10px; background: var(--bg3); color: var(--text); border: 1px solid var(--border); border-radius: 4px; font-size: 13px;">
       <span id="search-clear" onclick="clearAnalysisSearch()" style="display:none;position:absolute;right:6px;top:50%;transform:translateY(-50%);cursor:pointer;color:var(--text3);font-size:14px;line-height:1;" title="Clear">✕</span>
     </div>
+  </div>
+  <div style="padding: 6px 16px; background: var(--bg2); border-bottom: 1px solid var(--border); display: flex; gap: 6px; flex-wrap: wrap; align-items: center;">
+    <span style="font-size:0.72rem;color:var(--text3);margin-right:2px;">Filter:</span>
+    <button class="analysis-chip active" data-afilter="all" onclick="setAnalysisFilter('all',this)">All</button>
+    <button class="analysis-chip" data-afilter="conviction7" onclick="setAnalysisFilter('conviction7',this)">Conv 7+</button>
+    <button class="analysis-chip" data-afilter="strongmoat" onclick="setAnalysisFilter('strongmoat',this)">Strong Moat</button>
+    <button class="analysis-chip" data-afilter="bullish" onclick="setAnalysisFilter('bullish',this)">Bullish+Watch</button>
+    <button class="analysis-chip" data-afilter="profit" onclick="setAnalysisFilter('profit',this)">In Profit</button>
+    <button class="analysis-chip" data-afilter="movers" onclick="setAnalysisFilter('movers',this)">Movers</button>
+    <button class="analysis-chip" data-afilter="loss" onclick="setAnalysisFilter('loss',this)">In Loss</button>
   </div>
 
   <div class="analysis-table-container">
@@ -2109,6 +2127,14 @@ function goToCard(ticker) {
 // ── Rendering Analysis Table ────────────────────────────────────────────────
 let analysisSortBy = 'pres_value';
 let analysisSortDir = 'desc';
+let analysisFilter = 'all';  // active filter chip for Dashboard table
+
+function setAnalysisFilter(filter, el) {
+  analysisFilter = filter;
+  document.querySelectorAll('.analysis-chip').forEach(b => b.classList.remove('active'));
+  if (el) el.classList.add('active');
+  renderAnalysisTable();
+}
 
 function sortAnalysis(field) {
   if (analysisSortBy === field) {
@@ -2185,6 +2211,13 @@ function renderAnalysisTable() {
       const name   = (s.name   || '').toLowerCase();
       if (!ticker.includes(searchQ) && !name.includes(searchQ)) return;
     }
+    // Filter by chip
+    if (analysisFilter === 'conviction7' && (s.conviction || 0) < 7) return;
+    if (analysisFilter === 'strongmoat' && s.moat_class !== 'wide' && s.moat_class !== 'narrow') return;
+    if (analysisFilter === 'bullish' && s.trend_signal !== 'Bullish' && s.trend_signal !== 'Watch') return;
+    if (analysisFilter === 'profit' && (s.pnl_abs || 0) <= 0) return;
+    if (analysisFilter === 'movers' && (!s.movers || s.movers === 'No')) return;
+    if (analysisFilter === 'loss' && (s.pnl_abs || 0) >= 0) return;
 
     const pnlAbs = (s.pnl_abs || 0);
     const pnlPct = (s.pnl_pct || 0);
