@@ -1104,6 +1104,7 @@
           <th onclick="sortAnalysis('movers')" title="Movers — Strict (A): Vol &gt; 3× 30d avg AND &gt; 3× 5d avg AND (ret &gt; +3% or &lt; −3%) | Balanced (C): Vol &gt; 2× 30d avg AND (ret &gt; +4% or &lt; −4%) | Shows A+C, A, C, or No">Movers <span id="sort-movers" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('trend_score')" title="Trend Score (0–100) for 3–12 month positional holding | 3 inputs: Price vs 200DMA (40pts) + 200DMA Slope 30d (30pts) + Days above 200DMA last 10 sessions (30pts) | Strong Bullish: ≥85 AND 0–10% zone | Bullish: ≥70 AND 0–10% zone | Extended: ≥70 but &gt;10% | Watch: 55–69 | Hold: 35–54 | Bearish: &lt;35">Trend Score <span id="sort-trend_score" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('trend_signal')" title="Trend Signal | Strong Bullish: score≥85 AND 0–10% above 200DMA | Bullish: score≥70 AND 0–10% above 200DMA | Extended: score≥70 but >10% above 200DMA (too extended for fresh entry) | Watch: 55–69 | Hold: 35–54 | Bearish: &lt;35">Trend Signal <span id="sort-trend_signal" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('ret_1d')" title="1-day price return (%)">1D Ret <span id="sort-ret_1d" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('ret_1m')" title="~21 trading day (1-month) price return (%)">1M Ret <span id="sort-ret_1m" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('ret_6m')" title="~126 trading day (6-month) price return (%)">6M Ret <span id="sort-ret_6m" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('ret_1y')" title="~252 trading day (1-year) price return (%)">1Y Ret <span id="sort-ret_1y" class="sort-indicator"></span></th>
@@ -2256,12 +2257,8 @@ function renderAnalysisTable() {
       <td style="${ (s.movers==='A+C'||s.movers==='A') ? 'color:var(--amber-text);font-weight:700' : s.movers==='C' ? 'color:var(--green);font-weight:600' : 'color:var(--text3)' }">${s.movers || '—'}</td>
       <td style="text-align:center;font-weight:700;color:${ s.trend_score >= 70 ? (s.trend_signal==='Strong Bullish' ? 'var(--green)' : s.trend_signal==='Bullish' ? '#4ade80' : s.trend_signal==='Extended' ? 'var(--amber-text)' : 'var(--text2)') : s.trend_score >= 55 ? 'var(--amber-text)' : s.trend_score >= 35 ? 'var(--text2)' : s.trend_score != null ? 'var(--red-text)' : 'var(--text3)' }">${s.trend_score != null ? s.trend_score : '—'}</td>
       <td style="font-size:0.75rem;font-weight:600;color:${ s.trend_signal==='Strong Bullish' ? 'var(--green)' : s.trend_signal==='Bullish' ? '#4ade80' : s.trend_signal==='Extended' ? 'var(--amber-text)' : s.trend_signal==='Watch' ? '#f59e0b' : s.trend_signal==='Bearish' ? 'var(--red-text)' : 'var(--text3)' }">${s.trend_signal || '—'}</td>
-      <td class="${pc(s.price_to_200dma_pct)}">${s.price_to_200dma_pct != null ? s.price_to_200dma_pct.toFixed(1)+'%' : '—'}</td>
-      <td class="${pc(s.dma200_slope_30d_pct)}">${s.dma200_slope_30d_pct != null ? s.dma200_slope_30d_pct.toFixed(2)+'%' : '—'}</td>
-      <td style="text-align:center;color:${ s.days_above_200dma_10d >= 7 ? 'var(--green)' : s.days_above_200dma_10d >= 4 ? 'var(--amber-text)' : s.days_above_200dma_10d != null ? 'var(--red-text)' : 'var(--text3)' }">${s.days_above_200dma_10d != null ? s.days_above_200dma_10d+'/10' : '—'}</td>
-    `;
-    tbody.appendChild(tr);
-  });
+      <td class="${pc(s.ret_1d)}">${fp(s.ret_1d)}</td>
+      <td class="${pc(s.ret_1m)}">${fp(s.ret_1m)}</td>
       <td class="${pc(s.ret_6m)}">${fp(s.ret_6m)}</td>
       <td class="${pc(s.ret_1y)}">${fp(s.ret_1y)}</td>
       <td class="${pc(s.ret_2y)}">${fp(s.ret_2y)}</td>
