@@ -2233,6 +2233,8 @@ function renderAnalysisTable() {
   const activeArr = document.getElementById('sort-' + analysisSortBy);
   if (activeArr) activeArr.textContent = analysisSortDir === 'desc' ? '↓' : '↑';
 
+  const visibleStocks = [];
+
   stocks.forEach(s => {
     // Filter by search query
     if (searchQ) {
@@ -2322,10 +2324,11 @@ function renderAnalysisTable() {
       <td style="text-align:center;color:${ s.days_above_200dma_10d >= 7 ? 'var(--green)' : s.days_above_200dma_10d >= 4 ? 'var(--amber-text)' : s.days_above_200dma_10d != null ? 'var(--red-text)' : 'var(--text3)' }">${s.days_above_200dma_10d != null ? s.days_above_200dma_10d+'/10' : '—'}</td>
     `;
     tbody.appendChild(tr);
+    visibleStocks.push(s);
   });
 
-  // Re-sync the summary and update analysis timestamp
-  updateSummary(allStocks);
+  // Summary reflects current filter selection
+  updateSummary(visibleStocks.length > 0 && analysisFilters.size > 0 ? visibleStocks : allStocks);
   const ts = document.getElementById('last-updated').textContent;
   document.getElementById('last-updated-analysis').textContent = ts;
 }
