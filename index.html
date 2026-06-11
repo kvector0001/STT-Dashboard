@@ -1083,13 +1083,6 @@
           <th onclick="sortAnalysis('pnl_abs')">P&L <span id="sort-pnl_abs" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('pnl_pct')">P&L % <span id="sort-pnl_pct" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('movers')" title="Movers — Strict (A): Vol &gt; 3× 30d avg AND &gt; 3× 5d avg AND (ret &gt; +3% or &lt; −3%) | Balanced (C): Vol &gt; 2× 30d avg AND (ret &gt; +4% or &lt; −4%) | Shows A+C, A, C, or No">Movers <span id="sort-movers" class="sort-indicator"></span></th>
-          <th onclick="sortAnalysis('mcap_cr')" title="Market capitalisation in Indian Crores (₹)">Market Cap (Cr) <span id="sort-mcap_cr" class="sort-indicator"></span></th>
-          <th onclick="sortAnalysis('pe')" title="Trailing twelve-month Price / Earnings ratio">P/E <span id="sort-pe" class="sort-indicator"></span></th>
-          <th onclick="sortAnalysis('price_to_book')" title="Price / Book value ratio">P/B <span id="sort-price_to_book" class="sort-indicator"></span></th>
-          <th onclick="sortAnalysis('ev_ebitda')" title="Enterprise Value / EBITDA">EV/EBITDA <span id="sort-ev_ebitda" class="sort-indicator"></span></th>
-          <th onclick="sortAnalysis('roe')" title="Return on Equity — Net profit ÷ shareholders equity (%)">ROE % <span id="sort-roe" class="sort-indicator"></span></th>
-          <th onclick="sortAnalysis('opcf_3yr_avg')" title="Operating Cash Flow — 3-year average (₹Cr); falls back to latest year">Op Cash Flow <span id="sort-opcf_3yr_avg" class="sort-indicator"></span></th>
-          <th onclick="sortAnalysis('fcf_3yr_avg')" title="Free Cash Flow — 3-year average (₹Cr); falls back to latest year">Free Cash Flow <span id="sort-fcf_3yr_avg" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('ret_1d')" title="1-day price return (%)">1D Ret <span id="sort-ret_1d" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('ret_1m')" title="~21 trading day (1-month) price return (%)">1M Ret <span id="sort-ret_1m" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('ret_6m')" title="~126 trading day (6-month) price return (%)">6M Ret <span id="sort-ret_6m" class="sort-indicator"></span></th>
@@ -1098,16 +1091,23 @@
           <th onclick="sortAnalysis('ret_3y')" title="~756 trading day (3-year) price return (%)">3Y Ret <span id="sort-ret_3y" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('ret_4y')" title="~1008 trading day (4-year) price return (%)">4Y Ret <span id="sort-ret_4y" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('ret_5y')" title="~1200 trading day (5-year) price return (%)">5Y Ret <span id="sort-ret_5y" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('vol_30m_ratio')" title="Last 30-min volume vs average 30-min volume (intraday, 5m bars)">Vol 30m/Avg <span id="sort-vol_30m_ratio" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('vol_today_ratio')" title="Today's total volume ÷ 30-day average volume (excludes today from avg)">Vol Today/Avg <span id="sort-vol_today_ratio" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('week52_high_pct')" title="% below 52-week high: (CMP − 52W High) ÷ 52W High × 100">52W High% <span id="sort-week52_high_pct" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('week52_low_pct')" title="% above 52-week low: (CMP − 52W Low) ÷ 52W Low × 100">52W Low% <span id="sort-week52_low_pct" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('mcap_cr')" title="Market capitalisation in Indian Crores (₹)">Market Cap (Cr) <span id="sort-mcap_cr" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('pe')" title="Trailing twelve-month Price / Earnings ratio">P/E <span id="sort-pe" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('price_to_book')" title="Price / Book value ratio">P/B <span id="sort-price_to_book" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('ev_ebitda')" title="Enterprise Value / EBITDA">EV/EBITDA <span id="sort-ev_ebitda" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('roe')" title="Return on Equity — Net profit ÷ shareholders equity (%)">ROE % <span id="sort-roe" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('opcf_3yr_avg')" title="Operating Cash Flow — 3-year average (₹Cr); falls back to latest year">Op Cash Flow <span id="sort-opcf_3yr_avg" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('fcf_3yr_avg')" title="Free Cash Flow — 3-year average (₹Cr); falls back to latest year">Free Cash Flow <span id="sort-fcf_3yr_avg" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('pat_cagr')" title="Earnings (PAT) growth rate — yfinance earningsGrowth (%)">PAT Growth <span id="sort-pat_cagr" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('rev_cagr')" title="Revenue growth rate — yfinance revenueGrowth (%)">Rev Growth <span id="sort-rev_cagr" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('mcap_3y')" title="Market cap proxy: 3-year price return (%)">MCap Growth 3Y <span id="sort-mcap_3y" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('debt_to_equity')" title="Total Debt / Equity ratio">Debt/Equity <span id="sort-debt_to_equity" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('eps')" title="Trailing twelve-month Earnings Per Share (₹)">EPS <span id="sort-eps" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('div_yield')" title="Dividend Yield (%)">Div Yield % <span id="sort-div_yield" class="sort-indicator"></span></th>
-          <th onclick="sortAnalysis('vol_30m_ratio')" title="Last 30-min volume vs average 30-min volume (intraday, 5m bars)">Vol 30m/Avg <span id="sort-vol_30m_ratio" class="sort-indicator"></span></th>
-          <th onclick="sortAnalysis('vol_today_ratio')" title="Today's total volume ÷ 30-day average volume (excludes today from avg)">Vol Today/Avg <span id="sort-vol_today_ratio" class="sort-indicator"></span></th>
-          <th onclick="sortAnalysis('week52_high_pct')" title="% below 52-week high: (CMP − 52W High) ÷ 52W High × 100">52W High% <span id="sort-week52_high_pct" class="sort-indicator"></span></th>
-          <th onclick="sortAnalysis('week52_low_pct')" title="% above 52-week low: (CMP − 52W Low) ÷ 52W Low × 100">52W Low% <span id="sort-week52_low_pct" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('gross_margin')" title="Gross Margin = (Revenue − COGS) ÷ Revenue × 100 (%)">Gross Margin% <span id="sort-gross_margin" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('operating_margin')" title="Operating Margin = Operating Income ÷ Revenue × 100 (%)">Op Margin% <span id="sort-operating_margin" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('ebitda_margin')" title="EBITDA Margin = EBITDA ÷ Revenue × 100 (%)">EBITDA Margin% <span id="sort-ebitda_margin" class="sort-indicator"></span></th>
@@ -2209,13 +2209,6 @@ function renderAnalysisTable() {
       <td class="${pc(pnlAbs)}">${prv('₹' + f(pnlAbs))}</td>
       <td class="${pc(pnlPct)}">${prv(f(pnlPct,1) + '%')}</td>
       <td style="${ (s.movers==='A+C'||s.movers==='A') ? 'color:var(--amber-text);font-weight:700' : s.movers==='C' ? 'color:var(--green);font-weight:600' : 'color:var(--text3)' }">${s.movers || '—'}</td>
-      <td>${f(s.mcap_cr)}</td>
-      <td>${f(s.pe, 1)}</td>
-      <td class="${pbClass(s.price_to_book)}">${f(s.price_to_book, 1)}</td>
-      <td class="${evClass(s.ev_ebitda)}">${f(s.ev_ebitda, 1)}</td>
-      <td class="${roeClass(s.roe)}">${fp(s.roe)}</td>
-      <td>${(s.opcf_3yr_avg ?? s.ocf_cr) != null ? '₹'+f(s.opcf_3yr_avg ?? s.ocf_cr)+'Cr' + (s.opcf_3yr_avg != null ? ' <span style="font-size:0.6rem;color:var(--text3)">3yr</span>' : '') : '—'}</td>
-      <td>${(s.fcf_3yr_avg ?? s.fcf_cr) != null ? '₹'+f(s.fcf_3yr_avg ?? s.fcf_cr)+'Cr' + (s.fcf_3yr_avg != null ? ' <span style="font-size:0.6rem;color:var(--text3)">3yr</span>' : '') : '—'}</td>
       <td class="${pc(s.ret_1d)}">${fp(s.ret_1d)}</td>
       <td class="${pc(s.ret_1m)}">${fp(s.ret_1m)}</td>
       <td class="${pc(s.ret_6m)}">${fp(s.ret_6m)}</td>
@@ -2224,16 +2217,23 @@ function renderAnalysisTable() {
       <td class="${pc(s.ret_3y)}">${fp(s.ret_3y)}</td>
       <td class="${pc(s.ret_4y)}">${fp(s.ret_4y)}</td>
       <td class="${pc(s.ret_5y)}">${fp(s.ret_5y)}</td>
+      <td class="${volClass(s.vol_30m_ratio)}">${fVol(s.vol_30m_ratio)}</td>
+      <td class="${volClass(s.vol_today_ratio)}">${fVol(s.vol_today_ratio)}</td>
+      <td class="neg">${s.week52_high_pct != null ? s.week52_high_pct.toFixed(1)+'%' : '—'}</td>
+      <td class="pos">${s.week52_low_pct  != null ? '+'+s.week52_low_pct.toFixed(1)+'%'  : '—'}</td>
+      <td>${f(s.mcap_cr)}</td>
+      <td>${f(s.pe, 1)}</td>
+      <td class="${pbClass(s.price_to_book)}">${f(s.price_to_book, 1)}</td>
+      <td class="${evClass(s.ev_ebitda)}">${f(s.ev_ebitda, 1)}</td>
+      <td class="${roeClass(s.roe)}">${fp(s.roe)}</td>
+      <td>${(s.opcf_3yr_avg ?? s.ocf_cr) != null ? '₹'+f(s.opcf_3yr_avg ?? s.ocf_cr)+'Cr' + (s.opcf_3yr_avg != null ? ' <span style="font-size:0.6rem;color:var(--text3)">3yr</span>' : '') : '—'}</td>
+      <td>${(s.fcf_3yr_avg ?? s.fcf_cr) != null ? '₹'+f(s.fcf_3yr_avg ?? s.fcf_cr)+'Cr' + (s.fcf_3yr_avg != null ? ' <span style="font-size:0.6rem;color:var(--text3)">3yr</span>' : '') : '—'}</td>
       <td class="${pc(s.pat_cagr)}">${fp(s.pat_cagr)}</td>
       <td class="${pc(s.rev_cagr)}">${fp(s.rev_cagr)}</td>
       <td class="${pc(s.mcap_3y)}">${fp(s.mcap_3y)}</td>
       <td class="${deClass(s.debt_to_equity)}">${f(s.debt_to_equity, 2)}</td>
       <td>${f(s.eps, 2)}</td>
       <td>${fp(s.div_yield, 2)}</td>
-      <td class="${volClass(s.vol_30m_ratio)}">${fVol(s.vol_30m_ratio)}</td>
-      <td class="${volClass(s.vol_yest_ratio)}">${fVol(s.vol_yest_ratio)}</td>
-      <td class="neg">${s.week52_high_pct != null ? s.week52_high_pct.toFixed(1)+'%' : '—'}</td>
-      <td class="pos">${s.week52_low_pct  != null ? '+'+s.week52_low_pct.toFixed(1)+'%'  : '—'}</td>
       <td class="${marginClass(s.gross_margin)}">${fp(s.gross_margin)}</td>
       <td class="${marginClass(s.operating_margin)}">${fp(s.operating_margin)}</td>
       <td class="${marginClass(s.ebitda_margin)}">${fp(s.ebitda_margin)}</td>
