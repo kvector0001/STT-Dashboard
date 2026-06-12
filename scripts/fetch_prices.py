@@ -156,7 +156,10 @@ df["qty"] = pd.to_numeric(df["qty"], errors="coerce")
 df["buy_avg"] = pd.to_numeric(df["buy_avg"], errors="coerce")
 df = df.dropna(subset=["qty", "buy_avg"])
 
-portfolio = df[["symbol", "qty", "buy_avg"]].reset_index(drop=True)
+portfolio_cols = ["symbol", "qty", "buy_avg"]
+if "must_buy" in df.columns:
+    portfolio_cols.append("must_buy")
+portfolio = df[portfolio_cols].reset_index(drop=True)
 print(f"[INFO] Found {len(portfolio)} valid holdings in portfolio\n")
 
 # ── Sanity check: abort if portfolio looks empty or corrupt ─────────────────
