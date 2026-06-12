@@ -2275,15 +2275,15 @@ function renderAnalysisTable() {
     tr.innerHTML = `
       <td><strong><span style="cursor:pointer;color:var(--blue-text);" title="View fundamental analysis card" onclick="goToCard('${esc(s.ticker)}')">${s.ticker}</span></strong></td>
       <td><span class="research-name" style="cursor:pointer;color:var(--blue-text);text-decoration:underline dotted;" title="Click to open Tickertape, Trendlyne, Tijori" data-ticker="${esc(s.ticker)}" data-name="${esc(s.name || s.ticker)}" onclick="openResearchTabsFromEl(event,this)">${s.name || '—'}</span></td>
-      <td style="text-align:center;">${s.conviction ? s.conviction+'/10' : '—'}</td>
-      <td style="font-size:0.7rem;">${s.moat_class === 'wide' ? '▲ Wide' : s.moat_class === 'narrow' ? '◆ Narrow' : '—'}</td>
+      <td style="text-align:center;font-weight:600;color:${ (s.conviction||0) >= 8 ? 'var(--green)' : (s.conviction||0) >= 6 ? 'var(--amber-text)' : (s.conviction||0) >= 4 ? '#f97316' : (s.conviction||0) >= 1 ? 'var(--red-text)' : 'var(--text3)' }">${s.conviction ? s.conviction+'/10' : '—'}</td>
+      <td style="font-size:0.7rem;font-weight:600;color:${ s.moat_class==='wide' ? 'var(--green)' : s.moat_class==='narrow' ? 'var(--amber-text)' : 'var(--text3)' }">${s.moat_class === 'wide' ? '▲ Wide' : s.moat_class === 'narrow' ? '◆ Narrow' : '—'}</td>
       <td>${prv(f(s.quantity))}</td>
       <td>${s.ltp != null ? '₹'+f(s.ltp,2) : '—'}</td>
       <td>${prv('₹' + f(s.buy_value))}</td>
       <td>${prv('₹' + f(s.pres_value))}${portPct ? '<br><span style="font-size:0.65rem;color:var(--text3)">'+portPct+'</span>' : ''}</td>
       <td class="${pc(pnlAbs)}">${prv('₹' + f(pnlAbs))}</td>
       <td class="${pc(pnlPct)}">${prv(f(pnlPct,1) + '%')}</td>
-      <td style="${ (s.movers==='A+C'||s.movers==='A') ? 'color:var(--amber-text);font-weight:700' : s.movers==='C' ? 'color:var(--green);font-weight:600' : 'color:var(--text3)' }">${s.movers || '—'}</td>
+      <td style="${ (s.movers==='A+C'||s.movers==='A') ? ((s.ret_1d||0) < 0 ? 'color:var(--red-text);font-weight:700' : 'color:var(--amber-text);font-weight:700') : s.movers==='C' ? ((s.ret_1d||0) < 0 ? 'color:#f97316;font-weight:600' : 'color:var(--green);font-weight:600') : 'color:var(--text3)' }">${s.movers || '—'}</td>
       <td style="text-align:center;font-weight:700;color:${ s.trend_score >= 70 ? (s.trend_signal==='Strong Bullish' ? 'var(--green)' : s.trend_signal==='Bullish' ? '#4ade80' : s.trend_signal==='Extended' ? 'var(--amber-text)' : 'var(--text2)') : s.trend_score >= 55 ? 'var(--amber-text)' : s.trend_score >= 35 ? 'var(--text2)' : s.trend_score != null ? 'var(--red-text)' : 'var(--text3)' }">${s.trend_score != null ? s.trend_score : '—'}</td>
       <td style="font-size:0.75rem;font-weight:600;color:${ s.trend_signal==='Strong Bullish' ? 'var(--green)' : s.trend_signal==='Bullish' ? '#4ade80' : s.trend_signal==='Extended' ? 'var(--amber-text)' : s.trend_signal==='Watch' ? '#f59e0b' : s.trend_signal==='Bearish' ? 'var(--red-text)' : 'var(--text3)' }">${s.trend_signal || '—'}</td>
       <td class="${pc(s.ret_1d)}">${fp(s.ret_1d)}</td>
