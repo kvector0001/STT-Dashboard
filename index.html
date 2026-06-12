@@ -980,6 +980,7 @@
   <button class="chip chip-profit" data-filter="profit">In Profit</button>
   <button class="chip chip-loss"   data-filter="loss">In Loss</button>
   <button class="chip" data-filter="exited" style="border-color:#6b7280;color:#9ca3af;">📤 Exited</button>
+  <button class="chip chip-high" data-filter="mustbuy">★ Must Buy</button>
   <div class="search-wrap">
     <span class="search-icon">🔍</span>
     <input type="search" id="search" placeholder="Ticker or company…" autocomplete="off" />
@@ -1081,9 +1082,9 @@
     <button class="analysis-chip" data-afilter="conviction7" onclick="setAnalysisFilter('conviction7',this)">Conv 7+</button>
     <button class="analysis-chip" data-afilter="widemoat" onclick="setAnalysisFilter('widemoat',this)">Wide Moat</button>
     <button class="analysis-chip" data-afilter="strongbullish" onclick="setAnalysisFilter('strongbullish',this)">Strong Bullish</button>
-    <button class="analysis-chip" data-afilter="bullish" onclick="setAnalysisFilter('bullish',this)">Bullish+Watch</button>
     <button class="analysis-chip" data-afilter="profit" onclick="setAnalysisFilter('profit',this)">In Profit</button>
     <button class="analysis-chip" data-afilter="movers" onclick="setAnalysisFilter('movers',this)">Movers</button>
+    <button class="analysis-chip" data-afilter="mustbuy" onclick="setAnalysisFilter('mustbuy',this)">★ Must Buy</button>
     <button class="analysis-chip" data-afilter="loss" onclick="setAnalysisFilter('loss',this)">In Loss</button>
   </div>
 
@@ -1137,6 +1138,7 @@
           <th onclick="sortAnalysis('qtrly_rev_growth')" title="Quarterly Revenue Growth YoY (%)">Qtrly Rev Growth <span id="sort-qtrly_rev_growth" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('qtrly_earn_growth')" title="Quarterly Earnings Growth YoY (%)">Qtrly Earn Growth <span id="sort-qtrly_earn_growth" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('insider_pct')" title="Insider / Promoter holding percentage (%)">Insider% <span id="sort-insider_pct" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('must_buy')" title="Must Buy flag from Google Sheet">MB <span id="sort-must_buy" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('price_to_200dma_pct')" title="Price vs 200-day Moving Average: (Close − DMA200) ÷ DMA200 × 100 | 0–10%=ideal breakout zone, &gt;20%=extended, &lt;0%=below trend">vs 200DMA% <span id="sort-price_to_200dma_pct" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('dma200_slope_30d_pct')" title="200DMA Slope over 30 trading days: (DMA200_today − DMA200_30d_ago) ÷ DMA200_30d_ago × 100 | Positive=rising trend, Negative=falling trend">200DMA Slope <span id="sort-dma200_slope_30d_pct" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('days_above_200dma_10d')" title="Days price closed above 200DMA in last 10 sessions | 7–10=strong hold, 4–6=watch, 0–3=weak/breakdown">Days&gt;200DMA <span id="sort-days_above_200dma_10d" class="sort-indicator"></span></th>
@@ -1715,7 +1717,7 @@ function exportPendingJSON() {
     return;
   }
   
-  const priceFields = new Set(['ltp','buy_avg','quantity','pnl_pct','pnl_abs','updated','mcap_cr','pe','roe','ocf_cr','ret_1d','ret_1m','ret_6m','ret_1y','ret_2y','ret_3y','ret_4y','ret_5y','debt_to_equity','eps','book_value','div_yield','pat_cagr','rev_cagr','mcap_3y','vol_30m_ratio','vol_yest_ratio','vol_today_ratio','gross_margin','operating_margin','ebitda_margin','profit_margin','roa','qtrly_rev_growth','qtrly_earn_growth','fcf_cr','fcf_3yr_avg','opcf_3yr_avg','lfcf_cr','week52_high','week52_low','promoter_holding','insider_pct','price_to_book','ev_ebitda','movers','price_break','trend_score','trend_signal','price_to_200dma_pct','dma200_slope_30d_pct','days_above_200dma_10d','name']);
+  const priceFields = new Set(['ltp','buy_avg','quantity','pnl_pct','pnl_abs','updated','mcap_cr','pe','roe','ocf_cr','ret_1d','ret_1m','ret_6m','ret_1y','ret_2y','ret_3y','ret_4y','ret_5y','debt_to_equity','eps','book_value','div_yield','pat_cagr','rev_cagr','mcap_3y','vol_30m_ratio','vol_yest_ratio','vol_today_ratio','gross_margin','operating_margin','ebitda_margin','profit_margin','roa','qtrly_rev_growth','qtrly_earn_growth','fcf_cr','fcf_3yr_avg','opcf_3yr_avg','lfcf_cr','week52_high','week52_low','promoter_holding','insider_pct','price_to_book','ev_ebitda','movers','price_break','trend_score','trend_signal','price_to_200dma_pct','dma200_slope_30d_pct','days_above_200dma_10d','must_buy','name']);
   const exportData = pending.map(s => {
     const out = {};
     Object.entries(s).forEach(([k,v]) => { if (!priceFields.has(k)) out[k] = v; });
@@ -2246,9 +2248,9 @@ function renderAnalysisTable() {
     if (analysisFilters.has('conviction7') && (s.conviction || 0) < 7) return;
     if (analysisFilters.has('widemoat') && s.moat_class !== 'wide') return;
     if (analysisFilters.has('strongbullish') && s.trend_signal !== 'Strong Bullish') return;
-    if (analysisFilters.has('bullish') && s.trend_signal !== 'Strong Bullish' && s.trend_signal !== 'Bullish' && s.trend_signal !== 'Watch') return;
     if (analysisFilters.has('profit') && (s.pnl_abs || 0) <= 0) return;
     if (analysisFilters.has('movers') && (!s.movers || s.movers === 'No')) return;
+    if (analysisFilters.has('mustbuy') && !s.must_buy) return;
     if (analysisFilters.has('loss') && (s.pnl_abs || 0) >= 0) return;
 
     const pnlAbs = (s.pnl_abs || 0);
@@ -2319,6 +2321,7 @@ function renderAnalysisTable() {
       <td class="${pc(s.qtrly_rev_growth)}">${fp(s.qtrly_rev_growth)}</td>
       <td class="${pc(s.qtrly_earn_growth)}">${fp(s.qtrly_earn_growth)}</td>
       <td>${fp(s.insider_pct)}</td>
+      <td style="text-align:center;font-weight:700;color:${ s.must_buy ? 'var(--amber-text)' : 'var(--text3)' }">${s.must_buy ? '★ MB' : '—'}</td>
       <td class="${pc(s.price_to_200dma_pct)}">${s.price_to_200dma_pct != null ? s.price_to_200dma_pct.toFixed(1)+'%' : '—'}</td>
       <td class="${pc(s.dma200_slope_30d_pct)}">${s.dma200_slope_30d_pct != null ? s.dma200_slope_30d_pct.toFixed(2)+'%' : '—'}</td>
       <td style="text-align:center;color:${ s.days_above_200dma_10d >= 7 ? 'var(--green)' : s.days_above_200dma_10d >= 4 ? 'var(--amber-text)' : s.days_above_200dma_10d != null ? 'var(--red-text)' : 'var(--text3)' }">${s.days_above_200dma_10d != null ? s.days_above_200dma_10d+'/10' : '—'}</td>
@@ -2459,6 +2462,7 @@ function renderAll() {
     if (deepActiveFilters.has('high')   && (s.conviction || 0) < 8) return false;
     if (deepActiveFilters.has('profit') && !(s.pnl_pct != null && s.pnl_pct >= 0)) return false;
     if (deepActiveFilters.has('loss')   && !(s.pnl_pct != null && s.pnl_pct < 0)) return false;
+    if (deepActiveFilters.has('mustbuy') && !s.must_buy) return false;
     return true;
   });
 

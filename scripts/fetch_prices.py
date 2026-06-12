@@ -125,9 +125,22 @@ if missing:
 
 print(f"[INFO] Using columns: symbol={sym_col!r}, qty={qty_col!r}, buy_avg={avg_col!r}")
 
+# Detect optional Must buy column — look for exact column named 'Must buy'
+mb_col = None
+for col in df.columns:
+    if str(col).strip().lower() in ['must buy', 'mustbuy', 'must_buy']:
+        mb_col = col
+        break
+if mb_col:
+    print(f"[INFO] Found Must buy column: {mb_col!r}")
+
 # Filter valid rows using detected column names
+cols_to_keep = ["symbol", "qty", "buy_avg"]
 df = df.rename(columns={sym_col: "symbol", qty_col: "qty", avg_col: "buy_avg"})
-df = df[["symbol", "qty", "buy_avg"]].copy()
+if mb_col and mb_col not in [sym_col, qty_col, avg_col]:
+    df = df.rename(columns={mb_col: "must_buy"})
+    cols_to_keep.append("must_buy")
+df = df[cols_to_keep].copy()
 
 # Strip Zerodha risk-indicator suffixes like -T, -X, -E, -B, -Z etc.
 # e.g. MODISONLTD-T → MODISONLTD, LAKSELEC-X → LAKSELEC
@@ -230,7 +243,8 @@ now_utc = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
 
 # Build lookup of buy_avg and qty from portfolio (use clean tickers as keys)
 portfolio_map = {
-    _clean_ticker(row["symbol"]): {"qty": float(row["qty"]), "buy_avg": float(row["buy_avg"])}
+    _clean_ticker(row["symbol"]): {"qty": float(row["qty"]), "buy_avg": float(row["buy_avg"]),
+                                    "must_buy": str(row.get("must_buy", "")).strip().upper() == "MUSTBUY" if "must_buy" in portfolio.columns else False}
     for _, row in portfolio.iterrows()
 }
 
@@ -593,6 +607,7 @@ for _, row in portfolio.iterrows():
         "pnl_pct": pnl_pct,
         "pnl_abs": pnl_abs,
         "updated": now_utc,
+        "must_buy": portfolio_map.get(sym, {}).get("must_buy", False),
     }
     
     # Add fetched metadata if available
