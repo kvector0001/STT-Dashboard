@@ -640,7 +640,8 @@
       box-shadow: 0 4px 12px rgba(0,0,0,0.4);
     }
 
-    .analysis-table tr:hover td { background: #1e293b !important; }
+    .analysis-table tr:hover td { background: rgba(139,92,246,0.08) !important; }
+    body.light-mode .analysis-table tr:hover td { background: rgba(139,92,246,0.06) !important; }
     .neg { color: var(--red-text); }
     .pos { color: var(--green-text); }
     .amber { color: var(--amber-text); }
@@ -948,6 +949,7 @@
   <div class="stat">
     <div class="stat-label">Overall P&L ₹</div>
     <div class="stat-value" id="sum-pnl-abs">—</div>
+    <div style="font-size:0.65rem;color:var(--text3);margin-top:1px;" id="sum-ew-pnl"></div>
   </div>
   <div class="stat-divider"></div>
   <div class="stat">
@@ -1036,6 +1038,7 @@
         <div class="stat-value" id="ana-sum-pnl-abs">—</div>
         <div class="stat-value" id="ana-sum-pnl-pct">—</div>
       </div>
+      <div style="font-size:0.65rem;color:var(--text3);margin-top:1px;" id="ana-ew-pnl"></div>
     </div>
     <div class="stat">
       <div class="stat-label">Day's PL%</div>
@@ -1043,6 +1046,7 @@
         <div class="stat-value" id="ana-sum-day-abs">—</div>
         <div class="stat-value" id="ana-sum-day-pct">—</div>
       </div>
+      <div style="font-size:0.65rem;color:var(--text3);margin-top:1px;" id="ana-ew-day"></div>
     </div>
     <div class="stat">
       <div class="stat-label">1 Month P&L (%)</div>
@@ -1050,6 +1054,7 @@
         <div class="stat-value" id="ana-sum-1m-abs">—</div>
         <div class="stat-value" id="ana-sum-1m-pct">—</div>
       </div>
+      <div style="font-size:0.65rem;color:var(--text3);margin-top:1px;" id="ana-ew-1m"></div>
     </div>
     <div class="stat">
       <div class="stat-label">1 Year P&L (%)</div>
@@ -1057,6 +1062,7 @@
         <div class="stat-value" id="ana-sum-1y-abs">—</div>
         <div class="stat-value" id="ana-sum-1y-pct">—</div>
       </div>
+      <div style="font-size:0.65rem;color:var(--text3);margin-top:1px;" id="ana-ew-1y"></div>
     </div>
     <div class="stat">
       <div class="stat-label">Win/Loss</div>
@@ -2346,6 +2352,8 @@ let sortKey = 'pnl_pct_desc';
 function updateSummary(stocks) {
   let invested = 0, current = 0, inProfit = 0, inLoss = 0;
   let dayChgVal = 0, m1ChgVal = 0, y1ChgVal = 0;
+  let ewPnlSum = 0, ewPnlN = 0, ewDaySum = 0, ewDayN = 0;
+  let ewM1Sum  = 0, ewM1N  = 0, ewY1Sum  = 0, ewY1N  = 0;
 
   stocks.forEach(s => {
     const qty = s.quantity || 0;
@@ -2369,11 +2377,25 @@ function updateSummary(stocks) {
       y1ChgVal  += (ltp * qty) - getHistoryVal(s.ret_1y);
     }
     
+    // Equal-weight return accumulation
+    if (s.pnl_pct != null)   { ewPnlSum  += s.pnl_pct;  ewPnlN++;  }
+    if (s.ret_1d != null)    { ewDaySum  += s.ret_1d;   ewDayN++;  }
+    if (s.ret_1m != null)    { ewM1Sum   += s.ret_1m;   ewM1N++;   }
+    if (s.ret_1y != null)    { ewY1Sum   += s.ret_1y;   ewY1N++;   }
+
     if (s.pnl_pct != null) {
       if (s.pnl_pct >= 0) inProfit++;
       else inLoss++;
     }
   });
+
+  // Equal-weight averages (simple avg of % returns = equal allocation)
+  const ewPnl = ewPnlN  > 0 ? ewPnlSum  / ewPnlN  : null;
+  const ewDay = ewDayN  > 0 ? ewDaySum  / ewDayN  : null;
+  const ewM1  = ewM1N   > 0 ? ewM1Sum   / ewM1N   : null;
+  const ewY1  = ewY1N   > 0 ? ewY1Sum   / ewY1N   : null;
+
+  const ewFmt = (v) => v != null ? `(EW: ${v >= 0 ? '+' : ''}${v.toFixed(1)}%)` : '';
 
   const pnlAbs = current - invested;
   const pnlPct = invested > 0 ? (pnlAbs / invested * 100) : 0;
@@ -2396,6 +2418,9 @@ function updateSummary(stocks) {
   pnlAbsEl.className = 'stat-value ' + (locked ? '' : (pnlAbs >= 0 ? 'green' : 'red'));
   pnlPctEl.textContent = pvt(fmtPct(pnlPct));
   pnlPctEl.className = 'stat-value ' + (locked ? '' : (pnlPct >= 0 ? 'green' : 'red'));
+  // EW annotation on Overall P&L
+  const sumEwEl = document.getElementById('sum-ew-pnl');
+  if (sumEwEl) { sumEwEl.textContent = ewFmt(ewPnl); sumEwEl.style.color = ewPnl != null ? (ewPnl >= 0 ? 'var(--green)' : 'var(--red-text)') : 'var(--text3)'; }
 
   document.getElementById('sum-count').textContent  = pvt(String(stocks.length));
   document.getElementById('sum-profit').textContent = pvt(String(inProfit));
@@ -2427,6 +2452,18 @@ function updateSummary(stocks) {
     setChg('ana-sum-day-abs', 'ana-sum-day-pct', dayChgVal, dayPct);
     setChg('ana-sum-1m-abs',  'ana-sum-1m-pct',  m1ChgVal,  m1Pct);
     setChg('ana-sum-1y-abs',  'ana-sum-1y-pct',  y1ChgVal,  y1Pct);
+
+    // Equal-weight annotations on Analysis bar
+    const setEW = (id, val) => {
+      const el = document.getElementById(id);
+      if (!el) return;
+      el.textContent = ewFmt(val);
+      el.style.color = val != null ? (val >= 0 ? 'var(--green)' : 'var(--red-text)') : 'var(--text3)';
+    };
+    setEW('ana-ew-pnl', ewPnl);
+    setEW('ana-ew-day', ewDay);
+    setEW('ana-ew-1m',  ewM1);
+    setEW('ana-ew-1y',  ewY1);
 
     document.getElementById('ana-sum-count').textContent  = pvt(String(stocks.length));
     document.getElementById('ana-sum-profit').textContent = pvt(String(inProfit));

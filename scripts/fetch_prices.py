@@ -125,14 +125,14 @@ if missing:
 
 print(f"[INFO] Using columns: symbol={sym_col!r}, qty={qty_col!r}, buy_avg={avg_col!r}")
 
-# Detect optional Must buy column — look for exact column named 'Must buy'
+# Detect optional MB / Must Buy column — exact match on column name
 mb_col = None
 for col in df.columns:
-    if str(col).strip().lower() in ['must buy', 'mustbuy', 'must_buy']:
+    if str(col).strip().lower() in ['mb', 'must buy', 'mustbuy', 'must_buy']:
         mb_col = col
         break
 if mb_col:
-    print(f"[INFO] Found Must buy column: {mb_col!r}")
+    print(f"[INFO] Found MB column: {mb_col!r}")
 
 # Filter valid rows using detected column names
 cols_to_keep = ["symbol", "qty", "buy_avg"]
@@ -244,7 +244,7 @@ now_utc = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
 # Build lookup of buy_avg and qty from portfolio (use clean tickers as keys)
 portfolio_map = {
     _clean_ticker(row["symbol"]): {"qty": float(row["qty"]), "buy_avg": float(row["buy_avg"]),
-                                    "must_buy": str(row.get("must_buy", "")).strip().upper() == "MUSTBUY" if "must_buy" in portfolio.columns else False}
+                                    "must_buy": str(row["must_buy"]).strip().upper() == "MUSTBUY" if "must_buy" in portfolio.columns else False}
     for _, row in portfolio.iterrows()
 }
 
