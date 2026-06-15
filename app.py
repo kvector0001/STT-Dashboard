@@ -121,6 +121,55 @@ def refresh_stream():
     )
 
 
+@app.route('/api/save-analysis', methods=['POST'])
+def save_analysis():
+    """
+    Receives updated stocks.json data from the browser after Claude analysis is pasted.
+    Writes stocks.json then runs git add + commit + push.
+    Only works when server is running locally.
+    """
+    try:
+        data = request.get_json(force=True)
+        if not data or not isinstance(data, list):
+            return jsonify({'success': False, 'message': '❌ Expected a JSON array'}), 400
+
+        stocks_path = os.path.join(BASE_DIR, 'stocks.json')
+
+        # Write updated stocks.json
+        with open(stocks_path, 'w', encoding='utf-8') as f:
+            json.dump(data, f, indent=2, ensure_ascii=False)
+
+        updated_tickers = [s.get('ticker', '?') for s in data if s.get('moat_class') not in (None, '', 'pending')]
+
+        # Git commit and push
+        ts = datetime.utcnow().strftime('%Y-%m-%d %H:%M UTC')
+        commit_msg = f'feat: update fundamental analysis {ts}'
+
+        git_cmds = [
+            ['git', 'add', 'stocks.json'],
+            ['git', 'commit', '-m', commit_msg],
+            ['git', 'push', 'origin', 'main'],
+        ]
+        for cmd in git_cmds:
+            result = subprocess.run(cmd, capture_output=True, text=True, cwd=BASE_DIR, timeout=30)
+            if result.returncode != 0 and 'nothing to commit' not in result.stdout + result.stderr:
+                return jsonify({
+                    'success': False,
+                    'message': f'❌ git error ({" ".join(cmd[1:2])}): {(result.stderr or result.stdout)[:200]}'
+                }), 500
+
+        return jsonify({
+            'success': True,
+            'message': f'✅ Saved & pushed stocks.json ({len(data)} stocks)',
+            'timestamp': ts
+        })
+
+    except Exception as e:
+        import traceback
+        traceback.print_exc()
+        return jsonify({'success': False, 'message': f'❌ Error: {str(e)[:200]}'}), 500
+
+
 @app.route('/')
 def serve_index():
     """Serve the main dashboard"""

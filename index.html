@@ -1188,6 +1188,7 @@ Example:
     <div class="modal-actions">
       <button class="modal-btn" onclick="closePasteModal()">Cancel</button>
       <button class="modal-btn primary" onclick="applyPastedAnalysis()">✅ Apply Analysis</button>
+      <button class="modal-btn" style="background:var(--green);color:#fff;opacity:0.9;" onclick="applyPastedAnalysis(true)" title="Apply analysis AND push stocks.json to GitHub via local Flask server">🚀 Apply &amp; Push to GitHub</button>
     </div>
   </div>
 </div>
@@ -1664,7 +1665,7 @@ function closePasteModal() {
   document.getElementById('paste-modal').classList.remove('open');
 }
 
-function applyPastedAnalysis() {
+function applyPastedAnalysis(andPush = false) {
   const raw = document.getElementById('paste-textarea').value.trim();
   const errEl = document.getElementById('paste-error');
   errEl.classList.remove('show');
@@ -1716,6 +1717,36 @@ function applyPastedAnalysis() {
   closePasteModal();
   renderAll();
   showToast(`✅ Analysis applied to ${key}`, 'green');
+
+  if (andPush) {
+    pushAnalysisToGitHub();
+  }
+}
+
+async function pushAnalysisToGitHub() {
+  showToast('⏳ Pushing to GitHub…', '');
+  // Build full stocks array without price-only fields
+  const priceFields = new Set(['ltp','buy_avg','quantity','pnl_pct','pnl_abs','updated','mcap_cr','pe','roe','ocf_cr','ret_1d','ret_1m','ret_6m','ret_1y','ret_2y','ret_3y','ret_4y','ret_5y','debt_to_equity','eps','book_value','div_yield','pat_cagr','rev_cagr','mcap_3y','vol_30m_ratio','vol_yest_ratio','vol_today_ratio','gross_margin','operating_margin','ebitda_margin','profit_margin','roa','qtrly_rev_growth','qtrly_earn_growth','fcf_cr','fcf_3yr_avg','opcf_3yr_avg','lfcf_cr','week52_high','week52_low','promoter_holding','insider_pct','price_to_book','ev_ebitda','movers','price_break','trend_score','trend_signal','price_to_200dma_pct','dma200_slope_30d_pct','days_above_200dma_10d','must_buy','name','pres_value','buy_value','week52_high_pct','week52_low_pct']);
+  const exportData = allStocks.map(s => {
+    const out = {};
+    Object.entries(s).forEach(([k, v]) => { if (!priceFields.has(k)) out[k] = v; });
+    return out;
+  });
+  try {
+    const resp = await fetch('http://localhost:8000/api/save-analysis', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(exportData)
+    });
+    const result = await resp.json();
+    if (result.success) {
+      showToast('🚀 ' + result.message, 'green');
+    } else {
+      showToast(result.message || '❌ Push failed', 'red');
+    }
+  } catch (e) {
+    showToast('❌ Cannot reach local server — is Flask running on :8000?', 'red');
+  }
 }
 
 // ── Export stocks.json ─────────────────────────────────────────────────────
