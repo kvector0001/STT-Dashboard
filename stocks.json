@@ -3980,39 +3980,6 @@
     "mcap_3y": 31.51
   },
   {
-    "ticker": "AEROENTER",
-    "name": "Aeroflex Enterprises Limited",
-    "sector": "Basic Materials",
-    "nse_symbol": "AEROENTER",
-    "buy_avg": 108.55,
-    "moat_type": "Pending",
-    "moat_class": "pending",
-    "conviction": 0,
-    "moat": "Analysis pending â€” add manually or re-run Claude.ai analysis",
-    "leadership": "Pending",
-    "non_rep": "Pending",
-    "tailwinds": [
-      "Pending analysis"
-    ],
-    "risks": [
-      "Pending analysis"
-    ],
-    "track": [
-      "Add tracking KPIs"
-    ],
-    "mcap_cr": 1246.54,
-    "pe": 19.40669,
-    "roe": 9.56,
-    "ocf_cr": 18.3,
-    "debt_to_equity": 4.218,
-    "eps": 5.68,
-    "book_value": 72.947,
-    "div_yield": 27.0,
-    "pat_cagr": 29.3,
-    "rev_cagr": 16.0,
-    "mcap_3y": 45.21
-  },
-  {
     "ticker": "EMBDL",
     "name": "Embassy Developments Limited",
     "sector": "Real Estate",
@@ -4568,45 +4535,6 @@
     "mcap_3y": 1023.6
   },
   {
-    "ticker": "AMBER",
-    "name": "Amber Enterprises India Limited",
-    "sector": "Consumer Cyclical",
-    "nse_symbol": "AMBER",
-    "buy_avg": 6635.5,
-    "moat_type": "Narrow",
-    "moat_class": "narrow",
-    "conviction": 7,
-    "moat": "A manufacturing scale moat in outsourced RAC and adjacent electronics, strengthened by backward integration, customer qualification and increasing complexity across components and systems. It is a quality execution moat rather than a consumer brand moat.",
-    "leadership": "FY25 annual report and investor materials show Amber has evolved from HVAC-focused manufacturing into a broader precision manufacturing platform across consumer durables, electronics and railway/defence, with FY25 revenue near Rs 9,973 crore and operating EBITDA of about Rs 796 crore.",
-    "non_rep": "Large OEM customers do not switch complex contract manufacturers lightly. Tooling capability, component localisation, process consistency and delivery reliability make incumbency valuable, especially as India scales import substitution.",
-    "tailwinds": [
-      "Rising RAC penetration and outsourcing in India",
-      "PLI and localisation-driven electronics manufacturing opportunity",
-      "Diversification into higher-value adjacencies beyond RAC"
-    ],
-    "risks": [
-      "Seasonality and weather sensitivity in RAC demand",
-      "Customer concentration and pricing pressure from large brands",
-      "Execution complexity as the business spreads across many verticals"
-    ],
-    "track": [
-      "Outsourced RAC market share and customer additions",
-      "Electronics / EMS mix and margin quality",
-      "Working capital discipline through rapid scale-up"
-    ],
-    "mcap_cr": 26576.03,
-    "pe": 149.3361,
-    "roe": 5.58,
-    "ocf_cr": 240.16,
-    "debt_to_equity": 46.566,
-    "eps": 50.46,
-    "book_value": 1242.276,
-    "div_yield": 0,
-    "pat_cagr": 11.0,
-    "rev_cagr": 10.5,
-    "mcap_3y": 253.7
-  },
-  {
     "ticker": "EIHOTEL",
     "name": "EIH Limited",
     "sector": "Consumer Cyclical",
@@ -4644,84 +4572,6 @@
     "pat_cagr": -5.8,
     "rev_cagr": 1.5,
     "mcap_3y": 54.85
-  },
-  {
-    "ticker": "IFGLEXPOR",
-    "name": "IFGL Refractories Limited",
-    "sector": "Basic Materials",
-    "nse_symbol": "IFGLEXPOR",
-    "buy_avg": 198.2,
-    "moat_type": "Narrow",
-    "moat_class": "narrow",
-    "conviction": 6,
-    "moat": "A technical-application moat in refractory flow-control and related products used in harsh, process-critical environments. Not a glamorous moat, but one built on qualification, reliability and service embedded in steel operations.",
-    "leadership": "Company materials describe IFGL as a global manufacturer of high-performance refractory products and systems for the iron and steel industry, spanning isostatic refractories, submerged entry nozzles, slide gate systems, purging plugs and monolithic refractories, with manufacturing presence across multiple geographies.",
-    "non_rep": "Steelmakers care deeply about uptime and failure avoidance. Once a refractory supplier is qualified into continuous-casting and molten-metal handling workflows, technical service and reliability create repeat business and switching friction.",
-    "tailwinds": [
-      "Capacity additions and maintenance demand in steel",
-      "Global supply-chain diversification for technical inputs",
-      "Mix shift to higher-value specialised flow-control products"
-    ],
-    "risks": [
-      "Steel-cycle dependency and global industrial slowdown",
-      "Margin pain from raw material or energy inflation",
-      "Moderate bargaining power with large industrial customers"
-    ],
-    "track": [
-      "High-value refractory mix",
-      "Export growth and plant utilisation",
-      "Gross margin resilience through steel downcycles"
-    ],
-    "mcap_cr": 1398.33,
-    "pe": 40.416664,
-    "roe": 3.04,
-    "ocf_cr": 63.38,
-    "debt_to_equity": 17.764,
-    "eps": 4.8,
-    "book_value": 157.804,
-    "div_yield": 115.0,
-    "pat_cagr": 69.3,
-    "rev_cagr": 7.7,
-    "mcap_3y": 44.12
-  },
-  {
-    "ticker": "HLEGLAS",
-    "name": "HLE Glascoat Limited",
-    "sector": "Industrials",
-    "nse_symbol": "HLEGLAS",
-    "buy_avg": 353.03,
-    "moat_type": "Narrow",
-    "moat_class": "narrow",
-    "conviction": 6,
-    "moat": "A process-equipment moat serving pharma and specialty chemicals, built on corrosion-resistant design know-how, installation base, qualification and after-sales support. The moat is strongest where process failure is expensive for the customer.",
-    "leadership": "HLE Glascoat focuses on glass-lined equipment, filtration, drying and heat transfer systems. Public disclosures cite a FY25 order book of roughly Rs 575 crore, FY25 revenue of about Rs 1,027.6 crore and PAT growth of over 50% YoY, with glass-lined equipment remaining a key profit driver.",
-    "non_rep": "Customers validate reactors, dryers and filtration systems into long-lived process setups. Once installed, switching involves downtime, revalidation and operational risk, which supports stickiness beyond what the capital-goods label suggests.",
-    "tailwinds": [
-      "Capex in specialty chemicals and pharmaceuticals",
-      "Import substitution in high-spec process equipment",
-      "Cross-sell across glass-lined, filtration, drying and heat-transfer lines"
-    ],
-    "risks": [
-      "Lumpy order intake in capital equipment",
-      "Customer capex deferrals in weak cycles",
-      "Integration risk as product portfolio broadens"
-    ],
-    "track": [
-      "Order inflow and executable order book",
-      "Margins by glass-lined versus filtration businesses",
-      "Aftermarket / spares contribution and cash conversion"
-    ],
-    "mcap_cr": 2675.4,
-    "pe": 53.4258,
-    "roe": 9.65,
-    "ocf_cr": 161.22,
-    "debt_to_equity": 56.224,
-    "eps": 7.21,
-    "book_value": 77.797,
-    "div_yield": 29.0,
-    "pat_cagr": -47.5,
-    "rev_cagr": 17.1,
-    "mcap_3y": -35.54
   },
   {
     "ticker": "KAMDHENU",
@@ -5022,50 +4872,6 @@
     "sector": "Industrials",
     "nse_symbol": "VASCONEQ",
     "buy_avg": 66.21,
-    "moat_type": "Pending",
-    "moat_class": "pending",
-    "conviction": 0,
-    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
-    "leadership": "Pending",
-    "non_rep": "Pending",
-    "tailwinds": [
-      "Pending analysis"
-    ],
-    "risks": [
-      "Pending analysis"
-    ],
-    "track": [
-      "Add tracking KPIs"
-    ]
-  },
-  {
-    "ticker": "KSB",
-    "name": "KSB Limited",
-    "sector": "Industrials",
-    "nse_symbol": "KSB",
-    "buy_avg": 829.45,
-    "moat_type": "Pending",
-    "moat_class": "pending",
-    "conviction": 0,
-    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
-    "leadership": "Pending",
-    "non_rep": "Pending",
-    "tailwinds": [
-      "Pending analysis"
-    ],
-    "risks": [
-      "Pending analysis"
-    ],
-    "track": [
-      "Add tracking KPIs"
-    ]
-  },
-  {
-    "ticker": "CLEANMAX",
-    "name": "CLEAN MAX ENVIRO EN SOL L",
-    "sector": "Utilities",
-    "nse_symbol": "CLEANMAX",
-    "buy_avg": 1320.0,
     "moat_type": "Pending",
     "moat_class": "pending",
     "conviction": 0,
