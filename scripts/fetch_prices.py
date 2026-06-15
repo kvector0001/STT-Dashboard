@@ -125,7 +125,7 @@ if missing:
 
 print(f"[INFO] Using columns: symbol={sym_col!r}, qty={qty_col!r}, buy_avg={avg_col!r}")
 
-# Detect optional MB / Must Buy column — exact match on column name
+# Detect optional MB / Must Buy column — check BEFORE any renaming
 mb_col = None
 for col in df.columns:
     if str(col).strip().lower() in ['mb', 'must buy', 'mustbuy', 'must_buy']:
@@ -151,7 +151,7 @@ df["symbol"] = df["symbol"].astype(str).str.replace(r'-[A-Z]$', '', regex=True)
 df = df[df["symbol"].notna()]
 df = df[~df["symbol"].astype(str).str.contains(" ")]          # remove mutual fund rows
 df = df[df["qty"].apply(lambda x: str(x).replace(".", "").isdigit())]  # numeric qty only
-df = df[~df["symbol"].astype(str).str.match(r'^\d')]           # reject numeric-only symbols (Excel formatting errors)
+df = df[~df["symbol"].astype(str).str.match(r'^\d+(\.\d+)?$')]  # reject purely numeric symbols (Excel errors like 7.0, 26.0) but allow 3MINDIA
 df["qty"] = pd.to_numeric(df["qty"], errors="coerce")
 df["buy_avg"] = pd.to_numeric(df["buy_avg"], errors="coerce")
 df = df.dropna(subset=["qty", "buy_avg"])

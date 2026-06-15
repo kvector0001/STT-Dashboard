@@ -6,6 +6,7 @@
   <title>Portfolio Dashboard</title>
   <meta name="theme-color" content="#0f1723" />
   <link rel="manifest" href="manifest.json" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
   <style>
     /* ── RESET & TOKENS ── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -924,6 +925,7 @@
     <div class="header-actions">
       <button class="hdr-btn" id="theme-toggle" onclick="toggleTheme()" title="Toggle dark/light mode">☀️ Light</button>
       <button class="hdr-btn" id="lock-btn" onclick="togglePrivacy()" title="Lock/unlock private values">🔒 Lock</button>
+      <button class="hdr-btn" id="excel-export-btn" onclick="exportToExcel()" title="Export table to Excel (unlock required)" style="padding:4px 8px;display:flex;align-items:center;gap:5px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;"><rect width="24" height="24" rx="3" fill="#1D6F42"/><path d="M7 7h10v2H7zM7 11h10v2H7zM7 15h10v2H7z" fill="white" opacity="0.3"/><path d="M6 6l4 6-4 6h2.5l2.5-4 2.5 4H16l-4-6 4-6h-2.5L11 12 8.5 6H6z" fill="white"/></svg><span style="font-size:0.7rem;font-weight:600;">XLS</span></button>
       <button class="hdr-btn paste" onclick="showPasteModal()">📋 Paste Claude Response</button>
       <button class="hdr-btn export" onclick="exportPendingJSON()">⬇ Export Pending for Claude</button>
       <button class="hdr-btn export" style="opacity:0.6;" onclick="exportStocksJSON()">⬇ Export ALL</button>
@@ -1098,6 +1100,7 @@
     <table class="analysis-table">
       <thead>
         <tr>
+          <th style="color:var(--text3);font-weight:400;min-width:28px;text-align:center;">#</th>
           <th onclick="sortAnalysis('ticker')">Symbol <span id="sort-ticker" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('name')">Company Name <span id="sort-name" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('conviction')">Conv. <span id="sort-conviction" class="sort-indicator"></span></th>
@@ -2241,7 +2244,8 @@ function renderAnalysisTable() {
   const activeArr = document.getElementById('sort-' + analysisSortBy);
   if (activeArr) activeArr.textContent = analysisSortDir === 'desc' ? '↓' : '↑';
 
-  const visibleStocks = [];
+  visibleStocks.length = 0;
+  let rowNum = 0;
 
   stocks.forEach(s => {
     // Filter by search query
@@ -2279,8 +2283,10 @@ function renderAnalysisTable() {
     const totalPortfolio = allStocks.reduce((sum, st) => sum + (st.ltp || 0) * (st.quantity || 0), 0);
     const portPct = (totalPortfolio > 0 && s.pres_value > 0) ? (s.pres_value / totalPortfolio * 100).toFixed(1) + '%' : '';
 
+    rowNum++;
     const tr = document.createElement('tr');
     tr.innerHTML = `
+      <td style="text-align:center;color:var(--text3);font-size:0.7rem;font-weight:400;min-width:28px;">${rowNum}</td>
       <td><strong><span style="cursor:pointer;color:var(--blue-text);" title="View fundamental analysis card" onclick="goToCard('${esc(s.ticker)}')">${s.ticker}</span></strong></td>
       <td><span class="research-name" style="cursor:pointer;color:var(--blue-text);text-decoration:underline dotted;" title="Click to open Tickertape, Trendlyne, Tijori" data-ticker="${esc(s.ticker)}" data-name="${esc(s.name || s.ticker)}" onclick="openResearchTabsFromEl(event,this)">${s.name || '—'}</span></td>
       <td style="text-align:center;font-weight:600;color:${ (s.conviction||0) >= 8 ? 'var(--green)' : (s.conviction||0) >= 6 ? 'var(--amber-text)' : (s.conviction||0) >= 4 ? '#f97316' : (s.conviction||0) >= 1 ? 'var(--red-text)' : 'var(--text3)' }">${s.conviction ? s.conviction+'/10' : '—'}</td>
@@ -2344,6 +2350,7 @@ function renderAnalysisTable() {
 
 // ── State ──────────────────────────────────────────────────────────────────
 let allStocks = [];
+let visibleStocks = [];
 let activeFilter = 'all';
 let searchQuery  = '';
 let sortKey = 'pnl_pct_desc';
@@ -3021,6 +3028,82 @@ function unmaskPrivateData() {
     const el = document.getElementById(id);
     if (el && el.dataset.orig) { el.textContent = el.dataset.orig; delete el.dataset.orig; }
   });
+}
+
+// ── Excel Export ─────────────────────────────────────────────────────────
+function exportToExcel() {
+  if (!privacyUnlocked) {
+    showToast('🔒 Unlock to export data', 'amber');
+    return;
+  }
+  const src = visibleStocks.length > 0 ? visibleStocks : allStocks;
+  const rows = src.map((s, i) => ({
+    '#':                i + 1,
+    'Symbol':           s.ticker || '',
+    'Company':          s.name || '',
+    'Conviction':       s.conviction || '',
+    'Moat':             s.moat_class || '',
+    'Qty':              s.quantity,
+    'CMP':              s.ltp,
+    'Buy Avg':          s.buy_avg,
+    'Buy Value':        s.buy_value != null ? s.buy_value : (s.buy_avg || 0) * (s.quantity || 0),
+    'Present Value':    s.pres_value != null ? s.pres_value : (s.ltp || 0) * (s.quantity || 0),
+    'P&L':              s.pnl_abs,
+    'P&L%':             s.pnl_pct,
+    'Movers':           s.movers || '',
+    'Trend Score':      s.trend_score,
+    'Trend Signal':     s.trend_signal || '',
+    '1D Ret%':          s.ret_1d,
+    '1M Ret%':          s.ret_1m,
+    '6M Ret%':          s.ret_6m,
+    '1Y Ret%':          s.ret_1y,
+    '2Y Ret%':          s.ret_2y,
+    '3Y Ret%':          s.ret_3y,
+    '4Y Ret%':          s.ret_4y,
+    '5Y Ret%':          s.ret_5y,
+    'Vol 30m/Avg':      s.vol_30m_ratio,
+    'Vol Today/Avg':    s.vol_today_ratio,
+    '52W High%':        s.week52_high_pct != null ? s.week52_high_pct : (s.week52_high && s.ltp ? Math.round((s.ltp - s.week52_high) / s.week52_high * 1000) / 10 : null),
+    '52W Low%':         s.week52_low_pct  != null ? s.week52_low_pct  : (s.week52_low  && s.ltp ? Math.round((s.ltp - s.week52_low)  / s.week52_low  * 1000) / 10 : null),
+    'Market Cap (Cr)':  s.mcap_cr,
+    'P/E':              s.pe,
+    'P/B':              s.price_to_book,
+    'EV/EBITDA':        s.ev_ebitda,
+    'ROE%':             s.roe,
+    'Op Cash Flow (Cr)':s.opcf_3yr_avg,
+    'Free Cash Flow (Cr)': s.fcf_3yr_avg,
+    'PAT Growth%':      s.pat_cagr,
+    'Rev Growth%':      s.rev_cagr,
+    'MCap Growth 3Y%':  s.mcap_3y,
+    'Debt/Equity':      s.debt_to_equity,
+    'EPS':              s.eps,
+    'Div Yield%':       s.div_yield,
+    'Gross Margin%':    s.gross_margin,
+    'Op Margin%':       s.operating_margin,
+    'EBITDA Margin%':   s.ebitda_margin,
+    'Profit Margin%':   s.profit_margin,
+    'ROA%':             s.roa,
+    'Qtrly Rev Growth%': s.qtrly_rev_growth,
+    'Qtrly Earn Growth%': s.qtrly_earn_growth,
+    'Insider%':         s.insider_pct,
+    'Must Buy':         s.must_buy ? 'Yes' : 'No',
+    'vs 200DMA%':       s.price_to_200dma_pct,
+    '200DMA Slope%':    s.dma200_slope_30d_pct,
+    'Days>200DMA (10d)': s.days_above_200dma_10d,
+  }));
+
+  const ws = XLSX.utils.json_to_sheet(rows);
+  // Auto-size columns
+  const colWidths = Object.keys(rows[0] || {}).map(k => ({
+    wch: Math.max(k.length, 10)
+  }));
+  ws['!cols'] = colWidths;
+
+  const wb = XLSX.utils.book_new();
+  XLSX.utils.book_append_sheet(wb, ws, 'Portfolio');
+  const date = new Date().toISOString().slice(0, 10);
+  XLSX.writeFile(wb, `portfolio_${date}.xlsx`);
+  showToast('✅ Exported ' + rows.length + ' stocks to Excel', 'green');
 }
 
 function applyPrivacyState() {
