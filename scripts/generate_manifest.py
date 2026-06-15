@@ -9,9 +9,9 @@ def generate_file_list():
     # Remove duplicates and sort
     files = sorted(list(set(files)))
     
-    with open('manifest.json', 'w', encoding='utf-8') as f:
+    with open('stock_manifest.json', 'w', encoding='utf-8') as f:
         json.dump({"stock_files": files}, f, indent=2)
-    print(f"Generated manifest.json with {len(files)} files.")
+    print(f"Generated stock_manifest.json with {len(files)} files.")
 
 if __name__ == "__main__":
     generate_file_list()

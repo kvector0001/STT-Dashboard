@@ -2590,7 +2590,7 @@ async function loadData() {
   const ts_qs = `?t=${Date.now()}`;
   let manifest;
   try {
-    const manifestRes = await fetch('manifest.json' + ts_qs);
+    const manifestRes = await fetch('stock_manifest.json' + ts_qs);
     if (manifestRes.ok) {
       manifest = await manifestRes.json();
     }
