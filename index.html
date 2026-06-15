@@ -1101,7 +1101,6 @@
     <table class="analysis-table">
       <thead>
         <tr>
-          <th style="color:var(--text3);font-weight:400;min-width:28px;text-align:center;">#</th>
           <th onclick="sortAnalysis('ticker')">Symbol <span id="sort-ticker" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('name')">Company Name <span id="sort-name" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('conviction')">Conv. <span id="sort-conviction" class="sort-indicator"></span></th>
@@ -2277,7 +2276,6 @@ function renderAnalysisTable() {
   if (activeArr) activeArr.textContent = analysisSortDir === 'desc' ? '↓' : '↑';
 
   visibleStocks.length = 0;
-  let rowNum = 0;
 
   stocks.forEach(s => {
     // Filter by search query
@@ -2315,10 +2313,8 @@ function renderAnalysisTable() {
     const totalPortfolio = allStocks.reduce((sum, st) => sum + (st.ltp || 0) * (st.quantity || 0), 0);
     const portPct = (totalPortfolio > 0 && s.pres_value > 0) ? (s.pres_value / totalPortfolio * 100).toFixed(1) + '%' : '';
 
-    rowNum++;
     const tr = document.createElement('tr');
     tr.innerHTML = `
-      <td style="text-align:center;color:var(--text3);font-size:0.7rem;font-weight:400;min-width:28px;">${rowNum}</td>
       <td><strong><span style="cursor:pointer;color:var(--blue-text);" title="View fundamental analysis card" onclick="goToCard('${esc(s.ticker)}')">${s.ticker}</span></strong></td>
       <td><span class="research-name" style="cursor:pointer;color:var(--blue-text);text-decoration:underline dotted;" title="Click to open Tickertape, Trendlyne, Tijori" data-ticker="${esc(s.ticker)}" data-name="${esc(s.name || s.ticker)}" onclick="openResearchTabsFromEl(event,this)">${s.name || '—'}</span></td>
       <td style="text-align:center;font-weight:600;color:${ (s.conviction||0) >= 8 ? 'var(--green)' : (s.conviction||0) >= 6 ? 'var(--amber-text)' : (s.conviction||0) >= 4 ? '#f97316' : (s.conviction||0) >= 1 ? 'var(--red-text)' : 'var(--text3)' }">${s.conviction ? s.conviction+'/10' : '—'}</td>
