@@ -325,9 +325,9 @@
       min-width: 28px;
       text-align: right;
     }
-    .conv-high  { background: var(--green); color: var(--green-text); }
-    .conv-mid   { background: var(--amber); color: var(--amber-text); }
-    .conv-low   { background: var(--red);   color: var(--red-text); }
+    .conv-high  { background: var(--green); color: #0a2e1a; }
+    .conv-mid   { background: var(--amber); color: #1a1000; }
+    .conv-low   { background: var(--red);   color: #2e0a0a; }
     .conv-zero  { background: var(--border); color: var(--text3); }
 
     /* Fundamental metrics grid */
@@ -1020,6 +1020,7 @@
       <div class="last-updated" id="last-updated-analysis">Loading…</div>
       <button class="hdr-btn" id="theme-toggle-2" onclick="toggleTheme()" title="Toggle dark/light mode">☀️ Light</button>
       <button class="hdr-btn" id="lock-btn-2" onclick="togglePrivacy()" title="Lock/unlock private values">🔒 Lock</button>
+      <button class="hdr-btn" id="excel-export-btn-2" onclick="exportFundamentalsExcel()" title="Export fundamental analysis to Excel (unlock required)" style="padding:4px 8px;display:flex;align-items:center;gap:5px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;"><rect width="24" height="24" rx="3" fill="#1D6F42"/><path d="M7 7h10v2H7zM7 11h10v2H7zM7 15h10v2H7z" fill="white" opacity="0.3"/><path d="M6 6l4 6-4 6h2.5l2.5-4 2.5 4H16l-4-6 4-6h-2.5L11 12 8.5 6H6z" fill="white"/></svg><span style="font-size:0.7rem;font-weight:600;">XLS</span></button>
       </div>
     </div>
   </header>
@@ -3135,6 +3136,57 @@ function exportToExcel() {
   const date = new Date().toISOString().slice(0, 10);
   XLSX.writeFile(wb, `portfolio_${date}.xlsx`);
   showToast('✅ Exported ' + rows.length + ' stocks to Excel', 'green');
+}
+
+// ── Fundamentals Excel Export (Deep Analysis tab) ─────────────────────────
+function exportFundamentalsExcel() {
+  if (!privacyUnlocked) {
+    showToast('🔒 Unlock to export data', 'amber');
+    return;
+  }
+  const rows = allStocks.map((s, i) => ({
+    '#':               i + 1,
+    'Symbol':          s.ticker || '',
+    'Company':         s.name || '',
+    'Conviction':      s.conviction || '',
+    'Moat Class':      s.moat_class || '',
+    'Moat':            s.moat || '',
+    'Must Buy':        s.must_buy ? 'Yes' : 'No',
+    'Leadership':      s.leadership || '',
+    'Non-Replicable':  s.non_rep || '',
+    'Tailwinds':       Array.isArray(s.tailwinds) ? s.tailwinds.join(' | ') : (s.tailwinds || ''),
+    'Risks':           Array.isArray(s.risks) ? s.risks.join(' | ') : (s.risks || ''),
+    'KPIs to Track':   Array.isArray(s.track) ? s.track.join(' | ') : (s.track || ''),
+    'Remarks':         s.remarks || '',
+    'CMP':             s.ltp,
+    'Buy Avg':         s.buy_avg,
+    'Qty':             s.quantity,
+    'P&L%':            s.pnl_pct,
+    'Trend Signal':    s.trend_signal || '',
+    'Trend Score':     s.trend_score,
+    'Market Cap (Cr)': s.mcap_cr,
+    'P/E':             s.pe,
+    'P/B':             s.price_to_book,
+    'EV/EBITDA':       s.ev_ebitda,
+    'ROE%':            s.roe,
+    'Gross Margin%':   s.gross_margin,
+    'Op Margin%':      s.operating_margin,
+    'EBITDA Margin%':  s.ebitda_margin,
+    'Profit Margin%':  s.profit_margin,
+    'PAT Growth%':     s.pat_cagr,
+    'Rev Growth%':     s.rev_cagr,
+    'Debt/Equity':     s.debt_to_equity,
+    'Insider%':        s.insider_pct,
+  }));
+
+  const ws = XLSX.utils.json_to_sheet(rows);
+  const colWidths = Object.keys(rows[0] || {}).map(k => ({ wch: Math.max(k.length, 12) }));
+  ws['!cols'] = colWidths;
+  const wb = XLSX.utils.book_new();
+  XLSX.utils.book_append_sheet(wb, ws, 'Fundamentals');
+  const date = new Date().toISOString().slice(0, 10);
+  XLSX.writeFile(wb, `fundamentals_${date}.xlsx`);
+  showToast('✅ Exported ' + rows.length + ' stocks fundamentals to Excel', 'green');
 }
 
 function applyPrivacyState() {
