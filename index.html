@@ -1217,6 +1217,10 @@ Example:
         onkeydown="if(event.key==='Enter')submitPin()" oninput="this.value=this.value.replace(/[^0-9]/g,'')">
     </div>
     <div class="modal-error" id="pin-error"></div>
+    <label style="display:flex;align-items:center;justify-content:center;gap:8px;font-size:0.8rem;color:var(--text2);margin:0.5rem 0 0.25rem;cursor:pointer;">
+      <input type="checkbox" id="pin-remember" style="width:16px;height:16px;cursor:pointer;accent-color:var(--purple,#7c3aed);">
+      Remember this device (stay unlocked)
+    </label>
     <div class="modal-actions" style="justify-content:center;">
       <button class="modal-btn" onclick="closePinModal()">Cancel</button>
       <button class="modal-btn primary" onclick="submitPin()">Unlock</button>
@@ -3213,13 +3217,16 @@ function togglePrivacy() {
     // Need to unlock — show PIN modal
     document.getElementById('pin-modal-title').textContent = '🔓 Enter PIN to Unlock';
     document.getElementById('pin-input').value = '';
+    const rememberBox = document.getElementById('pin-remember');
+    if (rememberBox) rememberBox.checked = false;
     document.getElementById('pin-error').classList.remove('show');
     document.getElementById('pin-modal').classList.add('open');
     setTimeout(() => document.getElementById('pin-input').focus(), 100);
   } else {
-    // Lock it back
+    // Lock it back — also forget this device
     privacyUnlocked = false;
     sessionStorage.removeItem('privacy_unlocked');
+    localStorage.removeItem('privacy_device_trusted');
     applyPrivacyState();
   }
 }
@@ -3229,9 +3236,14 @@ function submitPin() {
   if (entered === PRIVACY_PIN) {
     privacyUnlocked = true;
     sessionStorage.setItem('privacy_unlocked', '1');
+    // If "remember this device" is checked, persist a trust token on THIS device only
+    const remember = document.getElementById('pin-remember');
+    if (remember && remember.checked) {
+      localStorage.setItem('privacy_device_trusted', TRUSTED_TOKEN);
+    }
     closePinModal();
     applyPrivacyState();
-    showToast('🔓 Values unlocked', 'green');
+    showToast(remember && remember.checked ? '🔓 Unlocked — this device remembered' : '🔓 Values unlocked', 'green');
   } else {
     const errEl = document.getElementById('pin-error');
     errEl.textContent = '❌ Incorrect PIN';
