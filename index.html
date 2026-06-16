@@ -939,7 +939,9 @@
       <button class="hdr-btn" id="lock-btn" onclick="togglePrivacy()" title="Lock/unlock private values">🔒 Lock</button>
       <button class="hdr-btn" id="excel-export-btn" onclick="exportToExcel()" title="Export table to Excel (unlock required)" style="padding:4px 8px;display:flex;align-items:center;gap:5px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;"><rect width="24" height="24" rx="3" fill="#1D6F42"/><path d="M7 7h10v2H7zM7 11h10v2H7zM7 15h10v2H7z" fill="white" opacity="0.3"/><path d="M6 6l4 6-4 6h2.5l2.5-4 2.5 4H16l-4-6 4-6h-2.5L11 12 8.5 6H6z" fill="white"/></svg><span style="font-size:0.7rem;font-weight:600;">XLS</span></button>
       <button class="hdr-btn paste" onclick="showPasteModal()">📋 Paste Claude Response</button>
-      <button class="hdr-btn export" onclick="quarterlyRefreshPrompt()" title="Copy one batch prompt to deeply re-analyze ALL stocks (quarterly)">🔬 Quarterly Refresh ALL</button>
+      <button class="hdr-btn export" onclick="quarterlyRefreshPrompt()" title="Copy batched prompt to deeply re-analyze ALL stocks (quarterly)">🔬 Refresh ALL</button>
+      <button class="hdr-btn export" onclick="pendingRefreshPrompt()" title="Copy batched prompt for ONLY stocks missing analysis/new fields">🟡 Refresh Pending</button>
+      <button class="hdr-btn export" onclick="nextBatchPrompt()" title="Copy the NEXT batch prompt after pasting the previous batch's results">⏭ Next Batch</button>
       <button class="hdr-btn export" onclick="exportPendingJSON()">⬇ Export Pending for Claude</button>
       <button class="hdr-btn export" style="opacity:0.6;" onclick="exportStocksJSON()">⬇ Export ALL</button>
       <button class="hdr-btn export" onclick="refreshDataBtn()" id="refresh-btn">🔄 Refresh Data</button>
@@ -1987,27 +1989,46 @@ function exportStocksJSON() {
 }
 
 // ── Quarterly Refresh: generate ONE batch prompt for ALL stocks ───────────
-function quarterlyRefreshPrompt() {
-  const list = allStocks.map(s => `- ${s.ticker} | ${s.name || ''} | ${s.sector || ''}`).join('\n');
-  const tickers = allStocks.map(s => s.ticker);
+// ── Batched qualitative analysis prompt generator ─────────────────────────
+const ANALYSIS_BATCH_SIZE = 12;   // stocks per Claude prompt (keeps responses complete)
+let analysisBatchMode = 'all';    // 'all' or 'pending'
+let analysisBatchIndex = 0;       // current batch number (0-based)
 
-  const prompt = `You are a senior Indian equity research analyst. Use WEB SEARCH to verify CURRENT data (promoter pledging, SEBI/regulatory actions, latest quarterly results, patent timelines, news from the last 6-12 months). Today's date: ${new Date().toISOString().slice(0,10)}.
+function isPendingStock(s) {
+  return s.moat_class === 'pending' || s.moat_type === 'Pending';
+}
 
-I need a QUARTERLY qualitative refresh for the ${tickers.length} portfolio stocks listed below. For EACH stock, research and return an updated analysis.
+// Stocks missing the NEW qualitative fields (mgmt_trust etc.) OR pending
+function isMissingNewFields(s) {
+  return isPendingStock(s) || s.mgmt_trust == null || s.moat_trend == null || s.bull_case == null;
+}
+
+function getAnalysisTargetList() {
+  if (analysisBatchMode === 'pending') {
+    return allStocks.filter(isMissingNewFields);
+  }
+  return allStocks.slice();
+}
+
+function buildAnalysisPrompt(batch, batchNum, totalBatches, totalCount) {
+  const list = batch.map(s => `- ${s.ticker} | ${s.name || ''} | ${s.sector || ''}`).join('\n');
+  return `You are a senior Indian equity research analyst. Use WEB SEARCH to verify CURRENT data (promoter pledging %, SEBI/regulatory actions, latest quarterly results, patent/DMF timelines, management track record, news from the last 6-12 months). Today's date: ${new Date().toISOString().slice(0,10)}.
+
+This is BATCH ${batchNum} of ${totalBatches} (covering ${batch.length} of ${totalCount} total portfolio stocks). Research and return an updated qualitative analysis for ONLY the ${batch.length} stocks listed in this batch.
 
 IMPORTANT OUTPUT RULES:
-- Return ONE JSON ARRAY containing one object per stock — nothing else, no prose.
+- Return ONE JSON ARRAY containing exactly one object per stock in THIS batch — nothing else, no prose before or after.
 - Use the EXACT ticker strings I provide as the "ticker" value.
 - Be specific and data-backed. Use null for genuinely-not-applicable IP fields.
-- If you cannot verify something, say so briefly in the relevant field rather than inventing data.
+- If you cannot verify something, say so briefly in the field rather than inventing data.
 
 For EACH stock assess: economic moat + the specific moat sources, moat trend (widening/stable/eroding), market leadership, non-replicable edge, pricing power (1-10), capital allocation (1-10), reinvestment runway, revenue concentration, IP/patent depth (if relevant), structural tailwinds, risks, 2-3 KPIs to track, MANAGEMENT TRUST (1-10: promoter integrity, SEBI actions, pledging %, skin-in-game, guidance track record, auditor quality, past ventures), accounting/governance red flags, recent developments (last 6-12 months), and a one-line bull case + bear case.
 
-===== STOCKS (${tickers.length}) =====
+===== STOCKS IN THIS BATCH (${batch.length}) =====
 ${list}
 ==============================
 
-Return ONLY a JSON array like this (one object per stock, same field schema for every stock):
+Return ONLY a JSON array like this (one object per stock, same schema for every stock):
 [
   {
     "ticker": "EXACTTICKER",
@@ -2038,16 +2059,51 @@ Return ONLY a JSON array like this (one object per stock, same field schema for 
   }
 ]
 
-NOTE: ${tickers.length} stocks is large. If you cannot complete all in one response, do them in batches and tell me to say "continue" — but ALWAYS return valid JSON array fragments I can paste. Start now.`;
+Return the JSON array for all ${batch.length} stocks in this batch now.`;
+}
+
+// mode: 'all' | 'pending' ; resets to batch 1
+function startBatchAnalysis(mode) {
+  analysisBatchMode = mode;
+  analysisBatchIndex = 0;
+  copyCurrentBatch();
+}
+
+function copyCurrentBatch() {
+  const targets = getAnalysisTargetList();
+  if (targets.length === 0) {
+    showToast(analysisBatchMode === 'pending' ? '✨ No pending stocks — all have full analysis!' : 'No stocks found', 'green');
+    return;
+  }
+  const totalBatches = Math.ceil(targets.length / ANALYSIS_BATCH_SIZE);
+  if (analysisBatchIndex >= totalBatches) {
+    showToast(`✅ All ${totalBatches} batches done! Re-click to restart.`, 'green');
+    analysisBatchIndex = 0;
+    return;
+  }
+  const start = analysisBatchIndex * ANALYSIS_BATCH_SIZE;
+  const batch = targets.slice(start, start + ANALYSIS_BATCH_SIZE);
+  const batchNum = analysisBatchIndex + 1;
+  const prompt = buildAnalysisPrompt(batch, batchNum, totalBatches, targets.length);
+
+  const label = analysisBatchMode === 'pending' ? 'Pending' : 'All';
+  const doneMsg = `✅ ${label} — Batch ${batchNum}/${totalBatches} (${batch.length} stocks) copied. Paste in Claude (web search ON) → paste JSON back → click "Next Batch".`;
 
   navigator.clipboard.writeText(prompt).then(() => {
-    showToast(`✅ Quarterly prompt for ${tickers.length} stocks copied — paste in Claude (web search ON), then paste the JSON array back via 📋 Paste`, 'green');
+    showToast(doneMsg, 'green');
   }).catch(() => {
     showPasteModal();
     document.getElementById('paste-textarea').value = prompt;
     showToast('Clipboard blocked — copy the prompt from the box', '');
   });
+
+  analysisBatchIndex++;   // advance for next click
 }
+
+// Convenience wrappers for buttons
+function quarterlyRefreshPrompt() { startBatchAnalysis('all'); }
+function pendingRefreshPrompt()   { startBatchAnalysis('pending'); }
+function nextBatchPrompt()        { copyCurrentBatch(); }
 
 // ── copyPrompt: used by (1) Claude and (2) ChatGPT links ──────────────────
 function copyPrompt(type, ticker, companyName) {
