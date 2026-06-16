@@ -2,7 +2,7 @@ name: Keepalive
 
 on:
   schedule:
-    - cron: '40 3 * * 1-5'   # 9:10 AM IST Mon–Fri, 5 mins before market open
+    - cron: '33 3 * * 1-5'   # 9:03 AM IST Mon–Fri — odd minute to avoid GitHub peak-load drops
 
 jobs:
   keepalive:

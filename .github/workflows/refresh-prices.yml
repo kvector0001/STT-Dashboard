@@ -2,9 +2,9 @@ name: Refresh Stock Prices
 
 on:
   schedule:
-    - cron: '40 3 * * 1-5'      # 9:10 AM IST — empty commit to wake scheduler
-    - cron: '45 3 * * 1-5'      # 9:15 AM IST, Mon–Fri
-    - cron: '*/15 4-10 * * 1-5'  # Every 15 mins till 4:15 PM IST
+    - cron: '38 3 * * 1-5'             # 9:08 AM IST — wake scheduler / keepalive
+    - cron: '47 3 * * 1-5'             # 9:17 AM IST — daily extended data
+    - cron: '7,22,37,52 4-10 * * 1-5'  # market hours — odd minutes to avoid GitHub peak-load drops
   workflow_dispatch:            # Manual trigger from GitHub Actions tab
   repository_dispatch:          # Trigger from browser Refresh button
     types: [refresh-prices]
@@ -33,8 +33,8 @@ jobs:
           pip install yfinance pandas openpyxl requests
           python scripts/fetch_prices.py
 
-      - name: Fetch extended data (Daily at 3:45 UTC / 9:15 AM IST)
-        if: github.event.schedule == '45 3 * * 1-5' || github.event_name == 'workflow_dispatch' || github.event_name == 'repository_dispatch'
+      - name: Fetch extended data (Daily at 3:47 UTC / 9:17 AM IST)
+        if: github.event.schedule == '47 3 * * 1-5' || github.event_name == 'workflow_dispatch' || github.event_name == 'repository_dispatch'
         run: python scripts/fetch_extended_data.py
 
       - name: Commit and push changes
