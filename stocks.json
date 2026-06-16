@@ -509,45 +509,6 @@
     "mcap_3y": 90.41
   },
   {
-    "ticker": "NESCO",
-    "name": "NESCO Mumbai",
-    "sector": "Real Estate",
-    "nse_symbol": "NESCO",
-    "buy_avg": 1213.45,
-    "moat_type": "Wide",
-    "moat_class": "wide",
-    "conviction": 7,
-    "moat": "Owns Bombay Exhibition Centre (BEC) â€” India's premium exhibition/convention venue. Irreplaceable 25-acre land bank in Goregaon, Mumbai. Exhibition + IT park + hospitality.",
-    "leadership": "Dominant Mumbai convention/exhibition venue. IT Park occupancy consistently >90%. Recurring annuity-like income from long-term leases.",
-    "non_rep": "25-acre Mumbai land cannot be replicated at any price. BEC hosts India's largest trade fairs. Asset-light model post-construction.",
-    "tailwinds": [
-      "India MICE industry growth",
-      "Mumbai commercial real estate premiums",
-      "IT/ITES leasing demand"
-    ],
-    "risks": [
-      "Revenue concentration â€” Mumbai only",
-      "YASHOBHOOMI Delhi competing for national events",
-      "Cyclical nature of exhibitions in recessions"
-    ],
-    "track": [
-      "Exhibition days per year",
-      "IT park occupancy and lease renewal",
-      "New IT park phase development"
-    ],
-    "mcap_cr": 7861.92,
-    "pe": 19.031214,
-    "roe": 14.67,
-    "ocf_cr": 387.79,
-    "debt_to_equity": 9.068,
-    "eps": 58.63,
-    "book_value": 425.392,
-    "div_yield": 64.0,
-    "pat_cagr": 5.0,
-    "rev_cagr": 30.8,
-    "mcap_3y": 82.42
-  },
-  {
     "ticker": "HEG",
     "name": "HEG",
     "sector": "Materials",
@@ -4894,6 +4855,204 @@
     "sector": "Industrials",
     "nse_symbol": "3MINDIA",
     "buy_avg": 33302.06,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "SUZLON",
+    "name": "Suzlon Energy Limited",
+    "sector": "Industrials",
+    "nse_symbol": "SUZLON",
+    "buy_avg": 56.0,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "HLEGLAS",
+    "name": "HLE Glascoat Limited",
+    "sector": "Industrials",
+    "nse_symbol": "HLEGLAS",
+    "buy_avg": 353.03,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "WENDT",
+    "name": "Wendt (India) Limited",
+    "sector": "Industrials",
+    "nse_symbol": "WENDT",
+    "buy_avg": 7710.0,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "KPIGREEN",
+    "name": "KPI Green Energy Limited",
+    "sector": "Utilities",
+    "nse_symbol": "KPIGREEN",
+    "buy_avg": 409.24,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "SGIL",
+    "name": "Synergy Green Industries Limited",
+    "sector": "Industrials",
+    "nse_symbol": "SGIL",
+    "buy_avg": 549.37,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "KSB",
+    "name": "KSB Limited",
+    "sector": "Industrials",
+    "nse_symbol": "KSB",
+    "buy_avg": 829.45,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "CLEANMAX",
+    "name": "CLEAN MAX ENVIRO EN SOL L",
+    "sector": "Utilities",
+    "nse_symbol": "CLEANMAX",
+    "buy_avg": 1320.0,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "JYOTICNC",
+    "name": "Jyoti CNC Automation Limited",
+    "sector": "Industrials",
+    "nse_symbol": "JYOTICNC",
+    "buy_avg": 713.6,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "IFGLEXPOR",
+    "name": "IFGL Refractories Limited",
+    "sector": "Basic Materials",
+    "nse_symbol": "IFGLEXPOR",
+    "buy_avg": 198.2,
     "moat_type": "Pending",
     "moat_class": "pending",
     "conviction": 0,
