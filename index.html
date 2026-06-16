@@ -456,6 +456,7 @@
     .pill-red    { background: var(--red-bg);   color: var(--red-text);   border: 1px solid #ef444422; }
     .pill-blue   { background: var(--blue-bg);  color: var(--blue-text);  border: 1px solid #3b82f622; }
     .pill-amber  { background: var(--amber-bg); color: var(--amber-text); border: 1px solid #f59e0b22; }
+    .pill-purple { background: rgba(124,58,237,0.15); color: #a78bfa; border: 1px solid rgba(124,58,237,0.3); }
 
     /* No results */
     #no-results {
@@ -938,6 +939,7 @@
       <button class="hdr-btn" id="lock-btn" onclick="togglePrivacy()" title="Lock/unlock private values">🔒 Lock</button>
       <button class="hdr-btn" id="excel-export-btn" onclick="exportToExcel()" title="Export table to Excel (unlock required)" style="padding:4px 8px;display:flex;align-items:center;gap:5px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;"><rect width="24" height="24" rx="3" fill="#1D6F42"/><path d="M7 7h10v2H7zM7 11h10v2H7zM7 15h10v2H7z" fill="white" opacity="0.3"/><path d="M6 6l4 6-4 6h2.5l2.5-4 2.5 4H16l-4-6 4-6h-2.5L11 12 8.5 6H6z" fill="white"/></svg><span style="font-size:0.7rem;font-weight:600;">XLS</span></button>
       <button class="hdr-btn paste" onclick="showPasteModal()">📋 Paste Claude Response</button>
+      <button class="hdr-btn export" onclick="quarterlyRefreshPrompt()" title="Copy one batch prompt to deeply re-analyze ALL stocks (quarterly)">🔬 Quarterly Refresh ALL</button>
       <button class="hdr-btn export" onclick="exportPendingJSON()">⬇ Export Pending for Claude</button>
       <button class="hdr-btn export" style="opacity:0.6;" onclick="exportStocksJSON()">⬇ Export ALL</button>
       <button class="hdr-btn export" onclick="refreshDataBtn()" id="refresh-btn">🔄 Refresh Data</button>
@@ -1264,6 +1266,24 @@ function pills(arr, cls) {
   return arr.map(t => `<span class="pill pill-${cls}">${esc(t)}</span>`).join('');
 }
 
+// Score badge (1-10) with color tiers — dark readable text
+function scoreBadge(label, val) {
+  if (val == null || val === '') return '';
+  const v = Number(val);
+  const bg = v >= 8 ? 'var(--green)' : v >= 6 ? 'var(--amber)' : v >= 4 ? '#f97316' : 'var(--red)';
+  const fg = v >= 8 ? '#0a2e1a' : v >= 6 ? '#1a1000' : v >= 4 ? '#2e1400' : '#2e0a0a';
+  return `<span style="display:inline-flex;align-items:center;gap:4px;background:${bg};color:${fg};font-size:0.68rem;font-weight:700;padding:2px 8px;border-radius:10px;">${label} ${v}/10</span>`;
+}
+
+// Moat trend badge — text only, color by direction keyword
+function moatTrendBadge(trend) {
+  if (!trend) return '';
+  const t = String(trend).toLowerCase();
+  const arrow = t.startsWith('widen') ? '↗' : t.startsWith('erod') || t.startsWith('narrow') ? '↘' : '→';
+  const color = t.startsWith('widen') ? 'var(--green-text)' : t.startsWith('erod') || t.startsWith('narrow') ? 'var(--red-text)' : 'var(--amber-text)';
+  return `<span style="color:${color};font-size:0.7rem;font-weight:700;">${arrow} ${esc(trend)}</span>`;
+}
+
 function esc(s) {
   if (!s) return '';
   return String(s)
@@ -1473,6 +1493,24 @@ function renderCard(s) {
       <div class="moat-text">${esc(s.moat)}</div>
     </div>` : ''}
 
+    ${(s.moat_sources && s.moat_sources.length) || s.moat_trend ? `<div>
+      <div class="section-label">Moat Type & Trend</div>
+      <div class="pill-row" style="align-items:center;gap:6px;">
+        ${(s.moat_sources || []).map(m => `<span class="pill pill-purple">🛡️ ${esc(m)}</span>`).join('')}
+        ${moatTrendBadge(s.moat_trend)}
+      </div>
+    </div>` : ''}
+
+    ${(s.mgmt_trust != null || s.pricing_power != null || s.capital_allocation != null) ? `<div>
+      <div class="section-label">Quality Scores</div>
+      <div class="pill-row" style="gap:6px;">
+        ${scoreBadge('🤝 Mgmt Trust', s.mgmt_trust)}
+        ${scoreBadge('💰 Pricing Power', s.pricing_power)}
+        ${scoreBadge('🏦 Capital Alloc', s.capital_allocation)}
+      </div>
+      ${s.mgmt_trust_note ? `<div class="moat-text" style="margin-top:4px;font-size:0.72rem;color:var(--text2);">${esc(s.mgmt_trust_note)}</div>` : ''}
+    </div>` : ''}
+
     <div class="two-col">
       ${s.leadership ? `<div>
         <div class="section-label">Market Leadership</div>
@@ -1500,6 +1538,44 @@ function renderCard(s) {
         <a href="https://chatgpt.com" target="_blank" rel="noopener" onclick="copyPrompt('kpi','${esc(s.ticker)}','${esc(s.name || s.ticker)}')" style="color:var(--green-text);text-decoration:none;font-weight:700;">(2)</a>
       </div>
       <div class="pill-row">${pills(s.track, 'blue')}</div>
+    </div>` : ''}
+
+    ${s.ip_moat && (s.ip_moat.patents || s.ip_moat.cliff || s.ip_moat.rnd_pct != null) ? `<div>
+      <div class="section-label">🔬 IP / Patent Depth</div>
+      <div class="moat-text" style="font-size:0.74rem;">
+        ${s.ip_moat.patents ? `<div><b>Patents/IP:</b> ${esc(s.ip_moat.patents)}</div>` : ''}
+        ${s.ip_moat.cliff ? `<div><b>Cliff/Exclusivity:</b> ${esc(s.ip_moat.cliff)}</div>` : ''}
+        ${s.ip_moat.rnd_pct != null ? `<div><b>R&D % of revenue:</b> ${esc(s.ip_moat.rnd_pct)}%</div>` : ''}
+      </div>
+    </div>` : ''}
+
+    ${s.reinvestment_runway || s.concentration ? `<div>
+      <div class="section-label">Capital & Concentration</div>
+      <div class="moat-text" style="font-size:0.74rem;">
+        ${s.reinvestment_runway ? `<div><b>Reinvestment runway:</b> ${esc(s.reinvestment_runway)}</div>` : ''}
+        ${s.concentration ? `<div><b>Concentration:</b> ${esc(s.concentration)}</div>` : ''}
+      </div>
+    </div>` : ''}
+
+    ${s.red_flags && s.red_flags.length ? `<div>
+      <div class="section-label" style="color:var(--red-text);">🚩 Red Flags</div>
+      <div class="pill-row">${pills(s.red_flags, 'red')}</div>
+    </div>` : ''}
+
+    ${s.recent_news && s.recent_news.length ? `<div>
+      <div class="section-label">📰 Recent Developments</div>
+      <div class="pill-row">${pills(s.recent_news, 'blue')}</div>
+    </div>` : ''}
+
+    ${s.bull_case || s.bear_case ? `<div class="two-col">
+      ${s.bull_case ? `<div>
+        <div class="section-label" style="color:var(--green-text);">🐂 Bull Case</div>
+        <div class="moat-text" style="font-size:0.74rem;">${esc(s.bull_case)}</div>
+      </div>` : ''}
+      ${s.bear_case ? `<div>
+        <div class="section-label" style="color:var(--red-text);">🐻 Bear Case</div>
+        <div class="moat-text" style="font-size:0.74rem;">${esc(s.bear_case)}</div>
+      </div>` : ''}
     </div>` : ''}
   </div>`}
 </div>`.trim();
@@ -1623,19 +1699,81 @@ For the JSON "track" field, choose the 2–3 metrics most critical for this spec
 ## 7. RISKS
 List the top 3 genuine risks — not generic boilerplate. Be specific to this company.
 
+## 8. MOAT TYPE CLASSIFICATION (call out the SPECIFIC source/s)
+Identify which of these 7 economic moat sources apply (can be more than one). Name them explicitly:
+- "IP/Patents" — patents, proprietary molecules, DMFs, process know-how
+- "Brand" — pricing power from brand trust/recognition
+- "Regulatory/Licences" — govt licences, BIS/QCO barriers, approvals, indigenisation mandates
+- "Switching Costs" — painful/expensive for customers to leave (long contracts, integration)
+- "Network Effects" — value grows as more users/participants join
+- "Cost Advantage" — structural low-cost edge (scale, process, location, captive resource)
+- "Efficient Scale" — niche market that profitably supports only 1–2 players
+List the 1–3 that genuinely apply in "moat_sources".
+
+## 9. MOAT TREND (direction over next 3–5 years)
+Is the moat Widening, Stable, or Eroding? Justify in one line (e.g. "Widening — BIS QCO keeps adding to regulatory barrier", "Eroding — patent cliff 2027 + generic entry"). Put a short sentence in "moat_trend".
+
+## 10. IP / PATENT DEPTH (only if IP/R&D matters for this business; else use nulls)
+- Patent/DMF/ANDA count or key proprietary assets
+- Patent cliff / exclusivity expiry timeline
+- R&D as % of revenue and whether it converts to commercialised products
+
+## 11. PRICING POWER & CAPITAL QUALITY
+- Pricing power (1–10): can they raise prices above inflation without losing volume?
+- Capital allocation (1–10): ROCE on reinvestment, M&A discipline, buybacks vs value-destruction, debt usage
+- Reinvestment runway: can they redeploy capital at high ROCE for 5–10 yrs, or is the market saturated?
+- Customer/product/geography concentration: flag if any single one is >50–70% of revenue
+
+## 12. MANAGEMENT TRUST (1–10) — score the people running the business
+Assess and justify:
+- Promoter integrity — any SEBI actions, fraud, accounting restatements, governance scandals
+- Promoter pledging % — high pledge is a red flag
+- Skin in the game — promoter holding %, recent insider buying vs selling
+- Promised-vs-delivered — do they consistently hit their own stated guidance?
+- Auditor quality + any auditor resignations / qualified opinions
+- Past ventures — track record of prior companies/divisions they built or ran
+Give an integer "mgmt_trust" (1–10) and a one-line "mgmt_trust_note" justification.
+
+## 13. ACCOUNTING / GOVERNANCE RED FLAGS
+List genuine red flags (empty list if clean):
+- Weak cash conversion (CFO/EBITDA persistently <70%)
+- Heavy related-party transactions
+- Large/growing contingent liabilities
+- Aggressive revenue recognition
+- Frequent equity dilution / promoter pledge increases
+Put 0–4 specific items in "red_flags" (use [] if genuinely clean).
+
+## 14. RECENT DEVELOPMENTS (last 6–12 months)
+List 2–4 concrete recent events: order wins, capex announcements, management changes, regulatory actions, fundraises, M&A. Put in "recent_news".
+
+## 15. BULL / BEAR CASE
+- "bull_case": the single strongest reason to own this stock (one line)
+- "bear_case": the single biggest reason it could go wrong (one line)
+
 ---
 
-Now return ONLY this JSON (fill every field; be specific, not generic):
+Now return ONLY this JSON (fill every field; be specific, not generic; use null for genuinely-not-applicable IP fields):
 {
   "ticker": "${s.ticker}",
   "name": "Full legal company name",
   "sector": "Sector | Sub-sector",
   "moat_type": "Wide | Narrow | None",
   "moat_class": "wide | narrow | none",
+  "moat_sources": ["IP/Patents", "Switching Costs"],
+  "moat_trend": "Widening | Stable | Eroding — one-line justification",
   "conviction": <integer 1-10>,
   "moat": "Primary moat type — one concrete justification with a data point",
   "leadership": "Market share %, #1/#2 position, defensibility vs. nearest rival",
   "non_rep": "The single most non-replicable asset and the specific reason it cannot be copied",
+  "pricing_power": <integer 1-10>,
+  "capital_allocation": <integer 1-10>,
+  "reinvestment_runway": "Can capital be redeployed at high ROCE for 5-10 yrs? One line.",
+  "concentration": "Customer/product/geography concentration flag, or 'Well diversified'",
+  "ip_moat": {
+    "patents": "Patent/DMF/ANDA count or key proprietary assets, or null",
+    "cliff": "Patent cliff / exclusivity expiry timeline, or null",
+    "rnd_pct": <number or null>
+  },
   "tailwinds": [
     "Tailwind 1: name, TAM/growth, direct vs indirect, duration",
     "Tailwind 2: name, TAM/growth, direct vs indirect, duration",
@@ -1649,7 +1787,18 @@ Now return ONLY this JSON (fill every field; be specific, not generic):
   "track": [
     "KPI 1 to monitor and why",
     "KPI 2 to monitor and why"
-  ]
+  ],
+  "mgmt_trust": <integer 1-10>,
+  "mgmt_trust_note": "One-line justification: integrity, pledging, skin-in-game, guidance track record, auditor, past ventures",
+  "red_flags": [
+    "Specific governance/accounting red flag, or leave array empty [] if clean"
+  ],
+  "recent_news": [
+    "Recent development 1 (last 6-12 months)",
+    "Recent development 2 (last 6-12 months)"
+  ],
+  "bull_case": "Single strongest reason to own — one line",
+  "bear_case": "Single biggest reason it could go wrong — one line"
 }`;
 
   navigator.clipboard.writeText(prompt).then(() => {
@@ -1689,15 +1838,51 @@ function applyPastedAnalysis(andPush = false) {
   let jsonStr = raw;
   const fenceMatch = raw.match(/```(?:json)?\s*([\s\S]*?)```/);
   if (fenceMatch) jsonStr = fenceMatch[1].trim();
-  const braceMatch = jsonStr.match(/\{[\s\S]*\}/);
-  if (braceMatch) jsonStr = braceMatch[0];
+  // Match an array first (batch), else a single object
+  const arrMatch = jsonStr.match(/\[[\s\S]*\]/);
+  const objMatch = jsonStr.match(/\{[\s\S]*\}/);
+  if (arrMatch) jsonStr = arrMatch[0];
+  else if (objMatch) jsonStr = objMatch[0];
 
   let data;
   try { data = JSON.parse(jsonStr); }
   catch(e) { errEl.textContent = '❌ Could not parse JSON: ' + e.message; errEl.classList.add('show'); return; }
 
+  const priceFields = new Set(['ltp','buy_avg','quantity','pnl_pct','pnl_abs','updated']);
+
+  // ── Batch mode: array of analyses ──────────────────────────────────────
+  if (Array.isArray(data)) {
+    let applied = 0;
+    const notFound = [];
+    data.forEach(item => {
+      if (!item || !item.ticker) return;
+      const tk = item.ticker.toUpperCase();
+      if (item.moat_type && !item.moat_class) {
+        item.moat_class = item.moat_type.toLowerCase().split(' ')[0];
+      }
+      const i = allStocks.findIndex(s =>
+        s.ticker === tk || s.ticker === tk + '-T' || s.ticker === tk + '-X' || s.ticker === tk + '-E'
+      );
+      if (i === -1) { notFound.push(tk); return; }
+      const upd = {};
+      Object.entries(item).forEach(([k, v]) => { if (!priceFields.has(k)) upd[k] = v; });
+      Object.assign(allStocks[i], upd);
+      const key = allStocks[i].ticker;
+      userEdits[key] = Object.assign(userEdits[key] || {}, upd);
+      applied++;
+    });
+    saveUserEdits();
+    closePasteModal();
+    renderAll();
+    const msg = `✅ Applied analysis to ${applied} stocks` + (notFound.length ? ` (${notFound.length} not matched)` : '');
+    showToast(msg, 'green');
+    if (andPush) pushAnalysisToGitHub();
+    return;
+  }
+
+  // ── Single mode ────────────────────────────────────────────────────────
   if (!data.ticker) {
-    errEl.textContent = '❌ JSON must contain a "ticker" field.';
+    errEl.textContent = '❌ JSON must contain a "ticker" field (or be an array of analyses).';
     errEl.classList.add('show');
     return;
   }
@@ -1720,7 +1905,6 @@ function applyPastedAnalysis(andPush = false) {
     return;
   }
 
-  const priceFields = new Set(['ltp','buy_avg','quantity','pnl_pct','pnl_abs','updated']);
   const update = {};
   Object.entries(data).forEach(([k, v]) => { if (!priceFields.has(k)) update[k] = v; });
 
@@ -1800,6 +1984,69 @@ function exportStocksJSON() {
   a.href = url; a.download = 'stocks.json'; a.click();
   URL.revokeObjectURL(url);
   showToast('⬇ stocks.json downloaded — replace file in Dashboard folder', 'green');
+}
+
+// ── Quarterly Refresh: generate ONE batch prompt for ALL stocks ───────────
+function quarterlyRefreshPrompt() {
+  const list = allStocks.map(s => `- ${s.ticker} | ${s.name || ''} | ${s.sector || ''}`).join('\n');
+  const tickers = allStocks.map(s => s.ticker);
+
+  const prompt = `You are a senior Indian equity research analyst. Use WEB SEARCH to verify CURRENT data (promoter pledging, SEBI/regulatory actions, latest quarterly results, patent timelines, news from the last 6-12 months). Today's date: ${new Date().toISOString().slice(0,10)}.
+
+I need a QUARTERLY qualitative refresh for the ${tickers.length} portfolio stocks listed below. For EACH stock, research and return an updated analysis.
+
+IMPORTANT OUTPUT RULES:
+- Return ONE JSON ARRAY containing one object per stock — nothing else, no prose.
+- Use the EXACT ticker strings I provide as the "ticker" value.
+- Be specific and data-backed. Use null for genuinely-not-applicable IP fields.
+- If you cannot verify something, say so briefly in the relevant field rather than inventing data.
+
+For EACH stock assess: economic moat + the specific moat sources, moat trend (widening/stable/eroding), market leadership, non-replicable edge, pricing power (1-10), capital allocation (1-10), reinvestment runway, revenue concentration, IP/patent depth (if relevant), structural tailwinds, risks, 2-3 KPIs to track, MANAGEMENT TRUST (1-10: promoter integrity, SEBI actions, pledging %, skin-in-game, guidance track record, auditor quality, past ventures), accounting/governance red flags, recent developments (last 6-12 months), and a one-line bull case + bear case.
+
+===== STOCKS (${tickers.length}) =====
+${list}
+==============================
+
+Return ONLY a JSON array like this (one object per stock, same field schema for every stock):
+[
+  {
+    "ticker": "EXACTTICKER",
+    "name": "Full legal name",
+    "sector": "Sector | Sub-sector",
+    "moat_type": "Wide | Narrow | None",
+    "moat_class": "wide | narrow | none",
+    "moat_sources": ["IP/Patents | Brand | Regulatory/Licences | Switching Costs | Network Effects | Cost Advantage | Efficient Scale"],
+    "moat_trend": "Widening | Stable | Eroding — one-line justification",
+    "conviction": 7,
+    "moat": "Primary moat with one concrete data point",
+    "leadership": "Market share %, #1/#2 position, defensibility",
+    "non_rep": "Single most non-replicable asset and why",
+    "pricing_power": 7,
+    "capital_allocation": 7,
+    "reinvestment_runway": "High-ROCE redeployment for 5-10 yrs? One line",
+    "concentration": "Customer/product/geo concentration flag or 'Well diversified'",
+    "ip_moat": { "patents": "DMF/patent count or null", "cliff": "expiry timeline or null", "rnd_pct": null },
+    "tailwinds": ["Tailwind 1", "Tailwind 2", "Tailwind 3"],
+    "risks": ["Risk 1", "Risk 2", "Risk 3"],
+    "track": ["KPI 1 and why", "KPI 2 and why"],
+    "mgmt_trust": 8,
+    "mgmt_trust_note": "Integrity, pledging, skin-in-game, guidance, auditor, past ventures",
+    "red_flags": ["Specific red flag, or empty array [] if clean"],
+    "recent_news": ["Development 1 (last 6-12 mo)", "Development 2"],
+    "bull_case": "Strongest reason to own — one line",
+    "bear_case": "Biggest reason it could go wrong — one line"
+  }
+]
+
+NOTE: ${tickers.length} stocks is large. If you cannot complete all in one response, do them in batches and tell me to say "continue" — but ALWAYS return valid JSON array fragments I can paste. Start now.`;
+
+  navigator.clipboard.writeText(prompt).then(() => {
+    showToast(`✅ Quarterly prompt for ${tickers.length} stocks copied — paste in Claude (web search ON), then paste the JSON array back via 📋 Paste`, 'green');
+  }).catch(() => {
+    showPasteModal();
+    document.getElementById('paste-textarea').value = prompt;
+    showToast('Clipboard blocked — copy the prompt from the box', '');
+  });
 }
 
 // ── copyPrompt: used by (1) Claude and (2) ChatGPT links ──────────────────
@@ -3162,6 +3409,21 @@ function exportFundamentalsExcel() {
     'Conviction':      s.conviction || '',
     'Moat Class':      s.moat_class || '',
     'Moat':            s.moat || '',
+    'Moat Sources':    Array.isArray(s.moat_sources) ? s.moat_sources.join(' | ') : (s.moat_sources || ''),
+    'Moat Trend':      s.moat_trend || '',
+    'Mgmt Trust':      s.mgmt_trust != null ? s.mgmt_trust + '/10' : '',
+    'Mgmt Trust Note': s.mgmt_trust_note || '',
+    'Pricing Power':   s.pricing_power != null ? s.pricing_power + '/10' : '',
+    'Capital Alloc':   s.capital_allocation != null ? s.capital_allocation + '/10' : '',
+    'Reinvest Runway': s.reinvestment_runway || '',
+    'Concentration':   s.concentration || '',
+    'IP Patents':      s.ip_moat && s.ip_moat.patents ? s.ip_moat.patents : '',
+    'IP Cliff':        s.ip_moat && s.ip_moat.cliff ? s.ip_moat.cliff : '',
+    'R&D %':           s.ip_moat && s.ip_moat.rnd_pct != null ? s.ip_moat.rnd_pct : '',
+    'Red Flags':       Array.isArray(s.red_flags) ? s.red_flags.join(' | ') : (s.red_flags || ''),
+    'Recent News':     Array.isArray(s.recent_news) ? s.recent_news.join(' | ') : (s.recent_news || ''),
+    'Bull Case':       s.bull_case || '',
+    'Bear Case':       s.bear_case || '',
     'Must Buy':        s.must_buy ? 'Yes' : 'No',
     'Leadership':      s.leadership || '',
     'Non-Replicable':  s.non_rep || '',
