@@ -815,7 +815,7 @@
     }
     .modal-textarea:focus { border-color: var(--blue); }
     .modal-textarea::placeholder { color: var(--text3); }
-    .modal-actions { display: flex; gap: 0.5rem; justify-content: flex-end; }
+    .modal-actions { display: flex; gap: 0.5rem; justify-content: flex-end; flex-wrap: wrap; }
     .modal-btn {
       background: var(--bg3);
       border: 1px solid var(--border);
@@ -1202,8 +1202,8 @@ Example:
     <div class="modal-error" id="paste-error"></div>
     <div class="modal-actions">
       <button class="modal-btn" onclick="closePasteModal()">Cancel</button>
-      <button class="modal-btn primary" onclick="applyPastedAnalysis()">✅ Apply Analysis</button>
-      <button class="modal-btn" style="background:var(--green);color:#fff;opacity:0.9;" onclick="applyPastedAnalysis(true)" title="Apply analysis AND push stocks.json to GitHub via local Flask server">🚀 Apply &amp; Push to GitHub</button>
+      <button class="modal-btn" onclick="applyPastedAnalysis()" title="Apply to this browser only (not saved to GitHub)">✅ Apply Only</button>
+      <button class="modal-btn" style="background:var(--green);color:#fff;font-weight:700;" onclick="applyPastedAnalysis(true)" title="Apply analysis AND push stocks.json to GitHub via local Flask server">🚀 Apply &amp; Push to GitHub</button>
     </div>
   </div>
 </div>

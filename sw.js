@@ -1,6 +1,6 @@
 // Minimal service worker for PWA installability.
 // Network-first so the dashboard always loads the latest data.
-const CACHE = 'portfolio-dashboard-v1';
+const CACHE = 'portfolio-dashboard-v2';
 
 self.addEventListener('install', (e) => {
   self.skipWaiting();
