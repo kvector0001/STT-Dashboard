@@ -286,6 +286,17 @@
       overflow: hidden;
       text-overflow: ellipsis;
     }
+    .card-name.clickable {
+      cursor: pointer;
+      border-radius: 4px;
+      padding: 2px 6px;
+      margin: -2px -6px;
+      transition: background 0.15s, color 0.15s;
+    }
+    .card-name.clickable:hover {
+      background: rgba(176, 64, 245, 0.2);
+      color: var(--purple-text);
+    }
     .card-badges {
       display: flex;
       flex-direction: column;
@@ -376,6 +387,45 @@
     }
     .metric-value.pos { color: var(--green-text); }
     .metric-value.neg { color: var(--red-text); }
+
+    /* Clickable metrics */
+    .metric-item.clickable {
+      cursor: pointer;
+      border-radius: 6px;
+      padding: 4px 6px;
+      margin: -4px -6px;
+      transition: background 0.15s;
+    }
+    .metric-item.clickable:hover {
+      background: rgba(176, 64, 245, 0.15);
+    }
+    .metric-item.clickable .metric-label::after {
+      content: ' 🔍';
+      font-size: 8px;
+      opacity: 0;
+      transition: opacity 0.15s;
+    }
+    .metric-item.clickable:hover .metric-label::after {
+      opacity: 0.7;
+    }
+    .conviction-row.clickable {
+      cursor: pointer;
+      border-radius: 6px;
+      padding: 6px 8px;
+      margin: -6px -8px;
+      transition: background 0.15s;
+    }
+    .conviction-row.clickable:hover {
+      background: rgba(176, 64, 245, 0.15);
+    }
+    .badge.clickable {
+      cursor: pointer;
+      transition: transform 0.1s, box-shadow 0.15s;
+    }
+    .badge.clickable:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 8px rgba(176, 64, 245, 0.4);
+    }
 
     /* Price row */
     .price-row {
@@ -1242,6 +1292,7 @@ Example:
 </div>
 
 <script>
+console.log('Script starting...');
 // ── Utilities ──────────────────────────────────────────────────────────────
 const fmt = (n, digits=2) =>
   n == null ? '—' : n.toLocaleString('en-IN', {minimumFractionDigits: digits, maximumFractionDigits: digits});
@@ -1329,22 +1380,22 @@ function renderCard(s) {
     <div class="card-title-group">
       <div class="card-ticker">${esc(s.ticker)}</div>
       <div style="display: flex; align-items: center; gap: 8px; flex: 1; min-width: 0;">
-        <div class="card-name research-name" title="Click for AI fundamental analysis" style="cursor:pointer;text-decoration:underline dotted;color:var(--blue-text);" data-ticker="${esc(s.ticker)}" data-name="${esc(s.name || s.ticker)}" onclick="openFundamentalAnalysisFromEl(event,this)">${esc(s.name || '—')}</div>
+        <div class="card-name clickable metric-click" data-metric="conviction" data-ticker="${s.ticker}" data-name="${s.name}" title="${esc(s.name)} — Click for Analysis" style="cursor:pointer">${esc(s.name || '—')}</div>
         <span style="color:var(--text3);font-size:11px;white-space:nowrap;flex-shrink:0;">
           🔗 Catalysts
-          <a href="https://claude.ai" target="_blank" rel="noopener" onclick="copyPrompt('catalyst','${esc(s.ticker)}','${esc(s.name)}')" style="color:var(--purple-text);text-decoration:none;font-weight:700;">(1)</a>
-          <a href="https://chatgpt.com" target="_blank" rel="noopener" onclick="copyPrompt('catalyst','${esc(s.ticker)}','${esc(s.name)}')" style="color:var(--green-text);text-decoration:none;font-weight:700;">(2)</a>
+          <a href="https://claude.ai" target="_blank" rel="noopener" class="catalyst-link" data-ticker="${s.ticker}" data-name="${s.name}" style="color:var(--purple-text);text-decoration:none;font-weight:700;">(1)</a>
+          <a href="https://chatgpt.com" target="_blank" rel="noopener" class="catalyst-link" data-ticker="${s.ticker}" data-name="${s.name}" style="color:var(--green-text);text-decoration:none;font-weight:700;">(2)</a>
         </span>
       </div>
     </div>
     <div class="card-badges">
-      ${moatBadge(s.moat_class, s.moat_type)}
+      <span class="metric-click clickable" data-metric="moat" data-ticker="${s.ticker}" data-name="${s.name}" style="cursor:pointer">${moatBadge(s.moat_class, s.moat_type).replace('class="badge', 'class="badge clickable')}</span>
       <span class="badge badge-sector">${esc(s.sector || 'Unknown')}</span>
     </div>
   </div>
 
-  <div class="conviction-row">
-    <span class="conviction-label">Conviction</span>
+  <div class="conviction-row clickable metric-click" data-metric="conviction" data-ticker="${s.ticker}" data-name="${s.name}">
+    <span class="conviction-label">Conviction 🔍</span>
     <div class="conviction-bar-wrap">
       <div class="conviction-bar ${cc}" style="width:${convPct}%"></div>
     </div>
@@ -1353,29 +1404,29 @@ function renderCard(s) {
 
   <div class="metrics-grid">
     <div class="metrics-row">
-      <div class="metric-item">
+      <div class="metric-item clickable metric-click" data-metric="mcap" data-ticker="${s.ticker}" data-name="${s.name}">
         <span class="metric-label">Market Cap</span>
         <span class="metric-value">₹${fmt(s.mcap_cr, 0)}Cr</span>
       </div>
-      <div class="metric-item">
+      <div class="metric-item clickable metric-click" data-metric="pe" data-ticker="${s.ticker}" data-name="${s.name}">
         <span class="metric-label">P/E</span>
         <span class="metric-value">${fmt(s.pe, 1)}</span>
       </div>
-      <div class="metric-item">
+      <div class="metric-item clickable metric-click" data-metric="roe" data-ticker="${s.ticker}" data-name="${s.name}">
         <span class="metric-label">ROE %</span>
         <span class="metric-value">${fmt(s.roe, 1)}%</span>
       </div>
     </div>
     <div class="metrics-row">
-      <div class="metric-item">
+      <div class="metric-item clickable metric-click" data-metric="returns" data-ticker="${s.ticker}" data-name="${s.name}">
         <span class="metric-label">1Y Ret</span>
         <span class="metric-value ${s.ret_1y != null ? (s.ret_1y >= 0 ? 'pos' : 'neg') : ''}">${s.ret_1y != null ? fmt(s.ret_1y,1)+'%' : '—'}</span>
       </div>
-      <div class="metric-item">
+      <div class="metric-item clickable metric-click" data-metric="returns" data-ticker="${s.ticker}" data-name="${s.name}">
         <span class="metric-label">3Y Ret</span>
         <span class="metric-value ${s.ret_3y != null ? (s.ret_3y >= 0 ? 'pos' : 'neg') : ''}">${s.ret_3y != null ? fmt(s.ret_3y,1)+'%' : '—'}</span>
       </div>
-      <div class="metric-item">
+      <div class="metric-item clickable metric-click" data-metric="returns" data-ticker="${s.ticker}" data-name="${s.name}">
         <span class="metric-label">5Y Ret</span>
         <span class="metric-value ${s.ret_5y != null ? (s.ret_5y >= 0 ? 'pos' : 'neg') : ''}">${s.ret_5y != null ? fmt(s.ret_5y,1)+'%' : '—'}</span>
       </div>
@@ -1403,17 +1454,17 @@ function renderCard(s) {
         <span class="metric-label">Book Value</span>
         <span class="metric-value">${s.book_value != null ? '₹'+fmt(s.book_value,2) : '—'}</span>
       </div>
-      <div class="metric-item">
+      <div class="metric-item clickable metric-click" data-metric="de" data-ticker="${s.ticker}" data-name="${s.name}">
         <span class="metric-label">D/E</span>
         <span class="metric-value">${s.debt_to_equity != null ? fmt(s.debt_to_equity,2) : '—'}</span>
       </div>
     </div>
     <div class="metrics-row">
-      <div class="metric-item">
+      <div class="metric-item clickable metric-click" data-metric="cashflow" data-ticker="${s.ticker}" data-name="${s.name}">
         <span class="metric-label">Op Cash Flow${s.opcf_3yr_avg != null ? ' <span style="font-size:0.55rem;opacity:.6">3yr</span>' : ''}</span>
         <span class="metric-value">${(s.opcf_3yr_avg ?? s.ocf_cr) != null ? '₹'+fmt(s.opcf_3yr_avg ?? s.ocf_cr,0)+'Cr' : '—'}</span>
       </div>
-      <div class="metric-item">
+      <div class="metric-item clickable metric-click" data-metric="cashflow" data-ticker="${s.ticker}" data-name="${s.name}">
         <span class="metric-label">FCF${s.fcf_3yr_avg != null ? ' <span style="font-size:0.55rem;opacity:.6">3yr</span>' : ''}</span>
         <span class="metric-value">${(s.fcf_3yr_avg ?? s.fcf_cr) != null ? '₹'+fmt(s.fcf_3yr_avg ?? s.fcf_cr,0)+'Cr' : '—'}</span>
       </div>
@@ -1423,29 +1474,29 @@ function renderCard(s) {
       </div>
     </div>
     <div class="metrics-row">
-      <div class="metric-item">
+      <div class="metric-item clickable metric-click" data-metric="margins" data-ticker="${s.ticker}" data-name="${s.name}">
         <span class="metric-label">Gross Margin</span>
         <span class="metric-value ${s.gross_margin != null ? (s.gross_margin >= 0 ? 'pos' : 'neg') : ''}">${s.gross_margin != null ? fmt(s.gross_margin,1)+'%' : '—'}</span>
       </div>
-      <div class="metric-item">
+      <div class="metric-item clickable metric-click" data-metric="margins" data-ticker="${s.ticker}" data-name="${s.name}">
         <span class="metric-label">EBITDA Margin</span>
         <span class="metric-value ${s.ebitda_margin != null ? (s.ebitda_margin >= 0 ? 'pos' : 'neg') : ''}">${s.ebitda_margin != null ? fmt(s.ebitda_margin,1)+'%' : '—'}</span>
       </div>
-      <div class="metric-item">
+      <div class="metric-item clickable metric-click" data-metric="margins" data-ticker="${s.ticker}" data-name="${s.name}">
         <span class="metric-label">Profit Margin</span>
         <span class="metric-value ${s.profit_margin != null ? (s.profit_margin >= 0 ? 'pos' : 'neg') : ''}">${s.profit_margin != null ? fmt(s.profit_margin,1)+'%' : '—'}</span>
       </div>
     </div>
     <div class="metrics-row">
-      <div class="metric-item">
+      <div class="metric-item clickable metric-click" data-metric="roe" data-ticker="${s.ticker}" data-name="${s.name}">
         <span class="metric-label">ROA %</span>
         <span class="metric-value ${s.roa != null ? (s.roa >= 0 ? 'pos' : 'neg') : ''}">${s.roa != null ? fmt(s.roa,1)+'%' : '—'}</span>
       </div>
-      <div class="metric-item">
+      <div class="metric-item clickable metric-click" data-metric="margins" data-ticker="${s.ticker}" data-name="${s.name}">
         <span class="metric-label">Op Margin</span>
         <span class="metric-value ${s.operating_margin != null ? (s.operating_margin >= 0 ? 'pos' : 'neg') : ''}">${s.operating_margin != null ? fmt(s.operating_margin,1)+'%' : '—'}</span>
       </div>
-      <div class="metric-item">
+      <div class="metric-item clickable metric-click" data-metric="promoter" data-ticker="${s.ticker}" data-name="${s.name}">
         <span class="metric-label">Promoter %</span>
         <span class="metric-value">${s.promoter_holding != null ? fmt(s.promoter_holding,1)+'%' : '—'}</span>
       </div>
@@ -1536,11 +1587,23 @@ function renderCard(s) {
 
     ${s.track && s.track.length ? `<div>
       <div class="section-label">📊 Tracking KPIs
-        <a href="https://claude.ai" target="_blank" rel="noopener" onclick="copyPrompt('kpi','${esc(s.ticker)}','${esc(s.name || s.ticker)}')" style="color:var(--purple-text);text-decoration:none;font-weight:700;margin-left:4px;">(1)</a>
-        <a href="https://chatgpt.com" target="_blank" rel="noopener" onclick="copyPrompt('kpi','${esc(s.ticker)}','${esc(s.name || s.ticker)}')" style="color:var(--green-text);text-decoration:none;font-weight:700;">(2)</a>
+        <a href="https://claude.ai" target="_blank" rel="noopener" class="kpi-link" data-ticker="${s.ticker}" data-name="${s.name || s.ticker}" style="color:var(--purple-text);text-decoration:none;font-weight:700;margin-left:4px;">(1)</a>
+        <a href="https://chatgpt.com" target="_blank" rel="noopener" class="kpi-link" data-ticker="${s.ticker}" data-name="${s.name || s.ticker}" style="color:var(--green-text);text-decoration:none;font-weight:700;">(2)</a>
       </div>
       <div class="pill-row">${pills(s.track, 'blue')}</div>
     </div>` : ''}
+
+    <div class="metrics-row" style="margin-top:8px; gap:6px;">
+      <div class="metric-item clickable metric-click" data-metric="peers" data-ticker="${s.ticker}" data-name="${s.name}" style="flex:1; background:var(--bg2); border-radius:6px; padding:8px; border:1px solid var(--border);">
+        <span class="metric-label" style="font-size:0.65rem;">👥 Peer Comparison</span>
+      </div>
+      <div class="metric-item clickable metric-click" data-metric="management" data-ticker="${s.ticker}" data-name="${s.name}" style="flex:1; background:var(--bg2); border-radius:6px; padding:8px; border:1px solid var(--border);">
+        <span class="metric-label" style="font-size:0.65rem;">👔 Management Trust</span>
+      </div>
+      <div class="metric-item clickable metric-click" data-metric="redflags" data-ticker="${s.ticker}" data-name="${s.name}" style="flex:1; background:var(--bg2); border-radius:6px; padding:8px; border:1px solid var(--border);">
+        <span class="metric-label" style="font-size:0.65rem;">🚩 Red Flags</span>
+      </div>
+    </div>
 
     ${s.ip_moat && (s.ip_moat.patents || s.ip_moat.cliff || s.ip_moat.rnd_pct != null) ? `<div>
       <div class="section-label">🔬 IP / Patent Depth</div>
@@ -2308,25 +2371,101 @@ If a source is missing or contradictory, flag it.`;
   showToast('📋 Prompt copied — paste it in the chat', 'green');
 }
 
+// ══════════════════════════════════════════════════════════════════════════
+// METRIC DEEP DIVE PROMPTS (inlined for reliability)
+// ══════════════════════════════════════════════════════════════════════════
+function getMetricPrompt(metricType, ticker, companyName, stock) {
+  const s = stock || allStocks.find(x => x.ticker === ticker) || {};
+  const fmt = (v, d=1) => v != null ? v.toLocaleString('en-IN', {minimumFractionDigits: d, maximumFractionDigits: d}) : '—';
+  
+  const snap = `Current: Mcap ₹${fmt(s.mcap_cr,0)}Cr | P/E ${fmt(s.pe,1)} | ROE ${fmt(s.roe,1)}% | D/E ${fmt(s.debt_to_equity,2)} | Promoter ${fmt(s.promoter_holding,1)}%`;
+
+  const prompts = {
+    conviction: `# 🎯 CONVICTION SCORE — ${companyName} (${ticker})\n\n${snap}\n\nAnalyze: Business Quality (/30), Financial Strength (/25), Growth (/20), Valuation (/15), Management (/10). Output CONVICTION SCORE /100 with top 3 drivers and killers.`,
+    moat: `# 🛡️ ECONOMIC MOAT — ${companyName} (${ticker})\n\n${snap}\n\nEvaluate ALL 7 moat types: IP/Patents, Brand, Regulatory/Licences, Switching Costs, Network Effects, Cost Advantage, Efficient Scale. For each: YES/NO/PARTIAL + evidence + durability. Output: MOAT WIDTH (Wide/Narrow/None), PRIMARY MOAT, BIGGEST THREAT.`,
+    pe: `# 📊 P/E ANALYSIS — ${companyName} (${ticker})\n\nCurrent P/E: ${fmt(s.pe,1)} | EPS: ₹${fmt(s.eps,2)}\n\nCompare to: 1) Own 5-year avg 2) Sector median 3) Nifty 50. Assess earnings quality. Output: UNDERVALUED/FAIR/OVERVALUED with reasoning.`,
+    roe: `# 📈 ROE ANALYSIS — ${companyName} (${ticker})\n\nROE: ${fmt(s.roe,1)}% | ROA: ${fmt(s.roa,1)}% | ROCE: ${fmt(s.roce,1)}% | D/E: ${fmt(s.debt_to_equity,2)}\n\nDuPont breakdown (Margin × Turnover × Leverage). Is high ROE from profitability or leverage? 5-year trend. Output: EXCELLENT/GOOD/AVERAGE/WEAK.`,
+    de: `# 💳 DEBT ANALYSIS — ${companyName} (${ticker})\n\nD/E: ${fmt(s.debt_to_equity,2)}\n\nAnalyze: Total debt structure, Net Debt/EBITDA, Interest Coverage, 5-year trend. What's debt used for? Output: SAFE/MODERATE/LEVERAGED/STRESSED.`,
+    peers: `# 👥 PEER COMPARISON — ${companyName} (${ticker})\n\n${snap}\n\nIdentify 5 closest peers. Compare: Mcap, P/E, ROE, EBITDA Margin, D/E, Growth. Rank on Market Share, Growth, Profitability, Balance Sheet. Output: PEER RANK #X of Y, UNDERVALUED/FAIR/OVERVALUED vs peers.`,
+    management: `# 👔 MANAGEMENT TRUST — ${companyName} (${ticker})\n\nPromoter: ${fmt(s.promoter_holding,1)}%\n\nAnalyze: 1) Promoter profile & tenure 2) Holding trend & pledging 3) Capital allocation (dividends, buybacks, acquisitions) 4) Governance (related party, board independence, auditor changes) 5) Guidance vs delivery. Output: TRUST SCORE /40 and HIGH/MODERATE/LOW/AVOID.`,
+    redflags: `# 🚩 RED FLAGS SCAN — ${companyName} (${ticker})\n\n${snap}\n\nCheck: ACCOUNTING (Revenue↑ but OCF↓, Receivables growth, Auditor changes) | GOVERNANCE (Pledging, Related party, SEBI penalties) | FINANCIAL (Debt vs EBITDA, Interest coverage, Negative FCF) | BUSINESS (Customer concentration, Tech disruption). Output: CRITICAL FLAGS, AMBER FLAGS, RISK LEVEL (Low/Moderate/High/Very High).`,
+    margins: `# 📊 MARGINS — ${companyName} (${ticker})\n\nGross: ${fmt(s.gross_margin,1)}% | EBITDA: ${fmt(s.ebitda_margin,1)}% | Op: ${fmt(s.operating_margin,1)}% | Net: ${fmt(s.profit_margin,1)}%\n\n5-year trend vs peers. What's driving/compressing margins? Output: EXCELLENT/GOOD/AVERAGE/WEAK + EXPANDING/STABLE/COMPRESSING.`,
+    returns: `# 📈 RETURNS — ${companyName} (${ticker})\n\n1Y: ${fmt(s.ret_1y,1)}% | 3Y: ${fmt(s.ret_3y,1)}% | 5Y: ${fmt(s.ret_5y,1)}%\n\nCompare to Nifty 50 and sector. Attribution (Earnings growth vs P/E expansion). Max drawdowns. Output: ALPHA (Strong/Moderate/Weak).`,
+    cashflow: `# 💰 CASH FLOW — ${companyName} (${ticker})\n\nOCF: ₹${fmt(s.opcf_3yr_avg ?? s.ocf_cr,0)}Cr | FCF: ₹${fmt(s.fcf_3yr_avg ?? s.fcf_cr,0)}Cr | Mcap: ₹${fmt(s.mcap_cr,0)}Cr\n\n5-year OCF/FCF trend. OCF vs Net Profit. FCF Yield (>5% attractive). Output: CASH GENERATION (Strong/Moderate/Weak).`,
+    mcap: `# 📊 MARKET CAP — ${companyName} (${ticker})\n\nMcap: ₹${fmt(s.mcap_cr,0)}Cr | P/E: ${fmt(s.pe,1)} | P/B: ${fmt(s.pb,2)}\n\nSize classification (Large/Mid/Small). Mcap vs Sales, PAT, FCF. Historical mcap trend. Room to grow?`,
+    promoter: `# 👥 PROMOTER — ${companyName} (${ticker})\n\nCurrent: ${fmt(s.promoter_holding,1)}%\n\n8-quarter holding trend. Pledging %? Who are promoters? FII/DII trends. Output: ALIGNED/NEUTRAL/CONCERNING.`
+  };
+  return prompts[metricType] || prompts.conviction;
+}
+
+function openMetricAnalysis(metricType, ticker, companyName, anchorEl) {
+  const stock = allStocks.find(s => s.ticker === ticker);
+  const prompt = getMetricPrompt(metricType, ticker, companyName, stock);
+  showAiPicker(anchorEl, prompt);
+}
+
+// ── Event Delegation for Clickable Metrics ────────────────────────────────
+document.addEventListener('click', function(e) {
+  // Handle metric clicks (conviction, moat, pe, roe, etc.)
+  const metricEl = e.target.closest('.metric-click');
+  if (metricEl) {
+    e.preventDefault();
+    e.stopPropagation();
+    const metric = metricEl.dataset.metric;
+    const ticker = metricEl.dataset.ticker;
+    const name = metricEl.dataset.name;
+    console.log('Metric clicked:', metric, ticker, name);
+    if (metric && ticker) {
+      openMetricAnalysis(metric, ticker, name, metricEl);
+    }
+    return;
+  }
+  
+  // Handle catalyst links
+  const catalystEl = e.target.closest('.catalyst-link');
+  if (catalystEl) {
+    const ticker = catalystEl.dataset.ticker;
+    const name = catalystEl.dataset.name;
+    console.log('Catalyst link clicked:', ticker, name);
+    if (ticker) {
+      copyPrompt('catalyst', ticker, name);
+    }
+    return;
+  }
+  
+  // Handle KPI links
+  const kpiEl = e.target.closest('.kpi-link');
+  if (kpiEl) {
+    const ticker = kpiEl.dataset.ticker;
+    const name = kpiEl.dataset.name;
+    console.log('KPI link clicked:', ticker, name);
+    if (ticker) {
+      copyPrompt('kpi', ticker, name);
+    }
+    return;
+  }
+});
+
 // ── Shared AI picker (Claude / ChatGPT) ───────────────────────────────────
 (function() {
   document.addEventListener('click', e => {
     const pop = document.getElementById('ai-picker-pop');
     if (pop && !pop.contains(e.target)
-           && !e.target.classList.contains('track-kpi-btn')
-           && !e.target.classList.contains('research-name')
-           && !e.target.closest('a[onclick*="openCatalystAnalysis"]')
-           && !e.target.closest('[onclick*="trackKPIs"]')) {
+           && !e.target.closest('.metric-click')
+           && !e.target.closest('.catalyst-link')
+           && !e.target.closest('.kpi-link')) {
       pop.style.display = 'none';
     }
   });
 })();
 
 function showAiPicker(anchorEl, claudePrompt, chatgptPrompt) {
+  console.log('showAiPicker called, anchorEl:', anchorEl);
   // If only 2 args, use same prompt for both
   if (chatgptPrompt === undefined) chatgptPrompt = claudePrompt;
   
   const pop       = document.getElementById('ai-picker-pop');
+  console.log('pop element:', pop);
   const claudeEl  = document.getElementById('aip-claude');
   const chatgptEl = document.getElementById('aip-chatgpt');
 
@@ -2347,9 +2486,10 @@ function showAiPicker(anchorEl, claudePrompt, chatgptPrompt) {
     pop.style.display = 'none';
   });
 
+  // .ai-picker-pop is position:fixed → use viewport coords only (no scroll offset)
   const r    = anchorEl.getBoundingClientRect();
-  const top  = Math.min(r.bottom + window.scrollY + 4, window.innerHeight + window.scrollY - 90);
-  const left = Math.min(r.left  + window.scrollX,      window.innerWidth  - 200);
+  const top  = Math.max(8, Math.min(r.bottom + 4, window.innerHeight - 90));
+  const left = Math.max(8, Math.min(r.left,       window.innerWidth  - 200));
   pop.style.top     = top  + 'px';
   pop.style.left    = left + 'px';
   pop.style.display = 'block';
@@ -2562,336 +2702,6 @@ If a source is missing or contradictory, flag it.`;
 
   // Show AI picker instead of directly opening ChatGPT
   showAiPicker(anchorEl, catalystPrompt);
-}
-
-// ── Fundamental Analysis — triggered by clicking company name ────────────
-function openFundamentalAnalysisFromEl(event, el) {
-  event.stopPropagation();
-  openFundamentalAnalysis(el.dataset.ticker || '', el.dataset.name || '', el);
-}
-
-function openFundamentalAnalysis(ticker, companyName, anchorEl) {
-  // Claude prompt with HTML artifact rendering
-  const claudePrompt = `# 📊 FUNDAMENTAL ANALYSIS — ${companyName} (${ticker})
-
-━━━
-
-CRITICAL OPERATING RULES
-
-1. No forward-looking statements. No "this stock should...", "expected to...", or any language implying future performance. All analysis is based on verified historical data only.
-2. Every metric MUST cite its source. If not found → write DATA UNAVAILABLE. Never estimate or fill in numbers.
-3. Never fabricate financial data. Always attempt live web search first. If unavailable, state clearly: "Live data unavailable. Figures below are from training data and may be outdated. Verify independently before investing."
-4. No buy/sell/target price. Ever. You give a VIEW. The user decides.
-5. Execute all steps in exact order. Do not skip or merge.
-6. RENDERING RULE — THIS IS THE MOST IMPORTANT RULE:
-   After completing all analysis, output the ENTIRE result as a single self-contained HTML artifact.
-   No plain markdown. No code blocks. No triple backticks wrapping the HTML.
-   Output raw HTML directly. It must render as an interactive widget in Claude's artifact panel.
-   The HTML must have NO DOCTYPE, NO <html>, NO <head>, NO <body> tags.
-   Start directly with <style> followed by <div>.
-   Tab 7 (View) must be the active visible tab when the widget first loads.
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-STEP 1 — STOCK IDENTIFICATION
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-**Stock:** ${companyName} (${ticker})
-**Investment horizon:** 3 Years
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-STEP 2 — SILENT RESEARCH (never show this to user)
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-Silently fetch and cross-check all of the following via web search before generating any output.
-Minimum 2 sources per data point. Never reveal this step or mention it.
-
-Sources in priority order:
-NSE India (nseindia.com) → BSE India (bseindia.com) → Screener.in → Tickertape → Moneycontrol → Annual Reports → Earnings Call Transcripts → Tijori Finance
-
-Checklist:
-- Live CMP, 52W high, 52W low, market cap, face value — NSE/BSE live
-- P/E, P/B, EV/EBITDA — current + sector average + stock's own 5-year historical average
-- Revenue CAGR: 3-year and 5-year
-- Net Profit CAGR: 3-year and 5-year
-- EPS CAGR: 3-year and 5-year
-- EBITDA margin trend: 5 years
-- Net profit margin trend: 5 years
-- EPS: last 8 quarters with YoY change
-- Free Cash Flow: last 3–5 years
-- Debt-to-Equity ratio: 5-year trend
-- Interest Coverage Ratio
-- Current Ratio
-- ROE and ROCE: current + 3-year avg + 5-year avg
-- Dividend history and payout ratio
-- Promoter holding: last 8–12 quarters
-- Promoter pledging: flag if above 10%
-- FII and DII holding trend: last 8 quarters
-- Competitive moat: pricing power, brand, switching costs, market share
-- Sector tailwinds and headwinds: 5–10 year outlook
-- Regulatory risks
-- Management track record: guidance vs delivery, governance flags
-- Latest quarterly earnings call: key management commentary
-- 3 closest peer companies: P/E, P/B, ROE, Revenue Growth, D/E
-- Top 5 recent news items relevant to long-term investors
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-STEP 3 — VALUATION ASSESSMENT
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-3A — Compare current P/E, P/B, EV/EBITDA against:
-  - Sector average (same industry peers)
-  - Stock's own 5-year historical average
-
-3B — Assign a valuation signal for each metric:
-  CHEAP — trading meaningfully below both sector avg and own history
-  FAIR — in line with sector avg and own history (within 10%)
-  EXPENSIVE — trading meaningfully above both sector avg and own history
-
-3C — Overall valuation classification:
-  UNDERVALUED / FAIRLY VALUED / OVERVALUED / MIXED
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-STEP 4 — GROWTH ASSESSMENT
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-Assess revenue, net profit, EPS, and margin trends.
-Classify growth as: ACCELERATING / STEADY / SLOWING / DECLINING
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-STEP 5 — FINANCIAL HEALTH ASSESSMENT
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-Assign signal for each metric:
-- D/E below 1 = SAFE · 1–2 = MODERATE · above 2 = LEVERAGED
-- Interest Coverage above 3x = HEALTHY · 1.5–3x = WATCH · below 1.5 = RISK
-- Current Ratio above 1.5 = COMFORTABLE · 1–1.5 = WATCH · below 1 = RISK
-- FCF positive and growing = STRONG · positive but flat = STABLE · negative = CONCERN
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-STEP 6 — RETURN QUALITY ASSESSMENT
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-- ROE above 15% = GOOD · 10–15% = AVERAGE · below 10% = WEAK
-- ROCE above 15% = GOOD · 10–15% = AVERAGE · below 10% = WEAK
-- Assess dividend consistency and payout sustainability
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-STEP 7 — FORWARD PROJECTION (3-year horizon)
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-Based on historical CAGR trends only. Build 3 scenarios:
-Bear: growth slows, margins compress
-Base: maintains current trajectory
-Bull: growth picks up, margins expand
-These are projections based on historical trends — not guarantees or predictions.
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-STEP 8 — PEER COMPARISON
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-Identify 3 closest competitors. Compare on P/E, P/B, ROE, Revenue Growth, D/E.
-Classify stock vs peers: LEADING / MID-PACK / LAGGING
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-STEP 9 — OWNERSHIP ASSESSMENT
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-Promoter trend signal: BUYING / STABLE / SELLING
-FII trend: INCREASING / STABLE / DECREASING
-DII trend: INCREASING / STABLE / DECREASING
-Pledging: flag if above 10%
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-STEP 10 — FUNDAMENTAL VIEW
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-Combine Steps 3–9. Produce:
-- One-sentence summary of what the fundamentals show
-- 3 strengths
-- 2 risks or watch points
-- 1 thing to track going forward
-- Overall fundamental quality: STRONG / MODERATE / WEAK
-
-This is a VIEW based on fundamentals only. Not a buy/sell recommendation.
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-STEP 11 — DATA CONFIDENCE RATING
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-Count metrics retrieved from live named sources vs DATA UNAVAILABLE.
-9–10 live = HIGH · 6–8 = MODERATE · below 6 = LOW (warn user) · 0 = VERY LOW
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-STEP 12 — RENDERING SPECIFICATION
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-Output the complete result as a single raw HTML artifact.
-No markdown. No code blocks. No triple backticks.
-No DOCTYPE, no <html>, no <head>, no <body>.
-Start with <style> then <div class="wrap">.
-
-Tab structure — 8 tabs in this exact order:
-  Tab 0: Snapshot
-  Tab 1: Valuation
-  Tab 2: Growth
-  Tab 3: Health
-  Tab 4: Returns
-  Tab 5: Peers
-  Tab 6: Ownership
-  Tab 7: View  ← THIS IS THE DEFAULT ACTIVE TAB ON LOAD
-
-Use the HTML template from prompts/fundamental_analysis_template.html.
-Replace every [PLACEHOLDER] with real researched data.
-Flag any missing metric inline as: 🚩 DATA UNAVAILABLE — verify at [source URL]`;
-
-  // ChatGPT prompt (Markdown format, no HTML artifact)
-  const chatgptPrompt = `# 📊 FUNDAMENTAL ANALYSIS — ${companyName} (${ticker})
-
-━━━
-
-CRITICAL OPERATING RULES
-
-1. No forward-looking statements. No "this stock should...", "expected to...", or any language implying future performance. All analysis is based on verified historical data only.
-2. Every metric MUST cite its source. If not found → write DATA UNAVAILABLE. Never estimate or fill in numbers.
-3. Never fabricate financial data. Always attempt live web search first. If unavailable, state clearly: "Live data unavailable. Figures below are from training data and may be outdated. Verify independently before investing."
-4. No buy/sell/target price. Ever. You give a VIEW. The user decides.
-5. Execute all steps in exact order. Do not skip or merge.
-6. Format output as clean Markdown with tables. Use clear headers for each section.
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-STOCK IDENTIFICATION
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-**Stock:** ${companyName} (${ticker})
-**Investment horizon:** 3 Years
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-RESEARCH CHECKLIST (perform silently)
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-Search from: NSE India, BSE India, Screener.in, Tickertape, Moneycontrol, Annual Reports, Earnings Call Transcripts, Tijori Finance
-
-Data points to gather:
-- Live CMP, 52W high/low, market cap, face value
-- P/E, P/B, EV/EBITDA — current + sector avg + 5-year historical avg
-- Revenue/Net Profit/EPS CAGR: 3-year and 5-year
-- EBITDA margin and Net profit margin trends
-- EPS: last 8 quarters with YoY change
-- Free Cash Flow: last 3–5 years
-- Debt-to-Equity, Interest Coverage, Current Ratio
-- ROE and ROCE: current + 3-year avg + 5-year avg
-- Dividend history and payout ratio
-- Promoter/FII/DII holding trends
-- Promoter pledging (flag if >10%)
-- Competitive moat and sector outlook
-- Management track record
-- Latest earnings call highlights
-- 3 peer companies comparison
-- Top 5 recent news items
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-OUTPUT FORMAT
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-## 📊 SNAPSHOT
-| Metric | Value | Source |
-|--------|-------|--------|
-| Company | ${companyName} | |
-| Ticker | ${ticker} | |
-| Sector/Industry | ... | |
-| CMP | ₹... | NSE |
-| 52W High/Low | ₹.../₹... | NSE |
-| Market Cap | ₹... Cr | BSE |
-| What it does | ... | |
-| What makes it different | ... | |
-
-## 💰 VALUATION
-
-| Metric | Current | Sector Avg | Stock 5Y Avg | Signal |
-|--------|---------|------------|--------------|--------|
-| P/E | ...x | ...x | ...x | CHEAP/FAIR/EXPENSIVE |
-| P/B | ...x | ...x | ...x | CHEAP/FAIR/EXPENSIVE |
-| EV/EBITDA | ...x | ...x | ...x | CHEAP/FAIR/EXPENSIVE |
-
-**Overall:** UNDERVALUED / FAIRLY VALUED / OVERVALUED / MIXED
-
-## 📈 GROWTH
-
-| Metric | 3Y CAGR | 5Y CAGR | Trend |
-|--------|---------|---------|-------|
-| Revenue | ...% | ...% | 📈/➡️/📉 |
-| Net Profit | ...% | ...% | 📈/➡️/📉 |
-| EPS | ...% | ...% | 📈/➡️/📉 |
-| EBITDA Margin | ...% | ...% | 📈/➡️/📉 |
-| Net Profit Margin | ...% | ...% | 📈/➡️/📉 |
-
-**Growth Classification:** ACCELERATING / STEADY / SLOWING / DECLINING
-
-## 🏦 FINANCIAL HEALTH
-
-| Metric | Value | 5Y Trend | Signal |
-|--------|-------|----------|--------|
-| Debt/Equity | ... | ↓/→/↑ | SAFE/MODERATE/LEVERAGED |
-| Interest Coverage | ...x | ↓/→/↑ | HEALTHY/WATCH/RISK |
-| Current Ratio | ... | ↓/→/↑ | COMFORTABLE/WATCH/RISK |
-| Free Cash Flow | ₹... Cr | ↓/→/↑ | STRONG/STABLE/CONCERN |
-
-## 📊 RETURNS
-
-| Metric | Current | 3Y Avg | 5Y Avg | Signal |
-|--------|---------|--------|--------|--------|
-| ROE | ...% | ...% | ...% | GOOD/AVERAGE/WEAK |
-| ROCE | ...% | ...% | ...% | GOOD/AVERAGE/WEAK |
-| Dividend Yield | ...% | ...% | ...% | — |
-
-## 👥 PEERS
-
-| Company | P/E | P/B | ROE | Rev Growth | D/E | Edge |
-|---------|-----|-----|-----|------------|-----|------|
-| **${ticker} ◀ you** | ... | ... | ...% | ...% | ... | ... |
-| Peer 1 | ... | ... | ...% | ...% | ... | ... |
-| Peer 2 | ... | ... | ...% | ...% | ... | ... |
-| Peer 3 | ... | ... | ...% | ...% | ... | ... |
-
-**Peer Standing:** LEADING / MID-PACK / LAGGING
-
-## 🏢 OWNERSHIP
-
-| Holder | Latest % | 8Q Trend | Signal |
-|--------|----------|----------|--------|
-| Promoter | ...% | ↑/→/↓ | BUYING/STABLE/SELLING |
-| FII | ...% | ↑/→/↓ | INCREASING/STABLE/DECREASING |
-| DII | ...% | ↑/→/↓ | INCREASING/STABLE/DECREASING |
-| Promoter Pledging | ...% | — | OK/FLAG |
-
-## 🎯 VIEW
-
-**Overall Fundamental Quality:** STRONG / MODERATE / WEAK
-
-**Summary:** [One sentence on what the fundamentals show]
-
-**✅ What Works:**
-1. ...
-2. ...
-3. ...
-
-**⚠️ What to Watch:**
-1. ...
-2. ...
-
-**→ Track Going Forward:** ...
-
-## 📊 DATA CONFIDENCE
-
-- Live metrics retrieved: X of 12 key sections
-- Sources used: ...
-- Confidence: HIGH / MODERATE / LOW / VERY LOW
-
----
-
-*This is a VIEW based on fundamentals only. Not a buy/sell recommendation. Verify all data at NSE/BSE/Screener.in before investing.*`;
-
-  showAiPicker(anchorEl, claudePrompt, chatgptPrompt);
 }
 
 // ── Research Links popover — shows 3 direct links user can click ──────────
@@ -3142,7 +2952,7 @@ function renderAnalysisTable() {
     const tr = document.createElement('tr');
     tr.innerHTML = `
       <td><strong><span style="cursor:pointer;color:var(--blue-text);" title="View fundamental analysis card" onclick="goToCard('${esc(s.ticker)}')">${s.ticker}</span></strong></td>
-      <td><span class="research-name" style="cursor:pointer;color:var(--blue-text);text-decoration:underline dotted;" title="Click for AI fundamental analysis" data-ticker="${esc(s.ticker)}" data-name="${esc(s.name || s.ticker)}" onclick="openFundamentalAnalysisFromEl(event,this)">${s.name || '—'}</span></td>
+      <td class="research-name" style="cursor:pointer;color:var(--blue-text);" title="Click to open Tickertape, Trendlyne, Tijori" data-ticker="${esc(s.ticker)}" data-name="${esc(s.name || s.ticker)}" onclick="openResearchTabsFromEl(event,this)"><span class="research-name" style="text-decoration:underline dotted;pointer-events:none;">${esc(s.name || s.ticker)}</span></td>
       <td style="text-align:center;font-weight:600;color:${ (s.conviction||0) >= 8 ? 'var(--green)' : (s.conviction||0) >= 6 ? 'var(--amber-text)' : (s.conviction||0) >= 4 ? '#f97316' : (s.conviction||0) >= 1 ? 'var(--red-text)' : 'var(--text3)' }">${s.conviction ? s.conviction+'/10' : '—'}</td>
       <td style="font-size:0.7rem;font-weight:600;color:${ s.moat_class==='wide' ? 'var(--green)' : s.moat_class==='narrow' ? 'var(--amber-text)' : 'var(--text3)' }">${s.moat_class === 'wide' ? '▲ Wide' : s.moat_class === 'narrow' ? '◆ Narrow' : '—'}</td>
       <td>${prv(f(s.quantity))}</td>

@@ -1,6 +1,7 @@
 [
   {
     "ticker": "NH",
+    "name": "Narayana Hrudayalaya",
     "sector": "Healthcare",
     "nse_symbol": "NH",
     "moat_type": "Wide",
@@ -40,6 +41,7 @@
   },
   {
     "ticker": "HCG",
+    "name": "HealthCare Global Enterprises",
     "sector": "Healthcare / Oncology",
     "nse_symbol": "HCG",
     "moat_type": "Wide",
@@ -79,6 +81,7 @@
   },
   {
     "ticker": "SYRMA",
+    "name": "Syrma SGS Technology",
     "sector": "EMS / Electronics",
     "nse_symbol": "SYRMA",
     "moat_type": "Narrow",
@@ -118,6 +121,7 @@
   },
   {
     "ticker": "MTARTECH",
+    "name": "MTAR Technologies",
     "sector": "Precision Engineering / Defence",
     "nse_symbol": "MTARTECH",
     "moat_type": "Wide",
@@ -157,6 +161,7 @@
   },
   {
     "ticker": "DEEDEV",
+    "name": "Dee Development Engineers",
     "sector": "Industrial Piping / Engineering",
     "nse_symbol": "DEEDEV",
     "moat_type": "Narrow",
@@ -196,6 +201,7 @@
   },
   {
     "ticker": "POWERINDIA",
+    "name": "Hitachi Energy India",
     "sector": "Power Transmission / Automation",
     "nse_symbol": "POWERINDIA",
     "moat_type": "Wide",
@@ -235,6 +241,7 @@
   },
   {
     "ticker": "ASTRAMICRO",
+    "name": "Astra Microwave Products",
     "sector": "Defence Electronics",
     "nse_symbol": "ASTRAMICRO",
     "moat_type": "Wide",
@@ -274,6 +281,7 @@
   },
   {
     "ticker": "ASTERDM",
+    "name": "Aster DM Healthcare",
     "sector": "Healthcare",
     "nse_symbol": "ASTERDM",
     "moat_type": "Narrow",
@@ -313,6 +321,7 @@
   },
   {
     "ticker": "NEPHROPLUS",
+    "name": "Nephrocare Health Services",
     "sector": "Dialysis / Renal Healthcare",
     "nse_symbol": "NEPHROPLUS",
     "moat_type": "Narrow",
@@ -352,6 +361,7 @@
   },
   {
     "ticker": "NEULANDLAB",
+    "name": "Neuland Laboratories",
     "sector": "Pharma CDMO / API",
     "nse_symbol": "NEULANDLAB",
     "moat_type": "Wide",
@@ -391,6 +401,7 @@
   },
   {
     "ticker": "AVANTEL",
+    "name": "Avantel",
     "sector": "Defence Electronics / Satellite",
     "nse_symbol": "AVANTEL",
     "moat_type": "Narrow",
@@ -430,6 +441,7 @@
   },
   {
     "ticker": "SOUTHWEST",
+    "name": "Southwest Pinnacle Exploration",
     "sector": "Oil & Gas Services",
     "nse_symbol": "SOUTHWEST",
     "moat_type": "Narrow",
@@ -468,6 +480,7 @@
   },
   {
     "ticker": "DLINKINDIA",
+    "name": "D-Link (India)",
     "sector": "Networking Hardware",
     "nse_symbol": "DLINKINDIA",
     "moat_type": "Narrow",
@@ -506,6 +519,7 @@
   },
   {
     "ticker": "TRIVENI",
+    "name": "Triveni Engineering & Industries",
     "sector": "Sugar / Power",
     "nse_symbol": "TRIVENI",
     "moat_type": "Narrow",
@@ -545,6 +559,7 @@
   },
   {
     "ticker": "GALAPREC",
+    "name": "Gala Precision Engineering",
     "sector": "Precision Components",
     "nse_symbol": "GALAPREC",
     "moat_type": "Narrow",
@@ -584,6 +599,7 @@
   },
   {
     "ticker": "MODISONLTD",
+    "name": "Modison",
     "sector": "Electrical Contacts / Components",
     "nse_symbol": "MODISONLTD",
     "moat_type": "Narrow",
@@ -623,6 +639,7 @@
   },
   {
     "ticker": "HAPPYFORGE",
+    "name": "Happy Forgings",
     "sector": "Forgings / Auto Components",
     "nse_symbol": "HAPPYFORGE",
     "moat_type": "Wide",
@@ -662,6 +679,7 @@
   },
   {
     "ticker": "NIFTYBEES",
+    "name": "Nippon India ETF Nifty BeES",
     "sector": "Index ETF",
     "nse_symbol": "NIFTYBEES",
     "moat_type": "Narrow",
@@ -700,6 +718,7 @@
   },
   {
     "ticker": "HBLENGINE",
+    "name": "HBL Engineering",
     "sector": "Defence Electronics / Batteries",
     "nse_symbol": "HBLENGINE",
     "moat_type": "Wide",
@@ -739,6 +758,7 @@
   },
   {
     "ticker": "SASKEN",
+    "name": "Sasken Technologies",
     "sector": "IT / Embedded Software",
     "nse_symbol": "SASKEN",
     "moat_type": "Narrow",
@@ -778,6 +798,7 @@
   },
   {
     "ticker": "ENRIN",
+    "name": "Enviro Infra Engineers",
     "sector": "Water / Environment Infrastructure",
     "nse_symbol": "ENRIN",
     "moat_type": "Narrow",
@@ -817,6 +838,7 @@
   },
   {
     "ticker": "ARE&M",
+    "name": "Amara Raja Energy & Mobility",
     "sector": "Energy Storage / Batteries",
     "nse_symbol": "ARE&M",
     "moat_type": "Narrow",
@@ -856,6 +878,7 @@
   },
   {
     "ticker": "INDUSTOWER",
+    "name": "Indus Towers",
     "sector": "Telecom Infrastructure",
     "nse_symbol": "INDUSTOWER",
     "moat_type": "Wide",
@@ -895,6 +918,7 @@
   },
   {
     "ticker": "INDGN",
+    "name": "Indegene",
     "sector": "Healthcare Technology / CRO",
     "nse_symbol": "INDGN",
     "moat_type": "Narrow",
@@ -934,6 +958,7 @@
   },
   {
     "ticker": "RIR",
+    "name": "RIR Power Electronics",
     "sector": "Power Electronics",
     "nse_symbol": "RIR",
     "moat_type": "Narrow",
@@ -972,6 +997,7 @@
   },
   {
     "ticker": "SCODATUBES",
+    "name": "Scoda Tubes",
     "sector": "Steel Tubes",
     "nse_symbol": "SCODATUBES",
     "moat_type": "Narrow",
@@ -1010,6 +1036,7 @@
   },
   {
     "ticker": "SALZERELEC",
+    "name": "Salzer Electronics",
     "sector": "Electrical Components",
     "nse_symbol": "SALZERELEC",
     "moat_type": "Narrow",
@@ -1049,6 +1076,7 @@
   },
   {
     "ticker": "MENONBE",
+    "name": "Menon Bearings",
     "sector": "Engine Components",
     "nse_symbol": "MENONBE",
     "moat_type": "Narrow",
@@ -1087,6 +1115,7 @@
   },
   {
     "ticker": "RUBICON",
+    "name": "Rubicon Research",
     "sector": "Pharma / CDMO",
     "nse_symbol": "RUBICON",
     "moat_type": "Narrow",
@@ -1126,6 +1155,7 @@
   },
   {
     "ticker": "RKSWAMY",
+    "name": "R.K. Swamy",
     "sector": "Marketing Services / Advertising",
     "nse_symbol": "RKSWAMY",
     "moat_type": "Narrow",
@@ -1165,6 +1195,7 @@
   },
   {
     "ticker": "RATEGAIN",
+    "name": "RateGain Travel Technologies",
     "sector": "Travel Tech / SaaS",
     "nse_symbol": "RATEGAIN",
     "moat_type": "Wide",
@@ -1204,6 +1235,7 @@
   },
   {
     "ticker": "GMDCLTD",
+    "name": "Gujarat Mineral Development Corporation",
     "sector": "PSU Mining",
     "nse_symbol": "GMDCLTD",
     "moat_type": "Narrow",
@@ -1242,6 +1274,7 @@
   },
   {
     "ticker": "TREL",
+    "name": "Trident",
     "sector": "Textiles / Paper",
     "nse_symbol": "TREL",
     "moat_type": "Narrow",
@@ -1281,6 +1314,7 @@
   },
   {
     "ticker": "EIMCOELECO",
+    "name": "Eimco Elecon (India)",
     "sector": "Mining Equipment",
     "nse_symbol": "EIMCOELECO",
     "moat_type": "Narrow",
@@ -1319,6 +1353,7 @@
   },
   {
     "ticker": "BLUEJET",
+    "name": "Blue Jet Healthcare",
     "sector": "Pharma / Contrast Media",
     "nse_symbol": "BLUEJET",
     "moat_type": "Wide",
@@ -1358,6 +1393,7 @@
   },
   {
     "ticker": "SHREEJISPG",
+    "name": "Shreeji Shipping Global",
     "sector": "Steel Pipes / Infrastructure",
     "nse_symbol": "SHREEJISPG",
     "moat_type": "Narrow",
@@ -1396,6 +1432,7 @@
   },
   {
     "ticker": "NETWEB",
+    "name": "Netweb Technologies India",
     "sector": "AI Infrastructure / HPC",
     "nse_symbol": "NETWEB",
     "moat_type": "Wide",
@@ -1435,6 +1472,7 @@
   },
   {
     "ticker": "RAMCOSYS",
+    "name": "Ramco Systems",
     "sector": "Enterprise Software / ERP",
     "nse_symbol": "RAMCOSYS",
     "moat_type": "Narrow",
@@ -1474,6 +1512,7 @@
   },
   {
     "ticker": "STALLION",
+    "name": "Stallion India Fluorochemicals",
     "sector": "Specialty Chemicals / Refrigerants",
     "nse_symbol": "STALLION",
     "moat_type": "Narrow",
@@ -1512,6 +1551,7 @@
   },
   {
     "ticker": "RPTECH",
+    "name": "Rashi Peripherals",
     "sector": "IT Distribution",
     "nse_symbol": "RPTECH",
     "moat_type": "Narrow",
@@ -1551,6 +1591,7 @@
   },
   {
     "ticker": "SIGNPOST",
+    "name": "Signpost India",
     "sector": "Outdoor Media / OOH",
     "nse_symbol": "SIGNPOST",
     "moat_type": "Narrow",
@@ -1590,6 +1631,7 @@
   },
   {
     "ticker": "BOROSCI",
+    "name": "Borosil Scientific",
     "sector": "Scientific Glassware",
     "nse_symbol": "BOROSCI",
     "moat_type": "Narrow",
@@ -1628,6 +1670,7 @@
   },
   {
     "ticker": "MAPMYINDIA",
+    "name": "C.E. Info Systems (MapmyIndia)",
     "sector": "Digital Maps / Location Tech",
     "nse_symbol": "MAPMYINDIA",
     "moat_type": "Wide",
@@ -1667,6 +1710,7 @@
   },
   {
     "ticker": "YATHARTH",
+    "name": "Yatharth Hospital & Trauma Care Services",
     "sector": "Healthcare",
     "nse_symbol": "YATHARTH",
     "moat_type": "Narrow",
@@ -1705,6 +1749,7 @@
   },
   {
     "ticker": "VASCONEQ",
+    "name": "Vascon Engineers",
     "sector": "Real Estate / Construction",
     "nse_symbol": "VASCONEQ",
     "moat_type": "Narrow",
@@ -1743,6 +1788,7 @@
   },
   {
     "ticker": "FRACTAL",
+    "name": "Fractal Analytics",
     "sector": "AI / Data Analytics",
     "nse_symbol": "FRACTAL",
     "moat_type": "Narrow",
@@ -1782,6 +1828,7 @@
   },
   {
     "ticker": "PROTEAN",
+    "name": "Protean eGov Technologies",
     "sector": "Government Tech / FinTech",
     "nse_symbol": "PROTEAN",
     "moat_type": "Wide",
@@ -1821,6 +1868,7 @@
   },
   {
     "ticker": "UNIVCABLES",
+    "name": "Universal Cables",
     "sector": "Cables & Wires",
     "nse_symbol": "UNIVCABLES",
     "moat_type": "Narrow",
@@ -1860,6 +1908,7 @@
   },
   {
     "ticker": "RAYMOND",
+    "name": "Raymond",
     "sector": "Textiles / Real Estate",
     "nse_symbol": "RAYMOND",
     "moat_type": "Narrow",
@@ -1898,6 +1947,7 @@
   },
   {
     "ticker": "GRAPHITE",
+    "name": "Graphite India",
     "sector": "Graphite Electrodes",
     "nse_symbol": "GRAPHITE",
     "moat_type": "Narrow",
@@ -1937,6 +1987,7 @@
   },
   {
     "ticker": "URBANCO",
+    "name": "Urban Company",
     "sector": "Technology / Consumer Services",
     "nse_symbol": "URBANCO",
     "moat_type": "Narrow",
@@ -1978,6 +2029,7 @@
   },
   {
     "ticker": "GMRAIRPORT",
+    "name": "GMR Airports",
     "sector": "Airport Infrastructure",
     "nse_symbol": "GMRAIRPORT",
     "moat_type": "Wide",
@@ -2017,6 +2069,7 @@
   },
   {
     "ticker": "LAXMIDENTL",
+    "name": "Laxmi Dental",
     "sector": "Dental Products",
     "nse_symbol": "LAXMIDENTL",
     "moat_type": "Narrow",
@@ -2056,6 +2109,7 @@
   },
   {
     "ticker": "BIOCON",
+    "name": "Biocon",
     "sector": "Biopharma / Biosimilars",
     "nse_symbol": "BIOCON",
     "moat_type": "Wide",
@@ -2095,6 +2149,7 @@
   },
   {
     "ticker": "ANURAS",
+    "name": "Anupam Rasayan India",
     "sector": "Pharma / API",
     "nse_symbol": "ANURAS",
     "moat_type": "Narrow",
@@ -2134,6 +2189,7 @@
   },
   {
     "ticker": "SHANKARA",
+    "name": "Shankara Building Products",
     "sector": "Building Materials Retail",
     "nse_symbol": "SHANKARA",
     "moat_type": "Narrow",
@@ -2173,6 +2229,7 @@
   },
   {
     "ticker": "INCAP",
+    "name": "International Combustion (India)",
     "sector": "Industrial Equipment / Pending Verification",
     "nse_symbol": "INCAP",
     "moat_type": "Narrow",
@@ -2211,6 +2268,7 @@
   },
   {
     "ticker": "SHILPAMED",
+    "name": "Shilpa Medicare",
     "sector": "Pharma / Oncology API",
     "nse_symbol": "SHILPAMED",
     "moat_type": "Narrow",
@@ -2250,6 +2308,7 @@
   },
   {
     "ticker": "ECOSMOBLTY",
+    "name": "ECOS (India) Mobility & Hospitality",
     "sector": "EV Mobility",
     "nse_symbol": "ECOSMOBLTY",
     "moat_type": "Narrow",
@@ -2288,6 +2347,7 @@
   },
   {
     "ticker": "KIRLPNU",
+    "name": "Kirloskar Pneumatic",
     "sector": "Industrial Equipment / Compressors",
     "nse_symbol": "KIRLPNU",
     "moat_type": "Narrow",
@@ -2326,6 +2386,7 @@
   },
   {
     "ticker": "PTC",
+    "name": "PTC India",
     "sector": "Power Trading",
     "nse_symbol": "PTC",
     "moat_type": "Narrow",
@@ -2365,6 +2426,7 @@
   },
   {
     "ticker": "LANDMARK",
+    "name": "Landmark Cars",
     "sector": "Auto Dealerships",
     "nse_symbol": "LANDMARK",
     "moat_type": "Narrow",
@@ -2403,6 +2465,7 @@
   },
   {
     "ticker": "FREDUN",
+    "name": "Fredun Pharmaceuticals",
     "sector": "Pharma / Formulations",
     "nse_symbol": "FREDUN",
     "moat_type": "Narrow",
@@ -2442,6 +2505,7 @@
   },
   {
     "ticker": "CMSINFO",
+    "name": "CMS Info Systems",
     "sector": "Cash Management / ATM Services",
     "nse_symbol": "CMSINFO",
     "moat_type": "Wide",
@@ -2481,6 +2545,7 @@
   },
   {
     "ticker": "DIFFNKG",
+    "name": "Diffusion Engineers",
     "sector": "Industrial Equipment / Speciality Machinery",
     "nse_symbol": "DIFFNKG",
     "moat_type": "Narrow",
@@ -2520,6 +2585,7 @@
   },
   {
     "ticker": "MOSCHIP",
+    "name": "MosChip Technologies",
     "sector": "Semiconductors / Embedded",
     "nse_symbol": "MOSCHIP",
     "moat_type": "Narrow",
@@ -2559,6 +2625,7 @@
   },
   {
     "ticker": "GULFOILLUB",
+    "name": "Gulf Oil Lubricants India",
     "sector": "Lubricants",
     "nse_symbol": "GULFOILLUB",
     "moat_type": "Narrow",
@@ -2599,6 +2666,7 @@
   },
   {
     "ticker": "DATAPATTNS",
+    "name": "Data Patterns (India)",
     "sector": "Defence Electronics",
     "nse_symbol": "DATAPATTNS",
     "moat_type": "Wide",
@@ -2638,6 +2706,7 @@
   },
   {
     "ticker": "CYIENTDLM",
+    "name": "Cyient DLM",
     "sector": "Defence Electronics / EMS",
     "nse_symbol": "CYIENTDLM",
     "moat_type": "Narrow",
@@ -2677,6 +2746,7 @@
   },
   {
     "ticker": "MMP",
+    "name": "MMP Industries",
     "sector": "Aluminium Products",
     "nse_symbol": "MMP",
     "moat_type": "Narrow",
@@ -2716,6 +2786,7 @@
   },
   {
     "ticker": "BBL",
+    "name": "Bharat Bijlee",
     "sector": "Electrical Equipment",
     "nse_symbol": "BBL",
     "moat_type": "Narrow",
@@ -2755,6 +2826,7 @@
   },
   {
     "ticker": "CESC",
+    "name": "CESC",
     "sector": "Power Utility",
     "nse_symbol": "CESC",
     "moat_type": "Wide",
@@ -2793,6 +2865,7 @@
   },
   {
     "ticker": "OMINFRAL",
+    "name": "Om Infra",
     "sector": "Infrastructure EPC / Construction",
     "nse_symbol": "OMINFRAL",
     "moat_type": "Narrow",
@@ -2832,6 +2905,7 @@
   },
   {
     "ticker": "WHIRLPOOL",
+    "name": "Whirlpool of India",
     "sector": "Consumer Durables",
     "nse_symbol": "WHIRLPOOL",
     "moat_type": "Narrow",
@@ -2871,6 +2945,7 @@
   },
   {
     "ticker": "PITTIENG",
+    "name": "Pitti Engineering",
     "sector": "Engineering Components",
     "nse_symbol": "PITTIENG",
     "moat_type": "Narrow",
@@ -2910,6 +2985,7 @@
   },
   {
     "ticker": "RAYMONDREL",
+    "name": "Raymond Realty",
     "sector": "Real Estate",
     "nse_symbol": "RAYMONDREL",
     "moat_type": "Narrow",
@@ -2948,6 +3024,7 @@
   },
   {
     "ticker": "NIITLTD",
+    "name": "NIIT",
     "sector": "IT Education / Skills",
     "nse_symbol": "NIITLTD",
     "moat_type": "Narrow",
@@ -2987,6 +3064,7 @@
   },
   {
     "ticker": "RUSTOMJEE",
+    "name": "Keystone Realtors (Rustomjee)",
     "sector": "Real Estate",
     "nse_symbol": "RUSTOMJEE",
     "moat_type": "Narrow",
@@ -3025,6 +3103,7 @@
   },
   {
     "ticker": "INTERARCH",
+    "name": "Interarch Building Solutions",
     "sector": "Pre-engineered Buildings",
     "nse_symbol": "INTERARCH",
     "moat_type": "Narrow",
@@ -3064,6 +3143,7 @@
   },
   {
     "ticker": "CAPACITE",
+    "name": "Capacit'e Infraprojects",
     "sector": "Construction / EPC",
     "nse_symbol": "CAPACITE",
     "moat_type": "Narrow",
@@ -3102,6 +3182,7 @@
   },
   {
     "ticker": "RAILTEL",
+    "name": "RailTel Corporation of India",
     "sector": "Telecom / IT Infrastructure",
     "nse_symbol": "RAILTEL",
     "moat_type": "Wide",
@@ -3141,6 +3222,7 @@
   },
   {
     "ticker": "AFFLE",
+    "name": "Affle (India)",
     "sector": "Ad Tech / Mobile Marketing",
     "nse_symbol": "AFFLE",
     "moat_type": "Wide",
@@ -3180,6 +3262,7 @@
   },
   {
     "ticker": "SKFINDIA",
+    "name": "SKF India",
     "sector": "Bearings",
     "nse_symbol": "SKFINDIA",
     "moat_type": "Wide",
@@ -3219,6 +3302,7 @@
   },
   {
     "ticker": "TEJASNET",
+    "name": "Tejas Networks",
     "sector": "Telecom Equipment",
     "nse_symbol": "TEJASNET",
     "moat_type": "Wide",
@@ -3258,6 +3342,7 @@
   },
   {
     "ticker": "VSTTILLERS",
+    "name": "VST Tillers Tractors",
     "sector": "Agricultural Equipment",
     "nse_symbol": "VSTTILLERS",
     "moat_type": "Narrow",
@@ -3297,6 +3382,7 @@
   },
   {
     "ticker": "ASALCBR",
+    "name": "Associated Alcohols & Breweries",
     "sector": "Specialty Chemicals / Pigments",
     "nse_symbol": "ASALCBR",
     "moat_type": "Narrow",
@@ -3335,6 +3421,7 @@
   },
   {
     "ticker": "GREAVESCOT",
+    "name": "Greaves Cotton",
     "sector": "Engines / EV",
     "nse_symbol": "GREAVESCOT",
     "moat_type": "Narrow",
@@ -3374,6 +3461,7 @@
   },
   {
     "ticker": "ELDEHSG",
+    "name": "Eldeco Housing & Industries",
     "sector": "Real Estate",
     "nse_symbol": "ELDEHSG",
     "moat_type": "Narrow",
@@ -3412,6 +3500,7 @@
   },
   {
     "ticker": "ARIS",
+    "name": "Arisinfra Solutions",
     "sector": "Pharma",
     "nse_symbol": "ARIS",
     "moat_type": "Narrow",
@@ -3445,6 +3534,7 @@
   },
   {
     "ticker": "QUESS",
+    "name": "Quess Corp",
     "sector": "Staffing / Business Services",
     "nse_symbol": "QUESS",
     "moat_type": "Narrow",
@@ -3484,6 +3574,7 @@
   },
   {
     "ticker": "AVALON",
+    "name": "Avalon Technologies",
     "sector": "EMS / Electronics",
     "nse_symbol": "AVALON",
     "moat_type": "Narrow",
@@ -3523,6 +3614,7 @@
   },
   {
     "ticker": "GIPCL",
+    "name": "Gujarat Industries Power Company",
     "sector": "PSU Power",
     "nse_symbol": "GIPCL",
     "moat_type": "Narrow",
@@ -3561,6 +3653,7 @@
   },
   {
     "ticker": "TVSELECT",
+    "name": "TVS Electronics",
     "sector": "Electronics / IT Peripherals",
     "nse_symbol": "TVSELECT",
     "moat_type": "Narrow",
@@ -3599,6 +3692,7 @@
   },
   {
     "ticker": "EMBDL",
+    "name": "Embassy Developments",
     "sector": "Real Estate / Office Parks",
     "nse_symbol": "EMBDL",
     "moat_type": "Wide",
@@ -3638,6 +3732,7 @@
   },
   {
     "ticker": "LAKSELEC",
+    "name": "Lakshmi Electrical Control Systems",
     "sector": "Electrical Equipment",
     "nse_symbol": "LAKSELEC",
     "moat_type": "Narrow",
@@ -3675,6 +3770,7 @@
   },
   {
     "ticker": "TATACOMM",
+    "name": "Tata Communications",
     "sector": "Telecom / Data Networking",
     "nse_symbol": "TATACOMM",
     "moat_type": "Wide",
@@ -3714,6 +3810,7 @@
   },
   {
     "ticker": "UNIECOM",
+    "name": "Unicommerce eSolutions",
     "sector": "SaaS / E-commerce Software",
     "nse_symbol": "UNIECOM",
     "moat_type": "Narrow",
@@ -3754,6 +3851,7 @@
   },
   {
     "ticker": "SUVEN",
+    "name": "Suven Pharmaceuticals",
     "sector": "Pharma CDMO / CNS",
     "nse_symbol": "SUVEN",
     "moat_type": "Wide",
@@ -3793,6 +3891,7 @@
   },
   {
     "ticker": "SONACOMS",
+    "name": "Sona BLW Precision Forgings",
     "sector": "Auto Components / Precision Forgings",
     "nse_symbol": "SONACOMS",
     "moat_type": "Wide",
@@ -3836,6 +3935,7 @@
   },
   {
     "ticker": "AEROFLEX",
+    "name": "Aeroflex Industries",
     "sector": "Industrials",
     "nse_symbol": "AEROFLEX",
     "moat_type": "Wide",
@@ -3873,6 +3973,7 @@
   },
   {
     "ticker": "SANSERA",
+    "name": "Sansera Engineering",
     "sector": "Auto Ancillary",
     "nse_symbol": "SANSERAENG",
     "moat_type": "Wide",
@@ -3910,6 +4011,7 @@
   },
   {
     "ticker": "GESHIP",
+    "name": "Great Eastern Shipping",
     "sector": "Shipping",
     "nse_symbol": "GESHIP",
     "moat_type": "Narrow",
@@ -3949,6 +4051,7 @@
   },
   {
     "ticker": "THERMAX",
+    "name": "Thermax",
     "sector": "Capital Goods",
     "nse_symbol": "THERMAX",
     "moat_type": "Wide",
@@ -3988,6 +4091,7 @@
   },
   {
     "ticker": "TRITURBINE",
+    "name": "Triveni Turbine",
     "sector": "Capital Goods",
     "nse_symbol": "TRITURBINE",
     "moat_type": "Wide",
@@ -4026,6 +4130,7 @@
   },
   {
     "ticker": "ELGIEQUIP",
+    "name": "Elgi Equipments",
     "sector": "Industrials",
     "nse_symbol": "ELGIEQUIP",
     "moat_type": "Wide",
@@ -4064,6 +4169,7 @@
   },
   {
     "ticker": "INOXINDIA",
+    "name": "INOX India",
     "sector": "Industrial Equipment",
     "nse_symbol": "INOXINDIA",
     "moat_type": "Wide",
@@ -4103,6 +4209,7 @@
   },
   {
     "ticker": "KENNAMET",
+    "name": "Kennametal India",
     "sector": "Industrials",
     "nse_symbol": "KENNAMET",
     "moat_type": "Narrow",
@@ -4141,6 +4248,7 @@
   },
   {
     "ticker": "PARKHOSPS",
+    "name": "Park Medi World",
     "sector": "Healthcare",
     "nse_symbol": "PARKHOSPS",
     "moat_type": "Narrow",
@@ -4179,6 +4287,7 @@
   },
   {
     "ticker": "NLCINDIA",
+    "name": "NLC India",
     "sector": "PSU Power",
     "nse_symbol": "NLCINDIA",
     "moat_type": "Narrow",
@@ -4217,6 +4326,7 @@
   },
   {
     "ticker": "PFC",
+    "name": "Power Finance Corporation",
     "sector": "PSU Finance",
     "nse_symbol": "PFC",
     "moat_type": "Narrow",
@@ -4256,6 +4366,7 @@
   },
   {
     "ticker": "SJVN",
+    "name": "SJVN",
     "sector": "PSU Power",
     "nse_symbol": "SJVN",
     "moat_type": "Narrow",
@@ -4294,6 +4405,7 @@
   },
   {
     "ticker": "ISGEC",
+    "name": "Isgec Heavy Engineering",
     "sector": "Capital Goods",
     "nse_symbol": "ISGEC",
     "moat_type": "Narrow",
@@ -4332,6 +4444,7 @@
   },
   {
     "ticker": "HEG",
+    "name": "HEG",
     "sector": "Materials",
     "nse_symbol": "HEG",
     "moat_type": "Narrow",
@@ -4370,6 +4483,7 @@
   },
   {
     "ticker": "INGERRAND",
+    "name": "Ingersoll-Rand (India)",
     "sector": "Industrials",
     "nse_symbol": "INGERRAND",
     "moat_type": "Narrow",
@@ -4408,6 +4522,7 @@
   },
   {
     "ticker": "WELCORP",
+    "name": "Welspun Corp",
     "sector": "Steel Pipes",
     "nse_symbol": "WELCORP",
     "moat_type": "Narrow",
@@ -4447,6 +4562,7 @@
   },
   {
     "ticker": "JNKINDIA",
+    "name": "JNK India",
     "sector": "Capital Goods",
     "nse_symbol": "JNKINDIA",
     "moat_type": "Wide",
@@ -4486,6 +4602,7 @@
   },
   {
     "ticker": "LATENTVIEW",
+    "name": "LatentView Analytics",
     "sector": "IT / Analytics",
     "nse_symbol": "LATENTVIEW",
     "moat_type": "Narrow",
@@ -4524,6 +4641,7 @@
   },
   {
     "ticker": "POWERICA",
+    "name": "Powerica",
     "sector": "Power Equipment",
     "nse_symbol": "POWERICA",
     "moat_type": "Narrow",
@@ -4563,6 +4681,7 @@
   },
   {
     "ticker": "TEGA",
+    "name": "Tega Industries",
     "sector": "Mining Equipment",
     "nse_symbol": "TEGA",
     "moat_type": "Wide",
@@ -4601,6 +4720,7 @@
   },
   {
     "ticker": "ASHIANA",
+    "name": "Ashiana Housing",
     "sector": "Real Estate",
     "nse_symbol": "ASHIANA",
     "moat_type": "Narrow",
@@ -4640,6 +4760,7 @@
   },
   {
     "ticker": "SCI",
+    "name": "Shipping Corporation of India",
     "sector": "PSU Shipping",
     "nse_symbol": "SCI",
     "moat_type": "Narrow",
@@ -4678,6 +4799,7 @@
   },
   {
     "ticker": "CARBORUNIV",
+    "name": "Carborundum Universal",
     "sector": "Abrasives & Ceramics",
     "nse_symbol": "CARBORUNIV",
     "moat_type": "Wide",
@@ -4717,6 +4839,7 @@
   },
   {
     "ticker": "ENTERO",
+    "name": "Entero Healthcare Solutions",
     "sector": "Healthcare Distribution",
     "nse_symbol": "ENTERO",
     "moat_type": "Narrow",
@@ -4756,6 +4879,7 @@
   },
   {
     "ticker": "SIEMENS",
+    "name": "Siemens",
     "sector": "Capital Goods",
     "nse_symbol": "SIEMENS",
     "moat_type": "Wide",
@@ -4795,6 +4919,7 @@
   },
   {
     "ticker": "HONAUT",
+    "name": "Honeywell Automation India",
     "sector": "Automation",
     "nse_symbol": "HONAUT",
     "moat_type": "Wide",
@@ -4833,6 +4958,7 @@
   },
   {
     "ticker": "GRINDWELL",
+    "name": "Grindwell Norton",
     "sector": "Abrasives",
     "nse_symbol": "GRINDWELL",
     "moat_type": "Wide",
@@ -4872,6 +4998,7 @@
   },
   {
     "ticker": "SKFINDUS",
+    "name": "SKF India",
     "sector": "Bearings",
     "nse_symbol": "SKFINDIA",
     "moat_type": "Wide",
@@ -4911,6 +5038,7 @@
   },
   {
     "ticker": "MAFANG",
+    "name": "Mirae Asset NYSE FANG+ ETF",
     "sector": "ETF",
     "nse_symbol": "MAFANG",
     "moat_type": "Narrow",
@@ -4949,6 +5077,7 @@
   },
   {
     "ticker": "ABLBL",
+    "name": "Aditya Birla Lifestyle Brands",
     "sector": "Consumer Cyclical",
     "nse_symbol": "ABLBL",
     "moat_type": "Narrow",
@@ -4987,6 +5116,7 @@
   },
   {
     "ticker": "BOROLTD",
+    "name": "Borosil",
     "sector": "Consumer Cyclical",
     "nse_symbol": "BOROLTD",
     "moat_type": "Narrow",
@@ -5025,6 +5155,7 @@
   },
   {
     "ticker": "KPITTECH",
+    "name": "KPIT Technologies",
     "sector": "Technology",
     "nse_symbol": "KPITTECH",
     "moat_type": "Wide",
@@ -5063,6 +5194,7 @@
   },
   {
     "ticker": "MSTCLTD",
+    "name": "MSTC",
     "sector": "Industrials",
     "nse_symbol": "MSTCLTD",
     "moat_type": "Narrow",
@@ -5101,6 +5233,7 @@
   },
   {
     "ticker": "ORIENTHOT",
+    "name": "Oriental Hotels",
     "sector": "Consumer Cyclical",
     "nse_symbol": "ORIENTHOT",
     "moat_type": "Narrow",
@@ -5139,6 +5272,7 @@
   },
   {
     "ticker": "REDINGTON",
+    "name": "Redington",
     "sector": "Technology",
     "nse_symbol": "REDINGTON",
     "moat_type": "Narrow",
@@ -5177,6 +5311,7 @@
   },
   {
     "ticker": "USHAMART",
+    "name": "Usha Martin",
     "sector": "Basic Materials",
     "nse_symbol": "USHAMART",
     "moat_type": "Narrow",
@@ -5215,6 +5350,7 @@
   },
   {
     "ticker": "VIYASH",
+    "name": "Viyash Life Sciences",
     "sector": "Healthcare",
     "nse_symbol": "VIYASH",
     "moat_type": "Narrow",
@@ -5253,6 +5389,7 @@
   },
   {
     "ticker": "WOCKPHARMA",
+    "name": "Wockhardt",
     "sector": "Healthcare",
     "nse_symbol": "WOCKPHARMA",
     "moat_type": "Narrow",
@@ -5291,6 +5428,7 @@
   },
   {
     "ticker": "EIHOTEL",
+    "name": "EIH",
     "sector": "Consumer Cyclical",
     "nse_symbol": "EIHOTEL",
     "moat_type": "Wide",
@@ -5329,6 +5467,7 @@
   },
   {
     "ticker": "KAMDHENU",
+    "name": "Kamdhenu",
     "sector": "Basic Materials",
     "nse_symbol": "KAMDHENU",
     "moat_type": "Narrow",
@@ -5367,6 +5506,7 @@
   },
   {
     "ticker": "GAUDIUMIVF",
+    "name": "Gaudium IVF",
     "sector": "Healthcare",
     "nse_symbol": "GAUDIUMIVF",
     "moat_type": "Narrow",
@@ -5405,6 +5545,7 @@
   },
   {
     "ticker": "MON100",
+    "name": "Motilal Oswal Nasdaq 100 ETF",
     "sector": "ETF",
     "nse_symbol": "MON100",
     "moat_type": "Narrow",
@@ -5443,6 +5584,7 @@
   },
   {
     "ticker": "SUZLON",
+    "name": "Suzlon Energy",
     "sector": "Industrials",
     "nse_symbol": "SUZLON",
     "moat_type": "Scale + Product Platform (S144)",
@@ -5490,6 +5632,7 @@
   },
   {
     "ticker": "HLEGLAS",
+    "name": "HLE Glascoat",
     "sector": "Industrials",
     "nse_symbol": "HLEGLAS",
     "moat_type": "Niche specialisation — glass-lined + filtration equipment",
@@ -5535,6 +5678,7 @@
   },
   {
     "ticker": "WENDT",
+    "name": "Wendt (India)",
     "sector": "Industrials",
     "nse_symbol": "WENDT",
     "moat_type": "Niche tech access — superabrasive grinding tools (CUMI × Wendt GmbH JV)",
@@ -5580,6 +5724,7 @@
   },
   {
     "ticker": "KPIGREEN",
+    "name": "KPI Green Energy",
     "sector": "Utilities",
     "nse_symbol": "KPIGREEN",
     "moat_type": "Asset-backed renewable IPP + EPC scale",
@@ -5627,6 +5772,7 @@
   },
   {
     "ticker": "SGIL",
+    "name": "Synergy Green Industries",
     "sector": "Industrials",
     "nse_symbol": "SGIL",
     "moat_type": "Niche capability — large wind-turbine castings",
@@ -5673,6 +5819,7 @@
   },
   {
     "ticker": "KSB",
+    "name": "KSB",
     "sector": "Industrials",
     "nse_symbol": "KSB",
     "moat_type": "MNC engineering + brand (German parent technology)",
@@ -5720,6 +5867,7 @@
   },
   {
     "ticker": "CLEANMAX",
+    "name": "Cleanmax Enviro Energy Solutions",
     "sector": "Utilities",
     "nse_symbol": "CLEANMAX",
     "moat_type": "C&I renewable specialist with international footprint",
@@ -5767,6 +5915,7 @@
   },
   {
     "ticker": "JYOTICNC",
+    "name": "Jyoti CNC Automation",
     "sector": "Industrials",
     "nse_symbol": "JYOTICNC",
     "moat_type": "Domestic CNC OEM leader + Huron 5-axis tech",
@@ -5815,6 +5964,7 @@
   },
   {
     "ticker": "IFGLEXPOR",
+    "name": "IFGL Refractories",
     "sector": "Basic Materials",
     "nse_symbol": "IFGLEXPOR",
     "moat_type": "Specialty refractories with global footprint",
