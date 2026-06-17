@@ -24,7 +24,19 @@
       "ARPOB (Average Revenue Per Occupied Bed) growth",
       "Cayman hospital occupancy ramp",
       "India hospital EBITDA margin >20%"
-    ]
+    ],
+    "name": "Narayana Hrudayalaya Limited",
+    "mcap_cr": 37654.71,
+    "pe": 46.489468,
+    "roe": 19.84,
+    "ocf_cr": 1621.19,
+    "debt_to_equity": 129.033,
+    "eps": 39.88,
+    "book_value": 223.339,
+    "div_yield": 24.0,
+    "pat_cagr": 13.5,
+    "rev_cagr": 75.8,
+    "mcap_3y": 121.42
   },
   {
     "ticker": "HCG",
@@ -51,7 +63,19 @@
       "New centre EBITDA breakeven timeline",
       "Occupancy rate at existing centres",
       "ARPOB growth in oncology"
-    ]
+    ],
+    "name": "HealthCare Global Enterprises Limited",
+    "mcap_cr": 9530.71,
+    "pe": 679.0957,
+    "roe": 1.9,
+    "ocf_cr": 347.1,
+    "debt_to_equity": 123.057,
+    "eps": 0.94,
+    "book_value": 92.072,
+    "div_yield": 0,
+    "pat_cagr": -71.2,
+    "rev_cagr": 11.5,
+    "mcap_3y": 117.31
   },
   {
     "ticker": "SYRMA",
@@ -78,7 +102,19 @@
       "Revenue per segment (auto/medical/RFID mix)",
       "Gross margin trajectory",
       "Ranjangaon campus utilisation"
-    ]
+    ],
+    "name": "Syrma SGS Technology Limited",
+    "mcap_cr": 25347.52,
+    "pe": 77.81786,
+    "roe": 14.14,
+    "ocf_cr": 289.57,
+    "debt_to_equity": 13.045,
+    "eps": 16.91,
+    "book_value": 149.623,
+    "div_yield": 12.0,
+    "pat_cagr": 43.7,
+    "rev_cagr": 58.4,
+    "mcap_3y": 262.39
   },
   {
     "ticker": "MTARTECH",
@@ -105,7 +141,19 @@
       "Bloom Energy order book and USA fuel cell deployments",
       "New nuclear component qualifications",
       "Space segment revenue %"
-    ]
+    ],
+    "name": "MTAR Technologies Limited",
+    "mcap_cr": 24699.95,
+    "pe": 260.37613,
+    "roe": 12.12,
+    "ocf_cr": 196.9,
+    "debt_to_equity": 45.778,
+    "eps": 30.84,
+    "book_value": 267.49,
+    "div_yield": 0,
+    "pat_cagr": 222.9,
+    "rev_cagr": 67.2,
+    "mcap_3y": 327.75
   },
   {
     "ticker": "DEEDEV",
@@ -132,7 +180,19 @@
       "Order book size and execution pace",
       "IBR-certified piping % of revenue",
       "Margin expansion as utilisation rises"
-    ]
+    ],
+    "name": "DEE DEVELOPMENT ENG LTD",
+    "mcap_cr": 5069.04,
+    "pe": 65.63677,
+    "roe": 9.13,
+    "ocf_cr": 19.55,
+    "debt_to_equity": 79.221,
+    "eps": 11.15,
+    "book_value": 127.161,
+    "div_yield": 0,
+    "pat_cagr": -12.1,
+    "rev_cagr": 26.3,
+    "mcap_3y": 118.25
   },
   {
     "ticker": "POWERINDIA",
@@ -159,7 +219,19 @@
       "Order inflows from PGCIL/state utilities",
       "HVDC project awards",
       "Revenue growth sustaining >30% YoY"
-    ]
+    ],
+    "name": "Hitachi Energy India Limited",
+    "mcap_cr": 158209.61,
+    "pe": 159.6429,
+    "roe": 21.04,
+    "ocf_cr": 1244.83,
+    "debt_to_equity": 1.663,
+    "eps": 222.34,
+    "book_value": 1161.247,
+    "div_yield": 2.0,
+    "pat_cagr": 71.8,
+    "rev_cagr": 46.2,
+    "mcap_3y": 838.65
   },
   {
     "ticker": "ASTRAMICRO",
@@ -186,7 +258,19 @@
       "Order book value and composition",
       "Export revenue growth",
       "New programme qualifications (space/radar)"
-    ]
+    ],
+    "name": "Astra Microwave Products Limited",
+    "mcap_cr": 14544.63,
+    "pe": 75.537476,
+    "roe": 15.99,
+    "ocf_cr": 386.73,
+    "debt_to_equity": 21.883,
+    "eps": 20.28,
+    "book_value": 138.431,
+    "div_yield": 15.0,
+    "pat_cagr": 43.9,
+    "rev_cagr": 19.7,
+    "mcap_3y": 374.78
   },
   {
     "ticker": "ASTERDM",
@@ -213,7 +297,19 @@
       "India EBITDA margin expansion",
       "Hospital occupancy rates",
       "Pharmacy same-store growth"
-    ]
+    ],
+    "name": "Aster DM Healthcare Limited",
+    "mcap_cr": 39915.48,
+    "pe": 120.64844,
+    "roe": 10.07,
+    "ocf_cr": 655.92,
+    "debt_to_equity": 45.921,
+    "eps": 6.4,
+    "book_value": 88.795,
+    "div_yield": 51.0,
+    "pat_cagr": 71.5,
+    "rev_cagr": 18.2,
+    "mcap_3y": 278.66
   },
   {
     "ticker": "NEPHROPLUS",
@@ -240,7 +336,19 @@
       "Patient additions per quarter",
       "Government PPP contract wins",
       "EBITDA per clinic"
-    ]
+    ],
+    "name": "NEPHROCARE HEALTH SERV L",
+    "mcap_cr": 7299.79,
+    "pe": 89.81481,
+    "roe": 9.04,
+    "ocf_cr": 232.58,
+    "debt_to_equity": 7.139,
+    "eps": 8.1,
+    "book_value": 111.271,
+    "div_yield": 0,
+    "pat_cagr": 0.3,
+    "rev_cagr": 21.2,
+    "mcap_3y": 54.38
   },
   {
     "ticker": "NEULANDLAB",
@@ -267,7 +375,19 @@
       "CMS revenue growth (innovator APIs)",
       "Peptide API capacity utilisation",
       "New molecule commercialisations"
-    ]
+    ],
+    "name": "Neuland Laboratories Limited",
+    "mcap_cr": 21588.85,
+    "pe": 59.193726,
+    "roe": 0,
+    "ocf_cr": 0.0,
+    "debt_to_equity": 16.072,
+    "eps": 284.27,
+    "book_value": 1460.021,
+    "div_yield": 20.0,
+    "pat_cagr": 664.4,
+    "rev_cagr": 136.4,
+    "mcap_3y": 505.78
   },
   {
     "ticker": "AVANTEL",
@@ -294,7 +414,19 @@
       "Order book and quarterly execution",
       "Navy/Coast Guard repeat orders",
       "New product (software defined radio) adoption"
-    ]
+    ],
+    "name": "Avantel Limited",
+    "mcap_cr": 4517.08,
+    "pe": 314.8148,
+    "roe": 5.21,
+    "ocf_cr": 10.05,
+    "debt_to_equity": 10.164,
+    "eps": 0.54,
+    "book_value": 12.729,
+    "div_yield": 12.0,
+    "pat_cagr": -31.0,
+    "rev_cagr": 29.6,
+    "mcap_3y": -16.61
   },
   {
     "ticker": "SOUTHWEST",
@@ -320,7 +452,19 @@
       "Order wins from ONGC/OIL",
       "Utilisation rate of equipment fleet",
       "Revenue growth vs capex"
-    ]
+    ],
+    "name": "South West Pinnacle Exploration Limited",
+    "mcap_cr": 753.36,
+    "pe": 23.341036,
+    "roe": 17.65,
+    "ocf_cr": 12.07,
+    "debt_to_equity": 39.376,
+    "eps": 10.82,
+    "book_value": 60.801,
+    "div_yield": 0,
+    "pat_cagr": 20.2,
+    "rev_cagr": 3.6,
+    "mcap_3y": 91.29
   },
   {
     "ticker": "DLINKINDIA",
@@ -346,7 +490,19 @@
       "Enterprise vs consumer revenue split",
       "Data centre switching order wins",
       "Gross margin expansion"
-    ]
+    ],
+    "name": "D-Link (India) Limited",
+    "mcap_cr": 1807.2,
+    "pe": 17.366087,
+    "roe": 21.21,
+    "ocf_cr": 14.89,
+    "debt_to_equity": 2.928,
+    "eps": 29.31,
+    "book_value": 142.301,
+    "div_yield": 803.0,
+    "pat_cagr": 0.5,
+    "rev_cagr": 20.0,
+    "mcap_3y": 133.24
   },
   {
     "ticker": "TRIVENI",
@@ -373,7 +529,19 @@
       "Ethanol revenue as % of total",
       "Distillery utilisation rate",
       "Sugar realisation vs SAP (state advised price)"
-    ]
+    ],
+    "name": "Triveni Engineering & Industries Limited",
+    "mcap_cr": 8836.56,
+    "pe": 32.868855,
+    "roe": 8.27,
+    "ocf_cr": 187.92,
+    "debt_to_equity": 64.646,
+    "eps": 12.2,
+    "book_value": 140.615,
+    "div_yield": 132.0,
+    "pat_cagr": -11.1,
+    "rev_cagr": -7.4,
+    "mcap_3y": 51.68
   },
   {
     "ticker": "GALAPREC",
@@ -400,7 +568,19 @@
       "Export revenue growth",
       "Aerospace segment contribution",
       "EBITDA margin vs utilisation"
-    ]
+    ],
+    "name": "GALA PRECISION ENG LTD",
+    "mcap_cr": 1327.55,
+    "pe": 38.363533,
+    "roe": 12.92,
+    "ocf_cr": 10.17,
+    "debt_to_equity": 13.04,
+    "eps": 27.04,
+    "book_value": 229.718,
+    "div_yield": 0,
+    "pat_cagr": 10.8,
+    "rev_cagr": 25.6,
+    "mcap_3y": 37.01
   },
   {
     "ticker": "MODISONLTD",
@@ -427,7 +607,19 @@
       "Market share in silver contacts",
       "Export revenue growth",
       "Silver spread (realisation minus raw material cost)"
-    ]
+    ],
+    "name": "Modison Limited",
+    "mcap_cr": 945.92,
+    "pe": 13.036673,
+    "roe": 0,
+    "ocf_cr": 0.0,
+    "debt_to_equity": 63.523,
+    "eps": 22.36,
+    "book_value": 84.604,
+    "div_yield": 171.0,
+    "pat_cagr": 277.2,
+    "rev_cagr": 120.9,
+    "mcap_3y": 343.69
   },
   {
     "ticker": "HAPPYFORGE",
@@ -454,7 +646,19 @@
       "Wind energy forgings order wins",
       "SUV crankshaft volumes ramp",
       "EBITDA margin sustenance above 25%"
-    ]
+    ],
+    "name": "HAPPY FORGINGS LIMITED",
+    "mcap_cr": 13066.6,
+    "pe": 43.34585,
+    "roe": 15.16,
+    "ocf_cr": 444.67,
+    "debt_to_equity": 15.489,
+    "eps": 31.95,
+    "book_value": 225.638,
+    "div_yield": 30.0,
+    "pat_cagr": 23.0,
+    "rev_cagr": 20.4,
+    "mcap_3y": 35.23
   },
   {
     "ticker": "NIFTYBEES",
@@ -480,7 +684,19 @@
       "Nifty 50 index performance",
       "AUM growth (liquidity indicator)",
       "Tracking error vs index"
-    ]
+    ],
+    "name": "Nippon India ETF Nifty 50 BeES",
+    "mcap_cr": 0.0,
+    "pe": 21.489603,
+    "roe": 0,
+    "ocf_cr": 0.0,
+    "debt_to_equity": null,
+    "eps": null,
+    "book_value": null,
+    "div_yield": 0,
+    "pat_cagr": 0,
+    "rev_cagr": 0,
+    "mcap_3y": 36.13
   },
   {
     "ticker": "HBLENGINE",
@@ -507,7 +723,19 @@
       "Kavach order wins and execution pace",
       "Defence battery new contracts",
       "Quarterly revenue growth vs order book"
-    ]
+    ],
+    "name": "HBL ENGINEERING LTD",
+    "mcap_cr": 22021.75,
+    "pe": 26.994564,
+    "roe": 44.07,
+    "ocf_cr": 738.44,
+    "debt_to_equity": 3.021,
+    "eps": 29.43,
+    "book_value": 80.581,
+    "div_yield": 25.0,
+    "pat_cagr": 39.8,
+    "rev_cagr": 27.0,
+    "mcap_3y": 666.51
   },
   {
     "ticker": "SASKEN",
@@ -534,7 +762,19 @@
       "Revenue from automotive vs semiconductor segments",
       "5G modem software project wins",
       "EBITDA margin consistency"
-    ]
+    ],
+    "name": "Sasken Technologies Limited",
+    "mcap_cr": 3655.69,
+    "pe": 67.90409,
+    "roe": 6.99,
+    "ocf_cr": -22.83,
+    "debt_to_equity": 3.212,
+    "eps": 35.45,
+    "book_value": 563.415,
+    "div_yield": 114.0,
+    "pat_cagr": 144.4,
+    "rev_cagr": 125.7,
+    "mcap_3y": 202.46
   },
   {
     "ticker": "ENRIN",
@@ -561,7 +801,19 @@
       "Order book and quarterly execution",
       "Working capital days",
       "New order wins from AMRUT/Jal Jeevan"
-    ]
+    ],
+    "name": "Siemens Energy India Limited",
+    "mcap_cr": 132298.77,
+    "pe": 100.92366,
+    "roe": 0,
+    "ocf_cr": 3516.3,
+    "debt_to_equity": 4.483,
+    "eps": 36.81,
+    "book_value": 135.117,
+    "div_yield": 11.0,
+    "pat_cagr": 52.2,
+    "rev_cagr": 27.4,
+    "mcap_3y": 36.05
   },
   {
     "ticker": "ARE&M",
@@ -588,7 +840,19 @@
       "OEM glass market share vs Saint-Gobain Sekurit",
       "Sunroof/value-added glass revenue %",
       "Architectural glass segment growth"
-    ]
+    ],
+    "name": "Amara Raja Energy & Mobility Limited",
+    "mcap_cr": 15668.8,
+    "pe": 17.485703,
+    "roe": 11.57,
+    "ocf_cr": 1118.29,
+    "debt_to_equity": 5.015,
+    "eps": 48.96,
+    "book_value": 442.399,
+    "div_yield": 124.0,
+    "pat_cagr": 94.5,
+    "rev_cagr": 15.5,
+    "mcap_3y": 47.57
   },
   {
     "ticker": "INDUSTOWER",
@@ -615,7 +879,19 @@
       "Vodafone Idea payment status",
       "Tenancy ratio improvement",
       "5G-related co-location additions"
-    ]
+    ],
+    "name": "Indus Towers Limited",
+    "mcap_cr": 109918.07,
+    "pe": 15.385751,
+    "roe": 19.81,
+    "ocf_cr": 15684.1,
+    "debt_to_equity": 53.289,
+    "eps": 27.09,
+    "book_value": 150.333,
+    "div_yield": 0,
+    "pat_cagr": 0.8,
+    "rev_cagr": 4.8,
+    "mcap_3y": 166.07
   },
   {
     "ticker": "INDGN",
@@ -642,7 +918,19 @@
       "Revenue growth and client additions",
       "Pharma regulatory technology wins",
       "EBITDA margin improvement"
-    ]
+    ],
+    "name": "INDEGENE LIMITED",
+    "mcap_cr": 12424.4,
+    "pe": 31.144577,
+    "roe": 13.94,
+    "ocf_cr": 650.8,
+    "debt_to_equity": 4.601,
+    "eps": 16.6,
+    "book_value": 130.746,
+    "div_yield": 39.0,
+    "pat_cagr": -32.3,
+    "rev_cagr": 32.8,
+    "mcap_3y": -9.14
   },
   {
     "ticker": "RIR",
@@ -668,7 +956,19 @@
       "Revenue growth and order book",
       "New customer additions",
       "Gross margin stability"
-    ]
+    ],
+    "name": "Rir Power Electronics Limited",
+    "mcap_cr": 1346.37,
+    "pe": 167.52475,
+    "roe": 6.24,
+    "ocf_cr": -21.93,
+    "debt_to_equity": 9.945,
+    "eps": 1.01,
+    "book_value": 20.656,
+    "div_yield": 12.0,
+    "pat_cagr": -65.4,
+    "rev_cagr": -16.5,
+    "mcap_3y": 351.26
   },
   {
     "ticker": "SCODATUBES",
@@ -694,7 +994,19 @@
       "Revenue growth and auto OEM order wins",
       "Realisation per tonne",
       "New customer qualifications"
-    ]
+    ],
+    "name": "Scoda Tubes Limited",
+    "mcap_cr": 820.75,
+    "pe": 20.147058,
+    "roe": 14.37,
+    "ocf_cr": -13.79,
+    "debt_to_equity": 47.967,
+    "eps": 6.8,
+    "book_value": 63.003,
+    "div_yield": 0,
+    "pat_cagr": -32.5,
+    "rev_cagr": -0.1,
+    "mcap_3y": -6.8
   },
   {
     "ticker": "SALZERELEC",
@@ -721,7 +1033,19 @@
       "ATEX product revenue %",
       "European export growth",
       "New ATEX product qualifications"
-    ]
+    ],
+    "name": "Salzer Electronics Limited",
+    "mcap_cr": 1156.8,
+    "pe": 21.857668,
+    "roe": 9.31,
+    "ocf_cr": 46.48,
+    "debt_to_equity": 88.776,
+    "eps": 29.93,
+    "book_value": 335.162,
+    "div_yield": 38.0,
+    "pat_cagr": 0,
+    "rev_cagr": 26.2,
+    "mcap_3y": 103.14
   },
   {
     "ticker": "MENONBE",
@@ -747,7 +1071,19 @@
       "Cummins export order growth",
       "Industrial bearing revenue diversification",
       "Margin stability as ICE volumes plateau"
-    ]
+    ],
+    "name": "Menon Bearings Limited",
+    "mcap_cr": 997.18,
+    "pe": 26.05271,
+    "roe": 22.25,
+    "ocf_cr": 23.32,
+    "debt_to_equity": 25.159,
+    "eps": 6.83,
+    "book_value": 33.094,
+    "div_yield": 113.0,
+    "pat_cagr": 29.2,
+    "rev_cagr": -27.4,
+    "mcap_3y": 39.25
   },
   {
     "ticker": "RUBICON",
@@ -774,7 +1110,19 @@
       "ANDA approvals filed and pending",
       "US revenue growth",
       "Revenue per product complexity tier"
-    ]
+    ],
+    "name": "RUBICON RESEARCH LIMITED",
+    "mcap_cr": 22551.02,
+    "pe": 89.63982,
+    "roe": 26.97,
+    "ocf_cr": 205.05,
+    "debt_to_equity": 24.131,
+    "eps": 15.27,
+    "book_value": 41.957,
+    "div_yield": 0,
+    "pat_cagr": 96.6,
+    "rev_cagr": 43.5,
+    "mcap_3y": 117.89
   },
   {
     "ticker": "RKSWAMY",
@@ -801,7 +1149,19 @@
       "Revenue growth and digital mix",
       "PSU client retention",
       "EBITDA margin expansion"
-    ]
+    ],
+    "name": "R K SWAMY LIMITED",
+    "mcap_cr": 499.83,
+    "pe": 22.607306,
+    "roe": 8.61,
+    "ocf_cr": 38.42,
+    "debt_to_equity": 16.248,
+    "eps": 4.38,
+    "book_value": 52.376,
+    "div_yield": 150.0,
+    "pat_cagr": 29.5,
+    "rev_cagr": 20.4,
+    "mcap_3y": -61.65
   },
   {
     "ticker": "RATEGAIN",
@@ -828,7 +1188,19 @@
       "ARR (Annual Recurring Revenue) growth",
       "Net Revenue Retention >110%",
       "New product (AI personalisation) launches"
-    ]
+    ],
+    "name": "RateGain Travel Technologies Limited",
+    "mcap_cr": 10120.98,
+    "pe": 52.224255,
+    "roe": 10.54,
+    "ocf_cr": 233.71,
+    "debt_to_equity": 47.296,
+    "eps": 16.41,
+    "book_value": 169.847,
+    "div_yield": 0,
+    "pat_cagr": 27.1,
+    "rev_cagr": 174.5,
+    "mcap_3y": 117.61
   },
   {
     "ticker": "GMDCLTD",
@@ -854,7 +1226,19 @@
       "Bauxite volume growth",
       "Lithium/critical mineral exploration progress",
       "Revenue diversification from lignite"
-    ]
+    ],
+    "name": "Gujarat Mineral Development Corporation Limited",
+    "mcap_cr": 19647.63,
+    "pe": 20.526577,
+    "roe": 14.19,
+    "ocf_cr": 743.72,
+    "debt_to_equity": 4.475,
+    "eps": 30.1,
+    "book_value": 222.287,
+    "div_yield": 163.0,
+    "pat_cagr": -14.3,
+    "rev_cagr": -9.2,
+    "mcap_3y": 302.95
   },
   {
     "ticker": "TREL",
@@ -881,7 +1265,19 @@
       "Export revenue growth by geography",
       "Wheat straw paper realisation vs wood-pulp paper",
       "Terry towel EBITDA margin"
-    ]
+    ],
+    "name": "Transindia Real Estate Limited",
+    "mcap_cr": 649.13,
+    "pe": 16.512499,
+    "roe": 3.12,
+    "ocf_cr": 43.26,
+    "debt_to_equity": null,
+    "eps": 1.6,
+    "book_value": 51.495,
+    "div_yield": 0,
+    "pat_cagr": -69.6,
+    "rev_cagr": 5.1,
+    "mcap_3y": -26.15
   },
   {
     "ticker": "EIMCOELECO",
@@ -907,7 +1303,19 @@
       "CIL equipment order book",
       "LHD replacement cycle",
       "Revenue from spares and maintenance"
-    ]
+    ],
+    "name": "Eimco Elecon (India) Limited",
+    "mcap_cr": 937.3,
+    "pe": 24.212486,
+    "roe": 8.61,
+    "ocf_cr": 22.11,
+    "debt_to_equity": 0.93,
+    "eps": 67.11,
+    "book_value": 810.252,
+    "div_yield": 25.0,
+    "pat_cagr": -57.2,
+    "rev_cagr": 4.0,
+    "mcap_3y": 172.33
   },
   {
     "ticker": "BLUEJET",
@@ -934,7 +1342,19 @@
       "Revenue growth from contrast media intermediates",
       "New molecule approvals (non-iodine contrast agents)",
       "Gross margin sustenance >55%"
-    ]
+    ],
+    "name": "Blue Jet Healthcare Limited",
+    "mcap_cr": 8829.39,
+    "pe": 35.619316,
+    "roe": 19.88,
+    "ocf_cr": 334.15,
+    "debt_to_equity": 3.102,
+    "eps": 14.29,
+    "book_value": 78.411,
+    "div_yield": 24.0,
+    "pat_cagr": -41.5,
+    "rev_cagr": -31.1,
+    "mcap_3y": 23.58
   },
   {
     "ticker": "SHREEJISPG",
@@ -960,7 +1380,19 @@
       "JJM order wins",
       "Revenue per tonne",
       "Order book size"
-    ]
+    ],
+    "name": "SHREEJI SHIPPING GLOBAL L",
+    "mcap_cr": 7852.66,
+    "pe": 49.385246,
+    "roe": 29.87,
+    "ocf_cr": 190.99,
+    "debt_to_equity": 36.166,
+    "eps": 9.76,
+    "book_value": 47.287,
+    "div_yield": 43.0,
+    "pat_cagr": -26.2,
+    "rev_cagr": 20.5,
+    "mcap_3y": 89.42
   },
   {
     "ticker": "NETWEB",
@@ -987,7 +1419,19 @@
       "India AI Mission RFP wins",
       "Private cloud GPU cluster deployments",
       "Revenue growth sustaining >50% YoY"
-    ]
+    ],
+    "name": "Netweb Technologies India Limited",
+    "mcap_cr": 28231.19,
+    "pe": 137.1887,
+    "roe": 32.83,
+    "ocf_cr": 171.49,
+    "debt_to_equity": 39.019,
+    "eps": 36.14,
+    "book_value": 127.358,
+    "div_yield": 5.0,
+    "pat_cagr": 64.3,
+    "rev_cagr": 86.6,
+    "mcap_3y": 445.74
   },
   {
     "ticker": "RAMCOSYS",
@@ -1014,7 +1458,19 @@
       "Aviation MRO ARR growth",
       "New airline customer wins",
       "Cloud vs on-premise revenue mix"
-    ]
+    ],
+    "name": "Ramco Systems Limited",
+    "mcap_cr": 2197.91,
+    "pe": 52.542675,
+    "roe": 12.49,
+    "ocf_cr": 134.45,
+    "debt_to_equity": 12.101,
+    "eps": 11.13,
+    "book_value": 93.616,
+    "div_yield": 0,
+    "pat_cagr": 361.6,
+    "rev_cagr": 19.4,
+    "mcap_3y": 166.06
   },
   {
     "ticker": "STALLION",
@@ -1040,7 +1496,19 @@
       "Revenue growth and refrigerant volume",
       "HFO (next-gen refrigerant) distribution share",
       "New OEM direct supply contracts"
-    ]
+    ],
+    "name": "STALLION IND FLUOROCHEM L",
+    "mcap_cr": 2214.34,
+    "pe": 35.654205,
+    "roe": 8.93,
+    "ocf_cr": 39.36,
+    "debt_to_equity": 5.066,
+    "eps": 5.35,
+    "book_value": 82.786,
+    "div_yield": 0,
+    "pat_cagr": -24.4,
+    "rev_cagr": -27.4,
+    "mcap_3y": 51.39
   },
   {
     "ticker": "RPTECH",
@@ -1067,7 +1535,19 @@
       "Revenue growth and gross margin",
       "AI PC and GPU revenue contribution",
       "Retailer count expansion"
-    ]
+    ],
+    "name": "Rashi Peripherals Limited",
+    "mcap_cr": 4345.75,
+    "pe": 16.025517,
+    "roe": 14.94,
+    "ocf_cr": 113.69,
+    "debt_to_equity": 48.65,
+    "eps": 41.15,
+    "book_value": 307.336,
+    "div_yield": 30.0,
+    "pat_cagr": 60.6,
+    "rev_cagr": 51.0,
+    "mcap_3y": 107.07
   },
   {
     "ticker": "SIGNPOST",
@@ -1094,7 +1574,19 @@
       "Revenue per panel",
       "New municipal concession wins",
       "Digital OOH % of total revenue"
-    ]
+    ],
+    "name": "Signpost India Limited",
+    "mcap_cr": 1386.76,
+    "pe": 19.745054,
+    "roe": 27.3,
+    "ocf_cr": 22.04,
+    "debt_to_equity": 69.752,
+    "eps": 13.14,
+    "book_value": 47.101,
+    "div_yield": 19.0,
+    "pat_cagr": 2094.4,
+    "rev_cagr": 46.1,
+    "mcap_3y": -20.24
   },
   {
     "ticker": "BOROSCI",
@@ -1120,7 +1612,19 @@
       "Export revenue growth",
       "Pharma-grade glassware %",
       "New product categories (plastic lab ware)"
-    ]
+    ],
+    "name": "Borosil Scientific Limited",
+    "mcap_cr": 1391.93,
+    "pe": 40.22879,
+    "roe": 8.17,
+    "ocf_cr": 43.27,
+    "debt_to_equity": 1.955,
+    "eps": 3.89,
+    "book_value": 49.629,
+    "div_yield": 0,
+    "pat_cagr": 212.2,
+    "rev_cagr": 10.6,
+    "mcap_3y": -0.13
   },
   {
     "ticker": "MAPMYINDIA",
@@ -1147,7 +1651,19 @@
       "API calls per month (data network effect)",
       "Auto OEM new platform wins",
       "Government mapping contract renewals"
-    ]
+    ],
+    "name": "C. E. Info Systems Limited",
+    "mcap_cr": 4996.4,
+    "pe": 37.36282,
+    "roe": 15.8,
+    "ocf_cr": 93.33,
+    "debt_to_equity": 0.778,
+    "eps": 24.42,
+    "book_value": 165.411,
+    "div_yield": 40.0,
+    "pat_cagr": 4.5,
+    "rev_cagr": 1.0,
+    "mcap_3y": -13.84
   },
   {
     "ticker": "YATHARTH",
@@ -1173,7 +1689,19 @@
       "ARPOB growth",
       "Occupancy rate",
       "New hospital bed addition timeline"
-    ]
+    ],
+    "name": "Yatharth Hospital & Trauma Care Services Limited",
+    "mcap_cr": 8087.99,
+    "pe": 46.070255,
+    "roe": 9.89,
+    "ocf_cr": 204.52,
+    "debt_to_equity": 14.614,
+    "eps": 18.22,
+    "book_value": 175.254,
+    "div_yield": 0,
+    "pat_cagr": 12.9,
+    "rev_cagr": 44.2,
+    "mcap_3y": 151.43
   },
   {
     "ticker": "VASCONEQ",
@@ -1199,7 +1727,19 @@
       "Revenue from real estate vs EPC mix",
       "Debt reduction",
       "New project launches and bookings"
-    ]
+    ],
+    "name": "Vascon Engineers Limited",
+    "mcap_cr": 842.03,
+    "pe": 16.860464,
+    "roe": 4.36,
+    "ocf_cr": -122.49,
+    "debt_to_equity": 26.086,
+    "eps": 2.15,
+    "book_value": 49.291,
+    "div_yield": 0,
+    "pat_cagr": -83.6,
+    "rev_cagr": -34.5,
+    "mcap_3y": -4.04
   },
   {
     "ticker": "FRACTAL",
@@ -1226,7 +1766,19 @@
       "Revenue growth and AI platform ARR",
       "Qure.ai radiology AI adoption",
       "New Fortune 500 client wins"
-    ]
+    ],
+    "name": "FRACTAL ANALYTICS LIMITED",
+    "mcap_cr": 17179.32,
+    "pe": 58.081394,
+    "roe": 11.58,
+    "ocf_cr": 409.0,
+    "debt_to_equity": 13.131,
+    "eps": 17.2,
+    "book_value": 191.148,
+    "div_yield": 0,
+    "pat_cagr": 106.4,
+    "rev_cagr": 17.0,
+    "mcap_3y": 17.92
   },
   {
     "ticker": "PROTEAN",
@@ -1253,7 +1805,19 @@
       "NPS AUM and subscriber growth",
       "PAN issuance volumes",
       "New government e-governance contracts"
-    ]
+    ],
+    "name": "Protean eGov Technologies Limited",
+    "mcap_cr": 2582.61,
+    "pe": 25.722088,
+    "roe": 9.69,
+    "ocf_cr": 78.47,
+    "debt_to_equity": 8.121,
+    "eps": 24.72,
+    "book_value": 265.614,
+    "div_yield": 158.0,
+    "pat_cagr": 49.1,
+    "rev_cagr": 38.4,
+    "mcap_3y": -56.25
   },
   {
     "ticker": "UNIVCABLES",
@@ -1280,7 +1844,19 @@
       "EHV cable order book from PGCIL",
       "Revenue growth and EBITDA margin",
       "New cable types (HVDC) qualification"
-    ]
+    ],
+    "name": "Universal Cables Limited",
+    "mcap_cr": 4196.06,
+    "pe": 25.75932,
+    "roe": 8.91,
+    "ocf_cr": 63.48,
+    "debt_to_equity": 62.258,
+    "eps": 46.95,
+    "book_value": 539.263,
+    "div_yield": 34.0,
+    "pat_cagr": 11.3,
+    "rev_cagr": 24.7,
+    "mcap_3y": 225.04
   },
   {
     "ticker": "RAYMOND",
@@ -1306,7 +1882,19 @@
       "Thane township bookings and cash flow",
       "Raymond Realty EBITDA",
       "Working capital and debt reduction"
-    ]
+    ],
+    "name": "Raymond Limited",
+    "mcap_cr": 3918.88,
+    "pe": 116.143974,
+    "roe": 1.47,
+    "ocf_cr": 41.77,
+    "debt_to_equity": 33.836,
+    "eps": 5.07,
+    "book_value": 427.855,
+    "div_yield": 0,
+    "pat_cagr": -99.1,
+    "rev_cagr": 0,
+    "mcap_3y": -62.18
   },
   {
     "ticker": "GRAPHITE",
@@ -1333,7 +1921,19 @@
       "Electrode realization/tonne vs needle coke cost",
       "Anode business revenue ramp",
       "European capacity utilization"
-    ]
+    ],
+    "name": "Graphite India Limited",
+    "mcap_cr": 12870.37,
+    "pe": 73.43924,
+    "roe": 2.92,
+    "ocf_cr": 82.0,
+    "debt_to_equity": 6.267,
+    "eps": 8.97,
+    "book_value": 298.785,
+    "div_yield": 107.0,
+    "pat_cagr": 0,
+    "rev_cagr": 22.5,
+    "mcap_3y": 113.62
   },
   {
     "ticker": "URBANCO",
@@ -1362,7 +1962,19 @@
       "Core services (cleaning, plumbing) EBITDA margin expansion",
       "Native product revenue %",
       "Quarterly path back to profitability"
-    ]
+    ],
+    "name": "Urban Company Limited",
+    "mcap_cr": 19217.44,
+    "pe": null,
+    "roe": -11.92,
+    "ocf_cr": -98.63,
+    "debt_to_equity": 6.335,
+    "eps": -1.57,
+    "book_value": 15.271,
+    "div_yield": 0,
+    "pat_cagr": 0,
+    "rev_cagr": 43.4,
+    "mcap_3y": -21.22
   },
   {
     "ticker": "GMRAIRPORT",
@@ -1389,7 +2001,19 @@
       "Passenger throughput growth",
       "Non-aero revenue % (retail, parking, hotel)",
       "Debt reduction from cash flows"
-    ]
+    ],
+    "name": "GMR Airports Limited",
+    "mcap_cr": 113920.8,
+    "pe": 829.9231,
+    "roe": 0,
+    "ocf_cr": 4883.53,
+    "debt_to_equity": null,
+    "eps": 0.13,
+    "book_value": -2.378,
+    "div_yield": 0,
+    "pat_cagr": 0,
+    "rev_cagr": 37.5,
+    "mcap_3y": 139.76
   },
   {
     "ticker": "LAXMIDENTL",
@@ -1416,7 +2040,19 @@
       "Clear aligner revenue growth",
       "Export market revenue by geography",
       "EBITDA margin expansion as scale grows"
-    ]
+    ],
+    "name": "LAXMI DENTAL LIMITED",
+    "mcap_cr": 1265.72,
+    "pe": 43.69829,
+    "roe": 12.77,
+    "ocf_cr": -5.0,
+    "debt_to_equity": 5.329,
+    "eps": 5.27,
+    "book_value": 44.179,
+    "div_yield": 0,
+    "pat_cagr": 137.9,
+    "rev_cagr": 21.9,
+    "mcap_3y": -58.17
   },
   {
     "ticker": "BIOCON",
@@ -1443,7 +2079,19 @@
       "Biocon Biologics US market share in each biosimilar",
       "Humira biosimilar (Hadlima) US uptake",
       "Insulin glargine market share in US"
-    ]
+    ],
+    "name": "Biocon Limited",
+    "mcap_cr": 67258.14,
+    "pe": 146.74911,
+    "roe": 1.15,
+    "ocf_cr": 1994.0,
+    "debt_to_equity": 42.145,
+    "eps": 2.83,
+    "book_value": 213.543,
+    "div_yield": 12.0,
+    "pat_cagr": -72.5,
+    "rev_cagr": 2.3,
+    "mcap_3y": 74.92
   },
   {
     "ticker": "ANURAS",
@@ -1470,7 +2118,19 @@
       "US FDA inspection outcomes",
       "Revenue per approved API molecule",
       "New DMF filings per year"
-    ]
+    ],
+    "name": "Anupam Rasayan India Ltd",
+    "mcap_cr": 14720.59,
+    "pe": 84.015594,
+    "roe": 5.76,
+    "ocf_cr": 334.33,
+    "debt_to_equity": 40.335,
+    "eps": 15.39,
+    "book_value": 293.12,
+    "div_yield": 12.0,
+    "pat_cagr": -7.6,
+    "rev_cagr": 27.5,
+    "mcap_3y": 7.65
   },
   {
     "ticker": "SHANKARA",
@@ -1497,7 +2157,19 @@
       "Same-store sales growth",
       "New store openings",
       "Gross margin per category"
-    ]
+    ],
+    "name": "Shankara Building Products Limited",
+    "mcap_cr": 278.38,
+    "pe": 72.658226,
+    "roe": 0.9,
+    "ocf_cr": -100.94,
+    "debt_to_equity": 42.93,
+    "eps": 1.58,
+    "book_value": 184.463,
+    "div_yield": 261.0,
+    "pat_cagr": 0,
+    "rev_cagr": 0,
+    "mcap_3y": -84.11
   },
   {
     "ticker": "INCAP",
@@ -1523,7 +2195,19 @@
       "Order book from mining/cement sectors",
       "Revenue growth",
       "Spare parts revenue (recurring)"
-    ]
+    ],
+    "name": "Incap Limited",
+    "mcap_cr": 42.99,
+    "pe": 126.893936,
+    "roe": 2.09,
+    "ocf_cr": 5.11,
+    "debt_to_equity": 5.096,
+    "eps": 0.66,
+    "book_value": 31.433,
+    "div_yield": 119.0,
+    "pat_cagr": 0,
+    "rev_cagr": 65.7,
+    "mcap_3y": 137.65
   },
   {
     "ticker": "SHILPAMED",
@@ -1550,7 +2234,19 @@
       "US FDA approvals for new oncology APIs",
       "HPAPI revenue growth",
       "Formulations business launch progress"
-    ]
+    ],
+    "name": "Shilpa Medicare Limited",
+    "mcap_cr": 10985.83,
+    "pe": 45.044106,
+    "roe": 9.82,
+    "ocf_cr": 342.18,
+    "debt_to_equity": 25.465,
+    "eps": 12.47,
+    "book_value": 132.457,
+    "div_yield": 9.0,
+    "pat_cagr": 644.6,
+    "rev_cagr": 31.5,
+    "mcap_3y": 373.48
   },
   {
     "ticker": "ECOSMOBLTY",
@@ -1576,7 +2272,19 @@
       "Fleet size growth",
       "Revenue per vehicle",
       "Path to EBITDA positive"
-    ]
+    ],
+    "name": "ECOS (INDIA) MOB & HOSP L",
+    "mcap_cr": 781.2,
+    "pe": 13.576642,
+    "roe": 23.65,
+    "ocf_cr": 68.22,
+    "debt_to_equity": 2.935,
+    "eps": 9.59,
+    "book_value": 44.277,
+    "div_yield": 182.0,
+    "pat_cagr": -12.6,
+    "rev_cagr": 16.7,
+    "mcap_3y": -70.38
   },
   {
     "ticker": "KIRLPNU",
@@ -1602,7 +2310,19 @@
       "Defence refrigeration order wins",
       "Industrial air system market share",
       "EBITDA margin expansion"
-    ]
+    ],
+    "name": "Kirloskar Pneumatic Company Limited",
+    "mcap_cr": 11309.87,
+    "pe": 44.15673,
+    "roe": 21.47,
+    "ocf_cr": 232.7,
+    "debt_to_equity": 0.262,
+    "eps": 39.43,
+    "book_value": 192.27,
+    "div_yield": 61.0,
+    "pat_cagr": 79.7,
+    "rev_cagr": 20.3,
+    "mcap_3y": 202.56
   },
   {
     "ticker": "PTC",
@@ -1629,7 +2349,19 @@
       "Trading volumes and margins",
       "PTCFS NPA levels",
       "Cross-border power trade volumes"
-    ]
+    ],
+    "name": "PTC India Limited",
+    "mcap_cr": 5677.44,
+    "pe": 9.378973,
+    "roe": 10.38,
+    "ocf_cr": 2817.0,
+    "debt_to_equity": 25.059,
+    "eps": 20.45,
+    "book_value": 202.122,
+    "div_yield": 753.0,
+    "pat_cagr": -70.0,
+    "rev_cagr": 28.9,
+    "mcap_3y": 142.76
   },
   {
     "ticker": "LANDMARK",
@@ -1655,7 +2387,19 @@
       "Same-store revenue growth",
       "After-sales service % of total revenue",
       "BYD EV volumes through Landmark"
-    ]
+    ],
+    "name": "Landmark Cars Limited",
+    "mcap_cr": 1773.25,
+    "pe": 47.516666,
+    "roe": 6.66,
+    "ocf_cr": 267.47,
+    "debt_to_equity": 173.699,
+    "eps": 9.0,
+    "book_value": 141.138,
+    "div_yield": 12.0,
+    "pat_cagr": 967.6,
+    "rev_cagr": 17.2,
+    "mcap_3y": -37.43
   },
   {
     "ticker": "FREDUN",
@@ -1682,7 +2426,19 @@
       "US FDA approvals for injectable ANDAs",
       "Export revenue growth",
       "New therapeutic area additions"
-    ]
+    ],
+    "name": "Fredun Pharmaceuticals Limited",
+    "mcap_cr": 1395.62,
+    "pe": 41.607925,
+    "roe": 15.55,
+    "ocf_cr": 11.9,
+    "debt_to_equity": 87.071,
+    "eps": 61.29,
+    "book_value": 508.174,
+    "div_yield": 3.0,
+    "pat_cagr": -20.9,
+    "rev_cagr": 26.9,
+    "mcap_3y": 186.08
   },
   {
     "ticker": "CMSINFO",
@@ -1709,7 +2465,19 @@
       "ATM managed count growth",
       "Revenue per ATM",
       "New product lines (bulk cash/retail CMS)"
-    ]
+    ],
+    "name": "CMS Info Systems Limited",
+    "mcap_cr": 4897.14,
+    "pe": 16.280788,
+    "roe": 12.91,
+    "ocf_cr": 389.59,
+    "debt_to_equity": 9.102,
+    "eps": 18.27,
+    "book_value": 147.983,
+    "div_yield": 186.0,
+    "pat_cagr": -18.1,
+    "rev_cagr": 2.2,
+    "mcap_3y": -2.32
   },
   {
     "ticker": "DIFFNKG",
@@ -1736,7 +2504,19 @@
       "Order book and quarterly execution pace",
       "Revenue from each sector (steel/mining/cement/railways mix)",
       "EBITDA margin sustenance >12%"
-    ]
+    ],
+    "name": "DIFFUSION ENGINEERS LTD",
+    "mcap_cr": 1397.8,
+    "pe": 27.765486,
+    "roe": 13.01,
+    "ocf_cr": 22.79,
+    "debt_to_equity": 7.057,
+    "eps": 13.56,
+    "book_value": 108.707,
+    "div_yield": 40.0,
+    "pat_cagr": 22.9,
+    "rev_cagr": 38.2,
+    "mcap_3y": 86.2
   },
   {
     "ticker": "MOSCHIP",
@@ -1763,7 +2543,19 @@
       "New ASIC tape-outs",
       "Revenue from semiconductor design services",
       "Government semiconductor design contracts"
-    ]
+    ],
+    "name": "MOSCHIP TECHNOLOGIES LTD",
+    "mcap_cr": 4204.06,
+    "pe": 119.05494,
+    "roe": 9.56,
+    "ocf_cr": 92.8,
+    "debt_to_equity": 21.561,
+    "eps": 1.82,
+    "book_value": 21.084,
+    "div_yield": 0,
+    "pat_cagr": -9.8,
+    "rev_cagr": 13.7,
+    "mcap_3y": 9.03
   },
   {
     "ticker": "GULFOILLUB",
@@ -1791,7 +2583,19 @@
       "Market share vs Castrol/Shell",
       "EV lubricant revenue growth",
       "2-wheeler lubricant volume growth"
-    ]
+    ],
+    "name": "Gulf Oil Lubricants India Limited",
+    "mcap_cr": 4993.52,
+    "pe": 13.780405,
+    "roe": 22.14,
+    "ocf_cr": 349.65,
+    "debt_to_equity": 35.781,
+    "eps": 73.18,
+    "book_value": 311.026,
+    "div_yield": 423.0,
+    "pat_cagr": -2.7,
+    "rev_cagr": 12.2,
+    "mcap_3y": 150.47
   },
   {
     "ticker": "DATAPATTNS",
@@ -1818,7 +2622,19 @@
       "Order book composition and execution pace",
       "LCA Mk1A avionics progress",
       "New programme qualifications"
-    ]
+    ],
+    "name": "Data Patterns (India) Limited",
+    "mcap_cr": 25537.09,
+    "pe": 93.70378,
+    "roe": 16.73,
+    "ocf_cr": 80.15,
+    "debt_to_equity": 0.304,
+    "eps": 48.68,
+    "book_value": 309.986,
+    "div_yield": 22.0,
+    "pat_cagr": 21.2,
+    "rev_cagr": -13.0,
+    "mcap_3y": 186.47
   },
   {
     "ticker": "CYIENTDLM",
@@ -1845,7 +2661,19 @@
       "Defence vs industrial revenue mix",
       "New defence programme qualifications",
       "Aerospace export order wins"
-    ]
+    ],
+    "name": "Cyient DLM Limited",
+    "mcap_cr": 3780.52,
+    "pe": 51.608887,
+    "roe": 7.47,
+    "ocf_cr": 53.9,
+    "debt_to_equity": 17.021,
+    "eps": 9.23,
+    "book_value": 127.635,
+    "div_yield": 0,
+    "pat_cagr": -27.5,
+    "rev_cagr": -13.8,
+    "mcap_3y": 13.17
   },
   {
     "ticker": "MMP",
@@ -1872,7 +2700,19 @@
       "Export revenue growth",
       "Aluminium paste market share",
       "EBITDA margin vs aluminium input cost"
-    ]
+    ],
+    "name": "MMP Industries Limited",
+    "mcap_cr": 678.88,
+    "pe": 21.869884,
+    "roe": 9.26,
+    "ocf_cr": 53.29,
+    "debt_to_equity": 53.253,
+    "eps": 12.22,
+    "book_value": 136.344,
+    "div_yield": 75.0,
+    "pat_cagr": 65.6,
+    "rev_cagr": 11.9,
+    "mcap_3y": 47.86
   },
   {
     "ticker": "BBL",
@@ -1899,7 +2739,19 @@
       "Order book from PGCIL and state utilities",
       "HT motor revenue growth",
       "EBITDA margin sustenance"
-    ]
+    ],
+    "name": "Bharat Bijlee Limited",
+    "mcap_cr": 3169.28,
+    "pe": 26.382196,
+    "roe": 6.05,
+    "ocf_cr": -92.5,
+    "debt_to_equity": 15.116,
+    "eps": 106.28,
+    "book_value": 1794.368,
+    "div_yield": 125.0,
+    "pat_cagr": -21.9,
+    "rev_cagr": 23.9,
+    "mcap_3y": 89.62
   },
   {
     "ticker": "CESC",
@@ -1925,7 +2777,19 @@
       "Distribution expansion licenses won",
       "AT&C (aggregate technical and commercial) loss reduction",
       "Solar capacity addition"
-    ]
+    ],
+    "name": "CESC Limited",
+    "mcap_cr": 22518.79,
+    "pe": 14.607051,
+    "roe": 12.55,
+    "ocf_cr": 4057.0,
+    "debt_to_equity": 164.311,
+    "eps": 11.63,
+    "book_value": 94.474,
+    "div_yield": 348.0,
+    "pat_cagr": 17.8,
+    "rev_cagr": 5.6,
+    "mcap_3y": 168.3
   },
   {
     "ticker": "OMINFRAL",
@@ -1952,7 +2816,19 @@
       "SRA Bandra project revenue and margin contribution",
       "Bhilwara-Jaipur toll road EBITDA",
       "New dam and hydro project order wins"
-    ]
+    ],
+    "name": "Om Infra Limited",
+    "mcap_cr": 818.58,
+    "pe": 40.476192,
+    "roe": 2.57,
+    "ocf_cr": -4.33,
+    "debt_to_equity": 10.595,
+    "eps": 2.1,
+    "book_value": 74.045,
+    "div_yield": 47.0,
+    "pat_cagr": -52.5,
+    "rev_cagr": -6.9,
+    "mcap_3y": 106.75
   },
   {
     "ticker": "WHIRLPOOL",
@@ -1979,7 +2855,19 @@
       "Washing machine market share",
       "Premium segment % of revenue",
       "Promoter stake status"
-    ]
+    ],
+    "name": "Whirlpool of India Limited",
+    "mcap_cr": 10052.09,
+    "pe": 34.167385,
+    "roe": 7.25,
+    "ocf_cr": 297.94,
+    "debt_to_equity": 8.621,
+    "eps": 23.18,
+    "book_value": 643.454,
+    "div_yield": 64.0,
+    "pat_cagr": -32.8,
+    "rev_cagr": 8.8,
+    "mcap_3y": -44.34
   },
   {
     "ticker": "PITTIENG",
@@ -2006,7 +2894,19 @@
       "Vande Bharat motor supply volumes",
       "GE export order status",
       "EV motor lamination product launch"
-    ]
+    ],
+    "name": "Pitti Engineering Limited",
+    "mcap_cr": 3664.6,
+    "pe": 31.248032,
+    "roe": 12.5,
+    "ocf_cr": 204.91,
+    "debt_to_equity": 82.134,
+    "eps": 31.77,
+    "book_value": 267.367,
+    "div_yield": 15.0,
+    "pat_cagr": -25.0,
+    "rev_cagr": 6.9,
+    "mcap_3y": 183.38
   },
   {
     "ticker": "RAYMONDREL",
@@ -2032,7 +2932,19 @@
       "Quarterly bookings value and units",
       "Cash collection from sold units",
       "New phase launches"
-    ]
+    ],
+    "name": "Raymond Realty Limited",
+    "mcap_cr": 3991.75,
+    "pe": 13.170838,
+    "roe": 37.72,
+    "ocf_cr": -909.96,
+    "debt_to_equity": 64.676,
+    "eps": 45.54,
+    "book_value": 201.664,
+    "div_yield": 33.0,
+    "pat_cagr": 65.7,
+    "rev_cagr": 888.2,
+    "mcap_3y": -38.11
   },
   {
     "ticker": "NIITLTD",
@@ -2059,7 +2971,19 @@
       "Corporate (StackRoute) revenue growth",
       "Online learner registrations",
       "EBITDA margin improvement"
-    ]
+    ],
+    "name": "NIIT Limited",
+    "mcap_cr": 1444.35,
+    "pe": 264.5,
+    "roe": 0.57,
+    "ocf_cr": 7.0,
+    "debt_to_equity": 0.65,
+    "eps": 0.4,
+    "book_value": 77.497,
+    "div_yield": 95.0,
+    "pat_cagr": 0,
+    "rev_cagr": 15.6,
+    "mcap_3y": -73.41
   },
   {
     "ticker": "RUSTOMJEE",
@@ -2085,7 +3009,19 @@
       "Quarterly bookings value",
       "Land bank monetisation pace",
       "Net debt reduction"
-    ]
+    ],
+    "name": "Keystone Realtors Limited",
+    "mcap_cr": 5175.72,
+    "pe": 66.022545,
+    "roe": 3.34,
+    "ocf_cr": -509.05,
+    "debt_to_equity": 51.271,
+    "eps": 6.21,
+    "book_value": 226.684,
+    "div_yield": 38.0,
+    "pat_cagr": -19.1,
+    "rev_cagr": 172.9,
+    "mcap_3y": -19.23
   },
   {
     "ticker": "INTERARCH",
@@ -2112,7 +3048,19 @@
       "Order book size and composition",
       "E-commerce warehouse wins",
       "EBITDA margin vs steel input cost"
-    ]
+    ],
+    "name": "Interarch Building Solutions Limited",
+    "mcap_cr": 3138.18,
+    "pe": 23.423887,
+    "roe": 16.48,
+    "ocf_cr": -18.82,
+    "debt_to_equity": 1.99,
+    "eps": 79.88,
+    "book_value": 525.272,
+    "div_yield": 67.0,
+    "pat_cagr": -5.2,
+    "rev_cagr": 8.7,
+    "mcap_3y": 57.43
   },
   {
     "ticker": "CAPACITE",
@@ -2138,7 +3086,19 @@
       "Order book execution pace",
       "Receivables days",
       "Revenue growth vs order book"
-    ]
+    ],
+    "name": "Capacit'e Infraprojects Limited",
+    "mcap_cr": 1954.35,
+    "pe": 10.20318,
+    "roe": 10.63,
+    "ocf_cr": 223.3,
+    "debt_to_equity": 25.274,
+    "eps": 22.64,
+    "book_value": 215.282,
+    "div_yield": 0,
+    "pat_cagr": -16.1,
+    "rev_cagr": 6.0,
+    "mcap_3y": 34.97
   },
   {
     "ticker": "RAILTEL",
@@ -2165,7 +3125,19 @@
       "Data centre capacity utilisation",
       "BharatNet revenue ramp",
       "Broadband subscriber addition per quarter"
-    ]
+    ],
+    "name": "RailTel Corporation of India Limited",
+    "mcap_cr": 10475.43,
+    "pe": 32.936428,
+    "roe": 16.25,
+    "ocf_cr": 316.45,
+    "debt_to_equity": 2.817,
+    "eps": 9.91,
+    "book_value": 70.521,
+    "div_yield": 120.0,
+    "pat_cagr": 25.3,
+    "rev_cagr": 27.6,
+    "mcap_3y": 181.15
   },
   {
     "ticker": "AFFLE",
@@ -2192,7 +3164,19 @@
       "Connected device count growth",
       "CPCU revenue per converted user",
       "International revenue %"
-    ]
+    ],
+    "name": "Affle 3i Limited",
+    "mcap_cr": 20941.39,
+    "pe": 46.070545,
+    "roe": 13.79,
+    "ocf_cr": 502.35,
+    "debt_to_equity": 0.405,
+    "eps": 32.32,
+    "book_value": 260.056,
+    "div_yield": 0,
+    "pat_cagr": 15.7,
+    "rev_cagr": 20.3,
+    "mcap_3y": 60.98
   },
   {
     "ticker": "SKFINDIA",
@@ -2219,7 +3203,19 @@
       "Railway and wind energy order intake",
       "EV bearing product launches",
       "After-market revenue growth"
-    ]
+    ],
+    "name": "SKF India Limited",
+    "mcap_cr": 8095.96,
+    "pe": 30.466976,
+    "roe": 13.54,
+    "ocf_cr": 362.84,
+    "debt_to_equity": 0.219,
+    "eps": 53.75,
+    "book_value": 268.909,
+    "div_yield": 244.0,
+    "pat_cagr": 0,
+    "rev_cagr": -51.0,
+    "mcap_3y": -61.54
   },
   {
     "ticker": "TEJASNET",
@@ -2246,7 +3242,19 @@
       "BSNL site deployment pace",
       "Revenue from private telcos (Airtel/Jio)",
       "New product launches (5G NR, optical transport)"
-    ]
+    ],
+    "name": "Tejas Networks Limited",
+    "mcap_cr": 10561.7,
+    "pe": null,
+    "roe": -26.82,
+    "ocf_cr": 135.17,
+    "debt_to_equity": 142.52,
+    "eps": -51.34,
+    "book_value": 164.895,
+    "div_yield": 43.0,
+    "pat_cagr": 0,
+    "rev_cagr": -82.6,
+    "mcap_3y": -11.4
   },
   {
     "ticker": "VSTTILLERS",
@@ -2273,7 +3281,19 @@
       "Market share in power tillers",
       "Small tractor revenue growth",
       "Export market development"
-    ]
+    ],
+    "name": "V.S.T. Tillers Tractors Limited",
+    "mcap_cr": 3957.86,
+    "pe": 37.840008,
+    "roe": 9.99,
+    "ocf_cr": 131.61,
+    "debt_to_equity": 0.175,
+    "eps": 120.88,
+    "book_value": 1222.373,
+    "div_yield": 44.0,
+    "pat_cagr": -79.2,
+    "rev_cagr": 9.0,
+    "mcap_3y": 73.15
   },
   {
     "ticker": "ASALCBR",
@@ -2299,7 +3319,19 @@
       "Export revenue growth",
       "Market share in phthalocyanine pigments",
       "Gross margin vs copper prices"
-    ]
+    ],
+    "name": "Associated Alcohols & Breweries Limited",
+    "mcap_cr": 1658.04,
+    "pe": 17.98236,
+    "roe": 14.56,
+    "ocf_cr": 51.77,
+    "debt_to_equity": 9.922,
+    "eps": 45.92,
+    "book_value": 364.385,
+    "div_yield": 24.0,
+    "pat_cagr": 4.9,
+    "rev_cagr": -1.6,
+    "mcap_3y": 132.95
   },
   {
     "ticker": "GREAVESCOT",
@@ -2326,7 +3358,19 @@
       "Ampere EV market share",
       "Greaves Electric 3-wheeler volumes",
       "ICE engine revenue decline pace"
-    ]
+    ],
+    "name": "Greaves Cotton Limited",
+    "mcap_cr": 4440.05,
+    "pe": 41.89011,
+    "roe": 0,
+    "ocf_cr": 0.0,
+    "debt_to_equity": 12.328,
+    "eps": 4.55,
+    "book_value": 61.57,
+    "div_yield": 152.0,
+    "pat_cagr": 22.5,
+    "rev_cagr": 16.6,
+    "mcap_3y": 32.14
   },
   {
     "ticker": "ELDEHSG",
@@ -2352,7 +3396,19 @@
       "Bookings per quarter",
       "Revenue per project",
       "Net debt"
-    ]
+    ],
+    "name": "Eldeco Housing and Industries Limited",
+    "mcap_cr": 774.79,
+    "pe": 31.875002,
+    "roe": 6.2,
+    "ocf_cr": 104.11,
+    "debt_to_equity": 38.581,
+    "eps": 24.72,
+    "book_value": 406.471,
+    "div_yield": 115.0,
+    "pat_cagr": 50.0,
+    "rev_cagr": 63.7,
+    "mcap_3y": 36.2
   },
   {
     "ticker": "ARIS",
@@ -2373,7 +3429,19 @@
     ],
     "track": [
       "Verify company and update analysis"
-    ]
+    ],
+    "name": "Arisinfra Solutions Limited",
+    "mcap_cr": 980.32,
+    "pe": 17.52924,
+    "roe": 12.22,
+    "ocf_cr": 141.99,
+    "debt_to_equity": 9.356,
+    "eps": 6.84,
+    "book_value": 96.516,
+    "div_yield": 0,
+    "pat_cagr": 0,
+    "rev_cagr": 55.3,
+    "mcap_3y": -31.24
   },
   {
     "ticker": "QUESS",
@@ -2400,7 +3468,19 @@
       "Headcount growth",
       "EBITDA per employee",
       "Technology (Allsec) revenue as % of total"
-    ]
+    ],
+    "name": "Quess Corp Limited",
+    "mcap_cr": 3689.19,
+    "pe": 16.644205,
+    "roe": 19.71,
+    "ocf_cr": 230.06,
+    "debt_to_equity": 10.656,
+    "eps": 14.84,
+    "book_value": 78.207,
+    "div_yield": 400.0,
+    "pat_cagr": 0,
+    "rev_cagr": 0,
+    "mcap_3y": -32.15
   },
   {
     "ticker": "AVALON",
@@ -2427,7 +3507,19 @@
       "US revenue growth",
       "Clean energy segment contribution",
       "EBITDA margin expansion"
-    ]
+    ],
+    "name": "Avalon Technologies Limited",
+    "mcap_cr": 11654.45,
+    "pe": 103.499405,
+    "roe": 16.94,
+    "ocf_cr": 57.19,
+    "debt_to_equity": 29.503,
+    "eps": 16.86,
+    "book_value": 108.034,
+    "div_yield": 0,
+    "pat_cagr": 69.0,
+    "rev_cagr": 40.0,
+    "mcap_3y": 313.95
   },
   {
     "ticker": "GIPCL",
@@ -2453,7 +3545,19 @@
       "Solar capacity addition vs timeline",
       "PLF (Plant Load Factor) for thermal plants",
       "GUVNL payment cycle improvement"
-    ]
+    ],
+    "name": "Gujarat Industries Power Company Limited",
+    "mcap_cr": 2542.9,
+    "pe": 6.3157287,
+    "roe": 0,
+    "ocf_cr": 0.0,
+    "debt_to_equity": 93.592,
+    "eps": 25.94,
+    "book_value": 247.441,
+    "div_yield": 250.0,
+    "pat_cagr": 358.2,
+    "rev_cagr": 26.6,
+    "mcap_3y": 76.99
   },
   {
     "ticker": "TVSELECT",
@@ -2479,7 +3583,19 @@
       "POS device installed base growth",
       "AMC revenue growth",
       "Digital payment terminal revenue %"
-    ]
+    ],
+    "name": "TVS Electronics Limited",
+    "mcap_cr": 870.15,
+    "pe": 670.07245,
+    "roe": 1.33,
+    "ocf_cr": 5.67,
+    "debt_to_equity": 55.935,
+    "eps": 0.69,
+    "book_value": 51.51,
+    "div_yield": 0,
+    "pat_cagr": 0,
+    "rev_cagr": 2.5,
+    "mcap_3y": 33.61
   },
   {
     "ticker": "EMBDL",
@@ -2506,7 +3622,19 @@
       "Quarterly occupancy rates by location",
       "Rentals per sq.ft. by geography",
       "New institutional lease signings"
-    ]
+    ],
+    "name": "EMBASSY DEVELOPMENTS LTD",
+    "mcap_cr": 9001.86,
+    "pe": null,
+    "roe": -9.05,
+    "ocf_cr": 44.48,
+    "debt_to_equity": 53.414,
+    "eps": -6.43,
+    "book_value": 71.012,
+    "div_yield": 0,
+    "pat_cagr": 0,
+    "rev_cagr": -73.0,
+    "mcap_3y": -4.13
   },
   {
     "ticker": "LAKSELEC",
@@ -2531,7 +3659,19 @@
       "Verify company details",
       "Revenue growth",
       "Order book"
-    ]
+    ],
+    "name": "Lakshmi Electrical Control Systems Limited",
+    "mcap_cr": 187.05,
+    "pe": 156.58435,
+    "roe": 0.44,
+    "ocf_cr": 3.69,
+    "debt_to_equity": 5.654,
+    "eps": 4.86,
+    "book_value": 1038.039,
+    "div_yield": 39.0,
+    "pat_cagr": -56.0,
+    "rev_cagr": 17.8,
+    "mcap_3y": -32.2
   },
   {
     "ticker": "TATACOMM",
@@ -2558,7 +3698,19 @@
       "Data and managed services revenue growth",
       "EBITDA margin expansion as voice declines",
       "Cybersecurity and IoT revenue contribution"
-    ]
+    ],
+    "name": "Tata Communications Limited",
+    "mcap_cr": 54783.07,
+    "pe": 52.588234,
+    "roe": 31.13,
+    "ocf_cr": 4479.1,
+    "debt_to_equity": 335.485,
+    "eps": 36.55,
+    "book_value": 99.875,
+    "div_yield": 91.0,
+    "pat_cagr": -74.7,
+    "rev_cagr": 9.4,
+    "mcap_3y": 57.13
   },
   {
     "ticker": "UNIECOM",
@@ -2586,7 +3738,19 @@
       "ARR (Annual Recurring Revenue) and NRR (Net Revenue Retention >110%)",
       "ARPU (Average Revenue Per User) growth",
       "UniBot adoption and revenue contribution"
-    ]
+    ],
+    "name": "UNICOMMERCE ESOLUTIONS L",
+    "mcap_cr": 1007.93,
+    "pe": 50.38764,
+    "roe": 15.55,
+    "ocf_cr": 47.0,
+    "debt_to_equity": 4.907,
+    "eps": 1.78,
+    "book_value": 16.459,
+    "div_yield": 0,
+    "pat_cagr": -1.7,
+    "rev_cagr": 16.6,
+    "mcap_3y": -57.31
   },
   {
     "ticker": "SUVEN",
@@ -2613,7 +3777,19 @@
       "Revenue from top CNS innovator clients",
       "Milestone revenue vs FDF (finished dose) transition",
       "New molecule engagements per quarter"
-    ]
+    ],
+    "name": "Suven Life Sciences Limited",
+    "mcap_cr": 7084.85,
+    "pe": null,
+    "roe": -78.8,
+    "ocf_cr": -301.79,
+    "debt_to_equity": 2.823,
+    "eps": -12.14,
+    "book_value": 26.201,
+    "div_yield": 0,
+    "pat_cagr": 0,
+    "rev_cagr": 3.6,
+    "mcap_3y": 372.14
   },
   {
     "ticker": "SONACOMS",
@@ -2644,7 +3820,19 @@
       "International (Mexico, USA) revenue growth",
       "EBITDA margin recovery toward 15%+",
       "Railway equipment segment contribution"
-    ]
+    ],
+    "name": "Sona BLW Precision Forgings Limited",
+    "mcap_cr": 37741.96,
+    "pe": 58.907764,
+    "roe": 10.69,
+    "ocf_cr": 659.06,
+    "debt_to_equity": 7.213,
+    "eps": 10.3,
+    "book_value": 96.33,
+    "div_yield": 60.0,
+    "pat_cagr": 17.1,
+    "rev_cagr": 45.4,
+    "mcap_3y": 14.53
   },
   {
     "ticker": "AEROFLEX",
@@ -2669,7 +3857,19 @@
       "Export revenue growth >20% QoQ",
       "Gross margin >35%",
       "Aerospace/robotics order wins"
-    ]
+    ],
+    "name": "Aeroflex Industries Limited",
+    "mcap_cr": 6312.18,
+    "pe": 111.18881,
+    "roe": 14.06,
+    "ocf_cr": 65.84,
+    "debt_to_equity": 1.988,
+    "eps": 4.29,
+    "book_value": 34.493,
+    "div_yield": 6.0,
+    "pat_cagr": 56.4,
+    "rev_cagr": 37.2,
+    "mcap_3y": 193.08
   },
   {
     "ticker": "SANSERA",
@@ -2694,7 +3894,19 @@
       "Non-auto revenue moving toward 40%",
       "Aerospace facility Bengaluru ramp",
       "Quarterly order book"
-    ]
+    ],
+    "name": "Sansera Engineering Limited",
+    "mcap_cr": 17897.4,
+    "pe": 55.27045,
+    "roe": 11.13,
+    "ocf_cr": 387.07,
+    "debt_to_equity": 19.023,
+    "eps": 51.95,
+    "book_value": 463.624,
+    "div_yield": 11.0,
+    "pat_cagr": 103.8,
+    "rev_cagr": 27.8,
+    "mcap_3y": 268.83
   },
   {
     "ticker": "GESHIP",
@@ -2721,7 +3933,19 @@
       "Day rates vs break-even",
       "Fleet utilization %",
       "Dividend sustainability"
-    ]
+    ],
+    "name": "The Great Eastern Shipping Company Limited",
+    "mcap_cr": 20011.67,
+    "pe": 6.8142924,
+    "roe": 18.85,
+    "ocf_cr": 2853.87,
+    "debt_to_equity": 6.409,
+    "eps": 205.7,
+    "book_value": 1188.084,
+    "div_yield": 330.0,
+    "pat_cagr": 187.5,
+    "rev_cagr": 23.6,
+    "mcap_3y": 129.67
   },
   {
     "ticker": "THERMAX",
@@ -2748,7 +3972,19 @@
       "Order booking >â‚¹3,000 Cr/quarter",
       "Green solutions revenue %",
       "TBWES order wins"
-    ]
+    ],
+    "name": "Thermax Limited",
+    "mcap_cr": 53348.16,
+    "pe": 73.85838,
+    "roe": 13.69,
+    "ocf_cr": 541.55,
+    "debt_to_equity": 42.166,
+    "eps": 64.12,
+    "book_value": 492.563,
+    "div_yield": 30.0,
+    "pat_cagr": 18.7,
+    "rev_cagr": 11.1,
+    "mcap_3y": 110.92
   },
   {
     "ticker": "TRITURBINE",
@@ -2774,7 +4010,19 @@
       "After-market revenue % of total",
       "International order bookings",
       "Export backlog value"
-    ]
+    ],
+    "name": "Triveni Turbine Limited",
+    "mcap_cr": 21071.67,
+    "pe": 60.204357,
+    "roe": 26.22,
+    "ocf_cr": 111.0,
+    "debt_to_equity": 2.476,
+    "eps": 11.01,
+    "book_value": 45.551,
+    "div_yield": 60.0,
+    "pat_cagr": 7.4,
+    "rev_cagr": 26.3,
+    "mcap_3y": 68.79
   },
   {
     "ticker": "ELGIEQUIP",
@@ -2800,7 +4048,19 @@
       "International revenue %",
       "Oil-free compressor mix",
       "EV segment product launches"
-    ]
+    ],
+    "name": "Elgi Equipments Limited",
+    "mcap_cr": 19098.9,
+    "pe": 44.58057,
+    "roe": 21.0,
+    "ocf_cr": 453.5,
+    "debt_to_equity": 23.885,
+    "eps": 13.59,
+    "book_value": 70.854,
+    "div_yield": 45.0,
+    "pat_cagr": 25.4,
+    "rev_cagr": 12.1,
+    "mcap_3y": 12.64
   },
   {
     "ticker": "INOXINDIA",
@@ -2827,7 +4087,19 @@
       "Order intake hydrogen/LNG verticals",
       "Space program awarding",
       "Revenue per segment shift"
-    ]
+    ],
+    "name": "INOX India Limited",
+    "mcap_cr": 16972.78,
+    "pe": 66.00777,
+    "roe": 25.9,
+    "ocf_cr": 116.65,
+    "debt_to_equity": 7.251,
+    "eps": 28.33,
+    "book_value": 123.144,
+    "div_yield": 11.0,
+    "pat_cagr": 14.9,
+    "rev_cagr": 24.7,
+    "mcap_3y": 99.51
   },
   {
     "ticker": "KENNAMET",
@@ -2853,7 +4125,19 @@
       "Aerospace/defence order book",
       "Revenue growth vs global Kennametal",
       "EBITDA margins vs global parent"
-    ]
+    ],
+    "name": "Kennametal India Limited",
+    "mcap_cr": 6678.75,
+    "pe": 48.296253,
+    "roe": 0,
+    "ocf_cr": 0.0,
+    "debt_to_equity": 0.262,
+    "eps": 62.92,
+    "book_value": 364.997,
+    "div_yield": 132.0,
+    "pat_cagr": 110.4,
+    "rev_cagr": 39.2,
+    "mcap_3y": 168.78
   },
   {
     "ticker": "PARKHOSPS",
@@ -2879,7 +4163,19 @@
       "Occupancy, ARPOB and case-mix quality",
       "Doctor retention and nurse productivity",
       "RoCE on new bed additions and acquired assets"
-    ]
+    ],
+    "name": "Park Medi World Limited",
+    "mcap_cr": 11251.8,
+    "pe": 37.918488,
+    "roe": 16.94,
+    "ocf_cr": 329.09,
+    "debt_to_equity": 17.307,
+    "eps": 6.87,
+    "book_value": 50.789,
+    "div_yield": 0,
+    "pat_cagr": 30.9,
+    "rev_cagr": 30.1,
+    "mcap_3y": 76.07
   },
   {
     "ticker": "NLCINDIA",
@@ -2905,7 +4201,19 @@
       "Renewable capacity addition vs target",
       "EBITDA per unit solar vs thermal",
       "Govt policy on lignite pricing"
-    ]
+    ],
+    "name": "NLC India Limited",
+    "mcap_cr": 43505.73,
+    "pe": 12.357227,
+    "roe": 15.97,
+    "ocf_cr": 5166.07,
+    "debt_to_equity": 82.0,
+    "eps": 25.39,
+    "book_value": 155.242,
+    "div_yield": 230.0,
+    "pat_cagr": -12.7,
+    "rev_cagr": -0.3,
+    "mcap_3y": 247.91
   },
   {
     "ticker": "PFC",
@@ -2932,7 +4240,19 @@
       "NPA levels and PCR",
       "Loan book growth rate",
       "Disbursements under Govt schemes"
-    ]
+    ],
+    "name": "Power Finance Corporation Limited",
+    "mcap_cr": 140914.34,
+    "pe": 5.4401836,
+    "roe": 20.47,
+    "ocf_cr": -4504.5,
+    "debt_to_equity": 586.017,
+    "eps": 78.49,
+    "book_value": 402.627,
+    "div_yield": 342.0,
+    "pat_cagr": 10.8,
+    "rev_cagr": -15.4,
+    "mcap_3y": 256.89
   },
   {
     "ticker": "SJVN",
@@ -2958,7 +4278,19 @@
       "MW capacity addition vs timeline",
       "PPAs signed for new capacity",
       "Revenue growth from operational projects"
-    ]
+    ],
+    "name": "SJVN Limited",
+    "mcap_cr": 28903.64,
+    "pe": 45.1227,
+    "roe": 4.51,
+    "ocf_cr": 1859.63,
+    "debt_to_equity": 226.528,
+    "eps": 1.63,
+    "book_value": 36.951,
+    "div_yield": 198.0,
+    "pat_cagr": 0,
+    "rev_cagr": 196.7,
+    "mcap_3y": 119.69
   },
   {
     "ticker": "ISGEC",
@@ -2984,7 +4316,19 @@
       "Order book value and execution pace",
       "Sugar equipment export orders",
       "Margin recovery trajectory"
-    ]
+    ],
+    "name": "Isgec Heavy Engineering Limited",
+    "mcap_cr": 6813.24,
+    "pe": 62.608105,
+    "roe": 5.37,
+    "ocf_cr": 764.97,
+    "debt_to_equity": 32.93,
+    "eps": 14.8,
+    "book_value": 372.202,
+    "div_yield": 54.0,
+    "pat_cagr": 4.1,
+    "rev_cagr": 17.4,
+    "mcap_3y": 89.4
   },
   {
     "ticker": "HEG",
@@ -3010,7 +4354,19 @@
       "Electrode realization price/tonne",
       "Needle coke input cost",
       "Anode business revenue ramp"
-    ]
+    ],
+    "name": "HEG Limited",
+    "mcap_cr": 10516.31,
+    "pe": 27.578442,
+    "roe": 7.34,
+    "ocf_cr": 213.19,
+    "debt_to_equity": 16.73,
+    "eps": 19.76,
+    "book_value": 246.741,
+    "div_yield": 33.0,
+    "pat_cagr": 0,
+    "rev_cagr": 11.2,
+    "mcap_3y": 146.67
   },
   {
     "ticker": "INGERRAND",
@@ -3036,7 +4392,19 @@
       "Revenue growth vs industrial capex index",
       "Service revenue as % of total",
       "New product introductions from parent"
-    ]
+    ],
+    "name": "Ingersoll-Rand (India) Limited",
+    "mcap_cr": 14126.68,
+    "pe": 55.315205,
+    "roe": 41.8,
+    "ocf_cr": 273.66,
+    "debt_to_equity": 1.501,
+    "eps": 80.9,
+    "book_value": 195.043,
+    "div_yield": 180.0,
+    "pat_cagr": -4.2,
+    "rev_cagr": -3.7,
+    "mcap_3y": 73.11
   },
   {
     "ticker": "WELCORP",
@@ -3063,7 +4431,19 @@
       "Order book from water/DI pipes",
       "US revenue vs India mix",
       "Sintex EBITDA contribution"
-    ]
+    ],
+    "name": "Welspun Corp Limited",
+    "mcap_cr": 36359.5,
+    "pe": 22.55521,
+    "roe": 18.92,
+    "ocf_cr": 3204.28,
+    "debt_to_equity": 25.042,
+    "eps": 61.13,
+    "book_value": 310.136,
+    "div_yield": 36.0,
+    "pat_cagr": -47.0,
+    "rev_cagr": 9.9,
+    "mcap_3y": 487.77
   },
   {
     "ticker": "JNKINDIA",
@@ -3090,7 +4470,19 @@
       "Order book and execution timeline",
       "Green hydrogen JV progress",
       "Export revenue %"
-    ]
+    ],
+    "name": "JNK India Limited",
+    "mcap_cr": 2745.94,
+    "pe": 42.415733,
+    "roe": 12.09,
+    "ocf_cr": -2.18,
+    "debt_to_equity": 15.97,
+    "eps": 11.57,
+    "book_value": 101.528,
+    "div_yield": 6.0,
+    "pat_cagr": 146.4,
+    "rev_cagr": 76.9,
+    "mcap_3y": -29.24
   },
   {
     "ticker": "LATENTVIEW",
@@ -3116,7 +4508,19 @@
       "Revenue growth sustaining >20%",
       "US client concentration",
       "GenAI project wins"
-    ]
+    ],
+    "name": "Latent View Analytics Limited",
+    "mcap_cr": 6305.0,
+    "pe": 31.839083,
+    "roe": 12.17,
+    "ocf_cr": 164.53,
+    "debt_to_equity": 1.863,
+    "eps": 9.57,
+    "book_value": 84.845,
+    "div_yield": 0,
+    "pat_cagr": -1.1,
+    "rev_cagr": 19.4,
+    "mcap_3y": -7.88
   },
   {
     "ticker": "POWERICA",
@@ -3143,7 +4547,19 @@
       "Data centre order wins",
       "AMC revenue growth",
       "Hybrid power product lines"
-    ]
+    ],
+    "name": "POWERICA LIMITED",
+    "mcap_cr": 6782.55,
+    "pe": 40.602276,
+    "roe": 17.89,
+    "ocf_cr": 452.88,
+    "debt_to_equity": 28.506,
+    "eps": 13.2,
+    "book_value": 178.923,
+    "div_yield": 0,
+    "pat_cagr": 12.7,
+    "rev_cagr": 10.9,
+    "mcap_3y": 37.42
   },
   {
     "ticker": "TEGA",
@@ -3169,7 +4585,19 @@
       "Export order book",
       "New product wins in lithium/copper mines",
       "EBITDA margin stability"
-    ]
+    ],
+    "name": "Tega Industries Limited",
+    "mcap_cr": 13634.93,
+    "pe": 88.57491,
+    "roe": 5.94,
+    "ocf_cr": 350.34,
+    "debt_to_equity": 11.693,
+    "eps": 20.49,
+    "book_value": 449.925,
+    "div_yield": 11.0,
+    "pat_cagr": -63.6,
+    "rev_cagr": -1.7,
+    "mcap_3y": 119.91
   },
   {
     "ticker": "ASHIANA",
@@ -3196,7 +4624,19 @@
       "Area booked per quarter",
       "Senior living units pipeline",
       "Cash flow from operations vs land acquisition"
-    ]
+    ],
+    "name": "Ashiana Housing Limited",
+    "mcap_cr": 3990.84,
+    "pe": 33.138565,
+    "roe": 14.52,
+    "ocf_cr": 342.19,
+    "debt_to_equity": 37.597,
+    "eps": 11.98,
+    "book_value": 90.124,
+    "div_yield": 64.0,
+    "pat_cagr": 6.8,
+    "rev_cagr": 46.8,
+    "mcap_3y": 122.97
   },
   {
     "ticker": "SCI",
@@ -3222,7 +4662,19 @@
       "Fleet renewal capex",
       "Privatization announcement",
       "Revenue per vessel vs GESHIP"
-    ]
+    ],
+    "name": "The Shipping Corporation of India Limited",
+    "mcap_cr": 14383.87,
+    "pe": 10.633608,
+    "roe": 0,
+    "ocf_cr": 0.0,
+    "debt_to_equity": 29.454,
+    "eps": 29.04,
+    "book_value": 183.101,
+    "div_yield": 424.0,
+    "pat_cagr": 118.9,
+    "rev_cagr": 14.2,
+    "mcap_3y": 244.89
   },
   {
     "ticker": "CARBORUNIV",
@@ -3249,7 +4701,19 @@
       "Advanced ceramics revenue %",
       "SiC capacity utilization",
       "Export revenue defence/aerospace"
-    ]
+    ],
+    "name": "Carborundum Universal Limited",
+    "mcap_cr": 20984.76,
+    "pe": 106.53771,
+    "roe": 4.37,
+    "ocf_cr": 367.35,
+    "debt_to_equity": 10.292,
+    "eps": 10.34,
+    "book_value": 206.187,
+    "div_yield": 38.0,
+    "pat_cagr": 0,
+    "rev_cagr": 14.9,
+    "mcap_3y": -3.48
   },
   {
     "ticker": "ENTERO",
@@ -3276,7 +4740,19 @@
       "Revenue growth and EBITDA margin expansion",
       "New cities/districts",
       "Pharmacy client retention rate"
-    ]
+    ],
+    "name": "Entero Healthcare Solutions Limited",
+    "mcap_cr": 4857.45,
+    "pe": 42.356735,
+    "roe": 8.28,
+    "ocf_cr": 96.2,
+    "debt_to_equity": 38.638,
+    "eps": 26.35,
+    "book_value": 388.256,
+    "div_yield": 0,
+    "pat_cagr": 9.1,
+    "rev_cagr": 42.6,
+    "mcap_3y": -2.91
   },
   {
     "ticker": "SIEMENS",
@@ -3303,7 +4779,19 @@
       "Railway and metro order wins",
       "Energy business demerger timeline",
       "Digital/software revenue as % of total"
-    ]
+    ],
+    "name": "Siemens Limited",
+    "mcap_cr": 129855.78,
+    "pe": 77.12352,
+    "roe": 0,
+    "ocf_cr": -356.93,
+    "debt_to_equity": 2.213,
+    "eps": 47.28,
+    "book_value": 388.917,
+    "div_yield": 39.0,
+    "pat_cagr": -36.4,
+    "rev_cagr": 14.6,
+    "mcap_3y": 79.47
   },
   {
     "ticker": "HONAUT",
@@ -3329,7 +4817,19 @@
       "Revenue from engineering services exports",
       "Process solutions order intake",
       "Building solutions growth"
-    ]
+    ],
+    "name": "Honeywell Automation India Limited",
+    "mcap_cr": 32664.45,
+    "pe": 62.3196,
+    "roe": 12.35,
+    "ocf_cr": 492.6,
+    "debt_to_equity": 2.476,
+    "eps": 592.43,
+    "book_value": 5046.735,
+    "div_yield": 30.0,
+    "pat_cagr": 14.1,
+    "rev_cagr": 5.9,
+    "mcap_3y": -6.81
   },
   {
     "ticker": "GRINDWELL",
@@ -3356,7 +4856,19 @@
       "Superabrasive new product launches",
       "Railway and aerospace order mix",
       "EBITDA margins vs Carborundum Universal"
-    ]
+    ],
+    "name": "Grindwell Norton Limited",
+    "mcap_cr": 23242.34,
+    "pe": 56.023483,
+    "roe": 17.3,
+    "ocf_cr": 542.14,
+    "debt_to_equity": 2.381,
+    "eps": 37.47,
+    "book_value": 228.835,
+    "div_yield": 93.0,
+    "pat_cagr": 28.3,
+    "rev_cagr": 18.7,
+    "mcap_3y": 5.22
   },
   {
     "ticker": "SKFINDUS",
@@ -3383,7 +4895,19 @@
       "Railway order intake",
       "Wind energy bearing revenues",
       "EV-specific bearing product launches"
-    ]
+    ],
+    "name": "SKF India Limited",
+    "mcap_cr": 12482.1,
+    "pe": 57.512527,
+    "roe": 29.48,
+    "ocf_cr": 163.84,
+    "debt_to_equity": 0.309,
+    "eps": 43.9,
+    "book_value": null,
+    "div_yield": 40.0,
+    "pat_cagr": 0,
+    "rev_cagr": 0,
+    "mcap_3y": -6.25
   },
   {
     "ticker": "MAFANG",
@@ -3409,7 +4933,19 @@
       "Tracking error and tracking difference versus benchmark",
       "AUM growth and bid-ask liquidity on exchange",
       "Weight changes and earnings momentum of the top constituents"
-    ]
+    ],
+    "name": "Mirae Asset NYSE FANG+ETF",
+    "mcap_cr": 0.0,
+    "pe": 34.59407,
+    "roe": 0,
+    "ocf_cr": 0.0,
+    "debt_to_equity": null,
+    "eps": null,
+    "book_value": null,
+    "div_yield": 0,
+    "pat_cagr": 0,
+    "rev_cagr": 0,
+    "mcap_3y": 256.14
   },
   {
     "ticker": "ABLBL",
@@ -3435,7 +4971,19 @@
       "Like-for-like growth and store productivity",
       "Gross margin and markdown intensity",
       "Working capital and return on incremental store capital"
-    ]
+    ],
+    "name": "ADITYA BIRLA LIFES BRAN L",
+    "mcap_cr": 12335.87,
+    "pe": 72.028366,
+    "roe": 12.72,
+    "ocf_cr": 1218.81,
+    "debt_to_equity": 213.719,
+    "eps": 1.41,
+    "book_value": 11.656,
+    "div_yield": 50.0,
+    "pat_cagr": 45.2,
+    "rev_cagr": 11.9,
+    "mcap_3y": -33.69
   },
   {
     "ticker": "BOROLTD",
@@ -3461,7 +5009,19 @@
       "Consumer segment growth and premium mix",
       "Capacity utilisation in new facilities",
       "Gross margin resilience versus input cost swings"
-    ]
+    ],
+    "name": "Borosil Limited",
+    "mcap_cr": 2698.26,
+    "pe": 36.216694,
+    "roe": 8.81,
+    "ocf_cr": 118.83,
+    "debt_to_equity": 16.696,
+    "eps": 6.23,
+    "book_value": 74.544,
+    "div_yield": 0,
+    "pat_cagr": -5.4,
+    "rev_cagr": 5.2,
+    "mcap_3y": -31.04
   },
   {
     "ticker": "KPITTECH",
@@ -3487,7 +5047,19 @@
       "Large deal wins, especially with top OEMs",
       "Growth in products and solutions mix versus vanilla services",
       "Margins, attrition and offshore delivery leverage"
-    ]
+    ],
+    "name": "KPIT Technologies Limited",
+    "mcap_cr": 20615.77,
+    "pe": 32.502148,
+    "roe": 19.73,
+    "ocf_cr": 1194.77,
+    "debt_to_equity": 23.624,
+    "eps": 23.3,
+    "book_value": 130.072,
+    "div_yield": 109.0,
+    "pat_cagr": -33.5,
+    "rev_cagr": 12.0,
+    "mcap_3y": -23.63
   },
   {
     "ticker": "MSTCLTD",
@@ -3513,7 +5085,19 @@
       "Gross merchandise / auction value processed",
       "New PSU and ministry mandates",
       "Segment margins and cash conversion quality"
-    ]
+    ],
+    "name": "MSTC Limited",
+    "mcap_cr": 4926.94,
+    "pe": 22.539452,
+    "roe": 26.6,
+    "ocf_cr": -27.79,
+    "debt_to_equity": 16.041,
+    "eps": 31.05,
+    "book_value": 128.407,
+    "div_yield": 622.0,
+    "pat_cagr": 2.3,
+    "rev_cagr": 33.7,
+    "mcap_3y": 157.71
   },
   {
     "ticker": "ORIENTHOT",
@@ -3539,7 +5123,19 @@
       "Occupancy, ARR and RevPAR by property",
       "F&B contribution and margin progression",
       "Return on refurbishment capex"
-    ]
+    ],
+    "name": "Oriental Hotels Limited",
+    "mcap_cr": 2084.61,
+    "pe": 30.796835,
+    "roe": 9.41,
+    "ocf_cr": 127.53,
+    "debt_to_equity": 17.135,
+    "eps": 3.79,
+    "book_value": 38.722,
+    "div_yield": 42.0,
+    "pat_cagr": 66.1,
+    "rev_cagr": 4.6,
+    "mcap_3y": 29.84
   },
   {
     "ticker": "REDINGTON",
@@ -3565,7 +5161,19 @@
       "Cloud and value-added mix as share of gross profit",
       "Working capital days and cash conversion",
       "ROCE sustainability through cycle turns"
-    ]
+    ],
+    "name": "Redington Limited",
+    "mcap_cr": 19180.84,
+    "pe": 12.879266,
+    "roe": 13.09,
+    "ocf_cr": 231.35,
+    "debt_to_equity": 27.26,
+    "eps": 19.05,
+    "book_value": 129.818,
+    "div_yield": 246.0,
+    "pat_cagr": -41.1,
+    "rev_cagr": 25.1,
+    "mcap_3y": 55.88
   },
   {
     "ticker": "USHAMART",
@@ -3591,7 +5199,19 @@
       "Share of speciality products in revenue mix",
       "EBITDA margin per tonne and export mix",
       "RoCE and free cash flow through the cycle"
-    ]
+    ],
+    "name": "Usha Martin Limited",
+    "mcap_cr": 15305.25,
+    "pe": 31.191065,
+    "roe": 16.23,
+    "ocf_cr": 655.34,
+    "debt_to_equity": 6.922,
+    "eps": 16.12,
+    "book_value": 108.352,
+    "div_yield": 60.0,
+    "pat_cagr": 45.8,
+    "rev_cagr": 9.3,
+    "mcap_3y": 126.95
   },
   {
     "ticker": "VIYASH",
@@ -3617,7 +5237,19 @@
       "USFDA / GMP compliance status across facilities",
       "EBITDA margin progression and leverage reduction",
       "API-to-formulation / CDMO mix evolution"
-    ]
+    ],
+    "name": "Viyash Scientific Limited",
+    "mcap_cr": 10841.75,
+    "pe": 62.1,
+    "roe": 11.56,
+    "ocf_cr": 322.91,
+    "debt_to_equity": 15.724,
+    "eps": 4.0,
+    "book_value": 67.036,
+    "div_yield": 0,
+    "pat_cagr": 228.4,
+    "rev_cagr": 129.0,
+    "mcap_3y": 235.22
   },
   {
     "ticker": "WOCKPHARMA",
@@ -3643,7 +5275,19 @@
       "Prescription and launch trajectory of novel products",
       "Debt reduction and financing cost trend",
       "R&D productivity translating into commercial approvals"
-    ]
+    ],
+    "name": "Wockhardt Limited",
+    "mcap_cr": 31669.72,
+    "pe": 149.34866,
+    "roe": 4.0,
+    "ocf_cr": 390.0,
+    "debt_to_equity": 42.284,
+    "eps": 13.05,
+    "book_value": 304.435,
+    "div_yield": 0,
+    "pat_cagr": 0,
+    "rev_cagr": 26.0,
+    "mcap_3y": 1031.82
   },
   {
     "ticker": "EIHOTEL",
@@ -3669,7 +5313,19 @@
       "ARR, RevPAR and occupancy across flagship hotels",
       "Pipeline conversion and managed-hotel additions",
       "Cash generation and return on capital through the cycle"
-    ]
+    ],
+    "name": "EIH Limited",
+    "mcap_cr": 19445.7,
+    "pe": 30.909542,
+    "roe": 12.95,
+    "ocf_cr": 992.93,
+    "debt_to_equity": 4.666,
+    "eps": 10.06,
+    "book_value": 84.154,
+    "div_yield": 49.0,
+    "pat_cagr": -5.8,
+    "rev_cagr": 1.5,
+    "mcap_3y": 53.54
   },
   {
     "ticker": "KAMDHENU",
@@ -3695,7 +5351,19 @@
       "Brand sales turnover and royalty economics",
       "Franchise additions and dealer productivity",
       "Success of adjacent categories beyond core TMT"
-    ]
+    ],
+    "name": "Kamdhenu Limited",
+    "mcap_cr": 858.05,
+    "pe": 11.191176,
+    "roe": 21.99,
+    "ocf_cr": 65.97,
+    "debt_to_equity": 2.375,
+    "eps": 2.72,
+    "book_value": 14.099,
+    "div_yield": 80.0,
+    "pat_cagr": -8.0,
+    "rev_cagr": 5.0,
+    "mcap_3y": -0.56
   },
   {
     "ticker": "GAUDIUMIVF",
@@ -3721,7 +5389,19 @@
       "IVF cycle volume growth and successful mature-centre ramps",
       "EBITDA margin sustainability as network expands",
       "Doctor retention and repeat/referral patient flow"
-    ]
+    ],
+    "name": "GAUDIUM IVF N WOMEN H L",
+    "mcap_cr": 753.78,
+    "pe": 26.418365,
+    "roe": 24.66,
+    "ocf_cr": 7.25,
+    "debt_to_equity": 16.133,
+    "eps": 3.92,
+    "book_value": 24.42,
+    "div_yield": 0,
+    "pat_cagr": 27.6,
+    "rev_cagr": 12.7,
+    "mcap_3y": 29.03
   },
   {
     "ticker": "MON100",
@@ -3747,7 +5427,19 @@
       "AUM and on-exchange liquidity",
       "Tracking error / tracking difference",
       "Underlying earnings momentum of top Nasdaq holdings"
-    ]
+    ],
+    "name": "Motilal Oswal NASDAQ 100 ETF",
+    "mcap_cr": 0.0,
+    "pe": 40.555458,
+    "roe": 0,
+    "ocf_cr": 0.0,
+    "debt_to_equity": null,
+    "eps": null,
+    "book_value": null,
+    "div_yield": 0,
+    "pat_cagr": 0,
+    "rev_cagr": 0,
+    "mcap_3y": 202.26
   },
   {
     "ticker": "SUZLON",
@@ -3782,7 +5474,19 @@
       "Finance cost run-rate vs guidance",
       "Net cash position trajectory",
       "WTG contribution margin (FY26: 24.5%, guidance 23%)"
-    ]
+    ],
+    "name": "Suzlon Energy Limited",
+    "mcap_cr": 79474.64,
+    "pe": 25.04329,
+    "roe": 40.64,
+    "ocf_cr": 1202.06,
+    "debt_to_equity": 5.873,
+    "eps": 2.31,
+    "book_value": 5.713,
+    "div_yield": 0,
+    "pat_cagr": -5.6,
+    "rev_cagr": 44.9,
+    "mcap_3y": 478.5
   },
   {
     "ticker": "HLEGLAS",
@@ -3815,7 +5519,19 @@
       "Captive power impact on consolidated margin",
       "Filtration & heat-transfer segment growth",
       "Working capital days and cash conversion"
-    ]
+    ],
+    "name": "HLE Glascoat Limited",
+    "mcap_cr": 2703.18,
+    "pe": 54.20613,
+    "roe": 9.65,
+    "ocf_cr": 161.22,
+    "debt_to_equity": 56.224,
+    "eps": 7.18,
+    "book_value": 77.797,
+    "div_yield": 29.0,
+    "pat_cagr": -47.5,
+    "rev_cagr": 17.1,
+    "mcap_3y": -35.41
   },
   {
     "ticker": "WENDT",
@@ -3848,7 +5564,19 @@
       "Capacity utilisation at Hosur",
       "New CEO Amit Ingale's first-year guidance and capex plan",
       "Working capital intensity"
-    ]
+    ],
+    "name": "Wendt (India) Limited",
+    "mcap_cr": 1589.1,
+    "pe": 109.69902,
+    "roe": 5.85,
+    "ocf_cr": 21.87,
+    "debt_to_equity": 0.075,
+    "eps": 72.43,
+    "book_value": 1269.35,
+    "div_yield": 26.0,
+    "pat_cagr": -60.5,
+    "rev_cagr": -11.7,
+    "mcap_3y": -10.97
   },
   {
     "ticker": "KPIGREEN",
@@ -3883,7 +5611,19 @@
       "FCF turning positive",
       "BESS / floating solar revenue contribution",
       "Promoter warrant conversion / dilution impact"
-    ]
+    ],
+    "name": "KPI Green Energy Limited",
+    "mcap_cr": 8081.82,
+    "pe": 17.014149,
+    "roe": 17.25,
+    "ocf_cr": 424.07,
+    "debt_to_equity": 158.765,
+    "eps": 24.03,
+    "book_value": 153.697,
+    "div_yield": 21.0,
+    "pat_cagr": 47.2,
+    "rev_cagr": 39.8,
+    "mcap_3y": 274.09
   },
   {
     "ticker": "SGIL",
@@ -3917,7 +5657,19 @@
       "Borrowings ₹250 cr trend and net-debt/EBITDA",
       "In-house machining capture vs outsourced",
       "Working capital and FCF improvement"
-    ]
+    ],
+    "name": "Synergy Green Industries Limited",
+    "mcap_cr": 904.76,
+    "pe": 195.43625,
+    "roe": 4.26,
+    "ocf_cr": 19.27,
+    "debt_to_equity": 225.406,
+    "eps": 2.98,
+    "book_value": 70.894,
+    "div_yield": 17.0,
+    "pat_cagr": -89.7,
+    "rev_cagr": 22.1,
+    "mcap_3y": 303.05
   },
   {
     "ticker": "KSB",
@@ -3952,7 +5704,19 @@
       "Order backlog (book-to-bill)",
       "Export revenue contribution",
       "Promoter holding stability"
-    ]
+    ],
+    "name": "KSB Limited",
+    "mcap_cr": 15069.19,
+    "pe": 58.14976,
+    "roe": 0,
+    "ocf_cr": 0.0,
+    "debt_to_equity": 0.31,
+    "eps": 14.89,
+    "book_value": 96.457,
+    "div_yield": 51.0,
+    "pat_cagr": -23.2,
+    "rev_cagr": 1.0,
+    "mcap_3y": 99.76
   },
   {
     "ticker": "CLEANMAX",
@@ -3987,7 +5751,19 @@
       "EBITDA per MW and project IRR disclosure",
       "Net debt and Brookfield BGTF stake evolution",
       "Tariff-regulation developments in Gujarat / Karnataka"
-    ]
+    ],
+    "name": "CLEAN MAX ENVIRO EN SOL L",
+    "mcap_cr": 15838.47,
+    "pe": 150.98215,
+    "roe": 1.96,
+    "ocf_cr": 1731.24,
+    "debt_to_equity": 229.641,
+    "eps": 8.96,
+    "book_value": 425.732,
+    "div_yield": 0,
+    "pat_cagr": 128.2,
+    "rev_cagr": 25.1,
+    "mcap_3y": 55.94
   },
   {
     "ticker": "JYOTICNC",
@@ -4023,7 +5799,19 @@
       "Finance-cost trend post-capex",
       "Aerospace / defence order share",
       "FY27 revenue vs management guidance"
-    ]
+    ],
+    "name": "Jyoti CNC Automation Limited",
+    "mcap_cr": 16159.55,
+    "pe": 48.042595,
+    "roe": 18.22,
+    "ocf_cr": 54.39,
+    "debt_to_equity": 42.609,
+    "eps": 14.79,
+    "book_value": 87.946,
+    "div_yield": 0,
+    "pat_cagr": -16.9,
+    "rev_cagr": 4.1,
+    "mcap_3y": 63.65
   },
   {
     "ticker": "IFGLEXPOR",
@@ -4058,6 +5846,40 @@
       "Net debt trajectory (FY26 ₹195.6 cr debt vs ₹122 cr cash)",
       "Standalone PAT recovery toward FY25 ₹57.6 cr base",
       "Dividend continuity (FY26 ₹2.15/share)"
+    ],
+    "name": "IFGL Refractories Limited",
+    "mcap_cr": 1406.69,
+    "pe": 40.658333,
+    "roe": 3.04,
+    "ocf_cr": 63.38,
+    "debt_to_equity": 17.764,
+    "eps": 4.8,
+    "book_value": 157.804,
+    "div_yield": 111.0,
+    "pat_cagr": 69.3,
+    "rev_cagr": 7.7,
+    "mcap_3y": 39.92
+  },
+  {
+    "ticker": "3MINDIA",
+    "name": "3M India Limited",
+    "sector": "Industrials",
+    "nse_symbol": "3MINDIA",
+    "buy_avg": 33302.06,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
     ]
   }
 ]
