@@ -34,6 +34,26 @@ This folder contains all the AI analysis prompts used in the Portfolio Dashboard
 **Usage:** Reference template for the interactive widget  
 **Note:** This is the raw HTML structure used in the Claude prompt
 
+### 6. `red_flags.md`
+**Purpose:** Forensic red-flags scan (accounting, governance, financial, business)  
+**Triggered by:** 🚩 Red Flags button on each ticker card  
+**Output:** Scored summary table (/10), critical/amber/watchlist flags, evidence table
+
+### 7. `peer_comparison.md`
+**Purpose:** Compare the company vs its 5 closest listed peers and judge valuation  
+**Triggered by:** 👥 Peer Comparison button on each ticker card  
+**Output:** Scored summary table, peer metrics table, PEER RANK #X of 6, UNDER/FAIR/OVERVALUED verdict
+
+### 8. `management_trust.md`
+**Purpose:** Forensic management-credibility / trust assessment over a 5–10 year horizon  
+**Triggered by:** 👔 Management Trust button on each ticker card  
+**Output:** Scored summary table (/10), TRUST VERDICT (HIGH/MODERATE/LOW/AVOID)
+
+### 9. `technical_trends.md`
+**Purpose:** Medium-term (3–12 month) technical setup — covers BOTH bullish breakouts AND bearish breakdowns / loss of support  
+**Triggered by:** 📈 Technical Trends button on each ticker card  
+**Output:** Scored summary table (/10), key levels (breakout & breakdown triggers), trend signal and action
+
 ---
 
 ## How to Use
@@ -44,4 +64,7 @@ This folder contains all the AI analysis prompts used in the Portfolio Dashboard
 ## Variables
 - `{{TICKER}}` - NSE stock ticker (e.g., RELIANCE)
 - `{{COMPANY_NAME}}` - Full company name (e.g., Reliance Industries Ltd)
+- `{{SNAPSHOT}}` - Live data block (Mcap, P/E, ROE, margins, price/technical) injected by the dashboard for the deep-analysis prompts
 - `{{KPI_LIST}}` - Bullet list of KPIs to track (for kpi_tracking.md)
+
+> **Note:** The dashboard injects these variables dynamically from the card you click (ticker, company name, and live metrics from `stocks.json` + `prices.json`). The inline versions live in `getMetricPrompt()` in `index.html`; these `.md` files are the readable source of truth.

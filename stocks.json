@@ -1,7 +1,7 @@
 [
   {
     "ticker": "NH",
-    "name": "Narayana Hrudayalaya",
+    "name": "Narayana Hrudayalaya Limited",
     "sector": "Healthcare",
     "nse_symbol": "NH",
     "moat_type": "Wide",
@@ -26,7 +26,6 @@
       "Cayman hospital occupancy ramp",
       "India hospital EBITDA margin >20%"
     ],
-    "name": "Narayana Hrudayalaya Limited",
     "mcap_cr": 37616.12,
     "pe": 46.441822,
     "roe": 19.84,
@@ -41,7 +40,7 @@
   },
   {
     "ticker": "HCG",
-    "name": "HealthCare Global Enterprises",
+    "name": "HealthCare Global Enterprises Limited",
     "sector": "Healthcare / Oncology",
     "nse_symbol": "HCG",
     "moat_type": "Wide",
@@ -66,7 +65,6 @@
       "Occupancy rate at existing centres",
       "ARPOB growth in oncology"
     ],
-    "name": "HealthCare Global Enterprises Limited",
     "mcap_cr": 9471.73,
     "pe": 674.8936,
     "roe": 1.9,
@@ -81,7 +79,7 @@
   },
   {
     "ticker": "SYRMA",
-    "name": "Syrma SGS Technology",
+    "name": "Syrma SGS Technology Limited",
     "sector": "EMS / Electronics",
     "nse_symbol": "SYRMA",
     "moat_type": "Narrow",
@@ -106,7 +104,6 @@
       "Gross margin trajectory",
       "Ranjangaon campus utilisation"
     ],
-    "name": "Syrma SGS Technology Limited",
     "mcap_cr": 25193.42,
     "pe": 77.436356,
     "roe": 14.14,
@@ -121,7 +118,7 @@
   },
   {
     "ticker": "MTARTECH",
-    "name": "MTAR Technologies",
+    "name": "MTAR Technologies Limited",
     "sector": "Precision Engineering / Defence",
     "nse_symbol": "MTARTECH",
     "moat_type": "Wide",
@@ -146,7 +143,6 @@
       "New nuclear component qualifications",
       "Space segment revenue %"
     ],
-    "name": "MTAR Technologies Limited",
     "mcap_cr": 24460.03,
     "pe": 258.26566,
     "roe": 12.12,
@@ -161,7 +157,7 @@
   },
   {
     "ticker": "DEEDEV",
-    "name": "Dee Development Engineers",
+    "name": "DEE DEVELOPMENT ENG LTD",
     "sector": "Industrial Piping / Engineering",
     "nse_symbol": "DEEDEV",
     "moat_type": "Narrow",
@@ -186,7 +182,6 @@
       "IBR-certified piping % of revenue",
       "Margin expansion as utilisation rises"
     ],
-    "name": "DEE DEVELOPMENT ENG LTD",
     "mcap_cr": 5228.69,
     "pe": 67.70404,
     "roe": 9.13,
@@ -201,7 +196,7 @@
   },
   {
     "ticker": "POWERINDIA",
-    "name": "Hitachi Energy India",
+    "name": "Hitachi Energy India Limited",
     "sector": "Power Transmission / Automation",
     "nse_symbol": "POWERINDIA",
     "moat_type": "Wide",
@@ -226,7 +221,6 @@
       "HVDC project awards",
       "Revenue growth sustaining >30% YoY"
     ],
-    "name": "Hitachi Energy India Limited",
     "mcap_cr": 156694.15,
     "pe": 158.11371,
     "roe": 21.04,
@@ -241,7 +235,7 @@
   },
   {
     "ticker": "ASTRAMICRO",
-    "name": "Astra Microwave Products",
+    "name": "Astra Microwave Products Limited",
     "sector": "Defence Electronics",
     "nse_symbol": "ASTRAMICRO",
     "moat_type": "Wide",
@@ -266,7 +260,6 @@
       "Export revenue growth",
       "New programme qualifications (space/radar)"
     ],
-    "name": "Astra Microwave Products Limited",
     "mcap_cr": 14656.66,
     "pe": 76.11932,
     "roe": 15.99,
@@ -281,7 +274,7 @@
   },
   {
     "ticker": "ASTERDM",
-    "name": "Aster DM Healthcare",
+    "name": "Aster DM Healthcare Limited",
     "sector": "Healthcare",
     "nse_symbol": "ASTERDM",
     "moat_type": "Narrow",
@@ -306,7 +299,6 @@
       "Hospital occupancy rates",
       "Pharmacy same-store growth"
     ],
-    "name": "Aster DM Healthcare Limited",
     "mcap_cr": 39962.0,
     "pe": 120.78906,
     "roe": 10.07,
@@ -321,7 +313,7 @@
   },
   {
     "ticker": "NEPHROPLUS",
-    "name": "Nephrocare Health Services",
+    "name": "NEPHROCARE HEALTH SERV L",
     "sector": "Dialysis / Renal Healthcare",
     "nse_symbol": "NEPHROPLUS",
     "moat_type": "Narrow",
@@ -346,7 +338,6 @@
       "Government PPP contract wins",
       "EBITDA per clinic"
     ],
-    "name": "NEPHROCARE HEALTH SERV L",
     "mcap_cr": 7324.37,
     "pe": 90.11728,
     "roe": 9.04,
@@ -361,7 +352,7 @@
   },
   {
     "ticker": "NEULANDLAB",
-    "name": "Neuland Laboratories",
+    "name": "Neuland Laboratories Limited",
     "sector": "Pharma CDMO / API",
     "nse_symbol": "NEULANDLAB",
     "moat_type": "Wide",
@@ -386,7 +377,6 @@
       "Peptide API capacity utilisation",
       "New molecule commercialisations"
     ],
-    "name": "Neuland Laboratories Limited",
     "mcap_cr": 21604.25,
     "pe": 59.23594,
     "roe": 0,
@@ -401,7 +391,7 @@
   },
   {
     "ticker": "AVANTEL",
-    "name": "Avantel",
+    "name": "Avantel Limited",
     "sector": "Defence Electronics / Satellite",
     "nse_symbol": "AVANTEL",
     "moat_type": "Narrow",
@@ -426,7 +416,6 @@
       "Navy/Coast Guard repeat orders",
       "New product (software defined radio) adoption"
     ],
-    "name": "Avantel Limited",
     "mcap_cr": 4503.0,
     "pe": 313.8333,
     "roe": 5.21,
@@ -441,7 +430,7 @@
   },
   {
     "ticker": "SOUTHWEST",
-    "name": "Southwest Pinnacle Exploration",
+    "name": "South West Pinnacle Exploration Limited",
     "sector": "Oil & Gas Services",
     "nse_symbol": "SOUTHWEST",
     "moat_type": "Narrow",
@@ -465,7 +454,6 @@
       "Utilisation rate of equipment fleet",
       "Revenue growth vs capex"
     ],
-    "name": "South West Pinnacle Exploration Limited",
     "mcap_cr": 757.23,
     "pe": 23.461184,
     "roe": 17.65,
@@ -480,7 +468,7 @@
   },
   {
     "ticker": "DLINKINDIA",
-    "name": "D-Link (India)",
+    "name": "D-Link (India) Limited",
     "sector": "Networking Hardware",
     "nse_symbol": "DLINKINDIA",
     "moat_type": "Narrow",
@@ -504,7 +492,6 @@
       "Data centre switching order wins",
       "Gross margin expansion"
     ],
-    "name": "D-Link (India) Limited",
     "mcap_cr": 1806.49,
     "pe": 17.359262,
     "roe": 21.21,
@@ -519,7 +506,7 @@
   },
   {
     "ticker": "TRIVENI",
-    "name": "Triveni Engineering & Industries",
+    "name": "Triveni Engineering & Industries Limited",
     "sector": "Sugar / Power",
     "nse_symbol": "TRIVENI",
     "moat_type": "Narrow",
@@ -544,7 +531,6 @@
       "Distillery utilisation rate",
       "Sugar realisation vs SAP (state advised price)"
     ],
-    "name": "Triveni Engineering & Industries Limited",
     "mcap_cr": 8825.54,
     "pe": 32.82787,
     "roe": 8.27,
@@ -559,7 +545,7 @@
   },
   {
     "ticker": "GALAPREC",
-    "name": "Gala Precision Engineering",
+    "name": "GALA PRECISION ENG LTD",
     "sector": "Precision Components",
     "nse_symbol": "GALAPREC",
     "moat_type": "Narrow",
@@ -584,7 +570,6 @@
       "Aerospace segment contribution",
       "EBITDA margin vs utilisation"
     ],
-    "name": "GALA PRECISION ENG LTD",
     "mcap_cr": 1320.07,
     "pe": 38.147186,
     "roe": 12.92,
@@ -599,7 +584,7 @@
   },
   {
     "ticker": "MODISONLTD",
-    "name": "Modison",
+    "name": "Modison Limited",
     "sector": "Electrical Contacts / Components",
     "nse_symbol": "MODISONLTD",
     "moat_type": "Narrow",
@@ -624,7 +609,6 @@
       "Export revenue growth",
       "Silver spread (realisation minus raw material cost)"
     ],
-    "name": "Modison Limited",
     "mcap_cr": 952.41,
     "pe": 13.126118,
     "roe": 0,
@@ -639,7 +623,7 @@
   },
   {
     "ticker": "HAPPYFORGE",
-    "name": "Happy Forgings",
+    "name": "HAPPY FORGINGS LIMITED",
     "sector": "Forgings / Auto Components",
     "nse_symbol": "HAPPYFORGE",
     "moat_type": "Wide",
@@ -664,7 +648,6 @@
       "SUV crankshaft volumes ramp",
       "EBITDA margin sustenance above 25%"
     ],
-    "name": "HAPPY FORGINGS LIMITED",
     "mcap_cr": 13093.96,
     "pe": 43.43662,
     "roe": 15.16,
@@ -679,7 +662,7 @@
   },
   {
     "ticker": "NIFTYBEES",
-    "name": "Nippon India ETF Nifty BeES",
+    "name": "Nippon India ETF Nifty 50 BeES",
     "sector": "Index ETF",
     "nse_symbol": "NIFTYBEES",
     "moat_type": "Narrow",
@@ -703,7 +686,6 @@
       "AUM growth (liquidity indicator)",
       "Tracking error vs index"
     ],
-    "name": "Nippon India ETF Nifty 50 BeES",
     "mcap_cr": 0.0,
     "pe": 21.502216,
     "roe": 0,
@@ -718,7 +700,7 @@
   },
   {
     "ticker": "HBLENGINE",
-    "name": "HBL Engineering",
+    "name": "HBL ENGINEERING LTD",
     "sector": "Defence Electronics / Batteries",
     "nse_symbol": "HBLENGINE",
     "moat_type": "Wide",
@@ -743,7 +725,6 @@
       "Defence battery new contracts",
       "Quarterly revenue growth vs order book"
     ],
-    "name": "HBL ENGINEERING LTD",
     "mcap_cr": 21981.56,
     "pe": 26.954453,
     "roe": 44.07,
@@ -758,7 +739,7 @@
   },
   {
     "ticker": "SASKEN",
-    "name": "Sasken Technologies",
+    "name": "Sasken Technologies Limited",
     "sector": "IT / Embedded Software",
     "nse_symbol": "SASKEN",
     "moat_type": "Narrow",
@@ -783,7 +764,6 @@
       "5G modem software project wins",
       "EBITDA margin consistency"
     ],
-    "name": "Sasken Technologies Limited",
     "mcap_cr": 3655.69,
     "pe": 67.90409,
     "roe": 6.99,
@@ -798,7 +778,7 @@
   },
   {
     "ticker": "ENRIN",
-    "name": "Enviro Infra Engineers",
+    "name": "Siemens Energy India Limited",
     "sector": "Water / Environment Infrastructure",
     "nse_symbol": "ENRIN",
     "moat_type": "Narrow",
@@ -823,7 +803,6 @@
       "Working capital days",
       "New order wins from AMRUT/Jal Jeevan"
     ],
-    "name": "Siemens Energy India Limited",
     "mcap_cr": 132049.48,
     "pe": 100.73349,
     "roe": 0,
@@ -838,7 +817,7 @@
   },
   {
     "ticker": "ARE&M",
-    "name": "Amara Raja Energy & Mobility",
+    "name": "Amara Raja Energy & Mobility Limited",
     "sector": "Energy Storage / Batteries",
     "nse_symbol": "ARE&M",
     "moat_type": "Narrow",
@@ -863,7 +842,6 @@
       "Sunroof/value-added glass revenue %",
       "Architectural glass segment growth"
     ],
-    "name": "Amara Raja Energy & Mobility Limited",
     "mcap_cr": 15691.68,
     "pe": 17.511234,
     "roe": 11.57,
@@ -878,7 +856,7 @@
   },
   {
     "ticker": "INDUSTOWER",
-    "name": "Indus Towers",
+    "name": "Indus Towers Limited",
     "sector": "Telecom Infrastructure",
     "nse_symbol": "INDUSTOWER",
     "moat_type": "Wide",
@@ -903,7 +881,6 @@
       "Tenancy ratio improvement",
       "5G-related co-location additions"
     ],
-    "name": "Indus Towers Limited",
     "mcap_cr": 109311.52,
     "pe": 15.300849,
     "roe": 19.81,
@@ -918,7 +895,7 @@
   },
   {
     "ticker": "INDGN",
-    "name": "Indegene",
+    "name": "INDEGENE LIMITED",
     "sector": "Healthcare Technology / CRO",
     "nse_symbol": "INDGN",
     "moat_type": "Narrow",
@@ -943,7 +920,6 @@
       "Pharma regulatory technology wins",
       "EBITDA margin improvement"
     ],
-    "name": "INDEGENE LIMITED",
     "mcap_cr": 12408.77,
     "pe": 31.10542,
     "roe": 13.94,
@@ -958,7 +934,7 @@
   },
   {
     "ticker": "RIR",
-    "name": "RIR Power Electronics",
+    "name": "Rir Power Electronics Limited",
     "sector": "Power Electronics",
     "nse_symbol": "RIR",
     "moat_type": "Narrow",
@@ -982,7 +958,6 @@
       "New customer additions",
       "Gross margin stability"
     ],
-    "name": "Rir Power Electronics Limited",
     "mcap_cr": 1346.76,
     "pe": 167.57426,
     "roe": 6.24,
@@ -997,7 +972,7 @@
   },
   {
     "ticker": "SCODATUBES",
-    "name": "Scoda Tubes",
+    "name": "Scoda Tubes Limited",
     "sector": "Steel Tubes",
     "nse_symbol": "SCODATUBES",
     "moat_type": "Narrow",
@@ -1021,7 +996,6 @@
       "Realisation per tonne",
       "New customer qualifications"
     ],
-    "name": "Scoda Tubes Limited",
     "mcap_cr": 825.25,
     "pe": 20.257353,
     "roe": 14.37,
@@ -1036,7 +1010,7 @@
   },
   {
     "ticker": "SALZERELEC",
-    "name": "Salzer Electronics",
+    "name": "Salzer Electronics Limited",
     "sector": "Electrical Components",
     "nse_symbol": "SALZERELEC",
     "moat_type": "Narrow",
@@ -1061,7 +1035,6 @@
       "European export growth",
       "New ATEX product qualifications"
     ],
-    "name": "Salzer Electronics Limited",
     "mcap_cr": 1163.61,
     "pe": 21.986301,
     "roe": 9.31,
@@ -1076,7 +1049,7 @@
   },
   {
     "ticker": "MENONBE",
-    "name": "Menon Bearings",
+    "name": "Menon Bearings Limited",
     "sector": "Engine Components",
     "nse_symbol": "MENONBE",
     "moat_type": "Narrow",
@@ -1100,7 +1073,6 @@
       "Industrial bearing revenue diversification",
       "Margin stability as ICE volumes plateau"
     ],
-    "name": "Menon Bearings Limited",
     "mcap_cr": 996.95,
     "pe": 26.046852,
     "roe": 22.25,
@@ -1115,7 +1087,7 @@
   },
   {
     "ticker": "RUBICON",
-    "name": "Rubicon Research",
+    "name": "RUBICON RESEARCH LIMITED",
     "sector": "Pharma / CDMO",
     "nse_symbol": "RUBICON",
     "moat_type": "Narrow",
@@ -1140,7 +1112,6 @@
       "US revenue growth",
       "Revenue per product complexity tier"
     ],
-    "name": "RUBICON RESEARCH LIMITED",
     "mcap_cr": 22313.78,
     "pe": 88.69679,
     "roe": 26.97,
@@ -1155,7 +1126,7 @@
   },
   {
     "ticker": "RKSWAMY",
-    "name": "R.K. Swamy",
+    "name": "R K SWAMY LIMITED",
     "sector": "Marketing Services / Advertising",
     "nse_symbol": "RKSWAMY",
     "moat_type": "Narrow",
@@ -1180,7 +1151,6 @@
       "PSU client retention",
       "EBITDA margin expansion"
     ],
-    "name": "R K SWAMY LIMITED",
     "mcap_cr": 500.23,
     "pe": 22.62557,
     "roe": 8.61,
@@ -1195,7 +1165,7 @@
   },
   {
     "ticker": "RATEGAIN",
-    "name": "RateGain Travel Technologies",
+    "name": "RateGain Travel Technologies Limited",
     "sector": "Travel Tech / SaaS",
     "nse_symbol": "RATEGAIN",
     "moat_type": "Wide",
@@ -1220,7 +1190,6 @@
       "Net Revenue Retention >110%",
       "New product (AI personalisation) launches"
     ],
-    "name": "RateGain Travel Technologies Limited",
     "mcap_cr": 10016.46,
     "pe": 51.68495,
     "roe": 10.54,
@@ -1235,7 +1204,7 @@
   },
   {
     "ticker": "GMDCLTD",
-    "name": "Gujarat Mineral Development Corporation",
+    "name": "Gujarat Mineral Development Corporation Limited",
     "sector": "PSU Mining",
     "nse_symbol": "GMDCLTD",
     "moat_type": "Narrow",
@@ -1259,7 +1228,6 @@
       "Lithium/critical mineral exploration progress",
       "Revenue diversification from lignite"
     ],
-    "name": "Gujarat Mineral Development Corporation Limited",
     "mcap_cr": 19922.7,
     "pe": 20.813953,
     "roe": 14.19,
@@ -1274,7 +1242,7 @@
   },
   {
     "ticker": "TREL",
-    "name": "Trident",
+    "name": "Transindia Real Estate Limited",
     "sector": "Textiles / Paper",
     "nse_symbol": "TREL",
     "moat_type": "Narrow",
@@ -1299,7 +1267,6 @@
       "Wheat straw paper realisation vs wood-pulp paper",
       "Terry towel EBITDA margin"
     ],
-    "name": "Transindia Real Estate Limited",
     "mcap_cr": 646.67,
     "pe": 16.449999,
     "roe": 3.12,
@@ -1314,7 +1281,7 @@
   },
   {
     "ticker": "EIMCOELECO",
-    "name": "Eimco Elecon (India)",
+    "name": "Eimco Elecon (India) Limited",
     "sector": "Mining Equipment",
     "nse_symbol": "EIMCOELECO",
     "moat_type": "Narrow",
@@ -1338,7 +1305,6 @@
       "LHD replacement cycle",
       "Revenue from spares and maintenance"
     ],
-    "name": "Eimco Elecon (India) Limited",
     "mcap_cr": 940.94,
     "pe": 24.306362,
     "roe": 8.61,
@@ -1353,7 +1319,7 @@
   },
   {
     "ticker": "BLUEJET",
-    "name": "Blue Jet Healthcare",
+    "name": "Blue Jet Healthcare Limited",
     "sector": "Pharma / Contrast Media",
     "nse_symbol": "BLUEJET",
     "moat_type": "Wide",
@@ -1378,7 +1344,6 @@
       "New molecule approvals (non-iodine contrast agents)",
       "Gross margin sustenance >55%"
     ],
-    "name": "Blue Jet Healthcare Limited",
     "mcap_cr": 8815.51,
     "pe": 35.56333,
     "roe": 19.88,
@@ -1393,7 +1358,7 @@
   },
   {
     "ticker": "SHREEJISPG",
-    "name": "Shreeji Shipping Global",
+    "name": "SHREEJI SHIPPING GLOBAL L",
     "sector": "Steel Pipes / Infrastructure",
     "nse_symbol": "SHREEJISPG",
     "moat_type": "Narrow",
@@ -1417,7 +1382,6 @@
       "Revenue per tonne",
       "Order book size"
     ],
-    "name": "SHREEJI SHIPPING GLOBAL L",
     "mcap_cr": 7950.41,
     "pe": 50.10267,
     "roe": 29.87,
@@ -1432,7 +1396,7 @@
   },
   {
     "ticker": "NETWEB",
-    "name": "Netweb Technologies India",
+    "name": "Netweb Technologies India Limited",
     "sector": "AI Infrastructure / HPC",
     "nse_symbol": "NETWEB",
     "moat_type": "Wide",
@@ -1457,7 +1421,6 @@
       "Private cloud GPU cluster deployments",
       "Revenue growth sustaining >50% YoY"
     ],
-    "name": "Netweb Technologies India Limited",
     "mcap_cr": 28186.78,
     "pe": 136.97289,
     "roe": 32.83,
@@ -1472,7 +1435,7 @@
   },
   {
     "ticker": "RAMCOSYS",
-    "name": "Ramco Systems",
+    "name": "Ramco Systems Limited",
     "sector": "Enterprise Software / ERP",
     "nse_symbol": "RAMCOSYS",
     "moat_type": "Narrow",
@@ -1497,7 +1460,6 @@
       "New airline customer wins",
       "Cloud vs on-premise revenue mix"
     ],
-    "name": "Ramco Systems Limited",
     "mcap_cr": 2166.53,
     "pe": 51.792454,
     "roe": 12.49,
@@ -1512,7 +1474,7 @@
   },
   {
     "ticker": "STALLION",
-    "name": "Stallion India Fluorochemicals",
+    "name": "STALLION IND FLUOROCHEM L",
     "sector": "Specialty Chemicals / Refrigerants",
     "nse_symbol": "STALLION",
     "moat_type": "Narrow",
@@ -1536,7 +1498,6 @@
       "HFO (next-gen refrigerant) distribution share",
       "New OEM direct supply contracts"
     ],
-    "name": "STALLION IND FLUOROCHEM L",
     "mcap_cr": 2195.07,
     "pe": 35.343925,
     "roe": 8.93,
@@ -1551,7 +1512,7 @@
   },
   {
     "ticker": "RPTECH",
-    "name": "Rashi Peripherals",
+    "name": "Rashi Peripherals Limited",
     "sector": "IT Distribution",
     "nse_symbol": "RPTECH",
     "moat_type": "Narrow",
@@ -1576,7 +1537,6 @@
       "AI PC and GPU revenue contribution",
       "Retailer count expansion"
     ],
-    "name": "Rashi Peripherals Limited",
     "mcap_cr": 4335.87,
     "pe": 15.989064,
     "roe": 14.94,
@@ -1591,7 +1551,7 @@
   },
   {
     "ticker": "SIGNPOST",
-    "name": "Signpost India",
+    "name": "Signpost India Limited",
     "sector": "Outdoor Media / OOH",
     "nse_symbol": "SIGNPOST",
     "moat_type": "Narrow",
@@ -1616,7 +1576,6 @@
       "New municipal concession wins",
       "Digital OOH % of total revenue"
     ],
-    "name": "Signpost India Limited",
     "mcap_cr": 1385.42,
     "pe": 19.726028,
     "roe": 27.3,
@@ -1631,7 +1590,7 @@
   },
   {
     "ticker": "BOROSCI",
-    "name": "Borosil Scientific",
+    "name": "Borosil Scientific Limited",
     "sector": "Scientific Glassware",
     "nse_symbol": "BOROSCI",
     "moat_type": "Narrow",
@@ -1655,7 +1614,6 @@
       "Pharma-grade glassware %",
       "New product categories (plastic lab ware)"
     ],
-    "name": "Borosil Scientific Limited",
     "mcap_cr": 1395.94,
     "pe": 40.34447,
     "roe": 8.17,
@@ -1670,7 +1628,7 @@
   },
   {
     "ticker": "MAPMYINDIA",
-    "name": "C.E. Info Systems (MapmyIndia)",
+    "name": "C. E. Info Systems Limited",
     "sector": "Digital Maps / Location Tech",
     "nse_symbol": "MAPMYINDIA",
     "moat_type": "Wide",
@@ -1695,7 +1653,6 @@
       "Auto OEM new platform wins",
       "Government mapping contract renewals"
     ],
-    "name": "C. E. Info Systems Limited",
     "mcap_cr": 4965.46,
     "pe": 37.13145,
     "roe": 15.8,
@@ -1710,7 +1667,7 @@
   },
   {
     "ticker": "YATHARTH",
-    "name": "Yatharth Hospital & Trauma Care Services",
+    "name": "Yatharth Hospital & Trauma Care Services Limited",
     "sector": "Healthcare",
     "nse_symbol": "YATHARTH",
     "moat_type": "Narrow",
@@ -1734,7 +1691,6 @@
       "Occupancy rate",
       "New hospital bed addition timeline"
     ],
-    "name": "Yatharth Hospital & Trauma Care Services Limited",
     "mcap_cr": 8108.7,
     "pe": 46.188255,
     "roe": 9.89,
@@ -1749,7 +1705,7 @@
   },
   {
     "ticker": "VASCONEQ",
-    "name": "Vascon Engineers",
+    "name": "Vascon Engineers Limited",
     "sector": "Real Estate / Construction",
     "nse_symbol": "VASCONEQ",
     "moat_type": "Narrow",
@@ -1773,7 +1729,6 @@
       "Debt reduction",
       "New project launches and bookings"
     ],
-    "name": "Vascon Engineers Limited",
     "mcap_cr": 852.25,
     "pe": 17.065115,
     "roe": 4.36,
@@ -1788,7 +1743,7 @@
   },
   {
     "ticker": "FRACTAL",
-    "name": "Fractal Analytics",
+    "name": "FRACTAL ANALYTICS LIMITED",
     "sector": "AI / Data Analytics",
     "nse_symbol": "FRACTAL",
     "moat_type": "Narrow",
@@ -1813,7 +1768,6 @@
       "Qure.ai radiology AI adoption",
       "New Fortune 500 client wins"
     ],
-    "name": "FRACTAL ANALYTICS LIMITED",
     "mcap_cr": 17089.89,
     "pe": 57.779068,
     "roe": 11.58,
@@ -1828,7 +1782,7 @@
   },
   {
     "ticker": "PROTEAN",
-    "name": "Protean eGov Technologies",
+    "name": "Protean eGov Technologies Limited",
     "sector": "Government Tech / FinTech",
     "nse_symbol": "PROTEAN",
     "moat_type": "Wide",
@@ -1853,7 +1807,6 @@
       "PAN issuance volumes",
       "New government e-governance contracts"
     ],
-    "name": "Protean eGov Technologies Limited",
     "mcap_cr": 2577.13,
     "pe": 25.667477,
     "roe": 9.69,
@@ -1868,7 +1821,7 @@
   },
   {
     "ticker": "UNIVCABLES",
-    "name": "Universal Cables",
+    "name": "Universal Cables Limited",
     "sector": "Cables & Wires",
     "nse_symbol": "UNIVCABLES",
     "moat_type": "Narrow",
@@ -1893,7 +1846,6 @@
       "Revenue growth and EBITDA margin",
       "New cable types (HVDC) qualification"
     ],
-    "name": "Universal Cables Limited",
     "mcap_cr": 4219.65,
     "pe": 25.904152,
     "roe": 8.91,
@@ -1908,7 +1860,7 @@
   },
   {
     "ticker": "RAYMOND",
-    "name": "Raymond",
+    "name": "Raymond Limited",
     "sector": "Textiles / Real Estate",
     "nse_symbol": "RAYMOND",
     "moat_type": "Narrow",
@@ -1932,7 +1884,6 @@
       "Raymond Realty EBITDA",
       "Working capital and debt reduction"
     ],
-    "name": "Raymond Limited",
     "mcap_cr": 3926.53,
     "pe": 116.370804,
     "roe": 1.47,
@@ -1947,7 +1898,7 @@
   },
   {
     "ticker": "GRAPHITE",
-    "name": "Graphite India",
+    "name": "Graphite India Limited",
     "sector": "Graphite Electrodes",
     "nse_symbol": "GRAPHITE",
     "moat_type": "Narrow",
@@ -1972,7 +1923,6 @@
       "Anode business revenue ramp",
       "European capacity utilization"
     ],
-    "name": "Graphite India Limited",
     "mcap_cr": 12855.71,
     "pe": 73.35563,
     "roe": 2.92,
@@ -1987,7 +1937,7 @@
   },
   {
     "ticker": "URBANCO",
-    "name": "Urban Company",
+    "name": "Urban Company Limited",
     "sector": "Technology / Consumer Services",
     "nse_symbol": "URBANCO",
     "moat_type": "Narrow",
@@ -2014,7 +1964,6 @@
       "Native product revenue %",
       "Quarterly path back to profitability"
     ],
-    "name": "Urban Company Limited",
     "mcap_cr": 19211.59,
     "pe": null,
     "roe": -11.92,
@@ -2029,7 +1978,7 @@
   },
   {
     "ticker": "GMRAIRPORT",
-    "name": "GMR Airports",
+    "name": "GMR Airports Limited",
     "sector": "Airport Infrastructure",
     "nse_symbol": "GMRAIRPORT",
     "moat_type": "Wide",
@@ -2054,7 +2003,6 @@
       "Non-aero revenue % (retail, parking, hotel)",
       "Debt reduction from cash flows"
     ],
-    "name": "GMR Airports Limited",
     "mcap_cr": 113772.96,
     "pe": 828.8462,
     "roe": 0,
@@ -2069,7 +2017,7 @@
   },
   {
     "ticker": "LAXMIDENTL",
-    "name": "Laxmi Dental",
+    "name": "LAXMI DENTAL LIMITED",
     "sector": "Dental Products",
     "nse_symbol": "LAXMIDENTL",
     "moat_type": "Narrow",
@@ -2094,7 +2042,6 @@
       "Export market revenue by geography",
       "EBITDA margin expansion as scale grows"
     ],
-    "name": "LAXMI DENTAL LIMITED",
     "mcap_cr": 1255.28,
     "pe": 43.33776,
     "roe": 12.77,
@@ -2109,7 +2056,7 @@
   },
   {
     "ticker": "BIOCON",
-    "name": "Biocon",
+    "name": "Biocon Limited",
     "sector": "Biopharma / Biosimilars",
     "nse_symbol": "BIOCON",
     "moat_type": "Wide",
@@ -2134,7 +2081,6 @@
       "Humira biosimilar (Hadlima) US uptake",
       "Insulin glargine market share in US"
     ],
-    "name": "Biocon Limited",
     "mcap_cr": 67128.58,
     "pe": 146.46643,
     "roe": 1.15,
@@ -2149,7 +2095,7 @@
   },
   {
     "ticker": "ANURAS",
-    "name": "Anupam Rasayan India",
+    "name": "Anupam Rasayan India Ltd",
     "sector": "Pharma / API",
     "nse_symbol": "ANURAS",
     "moat_type": "Narrow",
@@ -2174,7 +2120,6 @@
       "Revenue per approved API molecule",
       "New DMF filings per year"
     ],
-    "name": "Anupam Rasayan India Ltd",
     "mcap_cr": 14777.51,
     "pe": 84.34048,
     "roe": 5.76,
@@ -2189,7 +2134,7 @@
   },
   {
     "ticker": "SHANKARA",
-    "name": "Shankara Building Products",
+    "name": "Shankara Building Products Limited",
     "sector": "Building Materials Retail",
     "nse_symbol": "SHANKARA",
     "moat_type": "Narrow",
@@ -2214,7 +2159,6 @@
       "New store openings",
       "Gross margin per category"
     ],
-    "name": "Shankara Building Products Limited",
     "mcap_cr": 283.94,
     "pe": 74.10759,
     "roe": 0.9,
@@ -2229,7 +2173,7 @@
   },
   {
     "ticker": "INCAP",
-    "name": "International Combustion (India)",
+    "name": "Incap Limited",
     "sector": "Industrial Equipment / Pending Verification",
     "nse_symbol": "INCAP",
     "moat_type": "Narrow",
@@ -2253,7 +2197,6 @@
       "Revenue growth",
       "Spare parts revenue (recurring)"
     ],
-    "name": "Incap Limited",
     "mcap_cr": 44.07,
     "pe": 130.07574,
     "roe": 2.09,
@@ -2268,7 +2211,7 @@
   },
   {
     "ticker": "SHILPAMED",
-    "name": "Shilpa Medicare",
+    "name": "Shilpa Medicare Limited",
     "sector": "Pharma / Oncology API",
     "nse_symbol": "SHILPAMED",
     "moat_type": "Narrow",
@@ -2293,7 +2236,6 @@
       "HPAPI revenue growth",
       "Formulations business launch progress"
     ],
-    "name": "Shilpa Medicare Limited",
     "mcap_cr": 11156.97,
     "pe": 45.893,
     "roe": 9.82,
@@ -2308,7 +2250,7 @@
   },
   {
     "ticker": "ECOSMOBLTY",
-    "name": "ECOS (India) Mobility & Hospitality",
+    "name": "ECOS (INDIA) MOB & HOSP L",
     "sector": "EV Mobility",
     "nse_symbol": "ECOSMOBLTY",
     "moat_type": "Narrow",
@@ -2332,7 +2274,6 @@
       "Revenue per vehicle",
       "Path to EBITDA positive"
     ],
-    "name": "ECOS (INDIA) MOB & HOSP L",
     "mcap_cr": 791.7,
     "pe": 13.759124,
     "roe": 23.65,
@@ -2347,7 +2288,7 @@
   },
   {
     "ticker": "KIRLPNU",
-    "name": "Kirloskar Pneumatic",
+    "name": "Kirloskar Pneumatic Company Limited",
     "sector": "Industrial Equipment / Compressors",
     "nse_symbol": "KIRLPNU",
     "moat_type": "Narrow",
@@ -2371,7 +2312,6 @@
       "Industrial air system market share",
       "EBITDA margin expansion"
     ],
-    "name": "Kirloskar Pneumatic Company Limited",
     "mcap_cr": 11595.04,
     "pe": 45.373665,
     "roe": 21.47,
@@ -2386,7 +2326,7 @@
   },
   {
     "ticker": "PTC",
-    "name": "PTC India",
+    "name": "PTC India Limited",
     "sector": "Power Trading",
     "nse_symbol": "PTC",
     "moat_type": "Narrow",
@@ -2411,7 +2351,6 @@
       "PTCFS NPA levels",
       "Cross-border power trade volumes"
     ],
-    "name": "PTC India Limited",
     "mcap_cr": 5659.68,
     "pe": 9.349633,
     "roe": 10.38,
@@ -2426,7 +2365,7 @@
   },
   {
     "ticker": "LANDMARK",
-    "name": "Landmark Cars",
+    "name": "Landmark Cars Limited",
     "sector": "Auto Dealerships",
     "nse_symbol": "LANDMARK",
     "moat_type": "Narrow",
@@ -2450,7 +2389,6 @@
       "After-sales service % of total revenue",
       "BYD EV volumes through Landmark"
     ],
-    "name": "Landmark Cars Limited",
     "mcap_cr": 1760.19,
     "pe": 47.166668,
     "roe": 6.66,
@@ -2465,7 +2403,7 @@
   },
   {
     "ticker": "FREDUN",
-    "name": "Fredun Pharmaceuticals",
+    "name": "Fredun Pharmaceuticals Limited",
     "sector": "Pharma / Formulations",
     "nse_symbol": "FREDUN",
     "moat_type": "Narrow",
@@ -2490,7 +2428,6 @@
       "Export revenue growth",
       "New therapeutic area additions"
     ],
-    "name": "Fredun Pharmaceuticals Limited",
     "mcap_cr": 1419.07,
     "pe": 42.307064,
     "roe": 15.55,
@@ -2505,7 +2442,7 @@
   },
   {
     "ticker": "CMSINFO",
-    "name": "CMS Info Systems",
+    "name": "CMS Info Systems Limited",
     "sector": "Cash Management / ATM Services",
     "nse_symbol": "CMSINFO",
     "moat_type": "Wide",
@@ -2530,7 +2467,6 @@
       "Revenue per ATM",
       "New product lines (bulk cash/retail CMS)"
     ],
-    "name": "CMS Info Systems Limited",
     "mcap_cr": 4887.27,
     "pe": 16.247948,
     "roe": 12.91,
@@ -2545,7 +2481,7 @@
   },
   {
     "ticker": "DIFFNKG",
-    "name": "Diffusion Engineers",
+    "name": "DIFFUSION ENGINEERS LTD",
     "sector": "Industrial Equipment / Speciality Machinery",
     "nse_symbol": "DIFFNKG",
     "moat_type": "Narrow",
@@ -2570,7 +2506,6 @@
       "Revenue from each sector (steel/mining/cement/railways mix)",
       "EBITDA margin sustenance >12%"
     ],
-    "name": "DIFFUSION ENGINEERS LTD",
     "mcap_cr": 1381.1,
     "pe": 27.433628,
     "roe": 13.01,
@@ -2585,7 +2520,7 @@
   },
   {
     "ticker": "MOSCHIP",
-    "name": "MosChip Technologies",
+    "name": "MOSCHIP TECHNOLOGIES LTD",
     "sector": "Semiconductors / Embedded",
     "nse_symbol": "MOSCHIP",
     "moat_type": "Narrow",
@@ -2610,7 +2545,6 @@
       "Revenue from semiconductor design services",
       "Government semiconductor design contracts"
     ],
-    "name": "MOSCHIP TECHNOLOGIES LTD",
     "mcap_cr": 4168.36,
     "pe": 118.04395,
     "roe": 9.56,
@@ -2625,7 +2559,7 @@
   },
   {
     "ticker": "GULFOILLUB",
-    "name": "Gulf Oil Lubricants India",
+    "name": "Gulf Oil Lubricants India Limited",
     "sector": "Lubricants",
     "nse_symbol": "GULFOILLUB",
     "moat_type": "Narrow",
@@ -2651,7 +2585,6 @@
       "EV lubricant revenue growth",
       "2-wheeler lubricant volume growth"
     ],
-    "name": "Gulf Oil Lubricants India Limited",
     "mcap_cr": 5014.81,
     "pe": 13.839164,
     "roe": 22.14,
@@ -2666,7 +2599,7 @@
   },
   {
     "ticker": "DATAPATTNS",
-    "name": "Data Patterns (India)",
+    "name": "Data Patterns (India) Limited",
     "sector": "Defence Electronics",
     "nse_symbol": "DATAPATTNS",
     "moat_type": "Wide",
@@ -2691,7 +2624,6 @@
       "LCA Mk1A avionics progress",
       "New programme qualifications"
     ],
-    "name": "Data Patterns (India) Limited",
     "mcap_cr": 25394.89,
     "pe": 93.18201,
     "roe": 16.73,
@@ -2706,7 +2638,7 @@
   },
   {
     "ticker": "CYIENTDLM",
-    "name": "Cyient DLM",
+    "name": "Cyient DLM Limited",
     "sector": "Defence Electronics / EMS",
     "nse_symbol": "CYIENTDLM",
     "moat_type": "Narrow",
@@ -2731,7 +2663,6 @@
       "New defence programme qualifications",
       "Aerospace export order wins"
     ],
-    "name": "Cyient DLM Limited",
     "mcap_cr": 3747.59,
     "pe": 51.159267,
     "roe": 7.47,
@@ -2746,7 +2677,7 @@
   },
   {
     "ticker": "MMP",
-    "name": "MMP Industries",
+    "name": "MMP Industries Limited",
     "sector": "Aluminium Products",
     "nse_symbol": "MMP",
     "moat_type": "Narrow",
@@ -2771,7 +2702,6 @@
       "Aluminium paste market share",
       "EBITDA margin vs aluminium input cost"
     ],
-    "name": "MMP Industries Limited",
     "mcap_cr": 680.03,
     "pe": 21.906712,
     "roe": 9.26,
@@ -2786,7 +2716,7 @@
   },
   {
     "ticker": "BBL",
-    "name": "Bharat Bijlee",
+    "name": "Bharat Bijlee Limited",
     "sector": "Electrical Equipment",
     "nse_symbol": "BBL",
     "moat_type": "Narrow",
@@ -2811,7 +2741,6 @@
       "HT motor revenue growth",
       "EBITDA margin sustenance"
     ],
-    "name": "Bharat Bijlee Limited",
     "mcap_cr": 3159.45,
     "pe": 26.300339,
     "roe": 6.05,
@@ -2826,7 +2755,7 @@
   },
   {
     "ticker": "CESC",
-    "name": "CESC",
+    "name": "CESC Limited",
     "sector": "Power Utility",
     "nse_symbol": "CESC",
     "moat_type": "Wide",
@@ -2850,7 +2779,6 @@
       "AT&C (aggregate technical and commercial) loss reduction",
       "Solar capacity addition"
     ],
-    "name": "CESC Limited",
     "mcap_cr": 22514.81,
     "pe": 14.604471,
     "roe": 12.55,
@@ -2865,7 +2793,7 @@
   },
   {
     "ticker": "OMINFRAL",
-    "name": "Om Infra",
+    "name": "Om Infra Limited",
     "sector": "Infrastructure EPC / Construction",
     "nse_symbol": "OMINFRAL",
     "moat_type": "Narrow",
@@ -2890,7 +2818,6 @@
       "Bhilwara-Jaipur toll road EBITDA",
       "New dam and hydro project order wins"
     ],
-    "name": "Om Infra Limited",
     "mcap_cr": 825.9,
     "pe": 40.838097,
     "roe": 2.57,
@@ -2905,7 +2832,7 @@
   },
   {
     "ticker": "WHIRLPOOL",
-    "name": "Whirlpool of India",
+    "name": "Whirlpool of India Limited",
     "sector": "Consumer Durables",
     "nse_symbol": "WHIRLPOOL",
     "moat_type": "Narrow",
@@ -2930,7 +2857,6 @@
       "Premium segment % of revenue",
       "Promoter stake status"
     ],
-    "name": "Whirlpool of India Limited",
     "mcap_cr": 10017.19,
     "pe": 34.048748,
     "roe": 7.25,
@@ -2945,7 +2871,7 @@
   },
   {
     "ticker": "PITTIENG",
-    "name": "Pitti Engineering",
+    "name": "Pitti Engineering Limited",
     "sector": "Engineering Components",
     "nse_symbol": "PITTIENG",
     "moat_type": "Narrow",
@@ -2970,7 +2896,6 @@
       "GE export order status",
       "EV motor lamination product launch"
     ],
-    "name": "Pitti Engineering Limited",
     "mcap_cr": 3664.97,
     "pe": 31.251179,
     "roe": 12.5,
@@ -2985,7 +2910,7 @@
   },
   {
     "ticker": "RAYMONDREL",
-    "name": "Raymond Realty",
+    "name": "Raymond Realty Limited",
     "sector": "Real Estate",
     "nse_symbol": "RAYMONDREL",
     "moat_type": "Narrow",
@@ -3009,7 +2934,6 @@
       "Cash collection from sold units",
       "New phase launches"
     ],
-    "name": "Raymond Realty Limited",
     "mcap_cr": 4006.06,
     "pe": 13.21805,
     "roe": 37.72,
@@ -3024,7 +2948,7 @@
   },
   {
     "ticker": "NIITLTD",
-    "name": "NIIT",
+    "name": "NIIT Limited",
     "sector": "IT Education / Skills",
     "nse_symbol": "NIITLTD",
     "moat_type": "Narrow",
@@ -3049,7 +2973,6 @@
       "Online learner registrations",
       "EBITDA margin improvement"
     ],
-    "name": "NIIT Limited",
     "mcap_cr": 1430.84,
     "pe": 262.025,
     "roe": 0.57,
@@ -3064,7 +2987,7 @@
   },
   {
     "ticker": "RUSTOMJEE",
-    "name": "Keystone Realtors (Rustomjee)",
+    "name": "Keystone Realtors Limited",
     "sector": "Real Estate",
     "nse_symbol": "RUSTOMJEE",
     "moat_type": "Narrow",
@@ -3088,7 +3011,6 @@
       "Land bank monetisation pace",
       "Net debt reduction"
     ],
-    "name": "Keystone Realtors Limited",
     "mcap_cr": 5114.5,
     "pe": 65.24155,
     "roe": 3.34,
@@ -3103,7 +3025,7 @@
   },
   {
     "ticker": "INTERARCH",
-    "name": "Interarch Building Solutions",
+    "name": "Interarch Building Solutions Limited",
     "sector": "Pre-engineered Buildings",
     "nse_symbol": "INTERARCH",
     "moat_type": "Narrow",
@@ -3128,7 +3050,6 @@
       "E-commerce warehouse wins",
       "EBITDA margin vs steel input cost"
     ],
-    "name": "Interarch Building Solutions Limited",
     "mcap_cr": 3164.01,
     "pe": 23.616676,
     "roe": 16.48,
@@ -3143,7 +3064,7 @@
   },
   {
     "ticker": "CAPACITE",
-    "name": "Capacit'e Infraprojects",
+    "name": "Capacit'e Infraprojects Limited",
     "sector": "Construction / EPC",
     "nse_symbol": "CAPACITE",
     "moat_type": "Narrow",
@@ -3167,7 +3088,6 @@
       "Receivables days",
       "Revenue growth vs order book"
     ],
-    "name": "Capacit'e Infraprojects Limited",
     "mcap_cr": 1955.62,
     "pe": 10.2098055,
     "roe": 10.63,
@@ -3182,7 +3102,7 @@
   },
   {
     "ticker": "RAILTEL",
-    "name": "RailTel Corporation of India",
+    "name": "RailTel Corporation of India Limited",
     "sector": "Telecom / IT Infrastructure",
     "nse_symbol": "RAILTEL",
     "moat_type": "Wide",
@@ -3207,7 +3127,6 @@
       "BharatNet revenue ramp",
       "Broadband subscriber addition per quarter"
     ],
-    "name": "RailTel Corporation of India Limited",
     "mcap_cr": 10416.06,
     "pe": 32.74975,
     "roe": 16.25,
@@ -3222,7 +3141,7 @@
   },
   {
     "ticker": "AFFLE",
-    "name": "Affle (India)",
+    "name": "Affle 3i Limited",
     "sector": "Ad Tech / Mobile Marketing",
     "nse_symbol": "AFFLE",
     "moat_type": "Wide",
@@ -3247,7 +3166,6 @@
       "CPCU revenue per converted user",
       "International revenue %"
     ],
-    "name": "Affle 3i Limited",
     "mcap_cr": 20838.72,
     "pe": 45.844677,
     "roe": 13.79,
@@ -3262,7 +3180,7 @@
   },
   {
     "ticker": "SKFINDIA",
-    "name": "SKF India",
+    "name": "SKF India Limited",
     "sector": "Bearings",
     "nse_symbol": "SKFINDIA",
     "moat_type": "Wide",
@@ -3287,7 +3205,6 @@
       "EV bearing product launches",
       "After-market revenue growth"
     ],
-    "name": "SKF India Limited",
     "mcap_cr": 8074.21,
     "pe": 30.385115,
     "roe": 13.54,
@@ -3302,7 +3219,7 @@
   },
   {
     "ticker": "TEJASNET",
-    "name": "Tejas Networks",
+    "name": "Tejas Networks Limited",
     "sector": "Telecom Equipment",
     "nse_symbol": "TEJASNET",
     "moat_type": "Wide",
@@ -3327,7 +3244,6 @@
       "Revenue from private telcos (Airtel/Jio)",
       "New product launches (5G NR, optical transport)"
     ],
-    "name": "Tejas Networks Limited",
     "mcap_cr": 10529.75,
     "pe": null,
     "roe": -26.82,
@@ -3342,7 +3258,7 @@
   },
   {
     "ticker": "VSTTILLERS",
-    "name": "VST Tillers Tractors",
+    "name": "V.S.T. Tillers Tractors Limited",
     "sector": "Agricultural Equipment",
     "nse_symbol": "VSTTILLERS",
     "moat_type": "Narrow",
@@ -3367,7 +3283,6 @@
       "Small tractor revenue growth",
       "Export market development"
     ],
-    "name": "V.S.T. Tillers Tractors Limited",
     "mcap_cr": 3939.17,
     "pe": 37.66132,
     "roe": 9.99,
@@ -3382,7 +3297,7 @@
   },
   {
     "ticker": "ASALCBR",
-    "name": "Associated Alcohols & Breweries",
+    "name": "Associated Alcohols & Breweries Limited",
     "sector": "Specialty Chemicals / Pigments",
     "nse_symbol": "ASALCBR",
     "moat_type": "Narrow",
@@ -3406,7 +3321,6 @@
       "Market share in phthalocyanine pigments",
       "Gross margin vs copper prices"
     ],
-    "name": "Associated Alcohols & Breweries Limited",
     "mcap_cr": 1658.14,
     "pe": 17.98345,
     "roe": 14.56,
@@ -3421,7 +3335,7 @@
   },
   {
     "ticker": "GREAVESCOT",
-    "name": "Greaves Cotton",
+    "name": "Greaves Cotton Limited",
     "sector": "Engines / EV",
     "nse_symbol": "GREAVESCOT",
     "moat_type": "Narrow",
@@ -3446,7 +3360,6 @@
       "Greaves Electric 3-wheeler volumes",
       "ICE engine revenue decline pace"
     ],
-    "name": "Greaves Cotton Limited",
     "mcap_cr": 4435.16,
     "pe": 41.843956,
     "roe": 0,
@@ -3461,7 +3374,7 @@
   },
   {
     "ticker": "ELDEHSG",
-    "name": "Eldeco Housing & Industries",
+    "name": "Eldeco Housing and Industries Limited",
     "sector": "Real Estate",
     "nse_symbol": "ELDEHSG",
     "moat_type": "Narrow",
@@ -3485,7 +3398,6 @@
       "Revenue per project",
       "Net debt"
     ],
-    "name": "Eldeco Housing and Industries Limited",
     "mcap_cr": 773.51,
     "pe": 31.822412,
     "roe": 6.2,
@@ -3501,25 +3413,32 @@
   {
     "ticker": "ARIS",
     "name": "Arisinfra Solutions",
-    "sector": "Pharma",
+    "sector": "Construction Materials / B2B Marketplace",
     "nse_symbol": "ARIS",
     "moat_type": "Narrow",
     "moat_class": "narrow",
     "conviction": 4,
-    "moat": "ARIS ticker on NSE needs verification. Likely Aristo Pharmaceuticals or another pharma/chemical entity. Currently -27% in portfolio. Analysis pending ticker verification.",
-    "leadership": "Pending verification",
-    "non_rep": "Pending",
+    "moat": "Technology-enabled B2B platform (incorporated 2021, listed June 2025) that aggregates and supplies bulk construction materials — aggregates, cement, steel, ready-mix concrete, walling solutions and related products — to real estate and infrastructure developers and contractors, reducing procurement intermediaries. Asset-light marketplace combining a vendor network with logistics and trade credit.",
+    "leadership": "FY25 revenue ~Rs 656 cr; turned profitable recently after prior years of losses. Market cap ~Rs 970 cr, P/E ~36, ROE ~6%, ROCE ~8%. Promoter holding ~37.6%. Operates across major Indian metros.",
+    "non_rep": "Edge is execution-based — vendor density, the technology/logistics layer and working-capital/credit underwriting — rather than a structural moat. Switching costs are low and the construction-materials category is competitive and fragmented, so durability is modest.",
     "tailwinds": [
-      "Pending verification"
+      "India real estate and infrastructure capex cycle",
+      "Formalisation and digitisation of construction-materials procurement",
+      "Scale economics as order volumes / GMV grow"
     ],
     "risks": [
-      "Ticker needs verification",
-      "Currently -27% in portfolio"
+      "Thin operating margins (~2-3%)",
+      "High working-capital intensity (debtor days ~135)",
+      "Statutory auditor change — PwC resigned May 2026 (governance watch)",
+      "Competitive, low-switching-cost B2B category",
+      "Short listed track record and historically volatile profitability"
     ],
     "track": [
-      "Verify company and update analysis"
+      "Revenue / GMV growth and gross margin",
+      "Working-capital days and cash conversion",
+      "Sustained profitability and ROCE",
+      "Auditor and governance updates"
     ],
-    "name": "Arisinfra Solutions Limited",
     "mcap_cr": 975.74,
     "pe": 17.447367,
     "roe": 12.22,
@@ -3534,7 +3453,7 @@
   },
   {
     "ticker": "QUESS",
-    "name": "Quess Corp",
+    "name": "Quess Corp Limited",
     "sector": "Staffing / Business Services",
     "nse_symbol": "QUESS",
     "moat_type": "Narrow",
@@ -3559,7 +3478,6 @@
       "EBITDA per employee",
       "Technology (Allsec) revenue as % of total"
     ],
-    "name": "Quess Corp Limited",
     "mcap_cr": 3711.74,
     "pe": 16.745956,
     "roe": 19.71,
@@ -3574,7 +3492,7 @@
   },
   {
     "ticker": "AVALON",
-    "name": "Avalon Technologies",
+    "name": "Avalon Technologies Limited",
     "sector": "EMS / Electronics",
     "nse_symbol": "AVALON",
     "moat_type": "Narrow",
@@ -3599,7 +3517,6 @@
       "Clean energy segment contribution",
       "EBITDA margin expansion"
     ],
-    "name": "Avalon Technologies Limited",
     "mcap_cr": 11618.39,
     "pe": 103.179115,
     "roe": 16.94,
@@ -3614,7 +3531,7 @@
   },
   {
     "ticker": "GIPCL",
-    "name": "Gujarat Industries Power Company",
+    "name": "Gujarat Industries Power Company Limited",
     "sector": "PSU Power",
     "nse_symbol": "GIPCL",
     "moat_type": "Narrow",
@@ -3638,7 +3555,6 @@
       "PLF (Plant Load Factor) for thermal plants",
       "GUVNL payment cycle improvement"
     ],
-    "name": "Gujarat Industries Power Company Limited",
     "mcap_cr": 2548.96,
     "pe": 6.3307633,
     "roe": 0,
@@ -3653,7 +3569,7 @@
   },
   {
     "ticker": "TVSELECT",
-    "name": "TVS Electronics",
+    "name": "TVS Electronics Limited",
     "sector": "Electronics / IT Peripherals",
     "nse_symbol": "TVSELECT",
     "moat_type": "Narrow",
@@ -3677,7 +3593,6 @@
       "AMC revenue growth",
       "Digital payment terminal revenue %"
     ],
-    "name": "TVS Electronics Limited",
     "mcap_cr": 867.89,
     "pe": 668.3333,
     "roe": 1.33,
@@ -3692,32 +3607,33 @@
   },
   {
     "ticker": "EMBDL",
-    "name": "Embassy Developments",
-    "sector": "Real Estate / Office Parks",
+    "name": "EMBASSY DEVELOPMENTS LTD",
+    "sector": "Real Estate",
     "nse_symbol": "EMBDL",
-    "moat_type": "Wide",
-    "moat_class": "wide",
+    "moat_type": "Narrow",
+    "moat_class": "narrow",
     "conviction": 6,
-    "moat": "Leading Indian commercial real estate developer — operates Embassy Officeparks brand across Bengaluru, Delhi, Hyderabad, Pune, Mumbai. 55 Mn sq.ft. of office and institutional space. Strategic locations in tech corridors (Whitefield, RMZ Ecoworld). Prime land bank in high-appreciation zones.",
-    "leadership": "Estimated revenue ~₹3,000+ Cr (diversified portfolio). Major institutional clients: Google, Amazon, Microsoft, TCS, Accenture, etc. Listed at ₹100-200 (IPO pending). Mkt cap projection ~₹12,000-15,000 Cr.",
-    "non_rep": "Prime commercial real estate locations (Whitefield Bengaluru, Golf Links Delhi, HITEC City Hyderabad) cannot be replicated. Long-term institutional relationships (Google, Amazon have 10-year+ occupancies). BTS (build-to-suit) capabilities create customization switching cost.",
+    "moat": "Bengaluru-headquartered real estate developer, formerly Indiabulls Real Estate (renamed Equinox India Developments and then Embassy Developments after the Embassy Group reverse-merger). Develops residential, commercial and SEZ projects with a strategic focus on Bengaluru, the Mumbai Metropolitan Region and the NCR. The Embassy Group has delivered 75+ million sq ft of real estate and sponsors India's first listed REIT (Embassy REIT).",
+    "leadership": "Market cap ~Rs 8,900 cr; trades at ~0.8x book value. Currently loss-making with negative ROE/ROCE as it integrates the merged portfolio and scales launches. Promoter (Embassy Group) holding ~42.7%. Revenue is lumpy and tied to project completions and percentage-of-completion accounting.",
+    "non_rep": "Edge comes from the Embassy Group brand, a large multi-city land and development pipeline, and an execution track record (75+ msf delivered, Embassy REIT sponsorship). However, real estate is competitive, capital-intensive and cyclical, so the moat is brand- and land-bank-driven rather than structural.",
     "tailwinds": [
-      "India office space demand growth 15-18% p.a. (tech expansion, MNC back-office)",
-      "SEZ/Tech Park premium command — IT/ITeS sector investment concentration",
-      "Co-working and flex space monetisation opportunity",
-      "Capital appreciation of landed assets"
+      "India premium residential and office demand upcycle",
+      "Consolidation toward branded, listed developers",
+      "Monetisation of large Bengaluru / MMR / NCR land bank and pipeline"
     ],
     "risks": [
-      "Valuations assumed from peers — actual IPO pricing could be different",
-      "WFH and hybrid work reducing per-employee office space demand in some segments",
-      "Geographic concentration in Bengaluru (50%+ of portfolio)"
+      "High promoter share pledging (~68% of promoter holding)",
+      "Loss-making with negative RoE/RoCE",
+      "Lumpy, completion-linked revenue and elevated working-capital days",
+      "Litigation / land-title disputes (e.g., Kadugodi land matter)",
+      "Real estate cyclicality and leverage"
     ],
     "track": [
-      "Quarterly occupancy rates by location",
-      "Rentals per sq.ft. by geography",
-      "New institutional lease signings"
+      "Pre-sales / bookings value and collections",
+      "Launch pipeline execution and completions",
+      "Promoter pledge reduction",
+      "Net debt and working-capital trend"
     ],
-    "name": "EMBASSY DEVELOPMENTS LTD",
     "mcap_cr": 8922.62,
     "pe": null,
     "roe": -9.05,
@@ -3738,24 +3654,27 @@
     "moat_type": "Narrow",
     "moat_class": "narrow",
     "conviction": 3,
-    "moat": "Manufacturer of electrical control panels, switchgear, and motor control centres (MCCs) for power, petrochemical, and industrial applications. Niche industrial electrical engineering.",
-    "leadership": "Small-cap. Serves industrial projects.",
-    "non_rep": "Customised industrial control panels require application engineering and certifications.",
+    "moat": "Coimbatore-based company (incorporated 1981), part of the Lakshmi Group. Operates two segments: (1) electrical control panels for textile machinery, supplied primarily to group company Lakshmi Machine Works (LMW), and (2) plastic moulded components for automobile and engineering customers. Historically manufactured control gear in collaboration with Sprecher+Schuh, Switzerland.",
+    "leadership": "FY25 revenue ~Rs 238 cr; small-cap with market cap ~Rs 190 cr. Almost debt-free with sizeable investments/cash (~Rs 148 cr) and trading near or below book value. Promoter holding low at ~36%. Profitability has weakened sharply (3-yr PAT CAGR ~ -61%), with ROE and ROCE in low single digits.",
+    "non_rep": "A long-standing captive supplier relationship with LMW gives qualification-based switching costs in textile-machinery control panels — but this same single-customer concentration caps the moat and ties earnings to LMW's textile-spinning capex cycle.",
     "tailwinds": [
-      "India industrial capex",
-      "Power sector control systems"
+      "Recovery in textile-machinery (spinning) capex via LMW",
+      "Auto and engineering demand for plastic components",
+      "Cash-rich, debt-free balance sheet supports stability and dividends"
     ],
     "risks": [
-      "Currently -47% in portfolio — significant losses",
-      "Very small company",
-      "Verify ticker accuracy"
+      "Heavy revenue concentration on LMW / the textile cycle",
+      "Sharp earnings decline and very low RoE/RoCE",
+      "Low promoter holding (~36%)",
+      "GST show-cause notices (~Rs 5.5 cr, FY23/FY24)",
+      "Elevated debtor days (~111)"
     ],
     "track": [
-      "Verify company details",
-      "Revenue growth",
-      "Order book"
+      "LMW order flow / textile capex cycle",
+      "Electricals vs Plastics segment mix",
+      "Margin and RoCE recovery",
+      "Resolution of GST notices"
     ],
-    "name": "Lakshmi Electrical Control Systems Limited",
     "mcap_cr": 187.05,
     "pe": 156.58435,
     "roe": 0.44,
@@ -3770,7 +3689,7 @@
   },
   {
     "ticker": "TATACOMM",
-    "name": "Tata Communications",
+    "name": "Tata Communications Limited",
     "sector": "Telecom / Data Networking",
     "nse_symbol": "TATACOMM",
     "moat_type": "Wide",
@@ -3795,7 +3714,6 @@
       "EBITDA margin expansion as voice declines",
       "Cybersecurity and IoT revenue contribution"
     ],
-    "name": "Tata Communications Limited",
     "mcap_cr": 55435.76,
     "pe": 53.214775,
     "roe": 31.13,
@@ -3810,7 +3728,7 @@
   },
   {
     "ticker": "UNIECOM",
-    "name": "Unicommerce eSolutions",
+    "name": "UNICOMMERCE ESOLUTIONS L",
     "sector": "SaaS / E-commerce Software",
     "nse_symbol": "UNIECOM",
     "moat_type": "Narrow",
@@ -3836,7 +3754,6 @@
       "ARPU (Average Revenue Per User) growth",
       "UniBot adoption and revenue contribution"
     ],
-    "name": "UNICOMMERCE ESOLUTIONS L",
     "mcap_cr": 1005.68,
     "pe": 50.27528,
     "roe": 15.55,
@@ -3851,7 +3768,7 @@
   },
   {
     "ticker": "SUVEN",
-    "name": "Suven Pharmaceuticals",
+    "name": "Suven Life Sciences Limited",
     "sector": "Pharma CDMO / CNS",
     "nse_symbol": "SUVEN",
     "moat_type": "Wide",
@@ -3876,7 +3793,6 @@
       "Milestone revenue vs FDF (finished dose) transition",
       "New molecule engagements per quarter"
     ],
-    "name": "Suven Life Sciences Limited",
     "mcap_cr": 7241.77,
     "pe": null,
     "roe": -78.8,
@@ -3891,7 +3807,7 @@
   },
   {
     "ticker": "SONACOMS",
-    "name": "Sona BLW Precision Forgings",
+    "name": "Sona BLW Precision Forgings Limited",
     "sector": "Auto Components / Precision Forgings",
     "nse_symbol": "SONACOMS",
     "moat_type": "Wide",
@@ -3920,7 +3836,6 @@
       "EBITDA margin recovery toward 15%+",
       "Railway equipment segment contribution"
     ],
-    "name": "Sona BLW Precision Forgings Limited",
     "mcap_cr": 37406.06,
     "pe": 58.38349,
     "roe": 10.69,
@@ -3935,7 +3850,7 @@
   },
   {
     "ticker": "AEROFLEX",
-    "name": "Aeroflex Industries",
+    "name": "Aeroflex Industries Limited",
     "sector": "Industrials",
     "nse_symbol": "AEROFLEX",
     "moat_type": "Wide",
@@ -3958,7 +3873,6 @@
       "Gross margin >35%",
       "Aerospace/robotics order wins"
     ],
-    "name": "Aeroflex Industries Limited",
     "mcap_cr": 6380.33,
     "pe": 112.389275,
     "roe": 14.06,
@@ -3973,7 +3887,7 @@
   },
   {
     "ticker": "SANSERA",
-    "name": "Sansera Engineering",
+    "name": "Sansera Engineering Limited",
     "sector": "Auto Ancillary",
     "nse_symbol": "SANSERAENG",
     "moat_type": "Wide",
@@ -3996,7 +3910,6 @@
       "Aerospace facility Bengaluru ramp",
       "Quarterly order book"
     ],
-    "name": "Sansera Engineering Limited",
     "mcap_cr": 17944.77,
     "pe": 55.416744,
     "roe": 11.13,
@@ -4011,7 +3924,7 @@
   },
   {
     "ticker": "GESHIP",
-    "name": "Great Eastern Shipping",
+    "name": "The Great Eastern Shipping Company Limited",
     "sector": "Shipping",
     "nse_symbol": "GESHIP",
     "moat_type": "Narrow",
@@ -4036,7 +3949,6 @@
       "Fleet utilization %",
       "Dividend sustainability"
     ],
-    "name": "The Great Eastern Shipping Company Limited",
     "mcap_cr": 20023.1,
     "pe": 6.818182,
     "roe": 18.85,
@@ -4051,7 +3963,7 @@
   },
   {
     "ticker": "THERMAX",
-    "name": "Thermax",
+    "name": "Thermax Limited",
     "sector": "Capital Goods",
     "nse_symbol": "THERMAX",
     "moat_type": "Wide",
@@ -4076,7 +3988,6 @@
       "Green solutions revenue %",
       "TBWES order wins"
     ],
-    "name": "Thermax Limited",
     "mcap_cr": 53354.92,
     "pe": 73.867744,
     "roe": 13.69,
@@ -4091,7 +4002,7 @@
   },
   {
     "ticker": "TRITURBINE",
-    "name": "Triveni Turbine",
+    "name": "Triveni Turbine Limited",
     "sector": "Capital Goods",
     "nse_symbol": "TRITURBINE",
     "moat_type": "Wide",
@@ -4115,7 +4026,6 @@
       "International order bookings",
       "Export backlog value"
     ],
-    "name": "Triveni Turbine Limited",
     "mcap_cr": 20985.84,
     "pe": 60.06825,
     "roe": 26.22,
@@ -4130,7 +4040,7 @@
   },
   {
     "ticker": "ELGIEQUIP",
-    "name": "Elgi Equipments",
+    "name": "Elgi Equipments Limited",
     "sector": "Industrials",
     "nse_symbol": "ELGIEQUIP",
     "moat_type": "Wide",
@@ -4154,7 +4064,6 @@
       "Oil-free compressor mix",
       "EV segment product launches"
     ],
-    "name": "Elgi Equipments Limited",
     "mcap_cr": 19109.94,
     "pe": 44.606327,
     "roe": 21.0,
@@ -4169,7 +4078,7 @@
   },
   {
     "ticker": "INOXINDIA",
-    "name": "INOX India",
+    "name": "INOX India Limited",
     "sector": "Industrial Equipment",
     "nse_symbol": "INOXINDIA",
     "moat_type": "Wide",
@@ -4194,7 +4103,6 @@
       "Space program awarding",
       "Revenue per segment shift"
     ],
-    "name": "INOX India Limited",
     "mcap_cr": 17090.77,
     "pe": 66.466644,
     "roe": 25.9,
@@ -4209,7 +4117,7 @@
   },
   {
     "ticker": "KENNAMET",
-    "name": "Kennametal India",
+    "name": "Kennametal India Limited",
     "sector": "Industrials",
     "nse_symbol": "KENNAMET",
     "moat_type": "Narrow",
@@ -4233,7 +4141,6 @@
       "Revenue growth vs global Kennametal",
       "EBITDA margins vs global parent"
     ],
-    "name": "Kennametal India Limited",
     "mcap_cr": 6736.33,
     "pe": 48.712654,
     "roe": 0,
@@ -4248,7 +4155,7 @@
   },
   {
     "ticker": "PARKHOSPS",
-    "name": "Park Medi World",
+    "name": "Park Medi World Limited",
     "sector": "Healthcare",
     "nse_symbol": "PARKHOSPS",
     "moat_type": "Narrow",
@@ -4272,7 +4179,6 @@
       "Doctor retention and nurse productivity",
       "RoCE on new bed additions and acquired assets"
     ],
-    "name": "Park Medi World Limited",
     "mcap_cr": 11284.19,
     "pe": 38.027657,
     "roe": 16.94,
@@ -4287,7 +4193,7 @@
   },
   {
     "ticker": "NLCINDIA",
-    "name": "NLC India",
+    "name": "NLC India Limited",
     "sector": "PSU Power",
     "nse_symbol": "NLCINDIA",
     "moat_type": "Narrow",
@@ -4311,7 +4217,6 @@
       "EBITDA per unit solar vs thermal",
       "Govt policy on lignite pricing"
     ],
-    "name": "NLC India Limited",
     "mcap_cr": 43540.39,
     "pe": 12.367074,
     "roe": 15.97,
@@ -4326,7 +4231,7 @@
   },
   {
     "ticker": "PFC",
-    "name": "Power Finance Corporation",
+    "name": "Power Finance Corporation Limited",
     "sector": "PSU Finance",
     "nse_symbol": "PFC",
     "moat_type": "Narrow",
@@ -4351,7 +4256,6 @@
       "Loan book growth rate",
       "Disbursements under Govt schemes"
     ],
-    "name": "Power Finance Corporation Limited",
     "mcap_cr": 140353.31,
     "pe": 5.4185247,
     "roe": 20.47,
@@ -4366,7 +4270,7 @@
   },
   {
     "ticker": "SJVN",
-    "name": "SJVN",
+    "name": "SJVN Limited",
     "sector": "PSU Power",
     "nse_symbol": "SJVN",
     "moat_type": "Narrow",
@@ -4390,7 +4294,6 @@
       "PPAs signed for new capacity",
       "Revenue growth from operational projects"
     ],
-    "name": "SJVN Limited",
     "mcap_cr": 28962.59,
     "pe": 45.21472,
     "roe": 4.51,
@@ -4405,7 +4308,7 @@
   },
   {
     "ticker": "ISGEC",
-    "name": "Isgec Heavy Engineering",
+    "name": "Isgec Heavy Engineering Limited",
     "sector": "Capital Goods",
     "nse_symbol": "ISGEC",
     "moat_type": "Narrow",
@@ -4429,7 +4332,6 @@
       "Sugar equipment export orders",
       "Margin recovery trajectory"
     ],
-    "name": "Isgec Heavy Engineering Limited",
     "mcap_cr": 6780.16,
     "pe": 62.30405,
     "roe": 5.37,
@@ -4444,7 +4346,7 @@
   },
   {
     "ticker": "HEG",
-    "name": "HEG",
+    "name": "HEG Limited",
     "sector": "Materials",
     "nse_symbol": "HEG",
     "moat_type": "Narrow",
@@ -4468,7 +4370,6 @@
       "Needle coke input cost",
       "Anode business revenue ramp"
     ],
-    "name": "HEG Limited",
     "mcap_cr": 10502.8,
     "pe": 27.543016,
     "roe": 7.34,
@@ -4483,7 +4384,7 @@
   },
   {
     "ticker": "INGERRAND",
-    "name": "Ingersoll-Rand (India)",
+    "name": "Ingersoll-Rand (India) Limited",
     "sector": "Industrials",
     "nse_symbol": "INGERRAND",
     "moat_type": "Narrow",
@@ -4507,7 +4408,6 @@
       "Service revenue as % of total",
       "New product introductions from parent"
     ],
-    "name": "Ingersoll-Rand (India) Limited",
     "mcap_cr": 14108.06,
     "pe": 55.05174,
     "roe": 41.8,
@@ -4522,7 +4422,7 @@
   },
   {
     "ticker": "WELCORP",
-    "name": "Welspun Corp",
+    "name": "Welspun Corp Limited",
     "sector": "Steel Pipes",
     "nse_symbol": "WELCORP",
     "moat_type": "Narrow",
@@ -4547,7 +4447,6 @@
       "US revenue vs India mix",
       "Sintex EBITDA contribution"
     ],
-    "name": "Welspun Corp Limited",
     "mcap_cr": 36285.66,
     "pe": 22.509405,
     "roe": 18.92,
@@ -4562,7 +4461,7 @@
   },
   {
     "ticker": "JNKINDIA",
-    "name": "JNK India",
+    "name": "JNK India Limited",
     "sector": "Capital Goods",
     "nse_symbol": "JNKINDIA",
     "moat_type": "Wide",
@@ -4587,7 +4486,6 @@
       "Green hydrogen JV progress",
       "Export revenue %"
     ],
-    "name": "JNK India Limited",
     "mcap_cr": 2723.0,
     "pe": 42.061367,
     "roe": 12.09,
@@ -4602,7 +4500,7 @@
   },
   {
     "ticker": "LATENTVIEW",
-    "name": "LatentView Analytics",
+    "name": "Latent View Analytics Limited",
     "sector": "IT / Analytics",
     "nse_symbol": "LATENTVIEW",
     "moat_type": "Narrow",
@@ -4626,7 +4524,6 @@
       "US client concentration",
       "GenAI project wins"
     ],
-    "name": "Latent View Analytics Limited",
     "mcap_cr": 6298.8,
     "pe": 31.807734,
     "roe": 12.17,
@@ -4641,7 +4538,7 @@
   },
   {
     "ticker": "POWERICA",
-    "name": "Powerica",
+    "name": "POWERICA LIMITED",
     "sector": "Power Equipment",
     "nse_symbol": "POWERICA",
     "moat_type": "Narrow",
@@ -4666,7 +4563,6 @@
       "AMC revenue growth",
       "Hybrid power product lines"
     ],
-    "name": "POWERICA LIMITED",
     "mcap_cr": 6719.9,
     "pe": 40.227272,
     "roe": 17.89,
@@ -4681,7 +4577,7 @@
   },
   {
     "ticker": "TEGA",
-    "name": "Tega Industries",
+    "name": "Tega Industries Limited",
     "sector": "Mining Equipment",
     "nse_symbol": "TEGA",
     "moat_type": "Wide",
@@ -4705,7 +4601,6 @@
       "New product wins in lithium/copper mines",
       "EBITDA margin stability"
     ],
-    "name": "Tega Industries Limited",
     "mcap_cr": 13692.02,
     "pe": 88.94583,
     "roe": 5.94,
@@ -4720,7 +4615,7 @@
   },
   {
     "ticker": "ASHIANA",
-    "name": "Ashiana Housing",
+    "name": "Ashiana Housing Limited",
     "sector": "Real Estate",
     "nse_symbol": "ASHIANA",
     "moat_type": "Narrow",
@@ -4745,7 +4640,6 @@
       "Senior living units pipeline",
       "Cash flow from operations vs land acquisition"
     ],
-    "name": "Ashiana Housing Limited",
     "mcap_cr": 3949.12,
     "pe": 32.792156,
     "roe": 14.52,
@@ -4760,7 +4654,7 @@
   },
   {
     "ticker": "SCI",
-    "name": "Shipping Corporation of India",
+    "name": "The Shipping Corporation of India Limited",
     "sector": "PSU Shipping",
     "nse_symbol": "SCI",
     "moat_type": "Narrow",
@@ -4784,7 +4678,6 @@
       "Privatization announcement",
       "Revenue per vessel vs GESHIP"
     ],
-    "name": "The Shipping Corporation of India Limited",
     "mcap_cr": 14351.27,
     "pe": 10.609504,
     "roe": 0,
@@ -4799,7 +4692,7 @@
   },
   {
     "ticker": "CARBORUNIV",
-    "name": "Carborundum Universal",
+    "name": "Carborundum Universal Limited",
     "sector": "Abrasives & Ceramics",
     "nse_symbol": "CARBORUNIV",
     "moat_type": "Wide",
@@ -4824,7 +4717,6 @@
       "SiC capacity utilization",
       "Export revenue defence/aerospace"
     ],
-    "name": "Carborundum Universal Limited",
     "mcap_cr": 21148.59,
     "pe": 107.36943,
     "roe": 4.37,
@@ -4839,7 +4731,7 @@
   },
   {
     "ticker": "ENTERO",
-    "name": "Entero Healthcare Solutions",
+    "name": "Entero Healthcare Solutions Limited",
     "sector": "Healthcare Distribution",
     "nse_symbol": "ENTERO",
     "moat_type": "Narrow",
@@ -4864,7 +4756,6 @@
       "New cities/districts",
       "Pharmacy client retention rate"
     ],
-    "name": "Entero Healthcare Solutions Limited",
     "mcap_cr": 4849.61,
     "pe": 42.288425,
     "roe": 8.28,
@@ -4879,7 +4770,7 @@
   },
   {
     "ticker": "SIEMENS",
-    "name": "Siemens",
+    "name": "Siemens Limited",
     "sector": "Capital Goods",
     "nse_symbol": "SIEMENS",
     "moat_type": "Wide",
@@ -4904,7 +4795,6 @@
       "Energy business demerger timeline",
       "Digital/software revenue as % of total"
     ],
-    "name": "Siemens Limited",
     "mcap_cr": 129877.15,
     "pe": 77.136215,
     "roe": 0,
@@ -4919,7 +4809,7 @@
   },
   {
     "ticker": "HONAUT",
-    "name": "Honeywell Automation India",
+    "name": "Honeywell Automation India Limited",
     "sector": "Automation",
     "nse_symbol": "HONAUT",
     "moat_type": "Wide",
@@ -4943,7 +4833,6 @@
       "Process solutions order intake",
       "Building solutions growth"
     ],
-    "name": "Honeywell Automation India Limited",
     "mcap_cr": 32500.77,
     "pe": 62.007328,
     "roe": 12.35,
@@ -4958,7 +4847,7 @@
   },
   {
     "ticker": "GRINDWELL",
-    "name": "Grindwell Norton",
+    "name": "Grindwell Norton Limited",
     "sector": "Abrasives",
     "nse_symbol": "GRINDWELL",
     "moat_type": "Wide",
@@ -4983,7 +4872,6 @@
       "Railway and aerospace order mix",
       "EBITDA margins vs Carborundum Universal"
     ],
-    "name": "Grindwell Norton Limited",
     "mcap_cr": 23330.92,
     "pe": 56.236988,
     "roe": 17.3,
@@ -4998,7 +4886,7 @@
   },
   {
     "ticker": "SKFINDUS",
-    "name": "SKF India",
+    "name": "SKF India Limited",
     "sector": "Bearings",
     "nse_symbol": "SKFINDIA",
     "moat_type": "Wide",
@@ -5023,7 +4911,6 @@
       "Wind energy bearing revenues",
       "EV-specific bearing product launches"
     ],
-    "name": "SKF India Limited",
     "mcap_cr": 12431.67,
     "pe": 57.28018,
     "roe": 29.48,
@@ -5038,7 +4925,7 @@
   },
   {
     "ticker": "MAFANG",
-    "name": "Mirae Asset NYSE FANG+ ETF",
+    "name": "Mirae Asset NYSE FANG+ETF",
     "sector": "ETF",
     "nse_symbol": "MAFANG",
     "moat_type": "Narrow",
@@ -5062,7 +4949,6 @@
       "AUM growth and bid-ask liquidity on exchange",
       "Weight changes and earnings momentum of the top constituents"
     ],
-    "name": "Mirae Asset NYSE FANG+ETF",
     "mcap_cr": 0.0,
     "pe": 34.59407,
     "roe": 0,
@@ -5077,7 +4963,7 @@
   },
   {
     "ticker": "ABLBL",
-    "name": "Aditya Birla Lifestyle Brands",
+    "name": "ADITYA BIRLA LIFES BRAN L",
     "sector": "Consumer Cyclical",
     "nse_symbol": "ABLBL",
     "moat_type": "Narrow",
@@ -5101,7 +4987,6 @@
       "Gross margin and markdown intensity",
       "Working capital and return on incremental store capital"
     ],
-    "name": "ADITYA BIRLA LIFES BRAN L",
     "mcap_cr": 12267.85,
     "pe": 71.63121,
     "roe": 12.72,
@@ -5116,7 +5001,7 @@
   },
   {
     "ticker": "BOROLTD",
-    "name": "Borosil",
+    "name": "Borosil Limited",
     "sector": "Consumer Cyclical",
     "nse_symbol": "BOROLTD",
     "moat_type": "Narrow",
@@ -5140,7 +5025,6 @@
       "Capacity utilisation in new facilities",
       "Gross margin resilience versus input cost swings"
     ],
-    "name": "Borosil Limited",
     "mcap_cr": 2693.11,
     "pe": 36.14767,
     "roe": 8.81,
@@ -5155,7 +5039,7 @@
   },
   {
     "ticker": "KPITTECH",
-    "name": "KPIT Technologies",
+    "name": "KPIT Technologies Limited",
     "sector": "Technology",
     "nse_symbol": "KPITTECH",
     "moat_type": "Wide",
@@ -5179,7 +5063,6 @@
       "Growth in products and solutions mix versus vanilla services",
       "Margins, attrition and offshore delivery leverage"
     ],
-    "name": "KPIT Technologies Limited",
     "mcap_cr": 20583.1,
     "pe": 32.450645,
     "roe": 19.73,
@@ -5194,7 +5077,7 @@
   },
   {
     "ticker": "MSTCLTD",
-    "name": "MSTC",
+    "name": "MSTC Limited",
     "sector": "Industrials",
     "nse_symbol": "MSTCLTD",
     "moat_type": "Narrow",
@@ -5218,7 +5101,6 @@
       "New PSU and ministry mandates",
       "Segment margins and cash conversion quality"
     ],
-    "name": "MSTC Limited",
     "mcap_cr": 4959.68,
     "pe": 22.68921,
     "roe": 26.6,
@@ -5233,7 +5115,7 @@
   },
   {
     "ticker": "ORIENTHOT",
-    "name": "Oriental Hotels",
+    "name": "Oriental Hotels Limited",
     "sector": "Consumer Cyclical",
     "nse_symbol": "ORIENTHOT",
     "moat_type": "Narrow",
@@ -5257,7 +5139,6 @@
       "F&B contribution and margin progression",
       "Return on refurbishment capex"
     ],
-    "name": "Oriental Hotels Limited",
     "mcap_cr": 2079.25,
     "pe": 30.717678,
     "roe": 9.41,
@@ -5272,7 +5153,7 @@
   },
   {
     "ticker": "REDINGTON",
-    "name": "Redington",
+    "name": "Redington Limited",
     "sector": "Technology",
     "nse_symbol": "REDINGTON",
     "moat_type": "Narrow",
@@ -5296,7 +5177,6 @@
       "Working capital days and cash conversion",
       "ROCE sustainability through cycle turns"
     ],
-    "name": "Redington Limited",
     "mcap_cr": 19161.29,
     "pe": 12.866142,
     "roe": 13.09,
@@ -5311,7 +5191,7 @@
   },
   {
     "ticker": "USHAMART",
-    "name": "Usha Martin",
+    "name": "Usha Martin Limited",
     "sector": "Basic Materials",
     "nse_symbol": "USHAMART",
     "moat_type": "Narrow",
@@ -5335,7 +5215,6 @@
       "EBITDA margin per tonne and export mix",
       "RoCE and free cash flow through the cycle"
     ],
-    "name": "Usha Martin Limited",
     "mcap_cr": 15230.67,
     "pe": 31.039082,
     "roe": 16.23,
@@ -5350,7 +5229,7 @@
   },
   {
     "ticker": "VIYASH",
-    "name": "Viyash Life Sciences",
+    "name": "Viyash Scientific Limited",
     "sector": "Healthcare",
     "nse_symbol": "VIYASH",
     "moat_type": "Narrow",
@@ -5374,7 +5253,6 @@
       "EBITDA margin progression and leverage reduction",
       "API-to-formulation / CDMO mix evolution"
     ],
-    "name": "Viyash Scientific Limited",
     "mcap_cr": 10870.12,
     "pe": 62.2625,
     "roe": 11.56,
@@ -5389,7 +5267,7 @@
   },
   {
     "ticker": "WOCKPHARMA",
-    "name": "Wockhardt",
+    "name": "Wockhardt Limited",
     "sector": "Healthcare",
     "nse_symbol": "WOCKPHARMA",
     "moat_type": "Narrow",
@@ -5413,7 +5291,6 @@
       "Debt reduction and financing cost trend",
       "R&D productivity translating into commercial approvals"
     ],
-    "name": "Wockhardt Limited",
     "mcap_cr": 32259.57,
     "pe": 152.13026,
     "roe": 4.0,
@@ -5428,7 +5305,7 @@
   },
   {
     "ticker": "EIHOTEL",
-    "name": "EIH",
+    "name": "EIH Limited",
     "sector": "Consumer Cyclical",
     "nse_symbol": "EIHOTEL",
     "moat_type": "Wide",
@@ -5452,7 +5329,6 @@
       "Pipeline conversion and managed-hotel additions",
       "Cash generation and return on capital through the cycle"
     ],
-    "name": "EIH Limited",
     "mcap_cr": 19311.24,
     "pe": 30.695822,
     "roe": 12.95,
@@ -5467,7 +5343,7 @@
   },
   {
     "ticker": "KAMDHENU",
-    "name": "Kamdhenu",
+    "name": "Kamdhenu Limited",
     "sector": "Basic Materials",
     "nse_symbol": "KAMDHENU",
     "moat_type": "Narrow",
@@ -5491,7 +5367,6 @@
       "Franchise additions and dealer productivity",
       "Success of adjacent categories beyond core TMT"
     ],
-    "name": "Kamdhenu Limited",
     "mcap_cr": 856.36,
     "pe": 11.169117,
     "roe": 21.99,
@@ -5506,7 +5381,7 @@
   },
   {
     "ticker": "GAUDIUMIVF",
-    "name": "Gaudium IVF",
+    "name": "GAUDIUM IVF N WOMEN H L",
     "sector": "Healthcare",
     "nse_symbol": "GAUDIUMIVF",
     "moat_type": "Narrow",
@@ -5530,7 +5405,6 @@
       "EBITDA margin sustainability as network expands",
       "Doctor retention and repeat/referral patient flow"
     ],
-    "name": "GAUDIUM IVF N WOMEN H L",
     "mcap_cr": 764.26,
     "pe": 26.785713,
     "roe": 24.66,
@@ -5545,7 +5419,7 @@
   },
   {
     "ticker": "MON100",
-    "name": "Motilal Oswal Nasdaq 100 ETF",
+    "name": "Motilal Oswal NASDAQ 100 ETF",
     "sector": "ETF",
     "nse_symbol": "MON100",
     "moat_type": "Narrow",
@@ -5569,7 +5443,6 @@
       "Tracking error / tracking difference",
       "Underlying earnings momentum of top Nasdaq holdings"
     ],
-    "name": "Motilal Oswal NASDAQ 100 ETF",
     "mcap_cr": 0.0,
     "pe": 40.52532,
     "roe": 0,
@@ -5584,7 +5457,7 @@
   },
   {
     "ticker": "SUZLON",
-    "name": "Suzlon Energy",
+    "name": "Suzlon Energy Limited",
     "sector": "Industrials",
     "nse_symbol": "SUZLON",
     "moat_type": "Scale + Product Platform (S144)",
@@ -5617,7 +5490,6 @@
       "Net cash position trajectory",
       "WTG contribution margin (FY26: 24.5%, guidance 23%)"
     ],
-    "name": "Suzlon Energy Limited",
     "mcap_cr": 79529.6,
     "pe": 25.060606,
     "roe": 40.64,
@@ -5632,7 +5504,7 @@
   },
   {
     "ticker": "HLEGLAS",
-    "name": "HLE Glascoat",
+    "name": "HLE Glascoat Limited",
     "sector": "Industrials",
     "nse_symbol": "HLEGLAS",
     "moat_type": "Niche specialisation — glass-lined + filtration equipment",
@@ -5663,7 +5535,6 @@
       "Filtration & heat-transfer segment growth",
       "Working capital days and cash conversion"
     ],
-    "name": "HLE Glascoat Limited",
     "mcap_cr": 2705.96,
     "pe": 54.26184,
     "roe": 9.65,
@@ -5678,7 +5549,7 @@
   },
   {
     "ticker": "WENDT",
-    "name": "Wendt (India)",
+    "name": "Wendt (India) Limited",
     "sector": "Industrials",
     "nse_symbol": "WENDT",
     "moat_type": "Niche tech access — superabrasive grinding tools (CUMI × Wendt GmbH JV)",
@@ -5709,7 +5580,6 @@
       "New CEO Amit Ingale's first-year guidance and capex plan",
       "Working capital intensity"
     ],
-    "name": "Wendt (India) Limited",
     "mcap_cr": 1581.0,
     "pe": 109.13986,
     "roe": 5.85,
@@ -5724,7 +5594,7 @@
   },
   {
     "ticker": "KPIGREEN",
-    "name": "KPI Green Energy",
+    "name": "KPI Green Energy Limited",
     "sector": "Utilities",
     "nse_symbol": "KPIGREEN",
     "moat_type": "Asset-backed renewable IPP + EPC scale",
@@ -5757,7 +5627,6 @@
       "BESS / floating solar revenue contribution",
       "Promoter warrant conversion / dilution impact"
     ],
-    "name": "KPI Green Energy Limited",
     "mcap_cr": 8105.54,
     "pe": 17.064085,
     "roe": 17.25,
@@ -5772,7 +5641,7 @@
   },
   {
     "ticker": "SGIL",
-    "name": "Synergy Green Industries",
+    "name": "Synergy Green Industries Limited",
     "sector": "Industrials",
     "nse_symbol": "SGIL",
     "moat_type": "Niche capability — large wind-turbine castings",
@@ -5804,7 +5673,6 @@
       "In-house machining capture vs outsourced",
       "Working capital and FCF improvement"
     ],
-    "name": "Synergy Green Industries Limited",
     "mcap_cr": 914.55,
     "pe": 197.55034,
     "roe": 4.26,
@@ -5819,7 +5687,7 @@
   },
   {
     "ticker": "KSB",
-    "name": "KSB",
+    "name": "KSB Limited",
     "sector": "Industrials",
     "nse_symbol": "KSB",
     "moat_type": "MNC engineering + brand (German parent technology)",
@@ -5852,7 +5720,6 @@
       "Export revenue contribution",
       "Promoter holding stability"
     ],
-    "name": "KSB Limited",
     "mcap_cr": 14999.57,
     "pe": 57.881126,
     "roe": 0,
@@ -5867,7 +5734,7 @@
   },
   {
     "ticker": "CLEANMAX",
-    "name": "Cleanmax Enviro Energy Solutions",
+    "name": "CLEAN MAX ENVIRO EN SOL L",
     "sector": "Utilities",
     "nse_symbol": "CLEANMAX",
     "moat_type": "C&I renewable specialist with international footprint",
@@ -5900,7 +5767,6 @@
       "Net debt and Brookfield BGTF stake evolution",
       "Tariff-regulation developments in Gujarat / Karnataka"
     ],
-    "name": "CLEAN MAX ENVIRO EN SOL L",
     "mcap_cr": 15891.16,
     "pe": 151.48438,
     "roe": 1.96,
@@ -5915,7 +5781,7 @@
   },
   {
     "ticker": "JYOTICNC",
-    "name": "Jyoti CNC Automation",
+    "name": "Jyoti CNC Automation Limited",
     "sector": "Industrials",
     "nse_symbol": "JYOTICNC",
     "moat_type": "Domestic CNC OEM leader + Huron 5-axis tech",
@@ -5949,7 +5815,6 @@
       "Aerospace / defence order share",
       "FY27 revenue vs management guidance"
     ],
-    "name": "Jyoti CNC Automation Limited",
     "mcap_cr": 16064.03,
     "pe": 47.758617,
     "roe": 18.22,
@@ -5964,7 +5829,7 @@
   },
   {
     "ticker": "IFGLEXPOR",
-    "name": "IFGL Refractories",
+    "name": "IFGL Refractories Limited",
     "sector": "Basic Materials",
     "nse_symbol": "IFGLEXPOR",
     "moat_type": "Specialty refractories with global footprint",
@@ -5997,7 +5862,6 @@
       "Standalone PAT recovery toward FY25 ₹57.6 cr base",
       "Dividend continuity (FY26 ₹2.15/share)"
     ],
-    "name": "IFGL Refractories Limited",
     "mcap_cr": 1403.37,
     "pe": 40.562496,
     "roe": 3.04,
@@ -6013,23 +5877,32 @@
   {
     "ticker": "3MINDIA",
     "name": "3M India Limited",
-    "sector": "Industrials",
+    "sector": "Diversified Industrials",
     "nse_symbol": "3MINDIA",
     "buy_avg": 33302.06,
-    "moat_type": "Pending",
-    "moat_class": "pending",
-    "conviction": 0,
-    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
-    "leadership": "Pending",
-    "non_rep": "Pending",
+    "moat_type": "Wide",
+    "moat_class": "wide",
+    "conviction": 7,
+    "moat": "Indian subsidiary of 3M Company, USA (which holds 75%). Operates across four segments — Safety & Industrial, Transportation & Electronics, Health Care and Consumer — selling research-driven branded products (Scotch tapes, Scotch-Brite, Post-it, Command, abrasives, adhesives, films, PPE). The moat rests on 3M's global R&D/patent engine, brand strength and a deep multi-channel distribution network. Manufacturing at Ahmedabad, Bengaluru and Pune, with an R&D centre in Bengaluru.",
+    "leadership": "FY25 standalone revenue ~Rs 4,446 cr (TTM ~Rs 5,090 cr). High-quality financials — ROCE ~50% and ROE ~30%, near debt-free, asset-light, with large dividend payouts (100%+ in recent years). Promoter (3M Company) holding 75%. Market cap ~Rs 37,000 cr.",
+    "non_rep": "Access to 3M's worldwide technology, patent library and continuous product pipeline cannot be replicated by domestic peers. Long-established brands (Scotch, Post-it, Scotch-Brite) and qualified industrial/healthcare products create switching costs and pricing power; the very high RoCE reflects an asset-light, brand-and-distribution-led model.",
     "tailwinds": [
-      "Pending analysis"
+      "India industrial and manufacturing capex cycle",
+      "Premiumisation in consumer and stationery products",
+      "Auto, road-safety and electronics materials demand",
+      "Healthcare and PPE consumption growth"
     ],
     "risks": [
-      "Pending analysis"
+      "Premium valuation (P/E ~65-70x)",
+      "Royalty and related-party payments to parent 3M",
+      "Cyclicality in industrial and auto end-markets",
+      "Limited free float (75% promoter holding)"
     ],
     "track": [
-      "Add tracking KPIs"
+      "Segment revenue mix (Safety & Industrial vs others)",
+      "EBITDA margin and RoCE trend",
+      "Royalty as % of sales",
+      "Dividend payout"
     ]
   }
 ]

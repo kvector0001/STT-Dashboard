@@ -1603,6 +1603,9 @@ function renderCard(s) {
       <div class="metric-item clickable metric-click" data-metric="redflags" data-ticker="${s.ticker}" data-name="${s.name}" style="flex:1; background:var(--bg2); border-radius:6px; padding:8px; border:1px solid var(--border);">
         <span class="metric-label" style="font-size:0.65rem;">🚩 Red Flags</span>
       </div>
+      <div class="metric-item clickable metric-click" data-metric="technical" data-ticker="${s.ticker}" data-name="${s.name}" style="flex:1; background:var(--bg2); border-radius:6px; padding:8px; border:1px solid var(--border);">
+        <span class="metric-label" style="font-size:0.65rem;">📈 Technical Trends</span>
+      </div>
     </div>
 
     ${s.ip_moat && (s.ip_moat.patents || s.ip_moat.cliff || s.ip_moat.rnd_pct != null) ? `<div>
@@ -2380,15 +2383,209 @@ function getMetricPrompt(metricType, ticker, companyName, stock) {
   
   const snap = `Current: Mcap ₹${fmt(s.mcap_cr,0)}Cr | P/E ${fmt(s.pe,1)} | ROE ${fmt(s.roe,1)}% | D/E ${fmt(s.debt_to_equity,2)} | Promoter ${fmt(s.promoter_holding,1)}%`;
 
+  // Rich dynamic snapshot injected into the deep-analysis prompts (Peers / Management / Red Flags / Technical)
+  const deepSnap = `## 📌 LIVE DATA SNAPSHOT (from dashboard — starting context only, verify independently)
+Company: ${companyName} (${ticker}) | Sector: ${s.sector || '—'} | Moat: ${s.moat_class || '—'}
+Valuation: Mcap ₹${fmt(s.mcap_cr,0)}Cr | P/E ${fmt(s.pe,1)} | P/B ${fmt(s.pb ?? s.price_to_book,2)} | EV/EBITDA ${fmt(s.ev_ebitda,1)}
+Returns ratios: ROE ${fmt(s.roe,1)}% | ROCE ${fmt(s.roce,1)}% | ROA ${fmt(s.roa,1)}% | D/E ${fmt(s.debt_to_equity,2)}
+Margins: Gross ${fmt(s.gross_margin,1)}% | EBITDA ${fmt(s.ebitda_margin,1)}% | Net ${fmt(s.profit_margin,1)}%
+Growth: Rev CAGR ${fmt(s.rev_cagr,1)}% | PAT CAGR ${fmt(s.pat_cagr,1)}%
+Ownership: Promoter ${fmt(s.promoter_holding,1)}% | Div Yield ${fmt(s.div_yield,2)}%
+Price: LTP ₹${fmt(s.ltp,2)} | 1Y ${fmt(s.ret_1y,1)}% | 3Y ${fmt(s.ret_3y,1)}% | 5Y ${fmt(s.ret_5y,1)}%
+Technical: 52W High ₹${fmt(s.week52_high,2)} | 52W Low ₹${fmt(s.week52_low,2)} | vs 200DMA ${fmt(s.price_to_200dma_pct,1)}% | 200DMA slope(30d) ${fmt(s.dma200_slope_30d_pct,2)}% | Trend ${s.trend_signal || '—'} (${fmt(s.trend_score,0)})`;
+
   const prompts = {
     conviction: `# 🎯 CONVICTION SCORE — ${companyName} (${ticker})\n\n${snap}\n\nAnalyze: Business Quality (/30), Financial Strength (/25), Growth (/20), Valuation (/15), Management (/10). Output CONVICTION SCORE /100 with top 3 drivers and killers.`,
     moat: `# 🛡️ ECONOMIC MOAT — ${companyName} (${ticker})\n\n${snap}\n\nEvaluate ALL 7 moat types: IP/Patents, Brand, Regulatory/Licences, Switching Costs, Network Effects, Cost Advantage, Efficient Scale. For each: YES/NO/PARTIAL + evidence + durability. Output: MOAT WIDTH (Wide/Narrow/None), PRIMARY MOAT, BIGGEST THREAT.`,
     pe: `# 📊 P/E ANALYSIS — ${companyName} (${ticker})\n\nCurrent P/E: ${fmt(s.pe,1)} | EPS: ₹${fmt(s.eps,2)}\n\nCompare to: 1) Own 5-year avg 2) Sector median 3) Nifty 50. Assess earnings quality. Output: UNDERVALUED/FAIR/OVERVALUED with reasoning.`,
     roe: `# 📈 ROE ANALYSIS — ${companyName} (${ticker})\n\nROE: ${fmt(s.roe,1)}% | ROA: ${fmt(s.roa,1)}% | ROCE: ${fmt(s.roce,1)}% | D/E: ${fmt(s.debt_to_equity,2)}\n\nDuPont breakdown (Margin × Turnover × Leverage). Is high ROE from profitability or leverage? 5-year trend. Output: EXCELLENT/GOOD/AVERAGE/WEAK.`,
     de: `# 💳 DEBT ANALYSIS — ${companyName} (${ticker})\n\nD/E: ${fmt(s.debt_to_equity,2)}\n\nAnalyze: Total debt structure, Net Debt/EBITDA, Interest Coverage, 5-year trend. What's debt used for? Output: SAFE/MODERATE/LEVERAGED/STRESSED.`,
-    peers: `# 👥 PEER COMPARISON — ${companyName} (${ticker})\n\n${snap}\n\nIdentify 5 closest peers. Compare: Mcap, P/E, ROE, EBITDA Margin, D/E, Growth. Rank on Market Share, Growth, Profitability, Balance Sheet. Output: PEER RANK #X of Y, UNDERVALUED/FAIR/OVERVALUED vs peers.`,
-    management: `# 👔 MANAGEMENT TRUST — ${companyName} (${ticker})\n\nPromoter: ${fmt(s.promoter_holding,1)}%\n\nAnalyze: 1) Promoter profile & tenure 2) Holding trend & pledging 3) Capital allocation (dividends, buybacks, acquisitions) 4) Governance (related party, board independence, auditor changes) 5) Guidance vs delivery. Output: TRUST SCORE /40 and HIGH/MODERATE/LOW/AVOID.`,
-    redflags: `# 🚩 RED FLAGS SCAN — ${companyName} (${ticker})\n\n${snap}\n\nCheck: ACCOUNTING (Revenue↑ but OCF↓, Receivables growth, Auditor changes) | GOVERNANCE (Pledging, Related party, SEBI penalties) | FINANCIAL (Debt vs EBITDA, Interest coverage, Negative FCF) | BUSINESS (Customer concentration, Tech disruption). Output: CRITICAL FLAGS, AMBER FLAGS, RISK LEVEL (Low/Moderate/High/Very High).`,
+    peers: `# 👥 PEER COMPARISON — ${companyName} (${ticker})
+
+You are an institutional-quality equity analyst. Use the live data below (from the dashboard) as starting context only — verify everything independently.
+
+${deepSnap}
+
+Your task is to compare ${companyName} (${ticker}) against its 5 CLOSEST listed peers and determine whether it is UNDERVALUED / FAIRLY VALUED / OVERVALUED. Analyse valuation in context of quality, growth, profitability and balance sheet strength. Do NOT compare P/E blindly — a premium is justified if growth, return ratios, leadership or balance sheet are materially stronger; a discount may be justified for governance, weak execution, leverage, cyclicality or weaker moat.
+
+## 🔒 STRICT RULES
+1. Do NOT fabricate any data. 2. Use only credible sources (annual reports, investor presentations, BSE/NSE filings, Screener/exchange data, credit ratings, reputed press). 3. If a metric is unavailable, write "NV" (Not Verified). 4. Do not force non-comparable peers. 5. Separate verified facts from interpretation. 6. For niche firms pick closest OPERATIONAL peers. 7. If market share is unverifiable, say so and rank on available scale/revenue evidence.
+
+## 📊 SCORING (out of 10 each, weighted)
+Valuation 25% | Growth 20% | Profitability 20% | Balance Sheet 15% | Business Quality 20%. 8–10 strong vs peers, 6–7 above avg, 4–5 mixed, 0–3 weak. Give a 1-line reason for each.
+
+## 📋 OUTPUT MUST START WITH THIS
+### 📊 SUMMARY TABLE
+| Category | Score (/10) | Key Reason |
+|----------|-------------|------------|
+| Valuation | X.X | |
+| Growth | X.X | |
+| Profitability | X.X | |
+| Balance Sheet | X.X | |
+| Business Quality | X.X | |
+
+### ⭐ OVERALL PEER SCORE: X.X / 10
+### 🏁 PEER RANK: #X of 6
+### 💰 VALUATION VERDICT: UNDERVALUED / FAIRLY VALUED / OVERVALUED
+### 📉 RISK OF MISPRICING: Low / Moderate / High
+
+## 📌 TARGET SNAPSHOT
+Verified Mcap, P/E, ROE, ROCE, EBITDA margin, D/E, revenue & profit growth, promoter holding, FII/DII trend (else "NV").
+
+## 👥 PEER IDENTIFICATION (5 closest)
+| Peer | Why Comparable |
+|------|----------------|
+Pick same sub-sector / direct competitors; if no perfect peer exists, say so.
+
+## 📊 PEER COMPARISON TABLE (verified numbers only; else NV)
+| Company | Mcap | P/E | EV/EBITDA | ROE | ROCE | EBITDA Margin | D/E | Rev Growth | Profit Growth |
+|---------|------|-----|-----------|-----|------|---------------|-----|------------|---------------|
+
+## 🏆 RANK VS PEERS on: 1) Market Position/Scale 2) Growth 3) Profitability 4) Balance Sheet 5) Valuation — each with ranking + 2–4 line explanation.
+
+## 🧮 VALUATION RULES
+A premium may be justified by higher ROE/ROCE, stronger growth, better margins, leadership, cleaner balance sheet, stronger moat. A discount by weaker growth/profitability, high leverage, governance concerns, cyclicality, customer concentration.
+
+## 🚨 CHECK whether the premium/discount is influenced by promoter pledging, auditor issues, regulatory history, weak cash flow, leverage, customer concentration, or one-off earnings.
+
+## 🎯 FINAL VERDICT
+- PEER RANK #X OF 6
+- UNDERVALUED / FAIRLY VALUED / OVERVALUED
+- Confidence: Low / Moderate / High
+- 3–5 sharp bullet reasons
+
+Be sceptical, not promotional. Compare quality with valuation. Do not hallucinate missing data. Answer: "How does ${ticker} stack up vs closest peers, and is the current valuation justified?"`,
+    management: `# 👔 MANAGEMENT TRUST — ${companyName} (${ticker})
+
+Use the live data below (from the dashboard) as starting context only — verify everything independently.
+
+${deepSnap}
+
+You are a forensic equity analyst evaluating MANAGEMENT CREDIBILITY. Goal: determine whether management can be trusted to protect and compound shareholder capital over 5–10 years.
+
+## 🔒 STRICT RULES
+1. Do NOT fabricate facts. 2. Use only verifiable sources (annual reports — Corp Governance & MD&A, shareholding filings, concalls/investor decks, credit ratings, reputed news). 3. If unavailable → "No verified evidence found". 4. Do NOT assume fraud unless documented. 5. Separate verified facts from labelled inference.
+
+## 🧠 EVALUATE 5 PILLARS (scored /10, weighted)
+Promoter Profile 20% | Ownership Behaviour 25% | Capital Allocation 20% | Governance 20% | Execution Credibility 15%. Behaviour (selling, pledging, governance, capital misallocation) matters MORE than narrative. Scores must be evidence-based.
+Interpretation: 8–10 HIGH TRUST | 6–7 MODERATE | 4–5 LOW | <4 AVOID.
+
+## 📋 OUTPUT MUST START WITH THIS
+### 📊 MANAGEMENT TRUST SUMMARY
+| Category | Score (/10) | Key Reason |
+|----------|-------------|------------|
+| Promoter Profile | X.X | |
+| Ownership Behaviour | X.X | |
+| Capital Allocation | X.X | |
+| Governance | X.X | |
+| Execution Credibility | X.X | |
+
+### ⭐ FINAL TRUST SCORE: X.X / 10
+### 🏁 TRUST VERDICT: HIGH / MODERATE / LOW / AVOID
+
+## 🔍 DETAILED FRAMEWORK
+1. PROMOTER PROFILE & TENURE — background, experience, reputation, leadership stability. Red flags: frequent management changes, limited disclosure, past controversies.
+2. OWNERSHIP BEHAVIOUR (MOST IMPORTANT) — holding trend, bulk deals/OFS/stake sales, sudden exits (>10–20%), pledging. Strong red flags: continuous selling, large dilution, OFS at discount, pledging >30%, selling during a strong narrative. This section heavily influences the score.
+3. CAPITAL ALLOCATION — ROCE on incremental capital, dividends/buybacks vs reckless expansion, value-accretive vs empire-building M&A, debt discipline.
+4. GOVERNANCE & TRANSPARENCY — related-party transactions, board independence, auditor quality/changes/qualifications, disclosure quality, SEBI/regulatory history.
+5. GUIDANCE vs EXECUTION — track record of meeting guidance, consistency of commentary vs delivery, honesty about misses.
+
+Be sceptical, not promotional. Behaviour > narrative. Protect the downside.`,
+    redflags: `# 🚩 RED FLAGS SCAN — ${companyName} (${ticker})
+
+You are a forensic equity analyst specialising in identifying RED FLAGS. Use the live data below (from the dashboard) as starting context only — verify everything independently.
+
+${deepSnap}
+
+Your role is NOT to praise the company — detect risks, governance issues, accounting manipulation signals and business fragility using verifiable evidence.
+
+## 🔒 STRICT RULES
+1. Do NOT fabricate data/events/claims. 2. Use only credible sources (annual reports, investor decks, BSE/NSE/SEBI filings, credit ratings, reputed news). 3. If data not available → "No verified evidence found". 4. Do NOT assume fraud unless documented. 5. Separate verified facts from labelled inference.
+
+## 🧠 EVALUATE 4 DIMENSIONS — detect promoter exits/OFS/stake sales, auditor issues, fraud/regulatory history.
+
+## 📊 SCORING (out of 10 each)
+10 Clean | 7–9 Minor risks | 4–6 Moderate | 0–3 Serious. Evidence-based only, justify each in 1–2 lines. Overall = weighted: Accounting 30%, Governance 30%, Financial 20%, Business 20%.
+
+## 📋 OUTPUT STARTS WITH THIS TABLE
+### 📊 SUMMARY TABLE
+| Category | Score (/10) | Key Reason |
+|----------|-------------|------------|
+| Accounting | X.X | |
+| Governance | X.X | |
+| Financial | X.X | |
+| Business | X.X | |
+
+### ⭐ OVERALL SCORE: X.X / 10
+
+## 🔍 RED FLAG FRAMEWORK
+1. ACCOUNTING: revenue up but OCF down; profit up but weak cash flows; receivables growing faster than revenue; frequent policy changes; large unexplained "Other Income"; inventory buildup/write-offs; off-balance-sheet liabilities.
+2. GOVERNANCE: promoter exits/stake reduction (>15–20%); OFS at deep discounts; pledging (>30% risky); related-party transactions (>10–15%); loans to group entities; auditor resignation/frequent changes; qualified audit reports; SEBI/regulatory action; weak board independence; past fraud.
+3. FINANCIAL: debt rising faster than EBITDA; Debt/EBITDA >3–4x; interest coverage <2x; persistent negative FCF; working-capital stress; equity dilution for survival.
+4. BUSINESS: high customer concentration; weak/no moat; tech-disruption risk; aggressive expansion without profits; heavy dependence on regulation or one segment.
+
+## 🚨 SPECIAL CHECKS (MANDATORY): 1) promoter exits/bulk deals/OFS 2) auditor credibility & history 3) credit-rating downgrades 4) regulatory issues (SEBI/NCLT) 5) any fraud/manipulation history.
+
+## 🚨 FLAG OUTPUT
+### 🔴 CRITICAL FLAGS (evidence-backed)
+### 🟠 AMBER FLAGS (early warnings)
+### 🟡 WATCHLIST (to monitor)
+
+## 📊 EVIDENCE TABLE
+| Signal | Observation | Source | Severity |
+|--------|-------------|--------|----------|
+
+Be sceptical. If numbers look strong, cross-check cash flow, governance and disclosures. Focus on protecting downside.`,
+    technical: `# 📈 TECHNICAL TREND — BREAKOUT & BREAKDOWN — ${companyName} (${ticker})
+
+You are a professional technical analyst identifying medium-term setups (3–12 months) in BOTH directions — bullish breakouts AND bearish breakdowns — basis today's price structure. Use the live data below (from the dashboard) as starting context; verify the structure independently.
+
+${deepSnap}
+
+Goal: classify the stock as Bullish Breakout / Emerging Uptrend / Sideways / Bearish Breakdown. Explicitly assess DOWNSIDE/breakdown risk — is the stock losing key support with a sharp fall expected? Give a positional (not intraday) signal.
+
+## 🔒 STRICT RULES
+1. Do NOT fabricate price levels/indicators. 2. Use only observable structure. 3. If unavailable → "Data not verified". 4. No intraday signals. 5. Daily + weekly timeframe only. 6. Be symmetric — flag breakDOWN risk as clearly as breakOUT potential.
+
+## 📊 SCORING (out of 10 each, weighted)
+Trend Strength 25% | Breakout/Breakdown Quality 25% | Volume 20% | Momentum 15% | Risk Structure 15%.
+Interpretation: 8–10 STRONG BULLISH | 6–7 BULLISH (early breakout) | 4–5 SIDEWAYS | 2–3 BEARISH (losing support) | <2 STRONG BEARISH / ACTIVE BREAKDOWN (sharp-fall risk).
+
+## 📋 OUTPUT MUST START WITH THIS
+### 📊 TECHNICAL SUMMARY TABLE
+| Category | Score (/10) | Key Observation |
+|----------|-------------|-----------------|
+| Trend Strength | X.X | |
+| Breakout / Breakdown Structure | X.X | |
+| Volume | X.X | |
+| Momentum | X.X | |
+| Risk Structure | X.X | |
+
+### ⭐ FINAL TECHNICAL SCORE: X.X / 10
+### 🏁 TREND SIGNAL: STRONG BULLISH / BULLISH / SIDEWAYS / BEARISH / STRONG BEARISH (BREAKDOWN)
+### ⏳ TIME HORIZON: 3–12 months (positional)
+
+## 🔍 FRAMEWORK
+1. TREND STRENGTH — price vs 50/200 DMA, MA slope, HH/HL (up) vs LH/LL (down). Bullish: above 50 & 200 DMA, golden structure. Bearish: below averages, death cross, breakdown trend.
+2. BREAKOUT/BREAKDOWN — Breakout: consolidation/base/resistance breakout (strong if long base + tight action; weak if fake/no follow-through). Breakdown: support/range-floor break, topping patterns (H&S, double top, rising-wedge), loss of 200 DMA/trendline (strong if clean break + follow-through selling). Note any support just lost or about to be tested.
+3. VOLUME — expansion on the move; accumulation vs distribution. Strong move = high volume; distribution = heavy down-volume/selling spikes.
+4. MOMENTUM — RSI (>60 bullish, <40 weak, <30 oversold/breakdown), MACD, divergences.
+5. RISK STRUCTURE — strength of support, holding or breaking, stop-loss clarity, risk-reward. Risky: extended far from support, OR support already broken with open downside.
+
+## 📍 KEY LEVELS (MANDATORY)
+- Immediate Resistance / Breakout (upside) trigger
+- Strong Support / Breakdown (downside) trigger
+- Bullish thesis invalidated below / Bearish thesis invalidated above
+If unavailable → "Levels not precisely verifiable".
+
+## 🎯 FINAL VERDICT
+- TECHNICAL SCORE: X.X / 10
+- Trend: STRONG BULLISH / BULLISH / SIDEWAYS / BEARISH / STRONG BEARISH (BREAKDOWN)
+- Confidence: Low / Moderate / High
+- Action: ✅ Enter/Accumulate (breakout) | ⏳ Wait for confirmation | ⚠️ Reduce/Avoid — breakdown/loss of support, sharp fall expected | ❌ Avoid
+- 3–5 bullets: trend, breakout/breakdown quality, volume, momentum, risk-reward
+
+Volume validates price both ways. Prefer stocks emerging from consolidation (long); flag those breaking down (avoid). Answer: "Is this a high-probability breakout for a 3–12 month positional long, OR a breakdown where support is being lost and a sharp fall is likely?"`,
     margins: `# 📊 MARGINS — ${companyName} (${ticker})\n\nGross: ${fmt(s.gross_margin,1)}% | EBITDA: ${fmt(s.ebitda_margin,1)}% | Op: ${fmt(s.operating_margin,1)}% | Net: ${fmt(s.profit_margin,1)}%\n\n5-year trend vs peers. What's driving/compressing margins? Output: EXCELLENT/GOOD/AVERAGE/WEAK + EXPANDING/STABLE/COMPRESSING.`,
     returns: `# 📈 RETURNS — ${companyName} (${ticker})\n\n1Y: ${fmt(s.ret_1y,1)}% | 3Y: ${fmt(s.ret_3y,1)}% | 5Y: ${fmt(s.ret_5y,1)}%\n\nCompare to Nifty 50 and sector. Attribution (Earnings growth vs P/E expansion). Max drawdowns. Output: ALPHA (Strong/Moderate/Weak).`,
     cashflow: `# 💰 CASH FLOW — ${companyName} (${ticker})\n\nOCF: ₹${fmt(s.opcf_3yr_avg ?? s.ocf_cr,0)}Cr | FCF: ₹${fmt(s.fcf_3yr_avg ?? s.fcf_cr,0)}Cr | Mcap: ₹${fmt(s.mcap_cr,0)}Cr\n\n5-year OCF/FCF trend. OCF vs Net Profit. FCF Yield (>5% attractive). Output: CASH GENERATION (Strong/Moderate/Weak).`,
