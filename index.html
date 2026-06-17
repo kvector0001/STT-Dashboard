@@ -1329,7 +1329,7 @@ function renderCard(s) {
     <div class="card-title-group">
       <div class="card-ticker">${esc(s.ticker)}</div>
       <div style="display: flex; align-items: center; gap: 8px; flex: 1; min-width: 0;">
-        <div class="card-name" title="${esc(s.name)}">${esc(s.name || '—')}</div>
+        <div class="card-name research-name" title="Click for AI fundamental analysis" style="cursor:pointer;text-decoration:underline dotted;color:var(--blue-text);" data-ticker="${esc(s.ticker)}" data-name="${esc(s.name || s.ticker)}" onclick="openFundamentalAnalysisFromEl(event,this)">${esc(s.name || '—')}</div>
         <span style="color:var(--text3);font-size:11px;white-space:nowrap;flex-shrink:0;">
           🔗 Catalysts
           <a href="https://claude.ai" target="_blank" rel="noopener" onclick="copyPrompt('catalyst','${esc(s.ticker)}','${esc(s.name)}')" style="color:var(--purple-text);text-decoration:none;font-weight:700;">(1)</a>
