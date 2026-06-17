@@ -148,11 +148,16 @@ def save_analysis():
         git_cmds = [
             ['git', 'add', 'stocks.json'],
             ['git', 'commit', '-m', commit_msg],
+            # Pull any bot commits (e.g. prices refresh) first so push won't be rejected.
+            # 'ours' keeps our stocks.json on conflict; prices.json etc. merge cleanly.
+            ['git', 'pull', '--no-edit', '-X', 'ours', 'origin', 'main'],
             ['git', 'push', 'origin', 'main'],
         ]
         for cmd in git_cmds:
-            result = subprocess.run(cmd, capture_output=True, text=True, cwd=BASE_DIR, timeout=30)
-            if result.returncode != 0 and 'nothing to commit' not in result.stdout + result.stderr:
+            result = subprocess.run(cmd, capture_output=True, text=True, cwd=BASE_DIR, timeout=60)
+            combined = (result.stdout or '') + (result.stderr or '')
+            # 'nothing to commit' (commit step) and 'Already up to date' (pull step) are fine
+            if result.returncode != 0 and 'nothing to commit' not in combined and 'up to date' not in combined.lower():
                 return jsonify({
                     'success': False,
                     'message': f'❌ git error ({" ".join(cmd[1:2])}): {(result.stderr or result.stdout)[:200]}'
