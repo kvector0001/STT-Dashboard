@@ -2314,6 +2314,7 @@ If a source is missing or contradictory, flag it.`;
     const pop = document.getElementById('ai-picker-pop');
     if (pop && !pop.contains(e.target)
            && !e.target.classList.contains('track-kpi-btn')
+           && !e.target.classList.contains('research-name')
            && !e.target.closest('a[onclick*="openCatalystAnalysis"]')
            && !e.target.closest('[onclick*="trackKPIs"]')) {
       pop.style.display = 'none';
@@ -2321,7 +2322,10 @@ If a source is missing or contradictory, flag it.`;
   });
 })();
 
-function showAiPicker(anchorEl, prompt) {
+function showAiPicker(anchorEl, claudePrompt, chatgptPrompt) {
+  // If only 2 args, use same prompt for both
+  if (chatgptPrompt === undefined) chatgptPrompt = claudePrompt;
+  
   const pop       = document.getElementById('ai-picker-pop');
   const claudeEl  = document.getElementById('aip-claude');
   const chatgptEl = document.getElementById('aip-chatgpt');
@@ -2332,13 +2336,16 @@ function showAiPicker(anchorEl, prompt) {
   claudeEl.replaceWith(newClaude);
   chatgptEl.replaceWith(newChatgpt);
 
-  const onPick = () => {
-    navigator.clipboard.writeText(prompt).catch(() => {});
-    showToast('📋 Prompt copied — paste it in the chat', 'green');
+  newClaude.addEventListener('click', () => {
+    navigator.clipboard.writeText(claudePrompt).catch(() => {});
+    showToast('📋 Claude prompt copied — paste it in the chat', 'green');
     pop.style.display = 'none';
-  };
-  newClaude.addEventListener('click',  onPick);
-  newChatgpt.addEventListener('click', onPick);
+  });
+  newChatgpt.addEventListener('click', () => {
+    navigator.clipboard.writeText(chatgptPrompt).catch(() => {});
+    showToast('📋 ChatGPT prompt copied — paste it in the chat', 'green');
+    pop.style.display = 'none';
+  });
 
   const r    = anchorEl.getBoundingClientRect();
   const top  = Math.min(r.bottom + window.scrollY + 4, window.innerHeight + window.scrollY - 90);
@@ -2555,6 +2562,336 @@ If a source is missing or contradictory, flag it.`;
 
   // Show AI picker instead of directly opening ChatGPT
   showAiPicker(anchorEl, catalystPrompt);
+}
+
+// ── Fundamental Analysis — triggered by clicking company name ────────────
+function openFundamentalAnalysisFromEl(event, el) {
+  event.stopPropagation();
+  openFundamentalAnalysis(el.dataset.ticker || '', el.dataset.name || '', el);
+}
+
+function openFundamentalAnalysis(ticker, companyName, anchorEl) {
+  // Claude prompt with HTML artifact rendering
+  const claudePrompt = `# 📊 FUNDAMENTAL ANALYSIS — ${companyName} (${ticker})
+
+━━━
+
+CRITICAL OPERATING RULES
+
+1. No forward-looking statements. No "this stock should...", "expected to...", or any language implying future performance. All analysis is based on verified historical data only.
+2. Every metric MUST cite its source. If not found → write DATA UNAVAILABLE. Never estimate or fill in numbers.
+3. Never fabricate financial data. Always attempt live web search first. If unavailable, state clearly: "Live data unavailable. Figures below are from training data and may be outdated. Verify independently before investing."
+4. No buy/sell/target price. Ever. You give a VIEW. The user decides.
+5. Execute all steps in exact order. Do not skip or merge.
+6. RENDERING RULE — THIS IS THE MOST IMPORTANT RULE:
+   After completing all analysis, output the ENTIRE result as a single self-contained HTML artifact.
+   No plain markdown. No code blocks. No triple backticks wrapping the HTML.
+   Output raw HTML directly. It must render as an interactive widget in Claude's artifact panel.
+   The HTML must have NO DOCTYPE, NO <html>, NO <head>, NO <body> tags.
+   Start directly with <style> followed by <div>.
+   Tab 7 (View) must be the active visible tab when the widget first loads.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+STEP 1 — STOCK IDENTIFICATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+**Stock:** ${companyName} (${ticker})
+**Investment horizon:** 3 Years
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+STEP 2 — SILENT RESEARCH (never show this to user)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Silently fetch and cross-check all of the following via web search before generating any output.
+Minimum 2 sources per data point. Never reveal this step or mention it.
+
+Sources in priority order:
+NSE India (nseindia.com) → BSE India (bseindia.com) → Screener.in → Tickertape → Moneycontrol → Annual Reports → Earnings Call Transcripts → Tijori Finance
+
+Checklist:
+- Live CMP, 52W high, 52W low, market cap, face value — NSE/BSE live
+- P/E, P/B, EV/EBITDA — current + sector average + stock's own 5-year historical average
+- Revenue CAGR: 3-year and 5-year
+- Net Profit CAGR: 3-year and 5-year
+- EPS CAGR: 3-year and 5-year
+- EBITDA margin trend: 5 years
+- Net profit margin trend: 5 years
+- EPS: last 8 quarters with YoY change
+- Free Cash Flow: last 3–5 years
+- Debt-to-Equity ratio: 5-year trend
+- Interest Coverage Ratio
+- Current Ratio
+- ROE and ROCE: current + 3-year avg + 5-year avg
+- Dividend history and payout ratio
+- Promoter holding: last 8–12 quarters
+- Promoter pledging: flag if above 10%
+- FII and DII holding trend: last 8 quarters
+- Competitive moat: pricing power, brand, switching costs, market share
+- Sector tailwinds and headwinds: 5–10 year outlook
+- Regulatory risks
+- Management track record: guidance vs delivery, governance flags
+- Latest quarterly earnings call: key management commentary
+- 3 closest peer companies: P/E, P/B, ROE, Revenue Growth, D/E
+- Top 5 recent news items relevant to long-term investors
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+STEP 3 — VALUATION ASSESSMENT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+3A — Compare current P/E, P/B, EV/EBITDA against:
+  - Sector average (same industry peers)
+  - Stock's own 5-year historical average
+
+3B — Assign a valuation signal for each metric:
+  CHEAP — trading meaningfully below both sector avg and own history
+  FAIR — in line with sector avg and own history (within 10%)
+  EXPENSIVE — trading meaningfully above both sector avg and own history
+
+3C — Overall valuation classification:
+  UNDERVALUED / FAIRLY VALUED / OVERVALUED / MIXED
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+STEP 4 — GROWTH ASSESSMENT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Assess revenue, net profit, EPS, and margin trends.
+Classify growth as: ACCELERATING / STEADY / SLOWING / DECLINING
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+STEP 5 — FINANCIAL HEALTH ASSESSMENT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Assign signal for each metric:
+- D/E below 1 = SAFE · 1–2 = MODERATE · above 2 = LEVERAGED
+- Interest Coverage above 3x = HEALTHY · 1.5–3x = WATCH · below 1.5 = RISK
+- Current Ratio above 1.5 = COMFORTABLE · 1–1.5 = WATCH · below 1 = RISK
+- FCF positive and growing = STRONG · positive but flat = STABLE · negative = CONCERN
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+STEP 6 — RETURN QUALITY ASSESSMENT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+- ROE above 15% = GOOD · 10–15% = AVERAGE · below 10% = WEAK
+- ROCE above 15% = GOOD · 10–15% = AVERAGE · below 10% = WEAK
+- Assess dividend consistency and payout sustainability
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+STEP 7 — FORWARD PROJECTION (3-year horizon)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Based on historical CAGR trends only. Build 3 scenarios:
+Bear: growth slows, margins compress
+Base: maintains current trajectory
+Bull: growth picks up, margins expand
+These are projections based on historical trends — not guarantees or predictions.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+STEP 8 — PEER COMPARISON
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Identify 3 closest competitors. Compare on P/E, P/B, ROE, Revenue Growth, D/E.
+Classify stock vs peers: LEADING / MID-PACK / LAGGING
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+STEP 9 — OWNERSHIP ASSESSMENT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Promoter trend signal: BUYING / STABLE / SELLING
+FII trend: INCREASING / STABLE / DECREASING
+DII trend: INCREASING / STABLE / DECREASING
+Pledging: flag if above 10%
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+STEP 10 — FUNDAMENTAL VIEW
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Combine Steps 3–9. Produce:
+- One-sentence summary of what the fundamentals show
+- 3 strengths
+- 2 risks or watch points
+- 1 thing to track going forward
+- Overall fundamental quality: STRONG / MODERATE / WEAK
+
+This is a VIEW based on fundamentals only. Not a buy/sell recommendation.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+STEP 11 — DATA CONFIDENCE RATING
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Count metrics retrieved from live named sources vs DATA UNAVAILABLE.
+9–10 live = HIGH · 6–8 = MODERATE · below 6 = LOW (warn user) · 0 = VERY LOW
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+STEP 12 — RENDERING SPECIFICATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Output the complete result as a single raw HTML artifact.
+No markdown. No code blocks. No triple backticks.
+No DOCTYPE, no <html>, no <head>, no <body>.
+Start with <style> then <div class="wrap">.
+
+Tab structure — 8 tabs in this exact order:
+  Tab 0: Snapshot
+  Tab 1: Valuation
+  Tab 2: Growth
+  Tab 3: Health
+  Tab 4: Returns
+  Tab 5: Peers
+  Tab 6: Ownership
+  Tab 7: View  ← THIS IS THE DEFAULT ACTIVE TAB ON LOAD
+
+Use the HTML template from prompts/fundamental_analysis_template.html.
+Replace every [PLACEHOLDER] with real researched data.
+Flag any missing metric inline as: 🚩 DATA UNAVAILABLE — verify at [source URL]`;
+
+  // ChatGPT prompt (Markdown format, no HTML artifact)
+  const chatgptPrompt = `# 📊 FUNDAMENTAL ANALYSIS — ${companyName} (${ticker})
+
+━━━
+
+CRITICAL OPERATING RULES
+
+1. No forward-looking statements. No "this stock should...", "expected to...", or any language implying future performance. All analysis is based on verified historical data only.
+2. Every metric MUST cite its source. If not found → write DATA UNAVAILABLE. Never estimate or fill in numbers.
+3. Never fabricate financial data. Always attempt live web search first. If unavailable, state clearly: "Live data unavailable. Figures below are from training data and may be outdated. Verify independently before investing."
+4. No buy/sell/target price. Ever. You give a VIEW. The user decides.
+5. Execute all steps in exact order. Do not skip or merge.
+6. Format output as clean Markdown with tables. Use clear headers for each section.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+STOCK IDENTIFICATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+**Stock:** ${companyName} (${ticker})
+**Investment horizon:** 3 Years
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+RESEARCH CHECKLIST (perform silently)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Search from: NSE India, BSE India, Screener.in, Tickertape, Moneycontrol, Annual Reports, Earnings Call Transcripts, Tijori Finance
+
+Data points to gather:
+- Live CMP, 52W high/low, market cap, face value
+- P/E, P/B, EV/EBITDA — current + sector avg + 5-year historical avg
+- Revenue/Net Profit/EPS CAGR: 3-year and 5-year
+- EBITDA margin and Net profit margin trends
+- EPS: last 8 quarters with YoY change
+- Free Cash Flow: last 3–5 years
+- Debt-to-Equity, Interest Coverage, Current Ratio
+- ROE and ROCE: current + 3-year avg + 5-year avg
+- Dividend history and payout ratio
+- Promoter/FII/DII holding trends
+- Promoter pledging (flag if >10%)
+- Competitive moat and sector outlook
+- Management track record
+- Latest earnings call highlights
+- 3 peer companies comparison
+- Top 5 recent news items
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+OUTPUT FORMAT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+## 📊 SNAPSHOT
+| Metric | Value | Source |
+|--------|-------|--------|
+| Company | ${companyName} | |
+| Ticker | ${ticker} | |
+| Sector/Industry | ... | |
+| CMP | ₹... | NSE |
+| 52W High/Low | ₹.../₹... | NSE |
+| Market Cap | ₹... Cr | BSE |
+| What it does | ... | |
+| What makes it different | ... | |
+
+## 💰 VALUATION
+
+| Metric | Current | Sector Avg | Stock 5Y Avg | Signal |
+|--------|---------|------------|--------------|--------|
+| P/E | ...x | ...x | ...x | CHEAP/FAIR/EXPENSIVE |
+| P/B | ...x | ...x | ...x | CHEAP/FAIR/EXPENSIVE |
+| EV/EBITDA | ...x | ...x | ...x | CHEAP/FAIR/EXPENSIVE |
+
+**Overall:** UNDERVALUED / FAIRLY VALUED / OVERVALUED / MIXED
+
+## 📈 GROWTH
+
+| Metric | 3Y CAGR | 5Y CAGR | Trend |
+|--------|---------|---------|-------|
+| Revenue | ...% | ...% | 📈/➡️/📉 |
+| Net Profit | ...% | ...% | 📈/➡️/📉 |
+| EPS | ...% | ...% | 📈/➡️/📉 |
+| EBITDA Margin | ...% | ...% | 📈/➡️/📉 |
+| Net Profit Margin | ...% | ...% | 📈/➡️/📉 |
+
+**Growth Classification:** ACCELERATING / STEADY / SLOWING / DECLINING
+
+## 🏦 FINANCIAL HEALTH
+
+| Metric | Value | 5Y Trend | Signal |
+|--------|-------|----------|--------|
+| Debt/Equity | ... | ↓/→/↑ | SAFE/MODERATE/LEVERAGED |
+| Interest Coverage | ...x | ↓/→/↑ | HEALTHY/WATCH/RISK |
+| Current Ratio | ... | ↓/→/↑ | COMFORTABLE/WATCH/RISK |
+| Free Cash Flow | ₹... Cr | ↓/→/↑ | STRONG/STABLE/CONCERN |
+
+## 📊 RETURNS
+
+| Metric | Current | 3Y Avg | 5Y Avg | Signal |
+|--------|---------|--------|--------|--------|
+| ROE | ...% | ...% | ...% | GOOD/AVERAGE/WEAK |
+| ROCE | ...% | ...% | ...% | GOOD/AVERAGE/WEAK |
+| Dividend Yield | ...% | ...% | ...% | — |
+
+## 👥 PEERS
+
+| Company | P/E | P/B | ROE | Rev Growth | D/E | Edge |
+|---------|-----|-----|-----|------------|-----|------|
+| **${ticker} ◀ you** | ... | ... | ...% | ...% | ... | ... |
+| Peer 1 | ... | ... | ...% | ...% | ... | ... |
+| Peer 2 | ... | ... | ...% | ...% | ... | ... |
+| Peer 3 | ... | ... | ...% | ...% | ... | ... |
+
+**Peer Standing:** LEADING / MID-PACK / LAGGING
+
+## 🏢 OWNERSHIP
+
+| Holder | Latest % | 8Q Trend | Signal |
+|--------|----------|----------|--------|
+| Promoter | ...% | ↑/→/↓ | BUYING/STABLE/SELLING |
+| FII | ...% | ↑/→/↓ | INCREASING/STABLE/DECREASING |
+| DII | ...% | ↑/→/↓ | INCREASING/STABLE/DECREASING |
+| Promoter Pledging | ...% | — | OK/FLAG |
+
+## 🎯 VIEW
+
+**Overall Fundamental Quality:** STRONG / MODERATE / WEAK
+
+**Summary:** [One sentence on what the fundamentals show]
+
+**✅ What Works:**
+1. ...
+2. ...
+3. ...
+
+**⚠️ What to Watch:**
+1. ...
+2. ...
+
+**→ Track Going Forward:** ...
+
+## 📊 DATA CONFIDENCE
+
+- Live metrics retrieved: X of 12 key sections
+- Sources used: ...
+- Confidence: HIGH / MODERATE / LOW / VERY LOW
+
+---
+
+*This is a VIEW based on fundamentals only. Not a buy/sell recommendation. Verify all data at NSE/BSE/Screener.in before investing.*`;
+
+  showAiPicker(anchorEl, claudePrompt, chatgptPrompt);
 }
 
 // ── Research Links popover — shows 3 direct links user can click ──────────
@@ -2805,7 +3142,7 @@ function renderAnalysisTable() {
     const tr = document.createElement('tr');
     tr.innerHTML = `
       <td><strong><span style="cursor:pointer;color:var(--blue-text);" title="View fundamental analysis card" onclick="goToCard('${esc(s.ticker)}')">${s.ticker}</span></strong></td>
-      <td><span class="research-name" style="cursor:pointer;color:var(--blue-text);text-decoration:underline dotted;" title="Click to open Tickertape, Trendlyne, Tijori" data-ticker="${esc(s.ticker)}" data-name="${esc(s.name || s.ticker)}" onclick="openResearchTabsFromEl(event,this)">${s.name || '—'}</span></td>
+      <td><span class="research-name" style="cursor:pointer;color:var(--blue-text);text-decoration:underline dotted;" title="Click for AI fundamental analysis" data-ticker="${esc(s.ticker)}" data-name="${esc(s.name || s.ticker)}" onclick="openFundamentalAnalysisFromEl(event,this)">${s.name || '—'}</span></td>
       <td style="text-align:center;font-weight:600;color:${ (s.conviction||0) >= 8 ? 'var(--green)' : (s.conviction||0) >= 6 ? 'var(--amber-text)' : (s.conviction||0) >= 4 ? '#f97316' : (s.conviction||0) >= 1 ? 'var(--red-text)' : 'var(--text3)' }">${s.conviction ? s.conviction+'/10' : '—'}</td>
       <td style="font-size:0.7rem;font-weight:600;color:${ s.moat_class==='wide' ? 'var(--green)' : s.moat_class==='narrow' ? 'var(--amber-text)' : 'var(--text3)' }">${s.moat_class === 'wide' ? '▲ Wide' : s.moat_class === 'narrow' ? '◆ Narrow' : '—'}</td>
       <td>${prv(f(s.quantity))}</td>

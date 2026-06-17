@@ -1,0 +1,48 @@
+You are a senior Indian equity research analyst. Use WEB SEARCH / DEEP RESEARCH to verify CURRENT data — promoter pledging %, SEBI/regulatory actions, latest quarterly results (FY26), patent/DMF timelines, management track record, auditor changes, and news from the last 6–12 months. Today's date: 2026-06-16.
+
+I am attaching two JSON files (stocks.json and Stocks_Fundamentals2.json) that already contain deep fundamental analysis for ~140 Indian portfolio stocks (moat, leadership, non_rep, tailwinds, risks, track/KPIs, plus financials like P/E, ROE, debt/equity, growth). DO NOT change or remove any existing field. For EVERY stock object, ADD the following NEW fields by researching each company.
+
+=================  OUTPUT RULES  =================
+- Return the FULL JSON ARRAY back (all stocks), preserving every existing field AND adding the new fields below.
+- One object per stock. Use the EXACT "ticker" and "name" already present in the file.
+- Output ONLY valid JSON — no prose, no markdown fences, no commentary before/after.
+- Be specific and data-backed. Cite the number, not adjectives (e.g. "promoter pledge 0%", "R&D 8.5% of revenue", "Bajaj ~22% of revenue").
+- If a fact cannot be verified from a credible source, put the string "verify" in that field (or null for numeric ip fields) — DO NOT invent data.
+- Process in batches if needed: return a valid JSON array fragment per batch and tell me to say "continue".
+
+=================  NEW FIELDS TO ADD (every stock)  =================
+- "moat_sources": array of 1–3 from EXACTLY these values: ["IP/Patents", "Brand", "Regulatory/Licences", "Switching Costs", "Network Effects", "Cost Advantage", "Efficient Scale"]
+- "moat_trend": "Widening | Stable | Eroding — one-line reason"
+- "pricing_power": integer 1–10
+- "capital_allocation": integer 1–10
+- "reinvestment_runway": one line — can capital be redeployed at high ROCE for 5–10 yrs?
+- "concentration": customer/product/geo concentration flag (e.g. "Maruti ~30% of revenue") or "Well diversified"
+- "ip_moat": object { "patents": "DMF/patent/ANDA count or null", "cliff": "patent/exclusivity expiry timeline or null", "rnd_pct": number or null }
+- "mgmt_trust": integer 1–10
+- "mgmt_trust_note": one line covering — promoter integrity, any SEBI actions, promoter pledging %, skin-in-game (promoter holding %), guidance-vs-delivery record, auditor quality/changes, past ventures
+- "red_flags": array of specific governance/accounting flags (weak CFO/EBITDA, related-party txns, contingent liabilities, aggressive revenue recognition, equity dilution, pledge increases), or [] if genuinely clean
+- "recent_news": array of 2–4 concrete developments from the last 6–12 months (order wins, capex, management changes, regulatory actions, fundraises, M&A)
+- "bull_case": single strongest reason to own — one line
+- "bear_case": single biggest reason it could go wrong — one line
+
+=================  EXAMPLE SHAPE (illustrative, fill with researched data)  =================
+{
+  "ticker": "AEROFLEX",
+  "name": "Aeroflex Industries",
+  ... (keep ALL existing fields exactly) ...,
+  "moat_sources": ["Regulatory/Licences", "Cost Advantage"],
+  "moat_trend": "Widening — BIS QCO keeps raising the import barrier",
+  "pricing_power": 6,
+  "capital_allocation": 7,
+  "reinvestment_runway": "Long — export + data-centre cooling TAM supports high-ROCE capex for 5+ yrs",
+  "concentration": "Exports ~74% of revenue; no single customer >10%",
+  "ip_moat": { "patents": "NABL-accredited R&D lab; no material patent cliff", "cliff": null, "rnd_pct": null },
+  "mgmt_trust": 7,
+  "mgmt_trust_note": "Promoter pledge ~0%, no SEBI actions found, consistent guidance delivery; verify latest auditor",
+  "red_flags": [],
+  "recent_news": ["Robotic welding lines approved Dec 2025", "Entered data-centre liquid-cooling skids"],
+  "bull_case": "Only scaled Indian SS flexible-hose maker riding infra + cooling demand",
+  "bear_case": "SS commodity swings and Chinese export competition compress margins"
+}
+
+Begin now. Research thoroughly — go through every relevant news item, latest concall, annual report, and BSE/NSE filings for each company before scoring. Return the enriched JSON array.

@@ -1,0 +1,4713 @@
+[
+  {
+    "ticker": "AEROFLEX",
+    "name": "Aeroflex Industries",
+    "sector": "Industrials",
+    "nse_symbol": "AEROFLEX",
+    "buy_avg": 187.2,
+    "moat_type": "Wide",
+    "moat_class": "wide",
+    "conviction": 8,
+    "moat": "Only Indian manufacturer of SS metallic flexible hoses at scale â€” 2,938 SKUs, exports to 90+ countries. BIS QCO (2022) raised entry barrier significantly.",
+    "leadership": "~75% domestic organized market share. 26% domestic / 74% export revenue split.",
+    "non_rep": "Capital-intensive precision manufacturing + NABL-accredited R&D lab. Robotic welding lines approved Dec 2025. Expanding into data centre liquid cooling skids.",
+    "tailwinds": [
+      "India infra & gas pipeline buildout",
+      "EV thermal mgmt & H2 mobility",
+      "Data centre cooling demand"
+    ],
+    "risks": [
+      "SS commodity price volatility",
+      "Chinese competition in export markets"
+    ],
+    "track": [
+      "Export revenue growth >20% QoQ",
+      "Gross margin >35%",
+      "Aerospace/robotics order wins"
+    ],
+    "mcap_cr": 5566.49,
+    "pe": 98.51288,
+    "roe": 14.06,
+    "ocf_cr": 65.84,
+    "debt_to_equity": 1.988,
+    "eps": 4.27,
+    "book_value": 34.493,
+    "div_yield": 8.0,
+    "pat_cagr": 56.4,
+    "rev_cagr": 37.2,
+    "mcap_3y": 158.46
+  },
+  {
+    "ticker": "SANSERA",
+    "name": "Sansera Engineering",
+    "sector": "Auto Ancillary",
+    "nse_symbol": "SANSERAENG",
+    "buy_avg": 1524.46,
+    "moat_type": "Wide",
+    "moat_class": "wide",
+    "conviction": 8,
+    "moat": "Top-10 global supplier of precision forged components. Supplies 9 of 10 top Indian OEMs. 5-7yr supply contracts create high switching cost.",
+    "leadership": "Dominant in precision forged auto components in India. New order book â‚¹24,124 Mn. Non-auto targeting 40% mix.",
+    "non_rep": "16 manufacturing facilities incl. Sweden. â‚¹5,911 Mn capex in FY25. 249 LOIs across 71 auto and 33 non-auto customers.",
+    "tailwinds": [
+      "India auto volume growth",
+      "Aerospace & defence PLI",
+      "EV agnostic precision components"
+    ],
+    "risks": [
+      "Bajaj Auto >20% concentration risk",
+      "ICE-to-EV disruption on connecting rods"
+    ],
+    "track": [
+      "Non-auto revenue moving toward 40%",
+      "Aerospace facility Bengaluru ramp",
+      "Quarterly order book"
+    ],
+    "mcap_cr": 18444.68,
+    "pe": 57.09242,
+    "roe": 11.13,
+    "ocf_cr": 387.07,
+    "debt_to_equity": 19.023,
+    "eps": 51.83,
+    "book_value": 463.624,
+    "div_yield": 11.0,
+    "pat_cagr": 103.8,
+    "rev_cagr": 27.8,
+    "mcap_3y": 286.44
+  },
+  {
+    "ticker": "GESHIP",
+    "name": "GE Shipping",
+    "sector": "Shipping",
+    "nse_symbol": "GESHIP",
+    "buy_avg": 1040.96,
+    "moat_type": "Narrow",
+    "moat_class": "narrow",
+    "conviction": 6,
+    "moat": "India's largest private shipping company (est. 1948). Fleet of ~42 ships â€” tankers, product carriers, gas carriers, dry bulk. Consistent dividend payer.",
+    "leadership": "#1 private sector shipping co in India. Revenue â‚¹42 Bn TTM. Offshore subsidiary Greatship for E&P services.",
+    "non_rep": "Scale, fleet age, and balance sheet strength. Cash reserves provide downside protection through freight cycles.",
+    "tailwinds": [
+      "India crude import growth",
+      "Domestic petroleum product demand",
+      "LPG expansion",
+      "Offshore O&G capex revival"
+    ],
+    "risks": [
+      "Freight rate cyclicality",
+      "Geopolitical disruption to shipping lanes",
+      "Chinese fleet overcapacity"
+    ],
+    "track": [
+      "Day rates vs break-even",
+      "Fleet utilization %",
+      "Dividend sustainability"
+    ],
+    "mcap_cr": 20454.25,
+    "pe": 6.9646587,
+    "roe": 18.85,
+    "ocf_cr": 2853.87,
+    "debt_to_equity": 6.409,
+    "eps": 205.71,
+    "book_value": 1188.084,
+    "div_yield": 327.0,
+    "pat_cagr": 187.5,
+    "rev_cagr": 23.6,
+    "mcap_3y": 134.49
+  },
+  {
+    "ticker": "THERMAX",
+    "name": "Thermax",
+    "sector": "Capital Goods",
+    "nse_symbol": "THERMAX",
+    "buy_avg": 4430.55,
+    "moat_type": "Wide",
+    "moat_class": "wide",
+    "conviction": 8,
+    "moat": "Asia's leading vapor absorption cooling manufacturer. World leader in FGD systems. 70% order book from green industrial solutions. 30 geographies, 14 mfg locations.",
+    "leadership": "India's only integrated energy+environment solutions provider at this scale. FY25 revenue â‚¹10,694 Cr. Order balance â‚¹11,593 Cr.",
+    "non_rep": "Domain expertise across boilers, chillers, EPC power plants, water treatment under one roof. JV with Babcock & Wilcox (TBWES).",
+    "tailwinds": [
+      "India industrial capex supercycle",
+      "Green steel & FGD mandates",
+      "Captive power plant demand",
+      "Energy transition / green hydrogen"
+    ],
+    "risks": [
+      "Project execution risk on large EPC",
+      "Commodity cost margin pressure",
+      "Slow order-to-revenue conversion"
+    ],
+    "track": [
+      "Order booking >â‚¹3,000 Cr/quarter",
+      "Green solutions revenue %",
+      "TBWES order wins"
+    ],
+    "mcap_cr": 53215.23,
+    "pe": 74.06711,
+    "roe": 13.69,
+    "ocf_cr": 541.55,
+    "debt_to_equity": 42.166,
+    "eps": 63.78,
+    "book_value": 492.563,
+    "div_yield": 30.0,
+    "pat_cagr": 18.7,
+    "rev_cagr": 11.1,
+    "mcap_3y": 93.99
+  },
+  {
+    "ticker": "TRITURBINE",
+    "name": "Triveni Turbine",
+    "sector": "Capital Goods",
+    "nse_symbol": "TRITURBINE",
+    "buy_avg": 551.14,
+    "moat_type": "Wide",
+    "moat_class": "wide",
+    "conviction": 8,
+    "moat": "India's dominant small-to-mid steam turbine maker (up to 100 MW). Deep application engineering for industrial process heat. Strong after-market spares creating recurring revenue.",
+    "leadership": "#1 in industrial steam turbines in India. Exports to Europe, SEA, Middle East growing. ~24.5% ROE forecast.",
+    "non_rep": "Customized products per installation â€” high switching cost. Spares and service lock-in for 20+ year asset life.",
+    "tailwinds": [
+      "India captive power growth (PLI, infra)",
+      "Waste heat recovery / green energy",
+      "Global de-carbonisation of process industries"
+    ],
+    "risks": [
+      "Slower India industrial capex",
+      "Growth forecast ~11% â€” below market average",
+      "Slightly overvalued vs intrinsic estimates"
+    ],
+    "track": [
+      "After-market revenue % of total",
+      "International order bookings",
+      "Export backlog value"
+    ],
+    "mcap_cr": 21259.23,
+    "pe": 60.685116,
+    "roe": 26.22,
+    "ocf_cr": 111.0,
+    "debt_to_equity": 2.476,
+    "eps": 11.02,
+    "book_value": 45.551,
+    "div_yield": 60.0,
+    "pat_cagr": 7.4,
+    "rev_cagr": 26.3,
+    "mcap_3y": 74.6
+  },
+  {
+    "ticker": "ELGIEQUIP",
+    "name": "Elgi Equipment",
+    "sector": "Industrials",
+    "nse_symbol": "ELGIEQUIP",
+    "buy_avg": 552.93,
+    "moat_type": "Wide",
+    "moat_class": "wide",
+    "conviction": 7,
+    "moat": "60+ years of air compressor expertise. Global player across 100+ countries. Oil-free screw compressor technology is IP-backed. Railway compressor supply to Indian Railways.",
+    "leadership": "Top-5 global air compressor manufacturer. India market leader. Mkt cap â‚¹15,819 Cr.",
+    "non_rep": "Deep application engineering + global distribution + gas compressor seal patent (2023). Indian Railways institutional relationship.",
+    "tailwinds": [
+      "India manufacturing/PLI compressed air demand",
+      "Global energy efficiency regulations for oil-free compressors",
+      "Automotive and pharma industry growth"
+    ],
+    "risks": [
+      "Revenue growth modest at 5-7% YoY",
+      "Atlas Copco competition in premium segment",
+      "Europe slowdown impacting exports"
+    ],
+    "track": [
+      "International revenue %",
+      "Oil-free compressor mix",
+      "EV segment product launches"
+    ],
+    "mcap_cr": 18923.95,
+    "pe": 44.107273,
+    "roe": 21.0,
+    "ocf_cr": 453.5,
+    "debt_to_equity": 23.885,
+    "eps": 13.61,
+    "book_value": 70.854,
+    "div_yield": 45.0,
+    "pat_cagr": 25.4,
+    "rev_cagr": 12.1,
+    "mcap_3y": 29.31
+  },
+  {
+    "ticker": "INOXINDIA",
+    "name": "INOX India",
+    "sector": "Industrial Equipment",
+    "nse_symbol": "INOXINDIA",
+    "buy_avg": 1182.81,
+    "moat_type": "Wide",
+    "moat_class": "wide",
+    "conviction": 8,
+    "moat": "India's largest cryogenic equipment manufacturer. Only Indian company with full cryogenic value chain for LNG, industrial gas, hydrogen, space, and medical oxygen.",
+    "leadership": "~$169M TTM revenue. Only large-scale domestic cryogenic manufacturer. Competitors are foreign (Cryofab, Cryolor, Linde India).",
+    "non_rep": "ISO/ASME/PED approved. 2-3 year qualification cycles for LNG or space applications create near-impenetrable entry barriers.",
+    "tailwinds": [
+      "India LNG terminal expansion",
+      "Green hydrogen infrastructure",
+      "Space sector ISRO + private launches",
+      "Industrial gas demand pharma/food"
+    ],
+    "risks": [
+      "Capital goods ordering delays",
+      "ISRO/space project delays",
+      "Helium supply chain disruptions"
+    ],
+    "track": [
+      "Order intake hydrogen/LNG verticals",
+      "Space program awarding",
+      "Revenue per segment shift"
+    ],
+    "mcap_cr": 15099.42,
+    "pe": 58.763687,
+    "roe": 25.9,
+    "ocf_cr": 116.65,
+    "debt_to_equity": 7.251,
+    "eps": 28.31,
+    "book_value": 123.144,
+    "div_yield": 12.0,
+    "pat_cagr": 14.9,
+    "rev_cagr": 24.7,
+    "mcap_3y": 77.49
+  },
+  {
+    "ticker": "KENNAMET",
+    "name": "Kennametal India",
+    "sector": "Industrials",
+    "nse_symbol": "KENNAMET",
+    "buy_avg": 2476.12,
+    "moat_type": "Narrow",
+    "moat_class": "narrow",
+    "conviction": 6,
+    "moat": "India subsidiary of Kennametal Inc (USA). Tungsten carbide cutting tools with global parent IP and technology transfer. Premium brand moat.",
+    "leadership": "Premium cutting tools market leader in India. 75% promoter holding. Revenue â‚¹1,392 Cr, PAT â‚¹256 Cr.",
+    "non_rep": "Tungsten carbide IP + global R&D from US parent. 19x book value premium reflects franchise quality.",
+    "tailwinds": [
+      "India advanced manufacturing aerospace/defence/auto EV",
+      "PLI for precision components",
+      "Metal cutting demand from capex cycle"
+    ],
+    "risks": [
+      "High valuation â€” limited margin of safety",
+      "Parent company strategy dependency",
+      "Cyclical demand from auto/aerospace"
+    ],
+    "track": [
+      "Aerospace/defence order book",
+      "Revenue growth vs global Kennametal",
+      "EBITDA margins vs global parent"
+    ],
+    "mcap_cr": 6138.74,
+    "pe": 44.38424,
+    "roe": 0,
+    "ocf_cr": 0.0,
+    "debt_to_equity": 0.262,
+    "eps": 62.93,
+    "book_value": 364.997,
+    "div_yield": 145.0,
+    "pat_cagr": 110.4,
+    "rev_cagr": 39.2,
+    "mcap_3y": 142.88
+  },
+  {
+    "ticker": "PARKHOSPS",
+    "name": "Park Medi World Limited",
+    "sector": "Healthcare",
+    "nse_symbol": "PARKHOSPS",
+    "buy_avg": 158.81,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ],
+    "mcap_cr": 12325.15,
+    "pe": 41.475292,
+    "roe": 16.94,
+    "ocf_cr": 329.09,
+    "debt_to_equity": 17.307,
+    "eps": 6.88,
+    "book_value": 50.789,
+    "div_yield": 0,
+    "pat_cagr": 30.9,
+    "rev_cagr": 30.1,
+    "mcap_3y": 92.87
+  },
+  {
+    "ticker": "NLCINDIA",
+    "name": "NLC India",
+    "sector": "PSU Power",
+    "nse_symbol": "NLCINDIA",
+    "buy_avg": 255.12,
+    "moat_type": "Narrow",
+    "moat_class": "narrow",
+    "conviction": 5,
+    "moat": "Government-owned lignite miner and power generator. Captive fuel supply is cost advantage. 6,032 MW installed capacity across thermal and solar.",
+    "leadership": "India's only significant lignite-based power generator. PSU with sovereign backing. Expanding into solar/wind aggressively.",
+    "non_rep": "Captive mines + multi-decade mining rights. Pivoting to 10,000+ MW renewable capacity target. Sovereign backing provides financing advantage.",
+    "tailwinds": [
+      "India power demand growth 8-10% p.a.",
+      "Renewable energy expansion mandate",
+      "Government capex into power sector"
+    ],
+    "risks": [
+      "Lignite is polluting â€” regulatory transition risk",
+      "Delayed RE project execution",
+      "PSU bureaucracy slowing transition"
+    ],
+    "track": [
+      "Renewable capacity addition vs target",
+      "EBITDA per unit solar vs thermal",
+      "Govt policy on lignite pricing"
+    ],
+    "mcap_cr": 44670.5,
+    "pe": 12.673092,
+    "roe": 15.97,
+    "ocf_cr": 5166.07,
+    "debt_to_equity": 82.0,
+    "eps": 25.42,
+    "book_value": 155.242,
+    "div_yield": 214.0,
+    "pat_cagr": -12.7,
+    "rev_cagr": -0.3,
+    "mcap_3y": 295.0
+  },
+  {
+    "ticker": "PFC",
+    "name": "Power Finance Corporation",
+    "sector": "PSU Finance",
+    "nse_symbol": "PFC",
+    "buy_avg": 431.44,
+    "moat_type": "Narrow",
+    "moat_class": "narrow",
+    "conviction": 6,
+    "moat": "India's largest infrastructure finance company for power sector. ~â‚¹10 Lakh Cr loan book. Sovereign backing. Mandated for Govt power programs.",
+    "leadership": "#1 power sector financier alongside REC. Direct beneficiary of PM-KUSUM, Smart Metering, RDSS schemes.",
+    "non_rep": "Access to low-cost sovereign-backed borrowings. Long-term relationships with DISCOMs, NTPC, NHPC. Earns 3-4% spread reliably.",
+    "tailwinds": [
+      "â‚¹11.21 Lakh Cr India infra budget FY27",
+      "500 GW renewable capacity target 2030",
+      "DISCOM restructuring loans",
+      "Smart metering program"
+    ],
+    "risks": [
+      "DISCOM credit quality structurally weak",
+      "Rising NPA risk if state utilities default",
+      "Interest rate sensitivity on long-duration loans"
+    ],
+    "track": [
+      "NPA levels and PCR",
+      "Loan book growth rate",
+      "Disbursements under Govt schemes"
+    ],
+    "mcap_cr": 143735.93,
+    "pe": 5.5491147,
+    "roe": 20.47,
+    "ocf_cr": -4504.5,
+    "debt_to_equity": 586.017,
+    "eps": 78.49,
+    "book_value": 402.627,
+    "div_yield": 341.0,
+    "pat_cagr": 10.8,
+    "rev_cagr": -15.4,
+    "mcap_3y": 276.41
+  },
+  {
+    "ticker": "SJVN",
+    "name": "SJVN",
+    "sector": "PSU Power",
+    "nse_symbol": "SJVN",
+    "buy_avg": 74.72,
+    "moat_type": "Narrow",
+    "moat_class": "narrow",
+    "conviction": 5,
+    "moat": "Navratna PSU â€” hydropower, solar, wind. 2,282 MW hydro capacity. Concession-based hydro sites are geographically fixed â€” competition cannot enter once dam is built.",
+    "leadership": "Key hydro developer in Himachal Pradesh and Uttarakhand. Expanding into Nepal and Bhutan. 25,000 MW capacity target by 2030.",
+    "non_rep": "Hydro concessions are permanent and non-replicable. Very long-duration assets with 40-50yr useful life once operational.",
+    "tailwinds": [
+      "India renewable capacity mandate",
+      "Hydro as baseload for intermittent solar/wind",
+      "Cross-border power trade Nepal/Bhutan"
+    ],
+    "risks": [
+      "Execution delays on large hydro (environmental clearances)",
+      "Monsoon variability affects generation",
+      "8-12 year gestation periods for hydro projects"
+    ],
+    "track": [
+      "MW capacity addition vs timeline",
+      "PPAs signed for new capacity",
+      "Revenue growth from operational projects"
+    ],
+    "mcap_cr": 28483.15,
+    "pe": 44.46626,
+    "roe": 4.51,
+    "ocf_cr": 1859.63,
+    "debt_to_equity": 226.528,
+    "eps": 1.63,
+    "book_value": 36.951,
+    "div_yield": 202.0,
+    "pat_cagr": 0,
+    "rev_cagr": 196.7,
+    "mcap_3y": 110.24
+  },
+  {
+    "ticker": "ISGEC",
+    "name": "ISGEC Heavy Engineering",
+    "sector": "Capital Goods",
+    "nse_symbol": "ISGEC",
+    "buy_avg": 1054.87,
+    "moat_type": "Narrow",
+    "moat_class": "narrow",
+    "conviction": 6,
+    "moat": "Multi-product heavy engineering conglomerate â€” boilers, presses, sugar equipment, process equipment. Deep domain expertise across niche industrial verticals across 80+ countries.",
+    "leadership": "Significant player in sugar plant equipment globally. Heat exchangers and pressure vessels. Exports to 80+ countries.",
+    "non_rep": "Diversified mix across specialised categories. JV with Hitachi (boilers) gives technology access. Global customer base.",
+    "tailwinds": [
+      "India infrastructure capex",
+      "Sugar sector modernization India/Africa",
+      "Defence manufacturing"
+    ],
+    "risks": [
+      "Currently -14% in portfolio â€” price correction ongoing",
+      "Project-based lumpy revenues",
+      "Competition from L&T, Bharat Forge in heavy engineering"
+    ],
+    "track": [
+      "Order book value and execution pace",
+      "Sugar equipment export orders",
+      "Margin recovery trajectory"
+    ],
+    "mcap_cr": 6608.1,
+    "pe": 60.84631,
+    "roe": 5.37,
+    "ocf_cr": 764.97,
+    "debt_to_equity": 32.93,
+    "eps": 14.77,
+    "book_value": 372.202,
+    "div_yield": 56.0,
+    "pat_cagr": 4.1,
+    "rev_cagr": 17.4,
+    "mcap_3y": 85.95
+  },
+  {
+    "ticker": "NESCO",
+    "name": "NESCO Mumbai",
+    "sector": "Real Estate",
+    "nse_symbol": "NESCO",
+    "buy_avg": 1213.45,
+    "moat_type": "Wide",
+    "moat_class": "wide",
+    "conviction": 7,
+    "moat": "Owns Bombay Exhibition Centre (BEC) â€” India's premium exhibition/convention venue. Irreplaceable 25-acre land bank in Goregaon, Mumbai. Exhibition + IT park + hospitality.",
+    "leadership": "Dominant Mumbai convention/exhibition venue. IT Park occupancy consistently >90%. Recurring annuity-like income from long-term leases.",
+    "non_rep": "25-acre Mumbai land cannot be replicated at any price. BEC hosts India's largest trade fairs. Asset-light model post-construction.",
+    "tailwinds": [
+      "India MICE industry growth",
+      "Mumbai commercial real estate premiums",
+      "IT/ITES leasing demand"
+    ],
+    "risks": [
+      "Revenue concentration â€” Mumbai only",
+      "YASHOBHOOMI Delhi competing for national events",
+      "Cyclical nature of exhibitions in recessions"
+    ],
+    "track": [
+      "Exhibition days per year",
+      "IT park occupancy and lease renewal",
+      "New IT park phase development"
+    ],
+    "mcap_cr": 7656.18,
+    "pe": 18.558496,
+    "roe": 14.67,
+    "ocf_cr": 387.79,
+    "debt_to_equity": 9.068,
+    "eps": 58.55,
+    "book_value": 425.392,
+    "div_yield": 65.0,
+    "pat_cagr": 5.0,
+    "rev_cagr": 30.8,
+    "mcap_3y": 86.7
+  },
+  {
+    "ticker": "HEG",
+    "name": "HEG",
+    "sector": "Materials",
+    "nse_symbol": "HEG",
+    "buy_avg": 540.91,
+    "moat_type": "Narrow",
+    "moat_class": "narrow",
+    "conviction": 6,
+    "moat": "One of ~6 global players in UHP graphite electrodes with captive needle coke, large-diameter machining. 100,000 MT/yr capacity. 65-70% production exported globally.",
+    "leadership": "India's largest graphite electrode exporter. 8.23% stake in GrafTech International (NYSE). Joint patents with Graphite India.",
+    "non_rep": "UHP electrode production requires specialized graphitization â€” capital-intensive, 2-3yr build time. Needle coke supply controlled by few global suppliers.",
+    "tailwinds": [
+      "EAF steelmaking transition (28% â†’ 41% by 2030)",
+      "Green steel demand Europe and India",
+      "Graphite anodes for EV battery supply chains"
+    ],
+    "risks": [
+      "Electrode prices under pressure vs rising needle coke costs",
+      "Cyclical earnings correlated to steel demand",
+      "Chinese dumping of cheaper electrodes"
+    ],
+    "track": [
+      "Electrode realization price/tonne",
+      "Needle coke input cost",
+      "Anode business revenue ramp"
+    ],
+    "mcap_cr": 10044.48,
+    "pe": 26.354431,
+    "roe": 7.34,
+    "ocf_cr": 213.19,
+    "debt_to_equity": 16.73,
+    "eps": 19.75,
+    "book_value": 241.878,
+    "div_yield": 34.0,
+    "pat_cagr": 0,
+    "rev_cagr": 11.2,
+    "mcap_3y": 117.73
+  },
+  {
+    "ticker": "INGERRAND",
+    "name": "Ingersoll Rand India",
+    "sector": "Industrials",
+    "nse_symbol": "INGERRAND",
+    "buy_avg": 4330.32,
+    "moat_type": "Narrow",
+    "moat_class": "narrow",
+    "conviction": 6,
+    "moat": "India subsidiary of Ingersoll Rand (US). Manufactures and services industrial compressors, air tools, fluid management. Global parent provides technology and brand premium.",
+    "leadership": "75% promoter holding. Revenue â‚¹1,392 Cr. High margin business. Premium pricing power from US parent brand.",
+    "non_rep": "Parent technology + 43% CAGR stock return over 5 years. Service and aftermarket creates customer stickiness.",
+    "tailwinds": [
+      "India manufacturing PLI schemes",
+      "Industrial automation boom",
+      "Energy-efficient compressed air demand"
+    ],
+    "risks": [
+      "Currently -14% in portfolio",
+      "Parent restructuring post Gardner Denver spin-off",
+      "Cyclicality in industrial capex"
+    ],
+    "track": [
+      "Revenue growth vs industrial capex index",
+      "Service revenue as % of total",
+      "New product introductions from parent"
+    ],
+    "mcap_cr": 12405.28,
+    "pe": 48.508823,
+    "roe": 0,
+    "ocf_cr": 0.0,
+    "debt_to_equity": 1.509,
+    "eps": 81.01,
+    "book_value": 205.945,
+    "div_yield": 184.0,
+    "pat_cagr": -7.4,
+    "rev_cagr": 18.2,
+    "mcap_3y": 67.26
+  },
+  {
+    "ticker": "WELCORP",
+    "name": "Welspun Corp",
+    "sector": "Steel Pipes",
+    "nse_symbol": "WELCORP",
+    "buy_avg": 1099.22,
+    "moat_type": "Narrow",
+    "moat_class": "narrow",
+    "conviction": 6,
+    "moat": "India's only large-diameter pipe manufacturer with both SAW and ERW capabilities + USA manufacturing. Serves oil/gas, water, hydrogen, nuclear, defence sectors.",
+    "leadership": "â‚¹10,078 Cr revenue FY23. 20.47% ROE. Manufacturing in Anjar, Bhopal, Mandya, and Arkansas USA â€” US oil & gas capex access.",
+    "non_rep": "Acquired Sintex for building materials diversification. DI pipes capacity at Anjar for water infra. USA plant gives access to US pipeline replacement cycle.",
+    "tailwinds": [
+      "Jal Jeevan Mission water pipeline infra",
+      "US LNG/oil pipeline replacement cycle",
+      "Hydrogen pipeline globally",
+      "Defence speciality tubes"
+    ],
+    "risks": [
+      "Steel price volatility compresses margins",
+      "Oil price sensitivity on US pipeline orders",
+      "Sintex integration execution risk"
+    ],
+    "track": [
+      "Order book from water/DI pipes",
+      "US revenue vs India mix",
+      "Sintex EBITDA contribution"
+    ],
+    "mcap_cr": 36607.38,
+    "pe": 22.705267,
+    "roe": 18.92,
+    "ocf_cr": 3204.28,
+    "debt_to_equity": 25.042,
+    "eps": 61.14,
+    "book_value": 310.136,
+    "div_yield": 37.0,
+    "pat_cagr": -47.0,
+    "rev_cagr": 9.9,
+    "mcap_3y": 512.22
+  },
+  {
+    "ticker": "JNKINDIA",
+    "name": "JNK India",
+    "sector": "Capital Goods",
+    "nse_symbol": "JNKINDIA",
+    "buy_avg": 283.62,
+    "moat_type": "Wide",
+    "moat_class": "wide",
+    "conviction": 7,
+    "moat": "JV with JNK Heaters Korea â€” exclusive technology for process-fired heaters, reformers, cracking furnaces in India. Only Indian company with this technology indigenized.",
+    "leadership": "Serves IOC, Tata Projects, RCF, Numaligarh Refinery. Revenue â‚¹756 Cr. New JV 'JNK Chemdist' for green hydrogen tech.",
+    "non_rep": "Technology co-developed with Korean parent. Manufacturing SEZ in Mundra. Expanding into flares, incinerators, solar EPC, H2 production.",
+    "tailwinds": [
+      "India petrochemical/refinery expansion",
+      "Green hydrogen economy",
+      "Fertilizer plant modernization",
+      "Export EPC projects Nigeria/Mexico"
+    ],
+    "risks": [
+      "Project-based revenue â€” lumpy quarters",
+      "Small company â‚¹2,160 Cr mkt cap",
+      "Korean parent technology dependency"
+    ],
+    "track": [
+      "Order book and execution timeline",
+      "Green hydrogen JV progress",
+      "Export revenue %"
+    ],
+    "mcap_cr": 2406.58,
+    "pe": 37.109577,
+    "roe": 12.09,
+    "ocf_cr": -2.18,
+    "debt_to_equity": 15.97,
+    "eps": 11.59,
+    "book_value": 97.662,
+    "div_yield": 7.0,
+    "pat_cagr": 146.4,
+    "rev_cagr": 76.9,
+    "mcap_3y": -37.99
+  },
+  {
+    "ticker": "LATENTVIEW",
+    "name": "LatentView Analytics",
+    "sector": "IT / Analytics",
+    "nse_symbol": "LATENTVIEW",
+    "buy_avg": 448.98,
+    "moat_type": "Narrow",
+    "moat_class": "narrow",
+    "conviction": 5,
+    "moat": "Pure-play data analytics firm serving Fortune 500 in US tech, BFSI, CPG. Chennai-based global delivery. ~23% PAT margins. FY26 revenue â‚¹10,602 Mn (+22% YoY).",
+    "leadership": "Among few listed pure-play analytics companies in India. 65.1% promoter. Revenue growing 22% YoY.",
+    "non_rep": "Deep embedded analytics with large US tech companies. Healtheon AI (healthcare GenAI) â€” early mover. However currently -26% in portfolio.",
+    "tailwinds": [
+      "Enterprise AI/data spending boom",
+      "GenAI consulting demand",
+      "US tech analytics outsourcing to India"
+    ],
+    "risks": [
+      "Currently -26% in portfolio",
+      "ROE only 12% â€” low capital efficiency",
+      "Valuation elevated vs intrinsic estimates"
+    ],
+    "track": [
+      "Revenue growth sustaining >20%",
+      "US client concentration",
+      "GenAI project wins"
+    ],
+    "mcap_cr": 6249.13,
+    "pe": 31.55695,
+    "roe": 12.17,
+    "ocf_cr": 164.53,
+    "debt_to_equity": 1.863,
+    "eps": 9.57,
+    "book_value": 84.845,
+    "div_yield": 0,
+    "pat_cagr": -1.1,
+    "rev_cagr": 26.1,
+    "mcap_3y": -7.09
+  },
+  {
+    "ticker": "POWERICA",
+    "name": "Powerica",
+    "sector": "Power Equipment",
+    "nse_symbol": "POWERICA",
+    "buy_avg": 511.33,
+    "moat_type": "Narrow",
+    "moat_class": "narrow",
+    "conviction": 6,
+    "moat": "India's largest independent DG set dealer and after-market services provider. Exclusive Cummins distributor for large industrial DG sets (>750 kVA segment).",
+    "leadership": "Dominant in >750 kVA DG set segment. Installed base of 25,000+ DG sets. AMC revenues create recurring income.",
+    "non_rep": "Exclusive Cummins distribution rights. After-market AMC revenues â€” high switching cost on existing installed base.",
+    "tailwinds": [
+      "India data centre boom",
+      "Power unreliability driving backup power",
+      "Hospital/pharma expansion",
+      "Industrial capex"
+    ],
+    "risks": [
+      "Grid reliability improvement could reduce DG demand long-term",
+      "Battery storage as eventual DG replacement",
+      "Margin pressure if Cummins changes pricing"
+    ],
+    "track": [
+      "Data centre order wins",
+      "AMC revenue growth",
+      "Hybrid power product lines"
+    ],
+    "mcap_cr": 6200.41,
+    "pe": 37.230244,
+    "roe": 17.89,
+    "ocf_cr": 452.88,
+    "debt_to_equity": 28.506,
+    "eps": 13.16,
+    "book_value": 178.923,
+    "div_yield": 0,
+    "pat_cagr": 12.7,
+    "rev_cagr": 10.9,
+    "mcap_3y": 25.63
+  },
+  {
+    "ticker": "TEGA",
+    "name": "TEGA Industries",
+    "sector": "Mining Equipment",
+    "nse_symbol": "TEGA",
+    "buy_avg": 2033.06,
+    "moat_type": "Wide",
+    "moat_class": "wide",
+    "conviction": 7,
+    "moat": "Global niche leader in mineral processing wear parts and mill liners. #2 globally by revenue for grinding mill liners. Proprietary rubber/polymer composite formulations â€” IP-backed.",
+    "leadership": "400+ clients across 70+ countries. ~55% domestic, ~45% export revenue split.",
+    "non_rep": "Rubber compound formulations for abrasion-resistant liners are proprietary. Requalification takes 12-18 months â€” very high switching cost.",
+    "tailwinds": [
+      "Global mining capex copper/lithium/iron ore for EV transition",
+      "India steel and cement capacity expansion",
+      "Critical minerals boom for battery supply chains"
+    ],
+    "risks": [
+      "Currently -10% in portfolio",
+      "Mining capex highly cyclical",
+      "Competition from Metso Outotec and Weir Group"
+    ],
+    "track": [
+      "Export order book",
+      "New product wins in lithium/copper mines",
+      "EBITDA margin stability"
+    ],
+    "mcap_cr": 13431.33,
+    "pe": 86.95526,
+    "roe": 5.94,
+    "ocf_cr": 350.34,
+    "debt_to_equity": 11.693,
+    "eps": 20.56,
+    "book_value": 449.925,
+    "div_yield": 11.0,
+    "pat_cagr": -63.6,
+    "rev_cagr": -1.7,
+    "mcap_3y": 159.99
+  },
+  {
+    "ticker": "ASHIANA",
+    "name": "Ashiana Housing",
+    "sector": "Real Estate",
+    "nse_symbol": "ASHIANA",
+    "buy_avg": 362.06,
+    "moat_type": "Narrow",
+    "moat_class": "narrow",
+    "conviction": 5,
+    "moat": "Niche real estate developer focused on mid-income housing in satellite towns + senior living communities. Disciplined landbank strategy. First-mover in senior living.",
+    "leadership": "Operates in 12 cities. Senior living as a category is nascent â€” very few credible players in India.",
+    "non_rep": "Brand in Tier-2/3 markets that mid-income buyers trust. Senior living first-mover advantage. Unique area-sell revenue model.",
+    "tailwinds": [
+      "India urbanization and housing deficit",
+      "Senior living â€” India aging demographics",
+      "Tier-2 city housing demand",
+      "Affordable housing demand"
+    ],
+    "risks": [
+      "Real estate is capital-intensive and cyclical",
+      "RERA and state-level regulatory risk",
+      "Small land parcels = execution constraints"
+    ],
+    "track": [
+      "Area booked per quarter",
+      "Senior living units pipeline",
+      "Cash flow from operations vs land acquisition"
+    ],
+    "mcap_cr": 3615.88,
+    "pe": 29.950043,
+    "roe": 14.52,
+    "ocf_cr": 342.19,
+    "debt_to_equity": 37.597,
+    "eps": 12.01,
+    "book_value": 90.124,
+    "div_yield": 70.0,
+    "pat_cagr": 6.8,
+    "rev_cagr": 52.4,
+    "mcap_3y": 103.02
+  },
+  {
+    "ticker": "SCI",
+    "name": "Shipping Corp of India",
+    "sector": "PSU Shipping",
+    "nse_symbol": "SCI",
+    "buy_avg": 302.02,
+    "moat_type": "Narrow",
+    "moat_class": "narrow",
+    "conviction": 4,
+    "moat": "India's only PSU shipping company. Fleet of tankers, bulk carriers, LPG and container vessels. Government-guaranteed cargo access for strategic shipments.",
+    "leadership": "Subsidized fuel/port access as PSU. Strategic importance for India energy security. Less commercially competitive vs private peers.",
+    "non_rep": "Government-guaranteed cargo (defence, strategic petroleum). However PSU inefficiency limits commercial upside.",
+    "tailwinds": [
+      "India crude import growth",
+      "Coastal shipping policy",
+      "PSU privatization could unlock value"
+    ],
+    "risks": [
+      "PSU inefficiency â€” lower margins vs GESHIP",
+      "Privatization overhang uncertainty",
+      "Freight rate cyclicality"
+    ],
+    "track": [
+      "Fleet renewal capex",
+      "Privatization announcement",
+      "Revenue per vessel vs GESHIP"
+    ],
+    "mcap_cr": 13680.52,
+    "pe": 10.110156,
+    "roe": 0,
+    "ocf_cr": 0.0,
+    "debt_to_equity": 29.454,
+    "eps": 29.05,
+    "book_value": 183.101,
+    "div_yield": 447.0,
+    "pat_cagr": 118.9,
+    "rev_cagr": 14.2,
+    "mcap_3y": 221.6
+  },
+  {
+    "ticker": "CARBORUNIV",
+    "name": "Carborundum Universal",
+    "sector": "Abrasives & Ceramics",
+    "nse_symbol": "CARBORUNIV",
+    "buy_avg": 1097.89,
+    "moat_type": "Wide",
+    "moat_class": "wide",
+    "conviction": 7,
+    "moat": "India's largest abrasives company. Part of Murugappa Group. 70+ years manufacturing expertise. Segments: bonded abrasives, coated abrasives, ceramics, electrominerals.",
+    "leadership": "Market leader in Indian abrasives. Exports to 50+ countries. Mkt cap ~â‚¹20,000 Cr.",
+    "non_rep": "Electro-minerals (Silicon Carbide) are high-purity, high-investment products. Ceramics segment serves aerospace and defence. Full-stack abrasive-to-ceramic manufacturing.",
+    "tailwinds": [
+      "India manufacturing boom auto/aerospace/defence",
+      "Advanced ceramics for semiconductors and EVs",
+      "Renewable energy components using SiC",
+      "EV abrasive demand"
+    ],
+    "risks": [
+      "Currently -8% in portfolio",
+      "Cyclical demand from auto/industrial",
+      "SiC competition from global chemical companies"
+    ],
+    "track": [
+      "Advanced ceramics revenue %",
+      "SiC capacity utilization",
+      "Export revenue defence/aerospace"
+    ],
+    "mcap_cr": 20123.73,
+    "pe": 102.26525,
+    "roe": 4.37,
+    "ocf_cr": 367.35,
+    "debt_to_equity": 10.292,
+    "eps": 10.33,
+    "book_value": 206.187,
+    "div_yield": 38.0,
+    "pat_cagr": 0,
+    "rev_cagr": 14.9,
+    "mcap_3y": -8.58
+  },
+  {
+    "ticker": "ENTERO",
+    "name": "Entero Healthcare",
+    "sector": "Healthcare Distribution",
+    "nse_symbol": "ENTERO",
+    "buy_avg": 1111.19,
+    "moat_type": "Narrow",
+    "moat_class": "narrow",
+    "conviction": 6,
+    "moat": "Tech-enabled pharma distribution platform. Connects 7,000+ pharma brands to 250,000+ healthcare providers. Route density advantage in fragmented â‚¹2.7 Lakh Cr market.",
+    "leadership": "One of India's largest B2B pharma distribution companies by volume. Consolidating fragmented market rapidly.",
+    "non_rep": "Dense route network + proprietary order management technology + cold chain. Multi-city presence creates scale advantage over local distributors.",
+    "tailwinds": [
+      "India pharma market growth 10-12% p.a.",
+      "B2B distribution consolidation",
+      "Healthcare spending increase",
+      "Digital ordering by chemists"
+    ],
+    "risks": [
+      "Low margin business by nature",
+      "Competition from Medline and direct pharma distribution arms",
+      "Working capital intensive"
+    ],
+    "track": [
+      "Revenue growth and EBITDA margin expansion",
+      "New cities/districts",
+      "Pharmacy client retention rate"
+    ],
+    "mcap_cr": 4973.69,
+    "pe": 43.275276,
+    "roe": 8.28,
+    "ocf_cr": 96.2,
+    "debt_to_equity": 38.638,
+    "eps": 26.41,
+    "book_value": 388.256,
+    "div_yield": 0,
+    "pat_cagr": 9.1,
+    "rev_cagr": 42.6,
+    "mcap_3y": -0.58
+  },
+  {
+    "ticker": "SIEMENS",
+    "name": "Siemens India",
+    "sector": "Capital Goods",
+    "nse_symbol": "SIEMENS",
+    "buy_avg": 3807.82,
+    "moat_type": "Wide",
+    "moat_class": "wide",
+    "conviction": 8,
+    "moat": "India subsidiary of Siemens AG. Access to world-class automation, electrification, digitalization. Products span power distribution, railway electrification, building automation, industrial software.",
+    "leadership": "One of India's most trusted industrial technology companies. 75%+ revenue from products (higher quality). Revenue ~â‚¹21,000 Cr.",
+    "non_rep": "Siemens global R&D, SIMATIC PLC, SCADA, digital twin platforms â€” none replicable domestically. National Railway corridor electrification contracts.",
+    "tailwinds": [
+      "India railway modernization Vande Bharat/metro/electrification",
+      "Smart grid and power distribution upgrades",
+      "India smart city and building automation",
+      "Industry 4.0"
+    ],
+    "risks": [
+      "Currently -3% in portfolio",
+      "Parent Siemens AG India Energy Business demerger pending",
+      "Premium valuation vs domestic peers"
+    ],
+    "track": [
+      "Railway and metro order wins",
+      "Energy business demerger timeline",
+      "Digital/software revenue as % of total"
+    ],
+    "mcap_cr": 127886.44,
+    "pe": 75.64989,
+    "roe": 0,
+    "ocf_cr": -356.93,
+    "debt_to_equity": 2.213,
+    "eps": 47.47,
+    "book_value": 388.917,
+    "div_yield": 39.0,
+    "pat_cagr": -36.4,
+    "rev_cagr": 14.6,
+    "mcap_3y": 58.4
+  },
+  {
+    "ticker": "HONAUT",
+    "name": "Honeywell Automation India",
+    "sector": "Automation",
+    "nse_symbol": "HONAUT",
+    "buy_avg": 35975.0,
+    "moat_type": "Wide",
+    "moat_class": "wide",
+    "conviction": 7,
+    "moat": "India subsidiary of Honeywell International (Fortune 500). Leader in process automation, building solutions, combustion controls. Replacing a Honeywell DCS in a refinery takes 12-18 months and full plant shutdown.",
+    "leadership": "#1 in integrated industrial automation in India. Promoter: Honeywell Asia Pacific. Revenue growing steadily.",
+    "non_rep": "Technology sharing from parent for process solutions, sensing, building controls. Extreme switching cost on installed DCS base.",
+    "tailwinds": [
+      "India refinery and petrochemical capacity expansion",
+      "Smart buildings and green building mandates",
+      "Industrial safety/compliance regulations driving DCS upgrades"
+    ],
+    "risks": [
+      "Small float â€” illiquid stock",
+      "Parent dependent for all technology",
+      "Very high unit price â€” position sizing constraints"
+    ],
+    "track": [
+      "Revenue from engineering services exports",
+      "Process solutions order intake",
+      "Building solutions growth"
+    ],
+    "mcap_cr": 31023.26,
+    "pe": 59.02304,
+    "roe": 12.35,
+    "ocf_cr": 492.6,
+    "debt_to_equity": 2.476,
+    "eps": 594.09,
+    "book_value": 5046.735,
+    "div_yield": 32.0,
+    "pat_cagr": 14.1,
+    "rev_cagr": 5.9,
+    "mcap_3y": -6.72
+  },
+  {
+    "ticker": "GRINDWELL",
+    "name": "Grindwell Norton",
+    "sector": "Abrasives",
+    "nse_symbol": "GRINDWELL",
+    "buy_avg": 1886.49,
+    "moat_type": "Wide",
+    "moat_class": "wide",
+    "conviction": 7,
+    "moat": "India subsidiary of Saint-Gobain (France). Manufactures bonded abrasives, superabrasives, performance ceramics. Premium product range in diamond/CBN tools.",
+    "leadership": "#2 in Indian abrasives alongside Carborundum Universal. 74% promoter holding (Saint-Gobain).",
+    "non_rep": "Saint-Gobain technology for high-purity ceramics, superabrasives, performance plastics. Ceramic bearings for railways â€” critical safety application.",
+    "tailwinds": [
+      "India railway expansion 20,000 km target",
+      "Aerospace manufacturing",
+      "Advanced manufacturing for EVs",
+      "Defence components"
+    ],
+    "risks": [
+      "Currently -2% in portfolio",
+      "Cyclical with manufacturing capex",
+      "Carborundum Universal domestic competition"
+    ],
+    "track": [
+      "Superabrasive new product launches",
+      "Railway and aerospace order mix",
+      "EBITDA margins vs Carborundum Universal"
+    ],
+    "mcap_cr": 21564.93,
+    "pe": 51.869507,
+    "roe": 17.3,
+    "ocf_cr": 542.14,
+    "debt_to_equity": 2.381,
+    "eps": 37.55,
+    "book_value": 228.835,
+    "div_yield": 97.0,
+    "pat_cagr": 28.3,
+    "rev_cagr": 18.7,
+    "mcap_3y": -3.85
+  },
+  {
+    "ticker": "SKFINDUS",
+    "name": "SKF India",
+    "sector": "Bearings",
+    "nse_symbol": "SKFINDIA",
+    "buy_avg": 2147.0,
+    "moat_type": "Wide",
+    "moat_class": "wide",
+    "conviction": 7,
+    "moat": "India subsidiary of SKF AB (Sweden). #1 or #2 bearing manufacturer in India. Critical component in every rotating machine. ~24-25% market share in organized bearings market.",
+    "leadership": "Revenue ~â‚¹4,500 Cr. Strong after-market sales â€” bearings are consumables with repeat buying. Railway bearing supply to Indian Railways locked in.",
+    "non_rep": "SKF global metallurgy R&D, seal technologies, condition monitoring (digital twin for bearings) cannot be domestically replicated.",
+    "tailwinds": [
+      "India railway rolling stock expansion Vande Bharat/metro/freight",
+      "Wind energy turbine bearings",
+      "EV drivetrain precision bearings",
+      "Industrial automation"
+    ],
+    "risks": [
+      "Competition from Timken, NSK, Schaeffler",
+      "Auto sector slowdown near-term impact",
+      "Steel commodity cost impact on margins"
+    ],
+    "track": [
+      "Railway order intake",
+      "Wind energy bearing revenues",
+      "EV-specific bearing product launches"
+    ],
+    "mcap_cr": 11708.39,
+    "pe": 53.727314,
+    "roe": 29.48,
+    "ocf_cr": 163.84,
+    "debt_to_equity": 0.309,
+    "eps": 44.08,
+    "book_value": null,
+    "div_yield": 42.0,
+    "pat_cagr": 0,
+    "rev_cagr": 0,
+    "mcap_3y": -12.06
+  },
+  {
+    "ticker": "HCG",
+    "name": "HealthCare Global Enterprises Limited",
+    "sector": "Healthcare",
+    "nse_symbol": "HCG",
+    "buy_avg": 314.21,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending â€” add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ],
+    "mcap_cr": 9515.03,
+    "pe": 677.9787,
+    "roe": 1.9,
+    "ocf_cr": 347.1,
+    "debt_to_equity": 123.057,
+    "eps": 0.94,
+    "book_value": 92.072,
+    "div_yield": 0,
+    "pat_cagr": -71.2,
+    "rev_cagr": 11.5,
+    "mcap_3y": 105.18
+  },
+  {
+    "ticker": "SONACOMS",
+    "name": "Sona BLW Precision Forgings Limited",
+    "sector": "Consumer Cyclical",
+    "nse_symbol": "SONACOMS",
+    "buy_avg": 543.57,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending â€” add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ],
+    "mcap_cr": 36998.25,
+    "pe": 57.80369,
+    "roe": 10.69,
+    "ocf_cr": 659.06,
+    "debt_to_equity": 7.213,
+    "eps": 10.29,
+    "book_value": 91.918,
+    "div_yield": 61.0,
+    "pat_cagr": 17.1,
+    "rev_cagr": 45.4,
+    "mcap_3y": 16.06
+  },
+  {
+    "ticker": "SYRMA",
+    "name": "Syrma SGS Technology Limited",
+    "sector": "Technology",
+    "nse_symbol": "SYRMA",
+    "buy_avg": 430.8,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending â€” add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ],
+    "mcap_cr": 23760.29,
+    "pe": 72.858826,
+    "roe": 14.14,
+    "ocf_cr": 289.57,
+    "debt_to_equity": 13.045,
+    "eps": 16.93,
+    "book_value": 150.837,
+    "div_yield": 12.0,
+    "pat_cagr": 43.7,
+    "rev_cagr": 58.4,
+    "mcap_3y": 289.91
+  },
+  {
+    "ticker": "MTARTECH",
+    "name": "MTAR Technologies Limited",
+    "sector": "Industrials",
+    "nse_symbol": "MTARTECH",
+    "buy_avg": 1514.93,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending â€” add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ],
+    "mcap_cr": 22585.23,
+    "pe": 242.16689,
+    "roe": 0,
+    "ocf_cr": 0.0,
+    "debt_to_equity": 25.061,
+    "eps": 30.32,
+    "book_value": 241.876,
+    "div_yield": 0,
+    "pat_cagr": 117.3,
+    "rev_cagr": 59.3,
+    "mcap_3y": 287.21
+  },
+  {
+    "ticker": "POWERINDIA",
+    "name": "Hitachi Energy India Limited",
+    "sector": "Industrials",
+    "nse_symbol": "POWERINDIA",
+    "buy_avg": 2195.91,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending â€” add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ],
+    "mcap_cr": 154064.37,
+    "pe": 156.71472,
+    "roe": 21.04,
+    "ocf_cr": 1244.83,
+    "debt_to_equity": 1.663,
+    "eps": 220.56,
+    "book_value": 1161.247,
+    "div_yield": 2.0,
+    "pat_cagr": 71.8,
+    "rev_cagr": 46.2,
+    "mcap_3y": 771.09
+  },
+  {
+    "ticker": "ASTRAMICRO",
+    "name": "Astra Microwave Products Limited",
+    "sector": "Technology",
+    "nse_symbol": "ASTRAMICRO",
+    "buy_avg": 224.73,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending â€” add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ],
+    "mcap_cr": 13605.62,
+    "pe": 70.45231,
+    "roe": 15.99,
+    "ocf_cr": 386.73,
+    "debt_to_equity": 21.883,
+    "eps": 20.34,
+    "book_value": 138.431,
+    "div_yield": 16.0,
+    "pat_cagr": 43.9,
+    "rev_cagr": 19.7,
+    "mcap_3y": 332.94
+  },
+  {
+    "ticker": "ASTERDM",
+    "name": "Aster DM Healthcare Limited",
+    "sector": "Healthcare",
+    "nse_symbol": "ASTERDM",
+    "buy_avg": 283.78,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending â€” add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ],
+    "mcap_cr": 41042.4,
+    "pe": 123.284164,
+    "roe": 10.07,
+    "ocf_cr": 655.92,
+    "debt_to_equity": 45.921,
+    "eps": 6.44,
+    "book_value": 88.795,
+    "div_yield": 52.0,
+    "pat_cagr": 71.5,
+    "rev_cagr": 18.2,
+    "mcap_3y": 305.18
+  },
+  {
+    "ticker": "NEPHROPLUS",
+    "name": "NEPHROCARE HEALTH SERV L",
+    "sector": "Healthcare",
+    "nse_symbol": "NEPHROPLUS",
+    "buy_avg": 606.55,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending â€” add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ],
+    "mcap_cr": 6718.81,
+    "pe": 82.564735,
+    "roe": 9.04,
+    "ocf_cr": 232.58,
+    "debt_to_equity": 7.139,
+    "eps": 8.11,
+    "book_value": 111.271,
+    "div_yield": 0,
+    "pat_cagr": 0.3,
+    "rev_cagr": 21.2,
+    "mcap_3y": 42.09
+  },
+  {
+    "ticker": "NEULANDLAB",
+    "name": "Neuland Laboratories Limited",
+    "sector": "Healthcare",
+    "nse_symbol": "NEULANDLAB",
+    "buy_avg": 1031.85,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending â€” add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ],
+    "mcap_cr": 22062.28,
+    "pe": 60.69891,
+    "roe": 0,
+    "ocf_cr": 0.0,
+    "debt_to_equity": 16.072,
+    "eps": 283.3,
+    "book_value": 1460.99,
+    "div_yield": 20.0,
+    "pat_cagr": 664.9,
+    "rev_cagr": 136.4,
+    "mcap_3y": 509.42
+  },
+  {
+    "ticker": "AVANTEL",
+    "name": "Avantel Limited",
+    "sector": "Technology",
+    "nse_symbol": "AVANTEL",
+    "buy_avg": 13.39,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending â€” add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ],
+    "mcap_cr": 4454.64,
+    "pe": 304.81818,
+    "roe": 5.21,
+    "ocf_cr": 10.05,
+    "debt_to_equity": 10.164,
+    "eps": 0.55,
+    "book_value": 12.729,
+    "div_yield": 12.0,
+    "pat_cagr": -31.0,
+    "rev_cagr": 29.6,
+    "mcap_3y": -17.86
+  },
+  {
+    "ticker": "SOUTHWEST",
+    "name": "South West Pinnacle Exploration Limited",
+    "sector": "Energy",
+    "nse_symbol": "SOUTHWEST",
+    "buy_avg": 165.99,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending â€” add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ],
+    "mcap_cr": 750.22,
+    "pe": 23.265493,
+    "roe": 17.65,
+    "ocf_cr": 12.07,
+    "debt_to_equity": 39.376,
+    "eps": 10.81,
+    "book_value": 60.801,
+    "div_yield": 0,
+    "pat_cagr": 20.2,
+    "rev_cagr": 3.6,
+    "mcap_3y": 93.1
+  },
+  {
+    "ticker": "DLINKINDIA",
+    "name": "D-Link (India) Limited",
+    "sector": "Technology",
+    "nse_symbol": "DLINKINDIA",
+    "buy_avg": 480.82,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending â€” add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ],
+    "mcap_cr": 1740.27,
+    "pe": 16.722961,
+    "roe": 21.21,
+    "ocf_cr": 14.89,
+    "debt_to_equity": 2.928,
+    "eps": 29.31,
+    "book_value": 142.301,
+    "div_yield": 837.0,
+    "pat_cagr": 0.5,
+    "rev_cagr": 20.0,
+    "mcap_3y": 121.89
+  },
+  {
+    "ticker": "TRIVENI",
+    "name": "Triveni Engineering & Industries Limited",
+    "sector": "Consumer Defensive",
+    "nse_symbol": "TRIVENI",
+    "buy_avg": 384.17,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending â€” add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ],
+    "mcap_cr": 7974.16,
+    "pe": 29.844263,
+    "roe": 8.27,
+    "ocf_cr": 187.92,
+    "debt_to_equity": 64.646,
+    "eps": 12.2,
+    "book_value": 140.615,
+    "div_yield": 144.0,
+    "pat_cagr": -19.9,
+    "rev_cagr": -7.4,
+    "mcap_3y": 39.47
+  },
+  {
+    "ticker": "GALAPREC",
+    "name": "GALA PRECISION ENG LTD",
+    "sector": "Industrials",
+    "nse_symbol": "GALAPREC",
+    "buy_avg": 768.77,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending â€” add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ],
+    "mcap_cr": 1141.61,
+    "pe": 32.965633,
+    "roe": 12.92,
+    "ocf_cr": 10.17,
+    "debt_to_equity": 13.04,
+    "eps": 27.06,
+    "book_value": 229.718,
+    "div_yield": 0,
+    "pat_cagr": 11.0,
+    "rev_cagr": 25.6,
+    "mcap_3y": 17.82
+  },
+  {
+    "ticker": "HAPPYFORGE",
+    "name": "HAPPY FORGINGS LIMITED",
+    "sector": "Industrials",
+    "nse_symbol": "HAPPYFORGE",
+    "buy_avg": 1056.13,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending â€” add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ],
+    "mcap_cr": 12779.77,
+    "pe": 42.474133,
+    "roe": 15.16,
+    "ocf_cr": 444.67,
+    "debt_to_equity": 15.489,
+    "eps": 31.89,
+    "book_value": 225.638,
+    "div_yield": 30.0,
+    "pat_cagr": 23.0,
+    "rev_cagr": 20.4,
+    "mcap_3y": 32.26
+  },
+  {
+    "ticker": "NIFTYBEES",
+    "name": "Nippon India ETF Nifty 50 BeES",
+    "sector": "Pending",
+    "nse_symbol": "NIFTYBEES",
+    "buy_avg": 220.39,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending â€” add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ],
+    "mcap_cr": 0.0,
+    "pe": 21.511381,
+    "roe": 0,
+    "ocf_cr": 0.0,
+    "debt_to_equity": null,
+    "eps": null,
+    "book_value": null,
+    "div_yield": 0,
+    "pat_cagr": 0,
+    "rev_cagr": 0,
+    "mcap_3y": 31.66
+  },
+  {
+    "ticker": "HBLENGINE",
+    "name": "HBL ENGINEERING LTD",
+    "sector": "Industrials",
+    "nse_symbol": "HBLENGINE",
+    "buy_avg": 290.95,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending â€” add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ],
+    "mcap_cr": 21398.06,
+    "pe": 26.292574,
+    "roe": 44.07,
+    "ocf_cr": 738.44,
+    "debt_to_equity": 3.021,
+    "eps": 29.36,
+    "book_value": 80.581,
+    "div_yield": 26.0,
+    "pat_cagr": 39.8,
+    "rev_cagr": 27.0,
+    "mcap_3y": 643.02
+  },
+  {
+    "ticker": "SASKEN",
+    "name": "Sasken Technologies Limited",
+    "sector": "Technology",
+    "nse_symbol": "SASKEN",
+    "buy_avg": 1504.07,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending â€” add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ],
+    "mcap_cr": 3318.24,
+    "pe": 61.758053,
+    "roe": 6.99,
+    "ocf_cr": -22.83,
+    "debt_to_equity": 3.212,
+    "eps": 35.38,
+    "book_value": 529.102,
+    "div_yield": 117.0,
+    "pat_cagr": 144.4,
+    "rev_cagr": 136.0,
+    "mcap_3y": 170.49
+  },
+  {
+    "ticker": "ENRIN",
+    "name": "Siemens Energy India Limited",
+    "sector": "Utilities",
+    "nse_symbol": "ENRIN",
+    "buy_avg": 3292.31,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending â€” add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ],
+    "mcap_cr": 126120.07,
+    "pe": 96.34113,
+    "roe": 0,
+    "ocf_cr": 3516.3,
+    "debt_to_equity": 4.483,
+    "eps": 36.76,
+    "book_value": 135.117,
+    "div_yield": 11.0,
+    "pat_cagr": 52.2,
+    "rev_cagr": 27.4,
+    "mcap_3y": 29.7
+  },
+  {
+    "ticker": "ARE&M",
+    "name": "Amara Raja Energy & Mobility Limited",
+    "sector": "Industrials",
+    "nse_symbol": "ARE&M",
+    "buy_avg": 903.4,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending â€” add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ],
+    "mcap_cr": 15160.9,
+    "pe": 16.912004,
+    "roe": 11.57,
+    "ocf_cr": 1118.29,
+    "debt_to_equity": 5.015,
+    "eps": 48.98,
+    "book_value": 442.399,
+    "div_yield": 126.0,
+    "pat_cagr": 94.5,
+    "rev_cagr": 15.5,
+    "mcap_3y": 32.96
+  },
+  {
+    "ticker": "INDUSTOWER",
+    "name": "Indus Towers Limited",
+    "sector": "Communication Services",
+    "nse_symbol": "INDUSTOWER",
+    "buy_avg": 402.08,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending â€” add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ],
+    "mcap_cr": 111750.93,
+    "pe": 15.630763,
+    "roe": 19.81,
+    "ocf_cr": 15684.1,
+    "debt_to_equity": 53.289,
+    "eps": 27.11,
+    "book_value": 150.333,
+    "div_yield": 0,
+    "pat_cagr": 0.8,
+    "rev_cagr": 4.8,
+    "mcap_3y": 187.29
+  },
+  {
+    "ticker": "INDGN",
+    "name": "INDEGENE LIMITED",
+    "sector": "Healthcare",
+    "nse_symbol": "INDGN",
+    "buy_avg": 545.81,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending â€” add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ],
+    "mcap_cr": 12564.98,
+    "pe": 31.421274,
+    "roe": 13.94,
+    "ocf_cr": 650.8,
+    "debt_to_equity": 4.601,
+    "eps": 16.64,
+    "book_value": 130.746,
+    "div_yield": 39.0,
+    "pat_cagr": -32.3,
+    "rev_cagr": 32.8,
+    "mcap_3y": -8.11
+  },
+  {
+    "ticker": "RIR",
+    "name": "Rir Power Electronics Limited",
+    "sector": "Technology",
+    "nse_symbol": "RIR",
+    "buy_avg": 91.09,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending â€” add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ],
+    "mcap_cr": 1344.77,
+    "pe": 167.32674,
+    "roe": 8.68,
+    "ocf_cr": 1.7,
+    "debt_to_equity": 10.018,
+    "eps": 1.01,
+    "book_value": 20.656,
+    "div_yield": 11.0,
+    "pat_cagr": 250.0,
+    "rev_cagr": 36.3,
+    "mcap_3y": 340.19
+  },
+  {
+    "ticker": "SCODATUBES",
+    "name": "Scoda Tubes Limited",
+    "sector": "Basic Materials",
+    "nse_symbol": "SCODATUBES",
+    "buy_avg": 135.91,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending â€” add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ],
+    "mcap_cr": 743.47,
+    "pe": 18.276878,
+    "roe": 14.37,
+    "ocf_cr": -13.79,
+    "debt_to_equity": 47.967,
+    "eps": 6.79,
+    "book_value": 64.796,
+    "div_yield": 0,
+    "pat_cagr": -32.5,
+    "rev_cagr": -0.1,
+    "mcap_3y": -15.58
+  },
+  {
+    "ticker": "SALZERELEC",
+    "name": "Salzer Electronics Limited",
+    "sector": "Industrials",
+    "nse_symbol": "SALZERELEC",
+    "buy_avg": 846.21,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending â€” add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ],
+    "mcap_cr": 1138.06,
+    "pe": 21.474808,
+    "roe": 9.31,
+    "ocf_cr": 46.48,
+    "debt_to_equity": 88.776,
+    "eps": 29.97,
+    "book_value": 335.162,
+    "div_yield": 40.0,
+    "pat_cagr": 0,
+    "rev_cagr": 26.2,
+    "mcap_3y": 96.0
+  },
+  {
+    "ticker": "MENONBE",
+    "name": "Menon Bearings Limited",
+    "sector": "Consumer Cyclical",
+    "nse_symbol": "MENONBE",
+    "buy_avg": 147.23,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending â€” add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ],
+    "mcap_cr": 799.69,
+    "pe": 20.862572,
+    "roe": 22.25,
+    "ocf_cr": 23.32,
+    "debt_to_equity": 25.159,
+    "eps": 6.84,
+    "book_value": 33.094,
+    "div_yield": 140.0,
+    "pat_cagr": 29.2,
+    "rev_cagr": -27.4,
+    "mcap_3y": 14.89
+  },
+  {
+    "ticker": "RUBICON",
+    "name": "RUBICON RESEARCH LIMITED",
+    "sector": "Healthcare",
+    "nse_symbol": "RUBICON",
+    "buy_avg": 722.52,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending â€” add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ],
+    "mcap_cr": 19901.84,
+    "pe": 78.645836,
+    "roe": 26.97,
+    "ocf_cr": 205.05,
+    "debt_to_equity": 24.131,
+    "eps": 15.36,
+    "book_value": 41.957,
+    "div_yield": 0,
+    "pat_cagr": 96.6,
+    "rev_cagr": 43.5,
+    "mcap_3y": 92.3
+  },
+  {
+    "ticker": "RKSWAMY",
+    "name": "R K SWAMY LIMITED",
+    "sector": "Communication Services",
+    "nse_symbol": "RKSWAMY",
+    "buy_avg": 97.49,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending â€” add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ],
+    "mcap_cr": 504.92,
+    "pe": 22.837898,
+    "roe": 8.61,
+    "ocf_cr": 38.42,
+    "debt_to_equity": 16.248,
+    "eps": 4.38,
+    "book_value": 52.376,
+    "div_yield": 153.0,
+    "pat_cagr": 29.5,
+    "rev_cagr": 20.4,
+    "mcap_3y": -61.26
+  },
+  {
+    "ticker": "RATEGAIN",
+    "name": "RateGain Travel Technologies Limited",
+    "sector": "Technology",
+    "nse_symbol": "RATEGAIN",
+    "buy_avg": 724.23,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending â€” add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ],
+    "mcap_cr": 8859.11,
+    "pe": 45.574123,
+    "roe": 10.54,
+    "ocf_cr": 233.71,
+    "debt_to_equity": 47.296,
+    "eps": 16.46,
+    "book_value": 169.847,
+    "div_yield": 0,
+    "pat_cagr": 27.1,
+    "rev_cagr": 174.5,
+    "mcap_3y": 83.01
+  },
+  {
+    "ticker": "GMDCLTD",
+    "name": "Gujarat Mineral Development Corporation Limited",
+    "sector": "Energy",
+    "nse_symbol": "GMDCLTD",
+    "buy_avg": 529.68,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending â€” add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ],
+    "mcap_cr": 19712.82,
+    "pe": 20.62209,
+    "roe": 14.19,
+    "ocf_cr": 743.72,
+    "debt_to_equity": 4.475,
+    "eps": 30.06,
+    "book_value": 222.287,
+    "div_yield": 166.0,
+    "pat_cagr": -14.3,
+    "rev_cagr": -9.2,
+    "mcap_3y": 307.94
+  },
+  {
+    "ticker": "TREL",
+    "name": "Transindia Real Estate Limited",
+    "sector": "Real Estate",
+    "nse_symbol": "TREL",
+    "buy_avg": 26.43,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending â€” add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ],
+    "mcap_cr": 628.24,
+    "pe": 15.98125,
+    "roe": 3.12,
+    "ocf_cr": 43.26,
+    "debt_to_equity": null,
+    "eps": 1.6,
+    "book_value": 51.495,
+    "div_yield": 0,
+    "pat_cagr": -69.6,
+    "rev_cagr": 5.1,
+    "mcap_3y": -28.53
+  },
+  {
+    "ticker": "EIMCOELECO",
+    "name": "Eimco Elecon (India) Limited",
+    "sector": "Industrials",
+    "nse_symbol": "EIMCOELECO",
+    "buy_avg": 1823.31,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending â€” add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ],
+    "mcap_cr": 911.69,
+    "pe": 23.533352,
+    "roe": 8.61,
+    "ocf_cr": 22.11,
+    "debt_to_equity": 0.93,
+    "eps": 67.16,
+    "book_value": 810.252,
+    "div_yield": 26.0,
+    "pat_cagr": -57.2,
+    "rev_cagr": 4.0,
+    "mcap_3y": 142.88
+  },
+  {
+    "ticker": "BLUEJET",
+    "name": "Blue Jet Healthcare Limited",
+    "sector": "Healthcare",
+    "nse_symbol": "BLUEJET",
+    "buy_avg": 550.05,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending â€” add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ],
+    "mcap_cr": 7965.53,
+    "pe": 32.13436,
+    "roe": 19.88,
+    "ocf_cr": 334.15,
+    "debt_to_equity": 3.102,
+    "eps": 14.29,
+    "book_value": 78.411,
+    "div_yield": 27.0,
+    "pat_cagr": -41.5,
+    "rev_cagr": -31.1,
+    "mcap_3y": 11.49
+  },
+  {
+    "ticker": "SHREEJISPG",
+    "name": "SHREEJI SHIPPING GLOBAL L",
+    "sector": "Industrials",
+    "nse_symbol": "SHREEJISPG",
+    "buy_avg": 267.98,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending â€” add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ],
+    "mcap_cr": 7590.36,
+    "pe": 47.833675,
+    "roe": 29.87,
+    "ocf_cr": 190.99,
+    "debt_to_equity": 36.166,
+    "eps": 9.74,
+    "book_value": 46.464,
+    "div_yield": 44.0,
+    "pat_cagr": -26.2,
+    "rev_cagr": 20.5,
+    "mcap_3y": 83.09
+  },
+  {
+    "ticker": "NETWEB",
+    "name": "Netweb Technologies India Limited",
+    "sector": "Technology",
+    "nse_symbol": "NETWEB",
+    "buy_avg": 3066.43,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending â€” add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ],
+    "mcap_cr": 24412.18,
+    "pe": 118.27034,
+    "roe": 32.83,
+    "ocf_cr": 171.49,
+    "debt_to_equity": 39.019,
+    "eps": 36.25,
+    "book_value": 127.358,
+    "div_yield": 6.0,
+    "pat_cagr": 64.3,
+    "rev_cagr": 86.6,
+    "mcap_3y": 371.91
+  },
+  {
+    "ticker": "RAMCOSYS",
+    "name": "Ramco Systems Limited",
+    "sector": "Technology",
+    "nse_symbol": "RAMCOSYS",
+    "buy_avg": 458.8,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending â€” add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ],
+    "mcap_cr": 2092.11,
+    "pe": 49.92377,
+    "roe": 12.49,
+    "ocf_cr": 134.45,
+    "debt_to_equity": 12.101,
+    "eps": 11.15,
+    "book_value": 93.055,
+    "div_yield": 0,
+    "pat_cagr": 361.6,
+    "rev_cagr": 19.4,
+    "mcap_3y": 153.54
+  },
+  {
+    "ticker": "STALLION",
+    "name": "STALLION IND FLUOROCHEM L",
+    "sector": "Basic Materials",
+    "nse_symbol": "STALLION",
+    "buy_avg": 182.99,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending â€” add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ],
+    "mcap_cr": 2182.41,
+    "pe": 35.20599,
+    "roe": 8.93,
+    "ocf_cr": 39.36,
+    "debt_to_equity": 5.066,
+    "eps": 5.34,
+    "book_value": 39.532,
+    "div_yield": 0,
+    "pat_cagr": -24.4,
+    "rev_cagr": -27.4,
+    "mcap_3y": 49.21
+  },
+  {
+    "ticker": "RPTECH",
+    "name": "Rashi Peripherals Limited",
+    "sector": "Technology",
+    "nse_symbol": "RPTECH",
+    "buy_avg": 331.82,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending â€” add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ],
+    "mcap_cr": 3634.7,
+    "pe": 13.383887,
+    "roe": 14.94,
+    "ocf_cr": 113.69,
+    "debt_to_equity": 48.65,
+    "eps": 41.21,
+    "book_value": 281.475,
+    "div_yield": 37.0,
+    "pat_cagr": 60.6,
+    "rev_cagr": 51.0,
+    "mcap_3y": 73.19
+  },
+  {
+    "ticker": "SIGNPOST",
+    "name": "Signpost India Limited",
+    "sector": "Communication Services",
+    "nse_symbol": "SIGNPOST",
+    "buy_avg": 264.23,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending â€” add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ],
+    "mcap_cr": 1428.99,
+    "pe": 20.3308,
+    "roe": 27.3,
+    "ocf_cr": 22.04,
+    "debt_to_equity": 69.752,
+    "eps": 13.15,
+    "book_value": 47.101,
+    "div_yield": 19.0,
+    "pat_cagr": 2094.4,
+    "rev_cagr": 47.4,
+    "mcap_3y": -17.81
+  },
+  {
+    "ticker": "BOROSCI",
+    "name": "Borosil Scientific Limited",
+    "sector": "Consumer Cyclical",
+    "nse_symbol": "BOROSCI",
+    "buy_avg": 137.08,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending â€” add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ],
+    "mcap_cr": 1344.97,
+    "pe": 38.871468,
+    "roe": 8.17,
+    "ocf_cr": 43.27,
+    "debt_to_equity": 1.955,
+    "eps": 3.89,
+    "book_value": 49.629,
+    "div_yield": 0,
+    "pat_cagr": 212.2,
+    "rev_cagr": 10.6,
+    "mcap_3y": -3.5
+  },
+  {
+    "ticker": "MAPMYINDIA",
+    "name": "C. E. Info Systems Limited",
+    "sector": "Technology",
+    "nse_symbol": "MAPMYINDIA",
+    "buy_avg": 1165.79,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending â€” add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ],
+    "mcap_cr": 4621.56,
+    "pe": 34.48917,
+    "roe": 15.8,
+    "ocf_cr": 93.33,
+    "debt_to_equity": 0.778,
+    "eps": 24.47,
+    "book_value": 165.411,
+    "div_yield": 42.0,
+    "pat_cagr": 4.5,
+    "rev_cagr": 1.0,
+    "mcap_3y": -20.07
+  },
+  {
+    "ticker": "YATHARTH",
+    "name": "Yatharth Hospital & Trauma Care Services Limited",
+    "sector": "Healthcare",
+    "nse_symbol": "YATHARTH",
+    "buy_avg": 820.32,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending â€” add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ],
+    "mcap_cr": 8019.57,
+    "pe": 45.680573,
+    "roe": 9.89,
+    "ocf_cr": 204.52,
+    "debt_to_equity": 14.614,
+    "eps": 18.22,
+    "book_value": 175.254,
+    "div_yield": 0,
+    "pat_cagr": 12.9,
+    "rev_cagr": 44.2,
+    "mcap_3y": 149.3
+  },
+  {
+    "ticker": "FRACTAL",
+    "name": "FRACTAL ANALYTICS LIMITED",
+    "sector": "Technology",
+    "nse_symbol": "FRACTAL",
+    "buy_avg": 934.45,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending â€” add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ],
+    "mcap_cr": 16451.9,
+    "pe": 55.686844,
+    "roe": 11.58,
+    "ocf_cr": 409.0,
+    "debt_to_equity": 13.131,
+    "eps": 17.18,
+    "book_value": 191.148,
+    "div_yield": 0,
+    "pat_cagr": 106.4,
+    "rev_cagr": 17.0,
+    "mcap_3y": 12.93
+  },
+  {
+    "ticker": "PROTEAN",
+    "name": "Protean eGov Technologies Limited",
+    "sector": "Technology",
+    "nse_symbol": "PROTEAN",
+    "buy_avg": 729.68,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending â€” add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ],
+    "mcap_cr": 2439.64,
+    "pe": 24.317814,
+    "roe": 9.69,
+    "ocf_cr": 78.47,
+    "debt_to_equity": 8.121,
+    "eps": 24.7,
+    "book_value": 250.839,
+    "div_yield": 168.0,
+    "pat_cagr": 49.1,
+    "rev_cagr": 38.4,
+    "mcap_3y": -58.67
+  },
+  {
+    "ticker": "UNIVCABLES",
+    "name": "Universal Cables Limited",
+    "sector": "Industrials",
+    "nse_symbol": "UNIVCABLES",
+    "buy_avg": 702.63,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending â€” add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ],
+    "mcap_cr": 4188.08,
+    "pe": 25.666595,
+    "roe": 8.91,
+    "ocf_cr": 63.48,
+    "debt_to_equity": 62.258,
+    "eps": 47.03,
+    "book_value": 539.263,
+    "div_yield": 35.0,
+    "pat_cagr": 11.3,
+    "rev_cagr": 24.7,
+    "mcap_3y": 204.85
+  },
+  {
+    "ticker": "RAYMOND",
+    "name": "Raymond Limited",
+    "sector": "Industrials",
+    "nse_symbol": "RAYMOND",
+    "buy_avg": 527.58,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending â€” add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ],
+    "mcap_cr": 3454.02,
+    "pe": 102.77227,
+    "roe": 1.47,
+    "ocf_cr": 41.77,
+    "debt_to_equity": 33.836,
+    "eps": 5.05,
+    "book_value": 427.855,
+    "div_yield": 0,
+    "pat_cagr": -99.1,
+    "rev_cagr": 0,
+    "mcap_3y": -66.31
+  },
+  {
+    "ticker": "GRAPHITE",
+    "name": "Graphite India Limited",
+    "sector": "Industrials",
+    "nse_symbol": "GRAPHITE",
+    "buy_avg": 579.24,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending â€” add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ],
+    "mcap_cr": 13072.58,
+    "pe": 74.8434,
+    "roe": 2.92,
+    "ocf_cr": 82.0,
+    "debt_to_equity": 6.267,
+    "eps": 8.94,
+    "book_value": 298.785,
+    "div_yield": 164.0,
+    "pat_cagr": 0,
+    "rev_cagr": 22.5,
+    "mcap_3y": 104.04
+  },
+  {
+    "ticker": "URBANCO",
+    "name": "Urban Company Limited",
+    "sector": "Technology",
+    "nse_symbol": "URBANCO",
+    "buy_avg": 134.11,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending â€” add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ],
+    "mcap_cr": 17619.28,
+    "pe": null,
+    "roe": -11.92,
+    "ocf_cr": -98.63,
+    "debt_to_equity": 6.335,
+    "eps": -1.58,
+    "book_value": 15.271,
+    "div_yield": 0,
+    "pat_cagr": 0,
+    "rev_cagr": 42.4,
+    "mcap_3y": -27.77
+  },
+  {
+    "ticker": "GMRAIRPORT",
+    "name": "GMR Airports Limited",
+    "sector": "Industrials",
+    "nse_symbol": "GMRAIRPORT",
+    "buy_avg": 97.19,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending â€” add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ],
+    "mcap_cr": 107553.73,
+    "pe": 783.5385,
+    "roe": 0,
+    "ocf_cr": 4883.53,
+    "debt_to_equity": null,
+    "eps": 0.13,
+    "book_value": -2.378,
+    "div_yield": 0,
+    "pat_cagr": 0,
+    "rev_cagr": 37.5,
+    "mcap_3y": 126.36
+  },
+  {
+    "ticker": "LAXMIDENTL",
+    "name": "LAXMI DENTAL LIMITED",
+    "sector": "Healthcare",
+    "nse_symbol": "LAXMIDENTL",
+    "buy_avg": 209.26,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending â€” add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ],
+    "mcap_cr": 1221.04,
+    "pe": 42.23574,
+    "roe": 12.77,
+    "ocf_cr": -5.0,
+    "debt_to_equity": 5.329,
+    "eps": 5.26,
+    "book_value": 42.722,
+    "div_yield": 0,
+    "pat_cagr": 137.9,
+    "rev_cagr": 21.9,
+    "mcap_3y": -59.65
+  },
+  {
+    "ticker": "BIOCON",
+    "name": "Biocon Limited",
+    "sector": "Healthcare",
+    "nse_symbol": "BIOCON",
+    "buy_avg": 387.23,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending â€” add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ],
+    "mcap_cr": 67185.26,
+    "pe": 147.10994,
+    "roe": 1.15,
+    "ocf_cr": 1994.0,
+    "debt_to_equity": 42.145,
+    "eps": 2.82,
+    "book_value": 213.543,
+    "div_yield": 12.0,
+    "pat_cagr": -72.5,
+    "rev_cagr": 2.3,
+    "mcap_3y": 70.74
+  },
+  {
+    "ticker": "ANURAS",
+    "name": "Anupam Rasayan India Ltd",
+    "sector": "Basic Materials",
+    "nse_symbol": "ANURAS",
+    "buy_avg": 1099.4,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending â€” add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ],
+    "mcap_cr": 14754.74,
+    "pe": 84.375,
+    "roe": 5.76,
+    "ocf_cr": 334.33,
+    "debt_to_equity": 40.335,
+    "eps": 15.36,
+    "book_value": 293.12,
+    "div_yield": 12.0,
+    "pat_cagr": -7.6,
+    "rev_cagr": 27.5,
+    "mcap_3y": 11.1
+  },
+  {
+    "ticker": "SHILPAMED",
+    "name": "Shilpa Medicare Limited",
+    "sector": "Healthcare",
+    "nse_symbol": "SHILPAMED",
+    "buy_avg": 333.15,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending â€” add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ],
+    "mcap_cr": 10737.44,
+    "pe": 44.060993,
+    "roe": 9.82,
+    "ocf_cr": 342.18,
+    "debt_to_equity": 25.465,
+    "eps": 12.46,
+    "book_value": 132.457,
+    "div_yield": 9.0,
+    "pat_cagr": 644.6,
+    "rev_cagr": 31.5,
+    "mcap_3y": 332.64
+  },
+  {
+    "ticker": "KIRLPNU",
+    "name": "Kirloskar Pneumatic Company Limited",
+    "sector": "Industrials",
+    "nse_symbol": "KIRLPNU",
+    "buy_avg": 1526.68,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending â€” add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ],
+    "mcap_cr": 10773.32,
+    "pe": 42.061882,
+    "roe": 21.47,
+    "ocf_cr": 232.7,
+    "debt_to_equity": 0.262,
+    "eps": 39.43,
+    "book_value": 192.27,
+    "div_yield": 63.0,
+    "pat_cagr": 79.7,
+    "rev_cagr": 20.3,
+    "mcap_3y": 191.22
+  },
+  {
+    "ticker": "PTC",
+    "name": "PTC India Limited",
+    "sector": "Utilities",
+    "nse_symbol": "PTC",
+    "buy_avg": 160.5,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending â€” add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ],
+    "mcap_cr": 5591.3,
+    "pe": 9.232161,
+    "roe": 10.38,
+    "ocf_cr": 2817.0,
+    "debt_to_equity": 25.059,
+    "eps": 20.46,
+    "book_value": 202.122,
+    "div_yield": 761.0,
+    "pat_cagr": -70.0,
+    "rev_cagr": 28.9,
+    "mcap_3y": 141.66
+  },
+  {
+    "ticker": "LANDMARK",
+    "name": "Landmark Cars Limited",
+    "sector": "Consumer Cyclical",
+    "nse_symbol": "LANDMARK",
+    "buy_avg": 576.82,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending â€” add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ],
+    "mcap_cr": 1715.4,
+    "pe": 46.0178,
+    "roe": 6.66,
+    "ocf_cr": 267.47,
+    "debt_to_equity": 173.699,
+    "eps": 8.99,
+    "book_value": 141.119,
+    "div_yield": 12.0,
+    "pat_cagr": 967.5,
+    "rev_cagr": 17.2,
+    "mcap_3y": -37.71
+  },
+  {
+    "ticker": "CMSINFO",
+    "name": "CMS Info Systems Limited",
+    "sector": "Industrials",
+    "nse_symbol": "CMSINFO",
+    "buy_avg": 374.48,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending â€” add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ],
+    "mcap_cr": 4804.12,
+    "pe": 15.980284,
+    "roe": 12.91,
+    "ocf_cr": 389.59,
+    "debt_to_equity": 9.102,
+    "eps": 18.26,
+    "book_value": 147.983,
+    "div_yield": 184.0,
+    "pat_cagr": -18.1,
+    "rev_cagr": 2.2,
+    "mcap_3y": -1.58
+  },
+  {
+    "ticker": "DIFFNKG",
+    "name": "DIFFUSION ENGINEERS LTD",
+    "sector": "Industrials",
+    "nse_symbol": "DIFFNKG",
+    "buy_avg": 311.35,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending â€” add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ],
+    "mcap_cr": 1225.35,
+    "pe": 24.375923,
+    "roe": 13.01,
+    "ocf_cr": 22.79,
+    "debt_to_equity": 7.057,
+    "eps": 13.54,
+    "book_value": 108.707,
+    "div_yield": 46.0,
+    "pat_cagr": 22.9,
+    "rev_cagr": 38.2,
+    "mcap_3y": 63.23
+  },
+  {
+    "ticker": "MOSCHIP",
+    "name": "MOSCHIP TECHNOLOGIES LTD",
+    "sector": "Technology",
+    "nse_symbol": "MOSCHIP",
+    "buy_avg": 173.53,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending â€” add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ],
+    "mcap_cr": 4101.62,
+    "pe": 116.79558,
+    "roe": 9.56,
+    "ocf_cr": 92.8,
+    "debt_to_equity": 21.561,
+    "eps": 1.81,
+    "book_value": 21.084,
+    "div_yield": 0,
+    "pat_cagr": -9.8,
+    "rev_cagr": 13.7,
+    "mcap_3y": 6.37
+  },
+  {
+    "ticker": "GULFOILLUB",
+    "name": "Gulf Oil Lubricants India Limited",
+    "sector": "Basic Materials",
+    "nse_symbol": "GULFOILLUB",
+    "buy_avg": 1220.91,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending â€” add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ],
+    "mcap_cr": 4512.71,
+    "pe": 12.458646,
+    "roe": 22.14,
+    "ocf_cr": 349.65,
+    "debt_to_equity": 35.781,
+    "eps": 73.15,
+    "book_value": 311.026,
+    "div_yield": 467.0,
+    "pat_cagr": -2.7,
+    "rev_cagr": 12.2,
+    "mcap_3y": 146.45
+  },
+  {
+    "ticker": "DATAPATTNS",
+    "name": "Data Patterns (India) Limited",
+    "sector": "Industrials",
+    "nse_symbol": "DATAPATTNS",
+    "buy_avg": 2134.6,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending â€” add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ],
+    "mcap_cr": 24133.57,
+    "pe": 88.9742,
+    "roe": 16.73,
+    "ocf_cr": 80.15,
+    "debt_to_equity": 0.304,
+    "eps": 48.45,
+    "book_value": 309.986,
+    "div_yield": 19.0,
+    "pat_cagr": 21.2,
+    "rev_cagr": -13.0,
+    "mcap_3y": 170.5
+  },
+  {
+    "ticker": "CYIENTDLM",
+    "name": "Cyient DLM Limited",
+    "sector": "Technology",
+    "nse_symbol": "CYIENTDLM",
+    "buy_avg": 451.6,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending â€” add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ],
+    "mcap_cr": 3480.92,
+    "pe": 47.518963,
+    "roe": 7.47,
+    "ocf_cr": 53.9,
+    "debt_to_equity": 17.021,
+    "eps": 9.23,
+    "book_value": 127.635,
+    "div_yield": 0,
+    "pat_cagr": -27.5,
+    "rev_cagr": -13.8,
+    "mcap_3y": 4.28
+  },
+  {
+    "ticker": "MMP",
+    "name": "MMP Industries Limited",
+    "sector": "Basic Materials",
+    "nse_symbol": "MMP",
+    "buy_avg": 275.75,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending â€” add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ],
+    "mcap_cr": 661.61,
+    "pe": 21.313421,
+    "roe": 9.26,
+    "ocf_cr": 53.29,
+    "debt_to_equity": 53.253,
+    "eps": 12.22,
+    "book_value": 136.344,
+    "div_yield": 77.0,
+    "pat_cagr": 65.6,
+    "rev_cagr": 11.9,
+    "mcap_3y": 42.7
+  },
+  {
+    "ticker": "BBL",
+    "name": "Bharat Bijlee Limited",
+    "sector": "Industrials",
+    "nse_symbol": "BBL",
+    "buy_avg": 3125.67,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending â€” add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ],
+    "mcap_cr": 3206.24,
+    "pe": 26.720045,
+    "roe": 6.05,
+    "ocf_cr": -92.5,
+    "debt_to_equity": 15.116,
+    "eps": 106.16,
+    "book_value": 1794.368,
+    "div_yield": 125.0,
+    "pat_cagr": -21.9,
+    "rev_cagr": 25.5,
+    "mcap_3y": 101.43
+  },
+  {
+    "ticker": "CESC",
+    "name": "CESC Limited",
+    "sector": "Utilities",
+    "nse_symbol": "CESC",
+    "buy_avg": 181.04,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending â€” add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ],
+    "mcap_cr": 22852.83,
+    "pe": 14.823731,
+    "roe": 12.55,
+    "ocf_cr": 4057.0,
+    "debt_to_equity": 164.311,
+    "eps": 11.63,
+    "book_value": 94.474,
+    "div_yield": 344.0,
+    "pat_cagr": 17.8,
+    "rev_cagr": 5.6,
+    "mcap_3y": 163.76
+  },
+  {
+    "ticker": "OMINFRAL",
+    "name": "Om Infra Limited",
+    "sector": "Industrials",
+    "nse_symbol": "OMINFRAL",
+    "buy_avg": 126.22,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending â€” add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ],
+    "mcap_cr": 785.74,
+    "pe": 38.852383,
+    "roe": 2.57,
+    "ocf_cr": -4.33,
+    "debt_to_equity": 10.595,
+    "eps": 2.1,
+    "book_value": 74.045,
+    "div_yield": 48.0,
+    "pat_cagr": -52.5,
+    "rev_cagr": -6.9,
+    "mcap_3y": 102.1
+  },
+  {
+    "ticker": "WHIRLPOOL",
+    "name": "Whirlpool of India Limited",
+    "sector": "Consumer Cyclical",
+    "nse_symbol": "WHIRLPOOL",
+    "buy_avg": 1205.77,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending â€” add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ],
+    "mcap_cr": 9911.84,
+    "pe": 33.73434,
+    "roe": 7.25,
+    "ocf_cr": 297.94,
+    "debt_to_equity": 8.621,
+    "eps": 23.15,
+    "book_value": 643.454,
+    "div_yield": 64.0,
+    "pat_cagr": -32.8,
+    "rev_cagr": 8.8,
+    "mcap_3y": -42.15
+  },
+  {
+    "ticker": "PITTIENG",
+    "name": "Pitti Engineering Limited",
+    "sector": "Industrials",
+    "nse_symbol": "PITTIENG",
+    "buy_avg": 988.13,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending â€” add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ],
+    "mcap_cr": 3343.82,
+    "pe": 28.476894,
+    "roe": 12.5,
+    "ocf_cr": 204.91,
+    "debt_to_equity": 82.134,
+    "eps": 31.81,
+    "book_value": 267.367,
+    "div_yield": 16.0,
+    "pat_cagr": -25.0,
+    "rev_cagr": 6.9,
+    "mcap_3y": 157.29
+  },
+  {
+    "ticker": "RAYMONDREL",
+    "name": "Raymond Realty Limited",
+    "sector": "Real Estate",
+    "nse_symbol": "RAYMONDREL",
+    "buy_avg": 619.5,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending â€” add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ],
+    "mcap_cr": 3863.31,
+    "pe": 12.755439,
+    "roe": 37.72,
+    "ocf_cr": -909.96,
+    "debt_to_equity": 64.676,
+    "eps": 45.51,
+    "book_value": 201.664,
+    "div_yield": 35.0,
+    "pat_cagr": 65.7,
+    "rev_cagr": 888.2,
+    "mcap_3y": -40.11
+  },
+  {
+    "ticker": "NIITLTD",
+    "name": "NIIT Limited",
+    "sector": "Consumer Defensive",
+    "nse_symbol": "NIITLTD",
+    "buy_avg": 94.74,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending â€” add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ],
+    "mcap_cr": 1277.8,
+    "pe": 234.0,
+    "roe": 0.57,
+    "ocf_cr": 7.0,
+    "debt_to_equity": 0.65,
+    "eps": 0.4,
+    "book_value": 77.497,
+    "div_yield": 107.0,
+    "pat_cagr": 0,
+    "rev_cagr": 25.5,
+    "mcap_3y": -74.49
+  },
+  {
+    "ticker": "RUSTOMJEE",
+    "name": "Keystone Realtors Limited",
+    "sector": "Real Estate",
+    "nse_symbol": "RUSTOMJEE",
+    "buy_avg": 430.98,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending â€” add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ],
+    "mcap_cr": 4829.83,
+    "pe": 61.610306,
+    "roe": 0,
+    "ocf_cr": 0.0,
+    "debt_to_equity": 43.367,
+    "eps": 6.21,
+    "book_value": 222.239,
+    "div_yield": 36.0,
+    "pat_cagr": -77.1,
+    "rev_cagr": -42.6,
+    "mcap_3y": -17.56
+  },
+  {
+    "ticker": "INTERARCH",
+    "name": "Interarch Building Solutions Limited",
+    "sector": "Industrials",
+    "nse_symbol": "INTERARCH",
+    "buy_avg": 1963.23,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending â€” add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ],
+    "mcap_cr": 2870.17,
+    "pe": 21.415342,
+    "roe": 0,
+    "ocf_cr": 0.0,
+    "debt_to_equity": 1.401,
+    "eps": 79.91,
+    "book_value": 477.316,
+    "div_yield": 71.0,
+    "pat_cagr": 31.6,
+    "rev_cagr": 43.7,
+    "mcap_3y": 43.99
+  },
+  {
+    "ticker": "CAPACITE",
+    "name": "Capacit'e Infraprojects Limited",
+    "sector": "Industrials",
+    "nse_symbol": "CAPACITE",
+    "buy_avg": 278.55,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending â€” add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ],
+    "mcap_cr": 1839.29,
+    "pe": 9.598234,
+    "roe": 10.63,
+    "ocf_cr": 223.3,
+    "debt_to_equity": 25.274,
+    "eps": 22.65,
+    "book_value": 215.282,
+    "div_yield": 0,
+    "pat_cagr": -16.1,
+    "rev_cagr": 6.0,
+    "mcap_3y": 27.69
+  },
+  {
+    "ticker": "RAILTEL",
+    "name": "RailTel Corporation of India Limited",
+    "sector": "Communication Services",
+    "nse_symbol": "RAILTEL",
+    "buy_avg": 292.7,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending â€” add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ],
+    "mcap_cr": 9894.53,
+    "pe": 31.141415,
+    "roe": 16.25,
+    "ocf_cr": 316.45,
+    "debt_to_equity": 2.817,
+    "eps": 9.9,
+    "book_value": 70.521,
+    "div_yield": 127.0,
+    "pat_cagr": 25.3,
+    "rev_cagr": 27.6,
+    "mcap_3y": 165.01
+  },
+  {
+    "ticker": "AFFLE",
+    "name": "Affle 3i Limited",
+    "sector": "Communication Services",
+    "nse_symbol": "AFFLE",
+    "buy_avg": 975.8,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending â€” add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ],
+    "mcap_cr": 20682.61,
+    "pe": 45.501236,
+    "roe": 13.79,
+    "ocf_cr": 502.35,
+    "debt_to_equity": 0.405,
+    "eps": 32.32,
+    "book_value": 260.056,
+    "div_yield": 0,
+    "pat_cagr": 15.7,
+    "rev_cagr": 20.3,
+    "mcap_3y": 61.39
+  },
+  {
+    "ticker": "SKFINDIA",
+    "name": "SKF India Limited",
+    "sector": "Industrials",
+    "nse_symbol": "SKFINDIA",
+    "buy_avg": 1722.96,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending â€” add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ],
+    "mcap_cr": 7924.91,
+    "pe": 29.751299,
+    "roe": 13.54,
+    "ocf_cr": 362.84,
+    "debt_to_equity": 0.219,
+    "eps": 53.88,
+    "book_value": 268.909,
+    "div_yield": 249.0,
+    "pat_cagr": 0,
+    "rev_cagr": -51.0,
+    "mcap_3y": -62.18
+  },
+  {
+    "ticker": "TEJASNET",
+    "name": "Tejas Networks Limited",
+    "sector": "Technology",
+    "nse_symbol": "TEJASNET",
+    "buy_avg": 369.7,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending â€” add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ],
+    "mcap_cr": 9365.4,
+    "pe": null,
+    "roe": -26.82,
+    "ocf_cr": 135.17,
+    "debt_to_equity": 142.52,
+    "eps": -51.37,
+    "book_value": 165.03,
+    "div_yield": 46.0,
+    "pat_cagr": 0,
+    "rev_cagr": -82.6,
+    "mcap_3y": -18.53
+  },
+  {
+    "ticker": "VSTTILLERS",
+    "name": "V.S.T. Tillers Tractors Limited",
+    "sector": "Industrials",
+    "nse_symbol": "VSTTILLERS",
+    "buy_avg": 5480.0,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending â€” add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ],
+    "mcap_cr": 3989.01,
+    "pe": 38.220028,
+    "roe": 9.99,
+    "ocf_cr": 131.61,
+    "debt_to_equity": 0.175,
+    "eps": 120.62,
+    "book_value": 1222.373,
+    "div_yield": 43.0,
+    "pat_cagr": -79.2,
+    "rev_cagr": 9.0,
+    "mcap_3y": 69.98
+  },
+  {
+    "ticker": "ASALCBR",
+    "name": "Associated Alcohols & Breweries Limited",
+    "sector": "Consumer Defensive",
+    "nse_symbol": "ASALCBR",
+    "buy_avg": 1023.34,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending â€” add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ],
+    "mcap_cr": 1646.49,
+    "pe": 17.845484,
+    "roe": 14.56,
+    "ocf_cr": 51.77,
+    "debt_to_equity": 9.922,
+    "eps": 45.95,
+    "book_value": 364.385,
+    "div_yield": 24.0,
+    "pat_cagr": 4.9,
+    "rev_cagr": -1.6,
+    "mcap_3y": 130.13
+  },
+  {
+    "ticker": "GREAVESCOT",
+    "name": "Greaves Cotton Limited",
+    "sector": "Industrials",
+    "nse_symbol": "GREAVESCOT",
+    "buy_avg": 174.16,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending â€” add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ],
+    "mcap_cr": 4442.38,
+    "pe": 41.820175,
+    "roe": 0,
+    "ocf_cr": 0.0,
+    "debt_to_equity": 12.328,
+    "eps": 4.56,
+    "book_value": 61.57,
+    "div_yield": 152.0,
+    "pat_cagr": 22.5,
+    "rev_cagr": 16.6,
+    "mcap_3y": 27.44
+  },
+  {
+    "ticker": "ELDEHSG",
+    "name": "Eldeco Housing and Industries Limited",
+    "sector": "Real Estate",
+    "nse_symbol": "ELDEHSG",
+    "buy_avg": 855.63,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending â€” add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ],
+    "mcap_cr": 766.78,
+    "pe": 31.609241,
+    "roe": 6.2,
+    "ocf_cr": 104.11,
+    "debt_to_equity": 38.581,
+    "eps": 24.67,
+    "book_value": 406.471,
+    "div_yield": 117.0,
+    "pat_cagr": 50.0,
+    "rev_cagr": 63.7,
+    "mcap_3y": 30.87
+  },
+  {
+    "ticker": "ARIS",
+    "name": "Arisinfra Solutions Limited",
+    "sector": "Industrials",
+    "nse_symbol": "ARIS",
+    "buy_avg": 158.81,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending â€” add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ],
+    "mcap_cr": 929.63,
+    "pe": 16.647144,
+    "roe": 12.22,
+    "ocf_cr": 141.99,
+    "debt_to_equity": 9.356,
+    "eps": 6.83,
+    "book_value": 91.429,
+    "div_yield": 0,
+    "pat_cagr": 0,
+    "rev_cagr": 55.3,
+    "mcap_3y": -34.8
+  },
+  {
+    "ticker": "QUESS",
+    "name": "Quess Corp Limited",
+    "sector": "Industrials",
+    "nse_symbol": "QUESS",
+    "buy_avg": 238.76,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending â€” add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ],
+    "mcap_cr": 3575.59,
+    "pe": 16.123905,
+    "roe": 19.71,
+    "ocf_cr": 230.06,
+    "debt_to_equity": 10.656,
+    "eps": 14.85,
+    "book_value": 78.207,
+    "div_yield": 424.0,
+    "pat_cagr": 0,
+    "rev_cagr": 0,
+    "mcap_3y": -33.7
+  },
+  {
+    "ticker": "AVALON",
+    "name": "Avalon Technologies Limited",
+    "sector": "Technology",
+    "nse_symbol": "AVALON",
+    "buy_avg": 1395.0,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending â€” add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ],
+    "mcap_cr": 11058.04,
+    "pe": 98.26112,
+    "roe": 16.94,
+    "ocf_cr": 57.19,
+    "debt_to_equity": 29.503,
+    "eps": 16.85,
+    "book_value": 108.034,
+    "div_yield": 0,
+    "pat_cagr": 69.0,
+    "rev_cagr": 40.0,
+    "mcap_3y": 311.56
+  },
+  {
+    "ticker": "GIPCL",
+    "name": "Gujarat Industries Power Company Limited",
+    "sector": "Utilities",
+    "nse_symbol": "GIPCL",
+    "buy_avg": 166.1,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending â€” add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ],
+    "mcap_cr": 2570.38,
+    "pe": 6.3888893,
+    "roe": 0,
+    "ocf_cr": 0.0,
+    "debt_to_equity": 93.592,
+    "eps": 25.92,
+    "book_value": 247.441,
+    "div_yield": 250.0,
+    "pat_cagr": 358.2,
+    "rev_cagr": 26.6,
+    "mcap_3y": 82.88
+  },
+  {
+    "ticker": "TVSELECT",
+    "name": "TVS Electronics Limited",
+    "sector": "Technology",
+    "nse_symbol": "TVSELECT",
+    "buy_avg": 369.45,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending â€” add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ],
+    "mcap_cr": 860.08,
+    "pe": 672.05884,
+    "roe": 1.33,
+    "ocf_cr": 5.67,
+    "debt_to_equity": 55.935,
+    "eps": 0.68,
+    "book_value": 51.51,
+    "div_yield": 0,
+    "pat_cagr": 0,
+    "rev_cagr": 2.5,
+    "mcap_3y": 21.97
+  },
+  {
+    "ticker": "AEROENTER",
+    "name": "Aeroflex Enterprises Limited",
+    "sector": "Basic Materials",
+    "nse_symbol": "AEROENTER",
+    "buy_avg": 108.55,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending â€” add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ],
+    "mcap_cr": 1174.39,
+    "pe": 18.283451,
+    "roe": 9.56,
+    "ocf_cr": 18.3,
+    "debt_to_equity": 4.218,
+    "eps": 5.68,
+    "book_value": 72.947,
+    "div_yield": 30.0,
+    "pat_cagr": 29.3,
+    "rev_cagr": 16.0,
+    "mcap_3y": 39.07
+  },
+  {
+    "ticker": "EMBDL",
+    "name": "Embassy Developments Limited",
+    "sector": "Real Estate",
+    "nse_symbol": "EMBDL",
+    "buy_avg": 67.59,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending â€” add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ],
+    "mcap_cr": 8016.32,
+    "pe": null,
+    "roe": -9.05,
+    "ocf_cr": 44.48,
+    "debt_to_equity": 53.414,
+    "eps": -6.43,
+    "book_value": 71.012,
+    "div_yield": 0,
+    "pat_cagr": 0,
+    "rev_cagr": -73.0,
+    "mcap_3y": 5.53
+  },
+  {
+    "ticker": "TATACOMM",
+    "name": "Tata Communications Limited",
+    "sector": "Communication Services",
+    "nse_symbol": "TATACOMM",
+    "buy_avg": 1154.83,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending â€” add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ],
+    "mcap_cr": 56059.5,
+    "pe": 53.75786,
+    "roe": 31.13,
+    "ocf_cr": 4479.1,
+    "debt_to_equity": 335.485,
+    "eps": 36.59,
+    "book_value": 99.875,
+    "div_yield": 92.0,
+    "pat_cagr": -74.7,
+    "rev_cagr": 9.4,
+    "mcap_3y": 67.21
+  },
+  {
+    "ticker": "UNIECOM",
+    "name": "UNICOMMERCE ESOLUTIONS L",
+    "sector": "Technology",
+    "nse_symbol": "UNIECOM",
+    "buy_avg": 379.94,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending â€” add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ],
+    "mcap_cr": 936.12,
+    "pe": 46.797756,
+    "roe": 15.55,
+    "ocf_cr": 47.0,
+    "debt_to_equity": 4.907,
+    "eps": 1.78,
+    "book_value": 16.459,
+    "div_yield": 0,
+    "pat_cagr": -1.7,
+    "rev_cagr": 16.6,
+    "mcap_3y": -60.35
+  },
+  {
+    "ticker": "SUVEN",
+    "name": "Suven Life Sciences Limited",
+    "sector": "Healthcare",
+    "nse_symbol": "SUVEN",
+    "buy_avg": 80.54,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending â€” add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ],
+    "mcap_cr": 6653.67,
+    "pe": null,
+    "roe": -78.8,
+    "ocf_cr": -301.79,
+    "debt_to_equity": 2.823,
+    "eps": -12.12,
+    "book_value": 26.201,
+    "div_yield": 0,
+    "pat_cagr": 0,
+    "rev_cagr": 3.6,
+    "mcap_3y": 338.78
+  },
+  {
+    "ticker": "MAFANG",
+    "name": "Mirae Asset NYSE FANG+ETF",
+    "sector": "Pending",
+    "nse_symbol": "MAFANG",
+    "buy_avg": 50.33,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending â€” add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "NH",
+    "name": "Narayana Hrudayalaya Limited",
+    "sector": "Healthcare",
+    "nse_symbol": "NH",
+    "buy_avg": 497.01,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending â€” add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "ABLBL",
+    "name": "ADITYA BIRLA LIFES BRAN L",
+    "sector": "Consumer Cyclical",
+    "nse_symbol": "ABLBL",
+    "buy_avg": 51.86,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "BOROLTD",
+    "name": "Borosil Limited",
+    "sector": "Consumer Cyclical",
+    "nse_symbol": "BOROLTD",
+    "buy_avg": 111.28,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "KPITTECH",
+    "name": "KPIT Technologies Limited",
+    "sector": "Technology",
+    "nse_symbol": "KPITTECH",
+    "buy_avg": 1526.5,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "MSTCLTD",
+    "name": "MSTC Limited",
+    "sector": "Industrials",
+    "nse_symbol": "MSTCLTD",
+    "buy_avg": 262.0,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "ORIENTHOT",
+    "name": "Oriental Hotels Limited",
+    "sector": "Consumer Cyclical",
+    "nse_symbol": "ORIENTHOT",
+    "buy_avg": 25.25,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "REDINGTON",
+    "name": "Redington Limited",
+    "sector": "Technology",
+    "nse_symbol": "REDINGTON",
+    "buy_avg": 142.65,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "USHAMART",
+    "name": "Usha Martin Limited",
+    "sector": "Basic Materials",
+    "nse_symbol": "USHAMART",
+    "buy_avg": 53.6,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "VIYASH",
+    "name": "Viyash Scientific Limited",
+    "sector": "Healthcare",
+    "nse_symbol": "VIYASH",
+    "buy_avg": 165.85,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "WOCKPHARMA",
+    "name": "Wockhardt Limited",
+    "sector": "Healthcare",
+    "nse_symbol": "WOCKPHARMA",
+    "buy_avg": 415.9,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "AMBER",
+    "name": "Amber Enterprises India Limited",
+    "sector": "Consumer Cyclical",
+    "nse_symbol": "AMBER",
+    "buy_avg": 6635.5,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "EIHOTEL",
+    "name": "EIH Limited",
+    "sector": "Consumer Cyclical",
+    "nse_symbol": "EIHOTEL",
+    "buy_avg": 394.42,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "IFGLEXPOR",
+    "name": "IFGL Refractories Limited",
+    "sector": "Basic Materials",
+    "nse_symbol": "IFGLEXPOR",
+    "buy_avg": 198.2,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "HLEGLAS",
+    "name": "HLE Glascoat Limited",
+    "sector": "Industrials",
+    "nse_symbol": "HLEGLAS",
+    "buy_avg": 353.03,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "KAMDHENU",
+    "name": "Kamdhenu Limited",
+    "sector": "Basic Materials",
+    "nse_symbol": "KAMDHENU",
+    "buy_avg": 27.17,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "GAUDIUMIVF",
+    "name": "GAUDIUM IVF N WOMEN H L",
+    "sector": "Healthcare",
+    "nse_symbol": "GAUDIUMIVF",
+    "buy_avg": 116.0,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "LAKSELEC",
+    "name": "Lakshmi Electrical Control Systems Limited",
+    "sector": "Industrials",
+    "nse_symbol": "LAKSELEC",
+    "buy_avg": 588.9,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "MON100",
+    "name": "Motilal Oswal NASDAQ 100 ETF",
+    "sector": "Pending",
+    "nse_symbol": "MON100",
+    "buy_avg": 119.7,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "FREDUN",
+    "name": "Fredun Pharmaceuticals Limited",
+    "sector": "Healthcare",
+    "nse_symbol": "FREDUN",
+    "buy_avg": 1395.0,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "ECOSMOBLTY",
+    "name": "ECOS (INDIA) MOB & HOSP L",
+    "sector": "Industrials",
+    "nse_symbol": "ECOSMOBLTY",
+    "buy_avg": 139.03,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "SHANKARA",
+    "name": "Shankara Building Products Limited",
+    "sector": "Consumer Cyclical",
+    "nse_symbol": "SHANKARA",
+    "buy_avg": 136.74,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "DEEDEV",
+    "name": "DEE DEVELOPMENT ENG LTD",
+    "sector": "Industrials",
+    "nse_symbol": "DEEDEV",
+    "buy_avg": 261.86,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "MODISONLTD",
+    "name": "Modison Limited",
+    "sector": "Industrials",
+    "nse_symbol": "MODISONLTD",
+    "buy_avg": 171.27,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "INCAP",
+    "name": "Incap Limited",
+    "sector": "Technology",
+    "nse_symbol": "INCAP",
+    "buy_avg": 41.79,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "VASCONEQ",
+    "name": "Vascon Engineers Limited",
+    "sector": "Industrials",
+    "nse_symbol": "VASCONEQ",
+    "buy_avg": 66.21,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  }
+]
