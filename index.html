@@ -1440,7 +1440,7 @@ function renderCard(s) {
     <div class="card-title-group">
       <div class="card-ticker">${esc(s.ticker)}</div>
       <div style="display: flex; align-items: center; gap: 8px; flex: 1; min-width: 0;">
-        <div class="card-name clickable metric-click" data-metric="conviction" data-ticker="${s.ticker}" data-name="${s.name}" title="${esc(s.name)} — Click for Analysis" style="cursor:pointer">${esc(s.name || '—')}</div>
+        <div class="card-name clickable metric-click" data-metric="fundamental" data-ticker="${s.ticker}" data-name="${s.name}" title="${esc(s.name)} — Click for full Fundamental Analysis (Claude / ChatGPT / DeepSeek)" style="cursor:pointer">${esc(s.name || '—')}</div>
         <span style="color:var(--text3);font-size:11px;white-space:nowrap;flex-shrink:0;">
           🔗 <span class="catalyst-link" data-ticker="${s.ticker}" data-name="${s.name}" style="cursor:pointer;color:var(--purple-text);font-weight:700;text-decoration:underline dotted;" title="Catalyst analysis — pick Claude / ChatGPT / DeepSeek">Catalysts 🔍</span>
         </span>
@@ -1600,7 +1600,7 @@ function renderCard(s) {
   ${pending ? `<div class="card-body"><p class="moat-text" style="color:var(--amber-text)">Analysis pending. Add fundamental details to stocks.json for this ticker.</p></div>` : `
   <div class="card-body">
     ${s.moat ? `<div>
-      <div class="section-label">Economic Moat</div>
+      <div class="section-label">Economic Moat <span class="metric-click" data-metric="moat" data-ticker="${s.ticker}" data-name="${s.name}" style="cursor:pointer;color:var(--blue-text);margin-left:3px;" title="Search Economic Moat — Claude / ChatGPT / DeepSeek">🔍</span></div>
       <div class="moat-text">${esc(s.moat)}</div>
     </div>` : ''}
 
@@ -1622,22 +1622,22 @@ function renderCard(s) {
 
     <div class="two-col">
       ${s.leadership ? `<div>
-        <div class="section-label">Market Leadership</div>
+        <div class="section-label">Market Leadership <span class="metric-click" data-metric="leadership" data-ticker="${s.ticker}" data-name="${s.name}" style="cursor:pointer;color:var(--blue-text);margin-left:3px;" title="Search Market Leadership — Claude / ChatGPT / DeepSeek">🔍</span></div>
         <div class="moat-text">${esc(s.leadership)}</div>
       </div>` : ''}
       ${s.non_rep ? `<div>
-        <div class="section-label">Non-Replicable Edge</div>
+        <div class="section-label">Non-Replicable Edge <span class="metric-click" data-metric="non_rep" data-ticker="${s.ticker}" data-name="${s.name}" style="cursor:pointer;color:var(--blue-text);margin-left:3px;" title="Search Non-Replicable Edge — Claude / ChatGPT / DeepSeek">🔍</span></div>
         <div class="moat-text">${esc(s.non_rep)}</div>
       </div>` : ''}
     </div>
 
     ${s.tailwinds && s.tailwinds.length ? `<div>
-      <div class="section-label">Tailwinds</div>
+      <div class="section-label">Tailwinds <span class="metric-click" data-metric="tailwinds" data-ticker="${s.ticker}" data-name="${s.name}" style="cursor:pointer;color:var(--blue-text);margin-left:3px;" title="Search Tailwinds — Claude / ChatGPT / DeepSeek">🔍</span></div>
       <div class="pill-row">${pills(s.tailwinds, 'green')}</div>
     </div>` : ''}
 
     ${s.risks && s.risks.length ? `<div>
-      <div class="section-label">Risks</div>
+      <div class="section-label">Risks <span class="metric-click" data-metric="risks" data-ticker="${s.ticker}" data-name="${s.name}" style="cursor:pointer;color:var(--blue-text);margin-left:3px;" title="Search Risks — Claude / ChatGPT / DeepSeek">🔍</span></div>
       <div class="pill-row">${pills(s.risks, 'red')}</div>
     </div>` : ''}
 
@@ -2452,7 +2452,214 @@ Technical: 52W High ₹${fmt(s.week52_high,2)} | 52W Low ₹${fmt(s.week52_low,2
 
   const prompts = {
     conviction: `# 🎯 CONVICTION SCORE — ${companyName} (${ticker})\n\n${snap}\n\nAnalyze: Business Quality (/30), Financial Strength (/25), Growth (/20), Valuation (/15), Management (/10). Output CONVICTION SCORE /100 with top 3 drivers and killers.`,
-    moat: `# 🛡️ ECONOMIC MOAT — ${companyName} (${ticker})\n\n${snap}\n\nEvaluate ALL 7 moat types: IP/Patents, Brand, Regulatory/Licences, Switching Costs, Network Effects, Cost Advantage, Efficient Scale. For each: YES/NO/PARTIAL + evidence + durability. Output: MOAT WIDTH (Wide/Narrow/None), PRIMARY MOAT, BIGGEST THREAT.`,
+    moat: `# 🛡️ ECONOMIC MOAT — ${companyName} (${ticker})
+
+${deepSnap}
+
+Dashboard's current moat note (verify independently): "${(s.moat || '—')}"
+
+You are an institutional equity analyst. Rigorously evaluate the ECONOMIC MOAT (durable competitive advantage) of ${companyName}. No fabrication — use annual reports, investor presentations, BSE/NSE filings, industry reports, reputed press; mark unverifiable points "NV".
+
+Evaluate ALL 7 moat sources — for each give YES / PARTIAL / NO + evidence + durability:
+1. Intangibles — patents / IP / trade secrets
+2. Brand — pricing power, recall, trust
+3. Regulatory — licences, approvals, certifications, quotas
+4. Switching costs — cost/effort/risk for a customer to leave
+5. Network effects — value rises with users/ecosystem
+6. Cost advantage — scale, process, location, captive inputs
+7. Efficient scale — rational oligopoly / niche too small for new entrants
+
+Output:
+- MOAT WIDTH: WIDE / NARROW / NONE — with reasoning
+- PRIMARY moat source and how durable (years)
+- Is the moat WIDENING / STABLE / ERODING + evidence
+- BIGGEST single threat to the moat`,
+    leadership: `# 🏆 MARKET LEADERSHIP — ${companyName} (${ticker})
+
+${deepSnap}
+
+Dashboard's current note (verify independently): "${(s.leadership || '—')}"
+
+You are an institutional equity analyst. Assess the MARKET LEADERSHIP position of ${companyName}. No fabrication — use annual reports, investor presentations, industry/IBEF reports, BSE/NSE filings, reputed press; mark unverifiable points "NV".
+
+Analyse:
+1. Market share (value & volume) per key segment + rank (#1/#2/...), and the 5-year trend (gaining/stable/losing)
+2. Size of the addressable market (TAM/SAM) and headroom to grow
+3. Pricing power — does it lead or follow on price?
+4. Distribution / scale / capacity advantages vs peers
+5. Customer / OEM relationships, wallet share, stickiness
+6. Threats to leadership (new entrants, imports, disruption, regulation)
+
+Output:
+- LEADERSHIP TIER: DOMINANT LEADER / STRONG #1-2 / CHALLENGER / FRAGMENTED-NICHE
+- 3 evidences for the tier (with sources)
+- Biggest threat to the position
+- Is leadership DURABLE over 5-10 years — Yes / Partial / No + why`,
+    non_rep: `# 🧬 NON-REPLICABLE EDGE — ${companyName} (${ticker})
+
+${deepSnap}
+
+Dashboard's current note (verify independently): "${(s.non_rep || '—')}"
+
+You are a forensic business analyst. Identify what (if anything) makes ${companyName} genuinely HARD TO REPLICATE — an edge a well-funded competitor could NOT easily copy within 3-5 years. No fabrication; cite sources; mark "NV" if unverifiable.
+
+For each candidate edge, classify TRULY NON-REPLICABLE / HARD / REPLICABLE-WITH-TIME-&-CAPITAL / NOT-AN-EDGE with evidence:
+- Proprietary tech / patents / trade secrets / process know-how
+- Regulatory approvals, licences, certifications, accreditations
+- Backward/forward integration, captive assets, locational advantage
+- Data / network effects / ecosystem lock-in
+- Brand trust built over decades
+- Scale economics / position on the cost curve
+- Talent / R&D depth / institutional knowledge
+
+Output:
+- THE single most durable edge (if any) and why it can't be copied
+- How long the edge realistically lasts
+- What could erode it
+- VERDICT: STRONG DURABLE EDGE / MODERATE / WEAK / NONE`,
+    tailwinds: `# 🌬️ STRUCTURAL TAILWINDS — ${companyName} (${ticker})
+
+${deepSnap}
+
+Dashboard's current tailwinds (verify independently): ${Array.isArray(s.tailwinds) && s.tailwinds.length ? '"' + s.tailwinds.join('; ') + '"' : '—'}
+
+You are a sector strategist. Identify and stress-test the multi-year (3-10 yr) STRUCTURAL TAILWINDS for ${companyName}. No fabrication — cite credible sources (industry/IBEF/government policy, company filings, reputed press); mark "NV" if unverifiable. Separate genuine structural tailwinds from cyclical/temporary boosts.
+
+For each tailwind:
+- What it is + the demand/policy/structural driver
+- Magnitude & duration (how big, how long)
+- How directly ${companyName} captures it (High/Medium/Low) + why
+- The key risk that could neutralise it
+
+Also list 2-3 HEADWINDS for balance.
+
+Output:
+- Top 3 tailwinds ranked by impact
+- Net structural setup: STRONG TAILWIND / MILD TAILWIND / NEUTRAL / HEADWIND-DOMINATED
+- The one tailwind most likely to be mis-priced by the market`,
+    risks: `# ⚠️ KEY RISKS — ${companyName} (${ticker})
+
+${deepSnap}
+
+Dashboard's current risks (verify independently): ${Array.isArray(s.risks) && s.risks.length ? '"' + s.risks.join('; ') + '"' : '—'}
+
+You are a risk-focused buy-side analyst. Protect the downside — identify and rank what could PERMANENTLY impair capital or earnings power for ${companyName} over 3-5 years. No fabrication; cite credible sources; mark "NV" if unverifiable. Stay sceptical even if the numbers look strong.
+
+Cover: business/demand, competition/disruption, customer/supplier concentration, regulatory/policy, governance/promoter/related-party, balance-sheet/leverage/liquidity, accounting/earnings-quality, FX/commodity, execution/capex, ESG/litigation.
+
+For each material risk:
+- Description + evidence (source)
+- Likelihood (Low/Med/High) and Impact (Low/Med/High)
+- Early-warning signal to monitor
+- Mitigant (if any)
+
+Output:
+- RISK HEAT TABLE (risk | likelihood | impact)
+- Top 3 risks that matter most
+- The single biggest red flag
+- Overall risk level: LOW / MODERATE / HIGH / SEVERE`,
+    fundamental: `# Fundamental Analysis Prompt (Claude with HTML Artifact) — ${companyName} (${ticker})
+
+${deepSnap}
+
+## Variables
+- STOCK_NAME: ${companyName}
+- TICKER: ${ticker}
+- INVESTMENT_HORIZON: 3 Years
+
+---
+
+## Prompt
+
+━━━
+
+CRITICAL OPERATING RULES
+
+1. No forward-looking statements. No "this stock should...", "expected to...", or any language implying future performance. All analysis is based on verified historical data only.
+2. Every metric MUST cite its source. If not found → write DATA UNAVAILABLE. Never estimate or fill in numbers.
+3. Never fabricate financial data. Always attempt live web search first. If unavailable, state clearly: "Live data unavailable. Figures below are from training data and may be outdated. Verify independently before investing."
+4. No buy/sell/target price. Ever. You give a VIEW. The user decides.
+5. Execute all steps in exact order. Do not skip or merge.
+6. RENDERING RULE — THIS IS THE MOST IMPORTANT RULE:
+   After completing all analysis, output the ENTIRE result as a single self-contained HTML artifact.
+   No plain markdown. No code blocks. No triple backticks wrapping the HTML.
+   Output raw HTML directly. It must render as an interactive widget in Claude's artifact panel.
+   The HTML must have NO DOCTYPE, NO <html>, NO <head>, NO <body> tags.
+   Start directly with <style> followed by <div>.
+   Tab 2 (View) must be the active visible tab when the widget first loads.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+STEP 1 — STOCK IDENTIFICATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+**1. Which stock?** ${companyName} (${ticker})
+**2. Investment horizon?** 3 Years
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+STEP 2 — SILENT RESEARCH (never show this to user)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Silently fetch and cross-check all of the following via web search before generating any output. Minimum 2 sources per data point. Never reveal this step.
+Sources in priority order: NSE India → BSE India → Screener.in → Tickertape → Moneycontrol → Annual Reports → Earnings Call Transcripts → Tijori Finance.
+Checklist: Live CMP, 52W high/low, market cap, face value; P/E, P/B, EV/EBITDA (current + sector avg + own 5-yr avg); Revenue/Net Profit/EPS CAGR (3 & 5 yr); EBITDA & net margin 5-yr trend; EPS last 8 quarters YoY; FCF 3-5 yr; D/E 5-yr trend; Interest Coverage; Current Ratio; ROE & ROCE (current + 3-yr + 5-yr avg); dividend history & payout; promoter holding (8-12 quarters); promoter pledging (flag if >10%); FII/DII trend (8 quarters); competitive moat; sector tailwinds/headwinds (5-10 yr); regulatory risks; management guidance vs delivery & governance flags; latest concall commentary; 3 closest peers (P/E, P/B, ROE, Rev Growth, D/E); top 5 recent long-term-relevant news.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+STEP 3 — VALUATION ASSESSMENT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+3A — Compare current P/E, P/B, EV/EBITDA vs sector average and own 5-year average.
+3B — Per metric signal: CHEAP / FAIR / EXPENSIVE.
+3C — Overall: UNDERVALUED / FAIRLY VALUED / OVERVALUED / MIXED.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+STEP 4 — GROWTH ASSESSMENT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Assess revenue, net profit, EPS, margin trends. Classify: ACCELERATING / STEADY / SLOWING / DECLINING.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+STEP 5 — FINANCIAL HEALTH ASSESSMENT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+- D/E <1 SAFE · 1-2 MODERATE · >2 LEVERAGED
+- Interest Coverage >3x HEALTHY · 1.5-3x WATCH · <1.5 RISK
+- Current Ratio >1.5 COMFORTABLE · 1-1.5 WATCH · <1 RISK
+- FCF positive & growing STRONG · positive flat STABLE · negative CONCERN
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+STEP 6 — RETURN QUALITY ASSESSMENT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+- ROE >15% GOOD · 10-15% AVERAGE · <10% WEAK
+- ROCE >15% GOOD · 10-15% AVERAGE · <10% WEAK
+- Assess dividend consistency & payout sustainability.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+STEP 7 — FORWARD PROJECTION (3 Years, from historical CAGR only)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Build 3 scenarios — Bear (growth slows, margins compress), Base (current trajectory), Bull (growth picks up, margins expand). These are historical-trend projections, not guarantees.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+STEP 8 — PEER COMPARISON
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Identify 3 closest competitors. Compare on P/E, P/B, ROE, Revenue Growth, D/E. Classify: LEADING / MID-PACK / LAGGING.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+STEP 9 — OWNERSHIP ASSESSMENT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Promoter trend: BUYING / STABLE / SELLING. FII trend & DII trend: INCREASING / STABLE / DECREASING. Pledging: flag if >10%.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+STEP 10 — FUNDAMENTAL VIEW (3 Years)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Combine Steps 3-9: one-sentence summary; 3 strengths; 2 risks/watch points; 1 thing to track; Overall fundamental quality: STRONG / MODERATE / WEAK. This is a VIEW, not a buy/sell call.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+STEP 11 — DATA CONFIDENCE RATING
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Count metrics from live named sources vs DATA UNAVAILABLE: 9-10 live = HIGH · 6-8 = MODERATE · <6 = LOW (warn user) · 0 = VERY LOW.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+STEP 12 — RENDERING SPECIFICATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Output the complete result as a single raw HTML artifact (no markdown, no code blocks, no triple backticks; no DOCTYPE/<html>/<head>/<body>). Start with <style> then <div class="wrap">.
+8 tabs in this exact order: Tab 0 Snapshot · Tab 1 Valuation · Tab 2 Growth · Tab 3 Health · Tab 4 Returns · Tab 5 Peers · Tab 6 Ownership · Tab 7 View (← DEFAULT ACTIVE TAB ON LOAD). Build clean tab CSS + JS so tabs switch on click. Replace every [PLACEHOLDER] with real researched data; flag any missing metric inline as: 🚩 DATA UNAVAILABLE — verify at [source URL].`,
     pe: `# 📊 P/E ANALYSIS — ${companyName} (${ticker})\n\nCurrent P/E: ${fmt(s.pe,1)} | EPS: ₹${fmt(s.eps,2)}\n\nCompare to: 1) Own 5-year avg 2) Sector median 3) Nifty 50. Assess earnings quality. Output: UNDERVALUED/FAIR/OVERVALUED with reasoning.`,
     roe: `# 📈 ROE ANALYSIS — ${companyName} (${ticker})\n\nROE: ${fmt(s.roe,1)}% | ROA: ${fmt(s.roa,1)}% | ROCE: ${fmt(s.roce,1)}% | D/E: ${fmt(s.debt_to_equity,2)}\n\nDuPont breakdown (Margin × Turnover × Leverage). Is high ROE from profitability or leverage? 5-year trend. Output: EXCELLENT/GOOD/AVERAGE/WEAK.`,
     de: `# 💳 DEBT ANALYSIS — ${companyName} (${ticker})\n\nD/E: ${fmt(s.debt_to_equity,2)}\n\nAnalyze: Total debt structure, Net Debt/EBITDA, Interest Coverage, 5-year trend. What's debt used for? Output: SAFE/MODERATE/LEVERAGED/STRESSED.`,
