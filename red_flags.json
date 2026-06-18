@@ -1,0 +1,4682 @@
+{
+  "_meta": {
+    "description": "Forensic Red-Flag scan per holding. Follows the dashboard Red Flags prompt: 4 categories scored /10 where 10 = clean (no concerns) and 0-3 = serious/multiple red flags. Overall = weighted average (Accounting 30%, Governance 30%, Financial 20%, Business 20%). Grounded in reported financials (OCF vs profit, receivables, debt/EBITDA, FCF, dilution), curated governance/risk flags, and public filings. NOT investment advice.",
+    "score_meaning": "Higher = cleaner / fewer red flags. Lower = more or more-severe red flags.",
+    "verdict_scale": "CLEAN >= 8.0 | MINOR 6.5-7.9 | MODERATE 5.0-6.4 | SERIOUS < 5.0",
+    "weights": {
+      "accounting": 0.3,
+      "governance": 0.3,
+      "financial": 0.2,
+      "business": 0.2
+    },
+    "updated": "2026-06-18"
+  },
+  "NH": {
+    "score": 7.8,
+    "verdict": "MINOR",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 8,
+        "reason": "Profit converts well to operating cash; healthy margins."
+      },
+      "governance": {
+        "score": 8,
+        "reason": "Reputable founder-led board (Dr Devi Shetty); clean disclosures."
+      },
+      "financial": {
+        "score": 8,
+        "reason": "Low debt, strong free cash flow."
+      },
+      "business": {
+        "score": 7,
+        "reason": "Overseas (Cayman) operations add some complexity; bed concentration."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Overseas (Cayman) operations add structural complexity"
+    ],
+    "summary": "Clean forensic profile: strong cash conversion, low debt and reputable governance; only minor complexity from overseas operations.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "HCG": {
+    "score": 5.8,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 6,
+        "reason": "History of thin/negative profitability; goodwill from acquisitions."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "PE-controlled (KKR/Aceso) with repeated capital raises."
+      },
+      "financial": {
+        "score": 5,
+        "reason": "Elevated leverage; weak return ratios."
+      },
+      "business": {
+        "score": 6,
+        "reason": "Oncology concentration; intense competition."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "PE control with history of losses and capital raises",
+      "Elevated leverage and weak returns"
+    ],
+    "summary": "Moderate red flags: PE-controlled oncology chain with a loss history, elevated leverage and weak returns; no accounting fraud signals.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "SYRMA": {
+    "score": 6.3,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 6,
+        "reason": "Working-capital- and inventory-heavy EMS; receivables grow with scale."
+      },
+      "governance": {
+        "score": 7,
+        "reason": "Promoter-led (Tandon family); reasonable disclosures."
+      },
+      "financial": {
+        "score": 6,
+        "reason": "Post-IPO equity raises; margin pressure."
+      },
+      "business": {
+        "score": 6,
+        "reason": "Customer concentration typical of EMS."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Working-capital-intensive EMS",
+      "Post-IPO equity raises / margin pressure"
+    ],
+    "summary": "Moderate: structurally working-capital-heavy EMS with margin pressure and equity raises; governance is reasonable.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "POWERINDIA": {
+    "score": 7.6,
+    "verdict": "MINOR",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 8,
+        "reason": "Clean MNC accounting; strong cash generation."
+      },
+      "governance": {
+        "score": 8,
+        "reason": "Hitachi Energy parent; MNC-grade governance."
+      },
+      "financial": {
+        "score": 7,
+        "reason": "Low debt; project working capital."
+      },
+      "business": {
+        "score": 7,
+        "reason": "Related-party dependence on parent; rich valuation."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Related-party dependence on Hitachi parent",
+      "Premium valuation"
+    ],
+    "summary": "Clean: MNC-grade governance and accounting; only watch-items are parent related-party reliance and a rich valuation.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "MTARTECH": {
+    "score": 5.8,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 6,
+        "reason": "Receivables and inventory build-up; margin volatility."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Post-IPO promoter/PE selling."
+      },
+      "financial": {
+        "score": 6,
+        "reason": "Working-capital intensity."
+      },
+      "business": {
+        "score": 5,
+        "reason": "Very high customer concentration (Bloom Energy)."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "High customer concentration (Bloom Energy)",
+      "Post-IPO promoter/PE selling",
+      "Receivables/inventory build-up"
+    ],
+    "summary": "Moderate red flags: heavy single-customer (Bloom Energy) concentration, working-capital build-up and post-IPO promoter selling.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "DEEDEV": {
+    "score": 5.8,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 6,
+        "reason": "Working-capital-heavy piping/EPC; receivables."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Promoter-led; short listed history."
+      },
+      "financial": {
+        "score": 5,
+        "reason": "High working capital and debt; capex."
+      },
+      "business": {
+        "score": 6,
+        "reason": "Lumpy project revenue."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Working-capital and debt intensity",
+      "Short post-IPO track record"
+    ],
+    "summary": "Moderate: working-capital- and debt-heavy piping business with a short listed history; no specific governance scandals.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "ASTRAMICRO": {
+    "score": 6.3,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 6,
+        "reason": "Government/DRDO receivables; lumpy revenue recognition."
+      },
+      "governance": {
+        "score": 7,
+        "reason": "Promoter-led; standard defence-sector governance."
+      },
+      "financial": {
+        "score": 6,
+        "reason": "Receivables-driven working capital."
+      },
+      "business": {
+        "score": 6,
+        "reason": "Defence concentration; order lumpiness."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Lumpy defence/DRDO order flow and receivables"
+    ],
+    "summary": "Moderate: lumpy defence order book and government receivables; governance is standard.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "ASTERDM": {
+    "score": 6.7,
+    "verdict": "MINOR",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 7,
+        "reason": "Cleaner post-GCC-divestment accounts; large special dividend."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Past related-party/structuring complexity (Moopen family entities)."
+      },
+      "financial": {
+        "score": 7,
+        "reason": "Deleveraged after GCC business sale."
+      },
+      "business": {
+        "score": 7,
+        "reason": "India-focused post-restructuring; execution to prove."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Past related-party/structuring complexity",
+      "Integration after GCC divestment"
+    ],
+    "summary": "Minor: materially deleveraged after the GCC sale; legacy related-party/structuring complexity is the main historical flag.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "NEPHROPLUS": {
+    "score": 6.0,
+    "verdict": "MODERATE",
+    "confidence": "Low",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 6,
+        "reason": "Capital-intensive dialysis roll-up; goodwill."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "PE-backed ownership."
+      },
+      "financial": {
+        "score": 6,
+        "reason": "Expansion capex and leverage."
+      },
+      "business": {
+        "score": 6,
+        "reason": "Payor/scheme dependence."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "PE-backed, capital-intensive dialysis roll-up"
+    ],
+    "summary": "Moderate: capital-intensive, PE-backed dialysis network; standard roll-up risks, limited public disclosure.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "NEULANDLAB": {
+    "score": 7.3,
+    "verdict": "MINOR",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 7,
+        "reason": "Good profit-to-cash conversion; CDMO milestone lumpiness."
+      },
+      "governance": {
+        "score": 8,
+        "reason": "Founder-family (Davuluri) led; clean governance reputation."
+      },
+      "financial": {
+        "score": 7,
+        "reason": "Moderate, reducing debt."
+      },
+      "business": {
+        "score": 7,
+        "reason": "Customer/molecule concentration in CDMO."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "CDMO revenue lumpiness / milestone timing"
+    ],
+    "summary": "Clean-ish: well-governed CDMO with good cash conversion; main watch-item is inherent CDMO lumpiness.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "AVANTEL": {
+    "score": 5.8,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 6,
+        "reason": "Lumpy revenue recognition; receivables."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Promoter-led small-cap."
+      },
+      "financial": {
+        "score": 6,
+        "reason": "Working-capital intensity."
+      },
+      "business": {
+        "score": 5,
+        "reason": "Small-cap defence/satcom concentration."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Small-cap defence concentration; lumpy orders"
+    ],
+    "summary": "Moderate: small-cap defence/satcom with lumpy orders and receivables; no fraud signals.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "SOUTHWEST": {
+    "score": 5.0,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 5,
+        "reason": "Lumpy project accounting; small-cap disclosure."
+      },
+      "governance": {
+        "score": 5,
+        "reason": "Small-cap promoter governance."
+      },
+      "financial": {
+        "score": 5,
+        "reason": "Working-capital and execution risk."
+      },
+      "business": {
+        "score": 5,
+        "reason": "Concentrated drilling/exploration services."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Small-cap with lumpy project revenue and limited disclosure"
+    ],
+    "summary": "Moderate: small-cap exploration-services firm with lumpy revenue and limited disclosure depth.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "DLINKINDIA": {
+    "score": 7.0,
+    "verdict": "MINOR",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 7,
+        "reason": "Clean distribution accounts; manageable receivables."
+      },
+      "governance": {
+        "score": 7,
+        "reason": "Associated with D-Link parent; reasonable governance."
+      },
+      "financial": {
+        "score": 8,
+        "reason": "Debt-free, dividend-paying."
+      },
+      "business": {
+        "score": 6,
+        "reason": "Thin-margin distribution; competition."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Thin-margin distribution; competition"
+    ],
+    "summary": "Minor: debt-free, clean networking distributor; main watch-item is structurally thin distribution margins.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "TRIVENI": {
+    "score": 7.1,
+    "verdict": "MINOR",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 7,
+        "reason": "Reasonable cash conversion across sugar/engineering."
+      },
+      "governance": {
+        "score": 8,
+        "reason": "Sawhney family; reputable governance."
+      },
+      "financial": {
+        "score": 7,
+        "reason": "Moderate leverage; cyclical."
+      },
+      "business": {
+        "score": 6,
+        "reason": "Sugar-sector regulation and cyclicality."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Sugar-sector regulatory/cyclical exposure"
+    ],
+    "summary": "Minor: reputable promoter and sound accounting; sugar regulation/cyclicality is the main business flag.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "GALAPREC": {
+    "score": 6.0,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 6,
+        "reason": "Short listed-company accounting history."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Promoter-led; recent IPO."
+      },
+      "financial": {
+        "score": 6,
+        "reason": "Capex and working capital."
+      },
+      "business": {
+        "score": 6,
+        "reason": "Small-cap precision components."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Short post-IPO history; small-cap"
+    ],
+    "summary": "Moderate: small recent-IPO precision-components maker; limited track record is the main flag.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "MODISONLTD": {
+    "score": 6.0,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 6,
+        "reason": "Silver-price-linked inventory/margin swings."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Promoter-led small-cap."
+      },
+      "financial": {
+        "score": 6,
+        "reason": "Moderate leverage."
+      },
+      "business": {
+        "score": 6,
+        "reason": "Silver/commodity linkage."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Silver price linkage; small-cap"
+    ],
+    "summary": "Moderate: small electrical-contacts maker exposed to silver-price swings; governance standard.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "HAPPYFORGE": {
+    "score": 7.0,
+    "verdict": "MINOR",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 7,
+        "reason": "Good cash conversion; clean accounts."
+      },
+      "governance": {
+        "score": 7,
+        "reason": "Garg family promoter; reasonable disclosures."
+      },
+      "financial": {
+        "score": 8,
+        "reason": "Low debt, strong balance sheet."
+      },
+      "business": {
+        "score": 6,
+        "reason": "CV/tractor customer concentration."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "CV/auto customer concentration"
+    ],
+    "summary": "Minor: low-debt, well-run forgings maker; main flag is CV/auto customer concentration.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "NIFTYBEES": {
+    "score": 8.0,
+    "verdict": "N/A (ETF)",
+    "confidence": "High",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 8,
+        "reason": "Passive index ETF ? no company accounting risk."
+      },
+      "governance": {
+        "score": 8,
+        "reason": "Managed by Nippon Life India AMC; strong stewardship."
+      },
+      "financial": {
+        "score": 8,
+        "reason": "Fully-replicating, low tracking error."
+      },
+      "business": {
+        "score": 8,
+        "reason": "Diversified Nifty 50 exposure."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [],
+    "summary": "Not a company red-flag profile ? passive Nifty 50 ETF; reflects AMC operational integrity (high).",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "HBLENGINE": {
+    "score": 6.4,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 6,
+        "reason": "Railway (Kavach) receivables; revenue-recognition timing."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Promoter-led; some related-party history."
+      },
+      "financial": {
+        "score": 7,
+        "reason": "Improved balance sheet; order-book funded."
+      },
+      "business": {
+        "score": 7,
+        "reason": "Strong Kavach order book but government dependence."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Government (Railways) receivables",
+      "Some related-party history"
+    ],
+    "summary": "Moderate: strong Kavach order book offset by government receivables and a degree of related-party history.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "SASKEN": {
+    "score": 6.8,
+    "verdict": "MINOR",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 7,
+        "reason": "Clean accounts; cash-rich."
+      },
+      "governance": {
+        "score": 7,
+        "reason": "Widely held; reasonable governance, buybacks."
+      },
+      "financial": {
+        "score": 8,
+        "reason": "Net cash; no leverage."
+      },
+      "business": {
+        "score": 5,
+        "reason": "Revenue stagnation/decline; client concentration."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Revenue stagnation/decline; client concentration"
+    ],
+    "summary": "Minor: cash-rich, clean balance sheet; the real concern is business erosion (declining revenue), not accounting.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "ENRIN": {
+    "score": 6.0,
+    "verdict": "MODERATE",
+    "confidence": "Low",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 6,
+        "reason": "Source-file identity/data conflict limits confidence."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Identity unclear in source data."
+      },
+      "financial": {
+        "score": 6,
+        "reason": "Indeterminate from conflicting data."
+      },
+      "business": {
+        "score": 6,
+        "reason": "Indeterminate sector from conflicting data."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Source-file identity/data conflict ? verify before relying"
+    ],
+    "summary": "Low confidence: source-file name/description conflict prevents a firm forensic read ? verify the entity.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "ARE&M": {
+    "score": 6.5,
+    "verdict": "MINOR",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 7,
+        "reason": "Reasonable cash conversion; clean accounts."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Past related-party sourcing (Mangal Industries) scrutiny."
+      },
+      "financial": {
+        "score": 7,
+        "reason": "Low debt; dividends."
+      },
+      "business": {
+        "score": 6,
+        "reason": "Lead-acid disruption / EV-transition risk."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Related-party sourcing (Mangal Industries) history",
+      "EV-transition risk to lead-acid"
+    ],
+    "summary": "Moderate: financially sound battery maker; legacy promoter related-party sourcing and EV disruption are the main flags.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "INDUSTOWER": {
+    "score": 5.5,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 5,
+        "reason": "Large Vodafone Idea doubtful receivables and provisioning swings."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Bharti-controlled; reasonable governance."
+      },
+      "financial": {
+        "score": 6,
+        "reason": "High dividend but receivables risk."
+      },
+      "business": {
+        "score": 5,
+        "reason": "Heavy dependence on a financially stressed Vi."
+      }
+    },
+    "critical_flags": [
+      "Large Vodafone Idea receivables / provisioning overhang"
+    ],
+    "amber_flags": [
+      "Customer concentration on a financially stressed tenant (Vi)"
+    ],
+    "summary": "Moderate-to-serious: the dominant red flag is the Vodafone Idea receivables/provisioning overhang and single-customer dependence.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "INDGN": {
+    "score": 6.5,
+    "verdict": "MINOR",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 7,
+        "reason": "Clean accounts; healthy margins."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Post-IPO PE (CA/Brighton) selling."
+      },
+      "financial": {
+        "score": 7,
+        "reason": "Low debt."
+      },
+      "business": {
+        "score": 6,
+        "reason": "Pharma-client concentration."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Post-IPO PE selling",
+      "Client concentration"
+    ],
+    "summary": "Minor: clean, low-debt life-sciences commercialization firm; PE selling and client concentration are the watch-items.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "RIR": {
+    "score": 5.8,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 6,
+        "reason": "Weak post-IPO earnings; margin pressure."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Promoter-led; recent IPO."
+      },
+      "financial": {
+        "score": 5,
+        "reason": "Working-capital intensity; soft profitability."
+      },
+      "business": {
+        "score": 6,
+        "reason": "Instrumentation niche; competition."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Weak post-IPO earnings; margin pressure"
+    ],
+    "summary": "Moderate: instrumentation maker with soft post-IPO earnings and working-capital intensity.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "SCODATUBES": {
+    "score": 5.0,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 5,
+        "reason": "Short listed history; working-capital-heavy."
+      },
+      "governance": {
+        "score": 5,
+        "reason": "Small-cap promoter governance; recent IPO."
+      },
+      "financial": {
+        "score": 5,
+        "reason": "Debt and capex for expansion."
+      },
+      "business": {
+        "score": 5,
+        "reason": "Commodity-linked SS-tubes; cyclical."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "High working-capital/debt; short listed history"
+    ],
+    "summary": "Moderate: small, recently-listed SS-tube maker with debt-funded expansion and limited track record.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "SALZERELEC": {
+    "score": 6.0,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 6,
+        "reason": "Moderate receivables; diversified accounts."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Promoter-led; standard governance."
+      },
+      "financial": {
+        "score": 6,
+        "reason": "Moderate leverage."
+      },
+      "business": {
+        "score": 6,
+        "reason": "Diversified electricals; competition."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Moderate leverage; mid-cap"
+    ],
+    "summary": "Moderate: diversified mid-cap electricals with moderate leverage; no specific governance flags.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "MENONBE": {
+    "score": 6.3,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 7,
+        "reason": "Clean small-cap accounts; cash generative."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Promoter-led; standard governance."
+      },
+      "financial": {
+        "score": 7,
+        "reason": "Low debt; dividends."
+      },
+      "business": {
+        "score": 5,
+        "reason": "Auto/2W concentration; EV-transition risk."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Auto/2W concentration; EV-transition risk"
+    ],
+    "summary": "Moderate: financially clean bearings maker; auto concentration and EV disruption are the key business flags.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "RUBICON": {
+    "score": 6.3,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 7,
+        "reason": "Strong reported growth; clean accounts."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "PE (General Atlantic) post-IPO ownership."
+      },
+      "financial": {
+        "score": 6,
+        "reason": "Moderate leverage."
+      },
+      "business": {
+        "score": 6,
+        "reason": "US-regulatory and customer dependence."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Post-IPO PE ownership",
+      "US-regulatory dependence"
+    ],
+    "summary": "Minor-to-moderate: fast-growing US-focused formulations firm; PE ownership and US-regulatory dependence are the watch-items.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "RKSWAMY": {
+    "score": 5.6,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 6,
+        "reason": "Working-capital-heavy agency receivables."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Promoter-led; recent IPO."
+      },
+      "financial": {
+        "score": 5,
+        "reason": "Weak post-IPO numbers; WC stress."
+      },
+      "business": {
+        "score": 5,
+        "reason": "Agency model; client churn risk."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Working-capital-heavy agency model",
+      "Weak post-IPO performance"
+    ],
+    "summary": "Moderate: advertising/marketing agency with heavy working capital and weak post-IPO numbers.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "RATEGAIN": {
+    "score": 6.5,
+    "verdict": "MINOR",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 7,
+        "reason": "Clean SaaS accounts; cash-rich."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Acquisitive; some promoter selling."
+      },
+      "financial": {
+        "score": 7,
+        "reason": "Net cash."
+      },
+      "business": {
+        "score": 6,
+        "reason": "Travel-cycle and client concentration."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Acquisitive strategy",
+      "Travel-cycle and client concentration"
+    ],
+    "summary": "Minor: cash-rich travel-SaaS; acquisitions and travel-cycle/client concentration are the main flags.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "GMDCLTD": {
+    "score": 6.0,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 6,
+        "reason": "PSU accounting; lignite asset base."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Gujarat-government PSU; board constraints."
+      },
+      "financial": {
+        "score": 7,
+        "reason": "Cash-rich; high dividends."
+      },
+      "business": {
+        "score": 5,
+        "reason": "Lignite sunset; limited growth."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Lignite-asset sunset",
+      "PSU governance constraints"
+    ],
+    "summary": "Moderate: cash-rich mining PSU; lignite sunset and PSU governance are the structural flags.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "TREL": {
+    "score": 5.3,
+    "verdict": "MODERATE",
+    "confidence": "Low",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 6,
+        "reason": "Demerged-entity accounting; source-file conflict."
+      },
+      "governance": {
+        "score": 5,
+        "reason": "Demerger complexity; identity conflict in data."
+      },
+      "financial": {
+        "score": 5,
+        "reason": "Real-estate working-capital intensity."
+      },
+      "business": {
+        "score": 5,
+        "reason": "Lumpy real-estate revenue."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Source-file identity/data conflict",
+      "Demerger structural complexity"
+    ],
+    "summary": "Low confidence: demerged real-estate entity with a source-file identity conflict ? verify before relying.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "EIMCOELECO": {
+    "score": 6.3,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 7,
+        "reason": "Cash-rich; clean small-cap accounts."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Elecon-group related; standard governance."
+      },
+      "financial": {
+        "score": 7,
+        "reason": "Low debt; dividends."
+      },
+      "business": {
+        "score": 5,
+        "reason": "Mining-cycle exposure; small-cap."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Mining-cycle exposure",
+      "Group-related dealings"
+    ],
+    "summary": "Moderate: cash-rich mining-equipment maker; cyclicality and group relationships are the watch-items.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "BLUEJET": {
+    "score": 6.5,
+    "verdict": "MINOR",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 7,
+        "reason": "Strong margins; clean accounts."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Promoter-led (Arora family); recent IPO."
+      },
+      "financial": {
+        "score": 7,
+        "reason": "Low debt."
+      },
+      "business": {
+        "score": 6,
+        "reason": "High customer concentration."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "High customer concentration"
+    ],
+    "summary": "Minor: high-margin specialty-pharma maker; customer concentration is the principal flag.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "SHREEJISPG": {
+    "score": 5.0,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 5,
+        "reason": "Short listed history; trading-style accounts."
+      },
+      "governance": {
+        "score": 5,
+        "reason": "Promoter-led; recent IPO."
+      },
+      "financial": {
+        "score": 5,
+        "reason": "Cyclical cash flows."
+      },
+      "business": {
+        "score": 5,
+        "reason": "Dry-bulk logistics cyclicality."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Short listed history",
+      "Cyclical shipping/logistics"
+    ],
+    "summary": "Moderate: recently-listed dry-bulk logistics firm with limited track record and cyclical exposure.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "NETWEB": {
+    "score": 6.5,
+    "verdict": "MINOR",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 6,
+        "reason": "Receivables/working-capital growth with scale."
+      },
+      "governance": {
+        "score": 7,
+        "reason": "Promoter-led; reasonable disclosures."
+      },
+      "financial": {
+        "score": 7,
+        "reason": "Low debt."
+      },
+      "business": {
+        "score": 6,
+        "reason": "Government/enterprise concentration."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Receivables/working-capital growth with scale"
+    ],
+    "summary": "Minor-to-moderate: fast-growing HPC-server maker; working-capital growth and customer concentration are the watch-items.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "RAMCOSYS": {
+    "score": 5.1,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 5,
+        "reason": "Capitalised R&D; sustained losses."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Ramco-group governance; standard disclosures."
+      },
+      "financial": {
+        "score": 4,
+        "reason": "Recurring losses, cash burn and dilution."
+      },
+      "business": {
+        "score": 5,
+        "reason": "Revenue decline; competitive ERP/aviation niche."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Sustained losses and cash burn",
+      "Revenue decline"
+    ],
+    "summary": "Moderate: loss-making software firm with cash burn and revenue decline; capitalised R&D is an accounting watch-item.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "STALLION": {
+    "score": 5.0,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 5,
+        "reason": "Short listed history; trading-model receivables/inventory."
+      },
+      "governance": {
+        "score": 5,
+        "reason": "Promoter-led; recent IPO."
+      },
+      "financial": {
+        "score": 5,
+        "reason": "Working-capital intensity."
+      },
+      "business": {
+        "score": 5,
+        "reason": "Refrigerant-gas trading; regulatory/price risk."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Short listed history",
+      "WC-heavy trading model"
+    ],
+    "summary": "Moderate: small recently-listed refrigerant-gas trader; working-capital intensity and short history are the flags.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "RPTECH": {
+    "score": 5.6,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 6,
+        "reason": "Distribution receivables/inventory; thin margins."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Promoter-led; recent IPO."
+      },
+      "financial": {
+        "score": 5,
+        "reason": "High working capital and debt."
+      },
+      "business": {
+        "score": 5,
+        "reason": "Vendor concentration; thin-margin distribution."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Thin-margin distribution",
+      "High working capital/debt",
+      "Vendor concentration"
+    ],
+    "summary": "Moderate: IT-distribution model with thin margins, high working capital and vendor concentration.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "SIGNPOST": {
+    "score": 5.0,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 5,
+        "reason": "Working-capital-heavy OOH receivables."
+      },
+      "governance": {
+        "score": 5,
+        "reason": "Promoter-led; recent IPO."
+      },
+      "financial": {
+        "score": 5,
+        "reason": "Debt and working-capital intensity."
+      },
+      "business": {
+        "score": 5,
+        "reason": "Govt-contract dependence; OOH competition."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Working-capital-intensive OOH",
+      "Government-contract dependence"
+    ],
+    "summary": "Moderate: OOH-advertising firm with heavy working capital and government-contract dependence.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "BOROSCI": {
+    "score": 6.3,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 7,
+        "reason": "Clean labware accounts; reasonable cash."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Kheruka group; standard governance."
+      },
+      "financial": {
+        "score": 6,
+        "reason": "Modest leverage."
+      },
+      "business": {
+        "score": 6,
+        "reason": "Import competition; modest returns."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Import competition",
+      "Modest returns"
+    ],
+    "summary": "Minor: clean scientific-labware maker; import competition and modest returns are the main flags.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "MAPMYINDIA": {
+    "score": 6.9,
+    "verdict": "MINOR",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 7,
+        "reason": "High-margin, cash-generative accounts."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Past related-party investment scrutiny (Gtropy)."
+      },
+      "financial": {
+        "score": 8,
+        "reason": "Net cash; low debt."
+      },
+      "business": {
+        "score": 7,
+        "reason": "Customer concentration; new-age competition."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Related-party investment scrutiny (past)",
+      "Customer concentration"
+    ],
+    "summary": "Minor: cash-rich, high-margin geospatial firm; a past related-party investment drew scrutiny and customer concentration remains.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "YATHARTH": {
+    "score": 6.0,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 6,
+        "reason": "Acquisition goodwill; receivables with scale."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Promoter-led (Tyagi family); recent IPO."
+      },
+      "financial": {
+        "score": 6,
+        "reason": "Rising debt for acquisitions."
+      },
+      "business": {
+        "score": 6,
+        "reason": "NCR concentration; integration risk."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Acquisition-led growth",
+      "Rising debt"
+    ],
+    "summary": "Moderate: acquisitive NCR hospital chain with rising debt and integration risk.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "VASCONEQ": {
+    "score": 4.8,
+    "verdict": "SERIOUS",
+    "confidence": "Low",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 5,
+        "reason": "Lumpy EPC accounting; history of stress."
+      },
+      "governance": {
+        "score": 5,
+        "reason": "Low promoter holding; past balance-sheet stress."
+      },
+      "financial": {
+        "score": 4,
+        "reason": "Historically stressed balance sheet; dilution."
+      },
+      "business": {
+        "score": 5,
+        "reason": "Lumpy EPC/real-estate revenue."
+      }
+    },
+    "critical_flags": [
+      "History of balance-sheet stress and dilution"
+    ],
+    "amber_flags": [
+      "Low promoter holding",
+      "Lumpy EPC/real-estate revenue"
+    ],
+    "summary": "Serious-leaning: small EPC/real-estate firm with a history of balance-sheet stress, dilution and a low promoter stake.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "FRACTAL": {
+    "score": 5.8,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 6,
+        "reason": "ESOP-heavy cost base; recent path-to-profit."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "PE-owned (TPG/Apax); ESOP dilution."
+      },
+      "financial": {
+        "score": 5,
+        "reason": "History of losses; reliance on funding."
+      },
+      "business": {
+        "score": 6,
+        "reason": "AI-services competition; client concentration."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "PE ownership; ESOP dilution",
+      "Recent path-to-profitability"
+    ],
+    "summary": "Moderate: PE-owned AI-analytics firm with ESOP dilution and a recent loss history.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "PROTEAN": {
+    "score": 6.1,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 7,
+        "reason": "Clean, cash-rich accounts."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Professionally held; reasonable governance."
+      },
+      "financial": {
+        "score": 7,
+        "reason": "Net cash."
+      },
+      "business": {
+        "score": 4,
+        "reason": "Loss/erosion of key government mandates (PAN 2.0, NPS CRA competition)."
+      }
+    },
+    "critical_flags": [
+      "Loss/erosion of key government mandates (PAN 2.0, NPS CRA competition)"
+    ],
+    "amber_flags": [
+      "Revenue concentration in government contracts"
+    ],
+    "summary": "Moderate: financially clean eGov firm, but the dominant red flag is erosion of its key government mandates.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "UNIVCABLES": {
+    "score": 6.0,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 6,
+        "reason": "Cyclical cable accounts; moderate receivables."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "MP Birla group; standard governance."
+      },
+      "financial": {
+        "score": 6,
+        "reason": "Moderate leverage."
+      },
+      "business": {
+        "score": 6,
+        "reason": "Cyclical cables; competition."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Mid-cap cyclical",
+      "Moderate leverage"
+    ],
+    "summary": "Moderate: mid-cap cables maker with cyclical exposure and moderate leverage; no specific governance flags.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "RAYMOND": {
+    "score": 5.2,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 6,
+        "reason": "Multiple demergers complicate comparability."
+      },
+      "governance": {
+        "score": 4,
+        "reason": "High-profile promoter family dispute; past JK House related-party controversy."
+      },
+      "financial": {
+        "score": 5,
+        "reason": "Demerger-driven structural complexity."
+      },
+      "business": {
+        "score": 6,
+        "reason": "Established brands but restructuring noise."
+      }
+    },
+    "critical_flags": [
+      "Promoter family dispute and governance controversies (Singhania)"
+    ],
+    "amber_flags": [
+      "Multiple demergers create structural complexity",
+      "Past related-party (JK House) controversy"
+    ],
+    "summary": "Moderate red flags: well-known promoter family dispute, a past related-party (JK House) controversy and demerger-driven complexity weigh on governance.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "GRAPHITE": {
+    "score": 6.3,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 7,
+        "reason": "Cash-rich; clean accounts."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "K.K. Bangur group; standard governance."
+      },
+      "financial": {
+        "score": 7,
+        "reason": "Net cash; dividends."
+      },
+      "business": {
+        "score": 5,
+        "reason": "Deep electrode cyclicality; Chinese competition."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Deep electrode cyclicality",
+      "Chinese competition"
+    ],
+    "summary": "Minor-to-moderate: cash-rich electrode maker; the main flags are deep cyclicality and Chinese competition, not accounting.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "3MINDIA": {
+    "score": 8.2,
+    "verdict": "CLEAN",
+    "confidence": "High",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 8,
+        "reason": "Clean, high-quality MNC accounts; strong cash conversion."
+      },
+      "governance": {
+        "score": 8,
+        "reason": "Exemplary 3M MNC governance; royalty/RPT to parent to monitor."
+      },
+      "financial": {
+        "score": 9,
+        "reason": "Near debt-free, exceptional ROCE."
+      },
+      "business": {
+        "score": 8,
+        "reason": "Diversified but cyclical end-markets."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Royalty/related-party payments to parent 3M",
+      "Premium valuation"
+    ],
+    "summary": "Clean: blue-chip MNC with near-debt-free books and exemplary governance; parent royalty/RPT and rich valuation are the only watch-items.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "ABLBL": {
+    "score": 6.9,
+    "verdict": "MINOR",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 7,
+        "reason": "Clean accounts; portfolio still scaling post-demerger."
+      },
+      "governance": {
+        "score": 8,
+        "reason": "Aditya Birla group governance pedigree."
+      },
+      "financial": {
+        "score": 6,
+        "reason": "High lease-related leverage."
+      },
+      "business": {
+        "score": 6,
+        "reason": "Discretionary-apparel cyclicality; demerger execution."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "High lease-related leverage",
+      "Post-demerger execution"
+    ],
+    "summary": "Minor: strong Aditya Birla governance; high lease leverage and post-demerger scaling are the watch-items.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "AEROFLEX": {
+    "score": 6.2,
+    "verdict": "MODERATE",
+    "confidence": "Low",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 6,
+        "reason": "Receivables grow with scale."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Sat-Industries parent; standard governance."
+      },
+      "financial": {
+        "score": 7,
+        "reason": "Low debt."
+      },
+      "business": {
+        "score": 6,
+        "reason": "Export/customer concentration; China competition."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Receivables growth with scale",
+      "Export/China competition"
+    ],
+    "summary": "Moderate: low-debt niche export leader; working-capital growth and competition are the flags.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "AFFLE": {
+    "score": 6.2,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 6,
+        "reason": "Acquisition-driven intangibles; capitalisation to watch."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Acquisitive; standard governance."
+      },
+      "financial": {
+        "score": 7,
+        "reason": "Very low debt; strong cash flow."
+      },
+      "business": {
+        "score": 6,
+        "reason": "Data-privacy regulatory exposure."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Acquisition-driven intangibles",
+      "Data-privacy regulatory exposure"
+    ],
+    "summary": "Moderate: low-debt, cash-generative ad-tech; acquisition accounting and privacy regulation are the watch-items.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "ANURAS": {
+    "score": 5.2,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 5,
+        "reason": "Receivables intensity; related-party-transaction concerns flagged historically."
+      },
+      "governance": {
+        "score": 5,
+        "reason": "Related-party transactions drew scrutiny."
+      },
+      "financial": {
+        "score": 5,
+        "reason": "High debt; capex-heavy."
+      },
+      "business": {
+        "score": 6,
+        "reason": "Customer concentration in specialty chemicals."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Related-party-transaction concerns (historical)",
+      "High debt; receivables intensity",
+      "Customer concentration"
+    ],
+    "summary": "Moderate red flags: specialty-chemicals maker with related-party scrutiny, high debt and receivables intensity.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "ARIS": {
+    "score": 4.7,
+    "verdict": "SERIOUS",
+    "confidence": "High",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 5,
+        "reason": "Thin margins; heavy working capital."
+      },
+      "governance": {
+        "score": 4,
+        "reason": "Statutory auditor (PwC) resigned May 2026."
+      },
+      "financial": {
+        "score": 5,
+        "reason": "Working-capital-heavy; no dividend."
+      },
+      "business": {
+        "score": 5,
+        "reason": "Low switching costs; just turned profitable."
+      }
+    },
+    "critical_flags": [
+      "Statutory auditor (PwC) resigned May 2026"
+    ],
+    "amber_flags": [
+      "Low promoter holding (~38%)",
+      "Thin margins / high working capital"
+    ],
+    "summary": "Serious-leaning: a recent auditor resignation, low promoter stake and thin, working-capital-heavy economics are clear governance flags.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "ASALCBR": {
+    "score": 5.7,
+    "verdict": "MODERATE",
+    "confidence": "Low",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 6,
+        "reason": "Commodity-linked margins; standard accounts."
+      },
+      "governance": {
+        "score": 5,
+        "reason": "Source-file identity/data conflict."
+      },
+      "financial": {
+        "score": 6,
+        "reason": "Moderate debt; dividends."
+      },
+      "business": {
+        "score": 6,
+        "reason": "Commodity (ENA/alcohol) linkage."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Source-file identity/data conflict ? verify"
+    ],
+    "summary": "Moderate: established alcohol/ENA business; a source-file description mismatch reduces confidence.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "ASHIANA": {
+    "score": 6.0,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 6,
+        "reason": "Asset-light; standard accounts."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Family promoter; clean governance."
+      },
+      "financial": {
+        "score": 6,
+        "reason": "Real-estate working-capital intensity."
+      },
+      "business": {
+        "score": 6,
+        "reason": "RE cyclicality; small parcels."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Real-estate working-capital intensity"
+    ],
+    "summary": "Moderate: conservative, dividend-paying developer; real-estate cyclicality is the main flag.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "AVALON": {
+    "score": 5.8,
+    "verdict": "MODERATE",
+    "confidence": "Low",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 6,
+        "reason": "Receivables/working-capital intensity."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Promoter-led; recent listing."
+      },
+      "financial": {
+        "score": 6,
+        "reason": "Moderate debt; no dividend."
+      },
+      "business": {
+        "score": 5,
+        "reason": "Customer concentration; FX exposure."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Customer concentration; FX exposure",
+      "Working-capital intensity"
+    ],
+    "summary": "Moderate: export-EMS player with customer concentration, FX and working-capital exposure.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "BBL": {
+    "score": 6.0,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 6,
+        "reason": "Negative recent operating cash flow."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Conservative family governance."
+      },
+      "financial": {
+        "score": 7,
+        "reason": "Cash-rich (large investments)."
+      },
+      "business": {
+        "score": 5,
+        "reason": "Cyclical, working-capital-heavy project earnings."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Negative recent operating cash flow",
+      "Cyclical project earnings"
+    ],
+    "summary": "Moderate: cash-rich legacy electricals maker; lumpy, working-capital-heavy project cash flows are the flag.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "BIOCON": {
+    "score": 5.8,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 6,
+        "reason": "Goodwill and complex consolidation (Biocon Biologics)."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Reputable founder; standard governance."
+      },
+      "financial": {
+        "score": 5,
+        "reason": "High debt from the Viatris-biosimilars acquisition; equity dilution."
+      },
+      "business": {
+        "score": 6,
+        "reason": "Biosimilar competition; USFDA-inspection history."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "High debt from Biocon Biologics acquisition",
+      "Equity dilution (QIP/rights)",
+      "USFDA-inspection history"
+    ],
+    "summary": "Moderate: biosimilars leader carrying high acquisition debt, dilution and USFDA-inspection history; complex consolidation to watch.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "BOROLTD": {
+    "score": 5.8,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 6,
+        "reason": "Standard accounts; capex-led."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Borosil-group governance."
+      },
+      "financial": {
+        "score": 5,
+        "reason": "No dividend; capacity-expansion capex."
+      },
+      "business": {
+        "score": 6,
+        "reason": "Import/private-label competition."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Capacity-expansion capex",
+      "Import/private-label competition"
+    ],
+    "summary": "Moderate: brand-led glassware maker; capex and competition are the flags.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "CAPACITE": {
+    "score": 5.3,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 5,
+        "reason": "Working-capital-heavy; developer receivables."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Promoter-led; standard governance."
+      },
+      "financial": {
+        "score": 5,
+        "reason": "Developer-credit exposure; no dividend."
+      },
+      "business": {
+        "score": 5,
+        "reason": "Lumpy, payment-cycle-dependent contracts."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Working-capital-heavy; developer-credit exposure",
+      "Lumpy contract earnings"
+    ],
+    "summary": "Moderate: contractor with strong order book but heavy working capital and developer-credit exposure.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "CARBORUNIV": {
+    "score": 7.1,
+    "verdict": "MINOR",
+    "confidence": "High",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 7,
+        "reason": "Clean, cash-generative accounts."
+      },
+      "governance": {
+        "score": 8,
+        "reason": "Murugappa (CUMI) ? best-in-class governance."
+      },
+      "financial": {
+        "score": 7,
+        "reason": "Moderate debt; dividends."
+      },
+      "business": {
+        "score": 6,
+        "reason": "Cyclical abrasives/ceramics demand."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Cyclical abrasives/ceramics earnings"
+    ],
+    "summary": "Minor: exemplary Murugappa governance and clean accounts; only a cyclical earnings dip caps it.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "CESC": {
+    "score": 6.3,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 6,
+        "reason": "Regulated-utility accounts; standard."
+      },
+      "governance": {
+        "score": 7,
+        "reason": "RPG group; established governance."
+      },
+      "financial": {
+        "score": 6,
+        "reason": "High (utility-typical) leverage."
+      },
+      "business": {
+        "score": 6,
+        "reason": "Distribution-loss risk in new privatised circles."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "High (utility-typical) leverage",
+      "Distribution-loss risk in new geographies"
+    ],
+    "summary": "Moderate: established regulated utility; structural leverage and distribution-loss risk in new circles are the flags.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "CLEANMAX": {
+    "score": 5.1,
+    "verdict": "MODERATE",
+    "confidence": "High",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 6,
+        "reason": "Standard accounts; short public history."
+      },
+      "governance": {
+        "score": 5,
+        "reason": "Heavy IPO OFS (early-investor exit); undersubscribed IPO."
+      },
+      "financial": {
+        "score": 4,
+        "reason": "Very high leverage; weak ROE."
+      },
+      "business": {
+        "score": 5,
+        "reason": "Open-access tariff/regulatory risk."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Very high leverage",
+      "Heavy IPO OFS (early-investor exit)",
+      "Open-access tariff regulatory risk"
+    ],
+    "summary": "Moderate red flags: Brookfield-backed renewable platform with very high leverage, weak returns and a heavy OFS-led IPO.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "CMSINFO": {
+    "score": 6.3,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 7,
+        "reason": "Asset-light; clean, cash-generative accounts."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Professional governance."
+      },
+      "financial": {
+        "score": 7,
+        "reason": "Cash-rich; high dividends."
+      },
+      "business": {
+        "score": 5,
+        "reason": "Structural decline of cash usage (UPI)."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Structural decline in cash usage (UPI)"
+    ],
+    "summary": "Minor-to-moderate: clean, cash-generative cash-logistics leader; the long-term cash-usage decline is the key business flag.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "CYIENTDLM": {
+    "score": 5.6,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 6,
+        "reason": "Receivables/working-capital intensity."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Cyient parent; standard governance."
+      },
+      "financial": {
+        "score": 5,
+        "reason": "Weak ROE; no dividend."
+      },
+      "business": {
+        "score": 5,
+        "reason": "EMS competition; short listed history."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Weak returns; no capital return",
+      "EMS competition; short listed history"
+    ],
+    "summary": "Moderate: reputable-parent EMS business with weak returns and a short standalone track record.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "DATAPATTNS": {
+    "score": 7.0,
+    "verdict": "MINOR",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 6,
+        "reason": "Lumpy DRDO-linked revenue recognition; receivables."
+      },
+      "governance": {
+        "score": 8,
+        "reason": "Founder-led, ~87% holding, no pledge; clean."
+      },
+      "financial": {
+        "score": 8,
+        "reason": "Very low debt."
+      },
+      "business": {
+        "score": 6,
+        "reason": "Defence concentration; lumpy orders."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Lumpy DRDO-linked revenue recognition",
+      "Defence concentration"
+    ],
+    "summary": "Minor: clean, low-debt, high-skin defence-electronics franchise; revenue lumpiness is the main flag.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "DIFFNKG": {
+    "score": 6.2,
+    "verdict": "MODERATE",
+    "confidence": "Low",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 6,
+        "reason": "Standard accounts; short history."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Promoter-led; standard governance."
+      },
+      "financial": {
+        "score": 7,
+        "reason": "Low debt; dividends."
+      },
+      "business": {
+        "score": 6,
+        "reason": "Cyclical capex exposure."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Short listed history",
+      "Cyclical capex exposure"
+    ],
+    "summary": "Moderate: low-debt niche industrials maker; short history and cyclicality are the flags.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "ECOSMOBLTY": {
+    "score": 6.2,
+    "verdict": "MODERATE",
+    "confidence": "Low",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 6,
+        "reason": "Asset-light accounts; recent profit dip."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Promoter-led; recent IPO."
+      },
+      "financial": {
+        "score": 7,
+        "reason": "Asset-light; low debt; dividends."
+      },
+      "business": {
+        "score": 6,
+        "reason": "Recent earnings dip; competition."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Recent earnings dip",
+      "Short listed history"
+    ],
+    "summary": "Moderate: asset-light, low-debt mobility business; a recent earnings dip and short history are the flags.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "EIHOTEL": {
+    "score": 6.8,
+    "verdict": "MINOR",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 7,
+        "reason": "Clean, cash-generative accounts."
+      },
+      "governance": {
+        "score": 7,
+        "reason": "Oberoi governance; ITC/Reliance ownership dynamic."
+      },
+      "financial": {
+        "score": 7,
+        "reason": "Low debt; dividends."
+      },
+      "business": {
+        "score": 6,
+        "reason": "Hospitality cyclicality."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "ITC/Reliance ownership dynamic",
+      "Hospitality cyclicality"
+    ],
+    "summary": "Minor: clean, low-debt luxury-hotel franchise; the ITC/Reliance ownership dynamic and cyclicality are the watch-items.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "ELDEHSG": {
+    "score": 6.0,
+    "verdict": "MODERATE",
+    "confidence": "Low",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 6,
+        "reason": "Asset-light; standard accounts."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Promoter-led; standard governance."
+      },
+      "financial": {
+        "score": 6,
+        "reason": "Real-estate working-capital intensity."
+      },
+      "business": {
+        "score": 6,
+        "reason": "RE cyclicality."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Real-estate cyclicality"
+    ],
+    "summary": "Moderate: asset-light regional developer; real-estate cyclicality is the main flag.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "ELGIEQUIP": {
+    "score": 7.1,
+    "verdict": "MINOR",
+    "confidence": "High",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 7,
+        "reason": "Clean, cash-generative accounts."
+      },
+      "governance": {
+        "score": 8,
+        "reason": "Jairam Varadaraj ? respected, ethical governance."
+      },
+      "financial": {
+        "score": 7,
+        "reason": "Moderate debt; dividends."
+      },
+      "business": {
+        "score": 6,
+        "reason": "Europe demand drag."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Europe demand drag"
+    ],
+    "summary": "Minor: respected, well-governed compressor maker; only modest near-term growth/Europe drag caps it.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "EMBDL": {
+    "score": 4.5,
+    "verdict": "SERIOUS",
+    "confidence": "High",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 5,
+        "reason": "Loss-making; lumpy completion-linked revenue."
+      },
+      "governance": {
+        "score": 4,
+        "reason": "~68% of promoter holding pledged; Kadugodi land-title litigation."
+      },
+      "financial": {
+        "score": 4,
+        "reason": "Negative RoE/RoCE."
+      },
+      "business": {
+        "score": 5,
+        "reason": "Lumpy real-estate earnings."
+      }
+    },
+    "critical_flags": [
+      "~68% of promoter holding pledged",
+      "Kadugodi land-title litigation"
+    ],
+    "amber_flags": [
+      "Loss-making; negative returns"
+    ],
+    "summary": "Serious: very high promoter-share pledging, land-title litigation and current losses make this a clear governance/financial concern.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "ENTERO": {
+    "score": 5.6,
+    "verdict": "MODERATE",
+    "confidence": "Low",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 6,
+        "reason": "Receivables/working-capital intensity."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "PE-backed; standard governance."
+      },
+      "financial": {
+        "score": 5,
+        "reason": "Thin margins; no dividend."
+      },
+      "business": {
+        "score": 5,
+        "reason": "Distribution roll-up; integration risk."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Thin margins; heavy working capital",
+      "Roll-up integration risk"
+    ],
+    "summary": "Moderate: PE-backed pharma distributor with thin margins, heavy working capital and roll-up risk.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "FREDUN": {
+    "score": 4.8,
+    "verdict": "SERIOUS",
+    "confidence": "Low",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 5,
+        "reason": "Sub-scale accounts; recent profit dip."
+      },
+      "governance": {
+        "score": 5,
+        "reason": "Small-cap governance standards."
+      },
+      "financial": {
+        "score": 4,
+        "reason": "High leverage."
+      },
+      "business": {
+        "score": 5,
+        "reason": "Sub-scale; concentration."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "High leverage",
+      "Sub-scale; product concentration"
+    ],
+    "summary": "Serious-leaning: sub-scale injectables maker with high leverage and weak recent profitability.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "GAUDIUMIVF": {
+    "score": 6.0,
+    "verdict": "MODERATE",
+    "confidence": "Low",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 6,
+        "reason": "Standard accounts; short history."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Promoter-led; recent IPO."
+      },
+      "financial": {
+        "score": 6,
+        "reason": "No dividend; scale-up capex."
+      },
+      "business": {
+        "score": 6,
+        "reason": "Doctor/centre-execution dependence."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Doctor/centre-execution dependence",
+      "Short listed history"
+    ],
+    "summary": "Moderate: high-return fertility chain; doctor dependence and a short listed history are the flags.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "GESHIP": {
+    "score": 7.6,
+    "verdict": "MINOR",
+    "confidence": "High",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 8,
+        "reason": "Clean, transparent accounts; strong cash conversion."
+      },
+      "governance": {
+        "score": 8,
+        "reason": "Sheth family ? exemplary, conservative governance; no pledging."
+      },
+      "financial": {
+        "score": 8,
+        "reason": "Low net debt; generous dividends."
+      },
+      "business": {
+        "score": 6,
+        "reason": "Freight-rate cyclicality."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Freight-rate cyclicality"
+    ],
+    "summary": "Minor: exemplary governance and conservative balance sheet; only inherent freight cyclicality caps it.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "GIPCL": {
+    "score": 5.8,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 6,
+        "reason": "PSU accounts; lignite-heavy base."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "State PSU; board constraints."
+      },
+      "financial": {
+        "score": 6,
+        "reason": "High dividends; lignite capex."
+      },
+      "business": {
+        "score": 5,
+        "reason": "Lignite sunset; GUVNL payment history."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Lignite sunset",
+      "PSU constraints; GUVNL payment history"
+    ],
+    "summary": "Moderate: high-dividend state power PSU; lignite sunset and PSU governance are the flags.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "GMRAIRPORT": {
+    "score": 5.0,
+    "verdict": "MODERATE",
+    "confidence": "High",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 5,
+        "reason": "Complex consolidation; capitalised development costs."
+      },
+      "governance": {
+        "score": 5,
+        "reason": "Complex holding structure; history of leverage/restructuring."
+      },
+      "financial": {
+        "score": 4,
+        "reason": "Very high leverage; periods of negative net worth."
+      },
+      "business": {
+        "score": 6,
+        "reason": "Strong airport-concession moat."
+      }
+    },
+    "critical_flags": [
+      "Very high leverage / history of debt restructuring"
+    ],
+    "amber_flags": [
+      "Complex holding structure",
+      "AERA tariff-regulation dependence"
+    ],
+    "summary": "Moderate red flags: strong airport-concession moat, but very high leverage, a complex structure and a debt-restructuring history weigh heavily.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "GREAVESCOT": {
+    "score": 5.6,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 6,
+        "reason": "Standard accounts; Ampere consolidation."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Thapar group; standard governance."
+      },
+      "financial": {
+        "score": 5,
+        "reason": "Ampere EV cash burn."
+      },
+      "business": {
+        "score": 5,
+        "reason": "ICE-engine decline; unproven EV profitability."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Ampere EV cash burn",
+      "ICE engine decline"
+    ],
+    "summary": "Moderate: dividend-paying legacy promoter, but the Ampere EV transition is cash-consuming and unproven.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "GRINDWELL": {
+    "score": 7.1,
+    "verdict": "MINOR",
+    "confidence": "High",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 7,
+        "reason": "Clean, cash-generative accounts."
+      },
+      "governance": {
+        "score": 8,
+        "reason": "Saint-Gobain MNC governance."
+      },
+      "financial": {
+        "score": 7,
+        "reason": "Low debt; dividends."
+      },
+      "business": {
+        "score": 6,
+        "reason": "Abrasives cyclicality."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Abrasives cyclicality"
+    ],
+    "summary": "Minor: low-debt MNC abrasives maker with strong governance; cyclicality is the only real flag.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "GULFOILLUB": {
+    "score": 6.5,
+    "verdict": "MINOR",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 7,
+        "reason": "Clean, cash-generative accounts."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Hinduja-group complexity; listed entity well-governed."
+      },
+      "financial": {
+        "score": 7,
+        "reason": "High ROE; generous dividends."
+      },
+      "business": {
+        "score": 6,
+        "reason": "EV-substitution overhang."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Hinduja-group complexity",
+      "EV-substitution overhang"
+    ],
+    "summary": "Minor: high-return, dividend-rich lubricants maker; group complexity and EV substitution are the watch-items.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "HEG": {
+    "score": 6.6,
+    "verdict": "MINOR",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 7,
+        "reason": "Cash-rich; clean accounts."
+      },
+      "governance": {
+        "score": 7,
+        "reason": "LNJ Bhilwara; conservative governance."
+      },
+      "financial": {
+        "score": 7,
+        "reason": "Moderate debt; dividends."
+      },
+      "business": {
+        "score": 5,
+        "reason": "Deep electrode cyclicality; China competition."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Deep electrode cyclicality",
+      "Chinese competition"
+    ],
+    "summary": "Minor: cash-rich, conservatively governed electrode maker; deep cyclicality is the main flag.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "HLEGLAS": {
+    "score": 5.1,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 5,
+        "reason": "Omeras subsidiary loss drag; sharp FY26 earnings decline."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Standard governance; integration challenges."
+      },
+      "financial": {
+        "score": 5,
+        "reason": "High leverage."
+      },
+      "business": {
+        "score": 4,
+        "reason": "PAT down sharply; glass-lined EBIT -46%."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Omeras subsidiary loss drag",
+      "High leverage; sharp FY26 earnings decline"
+    ],
+    "summary": "Moderate red flags: a loss-making subsidiary (Omeras), high leverage and a sharp FY26 earnings decline.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "HONAUT": {
+    "score": 7.6,
+    "verdict": "MINOR",
+    "confidence": "High",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 8,
+        "reason": "Clean MNC accounts; strong cash."
+      },
+      "governance": {
+        "score": 8,
+        "reason": "Honeywell MNC governance."
+      },
+      "financial": {
+        "score": 8,
+        "reason": "Debt-free; dividends."
+      },
+      "business": {
+        "score": 6,
+        "reason": "Modest near-term growth."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Modest near-term growth"
+    ],
+    "summary": "Minor: debt-free, well-governed MNC; modest near-term growth is the only flag.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "IFGLEXPOR": {
+    "score": 5.3,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 6,
+        "reason": "Standard accounts; thin margins."
+      },
+      "governance": {
+        "score": 5,
+        "reason": "Major 2026 leadership churn (CEO/CRO/Operations)."
+      },
+      "financial": {
+        "score": 6,
+        "reason": "Moderate debt; dividends."
+      },
+      "business": {
+        "score": 4,
+        "reason": "FY26 profit down ~33%; tariff headwinds."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Major 2026 management churn",
+      "Sharp earnings decline; thin margins"
+    ],
+    "summary": "Moderate red flags: significant 2026 management churn, a sharp earnings decline and thin margins.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "INCAP": {
+    "score": 5.6,
+    "verdict": "MODERATE",
+    "confidence": "Low",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 6,
+        "reason": "Standard small-cap accounts."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Elecon-group; standard governance."
+      },
+      "financial": {
+        "score": 5,
+        "reason": "Very weak returns (~2% ROE)."
+      },
+      "business": {
+        "score": 5,
+        "reason": "Coal-India order-timing dependence; sub-scale."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Very weak returns",
+      "Coal-India order-timing dependence"
+    ],
+    "summary": "Moderate: group-backed niche supplier; very weak returns and order-timing dependence are the flags.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "INGERRAND": {
+    "score": 7.6,
+    "verdict": "MINOR",
+    "confidence": "High",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 8,
+        "reason": "Clean MNC accounts; strong cash."
+      },
+      "governance": {
+        "score": 8,
+        "reason": "Ingersoll-Rand MNC governance."
+      },
+      "financial": {
+        "score": 8,
+        "reason": "Debt-free; high ROE; dividends."
+      },
+      "business": {
+        "score": 6,
+        "reason": "Cyclicality; parent restructuring overhang."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Parent restructuring overhang",
+      "Cyclicality"
+    ],
+    "summary": "Minor: debt-free, high-return MNC subsidiary; cyclicality and parent restructuring are the watch-items.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "INOXINDIA": {
+    "score": 6.8,
+    "verdict": "MINOR",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 7,
+        "reason": "Clean accounts; good cash conversion."
+      },
+      "governance": {
+        "score": 7,
+        "reason": "INOX group; standard governance."
+      },
+      "financial": {
+        "score": 7,
+        "reason": "Low debt; high ROE."
+      },
+      "business": {
+        "score": 6,
+        "reason": "Short standalone listed history."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Short standalone listed history"
+    ],
+    "summary": "Minor: low-debt, high-return cryogenics leader; a short listed history is the main caveat.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "INTERARCH": {
+    "score": 6.0,
+    "verdict": "MODERATE",
+    "confidence": "Low",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 6,
+        "reason": "Standard accounts; short history."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Promoter-led; standard governance."
+      },
+      "financial": {
+        "score": 6,
+        "reason": "Low debt; dividends."
+      },
+      "business": {
+        "score": 6,
+        "reason": "Steel-price / fixed-price contract risk."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Steel-price / fixed-price contract risk",
+      "Short listed history"
+    ],
+    "summary": "Moderate: low-debt PEB leader; steel-price exposure and short history are the flags.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "ISGEC": {
+    "score": 5.8,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 6,
+        "reason": "Lumpy project accounting; weak returns."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Established family governance."
+      },
+      "financial": {
+        "score": 6,
+        "reason": "Pays dividends; weak ROE."
+      },
+      "business": {
+        "score": 5,
+        "reason": "Project-lumpy earnings."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Lumpy project earnings; weak returns"
+    ],
+    "summary": "Moderate: established heavy-engineering family business; lumpy, low-return project earnings are the flags.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "JNKINDIA": {
+    "score": 6.0,
+    "verdict": "MODERATE",
+    "confidence": "Low",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 6,
+        "reason": "Standard accounts; project-lumpy."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Promoter-led; recent IPO."
+      },
+      "financial": {
+        "score": 6,
+        "reason": "Moderate debt; small dividend."
+      },
+      "business": {
+        "score": 6,
+        "reason": "Project-lumpy revenue; short history."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Project-lumpy revenue",
+      "Short listed history"
+    ],
+    "summary": "Moderate: niche heaters maker with strong growth; project lumpiness and short history are the flags.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "JYOTICNC": {
+    "score": 4.7,
+    "verdict": "SERIOUS",
+    "confidence": "High",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 5,
+        "reason": "Rs67cr revenue reversal at Huron (POCM accounting)."
+      },
+      "governance": {
+        "score": 4,
+        "reason": "Huron (France subsidiary) under judicial investigation; French authorities seized EUR3.02M and attached promoter properties."
+      },
+      "financial": {
+        "score": 5,
+        "reason": "Rising capex-led leverage; no dividend."
+      },
+      "business": {
+        "score": 5,
+        "reason": "Missed FY26 guidance; Huron drag."
+      }
+    },
+    "critical_flags": [
+      "Huron (France subsidiary) under judicial investigation; assets seized and promoter properties attached",
+      "Rs67cr revenue reversal at Huron"
+    ],
+    "amber_flags": [
+      "Rising capex-led leverage",
+      "Missed FY26 growth guidance"
+    ],
+    "summary": "Serious: an ongoing judicial investigation and asset seizures at the French (Huron) subsidiary, a revenue reversal and guidance misses are serious governance/accounting flags.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "KAMDHENU": {
+    "score": 6.0,
+    "verdict": "MODERATE",
+    "confidence": "Low",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 6,
+        "reason": "Asset-light franchise accounts."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Family governance; standard."
+      },
+      "financial": {
+        "score": 7,
+        "reason": "Low debt; high ROE; dividends."
+      },
+      "business": {
+        "score": 5,
+        "reason": "Commodity-spread volatility; brand-execution dependence."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Commodity-spread volatility",
+      "Brand-execution dependence"
+    ],
+    "summary": "Moderate: capital-light, high-ROE franchise brand; commodity volatility and brand-execution dependence are the flags.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "KENNAMET": {
+    "score": 7.1,
+    "verdict": "MINOR",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 7,
+        "reason": "Clean MNC accounts."
+      },
+      "governance": {
+        "score": 8,
+        "reason": "Kennametal MNC governance."
+      },
+      "financial": {
+        "score": 7,
+        "reason": "Low debt; dividends."
+      },
+      "business": {
+        "score": 6,
+        "reason": "Cyclical end-markets; premium valuation."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Cyclical end-markets",
+      "Premium valuation"
+    ],
+    "summary": "Minor: debt-free MNC cutting-tools maker; cyclicality and valuation are the flags.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "KIRLPNU": {
+    "score": 6.7,
+    "verdict": "MINOR",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 7,
+        "reason": "Clean, cash-generative accounts."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Kirloskar-group family/governance disputes (public)."
+      },
+      "financial": {
+        "score": 7,
+        "reason": "Very low debt; high ROE; dividends."
+      },
+      "business": {
+        "score": 7,
+        "reason": "Strong defence/industrial growth."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Kirloskar-group family/governance disputes (public)"
+    ],
+    "summary": "Minor: high-return, low-debt franchise; the public Kirloskar-group family disputes are the main governance flag.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "KPIGREEN": {
+    "score": 4.8,
+    "verdict": "SERIOUS",
+    "confidence": "High",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 5,
+        "reason": "Receivables/inventory build-up with scale."
+      },
+      "governance": {
+        "score": 5,
+        "reason": "Promoter-warrant issuance ? dilution flag."
+      },
+      "financial": {
+        "score": 4,
+        "reason": "Debt quadrupled in FY26; negative free cash flow."
+      },
+      "business": {
+        "score": 5,
+        "reason": "Evacuation delays; aggressive guidance."
+      }
+    },
+    "critical_flags": [
+      "Debt quadrupled in FY26; negative free cash flow"
+    ],
+    "amber_flags": [
+      "Promoter-warrant equity dilution",
+      "Aggressive 40-50% growth guidance"
+    ],
+    "summary": "Serious: quadrupling debt, negative free cash flow, promoter-warrant dilution and aggressive guidance are clear financial/governance flags.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "KPITTECH": {
+    "score": 6.8,
+    "verdict": "MINOR",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 7,
+        "reason": "Clean accounts; good cash conversion."
+      },
+      "governance": {
+        "score": 7,
+        "reason": "Credible founders; clean governance."
+      },
+      "financial": {
+        "score": 7,
+        "reason": "Some lease debt; high ROE."
+      },
+      "business": {
+        "score": 6,
+        "reason": "Auto-OEM cyclicality; customer concentration."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Auto-OEM cyclicality; customer concentration"
+    ],
+    "summary": "Minor: clean, founder-led automotive-software firm; OEM cyclicality and customer concentration are the flags.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "KSB": {
+    "score": 7.1,
+    "verdict": "MINOR",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 7,
+        "reason": "Clean MNC accounts."
+      },
+      "governance": {
+        "score": 8,
+        "reason": "KSB MNC governance."
+      },
+      "financial": {
+        "score": 7,
+        "reason": "Low debt; dividends."
+      },
+      "business": {
+        "score": 6,
+        "reason": "Lumpy order execution; premium valuation."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Lumpy order execution",
+      "Premium valuation"
+    ],
+    "summary": "Minor: low-debt MNC pump maker; lumpy execution and valuation are the flags.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "LAKSELEC": {
+    "score": 4.8,
+    "verdict": "SERIOUS",
+    "confidence": "High",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 5,
+        "reason": "Very weak returns."
+      },
+      "governance": {
+        "score": 5,
+        "reason": "GST show-cause notices; low promoter holding (~36%)."
+      },
+      "financial": {
+        "score": 5,
+        "reason": "Cash-rich but very weak ROE."
+      },
+      "business": {
+        "score": 4,
+        "reason": "LMW single-customer concentration; sharp earnings decline."
+      }
+    },
+    "critical_flags": [
+      "GST show-cause notices outstanding"
+    ],
+    "amber_flags": [
+      "Low promoter holding (~36%); LMW concentration",
+      "Sharp earnings decline"
+    ],
+    "summary": "Serious-leaning: outstanding GST notices, a low promoter stake, heavy LMW concentration and very weak returns.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "LANDMARK": {
+    "score": 5.4,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 6,
+        "reason": "Inventory-financing accounts; thin dealer margins."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Promoter-led; standard governance."
+      },
+      "financial": {
+        "score": 4,
+        "reason": "Very high leverage (~1.7x) on inventory."
+      },
+      "business": {
+        "score": 5,
+        "reason": "OEM agency-model transition risk."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Very high leverage (inventory financing)",
+      "OEM agency-model transition risk"
+    ],
+    "summary": "Moderate red flags: capable dealership operator, but very high leverage and the agency-model transition weigh on it.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "LATENTVIEW": {
+    "score": 6.5,
+    "verdict": "MINOR",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 7,
+        "reason": "Clean, cash-rich accounts."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Founder-led; standard governance."
+      },
+      "financial": {
+        "score": 7,
+        "reason": "Cash-rich; net cash."
+      },
+      "business": {
+        "score": 6,
+        "reason": "Low returns on cash; client concentration; rich valuation."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Low returns on cash pile",
+      "Client concentration; rich valuation"
+    ],
+    "summary": "Minor: cash-rich analytics firm; low returns on cash and client concentration are the flags.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "LAXMIDENTL": {
+    "score": 6.0,
+    "verdict": "MODERATE",
+    "confidence": "Low",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 6,
+        "reason": "Standard accounts; short history."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "PE-backed; post-IPO selling."
+      },
+      "financial": {
+        "score": 6,
+        "reason": "Moderate debt."
+      },
+      "business": {
+        "score": 6,
+        "reason": "Short listed history; competition."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Post-IPO PE/promoter selling",
+      "Short listed history"
+    ],
+    "summary": "Moderate: recently-listed dental products firm; PE selling and short history are the flags.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "MAFANG": {
+    "score": 8.0,
+    "verdict": "N/A (ETF)",
+    "confidence": "High",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 8,
+        "reason": "Passive ETF ? no company accounting risk."
+      },
+      "governance": {
+        "score": 8,
+        "reason": "Mirae Asset AMC stewardship."
+      },
+      "financial": {
+        "score": 8,
+        "reason": "Low-cost, tight-tracking wrapper."
+      },
+      "business": {
+        "score": 8,
+        "reason": "Diversified US FANG+ exposure."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [],
+    "summary": "Not a company red-flag profile ? passive FANG+ ETF; reflects AMC operational integrity (high).",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "MMP": {
+    "score": 5.8,
+    "verdict": "MODERATE",
+    "confidence": "Low",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 6,
+        "reason": "Standard small-cap accounts."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Family governance; standard."
+      },
+      "financial": {
+        "score": 5,
+        "reason": "Elevated leverage."
+      },
+      "business": {
+        "score": 6,
+        "reason": "Aluminium-price sensitivity."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Elevated leverage",
+      "Commodity-price sensitivity"
+    ],
+    "summary": "Moderate: niche aluminium-products maker; elevated leverage and commodity sensitivity are the flags.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "MON100": {
+    "score": 8.0,
+    "verdict": "N/A (ETF)",
+    "confidence": "High",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 8,
+        "reason": "Passive ETF ? no company accounting risk."
+      },
+      "governance": {
+        "score": 8,
+        "reason": "Motilal Oswal AMC stewardship."
+      },
+      "financial": {
+        "score": 8,
+        "reason": "Low-cost Nasdaq-100 wrapper."
+      },
+      "business": {
+        "score": 8,
+        "reason": "Diversified Nasdaq-100 exposure."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [],
+    "summary": "Not a company red-flag profile ? passive Nasdaq-100 ETF; reflects AMC operational integrity (high).",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "MOSCHIP": {
+    "score": 5.0,
+    "verdict": "MODERATE",
+    "confidence": "Low",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 5,
+        "reason": "Capitalised development costs; microcap disclosure."
+      },
+      "governance": {
+        "score": 5,
+        "reason": "Microcap governance standards."
+      },
+      "financial": {
+        "score": 5,
+        "reason": "No dividend; modest returns."
+      },
+      "business": {
+        "score": 5,
+        "reason": "Sub-scale; inconsistent profitability."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Microcap disclosure standards",
+      "Inconsistent profitability"
+    ],
+    "summary": "Moderate: sub-scale fabless/embedded-design firm still establishing a consistent track record.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "MSTCLTD": {
+    "score": 6.0,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 6,
+        "reason": "Negative recent operating cash flow noted."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "PSU governance; mandate-dependent."
+      },
+      "financial": {
+        "score": 7,
+        "reason": "Asset-light; very high dividends."
+      },
+      "business": {
+        "score": 5,
+        "reason": "Mandate/policy-dependent volumes."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Mandate/policy dependence",
+      "PSU governance constraints"
+    ],
+    "summary": "Moderate: asset-light, high-dividend auction PSU; mandate dependence and PSU governance are the flags.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "NIITLTD": {
+    "score": 6.4,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 7,
+        "reason": "Clean, cash-rich accounts."
+      },
+      "governance": {
+        "score": 7,
+        "reason": "Reputable founders; clean governance."
+      },
+      "financial": {
+        "score": 7,
+        "reason": "Cash-rich; buybacks/dividends."
+      },
+      "business": {
+        "score": 4,
+        "reason": "Core training business structurally disrupted by online platforms."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Core training business structurally disrupted",
+      "Very weak ROE"
+    ],
+    "summary": "Moderate: clean, cash-return-oriented governance, but a structurally disrupted training business drags it down.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "NLCINDIA": {
+    "score": 5.8,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 6,
+        "reason": "PSU accounts; lignite base."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "State PSU; board constraints."
+      },
+      "financial": {
+        "score": 6,
+        "reason": "High leverage; dividends."
+      },
+      "business": {
+        "score": 5,
+        "reason": "Lignite transition risk."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Lignite transition risk",
+      "PSU constraints; high leverage"
+    ],
+    "summary": "Moderate: high-dividend power PSU; high leverage and the lignite transition are the flags.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "OMINFRAL": {
+    "score": 4.3,
+    "verdict": "SERIOUS",
+    "confidence": "High",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 4,
+        "reason": "Loss-making, lumpy EPC accounting."
+      },
+      "governance": {
+        "score": 5,
+        "reason": "Small-cap governance; limited disclosure."
+      },
+      "financial": {
+        "score": 4,
+        "reason": "Negative cash flow; heavy losses."
+      },
+      "business": {
+        "score": 4,
+        "reason": "Loss-making EPC execution."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Loss-making EPC; negative cash flow",
+      "Sub-scale; limited disclosure"
+    ],
+    "summary": "Serious: sub-scale EPC contractor with lumpy, loss-making execution and negative cash flow.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "ORIENTHOT": {
+    "score": 6.6,
+    "verdict": "MINOR",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 7,
+        "reason": "Clean accounts; recovering earnings."
+      },
+      "governance": {
+        "score": 7,
+        "reason": "Taj/IHCL-affiliated governance."
+      },
+      "financial": {
+        "score": 6,
+        "reason": "Moderate debt; dividends."
+      },
+      "business": {
+        "score": 6,
+        "reason": "South-India concentration; cyclical."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "South-India concentration",
+      "Hospitality cyclicality"
+    ],
+    "summary": "Minor: Taj-affiliated, dividend-paying hotel operator; regional concentration and cyclicality are the flags.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "PARKHOSPS": {
+    "score": 6.0,
+    "verdict": "MODERATE",
+    "confidence": "Low",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 6,
+        "reason": "Standard accounts; short history."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Promoter-led; recent IPO."
+      },
+      "financial": {
+        "score": 6,
+        "reason": "Capex-led; no dividend yet."
+      },
+      "business": {
+        "score": 6,
+        "reason": "North-India concentration; integration risk."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Regional (North-India) concentration",
+      "Short listed history"
+    ],
+    "summary": "Moderate: growing North-India hospital operator; regional concentration and short history are the flags.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "PFC": {
+    "score": 6.0,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 6,
+        "reason": "NBFC accounting; provisioning to monitor."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "PSU governance; policy-aligned lending."
+      },
+      "financial": {
+        "score": 6,
+        "reason": "DISCOM-credit/NPA risk."
+      },
+      "business": {
+        "score": 6,
+        "reason": "Policy-aligned power-sector book."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "DISCOM credit/NPA risk",
+      "PSU governance constraints"
+    ],
+    "summary": "Moderate: high-dividend power financier; structural DISCOM-credit risk and PSU governance are the flags.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "PITTIENG": {
+    "score": 5.8,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 6,
+        "reason": "Standard accounts; capital-intensive."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Family governance; standard."
+      },
+      "financial": {
+        "score": 5,
+        "reason": "High leverage; capital intensity."
+      },
+      "business": {
+        "score": 6,
+        "reason": "Rail growth but working-capital-heavy."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "High leverage; capital intensity"
+    ],
+    "summary": "Moderate: well-positioned rail-laminations supplier; high leverage and capital intensity are the flags.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "POWERICA": {
+    "score": 6.0,
+    "verdict": "MODERATE",
+    "confidence": "Low",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 6,
+        "reason": "Standard accounts; strong OCF."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Family governance; standard."
+      },
+      "financial": {
+        "score": 6,
+        "reason": "No dividend; moderate debt."
+      },
+      "business": {
+        "score": 6,
+        "reason": "Long-term DG-demand substitution."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Long-term DG-demand substitution"
+    ],
+    "summary": "Moderate: cash-generative DG-set leader; long-term demand substitution is the main flag.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "PTC": {
+    "score": 5.0,
+    "verdict": "MODERATE",
+    "confidence": "High",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 6,
+        "reason": "PSU trading accounts; standard."
+      },
+      "governance": {
+        "score": 4,
+        "reason": "2022 PTC Financial Services board episode (independent-director resignations alleging governance lapses)."
+      },
+      "financial": {
+        "score": 5,
+        "reason": "PTCFS (NBFC arm) NPA drag."
+      },
+      "business": {
+        "score": 5,
+        "reason": "Thin trading margins; power-exchange disintermediation."
+      }
+    },
+    "critical_flags": [
+      "2022 PTC Financial Services board governance episode"
+    ],
+    "amber_flags": [
+      "PTCFS NBFC NPA drag",
+      "Disintermediation by power exchanges"
+    ],
+    "summary": "Moderate red flags: the well-documented PTC Financial Services governance episode, NBFC-arm NPA drag and disintermediating core economics.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "QUESS": {
+    "score": 6.0,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 6,
+        "reason": "Working-capital-heavy staffing accounts."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Multiple demergers add structural complexity."
+      },
+      "financial": {
+        "score": 6,
+        "reason": "Pays dividends; thin margins."
+      },
+      "business": {
+        "score": 6,
+        "reason": "Structurally thin-margin staffing."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Multiple demergers (structural complexity)",
+      "Thin margins; heavy working capital"
+    ],
+    "summary": "Moderate: scaled staffing platform; thin margins and a complex multi-demerger structure are the flags.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "RAILTEL": {
+    "score": 6.5,
+    "verdict": "MINOR",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 7,
+        "reason": "Clean accounts; low debt."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "PSU governance; board constraints."
+      },
+      "financial": {
+        "score": 7,
+        "reason": "Low debt; high dividends."
+      },
+      "business": {
+        "score": 6,
+        "reason": "Government-client concentration."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Government-client concentration",
+      "PSU governance constraints"
+    ],
+    "summary": "Minor: low-debt, dividend-paying rail-telecom PSU; government-client concentration is the main flag.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "RAYMONDREL": {
+    "score": 4.9,
+    "verdict": "SERIOUS",
+    "confidence": "High",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 5,
+        "reason": "Negative operating cash flow (land/build cycle)."
+      },
+      "governance": {
+        "score": 4,
+        "reason": "Inherits Singhania family-governance overhang."
+      },
+      "financial": {
+        "score": 5,
+        "reason": "Capital-intensive; negative OCF."
+      },
+      "business": {
+        "score": 6,
+        "reason": "Strong Thane bookings off a single land bank."
+      }
+    },
+    "critical_flags": [
+      "Inherits Singhania family-governance overhang"
+    ],
+    "amber_flags": [
+      "Capital-intensive; negative operating cash flow",
+      "Very short standalone history"
+    ],
+    "summary": "Serious-leaning: promising Thane land monetisation, but the inherited Singhania governance overhang, heavy capital intensity and short history weigh on it.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "REDINGTON": {
+    "score": 6.0,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 6,
+        "reason": "Distribution receivables; disciplined working capital."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Reasonable governance for a distributor."
+      },
+      "financial": {
+        "score": 7,
+        "reason": "High dividends; disciplined balance sheet."
+      },
+      "business": {
+        "score": 5,
+        "reason": "Thin margins; vendor concentration."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Thin distribution margins",
+      "Vendor concentration"
+    ],
+    "summary": "Moderate: well-run, dividend-paying distribution major; thin margins and vendor concentration are the flags.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "RUSTOMJEE": {
+    "score": 5.3,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 5,
+        "reason": "Negative operating cash flow (RE-typical)."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Promoter-led; standard governance."
+      },
+      "financial": {
+        "score": 5,
+        "reason": "High leverage."
+      },
+      "business": {
+        "score": 5,
+        "reason": "Weak returns; RE cyclicality."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "High leverage; negative operating cash flow",
+      "Real-estate cyclicality"
+    ],
+    "summary": "Moderate: respected MMR developer; high leverage, negative cash flow and weak returns typical of the RE cycle.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "SANSERA": {
+    "score": 6.0,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 6,
+        "reason": "Standard accounts; moderate working capital."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Promoter-led; standard governance."
+      },
+      "financial": {
+        "score": 6,
+        "reason": "Moderate debt; dividends."
+      },
+      "business": {
+        "score": 6,
+        "reason": "Customer concentration (Bajaj); EV-transition risk."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Customer concentration (Bajaj)",
+      "EV-transition risk on some products"
+    ],
+    "summary": "Moderate: well-run precision-components maker; customer concentration and EV risk are the flags.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "SCI": {
+    "score": 5.5,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 6,
+        "reason": "PSU accounts; standard."
+      },
+      "governance": {
+        "score": 5,
+        "reason": "State-controlled; disinvestment uncertainty."
+      },
+      "financial": {
+        "score": 6,
+        "reason": "High dividends; cyclical."
+      },
+      "business": {
+        "score": 5,
+        "reason": "PSU inefficiency; freight cyclicality."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Privatisation overhang",
+      "PSU inefficiency; freight cyclicality"
+    ],
+    "summary": "Moderate: dividend-paying shipping PSU; privatisation uncertainty and cyclicality are the flags.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "SGIL": {
+    "score": 4.6,
+    "verdict": "SERIOUS",
+    "confidence": "High",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 5,
+        "reason": "Transition/expansion costs hitting margins."
+      },
+      "governance": {
+        "score": 5,
+        "reason": "Promoter-led; limited float."
+      },
+      "financial": {
+        "score": 4,
+        "reason": "Very high leverage (borrowings surged); PAT collapsed ~74%."
+      },
+      "business": {
+        "score": 4,
+        "reason": "Wind-cyclical; expansion disruption; demanding valuation."
+      }
+    },
+    "critical_flags": [
+      "Very high leverage (borrowings surged)",
+      "PAT collapsed ~74% in FY26"
+    ],
+    "amber_flags": [
+      "Demanding valuation",
+      "Wind-cyclical end-market"
+    ],
+    "summary": "Serious: a ~74% FY26 profit collapse, sharply elevated leverage and a demanding valuation.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "SHANKARA": {
+    "score": 5.6,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 6,
+        "reason": "Thin-margin retail accounts; working capital."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Promoter-led; standard governance."
+      },
+      "financial": {
+        "score": 5,
+        "reason": "Thin margins; working-capital intensity."
+      },
+      "business": {
+        "score": 5,
+        "reason": "Retail competition; business restructuring."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Thin-margin retail; working capital",
+      "Competition / business restructuring"
+    ],
+    "summary": "Moderate: building-materials retailer with thin margins and working-capital intensity.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "SHILPAMED": {
+    "score": 6.0,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 6,
+        "reason": "Recovering profitability; standard accounts."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "USFDA observations to monitor."
+      },
+      "financial": {
+        "score": 6,
+        "reason": "Moderate debt; dividends."
+      },
+      "business": {
+        "score": 6,
+        "reason": "Oncology-API product concentration."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "USFDA-inspection history",
+      "Oncology-API product concentration"
+    ],
+    "summary": "Moderate: oncology-API maker recovering in profitability; USFDA history and product concentration are the flags.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "SIEMENS": {
+    "score": 7.8,
+    "verdict": "MINOR",
+    "confidence": "High",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 8,
+        "reason": "Clean MNC accounts; strong cash."
+      },
+      "governance": {
+        "score": 8,
+        "reason": "Siemens AG governance."
+      },
+      "financial": {
+        "score": 8,
+        "reason": "Debt-free; dividends."
+      },
+      "business": {
+        "score": 7,
+        "reason": "Pending energy demerger; premium valuation."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Pending energy demerger",
+      "Premium valuation"
+    ],
+    "summary": "Minor: blue-chip MNC, debt-free with exemplary governance; the demerger and valuation are the watch-items.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "SJVN": {
+    "score": 5.8,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 6,
+        "reason": "PSU accounts; standard."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "State PSU; board constraints."
+      },
+      "financial": {
+        "score": 6,
+        "reason": "High leverage."
+      },
+      "business": {
+        "score": 5,
+        "reason": "Weak ROE; hydro-execution delays."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Weak returns; hydro-execution delays",
+      "High leverage; PSU constraints"
+    ],
+    "summary": "Moderate: dividend-paying hydro PSU; weak returns, high leverage and execution delays are the flags.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "SKFINDIA": {
+    "score": 7.8,
+    "verdict": "MINOR",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 8,
+        "reason": "Clean MNC accounts."
+      },
+      "governance": {
+        "score": 8,
+        "reason": "SKF MNC governance."
+      },
+      "financial": {
+        "score": 8,
+        "reason": "Debt-free; dividends."
+      },
+      "business": {
+        "score": 7,
+        "reason": "Auto-cycle sensitivity; demerger in progress."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Auto-cycle sensitivity",
+      "Demerger in progress"
+    ],
+    "summary": "Minor: debt-free, well-governed MNC bearings maker; auto-cycle sensitivity and the demerger are the flags.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "SKFINDUS": {
+    "score": 7.8,
+    "verdict": "MINOR",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 8,
+        "reason": "Clean MNC accounts."
+      },
+      "governance": {
+        "score": 8,
+        "reason": "SKF MNC governance."
+      },
+      "financial": {
+        "score": 8,
+        "reason": "Low debt; dividends."
+      },
+      "business": {
+        "score": 7,
+        "reason": "Auto-cycle sensitivity."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Auto-cycle sensitivity"
+    ],
+    "summary": "Minor: debt-free SKF India franchise with strong governance; auto-cycle sensitivity is the main flag.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "SONACOMS": {
+    "score": 6.5,
+    "verdict": "MINOR",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 7,
+        "reason": "Clean accounts; recent margin compression."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Leadership transition (post-chairman); PE-exit selling."
+      },
+      "financial": {
+        "score": 7,
+        "reason": "Low debt; dividends."
+      },
+      "business": {
+        "score": 6,
+        "reason": "Margin compression; EV exposure."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Leadership transition (post-chairman)",
+      "PE exit selling; margin compression"
+    ],
+    "summary": "Minor: high-quality, low-debt EV-components franchise; the leadership transition and margin compression are the flags.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "SUVEN": {
+    "score": 4.8,
+    "verdict": "SERIOUS",
+    "confidence": "Low",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 5,
+        "reason": "Deep losses; negative operating cash flow."
+      },
+      "governance": {
+        "score": 5,
+        "reason": "Source-file identity/data conflict."
+      },
+      "financial": {
+        "score": 4,
+        "reason": "R&D cash burn."
+      },
+      "business": {
+        "score": 5,
+        "reason": "Discovery-stage, milestone-dependent."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "R&D cash burn; negative operating cash flow",
+      "Source-file identity conflict"
+    ],
+    "summary": "Serious-leaning: founder-family drug-discovery firm in a cash-burning phase; a source-file identity mix-up reduces confidence.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "SUZLON": {
+    "score": 4.9,
+    "verdict": "SERIOUS",
+    "confidence": "High",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 4,
+        "reason": "Trade receivables surged 67.8% YoY vs revenue +54%; weak cash conversion (CFO/PAT ~38%)."
+      },
+      "governance": {
+        "score": 5,
+        "reason": "Legacy promoter (Tanti) debt-restructuring/governance overhang."
+      },
+      "financial": {
+        "score": 5,
+        "reason": "Finance costs 85% above guidance; net cash now."
+      },
+      "business": {
+        "score": 6,
+        "reason": "Strong wind-energy demand growth."
+      }
+    },
+    "critical_flags": [
+      "Trade receivables surged 67.8% YoY vs revenue +54% ? earnings-quality risk",
+      "Weak cash conversion (CFO/PAT ~38%)"
+    ],
+    "amber_flags": [
+      "Finance costs 85% above guidance",
+      "Legacy promoter-governance overhang"
+    ],
+    "summary": "Serious: despite strong headline growth, a sharp receivables build-up, weak cash conversion, guidance misses and a legacy governance overhang are serious quality flags.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "TATACOMM": {
+    "score": 6.9,
+    "verdict": "MINOR",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 7,
+        "reason": "Clean accounts; strong cash generation."
+      },
+      "governance": {
+        "score": 8,
+        "reason": "Tata-group governance."
+      },
+      "financial": {
+        "score": 6,
+        "reason": "High legacy-acquisition debt."
+      },
+      "business": {
+        "score": 6,
+        "reason": "Gradual growth."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "High legacy-acquisition debt"
+    ],
+    "summary": "Minor: Tata-governed global networking business with strong cash flow; high acquisition debt is the main flag.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "TEGA": {
+    "score": 5.8,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 6,
+        "reason": "Standard accounts; dividends."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Family governance; standard."
+      },
+      "financial": {
+        "score": 6,
+        "reason": "Moderate debt."
+      },
+      "business": {
+        "score": 5,
+        "reason": "Mining-capex cyclicality."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Mining-capex cyclicality"
+    ],
+    "summary": "Moderate: niche mining-equipment maker; cyclicality is the main flag.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "TEJASNET": {
+    "score": 5.2,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 5,
+        "reason": "Current losses; heavy BSNL receivables."
+      },
+      "governance": {
+        "score": 7,
+        "reason": "Tata-group governance."
+      },
+      "financial": {
+        "score": 4,
+        "reason": "Losses; very high leverage."
+      },
+      "business": {
+        "score": 4,
+        "reason": "Heavy BSNL-execution dependence / payment delays."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Current losses; very high leverage",
+      "Heavy BSNL-execution dependence"
+    ],
+    "summary": "Moderate: strong Tata governance, but current losses, very high leverage and heavy BSNL dependence weigh on it.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "THERMAX": {
+    "score": 7.3,
+    "verdict": "MINOR",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 7,
+        "reason": "Clean accounts; sound disclosure."
+      },
+      "governance": {
+        "score": 8,
+        "reason": "Aga family ? exemplary governance."
+      },
+      "financial": {
+        "score": 7,
+        "reason": "Some project debt; dividends."
+      },
+      "business": {
+        "score": 7,
+        "reason": "Slow EPC order-to-revenue conversion."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Slow EPC order-to-revenue conversion"
+    ],
+    "summary": "Minor: exemplary governance and clean accounts; slow EPC conversion is the main flag.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "TRITURBINE": {
+    "score": 7.5,
+    "verdict": "MINOR",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 7,
+        "reason": "Clean accounts; good cash conversion."
+      },
+      "governance": {
+        "score": 8,
+        "reason": "Sawhney family; clean governance."
+      },
+      "financial": {
+        "score": 8,
+        "reason": "Very low debt; high ROE."
+      },
+      "business": {
+        "score": 7,
+        "reason": "Premium valuation."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Premium valuation"
+    ],
+    "summary": "Minor: low-debt, high-return market leader with clean governance; only valuation caps it.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "TVSELECT": {
+    "score": 4.9,
+    "verdict": "SERIOUS",
+    "confidence": "High",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 5,
+        "reason": "Very weak returns."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "TVS-group governance."
+      },
+      "financial": {
+        "score": 4,
+        "reason": "High leverage; weak ROE; no dividend."
+      },
+      "business": {
+        "score": 4,
+        "reason": "POS/peripherals under structural pressure."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Very weak returns",
+      "High leverage; structurally pressured product mix"
+    ],
+    "summary": "Serious-leaning: trusted TVS lineage, but very weak returns, high leverage and a structurally pressured product mix.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "UNIECOM": {
+    "score": 5.5,
+    "verdict": "MODERATE",
+    "confidence": "Low",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 6,
+        "reason": "Standard SaaS accounts; small scale."
+      },
+      "governance": {
+        "score": 5,
+        "reason": "PE/promoter selling; ownership in transition."
+      },
+      "financial": {
+        "score": 6,
+        "reason": "Low debt; no dividend."
+      },
+      "business": {
+        "score": 5,
+        "reason": "Small scale; valuation de-rating."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "PE/promoter selling",
+      "Small scale; valuation de-rating"
+    ],
+    "summary": "Moderate: profitable e-commerce SaaS; PE/promoter selling and small scale are the flags.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "URBANCO": {
+    "score": 5.6,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 6,
+        "reason": "History of losses; ESOP-heavy cost base (recently profitable)."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Post-IPO PE selling; standard governance."
+      },
+      "financial": {
+        "score": 5,
+        "reason": "History of losses; reliance on funding."
+      },
+      "business": {
+        "score": 5,
+        "reason": "Gig-worker regulatory risk; competition."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "History of losses; ESOP dilution",
+      "Gig-worker regulatory risk"
+    ],
+    "summary": "Moderate: gig-services marketplace recently turned profitable; loss history, ESOP dilution and gig-regulatory risk are the flags.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "USHAMART": {
+    "score": 6.2,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 6,
+        "reason": "Clean accounts; improved post steel-sale."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Standard governance (improved post-divestment)."
+      },
+      "financial": {
+        "score": 7,
+        "reason": "Low debt; dividends."
+      },
+      "business": {
+        "score": 6,
+        "reason": "Input-cost cyclicality."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Input-cost cyclicality"
+    ],
+    "summary": "Minor: refocused, low-debt wire-rope leader; input-cost cyclicality is the main flag.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "VIYASH": {
+    "score": 5.2,
+    "verdict": "MODERATE",
+    "confidence": "Low",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 5,
+        "reason": "Post-merger consolidation; strong reported growth to verify."
+      },
+      "governance": {
+        "score": 5,
+        "reason": "USFDA-observation risk; post-merger integration."
+      },
+      "financial": {
+        "score": 5,
+        "reason": "Integration-related debt."
+      },
+      "business": {
+        "score": 6,
+        "reason": "Diversified pharma but quality unproven."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "USFDA-observation risk",
+      "Post-merger integration debt; quality to verify"
+    ],
+    "summary": "Moderate red flags: ambitious pharma roll-up with strong reported growth, but USFDA-observation risk and integration debt; quality to be verified.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "VSTTILLERS": {
+    "score": 6.8,
+    "verdict": "MINOR",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 7,
+        "reason": "Clean accounts; cash-generative."
+      },
+      "governance": {
+        "score": 7,
+        "reason": "Conservative family governance."
+      },
+      "financial": {
+        "score": 8,
+        "reason": "Debt-free; dividends."
+      },
+      "business": {
+        "score": 5,
+        "reason": "Cyclical earnings dip; rising competition."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Cyclical earnings dip",
+      "Rising small-tractor competition"
+    ],
+    "summary": "Minor: conservative, debt-free market leader; a cyclical dip and competition are the flags.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "WELCORP": {
+    "score": 6.0,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 6,
+        "reason": "Cyclical pipe accounts; standard."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Group-governance perception mixed (legacy episodes)."
+      },
+      "financial": {
+        "score": 6,
+        "reason": "Moderate debt; dividends."
+      },
+      "business": {
+        "score": 6,
+        "reason": "Steel/oil cyclicality; Sintex integration."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Group-governance perception (legacy episodes)",
+      "Steel/oil cyclicality"
+    ],
+    "summary": "Moderate: scaled, dividend-paying pipe maker; group-governance perception and cyclicality are the flags.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "WENDT": {
+    "score": 5.8,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 6,
+        "reason": "Standard accounts; sharp FY26 earnings decline."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "FY26 CEO/leadership churn; strong CUMI/Wendt parentage."
+      },
+      "financial": {
+        "score": 7,
+        "reason": "Debt-free; dividends."
+      },
+      "business": {
+        "score": 4,
+        "reason": "FY26 PAT collapse (60%+); segment concentration."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "FY26 PAT collapse (60%+)",
+      "Senior-leadership churn; segment concentration"
+    ],
+    "summary": "Moderate: strong parentage and a debt-free balance sheet, but a sharp FY26 earnings collapse and CEO churn weigh on it.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "WHIRLPOOL": {
+    "score": 5.8,
+    "verdict": "MODERATE",
+    "confidence": "High",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 7,
+        "reason": "Clean MNC accounts."
+      },
+      "governance": {
+        "score": 5,
+        "reason": "Parent cut stake 75%->51% with signalled further reduction ? negative ownership signal."
+      },
+      "financial": {
+        "score": 6,
+        "reason": "Pays dividends; weak ROE."
+      },
+      "business": {
+        "score": 5,
+        "reason": "Korean/Chinese competition; demand softness."
+      }
+    },
+    "critical_flags": [
+      "Parent cut stake 75%->51% with signalled further reduction"
+    ],
+    "amber_flags": [
+      "Weak returns; demand softness",
+      "Intense competition"
+    ],
+    "summary": "Moderate red flags: MNC-grade accounts, but the parent's ongoing stake reduction is a significant ownership-behaviour overhang.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "WOCKPHARMA": {
+    "score": 4.8,
+    "verdict": "SERIOUS",
+    "confidence": "High",
+    "updated": "2026-06-18",
+    "categories": {
+      "accounting": {
+        "score": 5,
+        "reason": "Volatile profitability; R&D capitalisation."
+      },
+      "governance": {
+        "score": 5,
+        "reason": "Past USFDA import-alert history."
+      },
+      "financial": {
+        "score": 4,
+        "reason": "Weak ROE; high debt; R&D cash burn."
+      },
+      "business": {
+        "score": 5,
+        "reason": "Large R&D-to-cash-conversion gap."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [
+      "Past USFDA import-alert history",
+      "Weak returns; high leverage; R&D cash burn"
+    ],
+    "summary": "Serious-leaning: promising antibiotic pipeline, but weak returns, high leverage, R&D burn and a troubled regulatory history weigh heavily.",
+    "sources": "Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  }
+}

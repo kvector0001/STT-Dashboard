@@ -1016,6 +1016,7 @@
       <button class="hdr-btn export" onclick="exportPendingJSON()">⬇ Export Pending for Claude</button>
       <button class="hdr-btn export" style="opacity:0.6;" onclick="exportStocksJSON()">⬇ Export ALL</button>
       <a class="hdr-btn" href="prompt_outputs/management_trust_findings.md" download="management_trust_findings.md" title="Download the full Management Trust scoring report for all 151 holdings" style="text-decoration:none;display:inline-flex;align-items:center;">👔 Mgmt Trust Report</a>
+      <a class="hdr-btn" href="prompt_outputs/red_flags_findings.md" download="red_flags_findings.md" title="Download the full Red-Flag forensic scan report for all 151 holdings" style="text-decoration:none;display:inline-flex;align-items:center;">🚩 Red Flags Report</a>
       <button class="hdr-btn export" onclick="refreshDataBtn()" id="refresh-btn">🔄 Refresh Data</button>
       <div id="refresh-progress" style="font-size:0.68rem;color:var(--text3);font-family:var(--mono);min-width:60px;"></div>
       <div class="last-updated" id="last-updated">Loading…</div>
@@ -1191,6 +1192,7 @@
           <th onclick="sortAnalysis('ticker')">Symbol <span id="sort-ticker" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('name')">Company Name <span id="sort-name" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('mgmt_trust_score')" title="Management Trust score (/10) from forensic analysis — hover a score to see the full breakdown">👔 Mgmt Trust <span id="sort-mgmt_trust_score" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('rf_score_val')" title="Red-Flag forensic score (/10): higher = cleaner, lower = more red flags. Hover a score for the full breakdown">🚩 Red Flags <span id="sort-rf_score_val" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('conviction')">Conv. <span id="sort-conviction" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('moat_class')">Moat <span id="sort-moat_class" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('quantity')">Qty. <span id="sort-quantity" class="sort-indicator"></span></th>
@@ -3123,16 +3125,58 @@ function buildMgmtTip(mt, s) {
     <div class="mt-conf">Confidence: ${esc(mt.confidence || '—')}${mt.updated ? ' · ' + esc(mt.updated) : ''}</div>`;
 }
 
+function rfCell(s) {
+  const rf = s.rf_score;
+  if (!rf || typeof rf.score !== 'number') {
+    return `<td style="text-align:center;color:var(--text3)">—</td>`;
+  }
+  const sc  = rf.score;
+  const col = sc >= 8 ? 'var(--green)' : sc >= 6.5 ? 'var(--amber-text)' : sc >= 5 ? '#f97316' : 'var(--red-text)';
+  return `<td class="rf-cell" data-ticker="${esc(s.ticker)}" style="text-align:center;font-weight:700;cursor:help;color:${col}">${sc.toFixed(1)}<span style="display:block;font-size:0.55rem;font-weight:600;color:var(--text3)">${esc(rf.verdict || '')}</span></td>`;
+}
+
+function buildRfTip(rf, s) {
+  if (!rf) return '';
+  const sc  = rf.score;
+  const col = sc >= 8 ? 'var(--green)' : sc >= 6.5 ? 'var(--amber-text)' : sc >= 5 ? '#f97316' : 'var(--red-text)';
+  const C = rf.categories || {};
+  const row = (label, key) => {
+    const p = C[key];
+    if (!p) return '';
+    return `<tr><td>${label}</td><td>${p.score != null ? p.score : '—'}</td><td>${esc(p.reason || '')}</td></tr>`;
+  };
+  const flagList = (arr, colr, label) => (arr && arr.length) ? `<div style="margin-top:5px;"><b style="color:${colr}">${label}</b><ul style="margin:2px 0 0;padding-left:16px;">${arr.map(f=>`<li>${esc(f)}</li>`).join('')}</ul></div>` : '';
+  return `
+    <h4>🚩 ${esc(s.name || s.ticker)} — Red-Flag Score: <span style="color:${col}">${sc.toFixed(1)}/10</span> (${esc(rf.verdict || '')})</h4>
+    <div style="font-size:0.6rem;color:var(--text3);margin:-2px 0 4px;">Higher = cleaner · Lower = more red flags</div>
+    <table>
+      ${row('Accounting (30%)', 'accounting')}
+      ${row('Governance (30%)', 'governance')}
+      ${row('Financial (20%)', 'financial')}
+      ${row('Business (20%)', 'business')}
+    </table>
+    ${flagList(rf.critical_flags, 'var(--red-text)', '🔴 Critical')}
+    ${flagList(rf.amber_flags, '#f97316', '🟠 Amber')}
+    ${rf.summary ? `<div class="mt-summary">${esc(rf.summary)}</div>` : ''}
+    <div class="mt-conf">Confidence: ${esc(rf.confidence || '—')}${rf.updated ? ' · ' + esc(rf.updated) : ''}</div>`;
+}
+
 (function initMgmtTip() {
   const tip = () => document.getElementById('mgmt-tip');
   document.addEventListener('mouseover', e => {
-    const cell = e.target.closest && e.target.closest('.mgmt-cell');
+    const mcell = e.target.closest && e.target.closest('.mgmt-cell');
+    const rcell = e.target.closest && e.target.closest('.rf-cell');
+    const cell = mcell || rcell;
     if (!cell) return;
     const t = cell.dataset.ticker;
     const s = allStocks.find(x => x.ticker === t);
-    if (!s || !s.mgmt_trust) return;
+    if (!s) return;
+    let html = '';
+    if (mcell && s.mgmt_trust) html = buildMgmtTip(s.mgmt_trust, s);
+    else if (rcell && s.rf_score) html = buildRfTip(s.rf_score, s);
+    if (!html) return;
     const el = tip();
-    el.innerHTML = buildMgmtTip(s.mgmt_trust, s);
+    el.innerHTML = html;
     el.style.display = 'block';
     const r = cell.getBoundingClientRect();
     const w = el.offsetWidth || 400, h = el.offsetHeight || 200;
@@ -3143,7 +3187,7 @@ function buildMgmtTip(mt, s) {
     el.style.top  = top + 'px';
   });
   document.addEventListener('mouseout', e => {
-    if (e.target.closest && e.target.closest('.mgmt-cell')) tip().style.display = 'none';
+    if (e.target.closest && (e.target.closest('.mgmt-cell') || e.target.closest('.rf-cell'))) tip().style.display = 'none';
   });
 })();
 
@@ -3166,6 +3210,7 @@ function renderAnalysisTable() {
       conviction: s.conviction || 0,
       moat_class:  s.moat_class || '',
       mgmt_trust_score: (s.mgmt_trust && typeof s.mgmt_trust.score === 'number') ? s.mgmt_trust.score : null,
+      rf_score_val: (s.rf_score && typeof s.rf_score.score === 'number') ? s.rf_score.score : null,
     };
   });
 
@@ -3248,6 +3293,7 @@ function renderAnalysisTable() {
       <td><strong><span style="cursor:pointer;color:var(--blue-text);" title="View fundamental analysis card" onclick="goToCard('${esc(s.ticker)}')">${s.ticker}</span></strong></td>
       <td class="research-name" style="cursor:pointer;color:var(--blue-text);" title="Click to open Tickertape, Trendlyne, Tijori" data-ticker="${esc(s.ticker)}" data-name="${esc(s.name || s.ticker)}" onclick="openResearchTabsFromEl(event,this)"><span class="research-name" style="text-decoration:underline dotted;pointer-events:none;">${esc(s.name || s.ticker)}</span></td>
       ${mgmtTrustCell(s)}
+      ${rfCell(s)}
       <td style="text-align:center;font-weight:600;color:${ (s.conviction||0) >= 8 ? 'var(--green)' : (s.conviction||0) >= 6 ? 'var(--amber-text)' : (s.conviction||0) >= 4 ? '#f97316' : (s.conviction||0) >= 1 ? 'var(--red-text)' : 'var(--text3)' }">${s.conviction ? s.conviction+'/10' : '—'}</td>
       <td style="font-size:0.7rem;font-weight:600;color:${ s.moat_class==='wide' ? 'var(--green)' : s.moat_class==='narrow' ? 'var(--amber-text)' : 'var(--text3)' }">${s.moat_class === 'wide' ? '▲ Wide' : s.moat_class === 'narrow' ? '◆ Narrow' : '—'}</td>
       <td>${prv(f(s.quantity))}</td>
@@ -3532,13 +3578,16 @@ async function loadData() {
   const stockFetches = stockFiles.map(file => fetch(file + ts_qs).then(r => r.ok ? r.json() : []));
   const pricesFetch  = fetch('prices.json' + ts_qs).then(r => r.ok ? r.json() : {});
   const mgmtFetch    = fetch('management_trust.json' + ts_qs).then(r => r.ok ? r.json() : {}).catch(() => ({}));
+  const rfFetch      = fetch('red_flags.json' + ts_qs).then(r => r.ok ? r.json() : {}).catch(() => ({}));
 
-  const [stockDataArrays, prices, mgmtTrust] = await Promise.all([
+  const [stockDataArrays, prices, mgmtTrust, redFlags] = await Promise.all([
     Promise.all(stockFetches),
     pricesFetch,
-    mgmtFetch
+    mgmtFetch,
+    rfFetch
   ]);
   window._mgmtTrust = mgmtTrust || {};
+  window._redFlags = redFlags || {};
 
   // Merge all stocks.json / Stocks_Fundamentals*.json files
   // We use a Map to ensure unique records by ticker
@@ -3613,6 +3662,10 @@ async function loadData() {
     // Attach Management Trust analysis (separate file) if present
     if (mgmtTrust && mgmtTrust[s.ticker]) {
       s.mgmt_trust = mgmtTrust[s.ticker];
+    }
+    // Attach Red Flags forensic scan (separate file) if present
+    if (redFlags && redFlags[s.ticker]) {
+      s.rf_score = redFlags[s.ticker];
     }
   });
 
