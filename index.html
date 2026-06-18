@@ -1177,6 +1177,8 @@
     <span style="font-size:0.72rem;color:var(--text3);margin-right:2px;">Filter:</span>
     <button class="analysis-chip active" data-afilter="all" onclick="setAnalysisFilter('all',this)">All</button>
     <button class="analysis-chip" data-afilter="conviction7" onclick="setAnalysisFilter('conviction7',this)">Conv 7+</button>
+    <button class="analysis-chip" data-afilter="trust7" onclick="setAnalysisFilter('trust7',this)">👔 Trust 7+</button>
+    <button class="analysis-chip" data-afilter="redflag" onclick="setAnalysisFilter('redflag',this)">🚩 Red Flags (&lt;5)</button>
     <button class="analysis-chip" data-afilter="widemoat" onclick="setAnalysisFilter('widemoat',this)">Wide Moat</button>
     <button class="analysis-chip" data-afilter="strongbullish" onclick="setAnalysisFilter('strongbullish',this)">Strong Bullish</button>
     <button class="analysis-chip" data-afilter="profit" onclick="setAnalysisFilter('profit',this)">In Profit</button>
@@ -1312,9 +1314,9 @@ Example:
 
 <!-- AI PICKER POPOVER -->
 <div class="ai-picker-pop" id="ai-picker-pop">
-  <a id="aip-claude"   href="https://claude.ai"        target="_blank" rel="noopener">🧡 Claude</a>
-  <a id="aip-chatgpt"  href="https://chatgpt.com"       target="_blank" rel="noopener">🟢 ChatGPT</a>
-  <a id="aip-deepseek" href="https://chat.deepseek.com" target="_blank" rel="noopener">🔵 DeepSeek</a>
+  <a id="aip-claude"   href="https://claude.ai"        target="_blank" rel="noopener"><svg width="15" height="15" viewBox="0 0 24 24" fill="#D97757" aria-hidden="true"><path d="M12 1l2 9 9 2-9 2-2 9-2-9-9-2 9-2z"/></svg> Claude</a>
+  <a id="aip-chatgpt"  href="https://chatgpt.com"       target="_blank" rel="noopener"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#9aa0a6" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.6l8.1 4.7v9.4L12 21.4 3.9 16.7V7.3z"/></svg> ChatGPT</a>
+  <a id="aip-deepseek" href="https://chat.deepseek.com" target="_blank" rel="noopener"><svg width="15" height="15" viewBox="0 0 24 24" fill="#4D6BFE" aria-hidden="true"><path d="M2.5 8c4.5-.3 6 3.5 9.5 3.5S17 7.7 21.5 8c.4 5.8-4 10-9.5 10S2.1 13.8 2.5 8z"/></svg> DeepSeek</a>
 </div>
 
 <!-- MANAGEMENT TRUST HOVER TOOLTIP -->
@@ -1411,10 +1413,7 @@ function renderCard(s) {
       <div style="display: flex; align-items: center; gap: 8px; flex: 1; min-width: 0;">
         <div class="card-name clickable metric-click" data-metric="conviction" data-ticker="${s.ticker}" data-name="${s.name}" title="${esc(s.name)} — Click for Analysis" style="cursor:pointer">${esc(s.name || '—')}</div>
         <span style="color:var(--text3);font-size:11px;white-space:nowrap;flex-shrink:0;">
-          🔗 Catalysts
-          <a href="https://claude.ai" target="_blank" rel="noopener" class="catalyst-link" data-ticker="${s.ticker}" data-name="${s.name}" style="color:var(--purple-text);text-decoration:none;font-weight:700;">(1)</a>
-          <a href="https://chatgpt.com" target="_blank" rel="noopener" class="catalyst-link" data-ticker="${s.ticker}" data-name="${s.name}" style="color:var(--green-text);text-decoration:none;font-weight:700;">(2)</a>
-          <a href="https://chat.deepseek.com" target="_blank" rel="noopener" class="catalyst-link" data-ticker="${s.ticker}" data-name="${s.name}" style="color:var(--blue-text);text-decoration:none;font-weight:700;">(3)</a>
+          🔗 <span class="catalyst-link" data-ticker="${s.ticker}" data-name="${s.name}" style="cursor:pointer;color:var(--purple-text);font-weight:700;text-decoration:underline dotted;" title="Catalyst analysis — pick Claude / ChatGPT / DeepSeek">Catalysts 🔍</span>
         </span>
       </div>
     </div>
@@ -1614,10 +1613,7 @@ function renderCard(s) {
     </div>` : ''}
 
     ${s.track && s.track.length ? `<div>
-      <div class="section-label">📊 Tracking KPIs
-        <a href="https://claude.ai" target="_blank" rel="noopener" class="kpi-link" data-ticker="${s.ticker}" data-name="${s.name || s.ticker}" style="color:var(--purple-text);text-decoration:none;font-weight:700;margin-left:4px;">(1)</a>
-        <a href="https://chatgpt.com" target="_blank" rel="noopener" class="kpi-link" data-ticker="${s.ticker}" data-name="${s.name || s.ticker}" style="color:var(--green-text);text-decoration:none;font-weight:700;">(2)</a>
-        <a href="https://chat.deepseek.com" target="_blank" rel="noopener" class="kpi-link" data-ticker="${s.ticker}" data-name="${s.name || s.ticker}" style="color:var(--blue-text);text-decoration:none;font-weight:700;">(3)</a>
+      <div class="section-label">📊 <span class="kpi-link" data-ticker="${s.ticker}" data-name="${s.name || s.ticker}" style="cursor:pointer;color:var(--blue-text);font-weight:700;text-decoration:underline dotted;" title="Track KPIs — pick Claude / ChatGPT / DeepSeek">Tracking KPIs 🔍</span>
       </div>
       <div class="pill-row">${pills(s.track, 'blue')}</div>
     </div>` : ''}
@@ -2652,11 +2648,12 @@ document.addEventListener('click', function(e) {
   // Handle catalyst links
   const catalystEl = e.target.closest('.catalyst-link');
   if (catalystEl) {
+    e.preventDefault();
+    e.stopPropagation();
     const ticker = catalystEl.dataset.ticker;
     const name = catalystEl.dataset.name;
-    console.log('Catalyst link clicked:', ticker, name);
     if (ticker) {
-      copyPrompt('catalyst', ticker, name);
+      openCatalystAnalysis(ticker, name, catalystEl);
     }
     return;
   }
@@ -2664,11 +2661,12 @@ document.addEventListener('click', function(e) {
   // Handle KPI links
   const kpiEl = e.target.closest('.kpi-link');
   if (kpiEl) {
+    e.preventDefault();
+    e.stopPropagation();
     const ticker = kpiEl.dataset.ticker;
     const name = kpiEl.dataset.name;
-    console.log('KPI link clicked:', ticker, name);
     if (ticker) {
-      copyPrompt('kpi', ticker, name);
+      trackKPIs(ticker, name, kpiEl);
     }
     return;
   }
@@ -3259,6 +3257,8 @@ function renderAnalysisTable() {
     }
     // Filter by chips (multi-select: row must pass ALL active filters)
     if (analysisFilters.has('conviction7') && (s.conviction || 0) < 7) return;
+    if (analysisFilters.has('trust7') && !(s.mgmt_trust && typeof s.mgmt_trust.score === 'number' && s.mgmt_trust.score >= 7)) return;
+    if (analysisFilters.has('redflag') && !(s.rf_score && typeof s.rf_score.score === 'number' && s.rf_score.score < 5)) return;
     if (analysisFilters.has('widemoat') && s.moat_class !== 'wide') return;
     if (analysisFilters.has('strongbullish') && s.trend_signal !== 'Strong Bullish') return;
     if (analysisFilters.has('profit') && (s.pnl_abs || 0) <= 0) return;
