@@ -829,6 +829,32 @@
     }
     .ai-picker-pop a:hover { background: var(--bg3); color: var(--purple-text); }
 
+    /* ── COLUMN FILTER ── */
+    .col-filter-icon {
+      cursor: pointer; margin-left: 3px; color: var(--text3);
+      display: inline-flex; vertical-align: middle; opacity: 0.6;
+    }
+    .col-filter-icon:hover { color: var(--blue-text); opacity: 1; }
+    .col-filter-icon.active { color: var(--blue); opacity: 1; }
+    .col-filter-pop {
+      position: fixed; background: var(--bg2); border: 1px solid var(--border);
+      border-radius: 8px; padding: 6px 4px; z-index: 10000;
+      box-shadow: 0 4px 20px rgba(0,0,0,.5); min-width: 150px;
+      max-height: 340px; overflow-y: auto; display: none; font-size: 0.8rem;
+    }
+    .col-filter-pop label {
+      display: flex; align-items: center; gap: 7px; padding: 6px 10px;
+      border-radius: 5px; cursor: pointer; color: var(--text); white-space: nowrap;
+    }
+    .col-filter-pop label:hover { background: var(--bg3); }
+    .col-filter-pop .cf-clear {
+      display: block; width: calc(100% - 8px); margin: 4px 4px 0; padding: 6px;
+      text-align: center; border-top: 1px solid var(--border); color: var(--text3);
+      cursor: pointer; background: none; border-left: none; border-right: none;
+      border-bottom: none; font-size: 0.72rem;
+    }
+    .col-filter-pop .cf-clear:hover { color: var(--red-text); }
+
     /* ── MODAL ── */
     .modal-overlay {
       display: none;
@@ -1191,9 +1217,9 @@
         <tr>
           <th onclick="sortAnalysis('ticker')">Symbol <span id="sort-ticker" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('name')">Company Name <span id="sort-name" class="sort-indicator"></span></th>
-          <th onclick="sortAnalysis('mgmt_trust_score')" title="Management Trust score (/10) from forensic analysis — hover a score to see the full breakdown">👔 Mgmt Trust <span id="sort-mgmt_trust_score" class="sort-indicator"></span></th>
-          <th onclick="sortAnalysis('rf_score_val')" title="Red-Flag forensic score (/10): higher = cleaner, lower = more red flags. Hover a score for the full breakdown">🚩 Red Flags <span id="sort-rf_score_val" class="sort-indicator"></span></th>
-          <th onclick="sortAnalysis('conviction')">Conv. <span id="sort-conviction" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('mgmt_trust_score')" title="Management Trust score (/10) from forensic analysis — hover a score to see the full breakdown">👔 Mgmt Trust <span class="col-filter-icon" data-col="mgmt_trust_score" title="Filter" onclick="event.stopPropagation();openColFilter('mgmt_trust_score',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-mgmt_trust_score" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('rf_score_val')" title="Red-Flag forensic score (/10): higher = cleaner, lower = more red flags. Hover a score for the full breakdown">🚩 Red Flags <span class="col-filter-icon" data-col="rf_score_val" title="Filter" onclick="event.stopPropagation();openColFilter('rf_score_val',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-rf_score_val" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('conviction')">Conv. <span class="col-filter-icon" data-col="conviction" title="Filter" onclick="event.stopPropagation();openColFilter('conviction',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-conviction" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('moat_class')">Moat <span id="sort-moat_class" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('quantity')">Qty. <span id="sort-quantity" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('ltp')">CMP <span id="sort-ltp" class="sort-indicator"></span></th>
@@ -1201,9 +1227,9 @@
           <th onclick="sortAnalysis('pres_value')">Present Value <span id="sort-pres_value" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('pnl_abs')">P&L <span id="sort-pnl_abs" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('pnl_pct')">P&L % <span id="sort-pnl_pct" class="sort-indicator"></span></th>
-          <th onclick="sortAnalysis('movers')" title="Movers — Strict (A): Vol &gt; 3× 30d avg AND &gt; 3× 5d avg AND (ret &gt; +3% or &lt; −3%) | Balanced (C): Vol &gt; 2× 30d avg AND (ret &gt; +4% or &lt; −4%) | Shows A+C, A, C, or No">Movers <span id="sort-movers" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('movers')" title="Movers — Strict (A): Vol &gt; 3× 30d avg AND &gt; 3× 5d avg AND (ret &gt; +3% or &lt; −3%) | Balanced (C): Vol &gt; 2× 30d avg AND (ret &gt; +4% or &lt; −4%) | Shows A+C, A, C, or No">Movers <span class="col-filter-icon" data-col="movers" title="Filter" onclick="event.stopPropagation();openColFilter('movers',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-movers" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('trend_score')" title="Trend Score (0–100) for 3–12 month positional holding | 3 inputs: Price vs 200DMA (40pts) + 200DMA Slope 30d (30pts) + Days above 200DMA last 10 sessions (30pts) | Strong Bullish: ≥85 AND 0–10% zone | Bullish: ≥70 AND 0–10% zone | Extended: ≥70 but &gt;10% | Watch: 55–69 | Hold: 35–54 | Bearish: &lt;35">Trend Score <span id="sort-trend_score" class="sort-indicator"></span></th>
-          <th onclick="sortAnalysis('trend_signal')" title="Trend Signal | Strong Bullish: score≥85 AND 0–10% above 200DMA | Bullish: score≥70 AND 0–10% above 200DMA | Extended: score≥70 but >10% above 200DMA (too extended for fresh entry) | Watch: 55–69 | Hold: 35–54 | Bearish: &lt;35">Trend Signal <span id="sort-trend_signal" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('trend_signal')" title="Trend Signal | Strong Bullish: score≥85 AND 0–10% above 200DMA | Bullish: score≥70 AND 0–10% above 200DMA | Extended: score≥70 but >10% above 200DMA (too extended for fresh entry) | Watch: 55–69 | Hold: 35–54 | Bearish: &lt;35">Trend Signal <span class="col-filter-icon" data-col="trend_signal" title="Filter" onclick="event.stopPropagation();openColFilter('trend_signal',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-trend_signal" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('ret_1d')" title="1-day price return (%)">1D Ret <span id="sort-ret_1d" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('ret_1m')" title="~21 trading day (1-month) price return (%)">1M Ret <span id="sort-ret_1m" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('ret_6m')" title="~126 trading day (6-month) price return (%)">6M Ret <span id="sort-ret_6m" class="sort-indicator"></span></th>
@@ -1316,6 +1342,9 @@ Example:
   <a id="aip-chatgpt"  href="https://chatgpt.com"       target="_blank" rel="noopener"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#9aa0a6" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.6l8.1 4.7v9.4L12 21.4 3.9 16.7V7.3z"/></svg> ChatGPT</a>
   <a id="aip-deepseek" href="https://chat.deepseek.com" target="_blank" rel="noopener"><svg width="15" height="15" viewBox="0 0 24 24" fill="#4D6BFE" aria-hidden="true"><path d="M2.5 8c4.5-.3 6 3.5 9.5 3.5S17 7.7 21.5 8c.4 5.8-4 10-9.5 10S2.1 13.8 2.5 8z"/></svg> DeepSeek</a>
 </div>
+
+<!-- COLUMN FILTER POPOVER -->
+<div class="col-filter-pop" id="col-filter-pop"></div>
 
 <!-- MANAGEMENT TRUST HOVER TOOLTIP -->
 <div class="mgmt-tip" id="mgmt-tip"></div>
@@ -3075,6 +3104,97 @@ function setAnalysisFilter(filter, el) {
   renderAnalysisTable();
 }
 
+// ── Per-column filters (funnel icon dropdowns) ────────────────────────
+const colFilterDefs = {
+  mgmt_trust_score: { label: 'Mgmt Trust', type: 'range',
+    get: s => (s.mgmt_trust && typeof s.mgmt_trust.score === 'number') ? s.mgmt_trust.score : null,
+    options: [ {key:'7.5+', label:'7.5 +', min:7.5, max:Infinity}, {key:'5-7.5', label:'5 – 7.5', min:5, max:7.5}, {key:'3-5', label:'3 – 5', min:3, max:5}, {key:'0-3', label:'0 – 3', min:0, max:3} ] },
+  rf_score_val: { label: 'Red Flags', type: 'range',
+    get: s => (s.rf_score && typeof s.rf_score.score === 'number') ? s.rf_score.score : null,
+    options: [ {key:'7.5+', label:'7.5 + (cleanest)', min:7.5, max:Infinity}, {key:'5-7.5', label:'5 – 7.5', min:5, max:7.5}, {key:'3-5', label:'3 – 5', min:3, max:5}, {key:'0-3', label:'0 – 3 (worst)', min:0, max:3} ] },
+  conviction: { label: 'Conviction', type: 'range',
+    get: s => (typeof s.conviction === 'number' && s.conviction > 0) ? s.conviction : null,
+    options: [ {key:'8+', label:'8 – 10', min:8, max:Infinity}, {key:'6-7', label:'6 – 7', min:6, max:8}, {key:'4-5', label:'4 – 5', min:4, max:6}, {key:'1-3', label:'1 – 3', min:1, max:4} ] },
+  trend_signal: { label: 'Trend Signal', type: 'set', get: s => s.trend_signal || null },
+  movers: { label: 'Movers', type: 'set', get: s => s.movers || null },
+};
+let colFilters = {};  // field -> Set of selected option keys / values
+
+function rowPassesColFilters(s) {
+  for (const field in colFilters) {
+    const sel = colFilters[field];
+    if (!sel || sel.size === 0) continue;
+    const def = colFilterDefs[field];
+    const v = def.get(s);
+    if (def.type === 'range') {
+      if (typeof v !== 'number') return false;
+      let ok = false;
+      for (const key of sel) { const o = def.options.find(o => o.key === key); if (o && v >= o.min && v < o.max) { ok = true; break; } }
+      if (!ok) return false;
+    } else {
+      if (v == null || !sel.has(String(v))) return false;
+    }
+  }
+  return true;
+}
+
+function updateColFilterIcons() {
+  document.querySelectorAll('.col-filter-icon').forEach(ic => {
+    const f = ic.dataset.col;
+    ic.classList.toggle('active', !!(colFilters[f] && colFilters[f].size));
+  });
+}
+
+function openColFilter(field, iconEl) {
+  const pop = document.getElementById('col-filter-pop');
+  const def = colFilterDefs[field];
+  if (!pop || !def) return;
+  if (pop.dataset.field === field && pop.style.display === 'block') { pop.style.display = 'none'; return; }
+  pop.dataset.field = field;
+  const sel = colFilters[field] || new Set();
+  let opts;
+  if (def.type === 'range') {
+    opts = def.options.map(o => ({ key: o.key, label: o.label }));
+  } else {
+    const vals = [...new Set(allStocks.map(s => def.get(s)).filter(v => v != null && v !== ''))].sort();
+    opts = vals.map(v => ({ key: String(v), label: String(v) }));
+  }
+  let html = `<div style="font-size:0.68rem;color:var(--text3);padding:2px 10px 4px;font-weight:700;">Filter: ${esc(def.label)}</div>`;
+  if (!opts.length) html += `<div style="padding:6px 10px;color:var(--text3);">No values</div>`;
+  opts.forEach(o => {
+    html += `<label><input type="checkbox" data-key="${esc(o.key)}" ${sel.has(o.key) ? 'checked' : ''}> ${esc(o.label)}</label>`;
+  });
+  html += `<button class="cf-clear" data-clear="1">Clear filter</button>`;
+  pop.innerHTML = html;
+  pop.querySelectorAll('input[type=checkbox]').forEach(cb => {
+    cb.addEventListener('change', () => {
+      let set = colFilters[field] || new Set();
+      if (cb.checked) set.add(cb.dataset.key); else set.delete(cb.dataset.key);
+      if (set.size) colFilters[field] = set; else delete colFilters[field];
+      updateColFilterIcons();
+      renderAnalysisTable();
+    });
+  });
+  pop.querySelector('.cf-clear').addEventListener('click', () => {
+    delete colFilters[field];
+    updateColFilterIcons();
+    renderAnalysisTable();
+    pop.style.display = 'none';
+  });
+  const r = iconEl.getBoundingClientRect();
+  pop.style.display = 'block';
+  const w = pop.offsetWidth || 160, h = pop.offsetHeight || 200;
+  pop.style.left = Math.max(8, Math.min(r.left, window.innerWidth - w - 8)) + 'px';
+  pop.style.top  = Math.max(8, Math.min(r.bottom + 4, window.innerHeight - h - 8)) + 'px';
+}
+
+document.addEventListener('click', e => {
+  const pop = document.getElementById('col-filter-pop');
+  if (pop && pop.style.display === 'block' && !pop.contains(e.target) && !e.target.closest('.col-filter-icon')) {
+    pop.style.display = 'none';
+  }
+});
+
 function sortAnalysis(field) {
   if (analysisSortBy === field) {
     analysisSortDir = analysisSortDir === 'desc' ? 'asc' : 'desc';
@@ -3263,6 +3383,9 @@ function renderAnalysisTable() {
     if (analysisFilters.has('movers') && (!s.movers || s.movers === 'No')) return;
     if (analysisFilters.has('mustbuy') && !s.must_buy) return;
     if (analysisFilters.has('loss') && (s.pnl_abs || 0) >= 0) return;
+
+    // Per-column funnel filters
+    if (!rowPassesColFilters(s)) return;
 
     const pnlAbs = (s.pnl_abs || 0);
     const pnlPct = (s.pnl_pct || 0);
