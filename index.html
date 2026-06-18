@@ -1623,16 +1623,18 @@ function renderCard(s) {
     </div>` : ''}
 
     <div class="metrics-row" style="margin-top:8px; gap:6px;">
-      <div class="metric-item clickable metric-click" data-metric="peers" data-ticker="${s.ticker}" data-name="${s.name}" style="flex:1; background:var(--bg2); border-radius:6px; padding:8px; border:1px solid var(--border);">
+      <div class="metric-item clickable metric-click" data-metric="peers" data-ticker="${s.ticker}" data-name="${s.name}" style="flex:1; min-width:0; background:var(--bg2); border-radius:6px; padding:8px; border:1px solid var(--border);">
         <span class="metric-label" style="font-size:0.65rem;">👥 Peer Comparison</span>
       </div>
-      <div class="metric-item clickable metric-click mgmt-cell" data-metric="management" data-ticker="${s.ticker}" data-name="${s.name}" style="flex:1; background:var(--bg2); border-radius:6px; padding:8px; border:1px solid var(--border);">
+      <div class="metric-item clickable metric-click mgmt-cell" data-metric="management" data-ticker="${s.ticker}" data-name="${s.name}" style="flex:1; min-width:0; background:var(--bg2); border-radius:6px; padding:8px; border:1px solid var(--border);">
         <span class="metric-label" style="font-size:0.65rem;">👔 Management Trust${(s.mgmt_trust && typeof s.mgmt_trust.score === 'number') ? ` · <b style="color:${s.mgmt_trust.score>=8?'var(--green)':s.mgmt_trust.score>=6?'var(--amber-text)':s.mgmt_trust.score>=4?'#f97316':'var(--red-text)'}">${s.mgmt_trust.score.toFixed(1)}</b>` : ''}</span>
       </div>
-      <div class="metric-item clickable metric-click rf-cell" data-metric="redflags" data-ticker="${s.ticker}" data-name="${s.name}" style="flex:1; background:var(--bg2); border-radius:6px; padding:8px; border:1px solid var(--border);">
+    </div>
+    <div class="metrics-row" style="margin-top:6px; gap:6px;">
+      <div class="metric-item clickable metric-click rf-cell" data-metric="redflags" data-ticker="${s.ticker}" data-name="${s.name}" style="flex:1; min-width:0; background:var(--bg2); border-radius:6px; padding:8px; border:1px solid var(--border);">
         <span class="metric-label" style="font-size:0.65rem;">🚩 Red Flags${(s.rf_score && typeof s.rf_score.score === 'number') ? ` · <b style="color:${s.rf_score.score>=8?'var(--green)':s.rf_score.score>=6.5?'var(--amber-text)':s.rf_score.score>=5?'#f97316':'var(--red-text)'}">${s.rf_score.score.toFixed(1)}</b>` : ''}</span>
       </div>
-      <div class="metric-item clickable metric-click" data-metric="technical" data-ticker="${s.ticker}" data-name="${s.name}" style="flex:1; background:var(--bg2); border-radius:6px; padding:8px; border:1px solid var(--border);">
+      <div class="metric-item clickable metric-click" data-metric="technical" data-ticker="${s.ticker}" data-name="${s.name}" style="flex:1; min-width:0; background:var(--bg2); border-radius:6px; padding:8px; border:1px solid var(--border);">
         <span class="metric-label" style="font-size:0.65rem;">📈 Technical Trends</span>
       </div>
     </div>
