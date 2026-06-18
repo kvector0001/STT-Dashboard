@@ -88,7 +88,7 @@
     .header {
       background: var(--bg2);
       border-bottom: 1px solid var(--border);
-      padding: 1rem 1.25rem 0.75rem;
+      padding: 0.5rem 1.25rem;
       position: sticky;
       top: 0;
       z-index: 100;
@@ -116,7 +116,7 @@
     .summary-bar {
       background: var(--bg2);
       border-bottom: 1px solid var(--border);
-      padding: 0.6rem 1.25rem;
+      padding: 0.45rem 1.25rem;
       display: flex;
       gap: 1.5rem;
       overflow-x: auto;
@@ -595,7 +595,7 @@
       padding: 0 1rem;
     }
     .tab-item {
-      padding: 1rem 1.5rem;
+      padding: 0.6rem 1.5rem;
       cursor: pointer;
       font-weight: 600;
       color: var(--text3);
@@ -949,12 +949,12 @@
       .sort-wrap { width: 100%; margin-left: 0; }
 
       /* Summary bar — horizontal scroll, compact */
-      .summary-bar { padding: 0.5rem 0.75rem; gap: 0.75rem; }
+      .summary-bar { padding: 0.4rem 0.6rem; gap: 0.7rem; }
       .stat-value { font-size: 0.78rem; }
       .stat-label { font-size: 0.58rem; }
 
       /* Header — stack title and actions vertically */
-      .header { padding: 0.5rem 0.75rem; }
+      .header { padding: 0.4rem 0.6rem; }
       .header-top { flex-direction: column; align-items: flex-start; gap: 0.4rem; }
       .header h1 { font-size: 1rem; }
       .header-actions {
@@ -968,7 +968,7 @@
 
       /* Tabs — full width, equal split */
       .tabs-bar { padding: 0; }
-      .tab-item { flex: 1; text-align: center; padding: 0.75rem 0.5rem; font-size: 0.8rem; }
+      .tab-item { flex: 1; text-align: center; padding: 0.5rem 0.5rem; font-size: 0.8rem; }
 
       /* Analysis table container — touch scroll */
       .analysis-table-container {
@@ -1004,7 +1004,6 @@
   <!-- HEADER (Dashboard) -->
   <header class="header">
   <div class="header-top">
-    <h1>📈 <span>Portfolio</span> Dashboard</h1>
     <div class="header-actions">
       <button class="hdr-btn" id="theme-toggle" onclick="toggleTheme()" title="Toggle dark/light mode">☀️ Light</button>
       <button class="hdr-btn" id="lock-btn" onclick="togglePrivacy()" title="Lock/unlock private values">🔒 Lock</button>
@@ -1101,7 +1100,6 @@
   <!-- Re-use header for synchronised look -->
   <header class="header">
     <div class="header-top">
-      <h1>� <span>Portfolio</span> Dashboard</h1>
       <div class="header-actions">
 <button class="hdr-btn export" onclick="refreshDataBtn()" id="refresh-btn-analysis">🔄 Refresh Data</button>
       <div id="refresh-progress-analysis" style="font-size:0.68rem;color:var(--text3);font-family:var(--mono);min-width:60px;"></div>
@@ -3970,9 +3968,10 @@ document.addEventListener('DOMContentLoaded', function() {
 // ── Boot ───────────────────────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', init);
 
-// Restore lock button label if already unlocked in this session
+// Restore lock button label if already unlocked in this session or remembered device
 (function() {
-  if (sessionStorage.getItem('privacy_unlocked') === '1') {
+  if (sessionStorage.getItem('privacy_unlocked') === '1'
+      || localStorage.getItem('privacy_device_trusted') === 'stt-device-trusted-v1') {
     document.querySelectorAll('#lock-btn, #lock-btn-2').forEach(b => b && (b.textContent = '🔓 Unlock'));
   }
 })();
@@ -3996,8 +3995,10 @@ function toggleTheme() {
 
 // ── Privacy lock ──────────────────────────────────────────────────────────
 const PRIVACY_PIN = '1520';
-// Restore unlock state from sessionStorage (persists across page reloads in same tab)
-let privacyUnlocked = sessionStorage.getItem('privacy_unlocked') === '1';
+const TRUSTED_TOKEN = 'stt-device-trusted-v1';
+// Restore unlock state: session flag OR a remembered-device token in localStorage
+let privacyUnlocked = sessionStorage.getItem('privacy_unlocked') === '1'
+                   || localStorage.getItem('privacy_device_trusted') === TRUSTED_TOKEN;
 
 // Private fields: columns by index (0-based) in the analysis table
 // 2=Qty, 3=Buy Value, 4=Present Value, 5=P&L, 6=P&L%
