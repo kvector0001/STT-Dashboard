@@ -1582,14 +1582,12 @@ function renderCard(s) {
       </div>
     </div>` : ''}
 
-    ${(s.mgmt_trust != null || s.pricing_power != null || s.capital_allocation != null) ? `<div>
+    ${(s.pricing_power != null || s.capital_allocation != null) ? `<div>
       <div class="section-label">Quality Scores</div>
       <div class="pill-row" style="gap:6px;">
-        ${scoreBadge('🤝 Mgmt Trust', s.mgmt_trust)}
         ${scoreBadge('💰 Pricing Power', s.pricing_power)}
         ${scoreBadge('🏦 Capital Alloc', s.capital_allocation)}
       </div>
-      ${s.mgmt_trust_note ? `<div class="moat-text" style="margin-top:4px;font-size:0.72rem;color:var(--text2);">${esc(s.mgmt_trust_note)}</div>` : ''}
     </div>` : ''}
 
     <div class="two-col">
@@ -1627,7 +1625,7 @@ function renderCard(s) {
         <span class="metric-label" style="font-size:0.65rem;">👥 Peer Comparison</span>
       </div>
       <div class="metric-item clickable metric-click" data-metric="management" data-ticker="${s.ticker}" data-name="${s.name}" style="flex:1; background:var(--bg2); border-radius:6px; padding:8px; border:1px solid var(--border);">
-        <span class="metric-label" style="font-size:0.65rem;">👔 Management Trust</span>
+        <span class="metric-label" style="font-size:0.65rem;">👔 Management Trust${(s.mgmt_trust && s.mgmt_trust.score != null) ? ` · <b style="color:var(--text);">${Number(s.mgmt_trust.score).toFixed(1)}/10</b>` : ''}</span>
       </div>
       <div class="metric-item clickable metric-click" data-metric="redflags" data-ticker="${s.ticker}" data-name="${s.name}" style="flex:1; background:var(--bg2); border-radius:6px; padding:8px; border:1px solid var(--border);">
         <span class="metric-label" style="font-size:0.65rem;">🚩 Red Flags</span>
