@@ -1,0 +1,4536 @@
+{
+  "_meta": {
+    "description": "Management Trust scores (/10) from the forensic 5-pillar framework. Weights: Promoter Profile 20%, Ownership Behaviour 25%, Capital Allocation 20%, Governance 20%, Execution 15%. Evidence-based from BSE/NSE filings, shareholding patterns, screener.in. Detailed findings in prompt_outputs/management_trust_findings.md",
+    "verdict_scale": "8-10 HIGH | 6-7 MODERATE | 4-5 LOW | <4 AVOID"
+  },
+  "NH": {
+    "score": 8.4,
+    "verdict": "HIGH",
+    "confidence": "High",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 9,
+        "reason": "Founder Dr. Devi Shetty — renowned cardiac surgeon, long clean tenure, strong professional reputation."
+      },
+      "ownership_behaviour": {
+        "score": 8,
+        "reason": "Promoter stable ~63% (63.85%→63.27%), no pledging; minimal, orderly dilution."
+      },
+      "capital_allocation": {
+        "score": 8,
+        "reason": "ROCE ~20%, disciplined expansion (incl. Cayman), consistent ~19% dividend payout; some debt rise for capex."
+      },
+      "governance": {
+        "score": 8,
+        "reason": "Clean disclosures, well-regarded board, no SEBI/audit red flags."
+      },
+      "execution": {
+        "score": 9,
+        "reason": "~56% 5-yr PAT CAGR, margins expanded to ~22%, consistent delivery."
+      }
+    },
+    "summary": "High-trust, founder-led healthcare franchise with clean governance, stable promoter holding and strong, consistent execution. Main watch: rising borrowings for the Cayman/India expansion.",
+    "sources": "BSE/NSE shareholding filings, screener.in, ICRA ratings"
+  },
+  "HCG": {
+    "score": 4.8,
+    "verdict": "LOW",
+    "confidence": "High",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 6,
+        "reason": "Now PE-controlled (CVC Capital/Aceso) after founder Dr. BS Ajaikumar reduced; professional but control changed hands."
+      },
+      "ownership_behaviour": {
+        "score": 5,
+        "reason": "Promoter holding fell ~71%→62% (PE buyout/open offer), now ~64%; ₹425cr rights issue dilution May-2026."
+      },
+      "capital_allocation": {
+        "score": 4,
+        "reason": "Very low ROE (~3-5%), no dividend despite profits, repeated capital raises, elevated debt, low interest coverage."
+      },
+      "governance": {
+        "score": 4,
+        "reason": "CDSCO suspended HCG Bangalore KR ethics committee for 24 months over clinical-trial review lapses (Jun-2026) — a real regulatory/governance flag."
+      },
+      "execution": {
+        "score": 5,
+        "reason": "Revenue grows but profitability weak and volatile; oncology centres slow to break even."
+      }
+    },
+    "summary": "Low trust: PE-controlled oncology chain with weak returns, repeated dilution, no dividends and a recent CDSCO ethics-committee suspension. Capital allocation and governance are the key concerns.",
+    "sources": "BSE filings (CDSCO suspension Jun-2026, rights issue), shareholding pattern, screener.in"
+  },
+  "SYRMA": {
+    "score": 6.1,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 6,
+        "reason": "Tandon Group; ~4 decades EMS experience via Syrma + SGS Tekniks merger — credible but not marquee."
+      },
+      "ownership_behaviour": {
+        "score": 5,
+        "reason": "Promoter holding steadily declined ~47%→42% (recent -0.44%); gradual selling, though no pledging noted."
+      },
+      "capital_allocation": {
+        "score": 6,
+        "reason": "Almost debt-free, healthy dividend payout, but low ROE (~7-13%), negative FCF in growth years, rising working-capital days."
+      },
+      "governance": {
+        "score": 7,
+        "reason": "No major governance flags; clean disclosures, professional board."
+      },
+      "execution": {
+        "score": 7,
+        "reason": "Strong ~60% 5-yr PAT CAGR, but thin EMS margins and working-capital days rose 34→101."
+      }
+    },
+    "summary": "Moderate trust: credible EMS promoter with clean governance and strong growth, tempered by a gradually declining promoter stake, low ROE and rising working-capital intensity.",
+    "sources": "BSE/NSE shareholding filings, screener.in, DRHP"
+  },
+  "POWERINDIA": {
+    "score": 8.5,
+    "verdict": "HIGH",
+    "confidence": "High",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 9,
+        "reason": "Hitachi (Japan) global infrastructure major; ex ABB Power Grids JV, now Hitachi-controlled. Strong parent technology and governance."
+      },
+      "ownership_behaviour": {
+        "score": 8,
+        "reason": "Promoter 75%->71.31% via a value-accretive QIP (raised ~Rs2,295cr); no pledging, orderly."
+      },
+      "capital_allocation": {
+        "score": 8,
+        "reason": "Almost debt-free, ROCE ~29%, reinvesting (Rs2,000cr Vadodara LPT factory); low dividend acceptable for a growth MNC."
+      },
+      "governance": {
+        "score": 9,
+        "reason": "MNC-grade controls, clean disclosures, no red flags."
+      },
+      "execution": {
+        "score": 9,
+        "reason": "~54% 5-yr PAT CAGR, OPM expanded 7%->15%, strong order book."
+      }
+    },
+    "summary": "High trust: Hitachi-controlled, MNC-grade governance, debt-free balance sheet, high ROCE and strong execution. Minor: slight promoter dilution via QIP and a premium valuation.",
+    "sources": "BSE/NSE shareholding filings, screener.in, CRISIL"
+  },
+  "MTARTECH": {
+    "score": 5.5,
+    "verdict": "LOW",
+    "confidence": "High",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 7,
+        "reason": "Reddy founding family since 1970; credible top-3 precision-engineering supplier to nuclear/defence/clean energy."
+      },
+      "ownership_behaviour": {
+        "score": 4,
+        "reason": "Promoter holding fell steadily ~39%->30.4% (screener -16.2% over 3 yrs) ? continuous selling."
+      },
+      "capital_allocation": {
+        "score": 5,
+        "reason": "No dividend, very high working-capital intensity (inventory ~397 days, CCC ~419), ROE low ~10%."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Broadly clean; an exchange sought a routine news clarification (Jun-2026, no order cancellation)."
+      },
+      "execution": {
+        "score": 6,
+        "reason": "Strong topline growth but lumpy, margins volatile, heavy working-capital drag."
+      }
+    },
+    "summary": "Low-moderate trust: credible founder-led defence/clean-energy supplier, but continuous promoter selling, no dividend, very high working-capital intensity and a steep valuation weigh on the score.",
+    "sources": "BSE/NSE shareholding filings, screener.in, ICRA/CRISIL"
+  },
+  "DEEDEV": {
+    "score": 5.6,
+    "verdict": "LOW",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 6,
+        "reason": "Bansal family; India's largest process-piping fabricator by capacity (since 1988) ? capable but not marquee."
+      },
+      "ownership_behaviour": {
+        "score": 6,
+        "reason": "Promoter stable ~70% since 2024 IPO, but a Rs300cr preferential issue (Jun-2026) brings dilution."
+      },
+      "capital_allocation": {
+        "score": 4,
+        "reason": "Negative FCF (heavy capex), no dividend, low ROCE ~9% / ROE ~5-7%, rising borrowings."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Regular disclosures and concalls; no major red flags noted."
+      },
+      "execution": {
+        "score": 6,
+        "reason": "Strong order book and revenue growth, but thin/volatile profitability and very high working-capital cycle."
+      }
+    },
+    "summary": "Low-moderate trust: stable family ownership and a strong order book, offset by weak returns, persistent negative free cash flow, rising debt and fresh equity dilution.",
+    "sources": "BSE filings (preferential issue Jun-2026), shareholding pattern, screener.in, CARE"
+  },
+  "ASTRAMICRO": {
+    "score": 6.1,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 6,
+        "reason": "BEL/DRDO-veteran founders; credible RF/microwave defence supplier, but widely held with a low promoter stake."
+      },
+      "ownership_behaviour": {
+        "score": 5,
+        "reason": "Low promoter holding (~10-11%) and no dominant promoter ? weaker alignment than family/MNC-run peers."
+      },
+      "capital_allocation": {
+        "score": 7,
+        "reason": "ROE ~16%, low debt, regular dividends, positive operating cash flow."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Listed defence vendor with standard disclosures; no major flags, but board-driven."
+      },
+      "execution": {
+        "score": 7,
+        "reason": "~44% PAT CAGR but project-lumpy revenue and government payment cycles."
+      }
+    },
+    "summary": "Moderate trust: credible defence-electronics franchise with sound capital allocation, but a low promoter stake and lumpy, government-dependent revenue cap the score.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "ASTERDM": {
+    "score": 7.2,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 8,
+        "reason": "Founder Dr. Azad Moopen ? long, reputable tenure building a pan-India + GCC healthcare group."
+      },
+      "ownership_behaviour": {
+        "score": 7,
+        "reason": "Founder-led ~42% stake, stable; GCC divestment returned capital to shareholders."
+      },
+      "capital_allocation": {
+        "score": 7,
+        "reason": "Large special dividend after GCC sale (shareholder-friendly); modest ROE and some debt."
+      },
+      "governance": {
+        "score": 7,
+        "reason": "Well-governed listed hospital chain, clean disclosures."
+      },
+      "execution": {
+        "score": 7,
+        "reason": "Executed the complex GCC separation; India business growing steadily."
+      }
+    },
+    "summary": "Moderate-to-high trust: reputable founder, shareholder-friendly capital return after the GCC divestment, tempered by modest returns and integration of the India-only structure.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "NEPHROPLUS": {
+    "score": 6.0,
+    "verdict": "MODERATE",
+    "confidence": "Low",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 6,
+        "reason": "Founder Vikram Vuppala; PE-backed (Bessemer, Quadria, IFC) professional management."
+      },
+      "ownership_behaviour": {
+        "score": 6,
+        "reason": "PE/founder ownership post-listing; PE exit overhang is a watch."
+      },
+      "capital_allocation": {
+        "score": 6,
+        "reason": "Low debt, reinvesting to scale internationally, no dividend, modest ROE ~9%."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "PE-grade governance, recently listed ? limited public track record."
+      },
+      "execution": {
+        "score": 6,
+        "reason": "Scaling globally (#5 by treatments) but profit growth roughly flat."
+      }
+    },
+    "summary": "Moderate trust: PE-backed, professionally run dialysis leader with a clean balance sheet, but a short listed history, flat profitability and PE-exit overhang. Low confidence pending more disclosure history.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "NEULANDLAB": {
+    "score": 7.6,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 8,
+        "reason": "Davuluri scientist-founders (Rama Mohan Rao; sons Sucheth & Saharsh) ? respected, long-tenured CDMO leadership."
+      },
+      "ownership_behaviour": {
+        "score": 7,
+        "reason": "Stable family promoter holding, no pledging concerns."
+      },
+      "capital_allocation": {
+        "score": 7,
+        "reason": "Reinvesting in CDMO capacity, pays dividends; some debt for expansion."
+      },
+      "governance": {
+        "score": 8,
+        "reason": "Clean, well-regarded governance and disclosure."
+      },
+      "execution": {
+        "score": 8,
+        "reason": "Strong CDMO/peptide ramp with high multi-year revenue CAGR."
+      }
+    },
+    "summary": "Moderate-to-high trust: respected founder-scientists, clean governance and strong execution in a structurally attractive CDMO niche; capacity capex and customer concentration are the watch-items.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "AVANTEL": {
+    "score": 5.3,
+    "verdict": "LOW",
+    "confidence": "Low",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 6,
+        "reason": "Founder-led (Vijay Kumar Reddy) defence-comms niche; long-standing but very small."
+      },
+      "ownership_behaviour": {
+        "score": 6,
+        "reason": "Promoter-controlled, stable holding."
+      },
+      "capital_allocation": {
+        "score": 5,
+        "reason": "Pays dividends but weak ROE ~5% and a single order can swing results."
+      },
+      "governance": {
+        "score": 5,
+        "reason": "Small-cap disclosure standards; government payment delays."
+      },
+      "execution": {
+        "score": 4,
+        "reason": "Profitability declined (PAT CAGR ~-31%) ? weak recent delivery."
+      }
+    },
+    "summary": "Low trust: founder-run defence-electronics microcap with concentration risk, weak recent profitability and small-cap governance limits. Low confidence (limited verified ownership/governance data).",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "SOUTHWEST": {
+    "score": 5.0,
+    "verdict": "LOW",
+    "confidence": "Low",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 5,
+        "reason": "Small-cap promoter in upstream O&G services; niche but undifferentiated."
+      },
+      "ownership_behaviour": {
+        "score": 5,
+        "reason": "Promoter-controlled; limited verified ownership/pledge data."
+      },
+      "capital_allocation": {
+        "score": 5,
+        "reason": "ROE ~17% but no dividend and heavy reliance on a single customer (ONGC)."
+      },
+      "governance": {
+        "score": 5,
+        "reason": "Microcap governance/disclosure; monopsony customer risk."
+      },
+      "execution": {
+        "score": 5,
+        "reason": "Lumpy, low revenue growth (~4%) tied to ONGC capex cycles."
+      }
+    },
+    "summary": "Low trust: ONGC-dependent oilfield-services microcap with customer concentration and limited governance visibility. Low confidence.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "DLINKINDIA": {
+    "score": 7.3,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 7,
+        "reason": "Subsidiary of D-Link (Taiwan); established networking brand with MNC parentage."
+      },
+      "ownership_behaviour": {
+        "score": 8,
+        "reason": "Stable ~74.5% MNC promoter holding, no pledging."
+      },
+      "capital_allocation": {
+        "score": 7,
+        "reason": "Debt-free and cash-rich with large dividends; low growth drags ROE on the cash pile."
+      },
+      "governance": {
+        "score": 8,
+        "reason": "MNC-grade governance and disclosure."
+      },
+      "execution": {
+        "score": 6,
+        "reason": "Mature, low-growth business (flat PAT) in a competitive market."
+      }
+    },
+    "summary": "Moderate trust: cash-rich, debt-free MNC subsidiary with clean governance and generous dividends; the main limitation is a mature, low-growth, price-competitive business.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "TRIVENI": {
+    "score": 7.5,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 8,
+        "reason": "Sawhney family ? reputable, long-tenured promoters of a diversified sugar/ethanol/power-transmission group."
+      },
+      "ownership_behaviour": {
+        "score": 8,
+        "reason": "Stable ~61% promoter holding; history of buybacks and dividends (shareholder-friendly)."
+      },
+      "capital_allocation": {
+        "score": 7,
+        "reason": "Returns capital via dividends/buybacks, but sugar is working-capital and cycle heavy with elevated debt."
+      },
+      "governance": {
+        "score": 8,
+        "reason": "Well-governed, clean-disclosure group."
+      },
+      "execution": {
+        "score": 6,
+        "reason": "Earnings down in the current sugar/ethanol down-cycle (PAT CAGR negative)."
+      }
+    },
+    "summary": "Moderate-to-high trust: a well-regarded, shareholder-friendly family group; the score is held back mainly by sugar/ethanol cyclicality rather than governance.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "GALAPREC": {
+    "score": 5.8,
+    "verdict": "LOW",
+    "confidence": "Low",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 6,
+        "reason": "Family promoter; niche high-precision springs/fasteners supplier, recently listed (2024)."
+      },
+      "ownership_behaviour": {
+        "score": 6,
+        "reason": "Promoter-led with a short post-IPO ownership history."
+      },
+      "capital_allocation": {
+        "score": 5,
+        "reason": "No dividend, modest ROE ~13%, small scale and customer concentration."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Standard disclosures; limited public track record."
+      },
+      "execution": {
+        "score": 6,
+        "reason": "Healthy revenue growth (~26%) but thin scale and EV-transition risk on auto springs."
+      }
+    },
+    "summary": "Low-moderate trust: capable niche components promoter with decent growth, but a short listed history, small scale and no capital return. Low confidence.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "MODISONLTD": {
+    "score": 6.0,
+    "verdict": "MODERATE",
+    "confidence": "Low",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 6,
+        "reason": "Modi family; leader (~60-65% share) in India's organised silver electrical-contacts market."
+      },
+      "ownership_behaviour": {
+        "score": 6,
+        "reason": "Family-controlled, stable holding."
+      },
+      "capital_allocation": {
+        "score": 6,
+        "reason": "Pays dividends, but silver-inventory financing keeps debt/working-capital high; ROE unclear."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Family-run mid-cap with standard disclosures."
+      },
+      "execution": {
+        "score": 6,
+        "reason": "Recent surge is largely silver-price driven (cyclical), not purely volume-led."
+      }
+    },
+    "summary": "Moderate trust: niche market-leading family business with dividends, but earnings are silver-price sensitive and working-capital heavy. Low confidence on precise ownership/governance detail.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "HAPPYFORGE": {
+    "score": 7.25,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 7,
+        "reason": "Garg family; well-regarded, execution-focused forgings promoter (listed 2023)."
+      },
+      "ownership_behaviour": {
+        "score": 8,
+        "reason": "High, stable ~78.5% promoter holding, no pledging."
+      },
+      "capital_allocation": {
+        "score": 7,
+        "reason": "Low debt, pays dividends, ROE ~15%; heavy growth capex is the offset."
+      },
+      "governance": {
+        "score": 7,
+        "reason": "Clean disclosures and governance."
+      },
+      "execution": {
+        "score": 7,
+        "reason": "~23% PAT CAGR with multi-sector (CV/off-highway/rail/wind) diversification."
+      }
+    },
+    "summary": "Moderate-to-high trust: high-promoter-skin, low-debt, well-executing forgings business; valuation and CV cyclicality are the main watch-items, not governance.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "NIFTYBEES": {
+    "score": 7.5,
+    "verdict": "N/A (ETF)",
+    "confidence": "n/a",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 8,
+        "reason": "Passive ETF ? no corporate promoter; managed by Nippon Life India AMC (India's largest ETF manager)."
+      },
+      "ownership_behaviour": {
+        "score": 8,
+        "reason": "Not applicable ? unitholding structure; AMC stewardship is the relevant lens."
+      },
+      "capital_allocation": {
+        "score": 7,
+        "reason": "Low expense ratio, tight tracking; returns capital via index dividends."
+      },
+      "governance": {
+        "score": 8,
+        "reason": "Reputable AMC, strong regulatory/operational governance."
+      },
+      "execution": {
+        "score": 8,
+        "reason": "Consistently low tracking error vs Nifty 50."
+      }
+    },
+    "summary": "Not a corporate management score ? this is a passive Nifty 50 ETF; the rating reflects the credibility and stewardship of the AMC (Nippon Life India), which is high.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "HBLENGINE": {
+    "score": 7.35,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 7,
+        "reason": "Aluri (AJ Prasad) family promoters; established Hyderabad defence-batteries & railway-signalling (Kavach) maker."
+      },
+      "ownership_behaviour": {
+        "score": 7,
+        "reason": "Stable promoter holding, no pledging concerns."
+      },
+      "capital_allocation": {
+        "score": 8,
+        "reason": "Excellent ROE ~44%, low debt, dividends and strong operating cash flow."
+      },
+      "governance": {
+        "score": 7,
+        "reason": "Clean disclosures; standard mid-cap governance."
+      },
+      "execution": {
+        "score": 8,
+        "reason": "~40% PAT CAGR, large Kavach-led order book."
+      }
+    },
+    "summary": "Moderate-to-high trust: founder-led, low-debt, high-ROE business executing well on the Kavach ramp; railway-budget dependence is the main external risk.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "SASKEN": {
+    "score": 6.5,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 7,
+        "reason": "Rajiv Mody ? long-tenured, reputable founder of an R&D/embedded software house."
+      },
+      "ownership_behaviour": {
+        "score": 7,
+        "reason": "Stable promoter holding; history of buybacks (shareholder-friendly)."
+      },
+      "capital_allocation": {
+        "score": 6,
+        "reason": "Cash-rich, returns capital via dividends/buybacks, but low ROE (~7%) on the cash pile."
+      },
+      "governance": {
+        "score": 7,
+        "reason": "Clean governance and disclosure."
+      },
+      "execution": {
+        "score": 5,
+        "reason": "Revenue has been broadly stagnant; client concentration in semis/auto."
+      }
+    },
+    "summary": "Moderate trust: credible founder and clean, cash-return-oriented governance, held back by sluggish growth and low returns on a large cash balance.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "ENRIN": {
+    "score": 5.5,
+    "verdict": "LOW",
+    "confidence": "Low",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 5,
+        "reason": "Data discrepancy in source files (name vs sector/description conflict) ? treat ticker mapping with caution."
+      },
+      "ownership_behaviour": {
+        "score": 5,
+        "reason": "Ownership/governance not reliably verifiable for this record."
+      },
+      "capital_allocation": {
+        "score": 6,
+        "reason": "Reported low debt and positive cash generation, but figures need verification."
+      },
+      "governance": {
+        "score": 5,
+        "reason": "Insufficient verified governance disclosure to assess confidently."
+      },
+      "execution": {
+        "score": 6,
+        "reason": "Order-book-led growth indicated, but execution history unverified."
+      }
+    },
+    "summary": "Low confidence ? this record has a name/sector data conflict in the source files; score is provisional pending ticker/identity reconciliation. Do not rely on it without verification.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "ARE&M": {
+    "score": 6.8,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 7,
+        "reason": "Galla family ? long-standing, reputable automotive-battery (Amaron) promoters."
+      },
+      "ownership_behaviour": {
+        "score": 7,
+        "reason": "Stable family promoter holding (~28%), no pledging."
+      },
+      "capital_allocation": {
+        "score": 7,
+        "reason": "Regular dividends, low debt, strong operating cash flow; ROE ~11-12%."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Generally sound, but a past NGT lead-emission episode and related-party (group) dealings temper governance."
+      },
+      "execution": {
+        "score": 7,
+        "reason": "Steady battery franchise plus new-energy (lithium/EV) investments."
+      }
+    },
+    "summary": "Moderate trust: reputable, dividend-paying family battery franchise with a clean balance sheet; legacy environmental/related-party items and EV-transition capex are the watch-points.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "INDUSTOWER": {
+    "score": 6.65,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 7,
+        "reason": "Bharti Airtel-controlled (~48%) towerco; professional management."
+      },
+      "ownership_behaviour": {
+        "score": 7,
+        "reason": "Bharti control with the Vodafone overhang now resolved; orderly ownership."
+      },
+      "capital_allocation": {
+        "score": 6,
+        "reason": "Strong cash generation but dividend suspended amid Vodafone Idea receivable stress."
+      },
+      "governance": {
+        "score": 7,
+        "reason": "Bharti-grade governance, though VIL receivable provisioning has been contentious."
+      },
+      "execution": {
+        "score": 6,
+        "reason": "Flat earnings; recovery hinges on Vodafone Idea resolution."
+      }
+    },
+    "summary": "Moderate trust: Bharti-controlled, cash-generative tower business with sound governance; the score is capped by Vodafone-Idea receivable risk and a suspended dividend.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "INDGN": {
+    "score": 6.0,
+    "verdict": "MODERATE",
+    "confidence": "Low",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 6,
+        "reason": "Founder + PE (Carlyle/Brighton Park) backed healthcare-tech/CRO; recently listed (2024)."
+      },
+      "ownership_behaviour": {
+        "score": 6,
+        "reason": "PE-exit overhang and short post-IPO ownership history."
+      },
+      "capital_allocation": {
+        "score": 6,
+        "reason": "Low debt, modest dividend, ROE ~14%."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "PE-grade governance; limited public track record."
+      },
+      "execution": {
+        "score": 6,
+        "reason": "Strong revenue growth but a recent profit dip."
+      }
+    },
+    "summary": "Moderate trust: professionally run, PE-backed pharma-commercialisation player with a clean balance sheet; short listed history and PE-exit overhang keep confidence low.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "RIR": {
+    "score": 4.5,
+    "verdict": "LOW",
+    "confidence": "Low",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 5,
+        "reason": "Small-cap power-semiconductor promoter; niche but undifferentiated."
+      },
+      "ownership_behaviour": {
+        "score": 5,
+        "reason": "Promoter-controlled; limited verified ownership data."
+      },
+      "capital_allocation": {
+        "score": 4,
+        "reason": "Negative operating cash flow, weak ROE (~6%), no real capital return."
+      },
+      "governance": {
+        "score": 5,
+        "reason": "Microcap disclosure standards."
+      },
+      "execution": {
+        "score": 3,
+        "reason": "Collapsing profitability (PAT CAGR ~-65%) and shrinking revenue."
+      }
+    },
+    "summary": "Low trust: sub-scale power-electronics business with deteriorating earnings, negative cash flow and limited governance visibility.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "SCODATUBES": {
+    "score": 4.65,
+    "verdict": "LOW",
+    "confidence": "Low",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 5,
+        "reason": "Recently listed (2024) precision-tubes promoter; small scale."
+      },
+      "ownership_behaviour": {
+        "score": 5,
+        "reason": "Short post-IPO ownership history."
+      },
+      "capital_allocation": {
+        "score": 4,
+        "reason": "Negative operating cash flow, no dividend, high leverage."
+      },
+      "governance": {
+        "score": 5,
+        "reason": "Limited public governance track record."
+      },
+      "execution": {
+        "score": 4,
+        "reason": "Falling profits (PAT CAGR ~-32%) and flat revenue."
+      }
+    },
+    "summary": "Low trust: newly listed steel-tubes microcap with weak cash flow, high debt and declining earnings.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "SALZERELEC": {
+    "score": 5.65,
+    "verdict": "LOW",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 6,
+        "reason": "Doraiswamy family; established Coimbatore electrical-components maker (ex-L&T JV heritage)."
+      },
+      "ownership_behaviour": {
+        "score": 6,
+        "reason": "Stable family promoter holding."
+      },
+      "capital_allocation": {
+        "score": 5,
+        "reason": "High leverage (D/E ~0.9x) with only modest ROE ~9%, though it pays dividends."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Standard mid-cap disclosures."
+      },
+      "execution": {
+        "score": 5,
+        "reason": "Slow growth and margin pressure versus global majors."
+      }
+    },
+    "summary": "Low-moderate trust: long-standing family components business that pays dividends, but high leverage and sluggish, low-return growth weigh on it.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "MENONBE": {
+    "score": 6.05,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 6,
+        "reason": "Menon family; domestic leader in engine bearings (Kolhapur), exports via Cummins."
+      },
+      "ownership_behaviour": {
+        "score": 6,
+        "reason": "Stable family promoter holding."
+      },
+      "capital_allocation": {
+        "score": 7,
+        "reason": "Good ROE ~22%, healthy dividends, moderate debt."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Standard small-cap governance."
+      },
+      "execution": {
+        "score": 5,
+        "reason": "Recent revenue dip; long-term ICE-to-EV and Maruti concentration risk."
+      }
+    },
+    "summary": "Moderate trust: well-run, dividend-paying bearings specialist with good returns; the main overhangs are customer concentration and the long-term EV transition.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "RUBICON": {
+    "score": 6.35,
+    "verdict": "MODERATE",
+    "confidence": "Low",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 6,
+        "reason": "PE-backed (General Atlantic) specialty-pharma CDMO; recently listed (2025)."
+      },
+      "ownership_behaviour": {
+        "score": 6,
+        "reason": "PE-exit overhang and short listed history."
+      },
+      "capital_allocation": {
+        "score": 7,
+        "reason": "Strong ROE ~27% and reinvestment, though no dividend yet."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Recent IPO ? governance track record still building."
+      },
+      "execution": {
+        "score": 7,
+        "reason": "Rapid, high-margin growth in complex US/EU formulations."
+      }
+    },
+    "summary": "Moderate trust: fast-growing, high-return specialty pharma with PE backing; short listed history, FDA-inspection risk and PE-exit overhang keep confidence low.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "RKSWAMY": {
+    "score": 5.65,
+    "verdict": "LOW",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 6,
+        "reason": "R K Swamy ? legacy Indian marketing-services brand with long PSU/FMCG relationships."
+      },
+      "ownership_behaviour": {
+        "score": 6,
+        "reason": "Promoter-led; recently listed (2024)."
+      },
+      "capital_allocation": {
+        "score": 5,
+        "reason": "Modest ROE ~9%; pays dividends but post-IPO value erosion."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Standard disclosures."
+      },
+      "execution": {
+        "score": 5,
+        "reason": "Weak post-listing delivery; structural digital-disruption pressure on traditional advertising."
+      }
+    },
+    "summary": "Low-moderate trust: established agency brand with decent client stickiness, but weak post-IPO execution and structural pressure on legacy advertising.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "RATEGAIN": {
+    "score": 6.35,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 7,
+        "reason": "Bhanu Chopra ? credible, founder-led global travel-SaaS business."
+      },
+      "ownership_behaviour": {
+        "score": 6,
+        "reason": "Founder-controlled, with some post-IPO promoter trimming."
+      },
+      "capital_allocation": {
+        "score": 6,
+        "reason": "Cash-rich and acquisitive; no dividend, ROE ~10%."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Standard listed-SaaS governance."
+      },
+      "execution": {
+        "score": 7,
+        "reason": "Strong, partly acquisition-led revenue growth and global marquee clients."
+      }
+    },
+    "summary": "Moderate trust: credible founder and a leading travel-SaaS franchise with strong growth; acquisition-led model and modest returns are the watch-items.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "GMDCLTD": {
+    "score": 6.05,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 6,
+        "reason": "Gujarat State-government PSU ? stable backing but policy/bureaucracy-driven."
+      },
+      "ownership_behaviour": {
+        "score": 6,
+        "reason": "State control; ownership stable."
+      },
+      "capital_allocation": {
+        "score": 7,
+        "reason": "High dividends, low debt, cash-rich balance sheet."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "PSU governance ? board independence constrained by government control."
+      },
+      "execution": {
+        "score": 5,
+        "reason": "Cyclical, declining lignite earnings; lithium/critical-mineral optionality unproven."
+      }
+    },
+    "summary": "Moderate trust: cash-rich, high-dividend state PSU with a clean balance sheet, offset by PSU governance constraints and cyclical, declining core earnings.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "TREL": {
+    "score": 5.5,
+    "verdict": "LOW",
+    "confidence": "Low",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 6,
+        "reason": "Source-file name/description conflict (Trident textiles vs Transindia Real Estate) ? identity needs reconciliation."
+      },
+      "ownership_behaviour": {
+        "score": 6,
+        "reason": "Promoter-led per available data, but mapping unverified."
+      },
+      "capital_allocation": {
+        "score": 5,
+        "reason": "Weak ROE (~3%) and no dividend on the reported figures."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Insufficient verified governance detail given the data conflict."
+      },
+      "execution": {
+        "score": 4,
+        "reason": "Sharp earnings decline (PAT CAGR ~-70%) on the reported numbers."
+      }
+    },
+    "summary": "Low confidence ? this record carries a ticker/identity conflict in the source files; the provisional score reflects the weak reported financials but should be reconciled before use.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "EIMCOELECO": {
+    "score": 5.7,
+    "verdict": "LOW",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 6,
+        "reason": "Elecon (Patel) group; near-monopoly underground-mining equipment for Coal India."
+      },
+      "ownership_behaviour": {
+        "score": 6,
+        "reason": "Stable group promoter holding."
+      },
+      "capital_allocation": {
+        "score": 6,
+        "reason": "Low debt and dividends, but returns are modest."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Standard group governance."
+      },
+      "execution": {
+        "score": 4,
+        "reason": "Earnings fell sharply (PAT CAGR ~-57%); single-customer (CIL) monopsony risk."
+      }
+    },
+    "summary": "Low-moderate trust: low-debt, dividend-paying niche leader, but acute customer concentration on Coal India and weak recent earnings cap the score.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "BLUEJET": {
+    "score": 6.65,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 7,
+        "reason": "Bhandari family; niche global B2B leader in contrast-media/pharma intermediates (listed 2023)."
+      },
+      "ownership_behaviour": {
+        "score": 7,
+        "reason": "Stable family promoter holding."
+      },
+      "capital_allocation": {
+        "score": 7,
+        "reason": "High ROE ~20%, low debt, dividends, >60% gross margins."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Recent listing ? governance track record still building."
+      },
+      "execution": {
+        "score": 6,
+        "reason": "Strong franchise but a recent earnings dip and customer concentration (GE/Bayer)."
+      }
+    },
+    "summary": "Moderate trust: high-quality, high-margin niche pharma supplier with a clean balance sheet; customer concentration and a recent profit dip are the main watch-items.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "SHREEJISPG": {
+    "score": 5.2,
+    "verdict": "LOW",
+    "confidence": "Low",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 5,
+        "reason": "Recently listed small-cap; promoter-led."
+      },
+      "ownership_behaviour": {
+        "score": 5,
+        "reason": "Short post-IPO ownership history."
+      },
+      "capital_allocation": {
+        "score": 6,
+        "reason": "High ROE on a small base and dividends, but leveraged."
+      },
+      "governance": {
+        "score": 5,
+        "reason": "Limited public governance track record."
+      },
+      "execution": {
+        "score": 5,
+        "reason": "Volatile earnings (PAT CAGR ~-26%) despite revenue growth."
+      }
+    },
+    "summary": "Low trust: newly listed small-cap with volatile earnings and limited governance visibility, despite decent headline returns.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "NETWEB": {
+    "score": 7.15,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 7,
+        "reason": "Lohia family founders; one of few NVIDIA-approved Indian HPC/AI-infra OEMs."
+      },
+      "ownership_behaviour": {
+        "score": 7,
+        "reason": "Stable founder promoter holding, no pledging."
+      },
+      "capital_allocation": {
+        "score": 7,
+        "reason": "High ROE ~33%, reinvesting for growth, small dividend."
+      },
+      "governance": {
+        "score": 7,
+        "reason": "Clean disclosures; standard listed-co governance."
+      },
+      "execution": {
+        "score": 8,
+        "reason": "Very strong revenue/PAT growth on the AI-infra wave."
+      }
+    },
+    "summary": "Moderate-to-high trust: founder-led, high-ROE AI-infrastructure play executing strongly; rich valuation and NVIDIA-supply dependence are the watch-items.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "RAMCOSYS": {
+    "score": 5.65,
+    "verdict": "LOW",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 6,
+        "reason": "Ramco group (PR Venketrama Raja); long-standing but group cross-holding structure."
+      },
+      "ownership_behaviour": {
+        "score": 6,
+        "reason": "Stable group promoter holding."
+      },
+      "capital_allocation": {
+        "score": 5,
+        "reason": "No dividend, modest ROE, capital tied within the group."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Group-company governance with cross-holdings."
+      },
+      "execution": {
+        "score": 5,
+        "reason": "Niche aviation-ERP strength but chronically slow growth vs peers."
+      }
+    },
+    "summary": "Low-moderate trust: established group software business with a defensible aviation niche, but slow growth, no capital return and group cross-holding structure weigh on it.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "STALLION": {
+    "score": 4.85,
+    "verdict": "LOW",
+    "confidence": "Low",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 5,
+        "reason": "Recently listed (2025) refrigerant-distribution promoter; small scale."
+      },
+      "ownership_behaviour": {
+        "score": 5,
+        "reason": "Short post-IPO ownership history."
+      },
+      "capital_allocation": {
+        "score": 5,
+        "reason": "Low-margin distribution, no dividend."
+      },
+      "governance": {
+        "score": 5,
+        "reason": "Limited public governance track record."
+      },
+      "execution": {
+        "score": 4,
+        "reason": "Declining earnings (PAT CAGR ~-24%) and HFC phase-out transition risk."
+      }
+    },
+    "summary": "Low trust: newly listed, low-margin refrigerant distributor with declining earnings and regulatory (Kigali HFC phase-out) overhang.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "RPTECH": {
+    "score": 6.0,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 6,
+        "reason": "Choudhary family; one of two national-scale IT distributors."
+      },
+      "ownership_behaviour": {
+        "score": 6,
+        "reason": "Stable family promoter holding."
+      },
+      "capital_allocation": {
+        "score": 6,
+        "reason": "Pays dividends, but structurally thin margins and high working-capital/debt."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Standard mid-cap governance."
+      },
+      "execution": {
+        "score": 6,
+        "reason": "Strong revenue growth but inherently low-margin distribution."
+      }
+    },
+    "summary": "Moderate trust: scaled, dividend-paying IT distributor with strong growth, capped by structurally thin margins, high working capital and D2C disintermediation risk.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "SIGNPOST": {
+    "score": 5.0,
+    "verdict": "LOW",
+    "confidence": "Low",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 5,
+        "reason": "Small-cap OOH-media promoter; municipal-concession dependent."
+      },
+      "ownership_behaviour": {
+        "score": 5,
+        "reason": "Promoter-led; limited verified ownership data."
+      },
+      "capital_allocation": {
+        "score": 5,
+        "reason": "High leverage; small dividend."
+      },
+      "governance": {
+        "score": 5,
+        "reason": "Microcap governance/disclosure."
+      },
+      "execution": {
+        "score": 5,
+        "reason": "Fast growth off a tiny base; contract-renewal risk."
+      }
+    },
+    "summary": "Low trust: sub-scale outdoor-media business reliant on municipal concessions, with high leverage and limited governance visibility.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "BOROSCI": {
+    "score": 5.65,
+    "verdict": "LOW",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 6,
+        "reason": "Kheruka family (Borosil group); leader in Indian lab glassware."
+      },
+      "ownership_behaviour": {
+        "score": 6,
+        "reason": "Stable family promoter holding."
+      },
+      "capital_allocation": {
+        "score": 5,
+        "reason": "Low debt but no dividend and modest ROE ~8%."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Borosil-group governance, standard disclosures."
+      },
+      "execution": {
+        "score": 5,
+        "reason": "Low-growth, commoditised niche under Chinese competition."
+      }
+    },
+    "summary": "Low-moderate trust: reputable group with a niche-leading lab-glassware franchise, but low growth, modest returns and no capital return cap the score.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "MAPMYINDIA": {
+    "score": 6.85,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 7,
+        "reason": "Verma founders; credible, long-tenured location-tech pioneers."
+      },
+      "ownership_behaviour": {
+        "score": 7,
+        "reason": "Stable founder promoter holding."
+      },
+      "capital_allocation": {
+        "score": 7,
+        "reason": "Debt-free, pays dividends, ROE ~16%."
+      },
+      "governance": {
+        "score": 7,
+        "reason": "Clean governance and disclosure."
+      },
+      "execution": {
+        "score": 6,
+        "reason": "Strong franchise but growth has slowed and faces free Google Maps competition."
+      }
+    },
+    "summary": "Moderate-to-high trust: founder-led, debt-free, dividend-paying maps/location franchise with clean governance; slowing growth and Big-Tech competition are the watch-items.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "YATHARTH": {
+    "score": 5.8,
+    "verdict": "LOW",
+    "confidence": "Low",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 6,
+        "reason": "Tyagi family; NCR-focused hospital operator (listed 2023)."
+      },
+      "ownership_behaviour": {
+        "score": 6,
+        "reason": "Promoter-led, short post-IPO history."
+      },
+      "capital_allocation": {
+        "score": 5,
+        "reason": "No dividend, capex-heavy expansion."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Standard mid-cap governance."
+      },
+      "execution": {
+        "score": 6,
+        "reason": "Strong revenue growth but capital-intensive and competitive (Fortis/Max/Manipal)."
+      }
+    },
+    "summary": "Low-moderate trust: family-run NCR hospital chain growing fast, but capex intensity, no capital return and a short listed history keep confidence low.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "VASCONEQ": {
+    "score": 4.3,
+    "verdict": "LOW",
+    "confidence": "Low",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 5,
+        "reason": "Pune real-estate/EPC promoter; weak track record."
+      },
+      "ownership_behaviour": {
+        "score": 5,
+        "reason": "Promoter-led; limited verified data."
+      },
+      "capital_allocation": {
+        "score": 3,
+        "reason": "Negative operating cash flow and heavy losses."
+      },
+      "governance": {
+        "score": 5,
+        "reason": "Standard small-cap governance."
+      },
+      "execution": {
+        "score": 3,
+        "reason": "Collapsing earnings (PAT CAGR ~-84%); large portfolio loss."
+      }
+    },
+    "summary": "Low trust: leveraged real-estate/EPC company with deep losses, negative cash flow and a poor delivery record.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "FRACTAL": {
+    "score": 6.15,
+    "verdict": "MODERATE",
+    "confidence": "Low",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 6,
+        "reason": "Founder (Srikanth Velamakanni) + PE (TPG) backed AI-analytics leader; recently listed."
+      },
+      "ownership_behaviour": {
+        "score": 6,
+        "reason": "PE-exit overhang and short post-IPO history."
+      },
+      "capital_allocation": {
+        "score": 6,
+        "reason": "Reinvesting; no dividend, ROE ~12%."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "PE-grade governance, limited public track record."
+      },
+      "execution": {
+        "score": 7,
+        "reason": "Strong, profitable-turnaround growth with marquee global clients."
+      }
+    },
+    "summary": "Moderate trust: credible founder and a leading AI-native analytics franchise with strong momentum; short listed history, PE-exit overhang and rich valuation keep confidence low.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "PROTEAN": {
+    "score": 6.0,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 6,
+        "reason": "Widely held (ex-NSDL e-Gov), professionally managed government-tech utility."
+      },
+      "ownership_behaviour": {
+        "score": 6,
+        "reason": "Diffuse ownership; no dominant promoter."
+      },
+      "capital_allocation": {
+        "score": 6,
+        "reason": "Pays dividends, low debt; mandate-dependent revenue."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Institutionally governed but policy/mandate dependent."
+      },
+      "execution": {
+        "score": 6,
+        "reason": "Strong PAN/NPS franchise, though growth has lagged expectations."
+      }
+    },
+    "summary": "Moderate trust: professionally run, dividend-paying government-tech utility with strong mandates; policy dependence and slower-than-hoped growth are the watch-items.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "UNIVCABLES": {
+    "score": 6.0,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 6,
+        "reason": "M.P. Birla group; established EHV cable maker with group backing."
+      },
+      "ownership_behaviour": {
+        "score": 6,
+        "reason": "Stable group promoter holding."
+      },
+      "capital_allocation": {
+        "score": 6,
+        "reason": "Pays dividends, but copper-driven working capital keeps debt elevated."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "M.P. Birla group governance; operations clean."
+      },
+      "execution": {
+        "score": 6,
+        "reason": "Steady grid-led growth amid intense cable competition."
+      }
+    },
+    "summary": "Moderate trust: group-backed EHV cable maker with dividends and grid tailwinds, offset by working-capital intensity and strong competition (Polycab/Sterlite).",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "RAYMOND": {
+    "score": 4.65,
+    "verdict": "LOW",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 5,
+        "reason": "Gautam Singhania-controlled; capable brand but a history of public family/governance disputes."
+      },
+      "ownership_behaviour": {
+        "score": 5,
+        "reason": "Promoter-controlled; JK House / related-party history is an overhang."
+      },
+      "capital_allocation": {
+        "score": 5,
+        "reason": "Multiple demergers; capital allocation in transition, no dividend."
+      },
+      "governance": {
+        "score": 4,
+        "reason": "Family disputes and related-party episodes weaken governance perception."
+      },
+      "execution": {
+        "score": 4,
+        "reason": "Post-demerger earnings depressed; thesis hinges on Thane land monetisation."
+      }
+    },
+    "summary": "Low trust: strong brand and a land-monetisation optionality, but recurring promoter/family governance controversies and a messy multi-demerger restructuring weigh heavily.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "GRAPHITE": {
+    "score": 6.55,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 7,
+        "reason": "K.K. Bangur group; conservative, reputable promoters."
+      },
+      "ownership_behaviour": {
+        "score": 7,
+        "reason": "Stable promoter holding, no pledging."
+      },
+      "capital_allocation": {
+        "score": 7,
+        "reason": "Cash-rich, low debt, generous dividends."
+      },
+      "governance": {
+        "score": 7,
+        "reason": "Clean, conservative governance."
+      },
+      "execution": {
+        "score": 4,
+        "reason": "Deeply cyclical electrode earnings currently depressed."
+      }
+    },
+    "summary": "Moderate trust: conservative, cash-rich, dividend-generous reputable promoter; the score is held back by the cyclical trough in graphite-electrode earnings, not governance.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "URBANCO": {
+    "score": 5.2,
+    "verdict": "LOW",
+    "confidence": "Low",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 6,
+        "reason": "Credible founders (Bahl/Khaitan/Chandra); category-creating home-services platform."
+      },
+      "ownership_behaviour": {
+        "score": 5,
+        "reason": "VC/founder ownership with post-IPO exit overhang (listed 2025)."
+      },
+      "capital_allocation": {
+        "score": 4,
+        "reason": "Loss-making with negative operating cash flow; rich valuation."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Standard new-economy governance."
+      },
+      "execution": {
+        "score": 5,
+        "reason": "Rapid growth but volatile, unproven profitability."
+      }
+    },
+    "summary": "Low trust: credible founders and a leading services marketplace, but persistent losses, negative cash flow, VC-exit overhang and a demanding valuation.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "GMRAIRPORT": {
+    "score": 4.95,
+    "verdict": "LOW",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 5,
+        "reason": "GMR group; experienced airport operator but a highly leveraged, complex structure."
+      },
+      "ownership_behaviour": {
+        "score": 5,
+        "reason": "Promoter-controlled within a complex holding structure."
+      },
+      "capital_allocation": {
+        "score": 4,
+        "reason": "Very high debt, no dividend; chronic leverage and refinancing reliance."
+      },
+      "governance": {
+        "score": 5,
+        "reason": "Complex group structure and related-party history."
+      },
+      "execution": {
+        "score": 6,
+        "reason": "Strong passenger-traffic growth across its airport portfolio."
+      }
+    },
+    "summary": "Low trust: capable airport operator riding strong traffic, but extreme leverage, a complex group structure and no capital return cap the governance/capital-allocation score.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "LAXMIDENTL": {
+    "score": 5.8,
+    "verdict": "LOW",
+    "confidence": "Low",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 6,
+        "reason": "Founder-led dental-products maker (listed 2025)."
+      },
+      "ownership_behaviour": {
+        "score": 6,
+        "reason": "Promoter-led, short post-IPO history."
+      },
+      "capital_allocation": {
+        "score": 5,
+        "reason": "Negative operating cash flow, no dividend."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Limited public governance track record."
+      },
+      "execution": {
+        "score": 6,
+        "reason": "Strong growth in prosthetics/aligners off a small base."
+      }
+    },
+    "summary": "Low-moderate trust: founder-run dental leader with strong growth, but a short listed history, negative cash flow and small scale keep confidence low.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "BIOCON": {
+    "score": 6.15,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 8,
+        "reason": "Founder Kiran Mazumdar-Shaw ? pioneering, highly reputable biotech promoter."
+      },
+      "ownership_behaviour": {
+        "score": 7,
+        "reason": "Stable promoter holding."
+      },
+      "capital_allocation": {
+        "score": 5,
+        "reason": "High debt from the Viatris biosimilars acquisition; weak ROE, equity raises."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Reputable, but USFDA observations and Syngene related-party links to monitor."
+      },
+      "execution": {
+        "score": 4,
+        "reason": "Earnings weak during biosimilars integration and pricing pressure."
+      }
+    },
+    "summary": "Moderate trust: highly reputable founder and a leading biosimilars franchise, but high acquisition debt, weak returns and integration drag weigh on capital allocation and execution.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "ANURAS": {
+    "score": 5.45,
+    "verdict": "LOW",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 6,
+        "reason": "Anand Desai-led specialty-chemicals/API maker for regulated markets."
+      },
+      "ownership_behaviour": {
+        "score": 6,
+        "reason": "Promoter-led; some past scrutiny of receivables/derivative accounting."
+      },
+      "capital_allocation": {
+        "score": 5,
+        "reason": "High debt, weak ROE ~6%, despite a small dividend."
+      },
+      "governance": {
+        "score": 5,
+        "reason": "Historic questions on related-party/forex-derivative accounting temper governance."
+      },
+      "execution": {
+        "score": 5,
+        "reason": "Revenue growth but weak profitability and molecule concentration."
+      }
+    },
+    "summary": "Low-moderate trust: regulated-market specialty-chem promoter with growth, but high leverage, weak returns and past accounting scrutiny cap the score.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "SHANKARA": {
+    "score": 5.3,
+    "verdict": "LOW",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 6,
+        "reason": "Sukumar Srinivas-led; South-India leader in organised building-materials retail."
+      },
+      "ownership_behaviour": {
+        "score": 6,
+        "reason": "Promoter-led, stable holding."
+      },
+      "capital_allocation": {
+        "score": 4,
+        "reason": "Negative operating cash flow and very weak ROE despite dividends; working-capital heavy."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Standard governance; post-demerger transition."
+      },
+      "execution": {
+        "score": 4,
+        "reason": "Weak earnings after the marketplace demerger."
+      }
+    },
+    "summary": "Low-moderate trust: established retail-distribution promoter, but weak returns, negative cash flow and a working-capital-heavy model after the demerger weigh on it.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "INCAP": {
+    "score": 5.6,
+    "verdict": "LOW",
+    "confidence": "Low",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 6,
+        "reason": "Part of Elecon (Patel) group; niche mining-equipment supplier."
+      },
+      "ownership_behaviour": {
+        "score": 6,
+        "reason": "Stable group promoter holding."
+      },
+      "capital_allocation": {
+        "score": 5,
+        "reason": "Pays dividends but very weak ROE (~2%)."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Group governance, standard disclosures."
+      },
+      "execution": {
+        "score": 5,
+        "reason": "Sub-scale, Coal-India-timing dependent."
+      }
+    },
+    "summary": "Low-moderate trust: group-backed niche supplier with dividends, but very weak returns and tiny scale.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "SHILPAMED": {
+    "score": 6.0,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 6,
+        "reason": "Vishnukant Bhutada-led oncology-API/pharma maker."
+      },
+      "ownership_behaviour": {
+        "score": 6,
+        "reason": "Stable promoter holding."
+      },
+      "capital_allocation": {
+        "score": 6,
+        "reason": "Pays dividends, moderate debt; recovering profitability."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Past USFDA observations to monitor."
+      },
+      "execution": {
+        "score": 6,
+        "reason": "Recovering earnings; oncology-API concentration."
+      }
+    },
+    "summary": "Moderate trust: niche oncology-API franchise recovering in profitability, with USFDA-inspection history and product concentration as watch-items.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "ECOSMOBLTY": {
+    "score": 6.2,
+    "verdict": "MODERATE",
+    "confidence": "Low",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 6,
+        "reason": "Loomba family; corporate chauffeur-mobility leader (listed 2024)."
+      },
+      "ownership_behaviour": {
+        "score": 6,
+        "reason": "Promoter-led, short post-IPO history."
+      },
+      "capital_allocation": {
+        "score": 7,
+        "reason": "Asset-light, high ROE ~24%, pays dividends, low debt."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Standard governance; limited public track record."
+      },
+      "execution": {
+        "score": 6,
+        "reason": "Steady growth though a recent profit dip."
+      }
+    },
+    "summary": "Moderate trust: asset-light, high-ROE, dividend-paying mobility business; short listed history and a recent earnings dip keep confidence low.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "KIRLPNU": {
+    "score": 6.8,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 7,
+        "reason": "Kirloskar group; strong defence/industrial compressor franchise."
+      },
+      "ownership_behaviour": {
+        "score": 7,
+        "reason": "Stable group promoter holding."
+      },
+      "capital_allocation": {
+        "score": 7,
+        "reason": "Very low debt, high ROE ~21%, generous dividends."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Capable, but the Kirloskar group carries well-publicised family/governance disputes."
+      },
+      "execution": {
+        "score": 7,
+        "reason": "Strong, profitable growth in defence and industrial compressors."
+      }
+    },
+    "summary": "Moderate trust: high-return, low-debt, dividend-rich franchise; the Kirloskar group's family-governance disputes are the main thing holding the score back.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "PTC": {
+    "score": 5.45,
+    "verdict": "LOW",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 6,
+        "reason": "Government-promoted (NTPC/PGCIL/NHPC/PFC) power-trading utility."
+      },
+      "ownership_behaviour": {
+        "score": 6,
+        "reason": "State-linked ownership, stable."
+      },
+      "capital_allocation": {
+        "score": 6,
+        "reason": "High dividends, but PTCFS (NBFC arm) NPA drag."
+      },
+      "governance": {
+        "score": 4,
+        "reason": "2022 PTC Financial Services board blow-up (independent-director resignations alleging governance lapses) is a real red flag."
+      },
+      "execution": {
+        "score": 5,
+        "reason": "Thin, regulated trading margins; IEX disintermediation."
+      }
+    },
+    "summary": "Low trust: high-dividend power-trading PSU, but the well-documented PTC Financial Services governance episode and thin, disintermediating core economics weigh heavily.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "LANDMARK": {
+    "score": 5.65,
+    "verdict": "LOW",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 6,
+        "reason": "Sanjay Thakker-led premium auto-dealership group."
+      },
+      "ownership_behaviour": {
+        "score": 6,
+        "reason": "Promoter-led, stable holding."
+      },
+      "capital_allocation": {
+        "score": 5,
+        "reason": "Very high leverage (D/E ~1.7x) on inventory financing; thin dealer margins."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Standard governance."
+      },
+      "execution": {
+        "score": 5,
+        "reason": "Earnings pressured by the OEM agency-model shift; large portfolio loss."
+      }
+    },
+    "summary": "Low-moderate trust: capable dealership operator, but very high leverage, structurally thin margins and the agency-model transition cap the score.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "FREDUN": {
+    "score": 5.0,
+    "verdict": "LOW",
+    "confidence": "Low",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 5,
+        "reason": "Patel family; small injectables-pharma maker."
+      },
+      "ownership_behaviour": {
+        "score": 5,
+        "reason": "Promoter-led, small-cap."
+      },
+      "capital_allocation": {
+        "score": 5,
+        "reason": "Very high leverage (D/E ~0.9x), tiny dividend."
+      },
+      "governance": {
+        "score": 5,
+        "reason": "Small-cap disclosure standards."
+      },
+      "execution": {
+        "score": 5,
+        "reason": "Revenue growth but a recent profit dip and concentration."
+      }
+    },
+    "summary": "Low trust: sub-scale injectables maker with high leverage, limited diversification and weak recent profitability.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "CMSINFO": {
+    "score": 6.2,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 6,
+        "reason": "PE-incubated (Baring), professionally managed cash-logistics leader."
+      },
+      "ownership_behaviour": {
+        "score": 6,
+        "reason": "Diffuse/PE ownership; orderly."
+      },
+      "capital_allocation": {
+        "score": 7,
+        "reason": "Asset-light, high dividends, ROE ~13%, strong cash flow."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Professional governance."
+      },
+      "execution": {
+        "score": 6,
+        "reason": "Dominant ATM cash-management share, but long-term UPI/cash-usage headwind."
+      }
+    },
+    "summary": "Moderate trust: professionally run, cash-generative, dividend-paying market leader; the structural decline of cash usage is the key long-term overhang.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "DIFFNKG": {
+    "score": 6.0,
+    "verdict": "MODERATE",
+    "confidence": "Low",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 6,
+        "reason": "Nagpur-based welding-consumables/wear-solutions promoter (listed 2024)."
+      },
+      "ownership_behaviour": {
+        "score": 6,
+        "reason": "Promoter-led, short post-IPO history."
+      },
+      "capital_allocation": {
+        "score": 6,
+        "reason": "Low debt, pays dividends, ROE ~13%."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Standard governance; limited public history."
+      },
+      "execution": {
+        "score": 6,
+        "reason": "Profitable niche growth; cyclical capex exposure."
+      }
+    },
+    "summary": "Moderate trust: profitable, low-debt niche industrials promoter with dividends; short listed history and cyclicality keep confidence low.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "MOSCHIP": {
+    "score": 5.0,
+    "verdict": "LOW",
+    "confidence": "Low",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 5,
+        "reason": "Fabless semiconductor-design promoter; turnaround-stage."
+      },
+      "ownership_behaviour": {
+        "score": 5,
+        "reason": "Promoter holding modest; limited verified data."
+      },
+      "capital_allocation": {
+        "score": 5,
+        "reason": "No dividend, moderate debt, modest returns."
+      },
+      "governance": {
+        "score": 5,
+        "reason": "Microcap disclosure standards."
+      },
+      "execution": {
+        "score": 5,
+        "reason": "Improving but still loss-prone and sub-scale."
+      }
+    },
+    "summary": "Low trust: sub-scale fabless/embedded-design company still establishing consistent profitability and governance track record.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "GULFOILLUB": {
+    "score": 6.65,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 7,
+        "reason": "Hinduja group; well-run lubricants franchise with strong distribution."
+      },
+      "ownership_behaviour": {
+        "score": 7,
+        "reason": "Stable group promoter holding."
+      },
+      "capital_allocation": {
+        "score": 7,
+        "reason": "High ROE ~22% and very generous dividends."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Hinduja-group complexity, but the listed entity is well-governed."
+      },
+      "execution": {
+        "score": 6,
+        "reason": "Steady growth with a long-term EV-substitution overhang."
+      }
+    },
+    "summary": "Moderate trust: high-return, dividend-rich lubricants business with a strong distribution moat; group complexity and the EV transition are the watch-items.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "DATAPATTNS": {
+    "score": 7.25,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 7,
+        "reason": "Founder Srinivasagopalan Rangarajan; well-regarded vertically integrated defence-electronics promoter."
+      },
+      "ownership_behaviour": {
+        "score": 8,
+        "reason": "High, stable promoter holding (~87%), no pledging."
+      },
+      "capital_allocation": {
+        "score": 7,
+        "reason": "Very low debt, pays dividends, ROE ~17%."
+      },
+      "governance": {
+        "score": 7,
+        "reason": "Clean governance and disclosure."
+      },
+      "execution": {
+        "score": 7,
+        "reason": "Strong order book (4x revenue) but lumpy DRDO-linked recognition."
+      }
+    },
+    "summary": "Moderate-to-high trust: founder-led, high-skin, low-debt defence-electronics franchise with a strong order book; revenue lumpiness is the main external risk.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "CYIENTDLM": {
+    "score": 5.65,
+    "verdict": "LOW",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 6,
+        "reason": "Cyient group (BVR Mohan Reddy) parentage; EMS demerger (2023)."
+      },
+      "ownership_behaviour": {
+        "score": 6,
+        "reason": "Group/promoter holding stable; short listed history."
+      },
+      "capital_allocation": {
+        "score": 5,
+        "reason": "No dividend, weak ROE ~7%."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Reputable parent governance."
+      },
+      "execution": {
+        "score": 5,
+        "reason": "Growth but a recent profit dip; EMS positioning vs Syrma/Dixon."
+      }
+    },
+    "summary": "Low-moderate trust: reputable-parent EMS business with a clean lineage, but weak returns, no capital return and a short standalone track record.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "MMP": {
+    "score": 5.8,
+    "verdict": "LOW",
+    "confidence": "Low",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 6,
+        "reason": "Family promoter; niche aluminium-powder/paste maker."
+      },
+      "ownership_behaviour": {
+        "score": 6,
+        "reason": "Stable family holding."
+      },
+      "capital_allocation": {
+        "score": 5,
+        "reason": "High leverage (D/E ~0.5x); pays dividends."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Standard small-cap governance."
+      },
+      "execution": {
+        "score": 6,
+        "reason": "Steady growth, aluminium-price sensitive."
+      }
+    },
+    "summary": "Low-moderate trust: niche family aluminium-products business with dividends, but elevated leverage and commodity-price sensitivity.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "BBL": {
+    "score": 5.8,
+    "verdict": "LOW",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 6,
+        "reason": "Danani/Mehta promoters; long-standing transformers/motors maker, historically Siemens-linked."
+      },
+      "ownership_behaviour": {
+        "score": 6,
+        "reason": "Stable family holding."
+      },
+      "capital_allocation": {
+        "score": 6,
+        "reason": "Cash-rich (large investments) and pays dividends, but cyclical."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Conservative, standard governance."
+      },
+      "execution": {
+        "score": 5,
+        "reason": "Cyclical earnings, negative recent cash flow."
+      }
+    },
+    "summary": "Low-moderate trust: conservative, cash-rich, dividend-paying legacy electricals maker, held back by cyclical, working-capital-heavy project earnings.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "CESC": {
+    "score": 6.65,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 7,
+        "reason": "RPG group (Sanjiv Goenka); experienced regulated-utility operator."
+      },
+      "ownership_behaviour": {
+        "score": 7,
+        "reason": "Stable group promoter holding."
+      },
+      "capital_allocation": {
+        "score": 6,
+        "reason": "High (utility-typical) debt but steady dividends and regulated returns."
+      },
+      "governance": {
+        "score": 7,
+        "reason": "Established group governance."
+      },
+      "execution": {
+        "score": 6,
+        "reason": "Stable Kolkata monopoly; DISCOM-privatisation expansion execution risk."
+      }
+    },
+    "summary": "Moderate trust: established, dividend-paying regulated utility under a reputable group; high (but structural) leverage and distribution-loss risk in new geographies are the watch-items.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "OMINFRAL": {
+    "score": 4.65,
+    "verdict": "LOW",
+    "confidence": "Low",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 5,
+        "reason": "Small EPC/hydro promoter; weak delivery record."
+      },
+      "ownership_behaviour": {
+        "score": 5,
+        "reason": "Promoter-led, limited verified data."
+      },
+      "capital_allocation": {
+        "score": 4,
+        "reason": "Negative cash flow and heavy losses."
+      },
+      "governance": {
+        "score": 5,
+        "reason": "Small-cap governance."
+      },
+      "execution": {
+        "score": 4,
+        "reason": "Lumpy, loss-making EPC execution."
+      }
+    },
+    "summary": "Low trust: sub-scale EPC contractor with lumpy, loss-making execution and negative cash flow.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "WHIRLPOOL": {
+    "score": 5.75,
+    "verdict": "LOW",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 7,
+        "reason": "Whirlpool Corp (USA) MNC parent; strong brand and governance."
+      },
+      "ownership_behaviour": {
+        "score": 4,
+        "reason": "Parent has cut its stake from 75% to ~51% and signalled further reduction ? a clear negative ownership signal."
+      },
+      "capital_allocation": {
+        "score": 6,
+        "reason": "Pays dividends, but weak ROE and demand softness."
+      },
+      "governance": {
+        "score": 7,
+        "reason": "MNC-grade governance."
+      },
+      "execution": {
+        "score": 5,
+        "reason": "Earnings under pressure from Korean/Chinese competition."
+      }
+    },
+    "summary": "Low-moderate trust: MNC-grade governance and brand, but the parent's ongoing stake reduction (75%->51%, more planned) is a significant ownership-behaviour overhang.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "PITTIENG": {
+    "score": 5.85,
+    "verdict": "LOW",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 6,
+        "reason": "Pitti family; electrical-steel laminations and motors (Vande Bharat/loco traction)."
+      },
+      "ownership_behaviour": {
+        "score": 6,
+        "reason": "Stable family holding."
+      },
+      "capital_allocation": {
+        "score": 5,
+        "reason": "High leverage (D/E ~0.8x); pays a small dividend."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Standard governance."
+      },
+      "execution": {
+        "score": 6,
+        "reason": "Order-led growth but capital and working-capital intensive."
+      }
+    },
+    "summary": "Low-moderate trust: well-positioned rail/industrial laminations supplier, but high leverage and capital intensity cap the score.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "RAYMONDREL": {
+    "score": 4.95,
+    "verdict": "LOW",
+    "confidence": "Low",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 5,
+        "reason": "Singhania-controlled (demerged from Raymond, 2025) ? same family-governance overhang."
+      },
+      "ownership_behaviour": {
+        "score": 5,
+        "reason": "Promoter-controlled; very short standalone history."
+      },
+      "capital_allocation": {
+        "score": 5,
+        "reason": "Capital-intensive with large negative operating cash flow (land/build)."
+      },
+      "governance": {
+        "score": 4,
+        "reason": "Inherits the Raymond family/related-party governance perception."
+      },
+      "execution": {
+        "score": 6,
+        "reason": "Strong Thane bookings momentum off a single land bank."
+      }
+    },
+    "summary": "Low trust: promising Thane land-monetisation story, but Singhania-family governance overhang, heavy capital intensity and a very short standalone record weigh on it.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "NIITLTD": {
+    "score": 6.35,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 7,
+        "reason": "Founders Rajendra Pawar & Vijay Thadani ? pioneering, reputable IT-education promoters."
+      },
+      "ownership_behaviour": {
+        "score": 7,
+        "reason": "Stable promoter holding; history of buybacks."
+      },
+      "capital_allocation": {
+        "score": 6,
+        "reason": "Cash-rich, returns capital via dividends/buybacks, but very weak ROE."
+      },
+      "governance": {
+        "score": 7,
+        "reason": "Clean, well-regarded governance."
+      },
+      "execution": {
+        "score": 4,
+        "reason": "Core skills business is structurally challenged by online platforms."
+      }
+    },
+    "summary": "Moderate trust: reputable founders and clean, cash-return-oriented governance; the score is dragged down by a structurally weak, disrupted training business.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "RUSTOMJEE": {
+    "score": 5.65,
+    "verdict": "LOW",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 6,
+        "reason": "Boman Irani-led (Keystone/Rustomjee); respected MMR developer brand."
+      },
+      "ownership_behaviour": {
+        "score": 6,
+        "reason": "Promoter-led, stable holding."
+      },
+      "capital_allocation": {
+        "score": 5,
+        "reason": "High debt and negative operating cash flow (RE-typical)."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Standard governance."
+      },
+      "execution": {
+        "score": 5,
+        "reason": "Brand-led bookings but weak reported returns."
+      }
+    },
+    "summary": "Low-moderate trust: respected MMR developer brand, but high leverage, negative cash flow and weak returns typical of the real-estate cycle.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "INTERARCH": {
+    "score": 6.0,
+    "verdict": "MODERATE",
+    "confidence": "Low",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 6,
+        "reason": "Arvind Nanda-led pre-engineered-buildings leader (listed 2024)."
+      },
+      "ownership_behaviour": {
+        "score": 6,
+        "reason": "Promoter-led, short post-IPO history."
+      },
+      "capital_allocation": {
+        "score": 6,
+        "reason": "Low debt, pays dividends, ROE ~16%."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Standard governance; limited public track record."
+      },
+      "execution": {
+        "score": 6,
+        "reason": "Growth with steel-price and fixed-price-contract risk."
+      }
+    },
+    "summary": "Moderate trust: low-debt, dividend-paying PEB leader with decent returns; short listed history and steel-price exposure keep confidence low.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "CAPACITE": {
+    "score": 5.65,
+    "verdict": "LOW",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 6,
+        "reason": "Katyal promoters; Tier-1 building contractor for marquee developers."
+      },
+      "ownership_behaviour": {
+        "score": 6,
+        "reason": "Promoter-led, stable holding."
+      },
+      "capital_allocation": {
+        "score": 5,
+        "reason": "No dividend, working-capital-heavy, developer-credit exposure."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Standard governance."
+      },
+      "execution": {
+        "score": 5,
+        "reason": "Large order book but lumpy, payment-cycle-dependent earnings."
+      }
+    },
+    "summary": "Low-moderate trust: reputable contractor with a strong order book, but working-capital intensity, developer-credit risk and no capital return cap the score.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "RAILTEL": {
+    "score": 6.2,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 6,
+        "reason": "Ministry of Railways PSU; strategic rail-telecom/IT infrastructure."
+      },
+      "ownership_behaviour": {
+        "score": 6,
+        "reason": "Government-controlled, stable."
+      },
+      "capital_allocation": {
+        "score": 7,
+        "reason": "Low debt, high dividends, ROE ~16%."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "PSU governance ? board independence constrained."
+      },
+      "execution": {
+        "score": 6,
+        "reason": "Steady, government-client-led growth; private-telco competition."
+      }
+    },
+    "summary": "Moderate trust: low-debt, dividend-paying rail-telecom PSU with steady growth; PSU pace and government-client concentration are the watch-items.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "AFFLE": {
+    "score": 6.6,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 7,
+        "reason": "Anuj Khanna Sohum ? credible, founder-led mobile ad-tech entrepreneur."
+      },
+      "ownership_behaviour": {
+        "score": 7,
+        "reason": "High, stable promoter holding (~74%)."
+      },
+      "capital_allocation": {
+        "score": 6,
+        "reason": "Very low debt, strong cash flow, but acquisitive and no dividend."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Standard listed-tech governance; data-privacy regulatory exposure."
+      },
+      "execution": {
+        "score": 7,
+        "reason": "Strong organic + acquisition-led growth."
+      }
+    },
+    "summary": "Moderate trust: credible founder with high skin-in-the-game and strong growth; acquisition-led capital allocation and privacy regulation are the watch-items.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "SKFINDIA": {
+    "score": 7.25,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 8,
+        "reason": "SKF AB (Sweden) MNC parent; premium bearings technology and governance."
+      },
+      "ownership_behaviour": {
+        "score": 7,
+        "reason": "Stable MNC promoter holding; demerger (auto/industrial) underway."
+      },
+      "capital_allocation": {
+        "score": 7,
+        "reason": "Debt-free, very generous dividends."
+      },
+      "governance": {
+        "score": 8,
+        "reason": "MNC-grade governance."
+      },
+      "execution": {
+        "score": 6,
+        "reason": "Auto-cycle-sensitive; strong after-market recurring revenue."
+      }
+    },
+    "summary": "Moderate trust: debt-free, dividend-rich MNC subsidiary with strong governance; the value-unlocking demerger and auto-cycle sensitivity are the watch-items.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "TEJASNET": {
+    "score": 5.7,
+    "verdict": "LOW",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 7,
+        "reason": "Tata group (Tata Sons/Panatone) controlled telecom-equipment maker."
+      },
+      "ownership_behaviour": {
+        "score": 6,
+        "reason": "Tata control, but relatively recent and capital-raising."
+      },
+      "capital_allocation": {
+        "score": 4,
+        "reason": "Losses, very high leverage, negative ROE during BSNL ramp."
+      },
+      "governance": {
+        "score": 7,
+        "reason": "Tata-grade governance."
+      },
+      "execution": {
+        "score": 4,
+        "reason": "BSNL-execution dependent with payment delays; loss-making."
+      }
+    },
+    "summary": "Low-moderate trust: strong Tata parentage and governance, but current losses, high leverage and heavy BSNL dependence weigh on capital allocation and execution.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "VSTTILLERS": {
+    "score": 6.55,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 7,
+        "reason": "VST group (Surendra family); conservative power-tiller market leader."
+      },
+      "ownership_behaviour": {
+        "score": 7,
+        "reason": "Stable family promoter holding."
+      },
+      "capital_allocation": {
+        "score": 7,
+        "reason": "Debt-free, pays dividends."
+      },
+      "governance": {
+        "score": 7,
+        "reason": "Clean, conservative governance."
+      },
+      "execution": {
+        "score": 4,
+        "reason": "Cyclical earnings dip; intensifying competition in small tractors."
+      }
+    },
+    "summary": "Moderate trust: conservative, debt-free, dividend-paying market leader; the score is held back by a cyclical earnings dip and rising competition, not governance.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "ASALCBR": {
+    "score": 5.85,
+    "verdict": "LOW",
+    "confidence": "Low",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 6,
+        "reason": "Kedia family (Associated Alcohols & Breweries) ? established IMFL/ENA maker; source-file leadership text appears mismatched."
+      },
+      "ownership_behaviour": {
+        "score": 6,
+        "reason": "Stable family holding."
+      },
+      "capital_allocation": {
+        "score": 6,
+        "reason": "Moderate debt, pays dividends, ROE ~15%."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Standard family-business governance."
+      },
+      "execution": {
+        "score": 5,
+        "reason": "Steady but commodity-linked; data conflict reduces confidence."
+      }
+    },
+    "summary": "Low-moderate trust: established family alcohol/ENA business with decent returns and dividends; a source-file description mismatch reduces confidence ? verify identity.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "GREAVESCOT": {
+    "score": 5.85,
+    "verdict": "LOW",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 6,
+        "reason": "Thapar (DBH) group; legacy engines maker pivoting to EV (Ampere)."
+      },
+      "ownership_behaviour": {
+        "score": 6,
+        "reason": "Stable group promoter holding."
+      },
+      "capital_allocation": {
+        "score": 6,
+        "reason": "Pays dividends, but Ampere EV cash burn offsets the legacy engine cash flows."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Standard group governance."
+      },
+      "execution": {
+        "score": 5,
+        "reason": "ICE engine decline and unclear EV profitability path."
+      }
+    },
+    "summary": "Low-moderate trust: dividend-paying legacy promoter, but the EV (Ampere) transition is cash-consuming with an unproven profitability path.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "ELDEHSG": {
+    "score": 6.0,
+    "verdict": "MODERATE",
+    "confidence": "Low",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 6,
+        "reason": "Eldeco group (Bajaj family); strong Lucknow/UP developer brand."
+      },
+      "ownership_behaviour": {
+        "score": 6,
+        "reason": "Promoter-led, stable holding."
+      },
+      "capital_allocation": {
+        "score": 6,
+        "reason": "Asset-light model, pays dividends; real-estate working-capital intensity."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Standard governance."
+      },
+      "execution": {
+        "score": 6,
+        "reason": "Brand-led growth in tier-2 UP markets."
+      }
+    },
+    "summary": "Moderate trust: asset-light, dividend-paying regional developer with a strong UP brand; real-estate cyclicality and incoming pan-India competition are the watch-items.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "ARIS": {
+    "score": 4.8,
+    "verdict": "LOW",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 5,
+        "reason": "Founders Ronak Morbia/Bhavik Khara; B2B construction-materials platform (listed 2025)."
+      },
+      "ownership_behaviour": {
+        "score": 5,
+        "reason": "Low promoter holding (~38%); short post-IPO history."
+      },
+      "capital_allocation": {
+        "score": 5,
+        "reason": "Thin operating margins, high working capital, no dividend."
+      },
+      "governance": {
+        "score": 4,
+        "reason": "Statutory auditor PwC resigned (May 2026) ? a clear governance watch."
+      },
+      "execution": {
+        "score": 5,
+        "reason": "Just turned profitable after losses; low-switching-cost category."
+      }
+    },
+    "summary": "Low trust: thin-margin, working-capital-heavy B2B marketplace with a low promoter stake, short listed history and a recent auditor resignation (governance flag).",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "QUESS": {
+    "score": 6.2,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 7,
+        "reason": "Ajit Isaac founder + Fairfax backing; credible staffing entrepreneur."
+      },
+      "ownership_behaviour": {
+        "score": 6,
+        "reason": "Founder/Fairfax ownership; multiple recent demergers."
+      },
+      "capital_allocation": {
+        "score": 6,
+        "reason": "Pays dividends and good ROE, but structurally thin-margin, working-capital-heavy staffing."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Reasonable governance; complex post-demerger structure."
+      },
+      "execution": {
+        "score": 6,
+        "reason": "Scaled #1 staffing franchise; low-margin model."
+      }
+    },
+    "summary": "Moderate trust: credible, Fairfax-backed founder and India's largest staffing platform; thin margins and a complex multi-demerger structure are the watch-items.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "AVALON": {
+    "score": 6.0,
+    "verdict": "MODERATE",
+    "confidence": "Low",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 6,
+        "reason": "Founder-led, US-focused EMS exporter."
+      },
+      "ownership_behaviour": {
+        "score": 6,
+        "reason": "Promoter-led; relatively recent listing."
+      },
+      "capital_allocation": {
+        "score": 6,
+        "reason": "Reinvesting; no dividend, moderate debt."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Standard governance; limited public track record."
+      },
+      "execution": {
+        "score": 6,
+        "reason": "Strong growth but customer concentration and FX risk."
+      }
+    },
+    "summary": "Moderate trust: founder-run, export-EMS player with good growth; customer concentration, FX exposure and a short listed history keep confidence low.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "GIPCL": {
+    "score": 5.85,
+    "verdict": "LOW",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 6,
+        "reason": "Gujarat State-government PSU power generator."
+      },
+      "ownership_behaviour": {
+        "score": 6,
+        "reason": "State-controlled, stable."
+      },
+      "capital_allocation": {
+        "score": 6,
+        "reason": "High dividends, GUVNL-backed PPAs; lignite-heavy asset base."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "PSU governance constraints."
+      },
+      "execution": {
+        "score": 5,
+        "reason": "Limited growth; lignite sunset and GUVNL payment history."
+      }
+    },
+    "summary": "Low-moderate trust: high-dividend state PSU with contracted revenue, offset by PSU governance constraints, lignite-asset sunset risk and limited growth.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "TVSELECT": {
+    "score": 5.3,
+    "verdict": "LOW",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 6,
+        "reason": "TVS group (Gopal Srinivasan side); trusted South-India brand heritage."
+      },
+      "ownership_behaviour": {
+        "score": 6,
+        "reason": "Group/family promoter holding."
+      },
+      "capital_allocation": {
+        "score": 4,
+        "reason": "Very weak ROE (~1%), high leverage, no dividend."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Group governance."
+      },
+      "execution": {
+        "score": 4,
+        "reason": "Weak profitability; POS/peripherals under structural pressure."
+      }
+    },
+    "summary": "Low-moderate trust: trusted TVS lineage, but very weak returns, high leverage and a structurally pressured product mix weigh heavily.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "EMBDL": {
+    "score": 4.75,
+    "verdict": "LOW",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 6,
+        "reason": "Embassy group (Jitu Virwani); capable developer but highly leveraged."
+      },
+      "ownership_behaviour": {
+        "score": 4,
+        "reason": "~68% of promoter holding pledged ? a significant red flag."
+      },
+      "capital_allocation": {
+        "score": 4,
+        "reason": "Loss-making with negative RoE/RoCE; lumpy completion-linked revenue."
+      },
+      "governance": {
+        "score": 5,
+        "reason": "Land-title litigation (Kadugodi) and high pledge weigh on governance."
+      },
+      "execution": {
+        "score": 5,
+        "reason": "Integrating the merged portfolio; scaling launches."
+      }
+    },
+    "summary": "Low trust: capable developer brand, but very high promoter-share pledging, current losses and land-title litigation make this a clear governance/capital-allocation concern.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "LAKSELEC": {
+    "score": 5.05,
+    "verdict": "LOW",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 6,
+        "reason": "Lakshmi (LMW) group affiliate; niche textile-machinery control panels."
+      },
+      "ownership_behaviour": {
+        "score": 5,
+        "reason": "Low promoter holding (~36%)."
+      },
+      "capital_allocation": {
+        "score": 5,
+        "reason": "Cash-rich and pays dividends, but very weak ROE/RoCE."
+      },
+      "governance": {
+        "score": 5,
+        "reason": "GST show-cause notices (~Rs5.5cr) and single-customer (LMW) reliance."
+      },
+      "execution": {
+        "score": 4,
+        "reason": "Sharp earnings decline; concentration on the textile cycle."
+      }
+    },
+    "summary": "Low trust: cash-rich but very low-return, with heavy LMW-customer concentration, a low promoter stake and outstanding GST notices.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "TATACOMM": {
+    "score": 7.05,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 8,
+        "reason": "Tata group (Tata Sons) controlled global network/data business."
+      },
+      "ownership_behaviour": {
+        "score": 7,
+        "reason": "Stable Tata promoter holding."
+      },
+      "capital_allocation": {
+        "score": 6,
+        "reason": "High debt from past acquisitions, but pays dividends and generates strong cash."
+      },
+      "governance": {
+        "score": 8,
+        "reason": "Tata-grade governance."
+      },
+      "execution": {
+        "score": 6,
+        "reason": "Steady data-services growth; needs acceleration."
+      }
+    },
+    "summary": "Moderate trust: Tata-controlled, well-governed global networking business with strong cash flow; high legacy-acquisition debt and gradual growth are the watch-items.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "UNIECOM": {
+    "score": 5.15,
+    "verdict": "LOW",
+    "confidence": "Low",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 5,
+        "reason": "AceVector (Snapdeal)/SoftBank-linked e-commerce SaaS."
+      },
+      "ownership_behaviour": {
+        "score": 5,
+        "reason": "Post-IPO promoter/PE selling; ownership in transition."
+      },
+      "capital_allocation": {
+        "score": 5,
+        "reason": "Low debt, no dividend; small scale."
+      },
+      "governance": {
+        "score": 5,
+        "reason": "Standard new-economy governance."
+      },
+      "execution": {
+        "score": 6,
+        "reason": "Accelerating, profitable growth despite valuation de-rating."
+      }
+    },
+    "summary": "Low trust: profitable, growing e-commerce SaaS, but PE/promoter selling, small scale and a sharp valuation de-rating keep the score low.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "SUVEN": {
+    "score": 5.1,
+    "verdict": "LOW",
+    "confidence": "Low",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 6,
+        "reason": "Jasti family (Suven Life Sciences) ? drug-discovery/R&D arm; source-file description appears to mix in Suven Pharma's CDMO."
+      },
+      "ownership_behaviour": {
+        "score": 6,
+        "reason": "Family promoter holding stable."
+      },
+      "capital_allocation": {
+        "score": 4,
+        "reason": "R&D-burn model: deep losses and negative operating cash flow."
+      },
+      "governance": {
+        "score": 5,
+        "reason": "Standard governance; identity/data conflict in source files."
+      },
+      "execution": {
+        "score": 4,
+        "reason": "Discovery-stage, milestone-dependent and loss-making."
+      }
+    },
+    "summary": "Low trust: founder-family drug-discovery company in a cash-burning, milestone-dependent phase; a source-file identity mix-up reduces confidence ? verify.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "SONACOMS": {
+    "score": 6.75,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 7,
+        "reason": "Well-regarded precision-forgings/EV-components franchise (Sona Comstar); navigating a post-chairman leadership transition."
+      },
+      "ownership_behaviour": {
+        "score": 6,
+        "reason": "Blackstone has exited; promoter family stake with some selling."
+      },
+      "capital_allocation": {
+        "score": 7,
+        "reason": "Pays dividends, low debt, reinvesting in EV capability."
+      },
+      "governance": {
+        "score": 7,
+        "reason": "Good governance and disclosure."
+      },
+      "execution": {
+        "score": 7,
+        "reason": "Strong revenue growth, though margins compressed recently."
+      }
+    },
+    "summary": "Moderate trust: high-quality, low-debt EV-components franchise with sound governance; the leadership transition, PE exit and margin compression are the watch-items.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "AEROFLEX": {
+    "score": 6.15,
+    "verdict": "MODERATE",
+    "confidence": "Low",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 6,
+        "reason": "Sat Industries (Daud family) subsidiary; export-leading SS-flexible-hose maker."
+      },
+      "ownership_behaviour": {
+        "score": 6,
+        "reason": "Stable parent promoter holding."
+      },
+      "capital_allocation": {
+        "score": 6,
+        "reason": "Low debt, small dividend, reinvesting."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Standard governance."
+      },
+      "execution": {
+        "score": 7,
+        "reason": "Strong export-led growth and high domestic share."
+      }
+    },
+    "summary": "Moderate trust: low-debt, fast-growing niche export leader; commodity-price and Chinese-competition exposure are the watch-items.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "SANSERA": {
+    "score": 6.15,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 6,
+        "reason": "Founder-led precision-forgings maker; PE-exited."
+      },
+      "ownership_behaviour": {
+        "score": 6,
+        "reason": "Promoter holding stable post-PE exit."
+      },
+      "capital_allocation": {
+        "score": 6,
+        "reason": "Pays dividends, reinvesting; moderate debt."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Standard governance."
+      },
+      "execution": {
+        "score": 7,
+        "reason": "Strong growth and a deliberate non-auto/defence diversification."
+      }
+    },
+    "summary": "Moderate trust: well-run precision-components franchise diversifying beyond auto; customer concentration (Bajaj) and EV-transition risk on some products are the watch-items.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "GESHIP": {
+    "score": 7.8,
+    "verdict": "MODERATE",
+    "confidence": "High",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 8,
+        "reason": "Sheth family (Bharat Sheth) ? among India's most respected, conservative shipping promoters."
+      },
+      "ownership_behaviour": {
+        "score": 8,
+        "reason": "Stable promoter holding, no pledging."
+      },
+      "capital_allocation": {
+        "score": 8,
+        "reason": "Counter-cyclical fleet management, very generous dividends, low net debt."
+      },
+      "governance": {
+        "score": 8,
+        "reason": "Clean, transparent, well-regarded governance."
+      },
+      "execution": {
+        "score": 7,
+        "reason": "Disciplined through freight cycles, though earnings are inherently cyclical."
+      }
+    },
+    "summary": "High-quality management: a conservatively run, shareholder-friendly shipping franchise with exemplary capital allocation; the only cap is the inherent cyclicality of freight markets.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "THERMAX": {
+    "score": 7.65,
+    "verdict": "MODERATE",
+    "confidence": "High",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 8,
+        "reason": "Aga/Pudumjee family ? exemplary, ethics-first governance reputation."
+      },
+      "ownership_behaviour": {
+        "score": 8,
+        "reason": "Stable promoter holding, no pledging."
+      },
+      "capital_allocation": {
+        "score": 7,
+        "reason": "Pays dividends and reinvests; some project-related debt."
+      },
+      "governance": {
+        "score": 8,
+        "reason": "Best-in-class governance and disclosure reputation."
+      },
+      "execution": {
+        "score": 7,
+        "reason": "Large order book; slow EPC order-to-revenue conversion."
+      }
+    },
+    "summary": "High-quality management: one of India's most respected promoter families with clean governance and sound capital allocation; execution pace on large EPC orders is the main watch-item.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "TRITURBINE": {
+    "score": 7.8,
+    "verdict": "MODERATE",
+    "confidence": "High",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 8,
+        "reason": "Sawhney family; reputable, focused industrial-steam-turbine leader."
+      },
+      "ownership_behaviour": {
+        "score": 8,
+        "reason": "Stable promoter holding."
+      },
+      "capital_allocation": {
+        "score": 8,
+        "reason": "Very low debt, high ROE ~26%, generous dividends."
+      },
+      "governance": {
+        "score": 8,
+        "reason": "Clean governance and disclosure."
+      },
+      "execution": {
+        "score": 7,
+        "reason": "Global market-share gains; valuation slightly rich."
+      }
+    },
+    "summary": "High-quality management: a focused, low-debt, high-return market leader with clean governance and strong capital allocation; valuation is the main watch-item.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "ELGIEQUIP": {
+    "score": 7.5,
+    "verdict": "MODERATE",
+    "confidence": "High",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 8,
+        "reason": "Jairam Varadaraj (LRG group) ? highly respected, ethical promoter."
+      },
+      "ownership_behaviour": {
+        "score": 8,
+        "reason": "Stable promoter holding."
+      },
+      "capital_allocation": {
+        "score": 7,
+        "reason": "Pays dividends and reinvests globally; moderate debt."
+      },
+      "governance": {
+        "score": 8,
+        "reason": "Clean, well-regarded governance."
+      },
+      "execution": {
+        "score": 6,
+        "reason": "Global #5 compressor maker, but modest near-term growth and Europe drag."
+      }
+    },
+    "summary": "High-quality management: a respected, well-governed promoter with strong capital allocation; the score is capped mainly by modest near-term growth, not governance.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "INOXINDIA": {
+    "score": 7.0,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 7,
+        "reason": "INOX (Jain family) group; capable cryogenic-equipment leader (listed 2023)."
+      },
+      "ownership_behaviour": {
+        "score": 7,
+        "reason": "Stable promoter holding."
+      },
+      "capital_allocation": {
+        "score": 7,
+        "reason": "Low debt, high ROE ~26%, pays a small dividend."
+      },
+      "governance": {
+        "score": 7,
+        "reason": "Standard group governance."
+      },
+      "execution": {
+        "score": 7,
+        "reason": "Strong, profitable growth as the only large domestic cryogenic maker."
+      }
+    },
+    "summary": "Moderate trust: low-debt, high-return cryogenics leader under a capable group; a relatively short standalone listed history is the main caveat.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "KENNAMET": {
+    "score": 7.5,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 8,
+        "reason": "Kennametal Inc (USA) MNC parent; premium cutting-tools technology."
+      },
+      "ownership_behaviour": {
+        "score": 8,
+        "reason": "Stable ~75% MNC promoter holding."
+      },
+      "capital_allocation": {
+        "score": 7,
+        "reason": "Low debt, generous dividends."
+      },
+      "governance": {
+        "score": 8,
+        "reason": "MNC-grade governance."
+      },
+      "execution": {
+        "score": 6,
+        "reason": "Cyclical auto/industrial demand; rich valuation."
+      }
+    },
+    "summary": "Moderate trust: debt-free, dividend-paying MNC subsidiary with strong governance; cyclical end-markets and a premium valuation are the watch-items.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "PARKHOSPS": {
+    "score": 6.0,
+    "verdict": "MODERATE",
+    "confidence": "Low",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 6,
+        "reason": "Dr. Ajay Gupta-led North-India hospital chain (listed 2025)."
+      },
+      "ownership_behaviour": {
+        "score": 6,
+        "reason": "Promoter-led, short post-IPO history."
+      },
+      "capital_allocation": {
+        "score": 6,
+        "reason": "No dividend yet, capex-led growth, ROE ~17%."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Standard governance; limited public track record."
+      },
+      "execution": {
+        "score": 6,
+        "reason": "Strong growth but Haryana/North-India concentration."
+      }
+    },
+    "summary": "Moderate trust: capable, growing North-India hospital operator with decent returns; regional concentration, acquisition integration and a short listed history keep confidence low.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "NLCINDIA": {
+    "score": 5.85,
+    "verdict": "LOW",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 6,
+        "reason": "Government PSU lignite/power generator with sovereign backing."
+      },
+      "ownership_behaviour": {
+        "score": 6,
+        "reason": "State-controlled, stable."
+      },
+      "capital_allocation": {
+        "score": 6,
+        "reason": "High dividends but high debt; RE-transition capex."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "PSU governance constraints."
+      },
+      "execution": {
+        "score": 5,
+        "reason": "Flat earnings; slow renewable-transition execution."
+      }
+    },
+    "summary": "Low-moderate trust: high-dividend state power PSU, capped by PSU governance, high leverage and a slow lignite-to-renewables transition.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "PFC": {
+    "score": 6.0,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 6,
+        "reason": "Government PSU; #1 power-sector financier."
+      },
+      "ownership_behaviour": {
+        "score": 6,
+        "reason": "State-controlled, stable."
+      },
+      "capital_allocation": {
+        "score": 6,
+        "reason": "High dividends and ROE ~20%, but inherent DISCOM-credit/NPA risk."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "PSU governance; policy-aligned lending."
+      },
+      "execution": {
+        "score": 6,
+        "reason": "Steady book growth tied to power-sector schemes."
+      }
+    },
+    "summary": "Moderate trust: high-dividend, high-ROE power financier, with structural DISCOM-credit risk and PSU governance constraints as the watch-items.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "SJVN": {
+    "score": 5.7,
+    "verdict": "LOW",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 6,
+        "reason": "Government PSU hydro developer."
+      },
+      "ownership_behaviour": {
+        "score": 6,
+        "reason": "State-controlled, stable."
+      },
+      "capital_allocation": {
+        "score": 6,
+        "reason": "High dividends but heavy debt and long-gestation hydro capex."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "PSU governance constraints."
+      },
+      "execution": {
+        "score": 4,
+        "reason": "Weak ROE ~4.5%; chronic hydro-execution delays."
+      }
+    },
+    "summary": "Low-moderate trust: dividend-paying hydro PSU, held back by weak returns, very high leverage and slow, clearance-dependent project execution.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "ISGEC": {
+    "score": 5.85,
+    "verdict": "LOW",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 6,
+        "reason": "Puri family; established heavy-engineering/EPC promoter."
+      },
+      "ownership_behaviour": {
+        "score": 6,
+        "reason": "Stable family promoter holding."
+      },
+      "capital_allocation": {
+        "score": 6,
+        "reason": "Pays dividends, but lumpy project returns and weak ROE."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Standard family-business governance."
+      },
+      "execution": {
+        "score": 5,
+        "reason": "Project-lumpy, currently weak profitability."
+      }
+    },
+    "summary": "Low-moderate trust: established family heavy-engineering business with dividends, but lumpy, low-return project earnings cap the score.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "HEG": {
+    "score": 6.55,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 7,
+        "reason": "LNJ Bhilwara group (Jhunjhunwala); reputable, conservative promoters."
+      },
+      "ownership_behaviour": {
+        "score": 7,
+        "reason": "Stable promoter holding."
+      },
+      "capital_allocation": {
+        "score": 7,
+        "reason": "Cash-generative through the cycle, pays dividends, moderate debt."
+      },
+      "governance": {
+        "score": 7,
+        "reason": "Clean, conservative governance."
+      },
+      "execution": {
+        "score": 4,
+        "reason": "Deeply cyclical electrode earnings currently depressed."
+      }
+    },
+    "summary": "Moderate trust: reputable, conservative group with sound capital allocation; the score is held back by the graphite-electrode cyclical trough, not governance.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "INGERRAND": {
+    "score": 7.7,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 8,
+        "reason": "Ingersoll-Rand (USA) MNC parent; premium compressed-air brand."
+      },
+      "ownership_behaviour": {
+        "score": 8,
+        "reason": "Stable ~75% MNC promoter holding."
+      },
+      "capital_allocation": {
+        "score": 8,
+        "reason": "Debt-free, very high ROE ~42%, generous dividends."
+      },
+      "governance": {
+        "score": 8,
+        "reason": "MNC-grade governance."
+      },
+      "execution": {
+        "score": 6,
+        "reason": "High-quality but cyclical; parent restructuring overhang."
+      }
+    },
+    "summary": "Moderate-to-high trust: debt-free, exceptionally high-return MNC subsidiary with strong governance and dividends; cyclicality and parent restructuring are the watch-items.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "WELCORP": {
+    "score": 6.0,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 6,
+        "reason": "Welspun group (B.K. Goenka); scaled steel-pipes maker with US capacity."
+      },
+      "ownership_behaviour": {
+        "score": 6,
+        "reason": "Stable group promoter holding."
+      },
+      "capital_allocation": {
+        "score": 6,
+        "reason": "Pays dividends and generates strong cash, moderate debt."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Group governance perception mixed (legacy group episodes)."
+      },
+      "execution": {
+        "score": 6,
+        "reason": "Cyclical pipe earnings; Sintex integration."
+      }
+    },
+    "summary": "Moderate trust: scaled, cash-generative, dividend-paying pipe maker; steel/oil cyclicality and group-governance perception are the watch-items.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "JNKINDIA": {
+    "score": 6.15,
+    "verdict": "MODERATE",
+    "confidence": "Low",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 6,
+        "reason": "Goel family + JNK Korea JV; process-fired-heater specialist (listed 2024)."
+      },
+      "ownership_behaviour": {
+        "score": 6,
+        "reason": "Promoter-led, short post-IPO history."
+      },
+      "capital_allocation": {
+        "score": 6,
+        "reason": "Moderate debt, small dividend; project-lumpy."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Standard governance; limited public track record."
+      },
+      "execution": {
+        "score": 7,
+        "reason": "Very strong recent growth on a healthy order book."
+      }
+    },
+    "summary": "Moderate trust: niche heaters specialist with strong growth and Korean-JV technology; project lumpiness and a short listed history keep confidence low.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "LATENTVIEW": {
+    "score": 6.25,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 6,
+        "reason": "Founders Sethuraman/Viswanathan; pure-play analytics promoters."
+      },
+      "ownership_behaviour": {
+        "score": 7,
+        "reason": "Stable founder holding (~65%)."
+      },
+      "capital_allocation": {
+        "score": 6,
+        "reason": "Cash-rich but no dividend and low ROE on the cash pile."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Standard governance."
+      },
+      "execution": {
+        "score": 6,
+        "reason": "Steady growth but low capital efficiency; rich valuation."
+      }
+    },
+    "summary": "Moderate trust: founder-led, cash-rich analytics firm with steady growth; low returns on cash and a demanding valuation are the watch-items.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "POWERICA": {
+    "score": 6.0,
+    "verdict": "MODERATE",
+    "confidence": "Low",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 6,
+        "reason": "Naik family; leader in large Cummins-based DG sets with AMC annuity."
+      },
+      "ownership_behaviour": {
+        "score": 6,
+        "reason": "Stable family promoter holding."
+      },
+      "capital_allocation": {
+        "score": 6,
+        "reason": "Strong cash flow but no dividend; moderate debt."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Standard governance."
+      },
+      "execution": {
+        "score": 6,
+        "reason": "Steady niche leadership; long-term DG-demand substitution risk."
+      }
+    },
+    "summary": "Moderate trust: cash-generative DG-set leader with recurring AMC revenue; no capital return and long-term grid/battery substitution are the watch-items.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "TEGA": {
+    "score": 5.85,
+    "verdict": "LOW",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 6,
+        "reason": "Mohanka family; global mining mill-liner specialist."
+      },
+      "ownership_behaviour": {
+        "score": 6,
+        "reason": "Stable family promoter holding."
+      },
+      "capital_allocation": {
+        "score": 6,
+        "reason": "Pays dividends, moderate debt."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Standard governance."
+      },
+      "execution": {
+        "score": 5,
+        "reason": "Cyclical mining-capex earnings currently depressed."
+      }
+    },
+    "summary": "Low-moderate trust: globally diversified niche mining-equipment maker with dividends, held back by a cyclical earnings dip.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "ASHIANA": {
+    "score": 6.0,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 6,
+        "reason": "Jindal/Gupta family; reputable mid-market & senior-living developer."
+      },
+      "ownership_behaviour": {
+        "score": 6,
+        "reason": "Stable family promoter holding."
+      },
+      "capital_allocation": {
+        "score": 6,
+        "reason": "Asset-light, pays dividends; real-estate working-capital intensity."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Clean, standard governance."
+      },
+      "execution": {
+        "score": 6,
+        "reason": "Steady, conservative growth; small-parcel execution constraints."
+      }
+    },
+    "summary": "Moderate trust: conservative, dividend-paying developer with a credible senior-living niche; real-estate cyclicality and execution constraints are the watch-items.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "SCI": {
+    "score": 5.2,
+    "verdict": "LOW",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 5,
+        "reason": "Government PSU shipping line; privatisation overhang."
+      },
+      "ownership_behaviour": {
+        "score": 5,
+        "reason": "State-controlled with disinvestment uncertainty."
+      },
+      "capital_allocation": {
+        "score": 6,
+        "reason": "High dividends, but commercially less efficient than private peers."
+      },
+      "governance": {
+        "score": 5,
+        "reason": "PSU governance constraints."
+      },
+      "execution": {
+        "score": 5,
+        "reason": "Cyclical, lower-margin operations vs private peers."
+      }
+    },
+    "summary": "Low-moderate trust: dividend-paying shipping PSU, but privatisation uncertainty, PSU inefficiency and freight cyclicality cap the score.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "CARBORUNIV": {
+    "score": 7.35,
+    "verdict": "MODERATE",
+    "confidence": "High",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 8,
+        "reason": "Murugappa group (CUMI) ? exemplary, ethics-first governance reputation."
+      },
+      "ownership_behaviour": {
+        "score": 8,
+        "reason": "Stable group promoter holding."
+      },
+      "capital_allocation": {
+        "score": 7,
+        "reason": "Pays dividends, reinvests globally, moderate debt."
+      },
+      "governance": {
+        "score": 8,
+        "reason": "Best-in-class group governance."
+      },
+      "execution": {
+        "score": 5,
+        "reason": "Cyclical abrasives/ceramics earnings currently soft."
+      }
+    },
+    "summary": "High-quality management: one of India's best-governed groups with sound capital allocation; the score is held back only by a cyclical earnings dip.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "ENTERO": {
+    "score": 5.8,
+    "verdict": "LOW",
+    "confidence": "Low",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 6,
+        "reason": "PE-backed (OrbiMed) pharma-distribution consolidator (listed 2024)."
+      },
+      "ownership_behaviour": {
+        "score": 6,
+        "reason": "PE/founder ownership; short post-IPO history."
+      },
+      "capital_allocation": {
+        "score": 5,
+        "reason": "No dividend, thin margins, working-capital-heavy."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "PE-grade governance; limited public track record."
+      },
+      "execution": {
+        "score": 6,
+        "reason": "Rapid roll-up growth in a fragmented market."
+      }
+    },
+    "summary": "Low-moderate trust: fast-consolidating, PE-backed pharma distributor, but structurally thin margins, heavy working capital and a short listed history keep confidence low.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "SIEMENS": {
+    "score": 8.05,
+    "verdict": "HIGH",
+    "confidence": "High",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 9,
+        "reason": "Siemens AG ? top-tier global industrial-technology parent."
+      },
+      "ownership_behaviour": {
+        "score": 8,
+        "reason": "Stable ~75% MNC promoter holding; energy demerger to unlock value."
+      },
+      "capital_allocation": {
+        "score": 7,
+        "reason": "Debt-free, pays dividends; premium-quality product mix."
+      },
+      "governance": {
+        "score": 9,
+        "reason": "Exemplary MNC governance."
+      },
+      "execution": {
+        "score": 7,
+        "reason": "Steady, high-quality growth; premium valuation."
+      }
+    },
+    "summary": "High trust: blue-chip MNC parentage, debt-free balance sheet and exemplary governance; the pending energy demerger and premium valuation are the main watch-items.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "HONAUT": {
+    "score": 7.9,
+    "verdict": "MODERATE",
+    "confidence": "High",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 9,
+        "reason": "Honeywell (USA) ? top-tier global automation parent."
+      },
+      "ownership_behaviour": {
+        "score": 8,
+        "reason": "Stable ~75% MNC promoter holding."
+      },
+      "capital_allocation": {
+        "score": 7,
+        "reason": "Debt-free, pays dividends."
+      },
+      "governance": {
+        "score": 9,
+        "reason": "Exemplary MNC governance."
+      },
+      "execution": {
+        "score": 6,
+        "reason": "High quality but only modest near-term growth."
+      }
+    },
+    "summary": "High-quality management: blue-chip MNC, debt-free, with exemplary governance; modest near-term growth and very low float are the watch-items.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "GRINDWELL": {
+    "score": 7.65,
+    "verdict": "MODERATE",
+    "confidence": "High",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 8,
+        "reason": "Saint-Gobain (France) MNC parent; premium abrasives technology."
+      },
+      "ownership_behaviour": {
+        "score": 8,
+        "reason": "Stable ~74% MNC promoter holding."
+      },
+      "capital_allocation": {
+        "score": 7,
+        "reason": "Low debt, generous dividends."
+      },
+      "governance": {
+        "score": 8,
+        "reason": "MNC-grade governance."
+      },
+      "execution": {
+        "score": 7,
+        "reason": "Steady, profitable growth; cyclical capex exposure."
+      }
+    },
+    "summary": "High-quality management: low-debt, dividend-paying MNC subsidiary with strong governance and steady execution; abrasives cyclicality is the main watch-item.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "SKFINDUS": {
+    "score": 7.25,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 8,
+        "reason": "SKF AB (Sweden) MNC parent (same SKF India entity); premium bearings."
+      },
+      "ownership_behaviour": {
+        "score": 7,
+        "reason": "Stable MNC promoter holding."
+      },
+      "capital_allocation": {
+        "score": 7,
+        "reason": "Low debt, generous dividends, high ROE."
+      },
+      "governance": {
+        "score": 8,
+        "reason": "MNC-grade governance."
+      },
+      "execution": {
+        "score": 6,
+        "reason": "Auto-cycle-sensitive; strong after-market recurring revenue."
+      }
+    },
+    "summary": "Moderate trust: debt-free, dividend-rich SKF India franchise with strong governance; auto-cycle sensitivity is the main watch-item.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "MAFANG": {
+    "score": 7.5,
+    "verdict": "N/A (ETF)",
+    "confidence": "n/a",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 8,
+        "reason": "Passive ETF ? no corporate promoter; managed by Mirae Asset (reputable global AMC)."
+      },
+      "ownership_behaviour": {
+        "score": 8,
+        "reason": "Not applicable ? unitholding structure; AMC stewardship is the lens."
+      },
+      "capital_allocation": {
+        "score": 7,
+        "reason": "Low-cost, tight-tracking US FANG+ wrapper."
+      },
+      "governance": {
+        "score": 8,
+        "reason": "Reputable AMC, strong operational governance."
+      },
+      "execution": {
+        "score": 8,
+        "reason": "Consistently low tracking error."
+      }
+    },
+    "summary": "Not a corporate management score ? passive FANG+ ETF; the rating reflects the credibility and stewardship of the AMC (Mirae Asset), which is high.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "ABLBL": {
+    "score": 7.3,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 8,
+        "reason": "Aditya Birla group (K.M. Birla); strong governance pedigree (demerged 2025)."
+      },
+      "ownership_behaviour": {
+        "score": 8,
+        "reason": "Stable group promoter holding."
+      },
+      "capital_allocation": {
+        "score": 6,
+        "reason": "High lease-related leverage; pays dividends; portfolio still scaling."
+      },
+      "governance": {
+        "score": 8,
+        "reason": "Aditya Birla group governance."
+      },
+      "execution": {
+        "score": 6,
+        "reason": "Demerger execution and discretionary-apparel cyclicality."
+      }
+    },
+    "summary": "Moderate-to-high trust: strong Aditya Birla governance pedigree; the score is capped by high lease leverage and post-demerger portfolio execution rather than governance.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "BOROLTD": {
+    "score": 5.8,
+    "verdict": "LOW",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 6,
+        "reason": "Kheruka family (Borosil); leading consumer-glassware brand."
+      },
+      "ownership_behaviour": {
+        "score": 6,
+        "reason": "Stable family promoter holding."
+      },
+      "capital_allocation": {
+        "score": 5,
+        "reason": "No dividend, modest ROE; capacity-expansion capex."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Borosil-group governance."
+      },
+      "execution": {
+        "score": 6,
+        "reason": "Steady brand-led growth; import/private-label competition."
+      }
+    },
+    "summary": "Low-moderate trust: reputable brand-led family business, held back by modest returns, no capital return and execution risk in scaling new capacity.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "KPITTECH": {
+    "score": 7.15,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 7,
+        "reason": "Founders Kishor Patil & Ravi Pandit; credible automotive-software leaders."
+      },
+      "ownership_behaviour": {
+        "score": 7,
+        "reason": "Stable founder promoter holding."
+      },
+      "capital_allocation": {
+        "score": 7,
+        "reason": "Pays dividends, high ROE ~20%, reinvesting in SDV capabilities."
+      },
+      "governance": {
+        "score": 7,
+        "reason": "Clean governance and disclosure."
+      },
+      "execution": {
+        "score": 8,
+        "reason": "Strong, consistent growth (19+ quarters); auto-cycle exposure."
+      }
+    },
+    "summary": "Moderate-to-high trust: credible founders, clean governance and consistent high-return growth; auto-OEM cyclicality and customer concentration are the watch-items.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "MSTCLTD": {
+    "score": 6.05,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 6,
+        "reason": "Government PSU; leading digital-auction/e-commerce platform."
+      },
+      "ownership_behaviour": {
+        "score": 6,
+        "reason": "State-controlled, stable."
+      },
+      "capital_allocation": {
+        "score": 7,
+        "reason": "Asset-light, very high dividends, ROE ~27%."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "PSU governance; mandate-dependent."
+      },
+      "execution": {
+        "score": 5,
+        "reason": "Mandate/policy-dependent volume cadence."
+      }
+    },
+    "summary": "Moderate trust: asset-light, high-dividend, high-ROE auction PSU; policy/mandate dependence and PSU governance constraints are the watch-items.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "ORIENTHOT": {
+    "score": 6.65,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 7,
+        "reason": "IHCL/Taj (Tata) affiliated; reputable hospitality association."
+      },
+      "ownership_behaviour": {
+        "score": 7,
+        "reason": "Stable promoter holding."
+      },
+      "capital_allocation": {
+        "score": 6,
+        "reason": "Pays dividends; recovering hotel earnings."
+      },
+      "governance": {
+        "score": 7,
+        "reason": "Taj-affiliated governance."
+      },
+      "execution": {
+        "score": 6,
+        "reason": "Regional South-India concentration; cyclical hospitality."
+      }
+    },
+    "summary": "Moderate trust: Taj-affiliated, dividend-paying hotel operator with sound governance; regional concentration and hospitality cyclicality are the watch-items.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "REDINGTON": {
+    "score": 6.2,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 6,
+        "reason": "Professionally managed, widely held tech-distribution leader (no dominant promoter)."
+      },
+      "ownership_behaviour": {
+        "score": 6,
+        "reason": "Diffuse ownership; institutionally held."
+      },
+      "capital_allocation": {
+        "score": 7,
+        "reason": "High dividends, ROE ~13%, disciplined working capital."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Reasonable governance for a distribution major."
+      },
+      "execution": {
+        "score": 6,
+        "reason": "Scaled but structurally thin-margin distribution."
+      }
+    },
+    "summary": "Moderate trust: well-run, dividend-paying distribution major with disciplined capital allocation; structurally thin margins and vendor concentration are the watch-items.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "USHAMART": {
+    "score": 6.2,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 6,
+        "reason": "Jhawar family; global specialty wire-rope leader (post steel-business sale)."
+      },
+      "ownership_behaviour": {
+        "score": 6,
+        "reason": "Stable family promoter holding."
+      },
+      "capital_allocation": {
+        "score": 7,
+        "reason": "Low debt, pays dividends, ROE ~16% after deleveraging."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Standard governance (improved post steel-asset sale)."
+      },
+      "execution": {
+        "score": 6,
+        "reason": "Focused, cash-generative niche; input-cost cyclicality."
+      }
+    },
+    "summary": "Moderate trust: refocused, low-debt, dividend-paying wire-rope leader with improved returns after the steel-business divestment; input-cost cyclicality is the main watch-item.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "VIYASH": {
+    "score": 5.6,
+    "verdict": "LOW",
+    "confidence": "Low",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 6,
+        "reason": "Founder Hari Babu Bommareddy (ex-Mylan); backward-integrated pharma (post-merger)."
+      },
+      "ownership_behaviour": {
+        "score": 6,
+        "reason": "Promoter-led; short combined-entity history."
+      },
+      "capital_allocation": {
+        "score": 5,
+        "reason": "No dividend; integration-related debt/working-capital risk."
+      },
+      "governance": {
+        "score": 5,
+        "reason": "USFDA observation risk and post-merger integration."
+      },
+      "execution": {
+        "score": 6,
+        "reason": "Strong reported growth from the merger; quality to be proven."
+      }
+    },
+    "summary": "Low trust: ambitious backward-integrated pharma roll-up with strong reported growth, but USFDA-observation risk, integration debt and a short combined-entity track record keep confidence low.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "WOCKPHARMA": {
+    "score": 5.1,
+    "verdict": "LOW",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 6,
+        "reason": "Khorakiwala family; pioneering but historically troubled pharma promoter."
+      },
+      "ownership_behaviour": {
+        "score": 6,
+        "reason": "Stable family promoter holding."
+      },
+      "capital_allocation": {
+        "score": 4,
+        "reason": "Weak ROE ~4%, high debt, no dividend, R&D cash burn."
+      },
+      "governance": {
+        "score": 5,
+        "reason": "Past USFDA import-alert and high-leverage history."
+      },
+      "execution": {
+        "score": 4,
+        "reason": "Volatile profitability; large R&D-to-cash-conversion gap."
+      }
+    },
+    "summary": "Low trust: reputable founder and a promising novel-antibiotic pipeline, but weak returns, high leverage, no capital return and a troubled regulatory/financial history weigh heavily.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "EIHOTEL": {
+    "score": 7.25,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 8,
+        "reason": "Oberoi family; iconic luxury-hospitality brand and reputation."
+      },
+      "ownership_behaviour": {
+        "score": 7,
+        "reason": "Oberoi family control alongside large ITC/Reliance strategic stakes."
+      },
+      "capital_allocation": {
+        "score": 7,
+        "reason": "Low debt, pays dividends, strong cash generation."
+      },
+      "governance": {
+        "score": 8,
+        "reason": "Clean, well-regarded governance."
+      },
+      "execution": {
+        "score": 6,
+        "reason": "Premium positioning; hospitality cyclicality and rich valuation."
+      }
+    },
+    "summary": "Moderate-to-high trust: iconic, well-governed luxury-hotel franchise with a clean balance sheet; the ITC/Reliance ownership dynamic and hospitality cyclicality are the watch-items.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "KAMDHENU": {
+    "score": 6.05,
+    "verdict": "MODERATE",
+    "confidence": "Low",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 6,
+        "reason": "Agarwal family; asset-light steel/paint franchise-brand model."
+      },
+      "ownership_behaviour": {
+        "score": 6,
+        "reason": "Stable family promoter holding."
+      },
+      "capital_allocation": {
+        "score": 7,
+        "reason": "Asset-light, low debt, high ROE ~22%, pays dividends."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Standard family-business governance."
+      },
+      "execution": {
+        "score": 5,
+        "reason": "Commodity-linked volatility; brand-execution dependence."
+      }
+    },
+    "summary": "Moderate trust: capital-light, high-ROE, dividend-paying franchise brand; commodity-spread volatility and brand-execution dependence are the watch-items.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "GAUDIUMIVF": {
+    "score": 6.0,
+    "verdict": "MODERATE",
+    "confidence": "Low",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 6,
+        "reason": "Founder-led fertility/women's-health chain (listed 2025)."
+      },
+      "ownership_behaviour": {
+        "score": 6,
+        "reason": "Promoter-led, short post-IPO history."
+      },
+      "capital_allocation": {
+        "score": 6,
+        "reason": "High ROE ~25% but no dividend; scale-up capex."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Standard governance; limited public track record."
+      },
+      "execution": {
+        "score": 6,
+        "reason": "Strong growth but doctor/centre-execution dependence."
+      }
+    },
+    "summary": "Moderate trust: high-return, founder-led fertility chain with strong growth; doctor dependence, scale-up risk and a short listed history keep confidence low.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "MON100": {
+    "score": 7.5,
+    "verdict": "N/A (ETF)",
+    "confidence": "n/a",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 8,
+        "reason": "Passive ETF ? no corporate promoter; managed by Motilal Oswal AMC."
+      },
+      "ownership_behaviour": {
+        "score": 8,
+        "reason": "Not applicable ? unitholding structure; AMC stewardship is the lens."
+      },
+      "capital_allocation": {
+        "score": 7,
+        "reason": "Low-cost Nasdaq-100 wrapper with a long operating history."
+      },
+      "governance": {
+        "score": 8,
+        "reason": "Reputable AMC, strong operational governance."
+      },
+      "execution": {
+        "score": 8,
+        "reason": "Reasonable tracking vs the Nasdaq-100."
+      }
+    },
+    "summary": "Not a corporate management score ? passive Nasdaq-100 ETF; the rating reflects the credibility and stewardship of the AMC (Motilal Oswal), which is high.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "SUZLON": {
+    "score": 4.8,
+    "verdict": "LOW",
+    "confidence": "High",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 5,
+        "reason": "Tanti family; turnaround story but a legacy debt-restructuring/governance overhang."
+      },
+      "ownership_behaviour": {
+        "score": 5,
+        "reason": "Promoter holding stabilised post-restructuring, but a chequered history."
+      },
+      "capital_allocation": {
+        "score": 4,
+        "reason": "Poor cash conversion (CFO/PAT ~38%), receivables surge, finance costs 85% above guidance, no dividend."
+      },
+      "governance": {
+        "score": 5,
+        "reason": "Earnings-quality concerns flagged; legacy governance overhang."
+      },
+      "execution": {
+        "score": 5,
+        "reason": "Strong headline growth but margins below guidance and weak cash quality."
+      }
+    },
+    "summary": "Low trust: despite strong headline wind-energy growth, weak cash conversion, a sharp receivables build-up, guidance misses and a legacy promoter-governance overhang are serious quality flags.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "HLEGLAS": {
+    "score": 5.5,
+    "verdict": "LOW",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 6,
+        "reason": "Himanshu Patel family-controlled glass-lined-equipment maker."
+      },
+      "ownership_behaviour": {
+        "score": 6,
+        "reason": "Stable family promoter holding."
+      },
+      "capital_allocation": {
+        "score": 5,
+        "reason": "High leverage; FY26 earnings fell on the Omeras subsidiary drag."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Standard governance; integration challenges."
+      },
+      "execution": {
+        "score": 4,
+        "reason": "PAT down sharply (Omeras EBITDA loss, glass-lined EBIT -46%)."
+      }
+    },
+    "summary": "Low trust: niche glass-lined-equipment maker hit by a loss-making subsidiary (Omeras), high leverage and a sharp FY26 earnings decline.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "WENDT": {
+    "score": 6.0,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 7,
+        "reason": "CUMI (Murugappa) + Wendt GmbH JV ? strong parentage."
+      },
+      "ownership_behaviour": {
+        "score": 7,
+        "reason": "Stable, debt-free ownership."
+      },
+      "capital_allocation": {
+        "score": 7,
+        "reason": "Debt-free and pays dividends."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Strong parentage, but significant FY26 CEO/leadership churn."
+      },
+      "execution": {
+        "score": 4,
+        "reason": "FY26 PAT collapsed 60%+ on soft auto demand."
+      }
+    },
+    "summary": "Moderate trust: strong Murugappa/Wendt parentage and a debt-free balance sheet, but a sharp FY26 earnings collapse and senior-leadership churn weigh on it.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "KPIGREEN": {
+    "score": 5.15,
+    "verdict": "LOW",
+    "confidence": "High",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 6,
+        "reason": "Faruk Patel promoter; fast-growing but aggressive Gujarat solar IPP/EPC."
+      },
+      "ownership_behaviour": {
+        "score": 5,
+        "reason": "Promoter-warrant issuance flagged for dilution."
+      },
+      "capital_allocation": {
+        "score": 4,
+        "reason": "Debt quadrupled in FY26, negative FCF, working-capital-heavy, equity dilution."
+      },
+      "governance": {
+        "score": 5,
+        "reason": "Aggressive 40-50% guidance and dilution raise governance/capital concerns."
+      },
+      "execution": {
+        "score": 6,
+        "reason": "Very strong revenue growth but execution and evacuation-delay risk."
+      }
+    },
+    "summary": "Low trust: high-growth solar developer, but quadrupling debt, negative free cash flow, promoter-warrant dilution and aggressive guidance are clear capital-allocation/governance concerns.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "SGIL": {
+    "score": 4.65,
+    "verdict": "LOW",
+    "confidence": "High",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 5,
+        "reason": "V.S. Reddy-led wind-castings foundry; expansion-stage."
+      },
+      "ownership_behaviour": {
+        "score": 5,
+        "reason": "Promoter-led, limited float."
+      },
+      "capital_allocation": {
+        "score": 4,
+        "reason": "Very high leverage (borrowings surged), PAT collapsed ~74% in FY26."
+      },
+      "governance": {
+        "score": 5,
+        "reason": "Execution disruption during expansion."
+      },
+      "execution": {
+        "score": 4,
+        "reason": "Sharp earnings collapse; ~95x P/E demands flawless delivery."
+      }
+    },
+    "summary": "Low trust: expansion-stage wind-castings foundry with a ~74% FY26 profit collapse, sharply elevated leverage and a demanding valuation.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "KSB": {
+    "score": 7.5,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 8,
+        "reason": "KSB SE (Germany) MNC parent; strong governance track record."
+      },
+      "ownership_behaviour": {
+        "score": 8,
+        "reason": "Stable ~66% MNC promoter holding."
+      },
+      "capital_allocation": {
+        "score": 7,
+        "reason": "Low debt, pays dividends."
+      },
+      "governance": {
+        "score": 8,
+        "reason": "MNC-grade governance."
+      },
+      "execution": {
+        "score": 6,
+        "reason": "Lumpy order execution and a rich valuation; weak Q4 margins."
+      }
+    },
+    "summary": "Moderate trust: low-debt, dividend-paying MNC pump maker with strong governance; lumpy execution and a premium valuation are the watch-items.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "CLEANMAX": {
+    "score": 5.2,
+    "verdict": "LOW",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 6,
+        "reason": "Founder Kuldeep Jain + Brookfield (BGTF) backing; C&I renewable platform (listed Mar-2026)."
+      },
+      "ownership_behaviour": {
+        "score": 5,
+        "reason": "Heavy IPO OFS (~Rs1,900cr early-investor exit); undersubscribed IPO."
+      },
+      "capital_allocation": {
+        "score": 4,
+        "reason": "Very high leverage, weak ROE ~2%, no dividend."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "Brookfield backing supports governance; very short public history."
+      },
+      "execution": {
+        "score": 5,
+        "reason": "Scaling capacity but unproven public-market track record."
+      }
+    },
+    "summary": "Low trust: Brookfield-backed renewable platform with scale, but very high leverage, weak returns, a heavy OFS-led IPO and a very short listed history keep the score low.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "JYOTICNC": {
+    "score": 5.25,
+    "verdict": "LOW",
+    "confidence": "High",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 6,
+        "reason": "Parakramsinh Jadeja founder family; strong domestic CNC franchise."
+      },
+      "ownership_behaviour": {
+        "score": 6,
+        "reason": "Promoter-led, stable holding."
+      },
+      "capital_allocation": {
+        "score": 5,
+        "reason": "No dividend; capex-led leverage rising sharply."
+      },
+      "governance": {
+        "score": 4,
+        "reason": "Huron (France subsidiary) under judicial investigation with asset seizures and a Rs67cr revenue reversal ? a serious governance flag."
+      },
+      "execution": {
+        "score": 5,
+        "reason": "Strong standalone delivery but missed guidance; Huron drag."
+      }
+    },
+    "summary": "Low trust: capable domestic CNC franchise, but an ongoing judicial investigation and asset seizures at the French (Huron) subsidiary, plus guidance misses, are serious governance/execution concerns.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "IFGLEXPOR": {
+    "score": 5.5,
+    "verdict": "LOW",
+    "confidence": "Moderate",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 6,
+        "reason": "Bajoria family; established refractories maker."
+      },
+      "ownership_behaviour": {
+        "score": 6,
+        "reason": "Stable family promoter holding."
+      },
+      "capital_allocation": {
+        "score": 6,
+        "reason": "Pays dividends, moderate debt."
+      },
+      "governance": {
+        "score": 5,
+        "reason": "Major 2026 leadership churn (CEO/CRO/Operations) ? continuity signal."
+      },
+      "execution": {
+        "score": 4,
+        "reason": "FY26 profit down ~33%; thin margins, export/tariff headwinds."
+      }
+    },
+    "summary": "Low trust: established refractories promoter with dividends, but significant 2026 management churn, a sharp earnings decline and thin margins weigh on it.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  },
+  "3MINDIA": {
+    "score": 8.2,
+    "verdict": "HIGH",
+    "confidence": "High",
+    "updated": "2026-06-18",
+    "pillars": {
+      "promoter_profile": {
+        "score": 9,
+        "reason": "3M Company (USA) ? blue-chip diversified-industrials parent."
+      },
+      "ownership_behaviour": {
+        "score": 8,
+        "reason": "Stable ~75% MNC promoter holding."
+      },
+      "capital_allocation": {
+        "score": 8,
+        "reason": "Near debt-free, exceptional ROCE ~50%, large dividend payouts."
+      },
+      "governance": {
+        "score": 8,
+        "reason": "Exemplary MNC governance; royalty/related-party payments to parent to monitor."
+      },
+      "execution": {
+        "score": 8,
+        "reason": "Consistent, high-quality, asset-light growth."
+      }
+    },
+    "summary": "High trust: blue-chip MNC parentage, near-debt-free balance sheet, exceptional returns and exemplary governance; parent royalty/related-party payments and a premium valuation are the watch-items.",
+    "sources": "Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge"
+  }
+}

@@ -782,7 +782,28 @@
       white-space: nowrap;
     }
     .research-popover a:hover { background: var(--bg3); color: var(--blue-text); }
-
+    .mgmt-tip {
+      position: fixed;
+      max-width: 400px;
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 10px 12px;
+      z-index: 10000;
+      box-shadow: 0 6px 24px rgba(0,0,0,.55);
+      font-size: 0.72rem;
+      line-height: 1.45;
+      color: var(--text);
+      display: none;
+      pointer-events: none;
+    }
+    .mgmt-tip h4 { margin: 0 0 4px; font-size: 0.8rem; }
+    .mgmt-tip table { width: 100%; border-collapse: collapse; margin: 6px 0; }
+    .mgmt-tip td { padding: 2px 4px; border-bottom: 1px solid var(--border); vertical-align: top; }
+    .mgmt-tip td:first-child { white-space: nowrap; color: var(--text2); }
+    .mgmt-tip td:nth-child(2) { text-align: center; font-weight: 700; width: 34px; }
+    .mgmt-tip .mt-summary { margin-top: 6px; color: var(--text2); font-style: italic; }
+    .mgmt-tip .mt-conf { margin-top: 4px; font-size: 0.65rem; color: var(--text3); }
     /* ── AI PICKER POPOVER ── */
     .ai-picker-pop {
       position: fixed;
@@ -994,6 +1015,7 @@
       <button class="hdr-btn export" onclick="nextBatchPrompt()" title="Copy the NEXT batch prompt after pasting the previous batch's results">⏭ Next Batch</button>
       <button class="hdr-btn export" onclick="exportPendingJSON()">⬇ Export Pending for Claude</button>
       <button class="hdr-btn export" style="opacity:0.6;" onclick="exportStocksJSON()">⬇ Export ALL</button>
+      <a class="hdr-btn" href="prompt_outputs/management_trust_findings.md" download="management_trust_findings.md" title="Download the full Management Trust scoring report for all 151 holdings" style="text-decoration:none;display:inline-flex;align-items:center;">👔 Mgmt Trust Report</a>
       <button class="hdr-btn export" onclick="refreshDataBtn()" id="refresh-btn">🔄 Refresh Data</button>
       <div id="refresh-progress" style="font-size:0.68rem;color:var(--text3);font-family:var(--mono);min-width:60px;"></div>
       <div class="last-updated" id="last-updated">Loading…</div>
@@ -1168,6 +1190,7 @@
         <tr>
           <th onclick="sortAnalysis('ticker')">Symbol <span id="sort-ticker" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('name')">Company Name <span id="sort-name" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('mgmt_trust_score')" title="Management Trust score (/10) from forensic analysis — hover a score to see the full breakdown">👔 Mgmt Trust <span id="sort-mgmt_trust_score" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('conviction')">Conv. <span id="sort-conviction" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('moat_class')">Moat <span id="sort-moat_class" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('quantity')">Qty. <span id="sort-quantity" class="sort-indicator"></span></th>
@@ -1287,9 +1310,13 @@ Example:
 
 <!-- AI PICKER POPOVER -->
 <div class="ai-picker-pop" id="ai-picker-pop">
-  <a id="aip-claude"  href="https://claude.ai"  target="_blank" rel="noopener">🧡 Claude</a>
-  <a id="aip-chatgpt" href="https://chatgpt.com" target="_blank" rel="noopener">🟢 ChatGPT</a>
+  <a id="aip-claude"   href="https://claude.ai"        target="_blank" rel="noopener">🧡 Claude</a>
+  <a id="aip-chatgpt"  href="https://chatgpt.com"       target="_blank" rel="noopener">🟢 ChatGPT</a>
+  <a id="aip-deepseek" href="https://chat.deepseek.com" target="_blank" rel="noopener">🔵 DeepSeek</a>
 </div>
+
+<!-- MANAGEMENT TRUST HOVER TOOLTIP -->
+<div class="mgmt-tip" id="mgmt-tip"></div>
 
 <script>
 console.log('Script starting...');
@@ -1385,6 +1412,7 @@ function renderCard(s) {
           🔗 Catalysts
           <a href="https://claude.ai" target="_blank" rel="noopener" class="catalyst-link" data-ticker="${s.ticker}" data-name="${s.name}" style="color:var(--purple-text);text-decoration:none;font-weight:700;">(1)</a>
           <a href="https://chatgpt.com" target="_blank" rel="noopener" class="catalyst-link" data-ticker="${s.ticker}" data-name="${s.name}" style="color:var(--green-text);text-decoration:none;font-weight:700;">(2)</a>
+          <a href="https://chat.deepseek.com" target="_blank" rel="noopener" class="catalyst-link" data-ticker="${s.ticker}" data-name="${s.name}" style="color:var(--blue-text);text-decoration:none;font-weight:700;">(3)</a>
         </span>
       </div>
     </div>
@@ -1589,6 +1617,7 @@ function renderCard(s) {
       <div class="section-label">📊 Tracking KPIs
         <a href="https://claude.ai" target="_blank" rel="noopener" class="kpi-link" data-ticker="${s.ticker}" data-name="${s.name || s.ticker}" style="color:var(--purple-text);text-decoration:none;font-weight:700;margin-left:4px;">(1)</a>
         <a href="https://chatgpt.com" target="_blank" rel="noopener" class="kpi-link" data-ticker="${s.ticker}" data-name="${s.name || s.ticker}" style="color:var(--green-text);text-decoration:none;font-weight:700;">(2)</a>
+        <a href="https://chat.deepseek.com" target="_blank" rel="noopener" class="kpi-link" data-ticker="${s.ticker}" data-name="${s.name || s.ticker}" style="color:var(--blue-text);text-decoration:none;font-weight:700;">(3)</a>
       </div>
       <div class="pill-row">${pills(s.track, 'blue')}</div>
     </div>` : ''}
@@ -2663,14 +2692,17 @@ function showAiPicker(anchorEl, claudePrompt, chatgptPrompt) {
   
   const pop       = document.getElementById('ai-picker-pop');
   console.log('pop element:', pop);
-  const claudeEl  = document.getElementById('aip-claude');
-  const chatgptEl = document.getElementById('aip-chatgpt');
+  const claudeEl   = document.getElementById('aip-claude');
+  const chatgptEl  = document.getElementById('aip-chatgpt');
+  const deepseekEl = document.getElementById('aip-deepseek');
 
   // Clone nodes to remove old listeners
-  const newClaude  = claudeEl.cloneNode(true);
-  const newChatgpt = chatgptEl.cloneNode(true);
+  const newClaude   = claudeEl.cloneNode(true);
+  const newChatgpt  = chatgptEl.cloneNode(true);
+  const newDeepseek = deepseekEl.cloneNode(true);
   claudeEl.replaceWith(newClaude);
   chatgptEl.replaceWith(newChatgpt);
+  deepseekEl.replaceWith(newDeepseek);
 
   newClaude.addEventListener('click', () => {
     navigator.clipboard.writeText(claudePrompt).catch(() => {});
@@ -2680,6 +2712,11 @@ function showAiPicker(anchorEl, claudePrompt, chatgptPrompt) {
   newChatgpt.addEventListener('click', () => {
     navigator.clipboard.writeText(chatgptPrompt).catch(() => {});
     showToast('📋 ChatGPT prompt copied — paste it in the chat', 'green');
+    pop.style.display = 'none';
+  });
+  newDeepseek.addEventListener('click', () => {
+    navigator.clipboard.writeText(chatgptPrompt).catch(() => {});
+    showToast('📋 DeepSeek prompt copied — paste it in the chat', 'green');
     pop.style.display = 'none';
   });
 
@@ -3050,10 +3087,67 @@ function sortAnalysis(field) {
   renderAnalysisTable();
 }
 
+// ── Management Trust cell + hover tooltip ─────────────────────────────────
+function mgmtTrustCell(s) {
+  const mt = s.mgmt_trust;
+  if (!mt || typeof mt.score !== 'number') {
+    return `<td style="text-align:center;color:var(--text3)">—</td>`;
+  }
+  const sc  = mt.score;
+  const col = sc >= 8 ? 'var(--green)' : sc >= 6 ? 'var(--amber-text)' : sc >= 4 ? '#f97316' : 'var(--red-text)';
+  return `<td class="mgmt-cell" data-ticker="${esc(s.ticker)}" style="text-align:center;font-weight:700;cursor:help;color:${col}">${sc.toFixed(1)}<span style="display:block;font-size:0.55rem;font-weight:600;color:var(--text3)">${esc(mt.verdict || '')}</span></td>`;
+}
+
+function buildMgmtTip(mt, s) {
+  if (!mt) return '';
+  const sc  = mt.score;
+  const col = sc >= 8 ? 'var(--green)' : sc >= 6 ? 'var(--amber-text)' : sc >= 4 ? '#f97316' : 'var(--red-text)';
+  const P = mt.pillars || {};
+  const row = (label, key) => {
+    const p = P[key];
+    if (!p) return '';
+    return `<tr><td>${label}</td><td>${p.score != null ? p.score : '—'}</td><td>${esc(p.reason || '')}</td></tr>`;
+  };
+  return `
+    <h4>👔 ${esc(s.name || s.ticker)} — Management Trust: <span style="color:${col}">${sc.toFixed(1)}/10</span> (${esc(mt.verdict || '')})</h4>
+    <table>
+      ${row('Promoter Profile', 'promoter_profile')}
+      ${row('Ownership Behaviour', 'ownership_behaviour')}
+      ${row('Capital Allocation', 'capital_allocation')}
+      ${row('Governance', 'governance')}
+      ${row('Execution', 'execution')}
+    </table>
+    ${mt.summary ? `<div class="mt-summary">${esc(mt.summary)}</div>` : ''}
+    <div class="mt-conf">Confidence: ${esc(mt.confidence || '—')}${mt.updated ? ' · ' + esc(mt.updated) : ''}</div>`;
+}
+
+(function initMgmtTip() {
+  const tip = () => document.getElementById('mgmt-tip');
+  document.addEventListener('mouseover', e => {
+    const cell = e.target.closest && e.target.closest('.mgmt-cell');
+    if (!cell) return;
+    const t = cell.dataset.ticker;
+    const s = allStocks.find(x => x.ticker === t);
+    if (!s || !s.mgmt_trust) return;
+    const el = tip();
+    el.innerHTML = buildMgmtTip(s.mgmt_trust, s);
+    el.style.display = 'block';
+    const r = cell.getBoundingClientRect();
+    const w = el.offsetWidth || 400, h = el.offsetHeight || 200;
+    let left = Math.min(r.left, window.innerWidth - w - 12);
+    let top  = r.bottom + 6;
+    if (top + h > window.innerHeight - 8) top = Math.max(8, r.top - h - 6);
+    el.style.left = Math.max(8, left) + 'px';
+    el.style.top  = top + 'px';
+  });
+  document.addEventListener('mouseout', e => {
+    if (e.target.closest && e.target.closest('.mgmt-cell')) tip().style.display = 'none';
+  });
+})();
+
 function renderAnalysisTable() {
   const tbody = document.getElementById('analysis-tbody');
   tbody.innerHTML = '';
-
   // Respect current search query
   const searchQ = (document.getElementById('analysis-search')?.value || '').toLowerCase().trim();
 
@@ -3069,6 +3163,7 @@ function renderAnalysisTable() {
       // Expose conviction/moat from stocks data for sorting
       conviction: s.conviction || 0,
       moat_class:  s.moat_class || '',
+      mgmt_trust_score: (s.mgmt_trust && typeof s.mgmt_trust.score === 'number') ? s.mgmt_trust.score : null,
     };
   });
 
@@ -3150,6 +3245,7 @@ function renderAnalysisTable() {
     tr.innerHTML = `
       <td><strong><span style="cursor:pointer;color:var(--blue-text);" title="View fundamental analysis card" onclick="goToCard('${esc(s.ticker)}')">${s.ticker}</span></strong></td>
       <td class="research-name" style="cursor:pointer;color:var(--blue-text);" title="Click to open Tickertape, Trendlyne, Tijori" data-ticker="${esc(s.ticker)}" data-name="${esc(s.name || s.ticker)}" onclick="openResearchTabsFromEl(event,this)"><span class="research-name" style="text-decoration:underline dotted;pointer-events:none;">${esc(s.name || s.ticker)}</span></td>
+      ${mgmtTrustCell(s)}
       <td style="text-align:center;font-weight:600;color:${ (s.conviction||0) >= 8 ? 'var(--green)' : (s.conviction||0) >= 6 ? 'var(--amber-text)' : (s.conviction||0) >= 4 ? '#f97316' : (s.conviction||0) >= 1 ? 'var(--red-text)' : 'var(--text3)' }">${s.conviction ? s.conviction+'/10' : '—'}</td>
       <td style="font-size:0.7rem;font-weight:600;color:${ s.moat_class==='wide' ? 'var(--green)' : s.moat_class==='narrow' ? 'var(--amber-text)' : 'var(--text3)' }">${s.moat_class === 'wide' ? '▲ Wide' : s.moat_class === 'narrow' ? '◆ Narrow' : '—'}</td>
       <td>${prv(f(s.quantity))}</td>
@@ -3433,11 +3529,14 @@ async function loadData() {
 
   const stockFetches = stockFiles.map(file => fetch(file + ts_qs).then(r => r.ok ? r.json() : []));
   const pricesFetch  = fetch('prices.json' + ts_qs).then(r => r.ok ? r.json() : {});
+  const mgmtFetch    = fetch('management_trust.json' + ts_qs).then(r => r.ok ? r.json() : {}).catch(() => ({}));
 
-  const [stockDataArrays, prices] = await Promise.all([
+  const [stockDataArrays, prices, mgmtTrust] = await Promise.all([
     Promise.all(stockFetches),
-    pricesFetch
+    pricesFetch,
+    mgmtFetch
   ]);
+  window._mgmtTrust = mgmtTrust || {};
 
   // Merge all stocks.json / Stocks_Fundamentals*.json files
   // We use a Map to ensure unique records by ticker
@@ -3508,6 +3607,10 @@ async function loadData() {
     const p = prices[s.ticker];
     if (p) {
       Object.assign(s, p);
+    }
+    // Attach Management Trust analysis (separate file) if present
+    if (mgmtTrust && mgmtTrust[s.ticker]) {
+      s.mgmt_trust = mgmtTrust[s.ticker];
     }
   });
 
