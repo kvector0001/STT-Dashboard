@@ -1632,7 +1632,7 @@ function renderCard(s) {
     </div>
     <div class="metrics-row" style="margin-top:6px; gap:6px;">
       <div class="metric-item clickable metric-click rf-cell" data-metric="redflags" data-ticker="${s.ticker}" data-name="${s.name}" style="flex:1; min-width:0; background:var(--bg2); border-radius:6px; padding:8px; border:1px solid var(--border);">
-        <span class="metric-label" style="font-size:0.65rem;">🚩 Red Flags${(s.rf_score && typeof s.rf_score.score === 'number') ? ` · <b style="color:${s.rf_score.score>=8?'var(--green)':s.rf_score.score>=6.5?'var(--amber-text)':s.rf_score.score>=5?'#f97316':'var(--red-text)'}">${s.rf_score.score.toFixed(1)}</b>` : ''}</span>
+        <span class="metric-label" style="font-size:0.65rem;">🚩 Red Flags${(s.rf_score && typeof s.rf_score.score === 'number') ? ` · <b style="color:${s.rf_score.score>=7.5?'var(--green)':s.rf_score.score>=6?'var(--amber-text)':s.rf_score.score>=4?'#f97316':'var(--red-text)'}">${s.rf_score.score.toFixed(1)}</b>` : ''}</span>
       </div>
       <div class="metric-item clickable metric-click" data-metric="technical" data-ticker="${s.ticker}" data-name="${s.name}" style="flex:1; min-width:0; background:var(--bg2); border-radius:6px; padding:8px; border:1px solid var(--border);">
         <span class="metric-label" style="font-size:0.65rem;">📈 Technical Trends</span>
@@ -3129,14 +3129,14 @@ function rfCell(s) {
     return `<td style="text-align:center;color:var(--text3)">—</td>`;
   }
   const sc  = rf.score;
-  const col = sc >= 8 ? 'var(--green)' : sc >= 6.5 ? 'var(--amber-text)' : sc >= 5 ? '#f97316' : 'var(--red-text)';
+  const col = sc >= 7.5 ? 'var(--green)' : sc >= 6 ? 'var(--amber-text)' : sc >= 4 ? '#f97316' : 'var(--red-text)';
   return `<td class="rf-cell" data-ticker="${esc(s.ticker)}" style="text-align:center;font-weight:700;cursor:help;color:${col}">${sc.toFixed(1)}<span style="display:block;font-size:0.55rem;font-weight:600;color:var(--text3)">${esc(rf.verdict || '')}</span></td>`;
 }
 
 function buildRfTip(rf, s) {
   if (!rf) return '';
   const sc  = rf.score;
-  const col = sc >= 8 ? 'var(--green)' : sc >= 6.5 ? 'var(--amber-text)' : sc >= 5 ? '#f97316' : 'var(--red-text)';
+  const col = sc >= 7.5 ? 'var(--green)' : sc >= 6 ? 'var(--amber-text)' : sc >= 4 ? '#f97316' : 'var(--red-text)';
   const C = rf.categories || {};
   const row = (label, key) => {
     const p = C[key];
