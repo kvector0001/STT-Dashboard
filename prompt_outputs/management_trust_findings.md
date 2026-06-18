@@ -1,8 +1,8 @@
-# Management Trust Score ? Full Findings (All 151 Holdings)
+# Management Trust Score - Full Findings (All Holdings)
 
-> Methodology: a 5-pillar weighted score ? **Promoter Profile (20%)**, **Ownership Behaviour (25%)**, **Capital Allocation (20%)**, **Governance (20%)**, **Execution (15%)**. Scores are grounded in each company's reported financials (ROE, leverage, dividend, cash-flow quality, growth), curated governance/risk flags, public filings, and analyst knowledge. Promoter shareholding figures are not present in the source data, so ownership pillars rely on public knowledge and are marked with honest confidence levels. **This is an analytical aid, not investment advice.**
+> 5-pillar weighted score - **Promoter Profile (20%)**, **Ownership Behaviour (25%)**, **Capital Allocation (20%)**, **Governance (20%)**, **Execution (15%)**. Grounded in reported financials, curated governance/risk flags and public filings. **Not investment advice.**
 
-_Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.9 ? **LOW** < 6.0 ? **N/A** for ETFs._
+_Generated 2026-06-18 for 151 holdings. Verdict: **HIGH** >= 8.0 | **MODERATE** 6.0-7.9 | **LOW** < 6.0 | **N/A** for ETFs._
 
 
 ## Summary Table
@@ -165,8 +165,8 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 ## Detailed Assessments
 
-### Hitachi Energy India Limited (POWERINDIA) ? 8.5 / 10 ? HIGH
-*Sector: Power Transmission / Automation ? Confidence: High ? Updated: 2026-06-18*
+### Hitachi Energy India Limited (POWERINDIA) - 8.5 / 10 - HIGH
+*Sector: Power Transmission / Automation - Confidence: High - Updated: 2026-06-18*
 
 **Summary:** High trust: Hitachi-controlled, MNC-grade governance, debt-free balance sheet, high ROCE and strong execution. Minor: slight promoter dilution via QIP and a premium valuation.
 
@@ -180,11 +180,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: BSE/NSE shareholding filings, screener.in, CRISIL*
 
-
 ---
 
-### Narayana Hrudayalaya Limited (NH) ? 8.4 / 10 ? HIGH
-*Sector: Healthcare ? Confidence: High ? Updated: 2026-06-18*
+### Narayana Hrudayalaya Limited (NH) - 8.4 / 10 - HIGH
+*Sector: Healthcare - Confidence: High - Updated: 2026-06-18*
 
 **Summary:** High-trust, founder-led healthcare franchise with clean governance, stable promoter holding and strong, consistent execution. Main watch: rising borrowings for the Cayman/India expansion.
 
@@ -198,11 +197,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: BSE/NSE shareholding filings, screener.in, ICRA ratings*
 
-
 ---
 
-### 3M India Limited (3MINDIA) ? 8.2 / 10 ? HIGH
-*Sector: Diversified Industrials ? Confidence: High ? Updated: 2026-06-18*
+### 3M India Limited (3MINDIA) - 8.2 / 10 - HIGH
+*Sector: Diversified Industrials - Confidence: High - Updated: 2026-06-18*
 
 **Summary:** High trust: blue-chip MNC parentage, near-debt-free balance sheet, exceptional returns and exemplary governance; parent royalty/related-party payments and a premium valuation are the watch-items.
 
@@ -216,11 +214,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### Siemens Limited (SIEMENS) ? 8.05 / 10 ? HIGH
-*Sector: Capital Goods ? Confidence: High ? Updated: 2026-06-18*
+### Siemens Limited (SIEMENS) - 8.05 / 10 - HIGH
+*Sector: Capital Goods - Confidence: High - Updated: 2026-06-18*
 
 **Summary:** High trust: blue-chip MNC parentage, debt-free balance sheet and exemplary governance; the pending energy demerger and premium valuation are the main watch-items.
 
@@ -234,11 +231,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### Honeywell Automation India Limited (HONAUT) ? 7.9 / 10 ? MODERATE
-*Sector: Automation ? Confidence: High ? Updated: 2026-06-18*
+### Honeywell Automation India Limited (HONAUT) - 7.9 / 10 - MODERATE
+*Sector: Automation - Confidence: High - Updated: 2026-06-18*
 
 **Summary:** High-quality management: blue-chip MNC, debt-free, with exemplary governance; modest near-term growth and very low float are the watch-items.
 
@@ -252,11 +248,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### The Great Eastern Shipping Company Limited (GESHIP) ? 7.8 / 10 ? MODERATE
-*Sector: Shipping ? Confidence: High ? Updated: 2026-06-18*
+### The Great Eastern Shipping Company Limited (GESHIP) - 7.8 / 10 - MODERATE
+*Sector: Shipping - Confidence: High - Updated: 2026-06-18*
 
 **Summary:** High-quality management: a conservatively run, shareholder-friendly shipping franchise with exemplary capital allocation; the only cap is the inherent cyclicality of freight markets.
 
@@ -270,11 +265,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### Triveni Turbine Limited (TRITURBINE) ? 7.8 / 10 ? MODERATE
-*Sector: Capital Goods ? Confidence: High ? Updated: 2026-06-18*
+### Triveni Turbine Limited (TRITURBINE) - 7.8 / 10 - MODERATE
+*Sector: Capital Goods - Confidence: High - Updated: 2026-06-18*
 
 **Summary:** High-quality management: a focused, low-debt, high-return market leader with clean governance and strong capital allocation; valuation is the main watch-item.
 
@@ -288,11 +282,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### Ingersoll-Rand (India) Limited (INGERRAND) ? 7.7 / 10 ? MODERATE
-*Sector: Industrials ? Confidence: Moderate ? Updated: 2026-06-18*
+### Ingersoll-Rand (India) Limited (INGERRAND) - 7.7 / 10 - MODERATE
+*Sector: Industrials - Confidence: Moderate - Updated: 2026-06-18*
 
 **Summary:** Moderate-to-high trust: debt-free, exceptionally high-return MNC subsidiary with strong governance and dividends; cyclicality and parent restructuring are the watch-items.
 
@@ -306,11 +299,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### Thermax Limited (THERMAX) ? 7.65 / 10 ? MODERATE
-*Sector: Capital Goods ? Confidence: High ? Updated: 2026-06-18*
+### Thermax Limited (THERMAX) - 7.65 / 10 - MODERATE
+*Sector: Capital Goods - Confidence: High - Updated: 2026-06-18*
 
 **Summary:** High-quality management: one of India's most respected promoter families with clean governance and sound capital allocation; execution pace on large EPC orders is the main watch-item.
 
@@ -324,11 +316,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### Grindwell Norton Limited (GRINDWELL) ? 7.65 / 10 ? MODERATE
-*Sector: Abrasives ? Confidence: High ? Updated: 2026-06-18*
+### Grindwell Norton Limited (GRINDWELL) - 7.65 / 10 - MODERATE
+*Sector: Abrasives - Confidence: High - Updated: 2026-06-18*
 
 **Summary:** High-quality management: low-debt, dividend-paying MNC subsidiary with strong governance and steady execution; abrasives cyclicality is the main watch-item.
 
@@ -342,11 +333,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### Neuland Laboratories Limited (NEULANDLAB) ? 7.6 / 10 ? MODERATE
-*Sector: Pharma CDMO / API ? Confidence: Moderate ? Updated: 2026-06-18*
+### Neuland Laboratories Limited (NEULANDLAB) - 7.6 / 10 - MODERATE
+*Sector: Pharma CDMO / API - Confidence: Moderate - Updated: 2026-06-18*
 
 **Summary:** Moderate-to-high trust: respected founder-scientists, clean governance and strong execution in a structurally attractive CDMO niche; capacity capex and customer concentration are the watch-items.
 
@@ -360,11 +350,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### Triveni Engineering & Industries Limited (TRIVENI) ? 7.5 / 10 ? MODERATE
-*Sector: Sugar / Power ? Confidence: Moderate ? Updated: 2026-06-18*
+### Triveni Engineering & Industries Limited (TRIVENI) - 7.5 / 10 - MODERATE
+*Sector: Sugar / Power - Confidence: Moderate - Updated: 2026-06-18*
 
 **Summary:** Moderate-to-high trust: a well-regarded, shareholder-friendly family group; the score is held back mainly by sugar/ethanol cyclicality rather than governance.
 
@@ -378,11 +367,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### Elgi Equipments Limited (ELGIEQUIP) ? 7.5 / 10 ? MODERATE
-*Sector: Industrials ? Confidence: High ? Updated: 2026-06-18*
+### Elgi Equipments Limited (ELGIEQUIP) - 7.5 / 10 - MODERATE
+*Sector: Industrials - Confidence: High - Updated: 2026-06-18*
 
 **Summary:** High-quality management: a respected, well-governed promoter with strong capital allocation; the score is capped mainly by modest near-term growth, not governance.
 
@@ -396,11 +384,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### Kennametal India Limited (KENNAMET) ? 7.5 / 10 ? MODERATE
-*Sector: Industrials ? Confidence: Moderate ? Updated: 2026-06-18*
+### Kennametal India Limited (KENNAMET) - 7.5 / 10 - MODERATE
+*Sector: Industrials - Confidence: Moderate - Updated: 2026-06-18*
 
 **Summary:** Moderate trust: debt-free, dividend-paying MNC subsidiary with strong governance; cyclical end-markets and a premium valuation are the watch-items.
 
@@ -414,11 +401,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### KSB Limited (KSB) ? 7.5 / 10 ? MODERATE
-*Sector: Industrials ? Confidence: Moderate ? Updated: 2026-06-18*
+### KSB Limited (KSB) - 7.5 / 10 - MODERATE
+*Sector: Industrials - Confidence: Moderate - Updated: 2026-06-18*
 
 **Summary:** Moderate trust: low-debt, dividend-paying MNC pump maker with strong governance; lumpy execution and a premium valuation are the watch-items.
 
@@ -432,11 +418,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### HBL ENGINEERING LTD (HBLENGINE) ? 7.35 / 10 ? MODERATE
-*Sector: Defence Electronics / Batteries ? Confidence: Moderate ? Updated: 2026-06-18*
+### HBL ENGINEERING LTD (HBLENGINE) - 7.35 / 10 - MODERATE
+*Sector: Defence Electronics / Batteries - Confidence: Moderate - Updated: 2026-06-18*
 
 **Summary:** Moderate-to-high trust: founder-led, low-debt, high-ROE business executing well on the Kavach ramp; railway-budget dependence is the main external risk.
 
@@ -450,11 +435,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### Carborundum Universal Limited (CARBORUNIV) ? 7.35 / 10 ? MODERATE
-*Sector: Abrasives & Ceramics ? Confidence: High ? Updated: 2026-06-18*
+### Carborundum Universal Limited (CARBORUNIV) - 7.35 / 10 - MODERATE
+*Sector: Abrasives & Ceramics - Confidence: High - Updated: 2026-06-18*
 
 **Summary:** High-quality management: one of India's best-governed groups with sound capital allocation; the score is held back only by a cyclical earnings dip.
 
@@ -468,11 +452,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### D-Link (India) Limited (DLINKINDIA) ? 7.3 / 10 ? MODERATE
-*Sector: Networking Hardware ? Confidence: Moderate ? Updated: 2026-06-18*
+### D-Link (India) Limited (DLINKINDIA) - 7.3 / 10 - MODERATE
+*Sector: Networking Hardware - Confidence: Moderate - Updated: 2026-06-18*
 
 **Summary:** Moderate trust: cash-rich, debt-free MNC subsidiary with clean governance and generous dividends; the main limitation is a mature, low-growth, price-competitive business.
 
@@ -486,11 +469,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### ADITYA BIRLA LIFES BRAN L (ABLBL) ? 7.3 / 10 ? MODERATE
-*Sector: Consumer Cyclical ? Confidence: Moderate ? Updated: 2026-06-18*
+### ADITYA BIRLA LIFES BRAN L (ABLBL) - 7.3 / 10 - MODERATE
+*Sector: Consumer Cyclical - Confidence: Moderate - Updated: 2026-06-18*
 
 **Summary:** Moderate-to-high trust: strong Aditya Birla governance pedigree; the score is capped by high lease leverage and post-demerger portfolio execution rather than governance.
 
@@ -504,11 +486,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### HAPPY FORGINGS LIMITED (HAPPYFORGE) ? 7.25 / 10 ? MODERATE
-*Sector: Forgings / Auto Components ? Confidence: Moderate ? Updated: 2026-06-18*
+### HAPPY FORGINGS LIMITED (HAPPYFORGE) - 7.25 / 10 - MODERATE
+*Sector: Forgings / Auto Components - Confidence: Moderate - Updated: 2026-06-18*
 
 **Summary:** Moderate-to-high trust: high-promoter-skin, low-debt, well-executing forgings business; valuation and CV cyclicality are the main watch-items, not governance.
 
@@ -522,11 +503,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### Data Patterns (India) Limited (DATAPATTNS) ? 7.25 / 10 ? MODERATE
-*Sector: Defence Electronics ? Confidence: Moderate ? Updated: 2026-06-18*
+### Data Patterns (India) Limited (DATAPATTNS) - 7.25 / 10 - MODERATE
+*Sector: Defence Electronics - Confidence: Moderate - Updated: 2026-06-18*
 
 **Summary:** Moderate-to-high trust: founder-led, high-skin, low-debt defence-electronics franchise with a strong order book; revenue lumpiness is the main external risk.
 
@@ -540,11 +520,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### SKF India Limited (SKFINDIA) ? 7.25 / 10 ? MODERATE
-*Sector: Bearings ? Confidence: Moderate ? Updated: 2026-06-18*
+### SKF India Limited (SKFINDIA) - 7.25 / 10 - MODERATE
+*Sector: Bearings - Confidence: Moderate - Updated: 2026-06-18*
 
 **Summary:** Moderate trust: debt-free, dividend-rich MNC subsidiary with strong governance; the value-unlocking demerger and auto-cycle sensitivity are the watch-items.
 
@@ -558,11 +537,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### SKF India Limited (SKFINDUS) ? 7.25 / 10 ? MODERATE
-*Sector: Bearings ? Confidence: Moderate ? Updated: 2026-06-18*
+### SKF India Limited (SKFINDUS) - 7.25 / 10 - MODERATE
+*Sector: Bearings - Confidence: Moderate - Updated: 2026-06-18*
 
 **Summary:** Moderate trust: debt-free, dividend-rich SKF India franchise with strong governance; auto-cycle sensitivity is the main watch-item.
 
@@ -576,11 +554,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### EIH Limited (EIHOTEL) ? 7.25 / 10 ? MODERATE
-*Sector: Consumer Cyclical ? Confidence: Moderate ? Updated: 2026-06-18*
+### EIH Limited (EIHOTEL) - 7.25 / 10 - MODERATE
+*Sector: Consumer Cyclical - Confidence: Moderate - Updated: 2026-06-18*
 
 **Summary:** Moderate-to-high trust: iconic, well-governed luxury-hotel franchise with a clean balance sheet; the ITC/Reliance ownership dynamic and hospitality cyclicality are the watch-items.
 
@@ -594,11 +571,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### Aster DM Healthcare Limited (ASTERDM) ? 7.2 / 10 ? MODERATE
-*Sector: Healthcare ? Confidence: Moderate ? Updated: 2026-06-18*
+### Aster DM Healthcare Limited (ASTERDM) - 7.2 / 10 - MODERATE
+*Sector: Healthcare - Confidence: Moderate - Updated: 2026-06-18*
 
 **Summary:** Moderate-to-high trust: reputable founder, shareholder-friendly capital return after the GCC divestment, tempered by modest returns and integration of the India-only structure.
 
@@ -612,11 +588,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### Netweb Technologies India Limited (NETWEB) ? 7.15 / 10 ? MODERATE
-*Sector: AI Infrastructure / HPC ? Confidence: Moderate ? Updated: 2026-06-18*
+### Netweb Technologies India Limited (NETWEB) - 7.15 / 10 - MODERATE
+*Sector: AI Infrastructure / HPC - Confidence: Moderate - Updated: 2026-06-18*
 
 **Summary:** Moderate-to-high trust: founder-led, high-ROE AI-infrastructure play executing strongly; rich valuation and NVIDIA-supply dependence are the watch-items.
 
@@ -630,11 +605,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### KPIT Technologies Limited (KPITTECH) ? 7.15 / 10 ? MODERATE
-*Sector: Technology ? Confidence: Moderate ? Updated: 2026-06-18*
+### KPIT Technologies Limited (KPITTECH) - 7.15 / 10 - MODERATE
+*Sector: Technology - Confidence: Moderate - Updated: 2026-06-18*
 
 **Summary:** Moderate-to-high trust: credible founders, clean governance and consistent high-return growth; auto-OEM cyclicality and customer concentration are the watch-items.
 
@@ -648,11 +622,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### Tata Communications Limited (TATACOMM) ? 7.05 / 10 ? MODERATE
-*Sector: Telecom / Data Networking ? Confidence: Moderate ? Updated: 2026-06-18*
+### Tata Communications Limited (TATACOMM) - 7.05 / 10 - MODERATE
+*Sector: Telecom / Data Networking - Confidence: Moderate - Updated: 2026-06-18*
 
 **Summary:** Moderate trust: Tata-controlled, well-governed global networking business with strong cash flow; high legacy-acquisition debt and gradual growth are the watch-items.
 
@@ -666,11 +639,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### INOX India Limited (INOXINDIA) ? 7.0 / 10 ? MODERATE
-*Sector: Industrial Equipment ? Confidence: Moderate ? Updated: 2026-06-18*
+### INOX India Limited (INOXINDIA) - 7.0 / 10 - MODERATE
+*Sector: Industrial Equipment - Confidence: Moderate - Updated: 2026-06-18*
 
 **Summary:** Moderate trust: low-debt, high-return cryogenics leader under a capable group; a relatively short standalone listed history is the main caveat.
 
@@ -684,11 +656,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### C. E. Info Systems Limited (MAPMYINDIA) ? 6.85 / 10 ? MODERATE
-*Sector: Digital Maps / Location Tech ? Confidence: Moderate ? Updated: 2026-06-18*
+### C. E. Info Systems Limited (MAPMYINDIA) - 6.85 / 10 - MODERATE
+*Sector: Digital Maps / Location Tech - Confidence: Moderate - Updated: 2026-06-18*
 
 **Summary:** Moderate-to-high trust: founder-led, debt-free, dividend-paying maps/location franchise with clean governance; slowing growth and Big-Tech competition are the watch-items.
 
@@ -702,11 +673,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### Amara Raja Energy & Mobility Limited (ARE&M) ? 6.8 / 10 ? MODERATE
-*Sector: Energy Storage / Batteries ? Confidence: Moderate ? Updated: 2026-06-18*
+### Amara Raja Energy & Mobility Limited (ARE&M) - 6.8 / 10 - MODERATE
+*Sector: Energy Storage / Batteries - Confidence: Moderate - Updated: 2026-06-18*
 
 **Summary:** Moderate trust: reputable, dividend-paying family battery franchise with a clean balance sheet; legacy environmental/related-party items and EV-transition capex are the watch-points.
 
@@ -720,11 +690,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### Kirloskar Pneumatic Company Limited (KIRLPNU) ? 6.8 / 10 ? MODERATE
-*Sector: Industrial Equipment / Compressors ? Confidence: Moderate ? Updated: 2026-06-18*
+### Kirloskar Pneumatic Company Limited (KIRLPNU) - 6.8 / 10 - MODERATE
+*Sector: Industrial Equipment / Compressors - Confidence: Moderate - Updated: 2026-06-18*
 
 **Summary:** Moderate trust: high-return, low-debt, dividend-rich franchise; the Kirloskar group's family-governance disputes are the main thing holding the score back.
 
@@ -738,11 +707,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### Sona BLW Precision Forgings Limited (SONACOMS) ? 6.75 / 10 ? MODERATE
-*Sector: Auto Components / Precision Forgings ? Confidence: Moderate ? Updated: 2026-06-18*
+### Sona BLW Precision Forgings Limited (SONACOMS) - 6.75 / 10 - MODERATE
+*Sector: Auto Components / Precision Forgings - Confidence: Moderate - Updated: 2026-06-18*
 
 **Summary:** Moderate trust: high-quality, low-debt EV-components franchise with sound governance; the leadership transition, PE exit and margin compression are the watch-items.
 
@@ -756,11 +724,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### Indus Towers Limited (INDUSTOWER) ? 6.65 / 10 ? MODERATE
-*Sector: Telecom Infrastructure ? Confidence: Moderate ? Updated: 2026-06-18*
+### Indus Towers Limited (INDUSTOWER) - 6.65 / 10 - MODERATE
+*Sector: Telecom Infrastructure - Confidence: Moderate - Updated: 2026-06-18*
 
 **Summary:** Moderate trust: Bharti-controlled, cash-generative tower business with sound governance; the score is capped by Vodafone-Idea receivable risk and a suspended dividend.
 
@@ -774,11 +741,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### Blue Jet Healthcare Limited (BLUEJET) ? 6.65 / 10 ? MODERATE
-*Sector: Pharma / Contrast Media ? Confidence: Moderate ? Updated: 2026-06-18*
+### Blue Jet Healthcare Limited (BLUEJET) - 6.65 / 10 - MODERATE
+*Sector: Pharma / Contrast Media - Confidence: Moderate - Updated: 2026-06-18*
 
 **Summary:** Moderate trust: high-quality, high-margin niche pharma supplier with a clean balance sheet; customer concentration and a recent profit dip are the main watch-items.
 
@@ -792,11 +758,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### Gulf Oil Lubricants India Limited (GULFOILLUB) ? 6.65 / 10 ? MODERATE
-*Sector: Lubricants ? Confidence: Moderate ? Updated: 2026-06-18*
+### Gulf Oil Lubricants India Limited (GULFOILLUB) - 6.65 / 10 - MODERATE
+*Sector: Lubricants - Confidence: Moderate - Updated: 2026-06-18*
 
 **Summary:** Moderate trust: high-return, dividend-rich lubricants business with a strong distribution moat; group complexity and the EV transition are the watch-items.
 
@@ -810,11 +775,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### CESC Limited (CESC) ? 6.65 / 10 ? MODERATE
-*Sector: Power Utility ? Confidence: Moderate ? Updated: 2026-06-18*
+### CESC Limited (CESC) - 6.65 / 10 - MODERATE
+*Sector: Power Utility - Confidence: Moderate - Updated: 2026-06-18*
 
 **Summary:** Moderate trust: established, dividend-paying regulated utility under a reputable group; high (but structural) leverage and distribution-loss risk in new geographies are the watch-items.
 
@@ -828,11 +792,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### Oriental Hotels Limited (ORIENTHOT) ? 6.65 / 10 ? MODERATE
-*Sector: Consumer Cyclical ? Confidence: Moderate ? Updated: 2026-06-18*
+### Oriental Hotels Limited (ORIENTHOT) - 6.65 / 10 - MODERATE
+*Sector: Consumer Cyclical - Confidence: Moderate - Updated: 2026-06-18*
 
 **Summary:** Moderate trust: Taj-affiliated, dividend-paying hotel operator with sound governance; regional concentration and hospitality cyclicality are the watch-items.
 
@@ -846,11 +809,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### Affle 3i Limited (AFFLE) ? 6.6 / 10 ? MODERATE
-*Sector: Ad Tech / Mobile Marketing ? Confidence: Moderate ? Updated: 2026-06-18*
+### Affle 3i Limited (AFFLE) - 6.6 / 10 - MODERATE
+*Sector: Ad Tech / Mobile Marketing - Confidence: Moderate - Updated: 2026-06-18*
 
 **Summary:** Moderate trust: credible founder with high skin-in-the-game and strong growth; acquisition-led capital allocation and privacy regulation are the watch-items.
 
@@ -864,11 +826,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### Graphite India Limited (GRAPHITE) ? 6.55 / 10 ? MODERATE
-*Sector: Graphite Electrodes ? Confidence: Moderate ? Updated: 2026-06-18*
+### Graphite India Limited (GRAPHITE) - 6.55 / 10 - MODERATE
+*Sector: Graphite Electrodes - Confidence: Moderate - Updated: 2026-06-18*
 
 **Summary:** Moderate trust: conservative, cash-rich, dividend-generous reputable promoter; the score is held back by the cyclical trough in graphite-electrode earnings, not governance.
 
@@ -882,11 +843,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### V.S.T. Tillers Tractors Limited (VSTTILLERS) ? 6.55 / 10 ? MODERATE
-*Sector: Agricultural Equipment ? Confidence: Moderate ? Updated: 2026-06-18*
+### V.S.T. Tillers Tractors Limited (VSTTILLERS) - 6.55 / 10 - MODERATE
+*Sector: Agricultural Equipment - Confidence: Moderate - Updated: 2026-06-18*
 
 **Summary:** Moderate trust: conservative, debt-free, dividend-paying market leader; the score is held back by a cyclical earnings dip and rising competition, not governance.
 
@@ -900,11 +860,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### HEG Limited (HEG) ? 6.55 / 10 ? MODERATE
-*Sector: Materials ? Confidence: Moderate ? Updated: 2026-06-18*
+### HEG Limited (HEG) - 6.55 / 10 - MODERATE
+*Sector: Materials - Confidence: Moderate - Updated: 2026-06-18*
 
 **Summary:** Moderate trust: reputable, conservative group with sound capital allocation; the score is held back by the graphite-electrode cyclical trough, not governance.
 
@@ -918,11 +877,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### Sasken Technologies Limited (SASKEN) ? 6.5 / 10 ? MODERATE
-*Sector: IT / Embedded Software ? Confidence: Moderate ? Updated: 2026-06-18*
+### Sasken Technologies Limited (SASKEN) - 6.5 / 10 - MODERATE
+*Sector: IT / Embedded Software - Confidence: Moderate - Updated: 2026-06-18*
 
 **Summary:** Moderate trust: credible founder and clean, cash-return-oriented governance, held back by sluggish growth and low returns on a large cash balance.
 
@@ -936,11 +894,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### RUBICON RESEARCH LIMITED (RUBICON) ? 6.35 / 10 ? MODERATE
-*Sector: Pharma / CDMO ? Confidence: Low ? Updated: 2026-06-18*
+### RUBICON RESEARCH LIMITED (RUBICON) - 6.35 / 10 - MODERATE
+*Sector: Pharma / CDMO - Confidence: Low - Updated: 2026-06-18*
 
 **Summary:** Moderate trust: fast-growing, high-return specialty pharma with PE backing; short listed history, FDA-inspection risk and PE-exit overhang keep confidence low.
 
@@ -954,11 +911,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### RateGain Travel Technologies Limited (RATEGAIN) ? 6.35 / 10 ? MODERATE
-*Sector: Travel Tech / SaaS ? Confidence: Moderate ? Updated: 2026-06-18*
+### RateGain Travel Technologies Limited (RATEGAIN) - 6.35 / 10 - MODERATE
+*Sector: Travel Tech / SaaS - Confidence: Moderate - Updated: 2026-06-18*
 
 **Summary:** Moderate trust: credible founder and a leading travel-SaaS franchise with strong growth; acquisition-led model and modest returns are the watch-items.
 
@@ -972,11 +928,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### NIIT Limited (NIITLTD) ? 6.35 / 10 ? MODERATE
-*Sector: IT Education / Skills ? Confidence: Moderate ? Updated: 2026-06-18*
+### NIIT Limited (NIITLTD) - 6.35 / 10 - MODERATE
+*Sector: IT Education / Skills - Confidence: Moderate - Updated: 2026-06-18*
 
 **Summary:** Moderate trust: reputable founders and clean, cash-return-oriented governance; the score is dragged down by a structurally weak, disrupted training business.
 
@@ -990,11 +945,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### Latent View Analytics Limited (LATENTVIEW) ? 6.25 / 10 ? MODERATE
-*Sector: IT / Analytics ? Confidence: Moderate ? Updated: 2026-06-18*
+### Latent View Analytics Limited (LATENTVIEW) - 6.25 / 10 - MODERATE
+*Sector: IT / Analytics - Confidence: Moderate - Updated: 2026-06-18*
 
 **Summary:** Moderate trust: founder-led, cash-rich analytics firm with steady growth; low returns on cash and a demanding valuation are the watch-items.
 
@@ -1008,11 +962,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### ECOS (INDIA) MOB & HOSP L (ECOSMOBLTY) ? 6.2 / 10 ? MODERATE
-*Sector: EV Mobility ? Confidence: Low ? Updated: 2026-06-18*
+### ECOS (INDIA) MOB & HOSP L (ECOSMOBLTY) - 6.2 / 10 - MODERATE
+*Sector: EV Mobility - Confidence: Low - Updated: 2026-06-18*
 
 **Summary:** Moderate trust: asset-light, high-ROE, dividend-paying mobility business; short listed history and a recent earnings dip keep confidence low.
 
@@ -1026,11 +979,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### CMS Info Systems Limited (CMSINFO) ? 6.2 / 10 ? MODERATE
-*Sector: Cash Management / ATM Services ? Confidence: Moderate ? Updated: 2026-06-18*
+### CMS Info Systems Limited (CMSINFO) - 6.2 / 10 - MODERATE
+*Sector: Cash Management / ATM Services - Confidence: Moderate - Updated: 2026-06-18*
 
 **Summary:** Moderate trust: professionally run, cash-generative, dividend-paying market leader; the structural decline of cash usage is the key long-term overhang.
 
@@ -1044,11 +996,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### RailTel Corporation of India Limited (RAILTEL) ? 6.2 / 10 ? MODERATE
-*Sector: Telecom / IT Infrastructure ? Confidence: Moderate ? Updated: 2026-06-18*
+### RailTel Corporation of India Limited (RAILTEL) - 6.2 / 10 - MODERATE
+*Sector: Telecom / IT Infrastructure - Confidence: Moderate - Updated: 2026-06-18*
 
 **Summary:** Moderate trust: low-debt, dividend-paying rail-telecom PSU with steady growth; PSU pace and government-client concentration are the watch-items.
 
@@ -1062,11 +1013,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### Quess Corp Limited (QUESS) ? 6.2 / 10 ? MODERATE
-*Sector: Staffing / Business Services ? Confidence: Moderate ? Updated: 2026-06-18*
+### Quess Corp Limited (QUESS) - 6.2 / 10 - MODERATE
+*Sector: Staffing / Business Services - Confidence: Moderate - Updated: 2026-06-18*
 
 **Summary:** Moderate trust: credible, Fairfax-backed founder and India's largest staffing platform; thin margins and a complex multi-demerger structure are the watch-items.
 
@@ -1080,11 +1030,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### Redington Limited (REDINGTON) ? 6.2 / 10 ? MODERATE
-*Sector: Technology ? Confidence: Moderate ? Updated: 2026-06-18*
+### Redington Limited (REDINGTON) - 6.2 / 10 - MODERATE
+*Sector: Technology - Confidence: Moderate - Updated: 2026-06-18*
 
 **Summary:** Moderate trust: well-run, dividend-paying distribution major with disciplined capital allocation; structurally thin margins and vendor concentration are the watch-items.
 
@@ -1098,11 +1047,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### Usha Martin Limited (USHAMART) ? 6.2 / 10 ? MODERATE
-*Sector: Basic Materials ? Confidence: Moderate ? Updated: 2026-06-18*
+### Usha Martin Limited (USHAMART) - 6.2 / 10 - MODERATE
+*Sector: Basic Materials - Confidence: Moderate - Updated: 2026-06-18*
 
 **Summary:** Moderate trust: refocused, low-debt, dividend-paying wire-rope leader with improved returns after the steel-business divestment; input-cost cyclicality is the main watch-item.
 
@@ -1116,11 +1064,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### FRACTAL ANALYTICS LIMITED (FRACTAL) ? 6.15 / 10 ? MODERATE
-*Sector: AI / Data Analytics ? Confidence: Low ? Updated: 2026-06-18*
+### FRACTAL ANALYTICS LIMITED (FRACTAL) - 6.15 / 10 - MODERATE
+*Sector: AI / Data Analytics - Confidence: Low - Updated: 2026-06-18*
 
 **Summary:** Moderate trust: credible founder and a leading AI-native analytics franchise with strong momentum; short listed history, PE-exit overhang and rich valuation keep confidence low.
 
@@ -1134,11 +1081,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### Biocon Limited (BIOCON) ? 6.15 / 10 ? MODERATE
-*Sector: Biopharma / Biosimilars ? Confidence: Moderate ? Updated: 2026-06-18*
+### Biocon Limited (BIOCON) - 6.15 / 10 - MODERATE
+*Sector: Biopharma / Biosimilars - Confidence: Moderate - Updated: 2026-06-18*
 
 **Summary:** Moderate trust: highly reputable founder and a leading biosimilars franchise, but high acquisition debt, weak returns and integration drag weigh on capital allocation and execution.
 
@@ -1152,11 +1098,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### Aeroflex Industries Limited (AEROFLEX) ? 6.15 / 10 ? MODERATE
-*Sector: Industrials ? Confidence: Low ? Updated: 2026-06-18*
+### Aeroflex Industries Limited (AEROFLEX) - 6.15 / 10 - MODERATE
+*Sector: Industrials - Confidence: Low - Updated: 2026-06-18*
 
 **Summary:** Moderate trust: low-debt, fast-growing niche export leader; commodity-price and Chinese-competition exposure are the watch-items.
 
@@ -1170,11 +1115,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### Sansera Engineering Limited (SANSERA) ? 6.15 / 10 ? MODERATE
-*Sector: Auto Ancillary ? Confidence: Moderate ? Updated: 2026-06-18*
+### Sansera Engineering Limited (SANSERA) - 6.15 / 10 - MODERATE
+*Sector: Auto Ancillary - Confidence: Moderate - Updated: 2026-06-18*
 
 **Summary:** Moderate trust: well-run precision-components franchise diversifying beyond auto; customer concentration (Bajaj) and EV-transition risk on some products are the watch-items.
 
@@ -1188,11 +1132,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### JNK India Limited (JNKINDIA) ? 6.15 / 10 ? MODERATE
-*Sector: Capital Goods ? Confidence: Low ? Updated: 2026-06-18*
+### JNK India Limited (JNKINDIA) - 6.15 / 10 - MODERATE
+*Sector: Capital Goods - Confidence: Low - Updated: 2026-06-18*
 
 **Summary:** Moderate trust: niche heaters specialist with strong growth and Korean-JV technology; project lumpiness and a short listed history keep confidence low.
 
@@ -1206,11 +1149,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### Syrma SGS Technology Limited (SYRMA) ? 6.1 / 10 ? MODERATE
-*Sector: EMS / Electronics ? Confidence: Moderate ? Updated: 2026-06-18*
+### Syrma SGS Technology Limited (SYRMA) - 6.1 / 10 - MODERATE
+*Sector: EMS / Electronics - Confidence: Moderate - Updated: 2026-06-18*
 
 **Summary:** Moderate trust: credible EMS promoter with clean governance and strong growth, tempered by a gradually declining promoter stake, low ROE and rising working-capital intensity.
 
@@ -1224,11 +1166,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: BSE/NSE shareholding filings, screener.in, DRHP*
 
-
 ---
 
-### Astra Microwave Products Limited (ASTRAMICRO) ? 6.1 / 10 ? MODERATE
-*Sector: Defence Electronics ? Confidence: Moderate ? Updated: 2026-06-18*
+### Astra Microwave Products Limited (ASTRAMICRO) - 6.1 / 10 - MODERATE
+*Sector: Defence Electronics - Confidence: Moderate - Updated: 2026-06-18*
 
 **Summary:** Moderate trust: credible defence-electronics franchise with sound capital allocation, but a low promoter stake and lumpy, government-dependent revenue cap the score.
 
@@ -1242,11 +1183,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### Menon Bearings Limited (MENONBE) ? 6.05 / 10 ? MODERATE
-*Sector: Engine Components ? Confidence: Moderate ? Updated: 2026-06-18*
+### Menon Bearings Limited (MENONBE) - 6.05 / 10 - MODERATE
+*Sector: Engine Components - Confidence: Moderate - Updated: 2026-06-18*
 
 **Summary:** Moderate trust: well-run, dividend-paying bearings specialist with good returns; the main overhangs are customer concentration and the long-term EV transition.
 
@@ -1260,11 +1200,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### Gujarat Mineral Development Corporation Limited (GMDCLTD) ? 6.05 / 10 ? MODERATE
-*Sector: PSU Mining ? Confidence: Moderate ? Updated: 2026-06-18*
+### Gujarat Mineral Development Corporation Limited (GMDCLTD) - 6.05 / 10 - MODERATE
+*Sector: PSU Mining - Confidence: Moderate - Updated: 2026-06-18*
 
 **Summary:** Moderate trust: cash-rich, high-dividend state PSU with a clean balance sheet, offset by PSU governance constraints and cyclical, declining core earnings.
 
@@ -1278,11 +1217,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### MSTC Limited (MSTCLTD) ? 6.05 / 10 ? MODERATE
-*Sector: Industrials ? Confidence: Moderate ? Updated: 2026-06-18*
+### MSTC Limited (MSTCLTD) - 6.05 / 10 - MODERATE
+*Sector: Industrials - Confidence: Moderate - Updated: 2026-06-18*
 
 **Summary:** Moderate trust: asset-light, high-dividend, high-ROE auction PSU; policy/mandate dependence and PSU governance constraints are the watch-items.
 
@@ -1296,11 +1234,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### Kamdhenu Limited (KAMDHENU) ? 6.05 / 10 ? MODERATE
-*Sector: Basic Materials ? Confidence: Low ? Updated: 2026-06-18*
+### Kamdhenu Limited (KAMDHENU) - 6.05 / 10 - MODERATE
+*Sector: Basic Materials - Confidence: Low - Updated: 2026-06-18*
 
 **Summary:** Moderate trust: capital-light, high-ROE, dividend-paying franchise brand; commodity-spread volatility and brand-execution dependence are the watch-items.
 
@@ -1314,11 +1251,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### NEPHROCARE HEALTH SERV L (NEPHROPLUS) ? 6.0 / 10 ? MODERATE
-*Sector: Dialysis / Renal Healthcare ? Confidence: Low ? Updated: 2026-06-18*
+### NEPHROCARE HEALTH SERV L (NEPHROPLUS) - 6.0 / 10 - MODERATE
+*Sector: Dialysis / Renal Healthcare - Confidence: Low - Updated: 2026-06-18*
 
 **Summary:** Moderate trust: PE-backed, professionally run dialysis leader with a clean balance sheet, but a short listed history, flat profitability and PE-exit overhang. Low confidence pending more disclosure history.
 
@@ -1332,11 +1268,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### Modison Limited (MODISONLTD) ? 6.0 / 10 ? MODERATE
-*Sector: Electrical Contacts / Components ? Confidence: Low ? Updated: 2026-06-18*
+### Modison Limited (MODISONLTD) - 6.0 / 10 - MODERATE
+*Sector: Electrical Contacts / Components - Confidence: Low - Updated: 2026-06-18*
 
 **Summary:** Moderate trust: niche market-leading family business with dividends, but earnings are silver-price sensitive and working-capital heavy. Low confidence on precise ownership/governance detail.
 
@@ -1350,11 +1285,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### INDEGENE LIMITED (INDGN) ? 6.0 / 10 ? MODERATE
-*Sector: Healthcare Technology / CRO ? Confidence: Low ? Updated: 2026-06-18*
+### INDEGENE LIMITED (INDGN) - 6.0 / 10 - MODERATE
+*Sector: Healthcare Technology / CRO - Confidence: Low - Updated: 2026-06-18*
 
 **Summary:** Moderate trust: professionally run, PE-backed pharma-commercialisation player with a clean balance sheet; short listed history and PE-exit overhang keep confidence low.
 
@@ -1368,11 +1302,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### Rashi Peripherals Limited (RPTECH) ? 6.0 / 10 ? MODERATE
-*Sector: IT Distribution ? Confidence: Moderate ? Updated: 2026-06-18*
+### Rashi Peripherals Limited (RPTECH) - 6.0 / 10 - MODERATE
+*Sector: IT Distribution - Confidence: Moderate - Updated: 2026-06-18*
 
 **Summary:** Moderate trust: scaled, dividend-paying IT distributor with strong growth, capped by structurally thin margins, high working capital and D2C disintermediation risk.
 
@@ -1386,11 +1319,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### Protean eGov Technologies Limited (PROTEAN) ? 6.0 / 10 ? MODERATE
-*Sector: Government Tech / FinTech ? Confidence: Moderate ? Updated: 2026-06-18*
+### Protean eGov Technologies Limited (PROTEAN) - 6.0 / 10 - MODERATE
+*Sector: Government Tech / FinTech - Confidence: Moderate - Updated: 2026-06-18*
 
 **Summary:** Moderate trust: professionally run, dividend-paying government-tech utility with strong mandates; policy dependence and slower-than-hoped growth are the watch-items.
 
@@ -1404,11 +1336,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### Universal Cables Limited (UNIVCABLES) ? 6.0 / 10 ? MODERATE
-*Sector: Cables & Wires ? Confidence: Moderate ? Updated: 2026-06-18*
+### Universal Cables Limited (UNIVCABLES) - 6.0 / 10 - MODERATE
+*Sector: Cables & Wires - Confidence: Moderate - Updated: 2026-06-18*
 
 **Summary:** Moderate trust: group-backed EHV cable maker with dividends and grid tailwinds, offset by working-capital intensity and strong competition (Polycab/Sterlite).
 
@@ -1422,11 +1353,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### Shilpa Medicare Limited (SHILPAMED) ? 6.0 / 10 ? MODERATE
-*Sector: Pharma / Oncology API ? Confidence: Moderate ? Updated: 2026-06-18*
+### Shilpa Medicare Limited (SHILPAMED) - 6.0 / 10 - MODERATE
+*Sector: Pharma / Oncology API - Confidence: Moderate - Updated: 2026-06-18*
 
 **Summary:** Moderate trust: niche oncology-API franchise recovering in profitability, with USFDA-inspection history and product concentration as watch-items.
 
@@ -1440,11 +1370,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### DIFFUSION ENGINEERS LTD (DIFFNKG) ? 6.0 / 10 ? MODERATE
-*Sector: Industrial Equipment / Speciality Machinery ? Confidence: Low ? Updated: 2026-06-18*
+### DIFFUSION ENGINEERS LTD (DIFFNKG) - 6.0 / 10 - MODERATE
+*Sector: Industrial Equipment / Speciality Machinery - Confidence: Low - Updated: 2026-06-18*
 
 **Summary:** Moderate trust: profitable, low-debt niche industrials promoter with dividends; short listed history and cyclicality keep confidence low.
 
@@ -1458,11 +1387,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### Interarch Building Solutions Limited (INTERARCH) ? 6.0 / 10 ? MODERATE
-*Sector: Pre-engineered Buildings ? Confidence: Low ? Updated: 2026-06-18*
+### Interarch Building Solutions Limited (INTERARCH) - 6.0 / 10 - MODERATE
+*Sector: Pre-engineered Buildings - Confidence: Low - Updated: 2026-06-18*
 
 **Summary:** Moderate trust: low-debt, dividend-paying PEB leader with decent returns; short listed history and steel-price exposure keep confidence low.
 
@@ -1476,11 +1404,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### Eldeco Housing and Industries Limited (ELDEHSG) ? 6.0 / 10 ? MODERATE
-*Sector: Real Estate ? Confidence: Low ? Updated: 2026-06-18*
+### Eldeco Housing and Industries Limited (ELDEHSG) - 6.0 / 10 - MODERATE
+*Sector: Real Estate - Confidence: Low - Updated: 2026-06-18*
 
 **Summary:** Moderate trust: asset-light, dividend-paying regional developer with a strong UP brand; real-estate cyclicality and incoming pan-India competition are the watch-items.
 
@@ -1494,11 +1421,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### Avalon Technologies Limited (AVALON) ? 6.0 / 10 ? MODERATE
-*Sector: EMS / Electronics ? Confidence: Low ? Updated: 2026-06-18*
+### Avalon Technologies Limited (AVALON) - 6.0 / 10 - MODERATE
+*Sector: EMS / Electronics - Confidence: Low - Updated: 2026-06-18*
 
 **Summary:** Moderate trust: founder-run, export-EMS player with good growth; customer concentration, FX exposure and a short listed history keep confidence low.
 
@@ -1512,11 +1438,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### Park Medi World Limited (PARKHOSPS) ? 6.0 / 10 ? MODERATE
-*Sector: Healthcare ? Confidence: Low ? Updated: 2026-06-18*
+### Park Medi World Limited (PARKHOSPS) - 6.0 / 10 - MODERATE
+*Sector: Healthcare - Confidence: Low - Updated: 2026-06-18*
 
 **Summary:** Moderate trust: capable, growing North-India hospital operator with decent returns; regional concentration, acquisition integration and a short listed history keep confidence low.
 
@@ -1530,11 +1455,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### Power Finance Corporation Limited (PFC) ? 6.0 / 10 ? MODERATE
-*Sector: PSU Finance ? Confidence: Moderate ? Updated: 2026-06-18*
+### Power Finance Corporation Limited (PFC) - 6.0 / 10 - MODERATE
+*Sector: PSU Finance - Confidence: Moderate - Updated: 2026-06-18*
 
 **Summary:** Moderate trust: high-dividend, high-ROE power financier, with structural DISCOM-credit risk and PSU governance constraints as the watch-items.
 
@@ -1548,11 +1472,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### Welspun Corp Limited (WELCORP) ? 6.0 / 10 ? MODERATE
-*Sector: Steel Pipes ? Confidence: Moderate ? Updated: 2026-06-18*
+### Welspun Corp Limited (WELCORP) - 6.0 / 10 - MODERATE
+*Sector: Steel Pipes - Confidence: Moderate - Updated: 2026-06-18*
 
 **Summary:** Moderate trust: scaled, cash-generative, dividend-paying pipe maker; steel/oil cyclicality and group-governance perception are the watch-items.
 
@@ -1566,11 +1489,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### POWERICA LIMITED (POWERICA) ? 6.0 / 10 ? MODERATE
-*Sector: Power Equipment ? Confidence: Low ? Updated: 2026-06-18*
+### POWERICA LIMITED (POWERICA) - 6.0 / 10 - MODERATE
+*Sector: Power Equipment - Confidence: Low - Updated: 2026-06-18*
 
 **Summary:** Moderate trust: cash-generative DG-set leader with recurring AMC revenue; no capital return and long-term grid/battery substitution are the watch-items.
 
@@ -1584,11 +1506,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### Ashiana Housing Limited (ASHIANA) ? 6.0 / 10 ? MODERATE
-*Sector: Real Estate ? Confidence: Moderate ? Updated: 2026-06-18*
+### Ashiana Housing Limited (ASHIANA) - 6.0 / 10 - MODERATE
+*Sector: Real Estate - Confidence: Moderate - Updated: 2026-06-18*
 
 **Summary:** Moderate trust: conservative, dividend-paying developer with a credible senior-living niche; real-estate cyclicality and execution constraints are the watch-items.
 
@@ -1602,11 +1523,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### GAUDIUM IVF N WOMEN H L (GAUDIUMIVF) ? 6.0 / 10 ? MODERATE
-*Sector: Healthcare ? Confidence: Low ? Updated: 2026-06-18*
+### GAUDIUM IVF N WOMEN H L (GAUDIUMIVF) - 6.0 / 10 - MODERATE
+*Sector: Healthcare - Confidence: Low - Updated: 2026-06-18*
 
 **Summary:** Moderate trust: high-return, founder-led fertility chain with strong growth; doctor dependence, scale-up risk and a short listed history keep confidence low.
 
@@ -1620,11 +1540,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### Wendt (India) Limited (WENDT) ? 6.0 / 10 ? MODERATE
-*Sector: Industrials ? Confidence: Moderate ? Updated: 2026-06-18*
+### Wendt (India) Limited (WENDT) - 6.0 / 10 - MODERATE
+*Sector: Industrials - Confidence: Moderate - Updated: 2026-06-18*
 
 **Summary:** Moderate trust: strong Murugappa/Wendt parentage and a debt-free balance sheet, but a sharp FY26 earnings collapse and senior-leadership churn weigh on it.
 
@@ -1638,11 +1557,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### Pitti Engineering Limited (PITTIENG) ? 5.85 / 10 ? LOW
-*Sector: Engineering Components ? Confidence: Moderate ? Updated: 2026-06-18*
+### Pitti Engineering Limited (PITTIENG) - 5.85 / 10 - LOW
+*Sector: Engineering Components - Confidence: Moderate - Updated: 2026-06-18*
 
 **Summary:** Low-moderate trust: well-positioned rail/industrial laminations supplier, but high leverage and capital intensity cap the score.
 
@@ -1656,11 +1574,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### Associated Alcohols & Breweries Limited (ASALCBR) ? 5.85 / 10 ? LOW
-*Sector: Specialty Chemicals / Pigments ? Confidence: Low ? Updated: 2026-06-18*
+### Associated Alcohols & Breweries Limited (ASALCBR) - 5.85 / 10 - LOW
+*Sector: Specialty Chemicals / Pigments - Confidence: Low - Updated: 2026-06-18*
 
 **Summary:** Low-moderate trust: established family alcohol/ENA business with decent returns and dividends; a source-file description mismatch reduces confidence ? verify identity.
 
@@ -1674,11 +1591,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### Greaves Cotton Limited (GREAVESCOT) ? 5.85 / 10 ? LOW
-*Sector: Engines / EV ? Confidence: Moderate ? Updated: 2026-06-18*
+### Greaves Cotton Limited (GREAVESCOT) - 5.85 / 10 - LOW
+*Sector: Engines / EV - Confidence: Moderate - Updated: 2026-06-18*
 
 **Summary:** Low-moderate trust: dividend-paying legacy promoter, but the EV (Ampere) transition is cash-consuming with an unproven profitability path.
 
@@ -1692,11 +1608,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### Gujarat Industries Power Company Limited (GIPCL) ? 5.85 / 10 ? LOW
-*Sector: PSU Power ? Confidence: Moderate ? Updated: 2026-06-18*
+### Gujarat Industries Power Company Limited (GIPCL) - 5.85 / 10 - LOW
+*Sector: PSU Power - Confidence: Moderate - Updated: 2026-06-18*
 
 **Summary:** Low-moderate trust: high-dividend state PSU with contracted revenue, offset by PSU governance constraints, lignite-asset sunset risk and limited growth.
 
@@ -1710,11 +1625,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### NLC India Limited (NLCINDIA) ? 5.85 / 10 ? LOW
-*Sector: PSU Power ? Confidence: Moderate ? Updated: 2026-06-18*
+### NLC India Limited (NLCINDIA) - 5.85 / 10 - LOW
+*Sector: PSU Power - Confidence: Moderate - Updated: 2026-06-18*
 
 **Summary:** Low-moderate trust: high-dividend state power PSU, capped by PSU governance, high leverage and a slow lignite-to-renewables transition.
 
@@ -1728,11 +1642,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### Isgec Heavy Engineering Limited (ISGEC) ? 5.85 / 10 ? LOW
-*Sector: Capital Goods ? Confidence: Moderate ? Updated: 2026-06-18*
+### Isgec Heavy Engineering Limited (ISGEC) - 5.85 / 10 - LOW
+*Sector: Capital Goods - Confidence: Moderate - Updated: 2026-06-18*
 
 **Summary:** Low-moderate trust: established family heavy-engineering business with dividends, but lumpy, low-return project earnings cap the score.
 
@@ -1746,11 +1659,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### Tega Industries Limited (TEGA) ? 5.85 / 10 ? LOW
-*Sector: Mining Equipment ? Confidence: Moderate ? Updated: 2026-06-18*
+### Tega Industries Limited (TEGA) - 5.85 / 10 - LOW
+*Sector: Mining Equipment - Confidence: Moderate - Updated: 2026-06-18*
 
 **Summary:** Low-moderate trust: globally diversified niche mining-equipment maker with dividends, held back by a cyclical earnings dip.
 
@@ -1764,11 +1676,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### GALA PRECISION ENG LTD (GALAPREC) ? 5.8 / 10 ? LOW
-*Sector: Precision Components ? Confidence: Low ? Updated: 2026-06-18*
+### GALA PRECISION ENG LTD (GALAPREC) - 5.8 / 10 - LOW
+*Sector: Precision Components - Confidence: Low - Updated: 2026-06-18*
 
 **Summary:** Low-moderate trust: capable niche components promoter with decent growth, but a short listed history, small scale and no capital return. Low confidence.
 
@@ -1782,11 +1693,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### Yatharth Hospital & Trauma Care Services Limited (YATHARTH) ? 5.8 / 10 ? LOW
-*Sector: Healthcare ? Confidence: Low ? Updated: 2026-06-18*
+### Yatharth Hospital & Trauma Care Services Limited (YATHARTH) - 5.8 / 10 - LOW
+*Sector: Healthcare - Confidence: Low - Updated: 2026-06-18*
 
 **Summary:** Low-moderate trust: family-run NCR hospital chain growing fast, but capex intensity, no capital return and a short listed history keep confidence low.
 
@@ -1800,11 +1710,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### LAXMI DENTAL LIMITED (LAXMIDENTL) ? 5.8 / 10 ? LOW
-*Sector: Dental Products ? Confidence: Low ? Updated: 2026-06-18*
+### LAXMI DENTAL LIMITED (LAXMIDENTL) - 5.8 / 10 - LOW
+*Sector: Dental Products - Confidence: Low - Updated: 2026-06-18*
 
 **Summary:** Low-moderate trust: founder-run dental leader with strong growth, but a short listed history, negative cash flow and small scale keep confidence low.
 
@@ -1818,11 +1727,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### MMP Industries Limited (MMP) ? 5.8 / 10 ? LOW
-*Sector: Aluminium Products ? Confidence: Low ? Updated: 2026-06-18*
+### MMP Industries Limited (MMP) - 5.8 / 10 - LOW
+*Sector: Aluminium Products - Confidence: Low - Updated: 2026-06-18*
 
 **Summary:** Low-moderate trust: niche family aluminium-products business with dividends, but elevated leverage and commodity-price sensitivity.
 
@@ -1836,11 +1744,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### Bharat Bijlee Limited (BBL) ? 5.8 / 10 ? LOW
-*Sector: Electrical Equipment ? Confidence: Moderate ? Updated: 2026-06-18*
+### Bharat Bijlee Limited (BBL) - 5.8 / 10 - LOW
+*Sector: Electrical Equipment - Confidence: Moderate - Updated: 2026-06-18*
 
 **Summary:** Low-moderate trust: conservative, cash-rich, dividend-paying legacy electricals maker, held back by cyclical, working-capital-heavy project earnings.
 
@@ -1854,11 +1761,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### Entero Healthcare Solutions Limited (ENTERO) ? 5.8 / 10 ? LOW
-*Sector: Healthcare Distribution ? Confidence: Low ? Updated: 2026-06-18*
+### Entero Healthcare Solutions Limited (ENTERO) - 5.8 / 10 - LOW
+*Sector: Healthcare Distribution - Confidence: Low - Updated: 2026-06-18*
 
 **Summary:** Low-moderate trust: fast-consolidating, PE-backed pharma distributor, but structurally thin margins, heavy working capital and a short listed history keep confidence low.
 
@@ -1872,11 +1778,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### Borosil Limited (BOROLTD) ? 5.8 / 10 ? LOW
-*Sector: Consumer Cyclical ? Confidence: Moderate ? Updated: 2026-06-18*
+### Borosil Limited (BOROLTD) - 5.8 / 10 - LOW
+*Sector: Consumer Cyclical - Confidence: Moderate - Updated: 2026-06-18*
 
 **Summary:** Low-moderate trust: reputable brand-led family business, held back by modest returns, no capital return and execution risk in scaling new capacity.
 
@@ -1890,11 +1795,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### Whirlpool of India Limited (WHIRLPOOL) ? 5.75 / 10 ? LOW
-*Sector: Consumer Durables ? Confidence: Moderate ? Updated: 2026-06-18*
+### Whirlpool of India Limited (WHIRLPOOL) - 5.75 / 10 - LOW
+*Sector: Consumer Durables - Confidence: Moderate - Updated: 2026-06-18*
 
 **Summary:** Low-moderate trust: MNC-grade governance and brand, but the parent's ongoing stake reduction (75%->51%, more planned) is a significant ownership-behaviour overhang.
 
@@ -1908,11 +1812,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### Eimco Elecon (India) Limited (EIMCOELECO) ? 5.7 / 10 ? LOW
-*Sector: Mining Equipment ? Confidence: Moderate ? Updated: 2026-06-18*
+### Eimco Elecon (India) Limited (EIMCOELECO) - 5.7 / 10 - LOW
+*Sector: Mining Equipment - Confidence: Moderate - Updated: 2026-06-18*
 
 **Summary:** Low-moderate trust: low-debt, dividend-paying niche leader, but acute customer concentration on Coal India and weak recent earnings cap the score.
 
@@ -1926,11 +1829,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### Tejas Networks Limited (TEJASNET) ? 5.7 / 10 ? LOW
-*Sector: Telecom Equipment ? Confidence: Moderate ? Updated: 2026-06-18*
+### Tejas Networks Limited (TEJASNET) - 5.7 / 10 - LOW
+*Sector: Telecom Equipment - Confidence: Moderate - Updated: 2026-06-18*
 
 **Summary:** Low-moderate trust: strong Tata parentage and governance, but current losses, high leverage and heavy BSNL dependence weigh on capital allocation and execution.
 
@@ -1944,11 +1846,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### SJVN Limited (SJVN) ? 5.7 / 10 ? LOW
-*Sector: PSU Power ? Confidence: Moderate ? Updated: 2026-06-18*
+### SJVN Limited (SJVN) - 5.7 / 10 - LOW
+*Sector: PSU Power - Confidence: Moderate - Updated: 2026-06-18*
 
 **Summary:** Low-moderate trust: dividend-paying hydro PSU, held back by weak returns, very high leverage and slow, clearance-dependent project execution.
 
@@ -1962,11 +1863,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### Salzer Electronics Limited (SALZERELEC) ? 5.65 / 10 ? LOW
-*Sector: Electrical Components ? Confidence: Moderate ? Updated: 2026-06-18*
+### Salzer Electronics Limited (SALZERELEC) - 5.65 / 10 - LOW
+*Sector: Electrical Components - Confidence: Moderate - Updated: 2026-06-18*
 
 **Summary:** Low-moderate trust: long-standing family components business that pays dividends, but high leverage and sluggish, low-return growth weigh on it.
 
@@ -1980,11 +1880,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### R K SWAMY LIMITED (RKSWAMY) ? 5.65 / 10 ? LOW
-*Sector: Marketing Services / Advertising ? Confidence: Moderate ? Updated: 2026-06-18*
+### R K SWAMY LIMITED (RKSWAMY) - 5.65 / 10 - LOW
+*Sector: Marketing Services / Advertising - Confidence: Moderate - Updated: 2026-06-18*
 
 **Summary:** Low-moderate trust: established agency brand with decent client stickiness, but weak post-IPO execution and structural pressure on legacy advertising.
 
@@ -1998,11 +1897,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### Ramco Systems Limited (RAMCOSYS) ? 5.65 / 10 ? LOW
-*Sector: Enterprise Software / ERP ? Confidence: Moderate ? Updated: 2026-06-18*
+### Ramco Systems Limited (RAMCOSYS) - 5.65 / 10 - LOW
+*Sector: Enterprise Software / ERP - Confidence: Moderate - Updated: 2026-06-18*
 
 **Summary:** Low-moderate trust: established group software business with a defensible aviation niche, but slow growth, no capital return and group cross-holding structure weigh on it.
 
@@ -2016,11 +1914,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### Borosil Scientific Limited (BOROSCI) ? 5.65 / 10 ? LOW
-*Sector: Scientific Glassware ? Confidence: Moderate ? Updated: 2026-06-18*
+### Borosil Scientific Limited (BOROSCI) - 5.65 / 10 - LOW
+*Sector: Scientific Glassware - Confidence: Moderate - Updated: 2026-06-18*
 
 **Summary:** Low-moderate trust: reputable group with a niche-leading lab-glassware franchise, but low growth, modest returns and no capital return cap the score.
 
@@ -2034,11 +1931,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### Landmark Cars Limited (LANDMARK) ? 5.65 / 10 ? LOW
-*Sector: Auto Dealerships ? Confidence: Moderate ? Updated: 2026-06-18*
+### Landmark Cars Limited (LANDMARK) - 5.65 / 10 - LOW
+*Sector: Auto Dealerships - Confidence: Moderate - Updated: 2026-06-18*
 
 **Summary:** Low-moderate trust: capable dealership operator, but very high leverage, structurally thin margins and the agency-model transition cap the score.
 
@@ -2052,11 +1948,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### Cyient DLM Limited (CYIENTDLM) ? 5.65 / 10 ? LOW
-*Sector: Defence Electronics / EMS ? Confidence: Moderate ? Updated: 2026-06-18*
+### Cyient DLM Limited (CYIENTDLM) - 5.65 / 10 - LOW
+*Sector: Defence Electronics / EMS - Confidence: Moderate - Updated: 2026-06-18*
 
 **Summary:** Low-moderate trust: reputable-parent EMS business with a clean lineage, but weak returns, no capital return and a short standalone track record.
 
@@ -2070,11 +1965,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### Keystone Realtors Limited (RUSTOMJEE) ? 5.65 / 10 ? LOW
-*Sector: Real Estate ? Confidence: Moderate ? Updated: 2026-06-18*
+### Keystone Realtors Limited (RUSTOMJEE) - 5.65 / 10 - LOW
+*Sector: Real Estate - Confidence: Moderate - Updated: 2026-06-18*
 
 **Summary:** Low-moderate trust: respected MMR developer brand, but high leverage, negative cash flow and weak returns typical of the real-estate cycle.
 
@@ -2088,11 +1982,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### Capacit'e Infraprojects Limited (CAPACITE) ? 5.65 / 10 ? LOW
-*Sector: Construction / EPC ? Confidence: Moderate ? Updated: 2026-06-18*
+### Capacit'e Infraprojects Limited (CAPACITE) - 5.65 / 10 - LOW
+*Sector: Construction / EPC - Confidence: Moderate - Updated: 2026-06-18*
 
 **Summary:** Low-moderate trust: reputable contractor with a strong order book, but working-capital intensity, developer-credit risk and no capital return cap the score.
 
@@ -2106,11 +1999,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### DEE DEVELOPMENT ENG LTD (DEEDEV) ? 5.6 / 10 ? LOW
-*Sector: Industrial Piping / Engineering ? Confidence: Moderate ? Updated: 2026-06-18*
+### DEE DEVELOPMENT ENG LTD (DEEDEV) - 5.6 / 10 - LOW
+*Sector: Industrial Piping / Engineering - Confidence: Moderate - Updated: 2026-06-18*
 
 **Summary:** Low-moderate trust: stable family ownership and a strong order book, offset by weak returns, persistent negative free cash flow, rising debt and fresh equity dilution.
 
@@ -2124,11 +2016,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: BSE filings (preferential issue Jun-2026), shareholding pattern, screener.in, CARE*
 
-
 ---
 
-### Incap Limited (INCAP) ? 5.6 / 10 ? LOW
-*Sector: Industrial Equipment / Pending Verification ? Confidence: Low ? Updated: 2026-06-18*
+### Incap Limited (INCAP) - 5.6 / 10 - LOW
+*Sector: Industrial Equipment / Pending Verification - Confidence: Low - Updated: 2026-06-18*
 
 **Summary:** Low-moderate trust: group-backed niche supplier with dividends, but very weak returns and tiny scale.
 
@@ -2142,11 +2033,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### Viyash Scientific Limited (VIYASH) ? 5.6 / 10 ? LOW
-*Sector: Healthcare ? Confidence: Low ? Updated: 2026-06-18*
+### Viyash Scientific Limited (VIYASH) - 5.6 / 10 - LOW
+*Sector: Healthcare - Confidence: Low - Updated: 2026-06-18*
 
 **Summary:** Low trust: ambitious backward-integrated pharma roll-up with strong reported growth, but USFDA-observation risk, integration debt and a short combined-entity track record keep confidence low.
 
@@ -2160,11 +2050,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### MTAR Technologies Limited (MTARTECH) ? 5.5 / 10 ? LOW
-*Sector: Precision Engineering / Defence ? Confidence: High ? Updated: 2026-06-18*
+### MTAR Technologies Limited (MTARTECH) - 5.5 / 10 - LOW
+*Sector: Precision Engineering / Defence - Confidence: High - Updated: 2026-06-18*
 
 **Summary:** Low-moderate trust: credible founder-led defence/clean-energy supplier, but continuous promoter selling, no dividend, very high working-capital intensity and a steep valuation weigh on the score.
 
@@ -2178,11 +2067,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: BSE/NSE shareholding filings, screener.in, ICRA/CRISIL*
 
-
 ---
 
-### Siemens Energy India Limited (ENRIN) ? 5.5 / 10 ? LOW
-*Sector: Water / Environment Infrastructure ? Confidence: Low ? Updated: 2026-06-18*
+### Siemens Energy India Limited (ENRIN) - 5.5 / 10 - LOW
+*Sector: Water / Environment Infrastructure - Confidence: Low - Updated: 2026-06-18*
 
 **Summary:** Low confidence ? this record has a name/sector data conflict in the source files; score is provisional pending ticker/identity reconciliation. Do not rely on it without verification.
 
@@ -2196,11 +2084,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### Transindia Real Estate Limited (TREL) ? 5.5 / 10 ? LOW
-*Sector: Textiles / Paper ? Confidence: Low ? Updated: 2026-06-18*
+### Transindia Real Estate Limited (TREL) - 5.5 / 10 - LOW
+*Sector: Textiles / Paper - Confidence: Low - Updated: 2026-06-18*
 
 **Summary:** Low confidence ? this record carries a ticker/identity conflict in the source files; the provisional score reflects the weak reported financials but should be reconciled before use.
 
@@ -2214,11 +2101,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### HLE Glascoat Limited (HLEGLAS) ? 5.5 / 10 ? LOW
-*Sector: Industrials ? Confidence: Moderate ? Updated: 2026-06-18*
+### HLE Glascoat Limited (HLEGLAS) - 5.5 / 10 - LOW
+*Sector: Industrials - Confidence: Moderate - Updated: 2026-06-18*
 
 **Summary:** Low trust: niche glass-lined-equipment maker hit by a loss-making subsidiary (Omeras), high leverage and a sharp FY26 earnings decline.
 
@@ -2232,11 +2118,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### IFGL Refractories Limited (IFGLEXPOR) ? 5.5 / 10 ? LOW
-*Sector: Basic Materials ? Confidence: Moderate ? Updated: 2026-06-18*
+### IFGL Refractories Limited (IFGLEXPOR) - 5.5 / 10 - LOW
+*Sector: Basic Materials - Confidence: Moderate - Updated: 2026-06-18*
 
 **Summary:** Low trust: established refractories promoter with dividends, but significant 2026 management churn, a sharp earnings decline and thin margins weigh on it.
 
@@ -2250,11 +2135,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### Anupam Rasayan India Ltd (ANURAS) ? 5.45 / 10 ? LOW
-*Sector: Pharma / API ? Confidence: Moderate ? Updated: 2026-06-18*
+### Anupam Rasayan India Ltd (ANURAS) - 5.45 / 10 - LOW
+*Sector: Pharma / API - Confidence: Moderate - Updated: 2026-06-18*
 
 **Summary:** Low-moderate trust: regulated-market specialty-chem promoter with growth, but high leverage, weak returns and past accounting scrutiny cap the score.
 
@@ -2268,11 +2152,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### PTC India Limited (PTC) ? 5.45 / 10 ? LOW
-*Sector: Power Trading ? Confidence: Moderate ? Updated: 2026-06-18*
+### PTC India Limited (PTC) - 5.45 / 10 - LOW
+*Sector: Power Trading - Confidence: Moderate - Updated: 2026-06-18*
 
 **Summary:** Low trust: high-dividend power-trading PSU, but the well-documented PTC Financial Services governance episode and thin, disintermediating core economics weigh heavily.
 
@@ -2286,11 +2169,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### Avantel Limited (AVANTEL) ? 5.3 / 10 ? LOW
-*Sector: Defence Electronics / Satellite ? Confidence: Low ? Updated: 2026-06-18*
+### Avantel Limited (AVANTEL) - 5.3 / 10 - LOW
+*Sector: Defence Electronics / Satellite - Confidence: Low - Updated: 2026-06-18*
 
 **Summary:** Low trust: founder-run defence-electronics microcap with concentration risk, weak recent profitability and small-cap governance limits. Low confidence (limited verified ownership/governance data).
 
@@ -2304,11 +2186,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### Shankara Building Products Limited (SHANKARA) ? 5.3 / 10 ? LOW
-*Sector: Building Materials Retail ? Confidence: Moderate ? Updated: 2026-06-18*
+### Shankara Building Products Limited (SHANKARA) - 5.3 / 10 - LOW
+*Sector: Building Materials Retail - Confidence: Moderate - Updated: 2026-06-18*
 
 **Summary:** Low-moderate trust: established retail-distribution promoter, but weak returns, negative cash flow and a working-capital-heavy model after the demerger weigh on it.
 
@@ -2322,11 +2203,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### TVS Electronics Limited (TVSELECT) ? 5.3 / 10 ? LOW
-*Sector: Electronics / IT Peripherals ? Confidence: Moderate ? Updated: 2026-06-18*
+### TVS Electronics Limited (TVSELECT) - 5.3 / 10 - LOW
+*Sector: Electronics / IT Peripherals - Confidence: Moderate - Updated: 2026-06-18*
 
 **Summary:** Low-moderate trust: trusted TVS lineage, but very weak returns, high leverage and a structurally pressured product mix weigh heavily.
 
@@ -2340,11 +2220,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### Jyoti CNC Automation Limited (JYOTICNC) ? 5.25 / 10 ? LOW
-*Sector: Industrials ? Confidence: High ? Updated: 2026-06-18*
+### Jyoti CNC Automation Limited (JYOTICNC) - 5.25 / 10 - LOW
+*Sector: Industrials - Confidence: High - Updated: 2026-06-18*
 
 **Summary:** Low trust: capable domestic CNC franchise, but an ongoing judicial investigation and asset seizures at the French (Huron) subsidiary, plus guidance misses, are serious governance/execution concerns.
 
@@ -2358,11 +2237,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### SHREEJI SHIPPING GLOBAL L (SHREEJISPG) ? 5.2 / 10 ? LOW
-*Sector: Steel Pipes / Infrastructure ? Confidence: Low ? Updated: 2026-06-18*
+### SHREEJI SHIPPING GLOBAL L (SHREEJISPG) - 5.2 / 10 - LOW
+*Sector: Steel Pipes / Infrastructure - Confidence: Low - Updated: 2026-06-18*
 
 **Summary:** Low trust: newly listed small-cap with volatile earnings and limited governance visibility, despite decent headline returns.
 
@@ -2376,11 +2254,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### Urban Company Limited (URBANCO) ? 5.2 / 10 ? LOW
-*Sector: Technology / Consumer Services ? Confidence: Low ? Updated: 2026-06-18*
+### Urban Company Limited (URBANCO) - 5.2 / 10 - LOW
+*Sector: Technology / Consumer Services - Confidence: Low - Updated: 2026-06-18*
 
 **Summary:** Low trust: credible founders and a leading services marketplace, but persistent losses, negative cash flow, VC-exit overhang and a demanding valuation.
 
@@ -2394,11 +2271,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### The Shipping Corporation of India Limited (SCI) ? 5.2 / 10 ? LOW
-*Sector: PSU Shipping ? Confidence: Moderate ? Updated: 2026-06-18*
+### The Shipping Corporation of India Limited (SCI) - 5.2 / 10 - LOW
+*Sector: PSU Shipping - Confidence: Moderate - Updated: 2026-06-18*
 
 **Summary:** Low-moderate trust: dividend-paying shipping PSU, but privatisation uncertainty, PSU inefficiency and freight cyclicality cap the score.
 
@@ -2412,11 +2288,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### CLEAN MAX ENVIRO EN SOL L (CLEANMAX) ? 5.2 / 10 ? LOW
-*Sector: Utilities ? Confidence: Moderate ? Updated: 2026-06-18*
+### CLEAN MAX ENVIRO EN SOL L (CLEANMAX) - 5.2 / 10 - LOW
+*Sector: Utilities - Confidence: Moderate - Updated: 2026-06-18*
 
 **Summary:** Low trust: Brookfield-backed renewable platform with scale, but very high leverage, weak returns, a heavy OFS-led IPO and a very short listed history keep the score low.
 
@@ -2430,11 +2305,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### UNICOMMERCE ESOLUTIONS L (UNIECOM) ? 5.15 / 10 ? LOW
-*Sector: SaaS / E-commerce Software ? Confidence: Low ? Updated: 2026-06-18*
+### UNICOMMERCE ESOLUTIONS L (UNIECOM) - 5.15 / 10 - LOW
+*Sector: SaaS / E-commerce Software - Confidence: Low - Updated: 2026-06-18*
 
 **Summary:** Low trust: profitable, growing e-commerce SaaS, but PE/promoter selling, small scale and a sharp valuation de-rating keep the score low.
 
@@ -2448,11 +2322,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### KPI Green Energy Limited (KPIGREEN) ? 5.15 / 10 ? LOW
-*Sector: Utilities ? Confidence: High ? Updated: 2026-06-18*
+### KPI Green Energy Limited (KPIGREEN) - 5.15 / 10 - LOW
+*Sector: Utilities - Confidence: High - Updated: 2026-06-18*
 
 **Summary:** Low trust: high-growth solar developer, but quadrupling debt, negative free cash flow, promoter-warrant dilution and aggressive guidance are clear capital-allocation/governance concerns.
 
@@ -2466,11 +2339,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### Suven Life Sciences Limited (SUVEN) ? 5.1 / 10 ? LOW
-*Sector: Pharma CDMO / CNS ? Confidence: Low ? Updated: 2026-06-18*
+### Suven Life Sciences Limited (SUVEN) - 5.1 / 10 - LOW
+*Sector: Pharma CDMO / CNS - Confidence: Low - Updated: 2026-06-18*
 
 **Summary:** Low trust: founder-family drug-discovery company in a cash-burning, milestone-dependent phase; a source-file identity mix-up reduces confidence ? verify.
 
@@ -2484,11 +2356,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### Wockhardt Limited (WOCKPHARMA) ? 5.1 / 10 ? LOW
-*Sector: Healthcare ? Confidence: Moderate ? Updated: 2026-06-18*
+### Wockhardt Limited (WOCKPHARMA) - 5.1 / 10 - LOW
+*Sector: Healthcare - Confidence: Moderate - Updated: 2026-06-18*
 
 **Summary:** Low trust: reputable founder and a promising novel-antibiotic pipeline, but weak returns, high leverage, no capital return and a troubled regulatory/financial history weigh heavily.
 
@@ -2502,11 +2373,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### Lakshmi Electrical Control Systems (LAKSELEC) ? 5.05 / 10 ? LOW
-*Sector: Electrical Equipment ? Confidence: Moderate ? Updated: 2026-06-18*
+### Lakshmi Electrical Control Systems (LAKSELEC) - 5.05 / 10 - LOW
+*Sector: Electrical Equipment - Confidence: Moderate - Updated: 2026-06-18*
 
 **Summary:** Low trust: cash-rich but very low-return, with heavy LMW-customer concentration, a low promoter stake and outstanding GST notices.
 
@@ -2520,11 +2390,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### South West Pinnacle Exploration Limited (SOUTHWEST) ? 5.0 / 10 ? LOW
-*Sector: Oil & Gas Services ? Confidence: Low ? Updated: 2026-06-18*
+### South West Pinnacle Exploration Limited (SOUTHWEST) - 5.0 / 10 - LOW
+*Sector: Oil & Gas Services - Confidence: Low - Updated: 2026-06-18*
 
 **Summary:** Low trust: ONGC-dependent oilfield-services microcap with customer concentration and limited governance visibility. Low confidence.
 
@@ -2538,11 +2407,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### Signpost India Limited (SIGNPOST) ? 5.0 / 10 ? LOW
-*Sector: Outdoor Media / OOH ? Confidence: Low ? Updated: 2026-06-18*
+### Signpost India Limited (SIGNPOST) - 5.0 / 10 - LOW
+*Sector: Outdoor Media / OOH - Confidence: Low - Updated: 2026-06-18*
 
 **Summary:** Low trust: sub-scale outdoor-media business reliant on municipal concessions, with high leverage and limited governance visibility.
 
@@ -2556,11 +2424,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### Fredun Pharmaceuticals Limited (FREDUN) ? 5.0 / 10 ? LOW
-*Sector: Pharma / Formulations ? Confidence: Low ? Updated: 2026-06-18*
+### Fredun Pharmaceuticals Limited (FREDUN) - 5.0 / 10 - LOW
+*Sector: Pharma / Formulations - Confidence: Low - Updated: 2026-06-18*
 
 **Summary:** Low trust: sub-scale injectables maker with high leverage, limited diversification and weak recent profitability.
 
@@ -2574,11 +2441,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### MOSCHIP TECHNOLOGIES LTD (MOSCHIP) ? 5.0 / 10 ? LOW
-*Sector: Semiconductors / Embedded ? Confidence: Low ? Updated: 2026-06-18*
+### MOSCHIP TECHNOLOGIES LTD (MOSCHIP) - 5.0 / 10 - LOW
+*Sector: Semiconductors / Embedded - Confidence: Low - Updated: 2026-06-18*
 
 **Summary:** Low trust: sub-scale fabless/embedded-design company still establishing consistent profitability and governance track record.
 
@@ -2592,11 +2458,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### GMR Airports Limited (GMRAIRPORT) ? 4.95 / 10 ? LOW
-*Sector: Airport Infrastructure ? Confidence: Moderate ? Updated: 2026-06-18*
+### GMR Airports Limited (GMRAIRPORT) - 4.95 / 10 - LOW
+*Sector: Airport Infrastructure - Confidence: Moderate - Updated: 2026-06-18*
 
 **Summary:** Low trust: capable airport operator riding strong traffic, but extreme leverage, a complex group structure and no capital return cap the governance/capital-allocation score.
 
@@ -2610,11 +2475,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### Raymond Realty Limited (RAYMONDREL) ? 4.95 / 10 ? LOW
-*Sector: Real Estate ? Confidence: Low ? Updated: 2026-06-18*
+### Raymond Realty Limited (RAYMONDREL) - 4.95 / 10 - LOW
+*Sector: Real Estate - Confidence: Low - Updated: 2026-06-18*
 
 **Summary:** Low trust: promising Thane land-monetisation story, but Singhania-family governance overhang, heavy capital intensity and a very short standalone record weigh on it.
 
@@ -2628,11 +2492,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### STALLION IND FLUOROCHEM L (STALLION) ? 4.85 / 10 ? LOW
-*Sector: Specialty Chemicals / Refrigerants ? Confidence: Low ? Updated: 2026-06-18*
+### STALLION IND FLUOROCHEM L (STALLION) - 4.85 / 10 - LOW
+*Sector: Specialty Chemicals / Refrigerants - Confidence: Low - Updated: 2026-06-18*
 
 **Summary:** Low trust: newly listed, low-margin refrigerant distributor with declining earnings and regulatory (Kigali HFC phase-out) overhang.
 
@@ -2646,11 +2509,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### HealthCare Global Enterprises Limited (HCG) ? 4.8 / 10 ? LOW
-*Sector: Healthcare / Oncology ? Confidence: High ? Updated: 2026-06-18*
+### HealthCare Global Enterprises Limited (HCG) - 4.8 / 10 - LOW
+*Sector: Healthcare / Oncology - Confidence: High - Updated: 2026-06-18*
 
 **Summary:** Low trust: PE-controlled oncology chain with weak returns, repeated dilution, no dividends and a recent CDSCO ethics-committee suspension. Capital allocation and governance are the key concerns.
 
@@ -2664,11 +2526,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: BSE filings (CDSCO suspension Jun-2026, rights issue), shareholding pattern, screener.in*
 
-
 ---
 
-### Arisinfra Solutions (ARIS) ? 4.8 / 10 ? LOW
-*Sector: Construction Materials / B2B Marketplace ? Confidence: Moderate ? Updated: 2026-06-18*
+### Arisinfra Solutions (ARIS) - 4.8 / 10 - LOW
+*Sector: Construction Materials / B2B Marketplace - Confidence: Moderate - Updated: 2026-06-18*
 
 **Summary:** Low trust: thin-margin, working-capital-heavy B2B marketplace with a low promoter stake, short listed history and a recent auditor resignation (governance flag).
 
@@ -2682,11 +2543,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### Suzlon Energy Limited (SUZLON) ? 4.8 / 10 ? LOW
-*Sector: Industrials ? Confidence: High ? Updated: 2026-06-18*
+### Suzlon Energy Limited (SUZLON) - 4.8 / 10 - LOW
+*Sector: Industrials - Confidence: High - Updated: 2026-06-18*
 
 **Summary:** Low trust: despite strong headline wind-energy growth, weak cash conversion, a sharp receivables build-up, guidance misses and a legacy promoter-governance overhang are serious quality flags.
 
@@ -2700,11 +2560,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### EMBASSY DEVELOPMENTS LTD (EMBDL) ? 4.75 / 10 ? LOW
-*Sector: Real Estate ? Confidence: Moderate ? Updated: 2026-06-18*
+### EMBASSY DEVELOPMENTS LTD (EMBDL) - 4.75 / 10 - LOW
+*Sector: Real Estate - Confidence: Moderate - Updated: 2026-06-18*
 
 **Summary:** Low trust: capable developer brand, but very high promoter-share pledging, current losses and land-title litigation make this a clear governance/capital-allocation concern.
 
@@ -2718,11 +2577,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### Scoda Tubes Limited (SCODATUBES) ? 4.65 / 10 ? LOW
-*Sector: Steel Tubes ? Confidence: Low ? Updated: 2026-06-18*
+### Scoda Tubes Limited (SCODATUBES) - 4.65 / 10 - LOW
+*Sector: Steel Tubes - Confidence: Low - Updated: 2026-06-18*
 
 **Summary:** Low trust: newly listed steel-tubes microcap with weak cash flow, high debt and declining earnings.
 
@@ -2736,11 +2594,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### Raymond Limited (RAYMOND) ? 4.65 / 10 ? LOW
-*Sector: Textiles / Real Estate ? Confidence: Moderate ? Updated: 2026-06-18*
+### Raymond Limited (RAYMOND) - 4.65 / 10 - LOW
+*Sector: Textiles / Real Estate - Confidence: Moderate - Updated: 2026-06-18*
 
 **Summary:** Low trust: strong brand and a land-monetisation optionality, but recurring promoter/family governance controversies and a messy multi-demerger restructuring weigh heavily.
 
@@ -2754,11 +2611,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### Om Infra Limited (OMINFRAL) ? 4.65 / 10 ? LOW
-*Sector: Infrastructure EPC / Construction ? Confidence: Low ? Updated: 2026-06-18*
+### Om Infra Limited (OMINFRAL) - 4.65 / 10 - LOW
+*Sector: Infrastructure EPC / Construction - Confidence: Low - Updated: 2026-06-18*
 
 **Summary:** Low trust: sub-scale EPC contractor with lumpy, loss-making execution and negative cash flow.
 
@@ -2772,11 +2628,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### Synergy Green Industries Limited (SGIL) ? 4.65 / 10 ? LOW
-*Sector: Industrials ? Confidence: High ? Updated: 2026-06-18*
+### Synergy Green Industries Limited (SGIL) - 4.65 / 10 - LOW
+*Sector: Industrials - Confidence: High - Updated: 2026-06-18*
 
 **Summary:** Low trust: expansion-stage wind-castings foundry with a ~74% FY26 profit collapse, sharply elevated leverage and a demanding valuation.
 
@@ -2790,11 +2645,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### Rir Power Electronics Limited (RIR) ? 4.5 / 10 ? LOW
-*Sector: Power Electronics ? Confidence: Low ? Updated: 2026-06-18*
+### Rir Power Electronics Limited (RIR) - 4.5 / 10 - LOW
+*Sector: Power Electronics - Confidence: Low - Updated: 2026-06-18*
 
 **Summary:** Low trust: sub-scale power-electronics business with deteriorating earnings, negative cash flow and limited governance visibility.
 
@@ -2808,11 +2662,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### Vascon Engineers Limited (VASCONEQ) ? 4.3 / 10 ? LOW
-*Sector: Real Estate / Construction ? Confidence: Low ? Updated: 2026-06-18*
+### Vascon Engineers Limited (VASCONEQ) - 4.3 / 10 - LOW
+*Sector: Real Estate / Construction - Confidence: Low - Updated: 2026-06-18*
 
 **Summary:** Low trust: leveraged real-estate/EPC company with deep losses, negative cash flow and a poor delivery record.
 
@@ -2826,11 +2679,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### Nippon India ETF Nifty 50 BeES (NIFTYBEES) ? 7.5 / 10 ? N/A (ETF)
-*Sector: Index ETF ? Confidence: n/a ? Updated: 2026-06-18*
+### Nippon India ETF Nifty 50 BeES (NIFTYBEES) - 7.5 / 10 - N/A (ETF)
+*Sector: Index ETF - Confidence: n/a - Updated: 2026-06-18*
 
 **Summary:** Not a corporate management score ? this is a passive Nifty 50 ETF; the rating reflects the credibility and stewardship of the AMC (Nippon Life India), which is high.
 
@@ -2844,11 +2696,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### Mirae Asset NYSE FANG+ETF (MAFANG) ? 7.5 / 10 ? N/A (ETF)
-*Sector: ETF ? Confidence: n/a ? Updated: 2026-06-18*
+### Mirae Asset NYSE FANG+ETF (MAFANG) - 7.5 / 10 - N/A (ETF)
+*Sector: ETF - Confidence: n/a - Updated: 2026-06-18*
 
 **Summary:** Not a corporate management score ? passive FANG+ ETF; the rating reflects the credibility and stewardship of the AMC (Mirae Asset), which is high.
 
@@ -2862,11 +2713,10 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
 
-
 ---
 
-### Motilal Oswal NASDAQ 100 ETF (MON100) ? 7.5 / 10 ? N/A (ETF)
-*Sector: ETF ? Confidence: n/a ? Updated: 2026-06-18*
+### Motilal Oswal NASDAQ 100 ETF (MON100) - 7.5 / 10 - N/A (ETF)
+*Sector: ETF - Confidence: n/a - Updated: 2026-06-18*
 
 **Summary:** Not a corporate management score ? passive Nasdaq-100 ETF; the rating reflects the credibility and stewardship of the AMC (Motilal Oswal), which is high.
 
@@ -2879,6 +2729,5 @@ _Generated for 151 holdings. Verdict scale: **HIGH** ? 8.0 ? **MODERATE** 6.0?7.
 | Execution (15%) | 8 | Reasonable tracking vs the Nasdaq-100. |
 
 *Sources: Dashboard financials + curated governance risks + public filings (screener.in/BSE), analyst knowledge*
-
 
 ---
