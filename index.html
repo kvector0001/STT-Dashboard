@@ -1415,6 +1415,10 @@ function renderCard(s) {
           <a href="https://chat.deepseek.com" target="_blank" rel="noopener" class="catalyst-link" data-ticker="${s.ticker}" data-name="${s.name}" style="color:var(--blue-text);text-decoration:none;font-weight:700;">(3)</a>
         </span>
       </div>
+      <div class="card-scores" style="display:flex;gap:14px;margin-top:4px;flex-wrap:wrap;align-items:center;">
+        ${(s.mgmt_trust && typeof s.mgmt_trust.score === 'number') ? `<span class="mgmt-cell" data-ticker="${esc(s.ticker)}" style="font-size:0.74rem;font-weight:700;cursor:help;color:${s.mgmt_trust.score>=8?'var(--green)':s.mgmt_trust.score>=6?'var(--amber-text)':s.mgmt_trust.score>=4?'#f97316':'var(--red-text)'}">👔 Trust ${s.mgmt_trust.score.toFixed(1)}</span>` : ''}
+        ${(s.rf_score && typeof s.rf_score.score === 'number') ? `<span class="rf-cell" data-ticker="${esc(s.ticker)}" style="font-size:0.74rem;font-weight:700;cursor:help;color:${s.rf_score.score>=8?'var(--green)':s.rf_score.score>=6?'var(--amber-text)':s.rf_score.score>=4?'#f97316':'var(--red-text)'}">🚩 Red Flags ${s.rf_score.score.toFixed(1)}</span>` : ''}
+      </div>
     </div>
     <div class="card-badges">
       <span class="metric-click clickable" data-metric="moat" data-ticker="${s.ticker}" data-name="${s.name}" style="cursor:pointer">${moatBadge(s.moat_class, s.moat_type).replace('class="badge', 'class="badge clickable')}</span>
@@ -1625,7 +1629,7 @@ function renderCard(s) {
         <span class="metric-label" style="font-size:0.65rem;">👥 Peer Comparison</span>
       </div>
       <div class="metric-item clickable metric-click" data-metric="management" data-ticker="${s.ticker}" data-name="${s.name}" style="flex:1; background:var(--bg2); border-radius:6px; padding:8px; border:1px solid var(--border);">
-        <span class="metric-label" style="font-size:0.65rem;">👔 Management Trust${(s.mgmt_trust && s.mgmt_trust.score != null) ? ` · <b style="color:var(--text);">${Number(s.mgmt_trust.score).toFixed(1)}/10</b>` : ''}</span>
+        <span class="metric-label" style="font-size:0.65rem;">👔 Management Trust</span>
       </div>
       <div class="metric-item clickable metric-click" data-metric="redflags" data-ticker="${s.ticker}" data-name="${s.name}" style="flex:1; background:var(--bg2); border-radius:6px; padding:8px; border:1px solid var(--border);">
         <span class="metric-label" style="font-size:0.65rem;">🚩 Red Flags</span>
