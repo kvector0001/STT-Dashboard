@@ -854,6 +854,8 @@
       border-bottom: none; font-size: 0.72rem;
     }
     .col-filter-pop .cf-clear:hover { color: var(--red-text); }
+    /* narrow score columns (Mgmt Trust / Red Flags) */
+    .cf-narrow { width: 40px; min-width: 34px; padding-left: 4px !important; padding-right: 4px !important; text-align: center; }
 
     /* ── MODAL ── */
     .modal-overlay {
@@ -1217,9 +1219,9 @@
         <tr>
           <th onclick="sortAnalysis('ticker')">Symbol <span id="sort-ticker" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('name')">Company Name <span id="sort-name" class="sort-indicator"></span></th>
-          <th onclick="sortAnalysis('mgmt_trust_score')" title="Management Trust score (/10) from forensic analysis — hover a score to see the full breakdown">👔 Mgmt Trust <span class="col-filter-icon" data-col="mgmt_trust_score" title="Filter" onclick="event.stopPropagation();openColFilter('mgmt_trust_score',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-mgmt_trust_score" class="sort-indicator"></span></th>
-          <th onclick="sortAnalysis('rf_score_val')" title="Red-Flag forensic score (/10): higher = cleaner, lower = more red flags. Hover a score for the full breakdown">🚩 Red Flags <span class="col-filter-icon" data-col="rf_score_val" title="Filter" onclick="event.stopPropagation();openColFilter('rf_score_val',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-rf_score_val" class="sort-indicator"></span></th>
-          <th onclick="sortAnalysis('conviction')">Conv. <span class="col-filter-icon" data-col="conviction" title="Filter" onclick="event.stopPropagation();openColFilter('conviction',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-conviction" class="sort-indicator"></span></th>
+          <th class="cf-narrow" onclick="sortAnalysis('mgmt_trust_score')" title="Management Trust score (/10) — hover a score for the full breakdown">👔 <span class="col-filter-icon" data-col="mgmt_trust_score" title="Filter" onclick="event.stopPropagation();openColFilter('mgmt_trust_score',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-mgmt_trust_score" class="sort-indicator"></span></th>
+          <th class="cf-narrow" onclick="sortAnalysis('rf_score_val')" title="Red-Flag score (/10): higher = cleaner — hover a score for the full breakdown">🚩 <span class="col-filter-icon" data-col="rf_score_val" title="Filter" onclick="event.stopPropagation();openColFilter('rf_score_val',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-rf_score_val" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('conviction')" title="Conviction score (/10) — overall analyst conviction in the thesis">Conv. <span class="col-filter-icon" data-col="conviction" title="Filter" onclick="event.stopPropagation();openColFilter('conviction',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-conviction" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('moat_class')">Moat <span id="sort-moat_class" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('quantity')">Qty. <span id="sort-quantity" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('ltp')">CMP <span id="sort-ltp" class="sort-indicator"></span></th>
@@ -3209,11 +3211,11 @@ function sortAnalysis(field) {
 function mgmtTrustCell(s) {
   const mt = s.mgmt_trust;
   if (!mt || typeof mt.score !== 'number') {
-    return `<td style="text-align:center;color:var(--text3)">—</td>`;
+    return `<td class="cf-narrow" style="text-align:center;color:var(--text3)">—</td>`;
   }
   const sc  = mt.score;
   const col = sc >= 8 ? 'var(--green)' : sc >= 6 ? 'var(--amber-text)' : sc >= 4 ? '#f97316' : 'var(--red-text)';
-  return `<td class="mgmt-cell" data-ticker="${esc(s.ticker)}" style="text-align:center;font-weight:700;cursor:help;color:${col}">${sc.toFixed(1)}<span style="display:block;font-size:0.55rem;font-weight:600;color:var(--text3)">${esc(mt.verdict || '')}</span></td>`;
+  return `<td class="mgmt-cell cf-narrow" data-ticker="${esc(s.ticker)}" title="Management Trust ${sc.toFixed(1)}/10 (${esc(mt.verdict || '')}) — hover for breakdown" style="text-align:center;font-weight:700;cursor:help;color:${col}">${sc.toFixed(1)}</td>`;
 }
 
 function buildMgmtTip(mt, s) {
@@ -3242,11 +3244,11 @@ function buildMgmtTip(mt, s) {
 function rfCell(s) {
   const rf = s.rf_score;
   if (!rf || typeof rf.score !== 'number') {
-    return `<td style="text-align:center;color:var(--text3)">—</td>`;
+    return `<td class="cf-narrow" style="text-align:center;color:var(--text3)">—</td>`;
   }
   const sc  = rf.score;
   const col = sc >= 7.5 ? 'var(--green)' : sc >= 6 ? 'var(--amber-text)' : sc >= 4 ? '#f97316' : 'var(--red-text)';
-  return `<td class="rf-cell" data-ticker="${esc(s.ticker)}" style="text-align:center;font-weight:700;cursor:help;color:${col}">${sc.toFixed(1)}<span style="display:block;font-size:0.55rem;font-weight:600;color:var(--text3)">${esc(rf.verdict || '')}</span></td>`;
+  return `<td class="rf-cell cf-narrow" data-ticker="${esc(s.ticker)}" title="Red-Flag score ${sc.toFixed(1)}/10 (${esc(rf.verdict || '')}) — higher = cleaner — hover for breakdown" style="text-align:center;font-weight:700;cursor:help;color:${col}">${sc.toFixed(1)}</td>`;
 }
 
 function buildRfTip(rf, s) {
@@ -3413,7 +3415,7 @@ function renderAnalysisTable() {
       <td class="research-name" style="cursor:pointer;color:var(--blue-text);" title="Click to open Tickertape, Trendlyne, Tijori" data-ticker="${esc(s.ticker)}" data-name="${esc(s.name || s.ticker)}" onclick="openResearchTabsFromEl(event,this)"><span class="research-name" style="text-decoration:underline dotted;pointer-events:none;">${esc(s.name || s.ticker)}</span></td>
       ${mgmtTrustCell(s)}
       ${rfCell(s)}
-      <td style="text-align:center;font-weight:600;color:${ (s.conviction||0) >= 8 ? 'var(--green)' : (s.conviction||0) >= 6 ? 'var(--amber-text)' : (s.conviction||0) >= 4 ? '#f97316' : (s.conviction||0) >= 1 ? 'var(--red-text)' : 'var(--text3)' }">${s.conviction ? s.conviction+'/10' : '—'}</td>
+      <td title="Conviction score (/10) — overall analyst conviction in the thesis" style="text-align:center;font-weight:600;cursor:help;color:${ (s.conviction||0) >= 8 ? 'var(--green)' : (s.conviction||0) >= 6 ? 'var(--amber-text)' : (s.conviction||0) >= 4 ? '#f97316' : (s.conviction||0) >= 1 ? 'var(--red-text)' : 'var(--text3)' }">${s.conviction ? s.conviction+'/10' : '—'}</td>
       <td style="font-size:0.7rem;font-weight:600;color:${ s.moat_class==='wide' ? 'var(--green)' : s.moat_class==='narrow' ? 'var(--amber-text)' : 'var(--text3)' }">${s.moat_class === 'wide' ? '▲ Wide' : s.moat_class === 'narrow' ? '◆ Narrow' : '—'}</td>
       <td>${prv(f(s.quantity))}</td>
       <td>${s.ltp != null ? '₹'+f(s.ltp,2) : '—'}</td>
