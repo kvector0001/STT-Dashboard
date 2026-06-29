@@ -1,0 +1,7256 @@
+{
+  "_meta": {
+    "description": "PEER VERDICT (qualitative-only) vs the ~6 closest REAL competitors. Each peer carries a Qual Score /10 and a VERDICT word (CLEAR LEADER/STRONG/SOLID/AVERAGE/WEAK/AVOID). self marks the holding; rank = its position; why = decisive factor; plus best-to-own, peer-to-avoid and an action. Separate axis from the portfolio quality score.",
+    "verdicts": "CLEAR LEADER | STRONG | SOLID | AVERAGE | WEAK | AVOID",
+    "updated": "2026-06-26",
+    "batch": 1
+  },
+  "NH": {
+    "set": "Listed hospital chains (India)",
+    "of": 6,
+    "rank": 2,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Apollo Hospitals",
+        "score": 8.6,
+        "verdict": "CLEAR LEADER"
+      },
+      {
+        "name": "Narayana Hrudayalaya",
+        "score": 8.1,
+        "verdict": "STRONG",
+        "self": true
+      },
+      {
+        "name": "Max Healthcare",
+        "score": 8.0,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Fortis Healthcare",
+        "score": 7.0,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Aster DM Healthcare",
+        "score": 6.4,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "KIMS (Krishna Institute)",
+        "score": 6.0,
+        "verdict": "AVERAGE"
+      }
+    ],
+    "why": "Best capital efficiency and lowest-cost cardiac/oncology delivery; behind only Apollo's scale and pharmacy/diagnostics ecosystem. Cayman drives growth; UK still a margin drag.",
+    "best_own": {
+      "name": "Apollo Hospitals",
+      "why": "scale + pharmacy/diagnostics flywheel"
+    },
+    "avoid": {
+      "name": "KIMS",
+      "why": "rich valuation vs regional concentration"
+    }
+  },
+  "HCG": {
+    "set": "Hospital / oncology chains (India)",
+    "of": 6,
+    "rank": 5,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Apollo Hospitals",
+        "score": 8.6,
+        "verdict": "CLEAR LEADER"
+      },
+      {
+        "name": "Narayana Hrudayalaya",
+        "score": 8.1,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Max Healthcare",
+        "score": 8.0,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Fortis Healthcare",
+        "score": 7.0,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "HealthCare Global",
+        "score": 6.8,
+        "verdict": "SOLID",
+        "self": true
+      },
+      {
+        "name": "Aster DM Healthcare",
+        "score": 6.4,
+        "verdict": "SOLID"
+      }
+    ],
+    "why": "Unmatched dedicated-oncology depth and network, but thin margins, high leverage and ~2% ROE place it behind the diversified majors.",
+    "best_own": {
+      "name": "Apollo Hospitals",
+      "why": "diversified high-ROCE compounder"
+    },
+    "avoid": {
+      "name": "Aster DM Healthcare",
+      "why": "post-merger integration overhang"
+    }
+  },
+  "ASTERDM": {
+    "set": "Hospital chains (India)",
+    "of": 6,
+    "rank": 5,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Apollo Hospitals",
+        "score": 8.6,
+        "verdict": "CLEAR LEADER"
+      },
+      {
+        "name": "Narayana Hrudayalaya",
+        "score": 8.1,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Max Healthcare",
+        "score": 8.0,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Fortis Healthcare",
+        "score": 7.0,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Aster DM Healthcare",
+        "score": 6.4,
+        "verdict": "SOLID",
+        "self": true
+      },
+      {
+        "name": "KIMS (Krishna Institute)",
+        "score": 6.0,
+        "verdict": "AVERAGE"
+      }
+    ],
+    "why": "Post-GCC India pure-play with improving margins and Kerala brand, but lower ROCE and integration overhang keep it behind Apollo/Max/Fortis.",
+    "best_own": {
+      "name": "Max Healthcare",
+      "why": "premium-network margins + RoCE"
+    },
+    "avoid": {
+      "name": "KIMS",
+      "why": "valuation ahead of fundamentals"
+    }
+  },
+  "PARKHOSPS": {
+    "set": "Hospital chains (India)",
+    "of": 6,
+    "rank": 5,
+    "action": "ADD",
+    "peers": [
+      {
+        "name": "Apollo Hospitals",
+        "score": 8.6,
+        "verdict": "CLEAR LEADER"
+      },
+      {
+        "name": "Max Healthcare",
+        "score": 8.0,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Global Health (Medanta)",
+        "score": 7.6,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Fortis Healthcare",
+        "score": 7.0,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Park Medi World",
+        "score": 6.6,
+        "verdict": "SOLID",
+        "self": true
+      },
+      {
+        "name": "KIMS (Krishna Institute)",
+        "score": 6.0,
+        "verdict": "AVERAGE"
+      }
+    ],
+    "why": "Strong North-India cluster economics, 17% ROE and fast growth, but small scale and high regional concentration vs national majors.",
+    "best_own": {
+      "name": "Max Healthcare",
+      "why": "NCR density + premium ARPOB"
+    },
+    "avoid": {
+      "name": "KIMS",
+      "why": "regional concentration at premium multiple"
+    }
+  },
+  "DATAPATTNS": {
+    "set": "Defence electronics (India)",
+    "of": 6,
+    "rank": 2,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Bharat Electronics (BEL)",
+        "score": 8.5,
+        "verdict": "CLEAR LEADER"
+      },
+      {
+        "name": "Data Patterns",
+        "score": 7.8,
+        "verdict": "STRONG",
+        "self": true
+      },
+      {
+        "name": "Bharat Dynamics",
+        "score": 7.2,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Astra Microwave",
+        "score": 6.9,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Paras Defence",
+        "score": 6.3,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "ideaForge",
+        "score": 5.4,
+        "verdict": "WEAK"
+      }
+    ],
+    "why": "Highest margins and the only fully vertically-integrated (FPGA-to-system) private design house; trails only BEL on scale and order-book, ahead of Paras/ideaForge on profitability.",
+    "best_own": {
+      "name": "Bharat Electronics",
+      "why": "scale, order-book, cash"
+    },
+    "avoid": {
+      "name": "ideaForge",
+      "why": "loss-making, intense drone competition"
+    }
+  },
+  "ASTRAMICRO": {
+    "set": "Defence electronics (India)",
+    "of": 6,
+    "rank": 4,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Bharat Electronics (BEL)",
+        "score": 8.5,
+        "verdict": "CLEAR LEADER"
+      },
+      {
+        "name": "Data Patterns",
+        "score": 7.8,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Bharat Dynamics",
+        "score": 7.2,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Astra Microwave",
+        "score": 6.9,
+        "verdict": "SOLID",
+        "self": true
+      },
+      {
+        "name": "Paras Defence",
+        "score": 6.3,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Centum Electronics",
+        "score": 5.6,
+        "verdict": "AVERAGE"
+      }
+    ],
+    "why": "Strong RF/microwave franchise and exports with deep DRDO ties, but lower margins and lumpier order flow than Data Patterns and BEL.",
+    "best_own": {
+      "name": "Bharat Electronics",
+      "why": "best mix of scale and returns"
+    },
+    "avoid": {
+      "name": "Centum Electronics",
+      "why": "thin margins, lumpy execution"
+    }
+  },
+  "MTARTECH": {
+    "set": "Precision / aero-defence engineering (India)",
+    "of": 6,
+    "rank": 2,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Azad Engineering",
+        "score": 8.0,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "MTAR Technologies",
+        "score": 7.6,
+        "verdict": "STRONG",
+        "self": true
+      },
+      {
+        "name": "Data Patterns",
+        "score": 7.5,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Dynamatic Technologies",
+        "score": 6.7,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Unimech Aerospace",
+        "score": 6.5,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Paras Defence",
+        "score": 6.3,
+        "verdict": "SOLID"
+      }
+    ],
+    "why": "Elite micron-tolerance work across nuclear/space/clean-energy; behind Azad on margins and customer diversification. Bloom Energy concentration the key risk.",
+    "best_own": {
+      "name": "Azad Engineering",
+      "why": "higher margins + diversified aero customers"
+    },
+    "avoid": {
+      "name": "Paras Defence",
+      "why": "execution / order-conversion risk"
+    }
+  },
+  "AVANTEL": {
+    "set": "Defence electronics (India)",
+    "of": 6,
+    "rank": 4,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Bharat Electronics (BEL)",
+        "score": 8.5,
+        "verdict": "CLEAR LEADER"
+      },
+      {
+        "name": "Data Patterns",
+        "score": 7.8,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Astra Microwave",
+        "score": 6.9,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Avantel",
+        "score": 6.2,
+        "verdict": "AVERAGE",
+        "self": true
+      },
+      {
+        "name": "Paras Defence",
+        "score": 6.0,
+        "verdict": "AVERAGE"
+      },
+      {
+        "name": "Centum Electronics",
+        "score": 5.5,
+        "verdict": "WEAK"
+      }
+    ],
+    "why": "Niche Navy satcom/software-defined-radio with high margins, but very small scale and single-customer lumpiness cap overall quality.",
+    "best_own": {
+      "name": "Bharat Electronics",
+      "why": "scale + diversified order-book"
+    },
+    "avoid": {
+      "name": "Centum Electronics",
+      "why": "weak margins, lumpy revenue"
+    }
+  },
+  "CYIENTDLM": {
+    "set": "Defence / aerospace EMS (India)",
+    "of": 6,
+    "rank": 4,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Data Patterns",
+        "score": 7.8,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Kaynes Technology",
+        "score": 7.6,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Syrma SGS",
+        "score": 6.8,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Cyient DLM",
+        "score": 6.4,
+        "verdict": "SOLID",
+        "self": true
+      },
+      {
+        "name": "Avalon Technologies",
+        "score": 6.2,
+        "verdict": "AVERAGE"
+      },
+      {
+        "name": "Centum Electronics",
+        "score": 5.6,
+        "verdict": "AVERAGE"
+      }
+    ],
+    "why": "Cyient pedigree with AS9100/NADCAP aero edge, but lower ROCE and a recent revenue dip place it behind Kaynes/Syrma.",
+    "best_own": {
+      "name": "Kaynes Technology",
+      "why": "scale + margin + order-book breadth"
+    },
+    "avoid": {
+      "name": "Centum Electronics",
+      "why": "structurally thin returns"
+    }
+  },
+  "NETWEB": {
+    "set": "Server / AI-infra & EMS (India)",
+    "of": 6,
+    "rank": 1,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Netweb Technologies",
+        "score": 8.6,
+        "verdict": "CLEAR LEADER",
+        "self": true
+      },
+      {
+        "name": "Dixon Technologies",
+        "score": 7.8,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Kaynes Technology",
+        "score": 7.6,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Syrma SGS",
+        "score": 6.8,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Avalon Technologies",
+        "score": 6.3,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "VVDN Technologies",
+        "score": 5.8,
+        "verdict": "AVERAGE"
+      }
+    ],
+    "why": "Only listed end-to-end AI/HPC OEM with a Class-I government procurement moat and 30%+ ROE — top of its niche. Rich valuation the sole knock.",
+    "best_own": {
+      "name": "Netweb Technologies",
+      "why": "unique moat; add on valuation cooling"
+    },
+    "avoid": {
+      "name": "VVDN Technologies",
+      "why": "lower-margin, capital-intensive EMS"
+    }
+  },
+  "POWERINDIA": {
+    "set": "Power T&D / grid equipment (India)",
+    "of": 6,
+    "rank": 1,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Hitachi Energy India",
+        "score": 8.7,
+        "verdict": "CLEAR LEADER",
+        "self": true
+      },
+      {
+        "name": "ABB India",
+        "score": 8.3,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Siemens",
+        "score": 7.6,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "CG Power",
+        "score": 7.4,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "GE Vernova T&D India",
+        "score": 6.8,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Schneider Electric",
+        "score": 6.5,
+        "verdict": "SOLID"
+      }
+    ],
+    "why": "Near-exclusive HVDC franchise for India's renewable-grid build-out, fastest order-book growth and 21% ROE. Premium valuation the only knock.",
+    "best_own": {
+      "name": "ABB India",
+      "why": "broader automation mix at high RoCE"
+    },
+    "avoid": {
+      "name": "Schneider Electric",
+      "why": "weaker disclosure/returns vs listed peers"
+    }
+  },
+  "HBLENGINE": {
+    "set": "Rail safety & specialised batteries (India)",
+    "of": 6,
+    "rank": 1,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "HBL Engineering",
+        "score": 8.4,
+        "verdict": "CLEAR LEADER",
+        "self": true
+      },
+      {
+        "name": "Siemens Mobility",
+        "score": 7.8,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Medha Servo (unlisted)",
+        "score": 7.0,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Amara Raja Energy",
+        "score": 6.8,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Exide Industries",
+        "score": 6.5,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Kernex Microsystems",
+        "score": 6.0,
+        "verdict": "AVERAGE"
+      }
+    ],
+    "why": "Primary Kavach ATP supplier with a widening regulatory moat and stand-out 44% ROE; execution pace tied to the Railway budget.",
+    "best_own": {
+      "name": "HBL Engineering",
+      "why": "Kavach moat + best-in-class ROE"
+    },
+    "avoid": {
+      "name": "Kernex Microsystems",
+      "why": "sub-scale, inconsistent execution"
+    }
+  },
+  "SIEMENS": {
+    "set": "Automation & electrical equipment (India)",
+    "of": 6,
+    "rank": 2,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "ABB India",
+        "score": 8.3,
+        "verdict": "CLEAR LEADER"
+      },
+      {
+        "name": "Siemens",
+        "score": 7.6,
+        "verdict": "STRONG",
+        "self": true
+      },
+      {
+        "name": "CG Power",
+        "score": 7.4,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Larsen & Toubro",
+        "score": 7.2,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Rockwell Automation",
+        "score": 7.0,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Schneider Electric",
+        "score": 6.8,
+        "verdict": "SOLID"
+      }
+    ],
+    "why": "Broad automation + rail + energy franchise and brand trust, but ROCE trails ABB and the energy-business demerger is an overhang.",
+    "best_own": {
+      "name": "ABB India",
+      "why": "higher RoCE, cleaner pure-play"
+    },
+    "avoid": {
+      "name": "Schneider Electric",
+      "why": "weaker disclosure/returns"
+    }
+  },
+  "THERMAX": {
+    "set": "Industrial energy & environment (India)",
+    "of": 6,
+    "rank": 3,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Cummins India",
+        "score": 7.8,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Triveni Turbine",
+        "score": 7.6,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Thermax",
+        "score": 7.5,
+        "verdict": "STRONG",
+        "self": true
+      },
+      {
+        "name": "Forbes Marshall (unlisted)",
+        "score": 7.0,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "ISGEC Heavy Engineering",
+        "score": 6.4,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "BHEL",
+        "score": 5.5,
+        "verdict": "WEAK"
+      }
+    ],
+    "why": "Integrated energy + environment solutions leader riding the capex cycle; EPC execution risk and cyclicality vs product-heavy peers keep it just behind.",
+    "best_own": {
+      "name": "Cummins India",
+      "why": "product-led, high-RoCE, strong cash"
+    },
+    "avoid": {
+      "name": "BHEL",
+      "why": "weak returns, execution and PSU drag"
+    }
+  },
+  "TRITURBINE": {
+    "set": "Industrial steam turbines (global niche)",
+    "of": 6,
+    "rank": 1,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Triveni Turbine",
+        "score": 8.2,
+        "verdict": "CLEAR LEADER",
+        "self": true
+      },
+      {
+        "name": "Siemens Energy",
+        "score": 7.4,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Elliott Group",
+        "score": 6.8,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Shin Nippon Machinery",
+        "score": 6.5,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Maan Energy",
+        "score": 5.8,
+        "verdict": "AVERAGE"
+      },
+      {
+        "name": "BHEL",
+        "score": 5.5,
+        "verdict": "WEAK"
+      }
+    ],
+    "why": "Global #2 in sub-100MW industrial turbines with ~26% ROE, dominant after-market and export momentum — best-in-class within its niche.",
+    "best_own": {
+      "name": "Triveni Turbine",
+      "why": "niche leadership + high RoCE"
+    },
+    "avoid": {
+      "name": "BHEL",
+      "why": "weak returns, heavy-power overhang"
+    }
+  },
+  "ELGIEQUIP": {
+    "set": "Air compressors (global)",
+    "of": 6,
+    "rank": 2,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Atlas Copco",
+        "score": 8.6,
+        "verdict": "CLEAR LEADER"
+      },
+      {
+        "name": "Elgi Equipment",
+        "score": 7.5,
+        "verdict": "STRONG",
+        "self": true
+      },
+      {
+        "name": "Ingersoll Rand India",
+        "score": 7.2,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Kaeser",
+        "score": 7.0,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Kirloskar Pneumatic",
+        "score": 6.8,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Sullair / Hitachi",
+        "score": 6.4,
+        "verdict": "SOLID"
+      }
+    ],
+    "why": "#2 global compressor brand with oil-free IP and 21% ROE; trails only Atlas Copco on scale, ahead of Ingersoll/Kirloskar on technology and reach.",
+    "best_own": {
+      "name": "Atlas Copco",
+      "why": "global scale + best margins"
+    },
+    "avoid": {
+      "name": "Sullair / Hitachi",
+      "why": "weaker India franchise"
+    }
+  },
+  "INOXINDIA": {
+    "set": "Cryogenic equipment (India / global)",
+    "of": 6,
+    "rank": 1,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "INOX India",
+        "score": 8.2,
+        "verdict": "CLEAR LEADER",
+        "self": true
+      },
+      {
+        "name": "Linde India",
+        "score": 7.8,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Chart Industries",
+        "score": 7.6,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Air Liquide",
+        "score": 7.4,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Cryofab",
+        "score": 6.0,
+        "verdict": "AVERAGE"
+      },
+      {
+        "name": "Cryolor",
+        "score": 5.8,
+        "verdict": "AVERAGE"
+      }
+    ],
+    "why": "Only full-stack Indian cryogenic OEM with 26% ROE and LNG/hydrogen/space optionality; dominates the listed peer set.",
+    "best_own": {
+      "name": "INOX India",
+      "why": "domestic monopoly + high RoCE"
+    },
+    "avoid": {
+      "name": "Cryolor",
+      "why": "sub-scale, narrow franchise"
+    }
+  },
+  "NEULANDLAB": {
+    "set": "CDMO / API (India)",
+    "of": 6,
+    "rank": 3,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Divi's Laboratories",
+        "score": 8.6,
+        "verdict": "CLEAR LEADER"
+      },
+      {
+        "name": "Laurus Labs",
+        "score": 7.6,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Neuland Laboratories",
+        "score": 7.5,
+        "verdict": "STRONG",
+        "self": true
+      },
+      {
+        "name": "Anthem Biosciences",
+        "score": 7.4,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Suven Pharma",
+        "score": 7.2,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Sai Life Sciences",
+        "score": 6.8,
+        "verdict": "SOLID"
+      }
+    ],
+    "why": "Rare peptide/GLP-1 plus custom-manufacturing franchise compounding fast; behind Divi's/Laurus on scale, ahead of most on growth. Client concentration the risk.",
+    "best_own": {
+      "name": "Divi's Laboratories",
+      "why": "scale, cost-leadership, balance sheet"
+    },
+    "avoid": {
+      "name": "Sai Life Sciences",
+      "why": "lower margins, newer track record"
+    }
+  },
+  "SUVEN": {
+    "set": "CDMO / specialty pharma (India)",
+    "of": 6,
+    "rank": 4,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Divi's Laboratories",
+        "score": 8.6,
+        "verdict": "CLEAR LEADER"
+      },
+      {
+        "name": "Laurus Labs",
+        "score": 7.6,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Neuland Laboratories",
+        "score": 7.5,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Suven Life Sciences",
+        "score": 7.2,
+        "verdict": "SOLID",
+        "self": true
+      },
+      {
+        "name": "Cohance Lifesciences",
+        "score": 6.8,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Sai Life Sciences",
+        "score": 6.8,
+        "verdict": "SOLID"
+      }
+    ],
+    "why": "High-margin CNS-focused CDMO with sticky innovator relationships, but smaller scale and lumpier order flow than Divi's/Neuland.",
+    "best_own": {
+      "name": "Divi's Laboratories",
+      "why": "scale + cost leadership"
+    },
+    "avoid": {
+      "name": "Sai Life Sciences",
+      "why": "thinner margins"
+    }
+  },
+  "BIOCON": {
+    "set": "Biopharma / large generics (India)",
+    "of": 6,
+    "rank": 6,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Sun Pharma",
+        "score": 8.4,
+        "verdict": "CLEAR LEADER"
+      },
+      {
+        "name": "Dr Reddy's",
+        "score": 7.8,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Cipla",
+        "score": 7.6,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Zydus Lifesciences",
+        "score": 7.0,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Lupin",
+        "score": 6.8,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Biocon",
+        "score": 6.0,
+        "verdict": "AVERAGE",
+        "self": true
+      }
+    ],
+    "why": "Global biosimilar pioneer (insulins, mAbs), but weak consolidated ROE, leverage and Viatris-integration complexity drag quality below the large generics.",
+    "best_own": {
+      "name": "Sun Pharma",
+      "why": "specialty franchise + best returns"
+    },
+    "avoid": {
+      "name": "Biocon",
+      "why": "leverage + low ROE until biosimilars scale"
+    }
+  },
+  "SHILPAMED": {
+    "set": "Oncology API / specialty pharma (India)",
+    "of": 6,
+    "rank": 6,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Divi's Laboratories",
+        "score": 8.6,
+        "verdict": "CLEAR LEADER"
+      },
+      {
+        "name": "Laurus Labs",
+        "score": 7.6,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Neuland Laboratories",
+        "score": 7.5,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Gland Pharma",
+        "score": 7.2,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Natco Pharma",
+        "score": 7.0,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Shilpa Medicare",
+        "score": 6.2,
+        "verdict": "AVERAGE",
+        "self": true
+      }
+    ],
+    "why": "Strong oncology HPAPI IP and FDA footprint, but revenue concentration and modest ROE keep it mid-pack versus Divi's/Laurus.",
+    "best_own": {
+      "name": "Divi's Laboratories",
+      "why": "scale + cost leadership"
+    },
+    "avoid": {
+      "name": "Shilpa Medicare",
+      "why": "concentration + modest returns"
+    }
+  },
+  "SANSERA": {
+    "set": "Precision forged auto components (India)",
+    "of": 6,
+    "rank": 3,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Bharat Forge",
+        "score": 7.8,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Sundram Fasteners",
+        "score": 7.6,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Sansera Engineering",
+        "score": 7.2,
+        "verdict": "SOLID",
+        "self": true
+      },
+      {
+        "name": "Happy Forgings",
+        "score": 7.0,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Ramkrishna Forgings",
+        "score": 6.8,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "MM Forgings",
+        "score": 6.2,
+        "verdict": "AVERAGE"
+      }
+    ],
+    "why": "Diversified precision forgings with aero/defence and EV-agnostic push and very high PAT growth; trails Bharat Forge/Sundram on scale and returns.",
+    "best_own": {
+      "name": "Bharat Forge",
+      "why": "scale + defence/export optionality"
+    },
+    "avoid": {
+      "name": "MM Forgings",
+      "why": "cyclical, lower returns"
+    }
+  },
+  "SONACOMS": {
+    "set": "EV-exposed auto components (India)",
+    "of": 6,
+    "rank": 4,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Uno Minda",
+        "score": 7.8,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Bosch India",
+        "score": 7.6,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Sundram Fasteners",
+        "score": 7.6,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Sona BLW Precision",
+        "score": 7.5,
+        "verdict": "STRONG",
+        "self": true
+      },
+      {
+        "name": "Schaeffler India",
+        "score": 7.4,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Endurance Technologies",
+        "score": 7.0,
+        "verdict": "SOLID"
+      }
+    ],
+    "why": "Best EV-traction-motor exposure and platform-level switching-cost moat with strong order book; margin compression vs revenue growth the watch-item.",
+    "best_own": {
+      "name": "Uno Minda",
+      "why": "diversified, consistent compounding"
+    },
+    "avoid": {
+      "name": "Endurance Technologies",
+      "why": "more ICE-tied mix"
+    }
+  },
+  "SKFINDIA": {
+    "set": "Bearings (India)",
+    "of": 6,
+    "rank": 2,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Schaeffler India",
+        "score": 7.8,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "SKF India",
+        "score": 7.4,
+        "verdict": "STRONG",
+        "self": true
+      },
+      {
+        "name": "Timken India",
+        "score": 7.2,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "AB SKF (global)",
+        "score": 7.0,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "NRB Bearings",
+        "score": 6.4,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "NEI / Tata Bearings",
+        "score": 6.0,
+        "verdict": "AVERAGE"
+      }
+    ],
+    "why": "Top-2 bearing maker with strong after-market and ~29% ROE; Schaeffler edges ahead on breadth and EV-drivetrain content.",
+    "best_own": {
+      "name": "Schaeffler India",
+      "why": "broadest portfolio + EV content"
+    },
+    "avoid": {
+      "name": "NEI / Tata Bearings",
+      "why": "sub-scale, lower returns"
+    }
+  },
+  "KPITTECH": {
+    "set": "Automotive software / ER&D (India)",
+    "of": 6,
+    "rank": 2,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Tata Elxsi",
+        "score": 7.8,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "KPIT Technologies",
+        "score": 7.3,
+        "verdict": "STRONG",
+        "self": true
+      },
+      {
+        "name": "L&T Technology Services",
+        "score": 7.2,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Persistent Systems",
+        "score": 7.0,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Tata Technologies",
+        "score": 6.8,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Cyient",
+        "score": 6.4,
+        "verdict": "SOLID"
+      }
+    ],
+    "why": "Pure-play software-defined-vehicle specialist with deep OEM lock-in and 19 straight growth quarters; recent PAT dip and customer concentration the risks.",
+    "best_own": {
+      "name": "Tata Elxsi",
+      "why": "higher margins, design-led moat"
+    },
+    "avoid": {
+      "name": "Cyient",
+      "why": "slower growth, broader mix"
+    }
+  },
+  "AFFLE": {
+    "set": "AdTech / digital marketing (India + global)",
+    "of": 6,
+    "rank": 3,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "The Trade Desk",
+        "score": 8.2,
+        "verdict": "CLEAR LEADER"
+      },
+      {
+        "name": "AppLovin",
+        "score": 8.0,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Affle India",
+        "score": 7.6,
+        "verdict": "STRONG",
+        "self": true
+      },
+      {
+        "name": "InMobi (unlisted)",
+        "score": 6.8,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Latent View (adjacent)",
+        "score": 6.6,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Brightcom Group",
+        "score": 3.0,
+        "verdict": "AVOID"
+      }
+    ],
+    "why": "India's #1 mobile ad-tech with a 3bn-device-profile data moat and conversion-based CPCU model; leads listed India, though global majors out-scale it.",
+    "best_own": {
+      "name": "Affle India",
+      "why": "India leadership + data moat"
+    },
+    "avoid": {
+      "name": "Brightcom Group",
+      "why": "serious governance/accounting red flags"
+    }
+  },
+  "RATEGAIN": {
+    "set": "Travel / hospitality SaaS (global)",
+    "of": 6,
+    "rank": 3,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Amadeus",
+        "score": 8.2,
+        "verdict": "CLEAR LEADER"
+      },
+      {
+        "name": "IDeaS (SAS)",
+        "score": 7.4,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "RateGain",
+        "score": 7.3,
+        "verdict": "STRONG",
+        "self": true
+      },
+      {
+        "name": "Duetto",
+        "score": 6.6,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Cloudbeds",
+        "score": 6.2,
+        "verdict": "AVERAGE"
+      },
+      {
+        "name": "Sabre",
+        "score": 6.0,
+        "verdict": "AVERAGE"
+      }
+    ],
+    "why": "Largest India-listed travel-tech SaaS with rate-shopping data network effects and 700+ integrations; leads listed India, competes globally with IDeaS/Duetto.",
+    "best_own": {
+      "name": "RateGain",
+      "why": "only listed-India pure-play with data moat"
+    },
+    "avoid": {
+      "name": "Sabre",
+      "why": "high leverage, structural pressure"
+    }
+  },
+  "MAPMYINDIA": {
+    "set": "Maps / location-tech (India)",
+    "of": 6,
+    "rank": 2,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Google Maps (unlisted)",
+        "score": 9.0,
+        "verdict": "CLEAR LEADER"
+      },
+      {
+        "name": "MapmyIndia",
+        "score": 7.6,
+        "verdict": "STRONG",
+        "self": true
+      },
+      {
+        "name": "HERE Technologies",
+        "score": 6.6,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Genesys International",
+        "score": 6.4,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "TomTom",
+        "score": 5.8,
+        "verdict": "AVERAGE"
+      },
+      {
+        "name": "Ola Maps (unlisted)",
+        "score": 5.5,
+        "verdict": "WEAK"
+      }
+    ],
+    "why": "Only profitable Indian maps + location platform with a 30-year sovereign-data moat and 15% ROE; dominant among listed India, faces Google on the consumer side.",
+    "best_own": {
+      "name": "MapmyIndia",
+      "why": "sovereign-data moat + profitability"
+    },
+    "avoid": {
+      "name": "Ola Maps (unlisted)",
+      "why": "unproven, cash-burning challenger"
+    }
+  },
+  "TATACOMM": {
+    "set": "Enterprise telecom / data networking (India)",
+    "of": 6,
+    "rank": 2,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Bharti Airtel",
+        "score": 8.4,
+        "verdict": "CLEAR LEADER"
+      },
+      {
+        "name": "Tata Communications",
+        "score": 7.2,
+        "verdict": "SOLID",
+        "self": true
+      },
+      {
+        "name": "Route Mobile",
+        "score": 6.4,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Sify Technologies",
+        "score": 6.0,
+        "verdict": "AVERAGE"
+      },
+      {
+        "name": "Lumen (global)",
+        "score": 4.5,
+        "verdict": "WEAK"
+      },
+      {
+        "name": "Vodafone Idea",
+        "score": 3.5,
+        "verdict": "AVOID"
+      }
+    ],
+    "why": "Owns a global submarine-cable backbone with an enterprise/NaaS moat; high leverage and slower growth keep it behind Airtel on overall quality.",
+    "best_own": {
+      "name": "Bharti Airtel",
+      "why": "best returns + balance-sheet repair"
+    },
+    "avoid": {
+      "name": "Vodafone Idea",
+      "why": "balance-sheet distress, survival risk"
+    }
+  },
+  "INDUSTOWER": {
+    "set": "Telecom towers (India)",
+    "of": 6,
+    "rank": 1,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Indus Towers",
+        "score": 7.4,
+        "verdict": "STRONG",
+        "self": true
+      },
+      {
+        "name": "Summit Digitel (Brookfield)",
+        "score": 7.2,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "ATC India (American Tower)",
+        "score": 7.0,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Bharti Infratel (merged)",
+        "score": 7.0,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Tower Vision",
+        "score": 5.5,
+        "verdict": "WEAK"
+      },
+      {
+        "name": "GTL Infrastructure",
+        "score": 3.5,
+        "verdict": "AVOID"
+      }
+    ],
+    "why": "Largest Indian towerco with 19.8% ROE and 226k towers; Vodafone-Idea receivables are the swing factor on quality.",
+    "best_own": {
+      "name": "Indus Towers",
+      "why": "scale + ROE; VIL recovery optionality"
+    },
+    "avoid": {
+      "name": "GTL Infrastructure",
+      "why": "chronic losses, debt distress"
+    }
+  },
+  "RAILTEL": {
+    "set": "Telecom infra / data PSUs (India)",
+    "of": 6,
+    "rank": 3,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Tata Communications",
+        "score": 7.2,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Tejas Networks",
+        "score": 7.0,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "RailTel",
+        "score": 6.8,
+        "verdict": "SOLID",
+        "self": true
+      },
+      {
+        "name": "HFCL",
+        "score": 6.0,
+        "verdict": "AVERAGE"
+      },
+      {
+        "name": "Sterlite Technologies",
+        "score": 5.8,
+        "verdict": "AVERAGE"
+      },
+      {
+        "name": "ITI Limited",
+        "score": 4.5,
+        "verdict": "WEAK"
+      }
+    ],
+    "why": "Exclusive rail-track optic-fibre and data-centre push with 16% ROE and a clean balance sheet; PSU execution pace caps the re-rating.",
+    "best_own": {
+      "name": "Tata Communications",
+      "why": "global backbone + enterprise moat"
+    },
+    "avoid": {
+      "name": "ITI Limited",
+      "why": "loss-making, weak execution"
+    }
+  },
+  "GMRAIRPORT": {
+    "set": "Airport operators (India)",
+    "of": 6,
+    "rank": 3,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Bangalore Int'l Airport (unlisted)",
+        "score": 7.4,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Adani Airports (unlisted)",
+        "score": 7.2,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "GMR Airports",
+        "score": 7.0,
+        "verdict": "SOLID",
+        "self": true
+      },
+      {
+        "name": "Cochin Int'l Airport",
+        "score": 6.6,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "AAI (govt)",
+        "score": 5.5,
+        "verdict": "WEAK"
+      },
+      {
+        "name": "GVK (defunct)",
+        "score": 2.5,
+        "verdict": "AVOID"
+      }
+    ],
+    "why": "Operates Delhi + Hyderabad 60-year concessions — natural monopolies with strong traffic CAGR; high infra leverage is the only real knock.",
+    "best_own": {
+      "name": "GMR Airports",
+      "why": "only listed pure-play airport monopoly"
+    },
+    "avoid": {
+      "name": "GVK (defunct)",
+      "why": "collapsed under debt; cautionary tale"
+    }
+  },
+  "CARBORUNIV": {
+    "set": "Abrasives & ceramics (India)",
+    "of": 6,
+    "rank": 5,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Saint-Gobain (global)",
+        "score": 7.8,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "AIA Engineering (adjacent)",
+        "score": 7.6,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Grindwell Norton",
+        "score": 7.4,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "3M India",
+        "score": 7.2,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Carborundum Universal",
+        "score": 7.0,
+        "verdict": "SOLID",
+        "self": true
+      },
+      {
+        "name": "Wendt India",
+        "score": 6.4,
+        "verdict": "SOLID"
+      }
+    ],
+    "why": "Full-stack abrasives-to-electro-minerals (SiC) franchise with Murugappa backing; recent low ROE/high PE let Grindwell edge ahead on returns.",
+    "best_own": {
+      "name": "Grindwell Norton",
+      "why": "higher RoCE, cleaner returns"
+    },
+    "avoid": {
+      "name": "Wendt India",
+      "why": "illiquid, recent earnings decline"
+    }
+  },
+  "GRINDWELL": {
+    "set": "Abrasives & ceramics (India)",
+    "of": 6,
+    "rank": 3,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Saint-Gobain (global)",
+        "score": 7.8,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "AIA Engineering (adjacent)",
+        "score": 7.6,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Grindwell Norton",
+        "score": 7.4,
+        "verdict": "STRONG",
+        "self": true
+      },
+      {
+        "name": "3M India",
+        "score": 7.2,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Carborundum Universal",
+        "score": 7.0,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Wendt India",
+        "score": 6.4,
+        "verdict": "SOLID"
+      }
+    ],
+    "why": "Saint-Gobain technology, 17% ROE and disciplined capital allocation; leads listed-India abrasives on returns and consistency.",
+    "best_own": {
+      "name": "Grindwell Norton",
+      "why": "best returns + parent tech access"
+    },
+    "avoid": {
+      "name": "Wendt India",
+      "why": "sub-scale, earnings volatility"
+    }
+  },
+  "SYRMA": {
+    "set": "EMS / electronics (India)",
+    "of": 6,
+    "rank": 3,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Dixon Technologies",
+        "score": 8.0,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Kaynes Technology",
+        "score": 7.8,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Syrma SGS",
+        "score": 6.8,
+        "verdict": "SOLID",
+        "self": true
+      },
+      {
+        "name": "Cyient DLM",
+        "score": 6.4,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Avalon Technologies",
+        "score": 6.3,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "VVDN Technologies",
+        "score": 5.8,
+        "verdict": "AVERAGE"
+      }
+    ],
+    "why": "Design-led EMS with RFID and medical niches, but smaller scale and thinner margins than Dixon/Kaynes.",
+    "best_own": {
+      "name": "Dixon Technologies",
+      "why": "scale + execution + ROE"
+    },
+    "avoid": {
+      "name": "VVDN Technologies",
+      "why": "capital-intensive, lower margin"
+    }
+  },
+  "AVALON": {
+    "set": "EMS / electronics (India)",
+    "of": 6,
+    "rank": 5,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Dixon Technologies",
+        "score": 8.0,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Kaynes Technology",
+        "score": 7.8,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Syrma SGS",
+        "score": 6.8,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Cyient DLM",
+        "score": 6.4,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Avalon Technologies",
+        "score": 6.3,
+        "verdict": "SOLID",
+        "self": true
+      },
+      {
+        "name": "Centum Electronics",
+        "score": 5.6,
+        "verdict": "AVERAGE"
+      }
+    ],
+    "why": "US-export EMS with clean-energy/medical niche but customer concentration and lower margins.",
+    "best_own": {
+      "name": "Dixon Technologies",
+      "why": "scale + ROE"
+    },
+    "avoid": {
+      "name": "Centum Electronics",
+      "why": "thin, lumpy returns"
+    }
+  },
+  "TVSELECT": {
+    "set": "Electronics / IT peripherals (India)",
+    "of": 6,
+    "rank": 6,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Dixon Technologies",
+        "score": 8.0,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Kaynes Technology",
+        "score": 7.6,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Control Print",
+        "score": 6.8,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "eMudhra",
+        "score": 6.4,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Posiflex (global)",
+        "score": 6.0,
+        "verdict": "AVERAGE"
+      },
+      {
+        "name": "TVS Electronics",
+        "score": 5.6,
+        "verdict": "AVERAGE",
+        "self": true
+      }
+    ],
+    "why": "TVS-brand POS servicing niche but commoditised peripherals and very low ROE.",
+    "best_own": {
+      "name": "Dixon Technologies",
+      "why": "scale + returns"
+    },
+    "avoid": {
+      "name": "Posiflex (global)",
+      "why": "commoditised hardware"
+    }
+  },
+  "DLINKINDIA": {
+    "set": "Networking hardware (India)",
+    "of": 6,
+    "rank": 4,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Cisco (global)",
+        "score": 8.5,
+        "verdict": "CLEAR LEADER"
+      },
+      {
+        "name": "HPE Aruba (global)",
+        "score": 8.0,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "TP-Link",
+        "score": 7.0,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "D-Link India",
+        "score": 6.4,
+        "verdict": "SOLID",
+        "self": true
+      },
+      {
+        "name": "Netgear",
+        "score": 6.2,
+        "verdict": "AVERAGE"
+      },
+      {
+        "name": "Tenda",
+        "score": 5.5,
+        "verdict": "WEAK"
+      }
+    ],
+    "why": "Established SMB networking brand with 21% ROE but shallow moat and distribution-led vs Cisco/Aruba.",
+    "best_own": {
+      "name": "Cisco (global)",
+      "why": "enterprise moat + R&D"
+    },
+    "avoid": {
+      "name": "Tenda",
+      "why": "low-end commoditised"
+    }
+  },
+  "MOSCHIP": {
+    "set": "Semiconductors / chip design (India)",
+    "of": 6,
+    "rank": 5,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Tata Elxsi",
+        "score": 8.0,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "L&T Technology Services",
+        "score": 7.4,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Cyient",
+        "score": 7.0,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Sasken Technologies",
+        "score": 6.4,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "MosChip Technologies",
+        "score": 6.0,
+        "verdict": "AVERAGE",
+        "self": true
+      },
+      {
+        "name": "SPEL Semiconductor",
+        "score": 5.0,
+        "verdict": "WEAK"
+      }
+    ],
+    "why": "Pioneering Indian fabless ASIC design with semi-mission tailwind but tiny scale and very high PE.",
+    "best_own": {
+      "name": "Tata Elxsi",
+      "why": "scale + margins + design moat"
+    },
+    "avoid": {
+      "name": "SPEL Semiconductor",
+      "why": "sub-scale, weak returns"
+    }
+  },
+  "SASKEN": {
+    "set": "Embedded / chipset software (India)",
+    "of": 6,
+    "rank": 5,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Tata Elxsi",
+        "score": 8.0,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "L&T Technology Services",
+        "score": 7.4,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "KPIT Technologies",
+        "score": 7.3,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Cyient",
+        "score": 7.0,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Sasken Technologies",
+        "score": 6.4,
+        "verdict": "SOLID",
+        "self": true
+      },
+      {
+        "name": "MosChip Technologies",
+        "score": 6.0,
+        "verdict": "AVERAGE"
+      }
+    ],
+    "why": "Deep chipset/modem software ties to Qualcomm/MediaTek but small scale and client concentration.",
+    "best_own": {
+      "name": "Tata Elxsi",
+      "why": "margins + design moat"
+    },
+    "avoid": {
+      "name": "MosChip Technologies",
+      "why": "tiny, high PE"
+    }
+  },
+  "RAMCOSYS": {
+    "set": "Enterprise software / ERP (India)",
+    "of": 6,
+    "rank": 5,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Oracle Financial Services",
+        "score": 8.0,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Intellect Design",
+        "score": 7.4,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Newgen Software",
+        "score": 7.2,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Nucleus Software",
+        "score": 6.2,
+        "verdict": "AVERAGE"
+      },
+      {
+        "name": "Ramco Systems",
+        "score": 6.0,
+        "verdict": "AVERAGE",
+        "self": true
+      },
+      {
+        "name": "Quick Heal",
+        "score": 5.6,
+        "verdict": "AVERAGE"
+      }
+    ],
+    "why": "Sticky aviation-MRO ERP niche but years of slow growth and inconsistent profitability.",
+    "best_own": {
+      "name": "Intellect Design",
+      "why": "product depth + growth"
+    },
+    "avoid": {
+      "name": "Quick Heal",
+      "why": "declining core franchise"
+    }
+  },
+  "RPTECH": {
+    "set": "IT products distribution (India)",
+    "of": 6,
+    "rank": 2,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Redington",
+        "score": 8.0,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Rashi Peripherals",
+        "score": 7.0,
+        "verdict": "SOLID",
+        "self": true
+      },
+      {
+        "name": "Savex (unlisted)",
+        "score": 6.8,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Inflow Technologies",
+        "score": 6.0,
+        "verdict": "AVERAGE"
+      },
+      {
+        "name": "Supertron",
+        "score": 5.8,
+        "verdict": "AVERAGE"
+      },
+      {
+        "name": "Compuage",
+        "score": 5.0,
+        "verdict": "WEAK"
+      }
+    ],
+    "why": "#2 national IT distributor with NVIDIA/AMD lines; thin distribution margins vs Redington's scale.",
+    "best_own": {
+      "name": "Redington",
+      "why": "scale, cloud mix, returns"
+    },
+    "avoid": {
+      "name": "Compuage",
+      "why": "financial stress / governance"
+    }
+  },
+  "REDINGTON": {
+    "set": "IT products distribution (India)",
+    "of": 6,
+    "rank": 1,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Redington",
+        "score": 8.0,
+        "verdict": "STRONG",
+        "self": true
+      },
+      {
+        "name": "Rashi Peripherals",
+        "score": 7.0,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Savex (unlisted)",
+        "score": 6.8,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Inflow Technologies",
+        "score": 6.0,
+        "verdict": "AVERAGE"
+      },
+      {
+        "name": "Supertron",
+        "score": 5.8,
+        "verdict": "AVERAGE"
+      },
+      {
+        "name": "Compuage",
+        "score": 5.0,
+        "verdict": "WEAK"
+      }
+    ],
+    "why": "Largest, most-diversified IT distributor with cloud-solutions mix and 13% ROE; leads the set.",
+    "best_own": {
+      "name": "Redington",
+      "why": "scale + cloud + balance sheet"
+    },
+    "avoid": {
+      "name": "Compuage",
+      "why": "financial stress"
+    }
+  },
+  "FRACTAL": {
+    "set": "AI / data analytics (India + global)",
+    "of": 6,
+    "rank": 2,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Palantir (global)",
+        "score": 8.4,
+        "verdict": "CLEAR LEADER"
+      },
+      {
+        "name": "Fractal Analytics",
+        "score": 7.6,
+        "verdict": "STRONG",
+        "self": true
+      },
+      {
+        "name": "Tiger Analytics (unlisted)",
+        "score": 7.0,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Latent View",
+        "score": 6.8,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Mu Sigma (unlisted)",
+        "score": 6.4,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Course5 Intelligence",
+        "score": 6.0,
+        "verdict": "AVERAGE"
+      }
+    ],
+    "why": "AI-native Fortune-500 analytics with Qure.ai optionality; leads India peers, behind global Palantir on scale.",
+    "best_own": {
+      "name": "Fractal Analytics",
+      "why": "AI-native breadth + clients"
+    },
+    "avoid": {
+      "name": "Course5 Intelligence",
+      "why": "sub-scale"
+    }
+  },
+  "LATENTVIEW": {
+    "set": "Data analytics (India)",
+    "of": 6,
+    "rank": 3,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Fractal Analytics",
+        "score": 7.6,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Tiger Analytics (unlisted)",
+        "score": 7.0,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Latent View",
+        "score": 6.8,
+        "verdict": "SOLID",
+        "self": true
+      },
+      {
+        "name": "Mu Sigma (unlisted)",
+        "score": 6.4,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Course5 Intelligence",
+        "score": 6.0,
+        "verdict": "AVERAGE"
+      },
+      {
+        "name": "Affine Analytics",
+        "score": 5.6,
+        "verdict": "AVERAGE"
+      }
+    ],
+    "why": "Profitable pure-play analytics with strong cash but US-tech client concentration and ~12% ROE.",
+    "best_own": {
+      "name": "Fractal Analytics",
+      "why": "scale + AI breadth"
+    },
+    "avoid": {
+      "name": "Affine Analytics",
+      "why": "sub-scale"
+    }
+  },
+  "PROTEAN": {
+    "set": "GovTech / digital public infra (India)",
+    "of": 6,
+    "rank": 3,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "CAMS",
+        "score": 8.0,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "CDSL",
+        "score": 7.8,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Protean eGov",
+        "score": 7.6,
+        "verdict": "STRONG",
+        "self": true
+      },
+      {
+        "name": "KFin Technologies",
+        "score": 7.4,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "IRCTC",
+        "score": 7.2,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "eMudhra",
+        "score": 6.6,
+        "verdict": "SOLID"
+      }
+    ],
+    "why": "PAN/NPS monopoly-like franchise but slower growth and lower margins than CAMS/CDSL.",
+    "best_own": {
+      "name": "CAMS",
+      "why": "duopoly RTA + best margins"
+    },
+    "avoid": {
+      "name": "eMudhra",
+      "why": "smaller, competitive niche"
+    }
+  },
+  "URBANCO": {
+    "set": "Consumer-services marketplace (India)",
+    "of": 6,
+    "rank": 3,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Info Edge",
+        "score": 8.0,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Zomato (Eternal)",
+        "score": 7.8,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Urban Company",
+        "score": 6.6,
+        "verdict": "SOLID",
+        "self": true
+      },
+      {
+        "name": "Justdial",
+        "score": 6.4,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Awfis",
+        "score": 6.2,
+        "verdict": "AVERAGE"
+      },
+      {
+        "name": "FirstCry",
+        "score": 6.0,
+        "verdict": "AVERAGE"
+      }
+    ],
+    "why": "Full-stack home-services leader turning profitable but fragmented market and volatile margins.",
+    "best_own": {
+      "name": "Info Edge",
+      "why": "durable platform + investments"
+    },
+    "avoid": {
+      "name": "FirstCry",
+      "why": "competitive, thin margins"
+    }
+  },
+  "UNIECOM": {
+    "set": "E-commerce enablement SaaS (India)",
+    "of": 6,
+    "rank": 3,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Shopify (global)",
+        "score": 8.4,
+        "verdict": "CLEAR LEADER"
+      },
+      {
+        "name": "Zoho (unlisted)",
+        "score": 7.6,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Unicommerce",
+        "score": 6.8,
+        "verdict": "SOLID",
+        "self": true
+      },
+      {
+        "name": "Vinculum (unlisted)",
+        "score": 6.4,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "EasyEcom",
+        "score": 6.0,
+        "verdict": "AVERAGE"
+      },
+      {
+        "name": "Browntape",
+        "score": 5.6,
+        "verdict": "AVERAGE"
+      }
+    ],
+    "why": "Profitable SaaS with marketplace integrations and network effects but SMB churn and price competition.",
+    "best_own": {
+      "name": "Zoho (unlisted)",
+      "why": "scale + product breadth"
+    },
+    "avoid": {
+      "name": "Browntape",
+      "why": "sub-scale"
+    }
+  },
+  "NIITLTD": {
+    "set": "Skilling / EdTech (India)",
+    "of": 6,
+    "rank": 3,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "NIIT Learning Systems",
+        "score": 7.4,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Aptech",
+        "score": 6.8,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "NIIT Limited",
+        "score": 6.0,
+        "verdict": "AVERAGE",
+        "self": true
+      },
+      {
+        "name": "CL Educate",
+        "score": 5.8,
+        "verdict": "AVERAGE"
+      },
+      {
+        "name": "Career Point",
+        "score": 5.6,
+        "verdict": "AVERAGE"
+      },
+      {
+        "name": "Veranda Learning",
+        "score": 5.4,
+        "verdict": "WEAK"
+      }
+    ],
+    "why": "30-year brand and corporate-skilling shift but very low ROE and high PE post Coforge split.",
+    "best_own": {
+      "name": "NIIT Learning Systems",
+      "why": "profitable corporate L&D"
+    },
+    "avoid": {
+      "name": "Veranda Learning",
+      "why": "loss-making, leveraged"
+    }
+  },
+  "NEPHROPLUS": {
+    "set": "Dialysis / specialty care (India + Asia)",
+    "of": 6,
+    "rank": 4,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Fresenius (global)",
+        "score": 8.0,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "DaVita (global)",
+        "score": 8.0,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Apollo Dialysis",
+        "score": 7.6,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "NephroPlus",
+        "score": 7.0,
+        "verdict": "SOLID",
+        "self": true
+      },
+      {
+        "name": "B Braun",
+        "score": 6.4,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "DCDC (unlisted)",
+        "score": 6.0,
+        "verdict": "AVERAGE"
+      }
+    ],
+    "why": "Asia's largest dialysis chain with chronic-patient stickiness and PPP model, but capital-intensive and low ROE.",
+    "best_own": {
+      "name": "Fresenius (global)",
+      "why": "scale + integrated products"
+    },
+    "avoid": {
+      "name": "DCDC (unlisted)",
+      "why": "sub-scale"
+    }
+  },
+  "INDGN": {
+    "set": "Pharma commercialization / CRO (India)",
+    "of": 6,
+    "rank": 4,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "IQVIA (global)",
+        "score": 8.4,
+        "verdict": "CLEAR LEADER"
+      },
+      {
+        "name": "Syneos Health",
+        "score": 7.6,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "WNS",
+        "score": 7.2,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Indegene",
+        "score": 7.0,
+        "verdict": "SOLID",
+        "self": true
+      },
+      {
+        "name": "eClerx",
+        "score": 6.6,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Firstsource",
+        "score": 6.4,
+        "verdict": "SOLID"
+      }
+    ],
+    "why": "Niche life-sciences digital/commercial-ops with top-pharma stickiness but client concentration and a margin dip.",
+    "best_own": {
+      "name": "IQVIA (global)",
+      "why": "data + scale moat"
+    },
+    "avoid": {
+      "name": "Firstsource",
+      "why": "broader, lower-margin BPM"
+    }
+  },
+  "YATHARTH": {
+    "set": "Hospital chains (India)",
+    "of": 6,
+    "rank": 5,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Apollo Hospitals",
+        "score": 8.6,
+        "verdict": "CLEAR LEADER"
+      },
+      {
+        "name": "Max Healthcare",
+        "score": 8.0,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Fortis Healthcare",
+        "score": 7.0,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Park Medi World",
+        "score": 6.6,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Yatharth Hospital",
+        "score": 6.4,
+        "verdict": "SOLID",
+        "self": true
+      },
+      {
+        "name": "KIMS (Krishna Institute)",
+        "score": 6.0,
+        "verdict": "AVERAGE"
+      }
+    ],
+    "why": "Fast-growing NCR multi-specialty with improving occupancy but small scale and doctor-attrition risk.",
+    "best_own": {
+      "name": "Max Healthcare",
+      "why": "NCR density + ARPOB"
+    },
+    "avoid": {
+      "name": "KIMS",
+      "why": "valuation vs concentration"
+    }
+  },
+  "VIYASH": {
+    "set": "API / CDMO (India)",
+    "of": 6,
+    "rank": 5,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Divi's Laboratories",
+        "score": 8.6,
+        "verdict": "CLEAR LEADER"
+      },
+      {
+        "name": "Laurus Labs",
+        "score": 7.6,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Neuland Laboratories",
+        "score": 7.5,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Aarti Pharmalabs",
+        "score": 7.0,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Viyash Scientific",
+        "score": 6.6,
+        "verdict": "SOLID",
+        "self": true
+      },
+      {
+        "name": "Solara Active Pharma",
+        "score": 5.8,
+        "verdict": "AVERAGE"
+      }
+    ],
+    "why": "Fully backward-integrated API+formulation turnaround with fast growth but recent listing and leverage.",
+    "best_own": {
+      "name": "Divi's Laboratories",
+      "why": "scale + cost leadership"
+    },
+    "avoid": {
+      "name": "Solara Active Pharma",
+      "why": "volatile, stressed history"
+    }
+  },
+  "WOCKPHARMA": {
+    "set": "Pharma — innovation / generics (India)",
+    "of": 6,
+    "rank": 6,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Sun Pharma",
+        "score": 8.4,
+        "verdict": "CLEAR LEADER"
+      },
+      {
+        "name": "Dr Reddy's",
+        "score": 7.8,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Cipla",
+        "score": 7.6,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Alkem Laboratories",
+        "score": 7.2,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Lupin",
+        "score": 6.8,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Wockhardt",
+        "score": 5.8,
+        "verdict": "AVERAGE",
+        "self": true
+      }
+    ],
+    "why": "Novel anti-infective optionality (Zaynich) but loss-making legacy and high PE; quality trails large peers.",
+    "best_own": {
+      "name": "Sun Pharma",
+      "why": "specialty + best returns"
+    },
+    "avoid": {
+      "name": "Wockhardt",
+      "why": "await commercialization & profits"
+    }
+  },
+  "GAUDIUMIVF": {
+    "set": "Fertility / women's healthcare (India)",
+    "of": 6,
+    "rank": 3,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Indira IVF (unlisted)",
+        "score": 8.0,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Nova IVF (unlisted)",
+        "score": 7.6,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Gaudium IVF",
+        "score": 7.0,
+        "verdict": "SOLID",
+        "self": true
+      },
+      {
+        "name": "Apollo Fertility",
+        "score": 6.6,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Morpheus",
+        "score": 6.4,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Bloom IVF",
+        "score": 6.0,
+        "verdict": "AVERAGE"
+      }
+    ],
+    "why": "High-margin scalable IVF network with trust/referral moat but doctor dependency and newly listed.",
+    "best_own": {
+      "name": "Indira IVF (unlisted)",
+      "why": "scale + brand"
+    },
+    "avoid": {
+      "name": "Bloom IVF",
+      "why": "sub-scale"
+    }
+  },
+  "ENTERO": {
+    "set": "Pharma distribution (India)",
+    "of": 6,
+    "rank": 3,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Apollo Pharmacy",
+        "score": 7.6,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "MedPlus Health",
+        "score": 7.2,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Entero Healthcare",
+        "score": 7.0,
+        "verdict": "SOLID",
+        "self": true
+      },
+      {
+        "name": "Ascent Health",
+        "score": 6.4,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Sanjivani (unlisted)",
+        "score": 6.0,
+        "verdict": "AVERAGE"
+      },
+      {
+        "name": "PharmEasy (unlisted)",
+        "score": 5.5,
+        "verdict": "WEAK"
+      }
+    ],
+    "why": "Tech-enabled B2B pharma-distribution consolidator with route density but thin margins and WC-heavy.",
+    "best_own": {
+      "name": "MedPlus Health",
+      "why": "integrated retail + returns"
+    },
+    "avoid": {
+      "name": "PharmEasy (unlisted)",
+      "why": "cash-burn, governance"
+    }
+  },
+  "LAXMIDENTL": {
+    "set": "Dental products (India + global)",
+    "of": 6,
+    "rank": 5,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Align Technology (global)",
+        "score": 8.4,
+        "verdict": "CLEAR LEADER"
+      },
+      {
+        "name": "Straumann (global)",
+        "score": 7.8,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Dentsply Sirona",
+        "score": 7.6,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Poly Medicure (adjacent)",
+        "score": 7.0,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Laxmi Dental",
+        "score": 6.6,
+        "verdict": "SOLID",
+        "self": true
+      },
+      {
+        "name": "Local labs",
+        "score": 5.8,
+        "verdict": "AVERAGE"
+      }
+    ],
+    "why": "India's largest dental-products maker with aligner optionality but small scale vs global majors.",
+    "best_own": {
+      "name": "Align Technology (global)",
+      "why": "aligner moat + scale"
+    },
+    "avoid": {
+      "name": "Local labs",
+      "why": "fragmented, sub-scale"
+    }
+  },
+  "RUBICON": {
+    "set": "Specialty pharma / CDMO (India)",
+    "of": 6,
+    "rank": 3,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Divi's Laboratories",
+        "score": 8.6,
+        "verdict": "CLEAR LEADER"
+      },
+      {
+        "name": "Laurus Labs",
+        "score": 7.6,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Rubicon Research",
+        "score": 7.2,
+        "verdict": "SOLID",
+        "self": true
+      },
+      {
+        "name": "Gland Pharma",
+        "score": 7.2,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Suven Pharma",
+        "score": 7.2,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Sai Life Sciences",
+        "score": 6.8,
+        "verdict": "SOLID"
+      }
+    ],
+    "why": "Complex drug-delivery CDMO with 27% ROE and fast growth; behind Divi's/Laurus on scale.",
+    "best_own": {
+      "name": "Divi's Laboratories",
+      "why": "scale + cost leadership"
+    },
+    "avoid": {
+      "name": "Sai Life Sciences",
+      "why": "thinner margins"
+    }
+  },
+  "BLUEJET": {
+    "set": "Contrast-media / niche CDMO (global)",
+    "of": 6,
+    "rank": 3,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Divi's Laboratories",
+        "score": 8.6,
+        "verdict": "CLEAR LEADER"
+      },
+      {
+        "name": "GE Healthcare (global)",
+        "score": 8.0,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Bluejet Healthcare",
+        "score": 7.4,
+        "verdict": "STRONG",
+        "self": true
+      },
+      {
+        "name": "Suven Pharma",
+        "score": 7.2,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Bracco (unlisted)",
+        "score": 7.0,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Guerbet",
+        "score": 6.6,
+        "verdict": "SOLID"
+      }
+    ],
+    "why": "One of few global contrast-media intermediate makers with 60% gross margins but customer concentration (GE/Bayer).",
+    "best_own": {
+      "name": "Divi's Laboratories",
+      "why": "scale + diversification"
+    },
+    "avoid": {
+      "name": "Guerbet",
+      "why": "leveraged, slower growth"
+    }
+  },
+  "FREDUN": {
+    "set": "Injectable / specialty pharma (India)",
+    "of": 6,
+    "rank": 4,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Gland Pharma",
+        "score": 7.6,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Caplin Point",
+        "score": 7.4,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Marksans Pharma",
+        "score": 6.6,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Fredun Pharmaceuticals",
+        "score": 6.4,
+        "verdict": "SOLID",
+        "self": true
+      },
+      {
+        "name": "Shilpa Medicare",
+        "score": 6.2,
+        "verdict": "AVERAGE"
+      },
+      {
+        "name": "Jagsonpal Pharma",
+        "score": 6.0,
+        "verdict": "AVERAGE"
+      }
+    ],
+    "why": "Complex-injectables niche with regulated exports but very small scale and FDA-inspection risk.",
+    "best_own": {
+      "name": "Caplin Point",
+      "why": "high-ROCE LatAm + injectables"
+    },
+    "avoid": {
+      "name": "Jagsonpal Pharma",
+      "why": "sub-scale"
+    }
+  },
+  "ANURAS": {
+    "set": "Specialty chemicals — custom synthesis (India)",
+    "of": 6,
+    "rank": 6,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "PI Industries",
+        "score": 8.4,
+        "verdict": "CLEAR LEADER"
+      },
+      {
+        "name": "SRF",
+        "score": 8.0,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Navin Fluorine",
+        "score": 7.6,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Vinati Organics",
+        "score": 7.2,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Aarti Industries",
+        "score": 7.0,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Anupam Rasayan",
+        "score": 6.6,
+        "verdict": "SOLID",
+        "self": true
+      }
+    ],
+    "why": "Long-term contracted custom-synthesis order book but high debt, working-capital intensity and margin pressure vs leaders.",
+    "best_own": {
+      "name": "PI Industries",
+      "why": "best-in-class CSM + returns"
+    },
+    "avoid": {
+      "name": "Aarti Industries",
+      "why": "commodity-cycle swings"
+    }
+  },
+  "STALLION": {
+    "set": "Fluorochemicals / refrigerants (India)",
+    "of": 6,
+    "rank": 5,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "SRF",
+        "score": 8.0,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Navin Fluorine",
+        "score": 7.6,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Gujarat Fluorochemicals",
+        "score": 7.4,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Tanfac Industries",
+        "score": 6.6,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Stallion India",
+        "score": 6.0,
+        "verdict": "AVERAGE",
+        "self": true
+      },
+      {
+        "name": "Amal",
+        "score": 5.6,
+        "verdict": "AVERAGE"
+      }
+    ],
+    "why": "Largest refrigerant-gas importer/distributor but low-margin distribution and price/regulatory risk.",
+    "best_own": {
+      "name": "SRF",
+      "why": "integrated fluorochemicals moat"
+    },
+    "avoid": {
+      "name": "Amal",
+      "why": "sub-scale commodity"
+    }
+  },
+  "GULFOILLUB": {
+    "set": "Lubricants (India)",
+    "of": 6,
+    "rank": 3,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Castrol India",
+        "score": 7.8,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Shell (unlisted)",
+        "score": 7.6,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Gulf Oil Lubricants",
+        "score": 7.2,
+        "verdict": "SOLID",
+        "self": true
+      },
+      {
+        "name": "Tide Water (Veedol)",
+        "score": 6.8,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Savita Oil",
+        "score": 6.4,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "GP Petroleums",
+        "score": 6.0,
+        "verdict": "AVERAGE"
+      }
+    ],
+    "why": "#3 lubricant brand with 22% ROE and strong distribution but EV-transition overhang and crude-linked margins.",
+    "best_own": {
+      "name": "Castrol India",
+      "why": "#1 brand + cash returns"
+    },
+    "avoid": {
+      "name": "GP Petroleums",
+      "why": "sub-scale"
+    }
+  },
+  "ASALCBR": {
+    "set": "Alcoholic beverages / ENA (India)",
+    "of": 6,
+    "rank": 4,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "United Spirits",
+        "score": 8.2,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Radico Khaitan",
+        "score": 7.8,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Globus Spirits",
+        "score": 6.8,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Associated Alcohols",
+        "score": 6.6,
+        "verdict": "SOLID",
+        "self": true
+      },
+      {
+        "name": "Tilaknagar Industries",
+        "score": 6.4,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Som Distilleries",
+        "score": 6.0,
+        "verdict": "AVERAGE"
+      }
+    ],
+    "why": "Integrated ENA+IMFL+bottling with steady returns but small scale and state-policy exposure.",
+    "best_own": {
+      "name": "United Spirits",
+      "why": "premium brands + scale"
+    },
+    "avoid": {
+      "name": "Som Distilleries",
+      "why": "regional, thin"
+    }
+  },
+  "TRIVENI": {
+    "set": "Sugar & ethanol (India)",
+    "of": 6,
+    "rank": 4,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Balrampur Chini",
+        "score": 7.8,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "EID Parry",
+        "score": 7.4,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Dalmia Bharat Sugar",
+        "score": 7.2,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Triveni Engineering",
+        "score": 7.0,
+        "verdict": "SOLID",
+        "self": true
+      },
+      {
+        "name": "Dwarikesh Sugar",
+        "score": 6.4,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Bajaj Hindusthan",
+        "score": 5.0,
+        "verdict": "WEAK"
+      }
+    ],
+    "why": "Diversified sugar+distillery+engineering with ethanol tailwind but regulated sugar economics.",
+    "best_own": {
+      "name": "Balrampur Chini",
+      "why": "best distillery mix + returns"
+    },
+    "avoid": {
+      "name": "Bajaj Hindusthan",
+      "why": "debt-laden, weak"
+    }
+  },
+  "GREAVESCOT": {
+    "set": "Engines & EV powertrain (India)",
+    "of": 6,
+    "rank": 5,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Bosch India",
+        "score": 8.0,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Cummins India",
+        "score": 7.8,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Kirloskar Oil Engines",
+        "score": 7.0,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Olectra Greentech",
+        "score": 6.4,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Greaves Cotton",
+        "score": 6.2,
+        "verdict": "AVERAGE",
+        "self": true
+      },
+      {
+        "name": "Ola Electric",
+        "score": 5.6,
+        "verdict": "AVERAGE"
+      }
+    ],
+    "why": "#1 3-wheeler engine plus Ampere EV, but EV losses and ICE decline weigh on overall quality.",
+    "best_own": {
+      "name": "Cummins India",
+      "why": "product-led, high-RoCE"
+    },
+    "avoid": {
+      "name": "Ola Electric",
+      "why": "cash-burn, competition"
+    }
+  },
+  "VSTTILLERS": {
+    "set": "Farm equipment (India)",
+    "of": 6,
+    "rank": 5,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Mahindra & Mahindra",
+        "score": 8.2,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Escorts Kubota",
+        "score": 7.6,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "TAFE (unlisted)",
+        "score": 7.0,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Action Construction",
+        "score": 6.8,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "VST Tillers Tractors",
+        "score": 6.6,
+        "verdict": "SOLID",
+        "self": true
+      },
+      {
+        "name": "International Tractors (Sonalika)",
+        "score": 6.2,
+        "verdict": "AVERAGE"
+      }
+    ],
+    "why": "Dominant power-tiller niche with Mitsubishi tech but small-tractor competition and monsoon cyclicality.",
+    "best_own": {
+      "name": "Mahindra & Mahindra",
+      "why": "#1 tractors + scale"
+    },
+    "avoid": {
+      "name": "International Tractors (Sonalika)",
+      "why": "price-led, thin"
+    }
+  },
+  "ECOSMOBLTY": {
+    "set": "Corporate mobility / car rental (India)",
+    "of": 6,
+    "rank": 3,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Uber (global)",
+        "score": 7.6,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Ola (unlisted)",
+        "score": 7.0,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "ECOS Mobility",
+        "score": 6.6,
+        "verdict": "SOLID",
+        "self": true
+      },
+      {
+        "name": "Carzonrent",
+        "score": 6.0,
+        "verdict": "AVERAGE"
+      },
+      {
+        "name": "Savaari",
+        "score": 5.8,
+        "verdict": "AVERAGE"
+      },
+      {
+        "name": "Avis India (unlisted)",
+        "score": 5.8,
+        "verdict": "AVERAGE"
+      }
+    ],
+    "why": "Asset-light B2B employee-transport leader with high ROE but fragmented, price-competitive market.",
+    "best_own": {
+      "name": "ECOS Mobility",
+      "why": "asset-light, profitable B2B"
+    },
+    "avoid": {
+      "name": "Savaari",
+      "why": "sub-scale"
+    }
+  },
+  "LANDMARK": {
+    "set": "Premium auto dealerships (India)",
+    "of": 6,
+    "rank": 1,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Landmark Cars",
+        "score": 6.8,
+        "verdict": "SOLID",
+        "self": true
+      },
+      {
+        "name": "TVS Mobility (unlisted)",
+        "score": 6.6,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Popular Vehicles",
+        "score": 6.2,
+        "verdict": "AVERAGE"
+      },
+      {
+        "name": "Sai Service (unlisted)",
+        "score": 6.0,
+        "verdict": "AVERAGE"
+      },
+      {
+        "name": "Jaybharat Automobiles",
+        "score": 5.8,
+        "verdict": "AVERAGE"
+      },
+      {
+        "name": "Group Landmark",
+        "score": 5.6,
+        "verdict": "AVERAGE"
+      }
+    ],
+    "why": "Largest premium multi-brand dealer with high-margin after-sales, but OEM agency-model shift and cyclicality.",
+    "best_own": {
+      "name": "Landmark Cars",
+      "why": "premium mix + service annuity"
+    },
+    "avoid": {
+      "name": "Popular Vehicles",
+      "why": "mass-market thin margins"
+    }
+  },
+  "MENONBE": {
+    "set": "Engine bearings & castings (India)",
+    "of": 6,
+    "rank": 4,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Schaeffler India",
+        "score": 7.8,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "SKF India",
+        "score": 7.6,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "NRB Bearings",
+        "score": 6.8,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Menon Bearings",
+        "score": 6.6,
+        "verdict": "SOLID",
+        "self": true
+      },
+      {
+        "name": "Rico Auto",
+        "score": 6.0,
+        "verdict": "AVERAGE"
+      },
+      {
+        "name": "Talbros Engineering",
+        "score": 5.8,
+        "verdict": "AVERAGE"
+      }
+    ],
+    "why": "Dominant aluminium engine-bearing niche with 22% ROE and dividends but ICE-EV risk and Maruti concentration.",
+    "best_own": {
+      "name": "Schaeffler India",
+      "why": "breadth + EV content"
+    },
+    "avoid": {
+      "name": "Rico Auto",
+      "why": "low-margin, cyclical"
+    }
+  },
+  "ARE&M": {
+    "set": "Batteries & energy storage (India)",
+    "of": 6,
+    "rank": 3,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "HBL Engineering",
+        "score": 7.6,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Exide Industries",
+        "score": 7.4,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Amara Raja Energy",
+        "score": 7.2,
+        "verdict": "SOLID",
+        "self": true
+      },
+      {
+        "name": "High Energy Batteries",
+        "score": 6.4,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Eveready Industries",
+        "score": 6.0,
+        "verdict": "AVERAGE"
+      },
+      {
+        "name": "Okaya",
+        "score": 5.8,
+        "verdict": "AVERAGE"
+      }
+    ],
+    "why": "#2 lead-acid maker with strong cash and a new Li-ion gigafactory push, but lead-acid maturity and cell-execution risk.",
+    "best_own": {
+      "name": "Exide Industries",
+      "why": "scale + Li-ion lead"
+    },
+    "avoid": {
+      "name": "Okaya",
+      "why": "sub-scale"
+    }
+  },
+  "RIR": {
+    "set": "Power semiconductors (India)",
+    "of": 6,
+    "rank": 6,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "ABB India",
+        "score": 8.0,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Honeywell Automation",
+        "score": 7.4,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Salzer Electronics",
+        "score": 6.4,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "BHEL (power electronics)",
+        "score": 6.2,
+        "verdict": "AVERAGE"
+      },
+      {
+        "name": "Centum Electronics",
+        "score": 6.0,
+        "verdict": "AVERAGE"
+      },
+      {
+        "name": "RIR Power Electronics",
+        "score": 5.8,
+        "verdict": "AVERAGE",
+        "self": true
+      }
+    ],
+    "why": "Niche rectifiers/thyristors for heavy industry but very small, recent earnings decline and very high PE.",
+    "best_own": {
+      "name": "ABB India",
+      "why": "scale + technology"
+    },
+    "avoid": {
+      "name": "BHEL (power electronics)",
+      "why": "weak returns"
+    }
+  },
+  "SCODATUBES": {
+    "set": "Precision steel tubes (India)",
+    "of": 6,
+    "rank": 5,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Tube Investments",
+        "score": 8.0,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "APL Apollo Tubes",
+        "score": 7.8,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Goodluck India",
+        "score": 6.8,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Hariom Pipe",
+        "score": 6.6,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Scoda Tubes",
+        "score": 6.0,
+        "verdict": "AVERAGE",
+        "self": true
+      },
+      {
+        "name": "Rama Steel Tubes",
+        "score": 5.8,
+        "verdict": "AVERAGE"
+      }
+    ],
+    "why": "Precision cold-drawn tube import-substitution niche but tiny scale and steel-price margin swings.",
+    "best_own": {
+      "name": "Tube Investments",
+      "why": "diversified, high-RoCE"
+    },
+    "avoid": {
+      "name": "Rama Steel Tubes",
+      "why": "sub-scale, volatile"
+    }
+  },
+  "MODISONLTD": {
+    "set": "Electrical contacts & bimetals (India)",
+    "of": 6,
+    "rank": 3,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Honeywell (global)",
+        "score": 7.6,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Shivalik Bimetal Controls",
+        "score": 7.0,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Modison",
+        "score": 6.8,
+        "verdict": "SOLID",
+        "self": true
+      },
+      {
+        "name": "Salzer Electronics",
+        "score": 6.6,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Precision Wires",
+        "score": 6.2,
+        "verdict": "AVERAGE"
+      },
+      {
+        "name": "Igarashi Motors",
+        "score": 6.0,
+        "verdict": "AVERAGE"
+      }
+    ],
+    "why": "~60% share in silver electrical contacts with recycling edge and high growth but silver-price working-capital swings.",
+    "best_own": {
+      "name": "Shivalik Bimetal Controls",
+      "why": "IP + consistent returns"
+    },
+    "avoid": {
+      "name": "Igarashi Motors",
+      "why": "concentrated, cyclical"
+    }
+  },
+  "SALZERELEC": {
+    "set": "Electrical components / switchgear (India)",
+    "of": 6,
+    "rank": 4,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Schneider Electric",
+        "score": 7.6,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Shilchar Technologies",
+        "score": 7.0,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Modison",
+        "score": 6.8,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Salzer Electronics",
+        "score": 6.6,
+        "verdict": "SOLID",
+        "self": true
+      },
+      {
+        "name": "RR Kabel (adjacent)",
+        "score": 6.4,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "HPL Electric",
+        "score": 6.0,
+        "verdict": "AVERAGE"
+      }
+    ],
+    "why": "ATEX-certified cam-switch niche and exports but small scale, low ROE and high working capital.",
+    "best_own": {
+      "name": "Schneider Electric",
+      "why": "scale + brand"
+    },
+    "avoid": {
+      "name": "HPL Electric",
+      "why": "leveraged, low returns"
+    }
+  },
+  "BBL": {
+    "set": "Transformers & motors (India)",
+    "of": 6,
+    "rank": 5,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Hitachi Energy India",
+        "score": 8.5,
+        "verdict": "CLEAR LEADER"
+      },
+      {
+        "name": "ABB India",
+        "score": 8.0,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Voltamp Transformers",
+        "score": 7.2,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Transformers & Rectifiers",
+        "score": 6.8,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Bharat Bijlee",
+        "score": 6.6,
+        "verdict": "SOLID",
+        "self": true
+      },
+      {
+        "name": "Indo Tech Transformers",
+        "score": 6.0,
+        "verdict": "AVERAGE"
+      }
+    ],
+    "why": "70-year transformer+HT-motor maker riding grid capex but negative OCF and lower returns than focused peers.",
+    "best_own": {
+      "name": "Voltamp Transformers",
+      "why": "debt-free, high-RoCE pure-play"
+    },
+    "avoid": {
+      "name": "Indo Tech Transformers",
+      "why": "sub-scale"
+    }
+  },
+  "LAKSELEC": {
+    "set": "Industrial control panels (India)",
+    "of": 6,
+    "rank": 5,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "ABB India",
+        "score": 8.0,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Schneider Electric",
+        "score": 7.6,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Salzer Electronics",
+        "score": 6.6,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "HPL Electric",
+        "score": 6.0,
+        "verdict": "AVERAGE"
+      },
+      {
+        "name": "Lakshmi Electrical Control",
+        "score": 5.4,
+        "verdict": "WEAK",
+        "self": true
+      },
+      {
+        "name": "C&S Electric (unlisted)",
+        "score": 5.2,
+        "verdict": "WEAK"
+      }
+    ],
+    "why": "Niche MCC/panel maker but very small, recent losses and illiquid.",
+    "best_own": {
+      "name": "ABB India",
+      "why": "scale + technology"
+    },
+    "avoid": {
+      "name": "Lakshmi Electrical Control",
+      "why": "loss-making, illiquid"
+    }
+  },
+  "UNIVCABLES": {
+    "set": "EHV / power cables (India)",
+    "of": 6,
+    "rank": 5,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Polycab India",
+        "score": 8.2,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "KEI Industries",
+        "score": 8.0,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "RR Kabel",
+        "score": 7.0,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Sterlite Power (unlisted)",
+        "score": 6.8,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Universal Cables",
+        "score": 6.4,
+        "verdict": "SOLID",
+        "self": true
+      },
+      {
+        "name": "Ultracab India",
+        "score": 5.8,
+        "verdict": "AVERAGE"
+      }
+    ],
+    "why": "One of few EHV cable makers with Birla backing but small scale and lower returns vs Polycab/KEI.",
+    "best_own": {
+      "name": "Polycab India",
+      "why": "scale + brand + B2C mix"
+    },
+    "avoid": {
+      "name": "Ultracab India",
+      "why": "sub-scale"
+    }
+  },
+  "GMDCLTD": {
+    "set": "Mining / minerals (India)",
+    "of": 6,
+    "rank": 5,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "NMDC",
+        "score": 8.0,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Coal India",
+        "score": 7.8,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Vedanta",
+        "score": 6.8,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "MOIL",
+        "score": 6.6,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "GMDC",
+        "score": 6.4,
+        "verdict": "SOLID",
+        "self": true
+      },
+      {
+        "name": "Sandur Manganese",
+        "score": 6.2,
+        "verdict": "AVERAGE"
+      }
+    ],
+    "why": "Exclusive Gujarat lignite/bauxite leases with lithium optionality but mineral cyclicality and declining lignite.",
+    "best_own": {
+      "name": "NMDC",
+      "why": "lowest-cost iron ore + scale"
+    },
+    "avoid": {
+      "name": "Sandur Manganese",
+      "why": "small, commodity-cyclical"
+    }
+  },
+  "EIMCOELECO": {
+    "set": "Mining equipment (India)",
+    "of": 6,
+    "rank": 5,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Sandvik (global)",
+        "score": 8.0,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Epiroc (global)",
+        "score": 8.0,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Tega Industries",
+        "score": 7.4,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Elecon Engineering",
+        "score": 7.0,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Eimco Elecon",
+        "score": 6.2,
+        "verdict": "AVERAGE",
+        "self": true
+      },
+      {
+        "name": "Revathi Equipment",
+        "score": 5.8,
+        "verdict": "AVERAGE"
+      }
+    ],
+    "why": "Near-monopoly underground LHD for Coal India but monopsony customer and structurally declining underground mining.",
+    "best_own": {
+      "name": "Sandvik (global)",
+      "why": "global tech + scale"
+    },
+    "avoid": {
+      "name": "Revathi Equipment",
+      "why": "sub-scale"
+    }
+  },
+  "TEGA": {
+    "set": "Mineral-processing wear parts (global)",
+    "of": 6,
+    "rank": 4,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Metso (global)",
+        "score": 8.2,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Weir Group (global)",
+        "score": 8.0,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "AIA Engineering",
+        "score": 7.6,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Tega Industries",
+        "score": 7.2,
+        "verdict": "SOLID",
+        "self": true
+      },
+      {
+        "name": "Trelleborg",
+        "score": 7.0,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "ME Elecmetal",
+        "score": 6.8,
+        "verdict": "SOLID"
+      }
+    ],
+    "why": "Global #2 in polymer mill-liners with IP and high switching cost but mining-capex cyclicality and a recent PAT dip.",
+    "best_own": {
+      "name": "AIA Engineering",
+      "why": "high-RoCE grinding-media leader"
+    },
+    "avoid": {
+      "name": "ME Elecmetal",
+      "why": "narrower franchise"
+    }
+  },
+  "GRAPHITE": {
+    "set": "Graphite electrodes (global)",
+    "of": 6,
+    "rank": 5,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Tokai Carbon",
+        "score": 7.6,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Showa Denko",
+        "score": 7.4,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "HEG",
+        "score": 7.2,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "GrafTech",
+        "score": 7.0,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Graphite India",
+        "score": 6.8,
+        "verdict": "SOLID",
+        "self": true
+      },
+      {
+        "name": "SGL Carbon",
+        "score": 6.4,
+        "verdict": "SOLID"
+      }
+    ],
+    "why": "One of two Indian UHP-electrode makers with EU ops but electrode-price cyclicality and low ROE.",
+    "best_own": {
+      "name": "HEG",
+      "why": "captive needle coke + scale"
+    },
+    "avoid": {
+      "name": "SGL Carbon",
+      "why": "weaker electrode franchise"
+    }
+  },
+  "HEG": {
+    "set": "Graphite electrodes (global)",
+    "of": 6,
+    "rank": 3,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Tokai Carbon",
+        "score": 7.6,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Showa Denko",
+        "score": 7.4,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "HEG",
+        "score": 7.2,
+        "verdict": "SOLID",
+        "self": true
+      },
+      {
+        "name": "GrafTech",
+        "score": 7.0,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Graphite India",
+        "score": 6.8,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "SGL Carbon",
+        "score": 6.4,
+        "verdict": "SOLID"
+      }
+    ],
+    "why": "India's largest electrode exporter with captive needle-coke and a GrafTech stake; cyclical but best-positioned domestically.",
+    "best_own": {
+      "name": "HEG",
+      "why": "captive coke + anode optionality"
+    },
+    "avoid": {
+      "name": "SGL Carbon",
+      "why": "weaker franchise"
+    }
+  },
+  "USHAMART": {
+    "set": "Specialty wire rope (global)",
+    "of": 6,
+    "rank": 2,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Bekaert (global)",
+        "score": 7.6,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Usha Martin",
+        "score": 7.4,
+        "verdict": "STRONG",
+        "self": true
+      },
+      {
+        "name": "Kiswire (global)",
+        "score": 7.0,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "WireCo",
+        "score": 6.8,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Gustav Wolf",
+        "score": 6.4,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Bharat Wire Ropes",
+        "score": 6.0,
+        "verdict": "AVERAGE"
+      }
+    ],
+    "why": "Global specialty wire-rope leader post-steel exit with qualification moat and rising ROCE; behind only Bekaert on scale.",
+    "best_own": {
+      "name": "Usha Martin",
+      "why": "focused specialty leader"
+    },
+    "avoid": {
+      "name": "Bharat Wire Ropes",
+      "why": "sub-scale, leveraged"
+    }
+  },
+  "KAMDHENU": {
+    "set": "Branded TMT & building materials (India)",
+    "of": 6,
+    "rank": 4,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Tata Steel (branded)",
+        "score": 8.0,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "JSW Steel",
+        "score": 7.8,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Shyam Metalics",
+        "score": 7.0,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Kamdhenu",
+        "score": 6.6,
+        "verdict": "SOLID",
+        "self": true
+      },
+      {
+        "name": "Sunflag Iron",
+        "score": 6.0,
+        "verdict": "AVERAGE"
+      },
+      {
+        "name": "Rama Steel",
+        "score": 5.8,
+        "verdict": "AVERAGE"
+      }
+    ],
+    "why": "Asset-light franchise brand plus paints cross-sell with 22% ROE but commodity-linked TMT and small base.",
+    "best_own": {
+      "name": "Tata Steel (branded)",
+      "why": "integrated scale + brand"
+    },
+    "avoid": {
+      "name": "Rama Steel",
+      "why": "sub-scale"
+    }
+  },
+  "MMP": {
+    "set": "Aluminium powder & paste (global niche)",
+    "of": 6,
+    "rank": 4,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Eckart (global)",
+        "score": 7.6,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Silberline",
+        "score": 7.2,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Toyal",
+        "score": 6.8,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "MMP Industries",
+        "score": 6.6,
+        "verdict": "SOLID",
+        "self": true
+      },
+      {
+        "name": "Sun Chemical",
+        "score": 6.4,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Metal Powder Co",
+        "score": 6.0,
+        "verdict": "AVERAGE"
+      }
+    ],
+    "why": "Dominant Indian aluminium-powder/paste maker with exports but LME-linked margins and small scale.",
+    "best_own": {
+      "name": "Eckart (global)",
+      "why": "tech + global scale"
+    },
+    "avoid": {
+      "name": "Metal Powder Co",
+      "why": "sub-scale"
+    }
+  },
+  "IFGLEXPOR": {
+    "set": "Refractories (India)",
+    "of": 6,
+    "rank": 4,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "RHI Magnesita India",
+        "score": 8.0,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Vesuvius India",
+        "score": 7.4,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "TRL Krosaki",
+        "score": 6.8,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "IFGL Refractories",
+        "score": 6.6,
+        "verdict": "SOLID",
+        "self": true
+      },
+      {
+        "name": "Calderys (unlisted)",
+        "score": 6.4,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Manishri Refractories",
+        "score": 5.8,
+        "verdict": "AVERAGE"
+      }
+    ],
+    "why": "Specialised steel-refractory maker with exports but steel-capex cyclicality and mid-pack returns.",
+    "best_own": {
+      "name": "RHI Magnesita India",
+      "why": "scale + global tech"
+    },
+    "avoid": {
+      "name": "Manishri Refractories",
+      "why": "sub-scale"
+    }
+  },
+  "BOROSCI": {
+    "set": "Scientific glassware (India + global)",
+    "of": 6,
+    "rank": 4,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Schott (global)",
+        "score": 7.8,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Eppendorf (global)",
+        "score": 7.6,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "DWK Life Sciences",
+        "score": 7.4,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Borosil Scientific",
+        "score": 6.8,
+        "verdict": "SOLID",
+        "self": true
+      },
+      {
+        "name": "Tarsons Products",
+        "score": 6.6,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Praxis",
+        "score": 5.8,
+        "verdict": "AVERAGE"
+      }
+    ],
+    "why": "Dominant Indian lab-glassware brand with 50-year trust but small scale and input-cost margins.",
+    "best_own": {
+      "name": "Schott (global)",
+      "why": "tech + global breadth"
+    },
+    "avoid": {
+      "name": "Tarsons Products",
+      "why": "post-IPO derating"
+    }
+  },
+  "SIGNPOST": {
+    "set": "Out-of-home advertising (India)",
+    "of": 6,
+    "rank": 2,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Times OOH (unlisted)",
+        "score": 7.0,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Signpost India",
+        "score": 6.8,
+        "verdict": "SOLID",
+        "self": true
+      },
+      {
+        "name": "Laqshya Media (unlisted)",
+        "score": 6.6,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Bright Outdoor",
+        "score": 6.0,
+        "verdict": "AVERAGE"
+      },
+      {
+        "name": "Selvel One",
+        "score": 5.8,
+        "verdict": "AVERAGE"
+      },
+      {
+        "name": "Pioneer Publicity",
+        "score": 5.6,
+        "verdict": "AVERAGE"
+      }
+    ],
+    "why": "Municipal-concession street-furniture moat with digital-OOH growth and 27% ROE but small and contract-renewal risk.",
+    "best_own": {
+      "name": "Signpost India",
+      "why": "concession moat + returns"
+    },
+    "avoid": {
+      "name": "Selvel One",
+      "why": "sub-scale"
+    }
+  },
+  "RKSWAMY": {
+    "set": "Advertising & market research (India)",
+    "of": 6,
+    "rank": 5,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "WPP / GroupM (global)",
+        "score": 8.0,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Affle India (adjacent)",
+        "score": 7.6,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Dentsu",
+        "score": 7.4,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Latent View (adjacent)",
+        "score": 6.6,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "R K Swamy",
+        "score": 6.4,
+        "verdict": "SOLID",
+        "self": true
+      },
+      {
+        "name": "Madison World (unlisted)",
+        "score": 6.0,
+        "verdict": "AVERAGE"
+      }
+    ],
+    "why": "Integrated agency with PSU/BFSI relationships and Bharat reach but digital disruption and holding-co model.",
+    "best_own": {
+      "name": "WPP / GroupM (global)",
+      "why": "scale + global clients"
+    },
+    "avoid": {
+      "name": "Nazara (adjacent)",
+      "why": "different, volatile model"
+    }
+  },
+  "QUESS": {
+    "set": "Staffing & business services (India)",
+    "of": 6,
+    "rank": 3,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "TeamLease Services",
+        "score": 7.4,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "ManpowerGroup (global)",
+        "score": 7.2,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Quess Corp",
+        "score": 7.0,
+        "verdict": "SOLID",
+        "self": true
+      },
+      {
+        "name": "Adecco (global)",
+        "score": 7.0,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "SIS Limited",
+        "score": 6.8,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Updater Services",
+        "score": 6.2,
+        "verdict": "AVERAGE"
+      }
+    ],
+    "why": "India's largest staffing platform with Allsec tech and 20% ROE but low-margin, working-capital-heavy model.",
+    "best_own": {
+      "name": "TeamLease Services",
+      "why": "focused, asset-light"
+    },
+    "avoid": {
+      "name": "Updater Services",
+      "why": "thin facility-management margins"
+    }
+  },
+  "CMSINFO": {
+    "set": "Cash management / ATM services (India)",
+    "of": 6,
+    "rank": 1,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "CMS Info Systems",
+        "score": 7.4,
+        "verdict": "STRONG",
+        "self": true
+      },
+      {
+        "name": "Loomis (global)",
+        "score": 7.2,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Brinks (global)",
+        "score": 7.0,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "SIS Cash Services",
+        "score": 6.4,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Radiant Cash",
+        "score": 6.0,
+        "verdict": "AVERAGE"
+      },
+      {
+        "name": "AGS Transact",
+        "score": 5.0,
+        "verdict": "WEAK"
+      }
+    ],
+    "why": "India's largest cash-management network with an RBI-regulated moat and strong cash, though UPI is a long-term threat.",
+    "best_own": {
+      "name": "CMS Info Systems",
+      "why": "scale + recurring contracts"
+    },
+    "avoid": {
+      "name": "AGS Transact",
+      "why": "financial stress"
+    }
+  },
+  "DIFFNKG": {
+    "set": "Wear-parts & welding consumables (India)",
+    "of": 6,
+    "rank": 4,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Esab India",
+        "score": 7.4,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Ador Welding",
+        "score": 7.2,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "EWAC Alloys (unlisted)",
+        "score": 6.8,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Diffusion Engineers",
+        "score": 6.6,
+        "verdict": "SOLID",
+        "self": true
+      },
+      {
+        "name": "D&H Secheron",
+        "score": 6.4,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "GEE Limited",
+        "score": 6.0,
+        "verdict": "AVERAGE"
+      }
+    ],
+    "why": "Niche asset-life-enhancement and wear-parts maker with 40% earnings growth but small and capex-cyclical.",
+    "best_own": {
+      "name": "Esab India",
+      "why": "leader + high RoCE"
+    },
+    "avoid": {
+      "name": "GEE Limited",
+      "why": "sub-scale"
+    }
+  },
+  "SHREEJISPG": {
+    "set": "Shipping & marine logistics (India)",
+    "of": 6,
+    "rank": 5,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Great Eastern Shipping",
+        "score": 8.0,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Gujarat Pipavav Port",
+        "score": 7.0,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Seamec",
+        "score": 6.8,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Shipping Corp of India",
+        "score": 6.4,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Shreeji Shipping Global",
+        "score": 6.2,
+        "verdict": "AVERAGE",
+        "self": true
+      },
+      {
+        "name": "Mercator",
+        "score": 4.5,
+        "verdict": "WEAK"
+      }
+    ],
+    "why": "Dry-bulk transshipment and logistics niche but freight cyclicality, small fleet and newly listed.",
+    "best_own": {
+      "name": "Great Eastern Shipping",
+      "why": "diversified fleet + balance sheet"
+    },
+    "avoid": {
+      "name": "Mercator",
+      "why": "defunct cautionary"
+    }
+  },
+  "GESHIP": {
+    "set": "Shipping (India)",
+    "of": 6,
+    "rank": 1,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Great Eastern Shipping",
+        "score": 8.0,
+        "verdict": "STRONG",
+        "self": true
+      },
+      {
+        "name": "Frontline (global)",
+        "score": 7.4,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Seamec",
+        "score": 6.8,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Shipping Corp of India",
+        "score": 6.4,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Shreeji Shipping Global",
+        "score": 6.2,
+        "verdict": "AVERAGE"
+      },
+      {
+        "name": "Mercator",
+        "score": 4.5,
+        "verdict": "WEAK"
+      }
+    ],
+    "why": "India's largest private shipper with a diversified fleet, strong balance sheet and through-cycle dividends — best capital allocation in the set.",
+    "best_own": {
+      "name": "Great Eastern Shipping",
+      "why": "balance sheet + dividends"
+    },
+    "avoid": {
+      "name": "Mercator",
+      "why": "defunct cautionary"
+    }
+  },
+  "SCI": {
+    "set": "Shipping (India)",
+    "of": 6,
+    "rank": 4,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Great Eastern Shipping",
+        "score": 8.0,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Frontline (global)",
+        "score": 7.4,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Seamec",
+        "score": 6.8,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Shipping Corp of India",
+        "score": 6.4,
+        "verdict": "SOLID",
+        "self": true
+      },
+      {
+        "name": "Shreeji Shipping Global",
+        "score": 6.2,
+        "verdict": "AVERAGE"
+      },
+      {
+        "name": "Mercator",
+        "score": 4.5,
+        "verdict": "WEAK"
+      }
+    ],
+    "why": "India's only PSU shipper with government cargo access but PSU inefficiency and a privatisation overhang.",
+    "best_own": {
+      "name": "Great Eastern Shipping",
+      "why": "best private operator"
+    },
+    "avoid": {
+      "name": "Mercator",
+      "why": "defunct cautionary"
+    }
+  },
+  "NIFTYBEES": {
+    "set": "Large-cap index ETFs (India)",
+    "of": 6,
+    "rank": 1,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Nippon Nifty BeES",
+        "score": 7.4,
+        "verdict": "STRONG",
+        "self": true
+      },
+      {
+        "name": "SBI Nifty 50 ETF",
+        "score": 7.2,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "UTI Nifty 50 ETF",
+        "score": 7.2,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "ICICI Nifty 50 ETF",
+        "score": 7.0,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "HDFC Nifty 50 ETF",
+        "score": 7.0,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Kotak Nifty 50 ETF",
+        "score": 6.8,
+        "verdict": "SOLID"
+      }
+    ],
+    "why": "Oldest, most-liquid Nifty-50 ETF with tightest tracking and deepest on-exchange liquidity.",
+    "best_own": {
+      "name": "Nippon Nifty BeES",
+      "why": "liquidity + low tracking error"
+    },
+    "avoid": {
+      "name": "Kotak Nifty 50 ETF",
+      "why": "thinner liquidity"
+    }
+  },
+  "MON100": {
+    "set": "US-tech index ETFs (India)",
+    "of": 6,
+    "rank": 1,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Motilal Oswal Nasdaq 100",
+        "score": 7.2,
+        "verdict": "SOLID",
+        "self": true
+      },
+      {
+        "name": "ICICI Nasdaq 100 ETF",
+        "score": 7.0,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Mirae S&P 500 ETF",
+        "score": 7.0,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Kotak Nasdaq 100 FoF",
+        "score": 6.8,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Mirae NYSE FANG+",
+        "score": 6.6,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Navi Nasdaq 100 FoF",
+        "score": 6.6,
+        "verdict": "SOLID"
+      }
+    ],
+    "why": "Largest, longest-track Nasdaq-100 onshore wrapper with reasonable tracking; subject to subscription caps.",
+    "best_own": {
+      "name": "Motilal Oswal Nasdaq 100",
+      "why": "scale + track record"
+    },
+    "avoid": {
+      "name": "Navi Nasdaq 100 FoF",
+      "why": "newer, smaller"
+    }
+  },
+  "MAFANG": {
+    "set": "US-tech thematic ETFs (India)",
+    "of": 6,
+    "rank": 5,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Motilal Oswal Nasdaq 100",
+        "score": 7.2,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Mirae S&P 500 ETF",
+        "score": 7.0,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "ICICI Nasdaq 100 ETF",
+        "score": 7.0,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Kotak Nasdaq 100 FoF",
+        "score": 6.8,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Mirae NYSE FANG+",
+        "score": 6.6,
+        "verdict": "SOLID",
+        "self": true
+      },
+      {
+        "name": "Navi US Tech FoF",
+        "score": 6.2,
+        "verdict": "AVERAGE"
+      }
+    ],
+    "why": "Concentrated equal-weight FANG+ basket — higher beta and volatility than diversified Nasdaq-100/S&P wrappers.",
+    "best_own": {
+      "name": "Motilal Oswal Nasdaq 100",
+      "why": "diversified, lower concentration"
+    },
+    "avoid": {
+      "name": "Navi US Tech FoF",
+      "why": "newer, smaller"
+    }
+  },
+  "AEROFLEX": {
+    "set": "SS flexible hoses / engineered products (India)",
+    "of": 6,
+    "rank": 1,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Aeroflex Industries",
+        "score": 7.6,
+        "verdict": "STRONG",
+        "self": true
+      },
+      {
+        "name": "Mitsubishi (hose, global)",
+        "score": 7.4,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Witzenmann (global)",
+        "score": 7.2,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Technocraft Industries",
+        "score": 7.0,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Hi-Tech Pipes",
+        "score": 6.4,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Sat Industries (parent)",
+        "score": 6.0,
+        "verdict": "AVERAGE"
+      }
+    ],
+    "why": "Only scaled Indian SS-flexible-hose maker (~75% share) with a BIS-QCO barrier and 56% PAT CAGR; leads domestically.",
+    "best_own": {
+      "name": "Aeroflex Industries",
+      "why": "domestic monopoly + exports"
+    },
+    "avoid": {
+      "name": "Sat Industries (parent)",
+      "why": "holding-co complexity"
+    }
+  },
+  "KENNAMET": {
+    "set": "Cutting tools (India + global)",
+    "of": 6,
+    "rank": 4,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Sandvik (global)",
+        "score": 8.2,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Iscar (global)",
+        "score": 7.8,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Mitsubishi Materials",
+        "score": 7.2,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Kennametal India",
+        "score": 7.0,
+        "verdict": "SOLID",
+        "self": true
+      },
+      {
+        "name": "Addison & Co",
+        "score": 6.2,
+        "verdict": "AVERAGE"
+      },
+      {
+        "name": "Birla Precision",
+        "score": 6.0,
+        "verdict": "AVERAGE"
+      }
+    ],
+    "why": "Premium tungsten-carbide tooling with US-parent IP but cyclical capex demand and a full valuation.",
+    "best_own": {
+      "name": "Sandvik (global)",
+      "why": "scale + R&D leadership"
+    },
+    "avoid": {
+      "name": "Birla Precision",
+      "why": "sub-scale"
+    }
+  },
+  "HONAUT": {
+    "set": "Process automation (India)",
+    "of": 6,
+    "rank": 4,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "ABB India",
+        "score": 8.2,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Emerson (global)",
+        "score": 7.8,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Siemens",
+        "score": 7.6,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Honeywell Automation",
+        "score": 7.4,
+        "verdict": "STRONG",
+        "self": true
+      },
+      {
+        "name": "Yokogawa India",
+        "score": 7.2,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Rockwell Automation",
+        "score": 7.0,
+        "verdict": "SOLID"
+      }
+    ],
+    "why": "#1 in DCS process automation with extreme switching cost and parent IP, but illiquid stock and slow revenue growth.",
+    "best_own": {
+      "name": "ABB India",
+      "why": "broader mix + high RoCE"
+    },
+    "avoid": {
+      "name": "Rockwell Automation",
+      "why": "smaller India presence"
+    }
+  },
+  "SKFINDUS": {
+    "set": "Bearings (India)",
+    "of": 6,
+    "rank": 2,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Schaeffler India",
+        "score": 7.8,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "SKF India",
+        "score": 7.4,
+        "verdict": "STRONG",
+        "self": true
+      },
+      {
+        "name": "Timken India",
+        "score": 7.2,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "AB SKF (global)",
+        "score": 7.0,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "NRB Bearings",
+        "score": 6.4,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "NEI / Tata Bearings",
+        "score": 6.0,
+        "verdict": "AVERAGE"
+      }
+    ],
+    "why": "Top-2 bearing maker with strong after-market and ~29% ROE; Schaeffler leads on breadth and EV content.",
+    "best_own": {
+      "name": "Schaeffler India",
+      "why": "broadest portfolio + EV"
+    },
+    "avoid": {
+      "name": "NEI / Tata Bearings",
+      "why": "sub-scale"
+    }
+  },
+  "INGERRAND": {
+    "set": "Air compressors (India)",
+    "of": 6,
+    "rank": 3,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Atlas Copco",
+        "score": 8.4,
+        "verdict": "CLEAR LEADER"
+      },
+      {
+        "name": "Elgi Equipment",
+        "score": 7.5,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Ingersoll Rand India",
+        "score": 7.4,
+        "verdict": "STRONG",
+        "self": true
+      },
+      {
+        "name": "Gardner Denver",
+        "score": 7.0,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Kirloskar Pneumatic",
+        "score": 6.8,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Sullair / Hitachi",
+        "score": 6.4,
+        "verdict": "SOLID"
+      }
+    ],
+    "why": "US-parent brand with 42% ROE and high margins but cyclical capex and a recent revenue dip.",
+    "best_own": {
+      "name": "Atlas Copco",
+      "why": "global scale + margins"
+    },
+    "avoid": {
+      "name": "Sullair / Hitachi",
+      "why": "weaker India franchise"
+    }
+  },
+  "KIRLPNU": {
+    "set": "Compressors & process equipment (India)",
+    "of": 6,
+    "rank": 4,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Atlas Copco",
+        "score": 8.4,
+        "verdict": "CLEAR LEADER"
+      },
+      {
+        "name": "Elgi Equipment",
+        "score": 7.5,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Ingersoll Rand India",
+        "score": 7.4,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Kirloskar Pneumatic",
+        "score": 7.0,
+        "verdict": "SOLID",
+        "self": true
+      },
+      {
+        "name": "Kirloskar Brothers",
+        "score": 6.6,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Sullair / Hitachi",
+        "score": 6.4,
+        "verdict": "SOLID"
+      }
+    ],
+    "why": "Defence-refrigeration plus industrial compressors with 21% ROE and a strong order book but niche scale.",
+    "best_own": {
+      "name": "Atlas Copco",
+      "why": "scale + margins"
+    },
+    "avoid": {
+      "name": "Sullair / Hitachi",
+      "why": "weaker franchise"
+    }
+  },
+  "ISGEC": {
+    "set": "Heavy engineering / EPC (India)",
+    "of": 6,
+    "rank": 5,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Larsen & Toubro",
+        "score": 8.0,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Triveni Turbine",
+        "score": 7.6,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Thermax",
+        "score": 7.5,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Praj Industries",
+        "score": 7.2,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Isgec Heavy Engineering",
+        "score": 6.6,
+        "verdict": "SOLID",
+        "self": true
+      },
+      {
+        "name": "BHEL",
+        "score": 5.5,
+        "verdict": "WEAK"
+      }
+    ],
+    "why": "Multi-product boilers/presses/sugar-equipment with global reach but lumpy projects and low ROE.",
+    "best_own": {
+      "name": "Larsen & Toubro",
+      "why": "execution + diversification"
+    },
+    "avoid": {
+      "name": "BHEL",
+      "why": "weak returns, PSU drag"
+    }
+  },
+  "JNKINDIA": {
+    "set": "Process-fired heaters / EPC (India)",
+    "of": 6,
+    "rank": 3,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Thermax",
+        "score": 7.5,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Praj Industries",
+        "score": 7.2,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "JNK India",
+        "score": 7.0,
+        "verdict": "SOLID",
+        "self": true
+      },
+      {
+        "name": "Isgec Heavy Engineering",
+        "score": 6.6,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Tema India",
+        "score": 6.0,
+        "verdict": "AVERAGE"
+      },
+      {
+        "name": "BHEL",
+        "score": 5.5,
+        "verdict": "WEAK"
+      }
+    ],
+    "why": "Exclusive Korean fired-heater technology with green-H2 optionality and 146% PAT CAGR but project-lumpy and small.",
+    "best_own": {
+      "name": "Thermax",
+      "why": "integrated, diversified"
+    },
+    "avoid": {
+      "name": "BHEL",
+      "why": "weak returns"
+    }
+  },
+  "POWERICA": {
+    "set": "Diesel gensets & power equipment (India)",
+    "of": 6,
+    "rank": 4,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Cummins India",
+        "score": 8.0,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Kirloskar Oil Engines",
+        "score": 7.4,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Mahindra Powerol",
+        "score": 7.0,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Powerica",
+        "score": 6.6,
+        "verdict": "SOLID",
+        "self": true
+      },
+      {
+        "name": "Jakson (unlisted)",
+        "score": 6.4,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Greaves Cotton",
+        "score": 6.2,
+        "verdict": "AVERAGE"
+      }
+    ],
+    "why": "Largest independent Cummins DG dealer with AMC recurring revenue and data-centre demand but grid-reliability long-term risk.",
+    "best_own": {
+      "name": "Cummins India",
+      "why": "OEM moat + cash"
+    },
+    "avoid": {
+      "name": "Greaves Cotton",
+      "why": "EV-transition drag"
+    }
+  },
+  "ENRIN": {
+    "set": "Power generation & grid equipment (India)",
+    "of": 6,
+    "rank": 3,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Hitachi Energy India",
+        "score": 8.7,
+        "verdict": "CLEAR LEADER"
+      },
+      {
+        "name": "ABB India",
+        "score": 8.3,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Siemens Energy India",
+        "score": 7.6,
+        "verdict": "STRONG",
+        "self": true
+      },
+      {
+        "name": "GE Vernova T&D India",
+        "score": 7.4,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "CG Power",
+        "score": 7.2,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "BHEL",
+        "score": 5.5,
+        "verdict": "WEAK"
+      }
+    ],
+    "why": "Gas-turbine + grid + transmission franchise with parent technology riding energy capex; behind Hitachi/ABB on returns.",
+    "best_own": {
+      "name": "Hitachi Energy India",
+      "why": "HVDC franchise + RoCE"
+    },
+    "avoid": {
+      "name": "BHEL",
+      "why": "weak returns"
+    }
+  },
+  "CESC": {
+    "set": "Integrated power utilities (India)",
+    "of": 6,
+    "rank": 5,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "NTPC",
+        "score": 8.0,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Tata Power",
+        "score": 7.6,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Torrent Power",
+        "score": 7.4,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "JSW Energy",
+        "score": 7.2,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "CESC",
+        "score": 6.8,
+        "verdict": "SOLID",
+        "self": true
+      },
+      {
+        "name": "Adani Power",
+        "score": 6.6,
+        "verdict": "SOLID"
+      }
+    ],
+    "why": "100-year Kolkata distribution monopoly with DISCOM-privatisation optionality but regulated returns and high debt.",
+    "best_own": {
+      "name": "Tata Power",
+      "why": "RE growth + distribution mix"
+    },
+    "avoid": {
+      "name": "Adani Power",
+      "why": "leverage + governance optics"
+    }
+  },
+  "GIPCL": {
+    "set": "PSU / state power gencos (India)",
+    "of": 6,
+    "rank": 4,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "NTPC",
+        "score": 8.0,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "NHPC",
+        "score": 7.2,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "SJVN",
+        "score": 6.6,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "GIPCL",
+        "score": 6.6,
+        "verdict": "SOLID",
+        "self": true
+      },
+      {
+        "name": "NLC India",
+        "score": 6.4,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Jaiprakash Power",
+        "score": 5.5,
+        "verdict": "WEAK"
+      }
+    ],
+    "why": "Long-term GUVNL PPAs plus lignite cost edge and cheap valuation but lignite sunset and limited growth.",
+    "best_own": {
+      "name": "NTPC",
+      "why": "scale + RE pivot"
+    },
+    "avoid": {
+      "name": "Jaiprakash Power",
+      "why": "leveraged, weak"
+    }
+  },
+  "NLCINDIA": {
+    "set": "PSU power gencos (India)",
+    "of": 6,
+    "rank": 5,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "NTPC",
+        "score": 8.0,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "NHPC",
+        "score": 7.2,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "SJVN",
+        "score": 6.6,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "GIPCL",
+        "score": 6.6,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "NLC India",
+        "score": 6.4,
+        "verdict": "SOLID",
+        "self": true
+      },
+      {
+        "name": "Jaiprakash Power",
+        "score": 5.5,
+        "verdict": "WEAK"
+      }
+    ],
+    "why": "Lignite miner-genco with captive cost edge and an RE pivot but polluting-fuel transition and PSU pace.",
+    "best_own": {
+      "name": "NTPC",
+      "why": "scale + RE pivot"
+    },
+    "avoid": {
+      "name": "Jaiprakash Power",
+      "why": "leveraged, weak"
+    }
+  },
+  "SJVN": {
+    "set": "Hydro / RE PSU gencos (India)",
+    "of": 6,
+    "rank": 3,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "NTPC",
+        "score": 8.0,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "NHPC",
+        "score": 7.4,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "SJVN",
+        "score": 6.6,
+        "verdict": "SOLID",
+        "self": true
+      },
+      {
+        "name": "GIPCL",
+        "score": 6.6,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "NLC India",
+        "score": 6.4,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Jaiprakash Power",
+        "score": 5.5,
+        "verdict": "WEAK"
+      }
+    ],
+    "why": "Hydro concessions plus an aggressive 25GW RE target but long gestation and low current ROE.",
+    "best_own": {
+      "name": "NTPC",
+      "why": "scale + execution"
+    },
+    "avoid": {
+      "name": "Jaiprakash Power",
+      "why": "leveraged, weak"
+    }
+  },
+  "PFC": {
+    "set": "Power-sector NBFCs (India)",
+    "of": 6,
+    "rank": 2,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "REC",
+        "score": 7.4,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Power Finance Corp",
+        "score": 7.2,
+        "verdict": "SOLID",
+        "self": true
+      },
+      {
+        "name": "IREDA",
+        "score": 7.0,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "IRFC",
+        "score": 6.8,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "L&T Finance",
+        "score": 6.4,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "PTC India Financial Services",
+        "score": 6.0,
+        "verdict": "AVERAGE"
+      }
+    ],
+    "why": "Largest power-sector financier with sovereign-backed funding and 20% ROE but DISCOM credit risk.",
+    "best_own": {
+      "name": "REC",
+      "why": "similar moat, cleaner book"
+    },
+    "avoid": {
+      "name": "L&T Finance",
+      "why": "more competitive lending"
+    }
+  },
+  "PTC": {
+    "set": "Power trading & exchanges (India)",
+    "of": 6,
+    "rank": 3,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Indian Energy Exchange",
+        "score": 8.0,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Tata Power Trading (unlisted)",
+        "score": 6.8,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "PTC India",
+        "score": 6.6,
+        "verdict": "SOLID",
+        "self": true
+      },
+      {
+        "name": "NTPC Vidyut Vyapar",
+        "score": 6.4,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "PXIL",
+        "score": 6.2,
+        "verdict": "AVERAGE"
+      },
+      {
+        "name": "Manikaran (unlisted)",
+        "score": 6.0,
+        "verdict": "AVERAGE"
+      }
+    ],
+    "why": "Largest bilateral power trader plus cross-border flows with a high dividend but thin trading margins and IEX disintermediation.",
+    "best_own": {
+      "name": "Indian Energy Exchange",
+      "why": "exchange network-effect moat"
+    },
+    "avoid": {
+      "name": "Manikaran (unlisted)",
+      "why": "sub-scale"
+    }
+  },
+  "KPIGREEN": {
+    "set": "Solar IPP / EPC (India)",
+    "of": 6,
+    "rank": 5,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Adani Green",
+        "score": 7.6,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Tata Power Renewables",
+        "score": 7.4,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Waaree Energies",
+        "score": 7.2,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Premier Energies",
+        "score": 7.0,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "KPI Green Energy",
+        "score": 6.8,
+        "verdict": "SOLID",
+        "self": true
+      },
+      {
+        "name": "Sterling & Wilson",
+        "score": 6.4,
+        "verdict": "SOLID"
+      }
+    ],
+    "why": "Fast-growing solar IPP+EPC with 47% PAT CAGR and a captive-CPP model but high leverage and execution intensity.",
+    "best_own": {
+      "name": "Tata Power Renewables",
+      "why": "balance sheet + integration"
+    },
+    "avoid": {
+      "name": "Sterling & Wilson",
+      "why": "lumpy EPC, past stress"
+    }
+  },
+  "CLEANMAX": {
+    "set": "C&I rooftop / open-access solar (India)",
+    "of": 6,
+    "rank": 5,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Adani Green",
+        "score": 7.6,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Tata Power Renewables",
+        "score": 7.4,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Amplus Solar (unlisted)",
+        "score": 6.8,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "KPI Green Energy",
+        "score": 6.8,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "CleanMax Enviro",
+        "score": 6.6,
+        "verdict": "SOLID",
+        "self": true
+      },
+      {
+        "name": "Fourth Partner (unlisted)",
+        "score": 6.6,
+        "verdict": "SOLID"
+      }
+    ],
+    "why": "Leading C&I solar developer with marquee corporate clients but very high leverage and low ROE.",
+    "best_own": {
+      "name": "Tata Power Renewables",
+      "why": "scale + balance sheet"
+    },
+    "avoid": {
+      "name": "Fourth Partner (unlisted)",
+      "why": "high-debt growth"
+    }
+  },
+  "DEEDEV": {
+    "set": "Industrial piping / process equipment (India)",
+    "of": 6,
+    "rank": 5,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Thermax",
+        "score": 7.5,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Praj Industries",
+        "score": 7.2,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Welspun Corp",
+        "score": 7.0,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Isgec Heavy Engineering",
+        "score": 6.6,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Dee Development Engineers",
+        "score": 6.4,
+        "verdict": "SOLID",
+        "self": true
+      },
+      {
+        "name": "Man Industries",
+        "score": 6.0,
+        "verdict": "AVERAGE"
+      }
+    ],
+    "why": "IBR/ASME-certified high-pressure piping for refineries/power with a moat but project-lumpy revenue, low ROE and high D/E.",
+    "best_own": {
+      "name": "Thermax",
+      "why": "diversified, high RoCE"
+    },
+    "avoid": {
+      "name": "Man Industries",
+      "why": "commodity pipe cycle"
+    }
+  },
+  "SOUTHWEST": {
+    "set": "Oilfield / drilling services (India)",
+    "of": 6,
+    "rank": 3,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Deep Industries",
+        "score": 6.8,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Jindal Drilling",
+        "score": 6.4,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "South West Pinnacle",
+        "score": 6.2,
+        "verdict": "AVERAGE",
+        "self": true
+      },
+      {
+        "name": "Asian Energy Services",
+        "score": 6.0,
+        "verdict": "AVERAGE"
+      },
+      {
+        "name": "Dolphin Offshore",
+        "score": 5.8,
+        "verdict": "AVERAGE"
+      },
+      {
+        "name": "Aban Offshore",
+        "score": 5.5,
+        "verdict": "WEAK"
+      }
+    ],
+    "why": "Niche well-completion/exploration services with ONGC ties and decent ROE but monopsony customer and oil-price sensitivity.",
+    "best_own": {
+      "name": "Deep Industries",
+      "why": "diversified gas-services + returns"
+    },
+    "avoid": {
+      "name": "Aban Offshore",
+      "why": "debt distress"
+    }
+  },
+  "GALAPREC": {
+    "set": "Precision springs & fasteners (India)",
+    "of": 6,
+    "rank": 4,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Sundram Fasteners",
+        "score": 7.6,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Sansera Engineering",
+        "score": 7.2,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Ramkrishna Forgings",
+        "score": 6.8,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Gala Precision Engineering",
+        "score": 6.6,
+        "verdict": "SOLID",
+        "self": true
+      },
+      {
+        "name": "Mahindra CIE",
+        "score": 6.4,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Talbros Engineering",
+        "score": 6.0,
+        "verdict": "AVERAGE"
+      }
+    ],
+    "why": "Precision coil/disc-spring exporter with certifications and 20%+ growth but small scale and customer concentration.",
+    "best_own": {
+      "name": "Sundram Fasteners",
+      "why": "scale + RoCE"
+    },
+    "avoid": {
+      "name": "Talbros Engineering",
+      "why": "thin, cyclical"
+    }
+  },
+  "HAPPYFORGE": {
+    "set": "Forgings (India)",
+    "of": 6,
+    "rank": 3,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Bharat Forge",
+        "score": 7.8,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Sundram Fasteners",
+        "score": 7.6,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Happy Forgings",
+        "score": 7.2,
+        "verdict": "SOLID",
+        "self": true
+      },
+      {
+        "name": "CIE Automotive India",
+        "score": 7.0,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Ramkrishna Forgings",
+        "score": 6.8,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "MM Forgings",
+        "score": 6.2,
+        "verdict": "AVERAGE"
+      }
+    ],
+    "why": "Largest 14,000-tonne press line with multi-sector diversification and 23% PAT CAGR; behind Bharat Forge/Sundram on scale.",
+    "best_own": {
+      "name": "Bharat Forge",
+      "why": "scale + defence/export"
+    },
+    "avoid": {
+      "name": "MM Forgings",
+      "why": "cyclical, lower returns"
+    }
+  },
+  "PITTIENG": {
+    "set": "Electrical laminations & components (India)",
+    "of": 6,
+    "rank": 4,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Bharat Forge (adjacent)",
+        "score": 7.6,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "TD Power Systems",
+        "score": 7.2,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Shanthi Gears",
+        "score": 7.0,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Pitti Engineering",
+        "score": 6.8,
+        "verdict": "SOLID",
+        "self": true
+      },
+      {
+        "name": "Bharat Bijlee",
+        "score": 6.6,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Indo Tech Transformers",
+        "score": 6.0,
+        "verdict": "AVERAGE"
+      }
+    ],
+    "why": "GE/Siemens-qualified lamination maker for traction motors with a rail tailwind but CRGO-steel margins and a recent PAT dip.",
+    "best_own": {
+      "name": "TD Power Systems",
+      "why": "generator niche + returns"
+    },
+    "avoid": {
+      "name": "Indo Tech Transformers",
+      "why": "sub-scale"
+    }
+  },
+  "TEJASNET": {
+    "set": "Telecom equipment (India + global)",
+    "of": 6,
+    "rank": 4,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Ericsson (global)",
+        "score": 7.6,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Nokia (global)",
+        "score": 7.4,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "HFCL",
+        "score": 6.6,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Tejas Networks",
+        "score": 6.4,
+        "verdict": "SOLID",
+        "self": true
+      },
+      {
+        "name": "Sterlite Technologies",
+        "score": 5.8,
+        "verdict": "AVERAGE"
+      },
+      {
+        "name": "ITI Limited",
+        "score": 4.5,
+        "verdict": "WEAK"
+      }
+    ],
+    "why": "Only Indian end-to-end telecom-gear IP with BSNL 4G and Tata backing but severe revenue lumpiness and current losses.",
+    "best_own": {
+      "name": "Ericsson (global)",
+      "why": "scale + proven 5G"
+    },
+    "avoid": {
+      "name": "ITI Limited",
+      "why": "loss-making PSU"
+    }
+  },
+  "WELCORP": {
+    "set": "Large-diameter steel pipes (global)",
+    "of": 6,
+    "rank": 3,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Tenaris (global)",
+        "score": 7.8,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Jindal SAW",
+        "score": 7.4,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Welspun Corp",
+        "score": 7.2,
+        "verdict": "SOLID",
+        "self": true
+      },
+      {
+        "name": "Ratnamani Metals",
+        "score": 7.2,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Maharashtra Seamless",
+        "score": 7.0,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Man Industries",
+        "score": 6.4,
+        "verdict": "SOLID"
+      }
+    ],
+    "why": "Only Indian SAW+ERW maker with a US plant and Sintex diversification but steel/oil-cycle margins and a recent PAT drop.",
+    "best_own": {
+      "name": "Ratnamani Metals",
+      "why": "specialty mix + high RoCE"
+    },
+    "avoid": {
+      "name": "Man Industries",
+      "why": "thin, cyclical"
+    }
+  },
+  "SUZLON": {
+    "set": "Wind turbine OEMs (India + global)",
+    "of": 6,
+    "rank": 4,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Vestas (global)",
+        "score": 7.6,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Inox Wind",
+        "score": 7.0,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Siemens Gamesa",
+        "score": 7.0,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Suzlon Energy",
+        "score": 6.8,
+        "verdict": "SOLID",
+        "self": true
+      },
+      {
+        "name": "GE Wind",
+        "score": 6.8,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Senvion (defunct)",
+        "score": 4.5,
+        "verdict": "WEAK"
+      }
+    ],
+    "why": "Turnaround with 40% ROE, a clean balance sheet and a large order book but execution-cyclical and past governance scars.",
+    "best_own": {
+      "name": "Vestas (global)",
+      "why": "scale + technology"
+    },
+    "avoid": {
+      "name": "Senvion (defunct)",
+      "why": "bankruptcy cautionary"
+    }
+  },
+  "HLEGLAS": {
+    "set": "Glass-lined / process equipment (India)",
+    "of": 6,
+    "rank": 4,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Thermax",
+        "score": 7.5,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "GMM Pfaudler",
+        "score": 7.4,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Praj Industries",
+        "score": 7.2,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "HLE Glascoat",
+        "score": 6.4,
+        "verdict": "SOLID",
+        "self": true
+      },
+      {
+        "name": "Standard Glass Lining",
+        "score": 6.2,
+        "verdict": "AVERAGE"
+      },
+      {
+        "name": "Tema India",
+        "score": 6.0,
+        "verdict": "AVERAGE"
+      }
+    ],
+    "why": "#2 glass-lined-equipment maker for pharma/chem capex but recent earnings decline, high D/E and cyclicality.",
+    "best_own": {
+      "name": "GMM Pfaudler",
+      "why": "global glass-lining leader"
+    },
+    "avoid": {
+      "name": "Tema India",
+      "why": "sub-scale"
+    }
+  },
+  "WENDT": {
+    "set": "Super-abrasives & grinding (India)",
+    "of": 6,
+    "rank": 6,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Saint-Gobain (global)",
+        "score": 7.8,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "AIA Engineering (adjacent)",
+        "score": 7.6,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Grindwell Norton",
+        "score": 7.4,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "3M India",
+        "score": 7.2,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Carborundum Universal",
+        "score": 7.0,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Wendt India",
+        "score": 6.4,
+        "verdict": "SOLID",
+        "self": true
+      }
+    ],
+    "why": "Niche super-abrasives/diamond-tool maker with a debt-free balance sheet but very small, illiquid and earnings decline.",
+    "best_own": {
+      "name": "Grindwell Norton",
+      "why": "scale + RoCE"
+    },
+    "avoid": {
+      "name": "Wendt India",
+      "why": "sub-scale, illiquid"
+    }
+  },
+  "SGIL": {
+    "set": "Wind / heavy castings (India)",
+    "of": 6,
+    "rank": 6,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "AIA Engineering",
+        "score": 7.6,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Kirloskar Ferrous",
+        "score": 6.6,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Electrosteel Castings",
+        "score": 6.4,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "RACL Geartech",
+        "score": 6.2,
+        "verdict": "AVERAGE"
+      },
+      {
+        "name": "Simplex Castings",
+        "score": 5.8,
+        "verdict": "AVERAGE"
+      },
+      {
+        "name": "Synergy Green Industries",
+        "score": 5.6,
+        "verdict": "WEAK",
+        "self": true
+      }
+    ],
+    "why": "Wind-turbine heavy-casting supplier riding RE capex but high leverage, sharp PAT decline and a very high PE.",
+    "best_own": {
+      "name": "AIA Engineering",
+      "why": "high-RoCE castings leader"
+    },
+    "avoid": {
+      "name": "Synergy Green Industries",
+      "why": "await deleveraging"
+    }
+  },
+  "KSB": {
+    "set": "Industrial pumps & valves (India)",
+    "of": 6,
+    "rank": 3,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Grundfos (unlisted)",
+        "score": 7.6,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Kirloskar Brothers",
+        "score": 7.2,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "KSB Limited",
+        "score": 7.0,
+        "verdict": "SOLID",
+        "self": true
+      },
+      {
+        "name": "Shakti Pumps",
+        "score": 7.0,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "WPIL",
+        "score": 6.6,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Roto Pumps",
+        "score": 6.4,
+        "verdict": "SOLID"
+      }
+    ],
+    "why": "German-parent pumps/valves for nuclear/industrial with a clean balance sheet but a recent PAT dip and cyclicality.",
+    "best_own": {
+      "name": "Kirloskar Brothers",
+      "why": "scale + RoCE"
+    },
+    "avoid": {
+      "name": "Roto Pumps",
+      "why": "sub-scale"
+    }
+  },
+  "JYOTICNC": {
+    "set": "CNC machine tools (India + global)",
+    "of": 6,
+    "rank": 3,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "DMG Mori (global)",
+        "score": 7.6,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Lakshmi Machine Works",
+        "score": 7.2,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Jyoti CNC Automation",
+        "score": 7.0,
+        "verdict": "SOLID",
+        "self": true
+      },
+      {
+        "name": "Ace Micromatic (unlisted)",
+        "score": 7.0,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Bharat Fritz Werner (unlisted)",
+        "score": 6.6,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Macpower CNC",
+        "score": 6.4,
+        "verdict": "SOLID"
+      }
+    ],
+    "why": "#1 listed Indian CNC OEM with an aero/defence order book and 18% ROE but a recent PAT dip and working-capital intensity.",
+    "best_own": {
+      "name": "Lakshmi Machine Works",
+      "why": "scale + balance sheet"
+    },
+    "avoid": {
+      "name": "Macpower CNC",
+      "why": "sub-scale"
+    }
+  },
+  "3MINDIA": {
+    "set": "Diversified industrials / consumer (India)",
+    "of": 6,
+    "rank": 3,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Pidilite Industries",
+        "score": 8.0,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Bosch India",
+        "score": 7.8,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "3M India",
+        "score": 7.6,
+        "verdict": "STRONG",
+        "self": true
+      },
+      {
+        "name": "Honeywell Automation",
+        "score": 7.4,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "SKF India",
+        "score": 7.4,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Grindwell Norton",
+        "score": 7.4,
+        "verdict": "STRONG"
+      }
+    ],
+    "why": "Parent-tech diversified portfolio with 29% ROE and strong cash but premium valuation and an MNC-royalty drag.",
+    "best_own": {
+      "name": "Pidilite Industries",
+      "why": "brand moat + compounding"
+    },
+    "avoid": {
+      "name": "Bosch India",
+      "why": "more cyclical auto mix"
+    }
+  },
+  "VASCONEQ": {
+    "set": "Real estate & EPC contracting (India)",
+    "of": 6,
+    "rank": 6,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "DLF",
+        "score": 8.0,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Godrej Properties",
+        "score": 7.8,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Ahluwalia Contracts",
+        "score": 6.6,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "PSP Projects",
+        "score": 6.4,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Capacit'e Infraprojects",
+        "score": 6.2,
+        "verdict": "AVERAGE"
+      },
+      {
+        "name": "Vascon Engineers",
+        "score": 5.4,
+        "verdict": "WEAK",
+        "self": true
+      }
+    ],
+    "why": "Small RE+EPC with a Pune land bank but heavy losses, negative OCF and a weak balance sheet.",
+    "best_own": {
+      "name": "DLF",
+      "why": "scale + annuity portfolio"
+    },
+    "avoid": {
+      "name": "Vascon Engineers",
+      "why": "await turnaround"
+    }
+  },
+  "RAYMOND": {
+    "set": "Branded textiles + real estate (India)",
+    "of": 6,
+    "rank": 6,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Page Industries",
+        "score": 8.0,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "KPR Mill",
+        "score": 7.4,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Vardhman Textiles",
+        "score": 7.2,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Arvind",
+        "score": 6.6,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Welspun Living",
+        "score": 6.2,
+        "verdict": "AVERAGE"
+      },
+      {
+        "name": "Raymond",
+        "score": 6.0,
+        "verdict": "AVERAGE",
+        "self": true
+      }
+    ],
+    "why": "90-year suiting brand plus Thane land-bank value but demerger complexity, low ROE and high PE.",
+    "best_own": {
+      "name": "Page Industries",
+      "why": "brand moat + RoCE"
+    },
+    "avoid": {
+      "name": "Raymond",
+      "why": "low ROE until realty monetises"
+    }
+  },
+  "RAYMONDREL": {
+    "set": "Mumbai-region real estate (India)",
+    "of": 6,
+    "rank": 6,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Godrej Properties",
+        "score": 8.0,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Oberoi Realty",
+        "score": 7.8,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Macrotech (Lodha)",
+        "score": 7.6,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Sunteck Realty",
+        "score": 6.6,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Keystone Realtors",
+        "score": 6.6,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Raymond Realty",
+        "score": 6.4,
+        "verdict": "SOLID",
+        "self": true
+      }
+    ],
+    "why": "Thane township with irreplaceable land and the Raymond brand but single-asset concentration and early-stage execution.",
+    "best_own": {
+      "name": "Godrej Properties",
+      "why": "pan-India brand + execution"
+    },
+    "avoid": {
+      "name": "Sunteck Realty",
+      "why": "lumpy launches"
+    }
+  },
+  "RUSTOMJEE": {
+    "set": "Mumbai-region real estate (India)",
+    "of": 6,
+    "rank": 5,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Godrej Properties",
+        "score": 8.0,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Oberoi Realty",
+        "score": 7.8,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Macrotech (Lodha)",
+        "score": 7.6,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Sunteck Realty",
+        "score": 6.6,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Keystone Realtors",
+        "score": 6.6,
+        "verdict": "SOLID",
+        "self": true
+      },
+      {
+        "name": "Raymond Realty",
+        "score": 6.4,
+        "verdict": "SOLID"
+      }
+    ],
+    "why": "Trusted MMR brand with a JDA-led asset-light model but negative OCF and intense MMR-luxury competition.",
+    "best_own": {
+      "name": "Oberoi Realty",
+      "why": "premium, high-RoCE"
+    },
+    "avoid": {
+      "name": "Raymond Realty",
+      "why": "single-asset, early-stage"
+    }
+  },
+  "ELDEHSG": {
+    "set": "Tier-2 real estate (India)",
+    "of": 6,
+    "rank": 4,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Godrej Properties",
+        "score": 8.0,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Anant Raj",
+        "score": 7.0,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Ashiana Housing",
+        "score": 6.8,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Eldeco Housing",
+        "score": 6.6,
+        "verdict": "SOLID",
+        "self": true
+      },
+      {
+        "name": "Mahindra Lifespaces",
+        "score": 6.6,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Sunteck Realty",
+        "score": 6.6,
+        "verdict": "SOLID"
+      }
+    ],
+    "why": "35-year UP/Lucknow brand with an asset-light model and high growth but small and regionally concentrated.",
+    "best_own": {
+      "name": "Godrej Properties",
+      "why": "brand + national scale"
+    },
+    "avoid": {
+      "name": "Sunteck Realty",
+      "why": "lumpy launches"
+    }
+  },
+  "ASHIANA": {
+    "set": "Mid-income / senior-living RE (India)",
+    "of": 6,
+    "rank": 3,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Godrej Properties",
+        "score": 8.0,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Brigade Enterprises",
+        "score": 7.2,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Ashiana Housing",
+        "score": 6.8,
+        "verdict": "SOLID",
+        "self": true
+      },
+      {
+        "name": "Mahindra Lifespaces",
+        "score": 6.8,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Eldeco Housing",
+        "score": 6.6,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Kolte-Patil",
+        "score": 6.6,
+        "verdict": "SOLID"
+      }
+    ],
+    "why": "Disciplined mid-income plus senior-living first-mover with an area-sell model but small parcels and cyclicality.",
+    "best_own": {
+      "name": "Brigade Enterprises",
+      "why": "diversified, high-RoCE"
+    },
+    "avoid": {
+      "name": "Kolte-Patil",
+      "why": "lumpy execution"
+    }
+  },
+  "EMBDL": {
+    "set": "Commercial real estate (India)",
+    "of": 6,
+    "rank": 6,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "DLF",
+        "score": 8.0,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Embassy Office REIT",
+        "score": 7.8,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Prestige Estates",
+        "score": 7.4,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Brookfield India REIT",
+        "score": 7.2,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Mindspace REIT",
+        "score": 7.2,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Embassy Developments",
+        "score": 6.0,
+        "verdict": "AVERAGE",
+        "self": true
+      }
+    ],
+    "why": "Prime office land bank and marquee tenants but negative ROE, restructuring and execution overhang.",
+    "best_own": {
+      "name": "DLF",
+      "why": "best annuity + balance sheet"
+    },
+    "avoid": {
+      "name": "Embassy Developments",
+      "why": "await cash flows"
+    }
+  },
+  "TREL": {
+    "set": "Logistics real estate / parks (India)",
+    "of": 6,
+    "rank": 5,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Embassy Office REIT",
+        "score": 7.8,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Mindspace REIT",
+        "score": 7.2,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Allcargo Logistics",
+        "score": 7.0,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Welspun One (unlisted)",
+        "score": 6.6,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Transindia Real Estate",
+        "score": 6.2,
+        "verdict": "AVERAGE",
+        "self": true
+      },
+      {
+        "name": "NDR InvIT",
+        "score": 6.0,
+        "verdict": "AVERAGE"
+      }
+    ],
+    "why": "Allcargo-demerged logistics-park plus engineering-solutions play but small, lumpy and early-stage.",
+    "best_own": {
+      "name": "Embassy Office REIT",
+      "why": "scale + yield"
+    },
+    "avoid": {
+      "name": "NDR InvIT",
+      "why": "narrow, early"
+    }
+  },
+  "OMINFRAL": {
+    "set": "Hydro / water-infra EPC (India)",
+    "of": 6,
+    "rank": 5,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Larsen & Toubro",
+        "score": 8.0,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "NCC",
+        "score": 7.0,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "J Kumar Infraprojects",
+        "score": 6.8,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Patel Engineering",
+        "score": 6.6,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Om Infra",
+        "score": 5.8,
+        "verdict": "AVERAGE",
+        "self": true
+      },
+      {
+        "name": "HCC",
+        "score": 5.5,
+        "verdict": "WEAK"
+      }
+    ],
+    "why": "Dam/hydro EPC plus toll and SRA realty optionality but lumpy projects, negative OCF and losses.",
+    "best_own": {
+      "name": "Larsen & Toubro",
+      "why": "execution + balance sheet"
+    },
+    "avoid": {
+      "name": "HCC",
+      "why": "debt-laden"
+    }
+  },
+  "INTERARCH": {
+    "set": "Pre-engineered buildings (India)",
+    "of": 6,
+    "rank": 3,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Tata BlueScope (unlisted)",
+        "score": 7.2,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Pennar Industries",
+        "score": 7.0,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Interarch Building",
+        "score": 7.0,
+        "verdict": "SOLID",
+        "self": true
+      },
+      {
+        "name": "Kirby (unlisted)",
+        "score": 6.8,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Everest Industries",
+        "score": 6.4,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Smith Structures",
+        "score": 6.0,
+        "verdict": "AVERAGE"
+      }
+    ],
+    "why": "#2 PEB maker with in-house design and an e-commerce-warehouse tailwind but steel-price margins and a weak OCF quarter.",
+    "best_own": {
+      "name": "Tata BlueScope (unlisted)",
+      "why": "scale + steel integration"
+    },
+    "avoid": {
+      "name": "Smith Structures",
+      "why": "sub-scale"
+    }
+  },
+  "CAPACITE": {
+    "set": "Building construction contractors (India)",
+    "of": 6,
+    "rank": 4,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Larsen & Toubro",
+        "score": 8.0,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "NCC",
+        "score": 7.0,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Ahluwalia Contracts",
+        "score": 7.0,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Capacit'e Infraprojects",
+        "score": 6.6,
+        "verdict": "SOLID",
+        "self": true
+      },
+      {
+        "name": "PSP Projects",
+        "score": 6.6,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "J Kumar Infraprojects",
+        "score": 6.6,
+        "verdict": "SOLID"
+      }
+    ],
+    "why": "Mivan-formwork high-rise specialist for tier-1 developers but developer-credit risk and a working-capital-heavy model.",
+    "best_own": {
+      "name": "Larsen & Toubro",
+      "why": "execution + diversification"
+    },
+    "avoid": {
+      "name": "J Kumar Infraprojects",
+      "why": "leverage, lumpy"
+    }
+  },
+  "ARIS": {
+    "set": "B2B construction-materials marketplace (India)",
+    "of": 6,
+    "rank": 6,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "OfBusiness (unlisted)",
+        "score": 7.6,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Infra.Market (unlisted)",
+        "score": 7.4,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Moglix (unlisted)",
+        "score": 6.8,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Shankara Building Products",
+        "score": 6.4,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Bizongo (unlisted)",
+        "score": 6.0,
+        "verdict": "AVERAGE"
+      },
+      {
+        "name": "Arisinfra Solutions",
+        "score": 5.6,
+        "verdict": "WEAK",
+        "self": true
+      }
+    ],
+    "why": "Tech-enabled construction-materials marketplace but loss-making, thin margins and working-capital-heavy vs better-funded peers.",
+    "best_own": {
+      "name": "OfBusiness (unlisted)",
+      "why": "profitable, financing-led"
+    },
+    "avoid": {
+      "name": "Arisinfra Solutions",
+      "why": "await profitability"
+    }
+  },
+  "SHANKARA": {
+    "set": "Building-materials retail (India)",
+    "of": 6,
+    "rank": 4,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "OfBusiness (unlisted)",
+        "score": 7.6,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Infra.Market (unlisted)",
+        "score": 7.4,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Moglix (unlisted)",
+        "score": 6.8,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Shankara Building Products",
+        "score": 6.2,
+        "verdict": "AVERAGE",
+        "self": true
+      },
+      {
+        "name": "Bizongo (unlisted)",
+        "score": 6.0,
+        "verdict": "AVERAGE"
+      },
+      {
+        "name": "Arisinfra Solutions",
+        "score": 5.6,
+        "verdict": "WEAK"
+      }
+    ],
+    "why": "South-India multi-brand building-materials retail with a store network but very low ROE, negative OCF and steel-price swings.",
+    "best_own": {
+      "name": "Infra.Market (unlisted)",
+      "why": "scale + own brands"
+    },
+    "avoid": {
+      "name": "Arisinfra Solutions",
+      "why": "loss-making"
+    }
+  },
+  "WHIRLPOOL": {
+    "set": "Consumer appliances (India)",
+    "of": 6,
+    "rank": 6,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Havells India",
+        "score": 7.8,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Voltas",
+        "score": 7.4,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Blue Star",
+        "score": 7.2,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Crompton Greaves Consumer",
+        "score": 6.8,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Symphony",
+        "score": 6.6,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Whirlpool of India",
+        "score": 6.2,
+        "verdict": "AVERAGE",
+        "self": true
+      }
+    ],
+    "why": "Global-parent tech and washing-machine strength but losing share to Samsung/LG, declining PAT and a promoter sell-down.",
+    "best_own": {
+      "name": "Havells India",
+      "why": "brand + capital allocation"
+    },
+    "avoid": {
+      "name": "Whirlpool of India",
+      "why": "await share stabilisation"
+    }
+  },
+  "ABLBL": {
+    "set": "Branded apparel retail (India)",
+    "of": 6,
+    "rank": 5,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Trent",
+        "score": 8.2,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Page Industries",
+        "score": 8.0,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Go Fashion",
+        "score": 7.0,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Raymond Lifestyle",
+        "score": 6.8,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Aditya Birla Lifestyle",
+        "score": 6.6,
+        "verdict": "SOLID",
+        "self": true
+      },
+      {
+        "name": "Arvind Fashions",
+        "score": 6.4,
+        "verdict": "SOLID"
+      }
+    ],
+    "why": "Premium apparel brands and retail scale post-demerger but high leverage, markdown risk and a discretionary slowdown.",
+    "best_own": {
+      "name": "Trent",
+      "why": "fast-fashion compounding"
+    },
+    "avoid": {
+      "name": "Arvind Fashions",
+      "why": "leveraged, mixed brands"
+    }
+  },
+  "BOROLTD": {
+    "set": "Consumer glassware / kitchenware (India)",
+    "of": 6,
+    "rank": 5,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Hawkins Cookers",
+        "score": 7.4,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "TTK Prestige",
+        "score": 7.2,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "La Opala RG",
+        "score": 7.0,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Cello World",
+        "score": 6.8,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Borosil",
+        "score": 6.6,
+        "verdict": "SOLID",
+        "self": true
+      },
+      {
+        "name": "Stove Kraft",
+        "score": 6.0,
+        "verdict": "AVERAGE"
+      }
+    ],
+    "why": "Trusted borosilicate brand with capacity-led growth but low ROE and energy-cost-driven margins.",
+    "best_own": {
+      "name": "TTK Prestige",
+      "why": "brand + distribution"
+    },
+    "avoid": {
+      "name": "Stove Kraft",
+      "why": "thin, competitive"
+    }
+  },
+  "ORIENTHOT": {
+    "set": "Hotels (India)",
+    "of": 6,
+    "rank": 5,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Indian Hotels (IHCL)",
+        "score": 8.2,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "EIH (Oberoi)",
+        "score": 8.0,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Chalet Hotels",
+        "score": 7.4,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Lemon Tree Hotels",
+        "score": 7.0,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Oriental Hotels",
+        "score": 6.4,
+        "verdict": "SOLID",
+        "self": true
+      },
+      {
+        "name": "SAMHI Hotels",
+        "score": 6.2,
+        "verdict": "AVERAGE"
+      }
+    ],
+    "why": "Taj-affiliated premium South-India assets with ADR upside but regional concentration and lower scale.",
+    "best_own": {
+      "name": "Indian Hotels (IHCL)",
+      "why": "brand + pipeline + RoCE"
+    },
+    "avoid": {
+      "name": "SAMHI Hotels",
+      "why": "leveraged roll-up"
+    }
+  },
+  "EIHOTEL": {
+    "set": "Luxury hotels (India)",
+    "of": 6,
+    "rank": 2,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Indian Hotels (IHCL)",
+        "score": 8.2,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "EIH (Oberoi)",
+        "score": 8.0,
+        "verdict": "STRONG",
+        "self": true
+      },
+      {
+        "name": "ITC Hotels",
+        "score": 7.6,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Chalet Hotels",
+        "score": 7.4,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Lemon Tree Hotels",
+        "score": 7.0,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Juniper Hotels",
+        "score": 6.6,
+        "verdict": "SOLID"
+      }
+    ],
+    "why": "Oberoi/Trident — the cleanest luxury brand moat with irreplaceable assets and 9/10 pricing power; behind IHCL only on scale/pipeline.",
+    "best_own": {
+      "name": "Indian Hotels (IHCL)",
+      "why": "scale + asset-light pipeline"
+    },
+    "avoid": {
+      "name": "Juniper Hotels",
+      "why": "leveraged, concentrated"
+    }
+  },
+  "MSTCLTD": {
+    "set": "E-commerce / e-auction PSUs (India)",
+    "of": 6,
+    "rank": 3,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "IRCTC",
+        "score": 7.6,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "RITES",
+        "score": 7.0,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "MSTC",
+        "score": 6.8,
+        "verdict": "SOLID",
+        "self": true
+      },
+      {
+        "name": "mjunction (unlisted)",
+        "score": 6.6,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "IRCON International",
+        "score": 6.6,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "MMTC",
+        "score": 5.8,
+        "verdict": "AVERAGE"
+      }
+    ],
+    "why": "Trusted government e-auction franchise with 26% ROE and a high dividend but policy-linked volumes and ferrous-scrap exposure.",
+    "best_own": {
+      "name": "IRCTC",
+      "why": "captive monopoly + cash"
+    },
+    "avoid": {
+      "name": "MMTC",
+      "why": "weak trading model"
+    }
+  },
+  "INCAP": {
+    "set": "Electronic components (small-cap India)",
+    "of": 6,
+    "rank": 6,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Kaynes Technology",
+        "score": 7.6,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Syrma SGS",
+        "score": 6.8,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "PG Electroplast",
+        "score": 6.4,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Avalon Technologies",
+        "score": 6.3,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "SPEL Semiconductor",
+        "score": 5.2,
+        "verdict": "WEAK"
+      },
+      {
+        "name": "Incap",
+        "score": 5.0,
+        "verdict": "WEAK",
+        "self": true
+      }
+    ],
+    "why": "Micro-cap with unverified positioning, a very high PE and weak returns — lowest-quality in the set (low confidence).",
+    "best_own": {
+      "name": "Kaynes Technology",
+      "why": "scale + execution"
+    },
+    "avoid": {
+      "name": "Incap",
+      "why": "sub-scale, pending verification"
+    }
+  }
+}

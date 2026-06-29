@@ -20,3 +20,9 @@ Portfolio.xlsx
 # Instruction/prompt files not needed in repo
 CLAUDE_CODE_INSTRUCTIONS*.md
 CLAUDE_CODE_PROMPT.md
+
+# Access PINs — soft client-side lock, kept local only (not on public site)
+credin/
+
+# Stray working file
+prompts/New Microsoft Excel Worksheet.xlsx

@@ -1,252 +1,142 @@
-# 👥 PEER COMPARISON — {{COMPANY_NAME}} ({{TICKER}})
+# 👥 PEER VERDICT — {COMPANY}
 
-You are an institutional-quality equity analyst.
+## CRITICAL RULES (do not violate)
+- Output ONLY two sections: "💎 Premium/Discount Verdict" and "🎯 Final Verdict".
+- DO NOT output: snapshot, rank tables, qual pillar tables, scoring breakdowns,
+  methodology notes, or any preamble.
+- DO NOT explain what you are doing. No intros. No "Let me compile…".
+  Start directly with the 💎 header.
+- Premium/Discount section = NUMBERED LIST (#1 to #6), NOT bullets, NOT a table.
+- Each numbered line = ONE sentence with: company @ P/E — evidence-based reason —
+  % over/undervaluation — VERDICT IN CAPS — 1 source link.
+- Final Verdict = exactly 5 numbered points in the order shown in the example.
+- Total output ≤ 22 lines.
 
-Use the dynamic company name, ticker symbol and live metrics supplied below (sourced from the dashboard). Verify everything independently.
+## DEEP QUALITATIVE ANALYSIS (INTERNAL — EXECUTE BEFORE VERDICT)
 
-{{SNAPSHOT}}
+### PHASE 1: TARGET COMPANY DEEP DIVE (mandatory before peer selection)
 
-Your task is to compare **{{COMPANY_NAME}} ({{TICKER}})** against its **5 closest listed peers** and determine whether the company is:
-- **UNDERVALUED**
-- **FAIRLY VALUED**
-- **OVERVALUED**
+Before making ANY valuation judgment, conduct exhaustive qualitative research on the target company:
 
-You must analyse valuation **in context of quality, growth, profitability, and balance sheet strength**.
+#### A. PRODUCT PROFILE DEPTH
+- Product complexity and differentiation (commodity vs specialty vs mission-critical)
+- Certifications held (ISO, industry-specific, customer audits)
+- Use cases and criticality to customer operations
+- Switching costs for customers (technical, operational, financial)
+- Product lifecycle and obsolescence risk
 
-Do NOT just compare P/E blindly. A premium is justified if growth, return ratios, market leadership, or balance sheet are materially stronger. A discount may be justified if governance, weak execution, leverage, cyclicality, or lower moat exists.
+#### B. MANAGEMENT QUALITY & TRACK RECORD
+- Promoter shareholding trend (stable / increasing / diluting)
+- Capital allocation history (capex discipline, M&A record, dividend consistency)
+- Execution track record (promised vs delivered capacity expansions, guidance accuracy)
+- Conference call tone and transparency (specific vs vague, accountability)
+- Related-party transactions and governance red flags
 
----
+#### C. CUSTOMER & MARKET PROFILE
+- Export share and geographic diversification
+- Customer concentration risk (top 5/10 customers as % of revenue)
+- Industries served and their cyclicality
+- Contract duration and revenue visibility
+- Customer creditworthiness
 
-## 🔒 STRICT RULES (NO EXCEPTIONS)
-1. **Do NOT fabricate any data.**
-2. Use only **credible, verifiable sources**, such as:
-   - Annual reports
-   - Investor presentations
-   - BSE / NSE filings
-   - Screener / exchange-reported data / company filings
-   - Credit rating reports
-   - Reputed financial press
-3. If a metric is unavailable, explicitly state: **"No verified data found"** or **"NV"**.
-4. Do not force peer comparisons if peers are not truly comparable.
-5. Clearly distinguish:
-   - **Verified facts**
-   - **Analytical interpretation**
-6. If the company belongs to a niche segment, choose the **closest operational peers**, not just same-sector names.
-7. If exact market share data is unavailable, state: **"Exact market share not verifiable; ranking based on available scale/revenue/industry positioning evidence."**
+#### D. ENTRY BARRIERS & MOAT STRENGTH
+- Technical complexity and manufacturing know-how
+- Certification requirements (time and cost to replicate)
+- Customer qualification timelines (switching inertia)
+- Scale advantages (fixed cost leverage, procurement power)
+- Brand equity in B2B context
 
----
+#### E. EARNINGS QUALITY & SUSTAINABILITY
+- Revenue growth consistency (lumpiness vs steady)
+- Margin stability across cycles
+- Cash conversion (CFO/EBITDA ratio)
+- Working capital intensity
+- Dependence on external factors (commodity prices, government orders, forex)
 
-## 🧠 OBJECTIVE
-Identify the **5 closest peers** to **{{COMPANY_NAME}} ({{TICKER}})** using:
-- business model similarity
-- end market similarity
-- scale similarity
-- revenue mix
-- margin profile
-- capital intensity
-- domestic vs export mix
-- competitive positioning
+### PHASE 2: PEER SELECTION (quality over similarity)
 
-Then compare the company and peers on:
+DO NOT select peers mechanically by sector/industry tags.
 
-### Valuation
-- Market Cap
-- P/E
-- EV/EBITDA (if available)
-- P/B (if relevant)
-- PEG (if available)
+- Prioritize business model similarity (not just "steel tubes")
+- Validate peer quality:
+  - Check recent governance issues, regulatory actions
+  - Check cyclicality and order book visibility
+  - Check margin volatility and execution consistency
+  - Check balance sheet stress (debt/equity, interest coverage)
+- If serious issues exist in a commonly cited "peer", DO NOT include them
+- Prefer 5 high-quality peers over 6 weak comparables
 
-### Growth
-- Revenue growth
-- EBITDA growth
-- Profit growth
-- 3Y / 5Y CAGR where possible
+### PHASE 3: VALUATION JUDGMENT (only after Phases 1 & 2)
 
-### Profitability
-- ROE
-- ROCE
-- EBITDA Margin
-- Net Margin
+For EACH company (target + all peers):
 
-### Balance Sheet / Financial Strength
-- Debt/Equity
-- Net debt / EBITDA
-- Interest Coverage
-- Free Cash Flow profile
+- Estimate fair P/E range based on:
+  - Growth (3Y CAGR, forward guidance credibility)
+  - ROCE/ROE (capital efficiency)
+  - Margins (level + stability)
+  - Business quality score (from qualitative analysis above)
+  - Cyclicality and earnings visibility
 
-### Strategic / Business Strength
-- Market leadership
-- Brand strength / moat
-- Product diversification
-- Customer concentration
-- Export strength / domestic dominance
-- Capital allocation quality
+- Calculate % overvaluation / undervaluation:
+  % = (Current P/E - Fair P/E Midpoint) / Current P/E × 100
 
----
+- DO NOT assume low P/E = undervalued
+- Penalize heavily for:
+  - Weak governance or accounting concerns
+  - High cyclicality without offsetting moat
+  - Poor earnings quality (lumpy revenue, weak cash conversion)
+  - Customer/geographic concentration
+  - Deteriorating trends (margin compression, order book decline)
 
-## 📊 SCORING SYSTEM (MANDATORY)
-Assign a score out of 10 for **each category** below for the target company, based on peer-relative strength:
-- **Valuation Score (/10)**
-- **Growth Score (/10)**
-- **Profitability Score (/10)**
-- **Balance Sheet Score (/10)**
-- **Business Quality Score (/10)**
+## METHOD (internal — never show this in output)
 
-### Score interpretation
-- **8–10** = Strong vs peers
-- **6–7** = Above average / acceptable
-- **4–5** = Mediocre / mixed
-- **0–3** = Weak vs peers
+- Score each peer on Quant (60%) + Qual (40%) where Qual = Moat + Customer
+  stickiness + Brand + Pricing power + Earnings quality.
+- Rank #1 to #6 by blended score (best → worst).
+- Each verdict line MUST cite specific evidence: certifications, customer
+  concentration %, export %, contract value, conf call quote, AR disclosure, or news source.
+  NO generic adjectives.
+- Verdict word per line: JUSTIFIED / PARTIALLY JUSTIFIED / NOT JUSTIFIED.
+- Numbers from Screener, BSE/NSE, AR, conf calls. Mark "NV" if unverified.
+  No fabrication.
 
-### Important
-- Scores must be based only on available evidence
-- Do not assign random scores
-- Give 1-line reason for each score
+## TWO LOCKED FORMAT RULES (FIX v6)
 
-### Overall Peer Score (/10) — weighted average:
-- Valuation: **25%**
-- Growth: **20%**
-- Profitability: **20%**
-- Balance Sheet: **15%**
-- Business Quality: **20%**
+### FIX 1 — Best peer to BUY (actionable, not descriptive)
+Format: **Best peer to BUY NOW**: {Name} @ ₹{CMP} — entry trigger: {price/event}
+— allocation: {how to deploy proceeds}.
 
----
+### FIX 2 — Action NOW vs REVERSE trigger (unambiguous)
+Format:
+**ACTION NOW**: [HOLD / ACCUMULATE / SWITCH OUT NOW → {Peer}]
+**REVERSE ACTION (switch back to {COMPANY}) when**:
+  (a) [measurable trigger 1] AND/OR
+  (b) [measurable trigger 2] AND/OR
+  (c) [measurable trigger 3]
 
-## 📋 OUTPUT MUST START WITH THIS
+Triggers must be numbers, events, or filing disclosures — not adjectives.
+Use AND / OR explicitly.
 
-### 📊 SUMMARY TABLE
+## OUTPUT FORMAT (copy exactly)
 
-| Category | Score (/10) | Key Reason |
-|----------|-------------|------------|
-| Valuation | X.X | <1-line reason> |
-| Growth | X.X | <1-line reason> |
-| Profitability | X.X | <1-line reason> |
-| Balance Sheet | X.X | <1-line reason> |
-| Business Quality | X.X | <1-line reason> |
+💎 Premium/Discount Verdict
 
-### ⭐ OVERALL PEER SCORE: X.X / 10
-### 🏁 PEER RANK: #X of 6
-### 💰 VALUATION VERDICT: **UNDERVALUED / FAIRLY VALUED / OVERVALUED**
-### 📉 RISK OF MISPRICING: Low / Moderate / High
+**#1 ★ {Company} @ Xx P/E** — [specific evidence] — [~XX% over/undervalued vs fair P/E]. **VERDICT**. [source]  
+**#2 {Company} @ Xx P/E** — [specific evidence] — [~XX% over/undervalued]. **VERDICT**. [source]  
+**#3 {Company} @ Xx P/E** — [specific evidence] — [~XX% over/undervalued]. **VERDICT**. [source]  
+**#4 {Company} @ Xx P/E** — [specific evidence] — [~XX% over/undervalued]. **VERDICT**. [source]  
+**#5 {Company} @ Xx P/E** — [specific evidence] — [~XX% over/undervalued]. **VERDICT**. [source]  
+**#6 {Company} @ Xx P/E** — [specific evidence] — [~XX% over/undervalued]. **VERDICT**. [source]  
 
----
+🎯 Final Verdict
 
-## 📌 TARGET COMPANY SNAPSHOT
-Start with current verified metrics for **{{COMPANY_NAME}} ({{TICKER}})**:
-- Market Cap
-- P/E
-- ROE
-- ROCE
-- EBITDA Margin
-- Debt/Equity
-- Revenue Growth
-- Profit Growth
-- Promoter Holding
-- FII / DII trend (if available)
+1. **Quant Rank**: #X | **Qual Rank**: #Y | **Blended Rank**: **#Z of 6**  
+2. **Why ranks differ**: [one sentence on quant-vs-qual divergence]  
+3. **Best peer to BUY NOW**: {Name} @ ₹{CMP} — entry trigger: {price/event} —  
+   allocation: {how to deploy proceeds}  
+4. **Peer to completely Avoid**: {Name} @ Xx  
+5. **Action for {COMPANY}**: **ACTION NOW** = [HOLD/ACCUMULATE/SWITCH OUT NOW → {Peer}]  
+   | **REVERSE ACTION when**: (a) trigger AND/OR (b) trigger AND/OR (c) trigger  
 
-If any are unavailable, say: **"No verified data found"**.
-
----
-
-## 👥 PEER IDENTIFICATION (MANDATORY)
-Identify the **5 closest peers** and explain in 1 line each **why they are comparable**.
-
-### Rules for selecting peers
-- Prefer same sub-sector / same business economics
-- Prefer direct listed competitors
-- Avoid unrelated broad sector names
-- If no perfect peers exist, choose nearest practical comparables and explicitly say so
-
-| Peer | Why Comparable |
-|------|----------------|
-| Peer 1 | <reason> |
-| Peer 2 | <reason> |
-| Peer 3 | <reason> |
-| Peer 4 | <reason> |
-| Peer 5 | <reason> |
-
----
-
-## 📊 PEER COMPARISON TABLE
-Use **only verified numbers**. If unavailable, write **NV** = Not Verified.
-
-| Company | Mcap | P/E | EV/EBITDA | ROE | ROCE | EBITDA Margin | D/E | Revenue Growth | Profit Growth |
-|---------|------|-----|-----------|-----|------|---------------|-----|----------------|---------------|
-
----
-
-## 🏆 RANK THE COMPANY VS PEERS ON THESE 5 DIMENSIONS
-
-### 1. Market Position / Scale
-Assess relative scale, leadership, reach, segment strength.
-
-### 2. Growth
-Assess sales growth, earnings growth, forward growth potential (only if evidenced).
-
-### 3. Profitability
-Assess margins, ROE / ROCE, consistency.
-
-### 4. Balance Sheet
-Assess leverage, cash flow quality, ability to fund growth.
-
-### 5. Valuation
-Assess whether premium/discount is justified relative to peers.
-
-For each dimension, provide the ranking of the target company vs peers and a 2–4 line explanation.
-
----
-
-## 🧮 VALUATION INTERPRETATION RULES
-Do **NOT** call a company overvalued just because P/E is high.
-
-### A premium may be justified if:
-- higher ROE / ROCE
-- stronger growth
-- superior margins
-- market leadership
-- cleaner balance sheet
-- better cash generation
-- stronger moat / lower cyclicality
-
-### A discount may be justified if:
-- weaker growth
-- weaker profitability
-- high leverage
-- lower quality business
-- governance concerns
-- cyclical or volatile earnings
-- customer concentration or execution risks
-
----
-
-## 🚨 RED FLAGS TO CONSIDER DURING PEER COMPARISON
-Check whether the valuation discount/premium is influenced by:
-- promoter pledging
-- auditor issues
-- regulatory history
-- weak cash flow quality
-- excessive leverage
-- customer concentration
-- one-off earnings distortion
-
----
-
-## 🎯 FINAL VERDICT
-Must conclude with:
-- **PEER RANK #X OF 6**
-- **UNDERVALUED / FAIRLY VALUED / OVERVALUED**
-- **Confidence Level: Low / Moderate / High**
-- **Reason in 3–5 sharp bullet points**
-
----
-
-## ⚠️ FINAL INSTRUCTIONS
-- Be sceptical, not promotional
-- Avoid blind metric comparison
-- Compare quality with valuation
-- Use numbers where verified
-- Do not hallucinate missing financial data
-- If peer set is imperfect, explicitly say so
-- Highlight whether premium/discount is deserved, not just visible
-
-The final goal is to answer: **"How does this company stack up against the closest peers, and is the current valuation justified?"**
+## END OF PROMPT
+Now run for: {COMPANY} ({TICKER}). Output ONLY the two sections.

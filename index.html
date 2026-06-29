@@ -152,6 +152,19 @@
       align-self: stretch;
       margin: 2px 0;
     }
+    .bench-block {
+      margin-top: 4px;
+      padding-top: 3px;
+      border-top: 1px dashed var(--border);
+    }
+    .bench-row {
+      font-size: 0.66rem;
+      font-family: var(--mono);
+      line-height: 15px;
+      height: 15px;
+      white-space: nowrap;
+      text-align: left;
+    }
 
     /* ── FILTER / SEARCH BAR ── */
     .filter-bar {
@@ -680,9 +693,28 @@
       background: var(--bg3); color: var(--text3); font-size: 0.72rem; cursor: pointer;
       transition: all 0.15s;
     }
-    .analysis-chip.active, .analysis-chip:hover {
-      background: var(--purple); color: #fff; border-color: var(--purple);
+    .analysis-chip:hover {
+      background: #e0e7ff; color: #4338ca; border-color: #c7d2fe;
     }
+    .analysis-chip.active {
+      background: #a5b4fc; color: #1e1b4b; border-color: #818cf8; font-weight: 600;
+    }
+    .analysis-chip.active:hover {
+      background: #b4c0fd; color: #1e1b4b; border-color: #818cf8;
+    }
+    .accounts-block { margin: 6px 0 2px; }
+    .accounts-toggle { background:transparent; border:none; color:var(--purple-text); font-size:0.72rem; font-weight:600; cursor:pointer; padding:2px 0; }
+    .accounts-toggle:hover { text-decoration:underline; }
+    .accounts-detail { margin-top:4px; overflow-x:auto; }
+    .accounts-table { width:100%; border-collapse:collapse; font-size:0.68rem; }
+    .accounts-table th { text-align:right; color:var(--text3); font-weight:600; padding:2px 6px; border-bottom:1px solid var(--border); white-space:nowrap; }
+    .accounts-table th:first-child, .accounts-table td:first-child { text-align:left; }
+    .accounts-table td { text-align:right; padding:2px 6px; border-bottom:1px solid var(--border); color:var(--text2); white-space:nowrap; }
+    .accounts-table td.pos { color:var(--green-text); }
+    .accounts-table td.neg { color:var(--red-text); }
+    .acct-exp:hover { opacity:.7; }
+    .acct-inline-table td { padding:2px 12px 2px 0; }
+    .acct-inline-table td:first-child { color:var(--text2); }
     .analysis-table th[title] { cursor: help; }
     .analysis-table th[title]:hover::after {
       content: attr(title);
@@ -987,12 +1019,17 @@
       .header h1 { font-size: 1rem; }
       .header-actions {
         display: flex;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         gap: 0.3rem;
         width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: thin;
+        padding-bottom: 2px;
       }
-      .hdr-btn { font-size: 0.62rem; padding: 0.25rem 0.5rem; }
-      .last-updated { font-size: 0.6rem; width: 100%; }
+      .header-actions > * { flex: 0 0 auto; }
+      .hdr-btn { font-size: 0.62rem; padding: 0.25rem 0.5rem; white-space: nowrap; }
+      .last-updated { font-size: 0.6rem; white-space: nowrap; }
 
       /* Tabs — full width, equal split */
       .tabs-bar { padding: 0; }
@@ -1033,9 +1070,12 @@
   <header class="header">
   <div class="header-top">
     <div class="header-actions">
+      <button class="hdr-btn export" onclick="refreshDataBtn()" id="refresh-btn">🔄 Refresh Data</button>
+      <div id="refresh-progress" style="font-size:0.68rem;color:var(--text3);font-family:var(--mono);min-width:60px;"></div>
+      <div class="last-updated" id="last-updated">Loading…</div>
       <button class="hdr-btn" id="theme-toggle" onclick="toggleTheme()" title="Toggle dark/light mode">☀️ Light</button>
       <button class="hdr-btn" id="lock-btn" onclick="togglePrivacy()" title="Lock/unlock private values">🔒 Lock</button>
-      <button class="hdr-btn" id="excel-export-btn" onclick="exportToExcel()" title="Export table to Excel (unlock required)" style="padding:4px 8px;display:flex;align-items:center;gap:5px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;"><rect width="24" height="24" rx="3" fill="#1D6F42"/><path d="M7 7h10v2H7zM7 11h10v2H7zM7 15h10v2H7z" fill="white" opacity="0.3"/><path d="M6 6l4 6-4 6h2.5l2.5-4 2.5 4H16l-4-6 4-6h-2.5L11 12 8.5 6H6z" fill="white"/></svg><span style="font-size:0.7rem;font-weight:600;">XLS</span></button>
+      <button class="hdr-btn" id="excel-export-btn" onclick="exportFundamentalsExcel()" title="Export deep-analysis fundamentals to Excel (unlock required)" style="padding:4px 8px;display:flex;align-items:center;gap:5px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;"><rect width="24" height="24" rx="3" fill="#1D6F42"/><path d="M7 7h10v2H7zM7 11h10v2H7zM7 15h10v2H7z" fill="white" opacity="0.3"/><path d="M6 6l4 6-4 6h2.5l2.5-4 2.5 4H16l-4-6 4-6h-2.5L11 12 8.5 6H6z" fill="white"/></svg><span style="font-size:0.7rem;font-weight:600;">XLS</span></button>
       <button class="hdr-btn paste" onclick="showPasteModal()">📋 Paste Claude Response</button>
       <button class="hdr-btn export" onclick="quarterlyRefreshPrompt()" title="Copy batched prompt to deeply re-analyze ALL stocks (quarterly)">🔬 Refresh ALL</button>
       <button class="hdr-btn export" onclick="pendingRefreshPrompt()" title="Copy batched prompt for ONLY stocks missing analysis/new fields">🟡 Refresh Pending</button>
@@ -1044,9 +1084,6 @@
       <button class="hdr-btn export" style="opacity:0.6;" onclick="exportStocksJSON()">⬇ Export ALL</button>
       <a class="hdr-btn" href="prompt_outputs/management_trust_findings.md" download="management_trust_findings.md" title="Download the full Management Trust scoring report for all 151 holdings" style="text-decoration:none;display:inline-flex;align-items:center;">👔 Mgmt Trust Report</a>
       <a class="hdr-btn" href="prompt_outputs/red_flags_findings.md" download="red_flags_findings.md" title="Download the full Red-Flag forensic scan report for all 151 holdings" style="text-decoration:none;display:inline-flex;align-items:center;">🚩 Red Flags Report</a>
-      <button class="hdr-btn export" onclick="refreshDataBtn()" id="refresh-btn">🔄 Refresh Data</button>
-      <div id="refresh-progress" style="font-size:0.68rem;color:var(--text3);font-family:var(--mono);min-width:60px;"></div>
-      <div class="last-updated" id="last-updated">Loading…</div>
     </div>
   </div>
 </header>
@@ -1104,6 +1141,8 @@
     <span class="search-icon">🔍</span>
     <input type="search" id="search" placeholder="Ticker or company…" autocomplete="off" />
   </div>
+  <select id="sector-filter-deep" onchange="setSectorFilter(this.value)" title="Filter by sector" style="background:var(--bg3);color:var(--text);border:1px solid var(--border);border-radius:4px;font-size:0.72rem;padding:5px 6px;max-width:210px;"><option value="">All sectors</option></select>
+  <select id="account-filter-deep" onchange="setAccountFilter(this.value)" title="Filter by account" style="background:var(--bg3);color:var(--text);border:1px solid var(--border);border-radius:4px;font-size:0.72rem;padding:5px 6px;max-width:150px;"><option value="">All accounts</option></select>
   <div class="sort-buttons" id="sort-buttons">
     <button class="sort-btn" data-sort="ticker">Ticker <span class="arr"></span></button>
     <button class="sort-btn" data-sort="current_val">Value <span class="arr"></span></button>
@@ -1134,7 +1173,8 @@
       <div class="last-updated" id="last-updated-analysis">Loading…</div>
       <button class="hdr-btn" id="theme-toggle-2" onclick="toggleTheme()" title="Toggle dark/light mode">☀️ Light</button>
       <button class="hdr-btn" id="lock-btn-2" onclick="togglePrivacy()" title="Lock/unlock private values">🔒 Lock</button>
-      <button class="hdr-btn" id="excel-export-btn-2" onclick="exportFundamentalsExcel()" title="Export fundamental analysis to Excel (unlock required)" style="padding:4px 8px;display:flex;align-items:center;gap:5px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;"><rect width="24" height="24" rx="3" fill="#1D6F42"/><path d="M7 7h10v2H7zM7 11h10v2H7zM7 15h10v2H7z" fill="white" opacity="0.3"/><path d="M6 6l4 6-4 6h2.5l2.5-4 2.5 4H16l-4-6 4-6h-2.5L11 12 8.5 6H6z" fill="white"/></svg><span style="font-size:0.7rem;font-weight:600;">XLS</span></button>
+      <button class="hdr-btn" id="excel-export-btn-2" onclick="exportToExcel()" title="Export portfolio table to Excel (unlock required)" style="padding:4px 8px;display:flex;align-items:center;gap:5px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;"><rect width="24" height="24" rx="3" fill="#1D6F42"/><path d="M7 7h10v2H7zM7 11h10v2H7zM7 15h10v2H7z" fill="white" opacity="0.3"/><path d="M6 6l4 6-4 6h2.5l2.5-4 2.5 4H16l-4-6 4-6h-2.5L11 12 8.5 6H6z" fill="white"/></svg><span style="font-size:0.7rem;font-weight:600;">XLS</span></button>
+      <button class="hdr-btn" id="portfolio-extract-btn" onclick="copyPortfolioExtract()" title="Copy a full Portfolio Extract (all metrics, deep analysis, peers, red flags, mgmt) + Claude analysis prompt to clipboard (unlock required)" style="padding:4px 10px;font-size:0.7rem;font-weight:600;">🧠 Portfolio Extract</button>
       </div>
     </div>
   </header>
@@ -1148,6 +1188,7 @@
     <div class="stat">
       <div class="stat-label">Current Value</div>
       <div class="stat-value" id="ana-sum-current">—</div>
+      <div id="ana-bench-toggle" onclick="toggleBenchmarks()" title="Show benchmark index returns below each return column" style="cursor:pointer;user-select:none;margin-top:6px;display:inline-flex;align-items:center;gap:4px;font-size:0.7rem;color:var(--text3);white-space:nowrap;">📊 Benchmarks <span id="bench-arrow" style="transition:transform .2s;">▾</span></div>
     </div>
     <div class="stat">
       <div class="stat-label">Overall P&L ₹ (%)</div>
@@ -1156,6 +1197,7 @@
         <div class="stat-value" id="ana-sum-pnl-pct">—</div>
       </div>
       <div style="font-size:0.65rem;color:var(--text3);margin-top:1px;" id="ana-ew-pnl"></div>
+      <div class="bench-block" id="bench-legend" style="display:none;"></div>
     </div>
     <div class="stat">
       <div class="stat-label">Day's PL%</div>
@@ -1164,6 +1206,7 @@
         <div class="stat-value" id="ana-sum-day-pct">—</div>
       </div>
       <div style="font-size:0.65rem;color:var(--text3);margin-top:1px;" id="ana-ew-day"></div>
+      <div class="bench-block" id="bench-day" style="display:none;"></div>
     </div>
     <div class="stat">
       <div class="stat-label">1 Month P&L (%)</div>
@@ -1172,6 +1215,7 @@
         <div class="stat-value" id="ana-sum-1m-pct">—</div>
       </div>
       <div style="font-size:0.65rem;color:var(--text3);margin-top:1px;" id="ana-ew-1m"></div>
+      <div class="bench-block" id="bench-1m" style="display:none;"></div>
     </div>
     <div class="stat">
       <div class="stat-label">1 Year P&L (%)</div>
@@ -1180,6 +1224,25 @@
         <div class="stat-value" id="ana-sum-1y-pct">—</div>
       </div>
       <div style="font-size:0.65rem;color:var(--text3);margin-top:1px;" id="ana-ew-1y"></div>
+      <div class="bench-block" id="bench-1y" style="display:none;"></div>
+    </div>
+    <div class="stat" title="Hypothetical: your current buy-value allocation deployed 3 years ago at the 3-year-ago price, weighted by buy value. Excludes holdings with no 3-year price history (recently listed/added). EW = simple equal-weight average of every holding's 3Y return.">
+      <div class="stat-label">3 Year P&L (%)</div>
+      <div id="ana-sum-3y-group" style="display: flex; gap: 8px; align-items: baseline;">
+        <div class="stat-value" id="ana-sum-3y-abs">—</div>
+        <div class="stat-value" id="ana-sum-3y-pct">—</div>
+      </div>
+      <div style="font-size:0.65rem;color:var(--text3);margin-top:1px;" id="ana-ew-3y"></div>
+      <div class="bench-block" id="bench-3y" style="display:none;"></div>
+    </div>
+    <div class="stat" title="Hypothetical: your current buy-value allocation deployed 5 years ago at the 5-year-ago price, weighted by buy value. Excludes holdings with no 5-year price history (recently listed/added). EW = simple equal-weight average of every holding's 5Y return.">
+      <div class="stat-label">5 Year P&L (%)</div>
+      <div id="ana-sum-5y-group" style="display: flex; gap: 8px; align-items: baseline;">
+        <div class="stat-value" id="ana-sum-5y-abs">—</div>
+        <div class="stat-value" id="ana-sum-5y-pct">—</div>
+      </div>
+      <div style="font-size:0.65rem;color:var(--text3);margin-top:1px;" id="ana-ew-5y"></div>
+      <div class="bench-block" id="bench-5y" style="display:none;"></div>
     </div>
     <div class="stat">
       <div class="stat-label">Win/Loss</div>
@@ -1198,17 +1261,31 @@
       <input type="text" id="analysis-search" placeholder="Search ticker or name…" style="width:100%; padding: 6px 28px 6px 10px; background: var(--bg3); color: var(--text); border: 1px solid var(--border); border-radius: 4px; font-size: 13px;">
       <span id="search-clear" onclick="clearAnalysisSearch()" style="display:none;position:absolute;right:6px;top:50%;transform:translateY(-50%);cursor:pointer;color:var(--text3);font-size:14px;line-height:1;" title="Clear">✕</span>
     </div>
+    <select id="holding-type-analysis" onchange="setHoldingType(this.value)" title="Holdings type — independent filter, not affected by the All chip. Defaults to Stocks on every page load." style="background:var(--bg3);color:var(--text);border:1px solid var(--border);border-radius:4px;font-size:0.72rem;padding:5px 8px;">
+      <option value="Stocks" selected>Stocks</option>
+      <option value="MF">Mutual Funds</option>
+      <option value="Gold">Gold</option>
+      <option value="Silver">Silver</option>
+      <option value="All">All holdings</option>
+    </select>
+    <select id="sector-filter-analysis" onchange="setSectorFilter(this.value)" title="Filter by sector" style="background:var(--bg3);color:var(--text);border:1px solid var(--border);border-radius:4px;font-size:0.72rem;padding:5px 8px;max-width:200px;"><option value="">All sectors</option></select>
+    <select id="account-filter-analysis" onchange="setAccountFilter(this.value)" title="Filter by account" style="background:var(--bg3);color:var(--text);border:1px solid var(--border);border-radius:4px;font-size:0.72rem;padding:5px 8px;max-width:150px;"><option value="">All accounts</option></select>
+    <button onclick="resetAnalysisFilters()" title="Reset to default view (Stocks, all accounts)" style="background:var(--bg3);color:var(--text2);border:1px solid var(--border);border-radius:4px;font-size:0.85rem;line-height:1;padding:6px 10px;cursor:pointer;">✕</button>
   </div>
   <div style="padding: 6px 16px; background: var(--bg2); border-bottom: 1px solid var(--border); display: flex; gap: 6px; flex-wrap: wrap; align-items: center;">
     <span style="font-size:0.72rem;color:var(--text3);margin-right:2px;">Filter:</span>
     <button class="analysis-chip active" data-afilter="all" onclick="setAnalysisFilter('all',this)">All</button>
     <button class="analysis-chip" data-afilter="conviction7" onclick="setAnalysisFilter('conviction7',this)">Conv 7+</button>
     <button class="analysis-chip" data-afilter="trust7" onclick="setAnalysisFilter('trust7',this)">👔 Trust 7+</button>
+    <button class="analysis-chip" data-afilter="quality7" onclick="setAnalysisFilter('quality7',this)">⭐ Quality 7+</button>
     <button class="analysis-chip" data-afilter="redflag" onclick="setAnalysisFilter('redflag',this)">🚩 Red Flags (&lt;5)</button>
     <button class="analysis-chip" data-afilter="widemoat" onclick="setAnalysisFilter('widemoat',this)">Wide Moat</button>
     <button class="analysis-chip" data-afilter="strongbullish" onclick="setAnalysisFilter('strongbullish',this)">Strong Bullish</button>
     <button class="analysis-chip" data-afilter="profit" onclick="setAnalysisFilter('profit',this)">In Profit</button>
     <button class="analysis-chip" data-afilter="movers" onclick="setAnalysisFilter('movers',this)">Movers</button>
+    <button class="analysis-chip" data-afilter="nearath" onclick="setAnalysisFilter('nearath',this)" title="Within 5% of all-time high">🔼 Near ATH</button>
+    <button class="analysis-chip" data-afilter="near52wkh" onclick="setAnalysisFilter('near52wkh',this)" title="Within 3% of 52-week high">🔼 Near 52wk High</button>
+    <button class="analysis-chip" data-afilter="near52wkl" onclick="setAnalysisFilter('near52wkl',this)" title="Within 5% of 52-week low">🔽 Near 52wk Low</button>
     <button class="analysis-chip" data-afilter="mustbuy" onclick="setAnalysisFilter('mustbuy',this)">★ Must Buy</button>
     <button class="analysis-chip" data-afilter="loss" onclick="setAnalysisFilter('loss',this)">In Loss</button>
   </div>
@@ -1221,6 +1298,7 @@
           <th onclick="sortAnalysis('name')">Company Name <span id="sort-name" class="sort-indicator"></span></th>
           <th class="cf-narrow" onclick="sortAnalysis('mgmt_trust_score')" title="Management Trust score (/10) — hover a score for the full breakdown">👔 <span class="col-filter-icon" data-col="mgmt_trust_score" title="Filter" onclick="event.stopPropagation();openColFilter('mgmt_trust_score',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-mgmt_trust_score" class="sort-indicator"></span></th>
           <th class="cf-narrow" onclick="sortAnalysis('rf_score_val')" title="Red-Flag score (/10): higher = cleaner — hover a score for the full breakdown">🚩 <span class="col-filter-icon" data-col="rf_score_val" title="Filter" onclick="event.stopPropagation();openColFilter('rf_score_val',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-rf_score_val" class="sort-indicator"></span></th>
+          <th class="cf-narrow" onclick="sortAnalysis('qual_score')" title="Pure qualitative Quality score (/10) — moat, management, capital allocation, pricing power, growth. Hover for breakdown.">⭐ <span class="col-filter-icon" data-col="qual_score" title="Filter" onclick="event.stopPropagation();openColFilter('qual_score',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-qual_score" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('conviction')" title="Conviction score (/10) — overall analyst conviction in the thesis">Conv. <span class="col-filter-icon" data-col="conviction" title="Filter" onclick="event.stopPropagation();openColFilter('conviction',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-conviction" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('moat_class')">Moat <span id="sort-moat_class" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('quantity')">Qty. <span id="sort-quantity" class="sort-indicator"></span></th>
@@ -1229,7 +1307,7 @@
           <th onclick="sortAnalysis('pres_value')">Present Value <span id="sort-pres_value" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('pnl_abs')">P&L <span id="sort-pnl_abs" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('pnl_pct')">P&L % <span id="sort-pnl_pct" class="sort-indicator"></span></th>
-          <th onclick="sortAnalysis('movers')" title="Movers — Strict (A): Vol &gt; 3× 30d avg AND &gt; 3× 5d avg AND (ret &gt; +3% or &lt; −3%) | Balanced (C): Vol &gt; 2× 30d avg AND (ret &gt; +4% or &lt; −4%) | Shows A+C, A, C, or No">Movers <span class="col-filter-icon" data-col="movers" title="Filter" onclick="event.stopPropagation();openColFilter('movers',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-movers" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('movers')" title="Movers — volume + momentum + 52-week breakout (Indian small/mid-cap calibrated). ⚡ strongest breakout (high-conviction BUY): within 2% of 52W high AND vol ≥7× AND day ≥+6%. 🧊 strongest breakdown (EXIT): within 2% of 52W low AND vol ≥7× AND day ≤−6%. Z↑ 52W-high breakout: within 2% of high AND vol ≥3× AND day ≥+3%. Z↓ 52W-low breakdown: within 2% of low AND vol ≥3× AND day ≤−3%. V+P surge: vol ≥4× AND |day| ≥6%. V volume-led: vol ≥4× AND |day| ≥3%. P price-led: vol ≥3× AND |day| ≥6%. Sort: ⚡ &gt; 🧊 &gt; Z↑ &gt; Z↓ &gt; V+P &gt; V &gt; P">Movers <span class="col-filter-icon" data-col="movers" title="Filter" onclick="event.stopPropagation();openColFilter('movers',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-movers" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('trend_score')" title="Trend Score (0–100) for 3–12 month positional holding | 3 inputs: Price vs 200DMA (40pts) + 200DMA Slope 30d (30pts) + Days above 200DMA last 10 sessions (30pts) | Strong Bullish: ≥85 AND 0–10% zone | Bullish: ≥70 AND 0–10% zone | Extended: ≥70 but &gt;10% | Watch: 55–69 | Hold: 35–54 | Bearish: &lt;35">Trend Score <span id="sort-trend_score" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('trend_signal')" title="Trend Signal | Strong Bullish: score≥85 AND 0–10% above 200DMA | Bullish: score≥70 AND 0–10% above 200DMA | Extended: score≥70 but >10% above 200DMA (too extended for fresh entry) | Watch: 55–69 | Hold: 35–54 | Bearish: &lt;35">Trend Signal <span class="col-filter-icon" data-col="trend_signal" title="Filter" onclick="event.stopPropagation();openColFilter('trend_signal',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-trend_signal" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('ret_1d')" title="1-day price return (%)">1D Ret <span id="sort-ret_1d" class="sort-indicator"></span></th>
@@ -1242,8 +1320,10 @@
           <th onclick="sortAnalysis('ret_5y')" title="~1200 trading day (5-year) price return (%)">5Y Ret <span id="sort-ret_5y" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('vol_30m_ratio')" title="Last 30-min volume vs average 30-min volume (intraday, 5m bars)">Vol 30m/Avg <span id="sort-vol_30m_ratio" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('vol_today_ratio')" title="Today's total volume ÷ 30-day average volume (excludes today from avg)">Vol Today/Avg <span id="sort-vol_today_ratio" class="sort-indicator"></span></th>
-          <th onclick="sortAnalysis('week52_high_pct')" title="% below 52-week high: (CMP − 52W High) ÷ 52W High × 100">52W High% <span id="sort-week52_high_pct" class="sort-indicator"></span></th>
-          <th onclick="sortAnalysis('week52_low_pct')" title="% above 52-week low: (CMP − 52W Low) ÷ 52W Low × 100">52W Low% <span id="sort-week52_low_pct" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('week52_high_pct')" title="% below 52-week high: (CMP − 52W High) ÷ 52W High × 100">52W High% <span class="col-filter-icon" data-col="week52_high_pct" title="Filter" onclick="event.stopPropagation();openColFilter('week52_high_pct',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-week52_high_pct" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('week52_low_pct')" title="% above 52-week low: (CMP − 52W Low) ÷ 52W Low × 100">52W Low% <span class="col-filter-icon" data-col="week52_low_pct" title="Filter" onclick="event.stopPropagation();openColFilter('week52_low_pct',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-week52_low_pct" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('ath_pct')" title="% below all-time high: (CMP − ATH) ÷ ATH × 100. 0% = at all-time high.">ATH% <span class="col-filter-icon" data-col="ath_pct" title="Filter" onclick="event.stopPropagation();openColFilter('ath_pct',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-ath_pct" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('atl_pct')" title="% above all-time low: (CMP − ATL) ÷ ATL × 100. 0% = at all-time low.">ATL% <span class="col-filter-icon" data-col="atl_pct" title="Filter" onclick="event.stopPropagation();openColFilter('atl_pct',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-atl_pct" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('mcap_cr')" title="Market capitalisation in Indian Crores (₹)">Market Cap (Cr) <span id="sort-mcap_cr" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('pe')" title="Trailing twelve-month Price / Earnings ratio">P/E <span id="sort-pe" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('price_to_book')" title="Price / Book value ratio">P/B <span id="sort-price_to_book" class="sort-indicator"></span></th>
@@ -1317,17 +1397,13 @@ Example:
 <!-- PIN MODAL -->
 <div class="modal-overlay" id="pin-modal" onclick="if(event.target===this)closePinModal()">
   <div class="modal-box" style="max-width:320px;text-align:center;">
-    <div class="modal-title" id="pin-modal-title">🔓 Enter PIN to Unlock</div>
+    <div class="modal-title" id="pin-modal-title">🔓 Enter PIN to unlock & open your account</div>
     <div style="display:flex;gap:8px;justify-content:center;margin:1rem 0;">
       <input type="password" id="pin-input" maxlength="4" inputmode="numeric" pattern="[0-9]*"
         style="font-size:1.8rem;letter-spacing:0.5rem;width:120px;text-align:center;background:var(--bg3);border:2px solid var(--border);border-radius:8px;color:var(--text);padding:0.5rem;"
         onkeydown="if(event.key==='Enter')submitPin()" oninput="this.value=this.value.replace(/[^0-9]/g,'')">
     </div>
     <div class="modal-error" id="pin-error"></div>
-    <label style="display:flex;align-items:center;justify-content:center;gap:8px;font-size:0.8rem;color:var(--text2);margin:0.5rem 0 0.25rem;cursor:pointer;">
-      <input type="checkbox" id="pin-remember" style="width:16px;height:16px;cursor:pointer;accent-color:var(--purple,#7c3aed);">
-      Remember this device (stay unlocked)
-    </label>
     <div class="modal-actions" style="justify-content:center;">
       <button class="modal-btn" onclick="closePinModal()">Cancel</button>
       <button class="modal-btn primary" onclick="submitPin()">Unlock</button>
@@ -1441,6 +1517,7 @@ function renderCard(s) {
       <div class="card-ticker">${esc(s.ticker)}</div>
       <div style="display: flex; align-items: center; gap: 8px; flex: 1; min-width: 0;">
         <div class="card-name clickable metric-click" data-metric="fundamental" data-ticker="${s.ticker}" data-name="${s.name}" title="${esc(s.name)} — Click for full Fundamental Analysis (Claude / ChatGPT / DeepSeek)" style="cursor:pointer">${esc(s.name || '—')}</div>
+        ${(s.peer_cmp && s.peer_cmp.q != null) ? `<span class="peer-cell" data-ticker="${esc(s.ticker)}" style="flex-shrink:0;font-size:11px;font-weight:700;padding:1px 7px;border-radius:10px;cursor:help;background:var(--bg3);color:${s.peer_cmp.q>=7.5?'var(--green)':s.peer_cmp.q>=6?'var(--amber-text)':'#f97316'};">⭐${s.peer_cmp.q}</span>` : ''}
         <span style="color:var(--text3);font-size:11px;white-space:nowrap;flex-shrink:0;">
           🔗 <span class="catalyst-link" data-ticker="${s.ticker}" data-name="${s.name}" style="cursor:pointer;color:var(--purple-text);font-weight:700;text-decoration:underline dotted;" title="Catalyst analysis — pick Claude / ChatGPT / DeepSeek">Catalysts 🔍</span>
         </span>
@@ -1597,6 +1674,24 @@ function renderCard(s) {
     Qty: <span>${qty}</span>
   </div>
 
+  ${(Array.isArray(s.accounts) && s.accounts.length) ? `
+  <div class="accounts-block">
+    <button class="accounts-toggle" onclick="toggleAccounts(this)" aria-expanded="false">▸ Held across ${s.accounts.length} account${s.accounts.length>1?'s':''}</button>
+    <div class="accounts-detail" style="display:none;">
+      <table class="accounts-table">
+        <thead><tr><th>Account</th><th>Qty</th><th>Buy Avg</th><th>Invested</th><th>Present</th><th>P&L%</th></tr></thead>
+        <tbody>
+          ${s.accounts.map(a => {
+            const inv = (a.invested != null) ? a.invested : ((a.buy_avg||0)*(a.qty||0));
+            const pres = (s.ltp||0)*(a.qty||0);
+            const pl = inv > 0 ? ((pres-inv)/inv*100) : 0;
+            return `<tr><td>${esc(a.name)}</td><td>${priv((a.qty||0).toLocaleString('en-IN'))}</td><td>${priv('₹'+fmt(a.buy_avg))}</td><td>${priv('₹'+fmt(inv,0))}</td><td>${priv('₹'+fmt(pres,0))}</td><td class="${pl>=0?'pos':'neg'}">${priv(fmtPct(pl))}</td></tr>`;
+          }).join('')}
+        </tbody>
+      </table>
+    </div>
+  </div>` : ''}
+
   ${pending ? `<div class="card-body"><p class="moat-text" style="color:var(--amber-text)">Analysis pending. Add fundamental details to stocks.json for this ticker.</p></div>` : `
   <div class="card-body">
     ${s.moat ? `<div>
@@ -1648,8 +1743,8 @@ function renderCard(s) {
     </div>` : ''}
 
     <div class="metrics-row" style="margin-top:8px; gap:6px;">
-      <div class="metric-item clickable metric-click" data-metric="peers" data-ticker="${s.ticker}" data-name="${s.name}" style="flex:1; min-width:0; background:var(--bg2); border-radius:6px; padding:8px; border:1px solid var(--border);">
-        <span class="metric-label" style="font-size:0.65rem;">👥 Peer Comparison</span>
+      <div class="metric-item clickable metric-click peer-cell" data-metric="peers" data-ticker="${s.ticker}" data-name="${s.name}" style="flex:1; min-width:0; background:var(--bg2); border-radius:6px; padding:8px; border:1px solid var(--border);">
+        <span class="metric-label" style="font-size:0.65rem;">👥 Peer Comparison${(s.peer_cmp && s.peer_cmp.q != null) ? ` · <b style="color:${s.peer_cmp.q>=7.5?'var(--green)':s.peer_cmp.q>=6?'var(--amber-text)':'#f97316'}" title="Pure qualitative quality score /10">⭐${s.peer_cmp.q}</b>` : ''}${(s.peer_cmp && s.peer_cmp.peer && s.peer_cmp.peer.rank != null) ? ` · <b style="color:${s.peer_cmp.peer.rank<=Math.ceil(s.peer_cmp.peer.of/3)?'var(--green)':s.peer_cmp.peer.rank<=Math.ceil(s.peer_cmp.peer.of*2/3)?'var(--amber-text)':'#f97316'}" title="Peer rank vs 6 closest real competitors">#${s.peer_cmp.peer.rank}/${s.peer_cmp.peer.of}</b>` : ''}</span>
       </div>
       <div class="metric-item clickable metric-click mgmt-cell" data-metric="management" data-ticker="${s.ticker}" data-name="${s.name}" style="flex:1; min-width:0; background:var(--bg2); border-radius:6px; padding:8px; border:1px solid var(--border);">
         <span class="metric-label" style="font-size:0.65rem;">👔 Management Trust${(s.mgmt_trust && typeof s.mgmt_trust.score === 'number') ? ` · <b style="color:${s.mgmt_trust.score>=8?'var(--green)':s.mgmt_trust.score>=6?'var(--amber-text)':s.mgmt_trust.score>=4?'#f97316':'var(--red-text)'}">${s.mgmt_trust.score.toFixed(1)}</b>` : ''}</span>
@@ -2049,7 +2144,7 @@ function applyPastedAnalysis(andPush = false) {
 async function pushAnalysisToGitHub() {
   showToast('⏳ Pushing to GitHub…', '');
   // Build full stocks array without price-only fields
-  const priceFields = new Set(['ltp','buy_avg','quantity','pnl_pct','pnl_abs','updated','mcap_cr','pe','roe','ocf_cr','ret_1d','ret_1m','ret_6m','ret_1y','ret_2y','ret_3y','ret_4y','ret_5y','debt_to_equity','eps','book_value','div_yield','pat_cagr','rev_cagr','mcap_3y','vol_30m_ratio','vol_yest_ratio','vol_today_ratio','gross_margin','operating_margin','ebitda_margin','profit_margin','roa','qtrly_rev_growth','qtrly_earn_growth','fcf_cr','fcf_3yr_avg','opcf_3yr_avg','lfcf_cr','week52_high','week52_low','promoter_holding','insider_pct','price_to_book','ev_ebitda','movers','price_break','trend_score','trend_signal','price_to_200dma_pct','dma200_slope_30d_pct','days_above_200dma_10d','must_buy','name','pres_value','buy_value','week52_high_pct','week52_low_pct']);
+  const priceFields = new Set(['ltp','buy_avg','quantity','pnl_pct','pnl_abs','updated','mcap_cr','pe','roe','ocf_cr','ret_1d','ret_1m','ret_6m','ret_1y','ret_2y','ret_3y','ret_4y','ret_5y','debt_to_equity','eps','book_value','div_yield','pat_cagr','rev_cagr','mcap_3y','vol_30m_ratio','vol_yest_ratio','vol_today_ratio','gross_margin','operating_margin','ebitda_margin','profit_margin','roa','qtrly_rev_growth','qtrly_earn_growth','fcf_cr','fcf_3yr_avg','opcf_3yr_avg','lfcf_cr','week52_high','week52_low','promoter_holding','insider_pct','price_to_book','ev_ebitda','movers','price_break','trend_score','trend_signal','price_to_200dma_pct','dma200_slope_30d_pct','days_above_200dma_10d','must_buy','name','pres_value','buy_value','week52_high_pct','week52_low_pct','ath_pct','atl_pct','accounts','holding_type']);
   const exportData = allStocks.map(s => {
     const out = {};
     Object.entries(s).forEach(([k, v]) => { if (!priceFields.has(k)) out[k] = v; });
@@ -2080,7 +2175,7 @@ function exportPendingJSON() {
     return;
   }
   
-  const priceFields = new Set(['ltp','buy_avg','quantity','pnl_pct','pnl_abs','updated','mcap_cr','pe','roe','ocf_cr','ret_1d','ret_1m','ret_6m','ret_1y','ret_2y','ret_3y','ret_4y','ret_5y','debt_to_equity','eps','book_value','div_yield','pat_cagr','rev_cagr','mcap_3y','vol_30m_ratio','vol_yest_ratio','vol_today_ratio','gross_margin','operating_margin','ebitda_margin','profit_margin','roa','qtrly_rev_growth','qtrly_earn_growth','fcf_cr','fcf_3yr_avg','opcf_3yr_avg','lfcf_cr','week52_high','week52_low','promoter_holding','insider_pct','price_to_book','ev_ebitda','movers','price_break','trend_score','trend_signal','price_to_200dma_pct','dma200_slope_30d_pct','days_above_200dma_10d','must_buy','name']);
+  const priceFields = new Set(['ltp','buy_avg','quantity','pnl_pct','pnl_abs','updated','mcap_cr','pe','roe','ocf_cr','ret_1d','ret_1m','ret_6m','ret_1y','ret_2y','ret_3y','ret_4y','ret_5y','debt_to_equity','eps','book_value','div_yield','pat_cagr','rev_cagr','mcap_3y','vol_30m_ratio','vol_yest_ratio','vol_today_ratio','gross_margin','operating_margin','ebitda_margin','profit_margin','roa','qtrly_rev_growth','qtrly_earn_growth','fcf_cr','fcf_3yr_avg','opcf_3yr_avg','lfcf_cr','week52_high','week52_low','promoter_holding','insider_pct','price_to_book','ev_ebitda','movers','price_break','trend_score','trend_signal','price_to_200dma_pct','dma200_slope_30d_pct','days_above_200dma_10d','must_buy','name','ath_pct','atl_pct','accounts','holding_type']);
   const exportData = pending.map(s => {
     const out = {};
     Object.entries(s).forEach(([k,v]) => { if (!priceFields.has(k)) out[k] = v; });
@@ -3321,12 +3416,121 @@ const colFilterDefs = {
   rf_score_val: { label: 'Red Flags', type: 'range',
     get: s => (s.rf_score && typeof s.rf_score.score === 'number') ? s.rf_score.score : null,
     options: [ {key:'7.5+', label:'7.5 + (cleanest)', min:7.5, max:Infinity}, {key:'5-7.5', label:'5 – 7.5', min:5, max:7.5}, {key:'3-5', label:'3 – 5', min:3, max:5}, {key:'0-3', label:'0 – 3 (worst)', min:0, max:3} ] },
+  qual_score: { label: 'Quality', type: 'range',
+    get: s => (s.peer_cmp && typeof s.peer_cmp.q === 'number') ? s.peer_cmp.q : null,
+    options: [ {key:'8+', label:'8 + (best-in-class)', min:8, max:Infinity}, {key:'7-8', label:'7 – 8 (high)', min:7, max:8}, {key:'6-7', label:'6 – 7 (above-avg)', min:6, max:7}, {key:'5-6', label:'5 – 6 (average)', min:5, max:6}, {key:'0-5', label:'< 5 (below-avg)', min:0, max:5} ] },
   conviction: { label: 'Conviction', type: 'range',
     get: s => (typeof s.conviction === 'number' && s.conviction > 0) ? s.conviction : null,
     options: [ {key:'8+', label:'8 – 10', min:8, max:Infinity}, {key:'6-7', label:'6 – 7', min:6, max:8}, {key:'4-5', label:'4 – 5', min:4, max:6}, {key:'1-3', label:'1 – 3', min:1, max:4} ] },
   trend_signal: { label: 'Trend Signal', type: 'set', get: s => s.trend_signal || null },
   movers: { label: 'Movers', type: 'set', get: s => s.movers || null },
+  week52_high_pct: { label: '52W High%', type: 'range',
+    get: s => (s.week52_high && s.ltp) ? (s.ltp - s.week52_high) / s.week52_high * 100 : null,
+    options: [ {key:'near', label:'0 to −3% (near high)', min:-3, max:0.001}, {key:'3-10', label:'−3 to −10%', min:-10, max:-3}, {key:'10-25', label:'−10 to −25%', min:-25, max:-10}, {key:'25+', label:'below −25%', min:-Infinity, max:-25} ] },
+  week52_low_pct: { label: '52W Low%', type: 'range',
+    get: s => (s.week52_low && s.ltp) ? (s.ltp - s.week52_low) / s.week52_low * 100 : null,
+    options: [ {key:'near', label:'0 to +10% (near low)', min:0, max:10}, {key:'10-30', label:'+10 to +30%', min:10, max:30}, {key:'30-75', label:'+30 to +75%', min:30, max:75}, {key:'75+', label:'+75% and up', min:75, max:Infinity} ] },
+  ath_pct: { label: 'ATH%', type: 'range',
+    get: s => (typeof s.ath_pct === 'number') ? s.ath_pct : null,
+    options: [ {key:'near', label:'0 to −5% (near ATH)', min:-5, max:0.001}, {key:'5-15', label:'−5 to −15%', min:-15, max:-5}, {key:'15-40', label:'−15 to −40%', min:-40, max:-15}, {key:'40+', label:'below −40%', min:-Infinity, max:-40} ] },
+  atl_pct: { label: 'ATL%', type: 'range',
+    get: s => (typeof s.atl_pct === 'number') ? s.atl_pct : null,
+    options: [ {key:'near', label:'0 to +20% (near ATL)', min:0, max:20}, {key:'20-100', label:'+20 to +100%', min:20, max:100}, {key:'100-500', label:'+100 to +500%', min:100, max:500}, {key:'500+', label:'+500% and up', min:500, max:Infinity} ] },
 };
+
+function populateSectorDropdowns() {
+  if (!Array.isArray(allStocks) || !allStocks.length) return;
+  const counts = {};
+  allStocks.forEach(s => { if (s.sector_group) counts[s.sector_group] = (counts[s.sector_group]||0)+1; });
+  const groups = Object.keys(counts).sort();
+  const optHtml = '<option value="">All sectors</option>' + groups.map(g => `<option value="${esc(g)}">${esc(g)} (${counts[g]})</option>`).join('');
+  ['sector-filter-analysis','sector-filter-deep'].forEach(id => { const el = document.getElementById(id); if (el) { el.innerHTML = optHtml; el.value = window._sectorFilter || ''; } });
+}
+function setSectorFilter(val) {
+  window._sectorFilter = val || '';
+  ['sector-filter-analysis','sector-filter-deep'].forEach(id => { const el = document.getElementById(id); if (el && el.value !== window._sectorFilter) el.value = window._sectorFilter; });
+  if (typeof renderAnalysisTable === 'function') renderAnalysisTable();
+  if (typeof renderAll === 'function') renderAll();
+}
+
+function populateAccountDropdown() {
+  if (!Array.isArray(allStocks) || !allStocks.length) return;
+  const set = new Set();
+  allStocks.forEach(s => { if (Array.isArray(s.accounts)) s.accounts.forEach(a => { if (a && a.name) set.add(a.name); }); });
+  const groups = [...set].sort();
+  const optHtml = '<option value="">All accounts</option>' + groups.map(g => `<option value="${esc(g)}">${esc(g)}</option>`).join('');
+  ['account-filter-analysis','account-filter-deep'].forEach(id => { const el = document.getElementById(id); if (el) { el.innerHTML = optHtml; el.value = window._accountFilter || ''; } });
+}
+function setAccountFilter(val) {
+  window._accountFilter = val || '';
+  ['account-filter-analysis','account-filter-deep'].forEach(id => { const el = document.getElementById(id); if (el && el.value !== window._accountFilter) el.value = window._accountFilter; });
+  if (typeof renderAnalysisTable === 'function') renderAnalysisTable();
+  if (typeof renderAll === 'function') renderAll();
+}
+// When an account is selected, return a stock view scoped to THAT account's
+// holding (qty / buy avg / invested / present value / P&L) instead of the
+// portfolio-wide totals. Returns the stock unchanged when no account is active.
+function accountAdjustStock(s) {
+  const acctName = window._accountFilter;
+  if (!acctName || !Array.isArray(s.accounts)) return s;
+  const a = s.accounts.find(x => x.name === acctName);
+  if (!a) return s;
+  const qty = a.qty || 0, buyAvg = a.buy_avg || 0, ltp = s.ltp || 0;
+  return {
+    ...s,
+    quantity:  qty,
+    buy_avg:   buyAvg,
+    buy_value: (a.invested != null) ? a.invested : buyAvg * qty,
+    pres_value: ltp * qty,
+    pnl_abs:   (ltp - buyAvg) * qty,
+    pnl_pct:   buyAvg > 0 ? (ltp - buyAvg) / buyAvg * 100 : null,
+  };
+}
+function toggleAcctRow(el, ticker) {
+  const row = el.closest('tr');
+  const detail = row ? row.nextElementSibling : null;
+  if (!detail || !detail.classList.contains('acct-detail-row')) return;
+  const open = detail.style.display !== 'none';
+  detail.style.display = open ? 'none' : '';
+  el.textContent = open ? '\u25b8' : '\u25be';
+}
+window._holdingType = window._holdingType || 'Stocks';
+function setHoldingType(val) {
+  window._holdingType = val || 'Stocks';
+  const el = document.getElementById('holding-type-analysis');
+  if (el && el.value !== window._holdingType) el.value = window._holdingType;
+  if (typeof renderAnalysisTable === 'function') renderAnalysisTable();
+}
+function resetAnalysisFilters() {
+  // Holdings type -> Stocks (default)
+  window._holdingType = 'Stocks';
+  const ht = document.getElementById('holding-type-analysis'); if (ht) ht.value = 'Stocks';
+  // Account + sector -> all
+  window._accountFilter = '';
+  window._sectorFilter = '';
+  ['account-filter-analysis','account-filter-deep'].forEach(id => { const el = document.getElementById(id); if (el) el.value = ''; });
+  ['sector-filter-analysis','sector-filter-deep'].forEach(id => { const el = document.getElementById(id); if (el) el.value = ''; });
+  // Filter chips -> All
+  analysisFilters.clear();
+  document.querySelectorAll('.analysis-chip').forEach(b => b.classList.remove('active'));
+  const allChip = document.querySelector('.analysis-chip[data-afilter="all"]'); if (allChip) allChip.classList.add('active');
+  // Column funnels
+  colFilters = {};
+  document.querySelectorAll('.col-filter-icon.active').forEach(i => i.classList.remove('active'));
+  // Search
+  const inp = document.getElementById('analysis-search'); if (inp) inp.value = '';
+  const clr = document.getElementById('search-clear'); if (clr) clr.style.display = 'none';
+  if (typeof renderAnalysisTable === 'function') renderAnalysisTable();
+  if (typeof renderAll === 'function') renderAll();
+}
+function toggleAccounts(btn) {
+  const d = btn.nextElementSibling;
+  if (!d) return;
+  const willOpen = d.style.display === 'none' || !d.style.display;
+  d.style.display = willOpen ? 'block' : 'none';
+  btn.setAttribute('aria-expanded', String(willOpen));
+  btn.textContent = btn.textContent.replace(/^[\u25b8\u25be]/, willOpen ? '\u25be' : '\u25b8');
+}
 let colFilters = {};  // field -> Set of selected option keys / values
 
 function rowPassesColFilters(s) {
@@ -3414,6 +3618,17 @@ function sortAnalysis(field) {
   renderAnalysisTable();
 }
 
+// ── Quality (pure qualitative) cell — reuses peer-cell hover ──────────────
+function qualCell(s) {
+  const pc = s.peer_cmp;
+  if (!pc || typeof pc.q !== 'number') {
+    return `<td class="cf-narrow" style="text-align:center;color:var(--text3)">—</td>`;
+  }
+  const q = pc.q;
+  const col = q >= 7.5 ? 'var(--green)' : q >= 6 ? 'var(--amber-text)' : q >= 5 ? '#f97316' : 'var(--red-text)';
+  return `<td class="peer-cell cf-narrow" data-ticker="${esc(s.ticker)}" title="Quality ${q}/10 (${esc(pc.tier || '')}) — hover for breakdown" style="text-align:center;font-weight:700;cursor:help;color:${col}">${q}</td>`;
+}
+
 // ── Management Trust cell + hover tooltip ─────────────────────────────────
 function mgmtTrustCell(s) {
   const mt = s.mgmt_trust;
@@ -3484,12 +3699,77 @@ function buildRfTip(rf, s) {
     <div class="mt-conf">Confidence: ${esc(rf.confidence || '—')}${rf.updated ? ' · ' + esc(rf.updated) : ''}</div>`;
 }
 
+function buildPeerTip(pc, s) {
+  if (!pc) return '';
+  const q = pc.q;
+  const hasQ = typeof q === 'number';
+  const col = hasQ ? (q >= 7.5 ? 'var(--green)' : q >= 6 ? 'var(--amber-text)' : '#f97316') : 'var(--text2)';
+  const c = pc.comp || {};
+  const vcol = v => /NOT JUSTIFIED/i.test(v||'') ? 'var(--red-text)' : /PARTIALLY/i.test(v||'') ? 'var(--amber-text)' : /JUSTIFIED/i.test(v||'') ? 'var(--green)' : 'var(--text2)';
+  const bar = (label, val) => {
+    if (val == null) return '';
+    const w = Math.max(0, Math.min(100, val * 10));
+    const bc = val >= 7.5 ? 'var(--green)' : val >= 5.5 ? 'var(--amber-text)' : '#f97316';
+    return `<div style="display:flex;align-items:center;gap:6px;margin:2px 0;font-size:0.7rem;">`
+      + `<span style="width:118px;color:var(--text2);">${label}</span>`
+      + `<span style="flex:1;height:6px;background:var(--bg3);border-radius:3px;overflow:hidden;"><span style="display:block;height:100%;width:${w}%;background:${bc};"></span></span>`
+      + `<span style="width:26px;text-align:right;font-family:var(--mono);">${val}</span></div>`;
+  };
+  const durCol = pc.durability === 'Widening' ? 'var(--green)' : pc.durability === 'Eroding' ? 'var(--red-text)' : 'var(--amber-text)';
+  const qualBlock = hasQ ? `
+    <div style="font-weight:700;font-size:0.72rem;margin:4px 0 2px;">📊 Why this quality score</div>
+    ${bar('🏰 Moat', c.moat)}
+    ${bar('👔 Management', c.mgmt)}
+    ${bar('💰 Capital alloc', c.capital)}
+    ${bar('🏷️ Pricing power', c.pricing)}
+    ${bar('📈 Growth outlook', c.growth)}
+    <div style="font-size:0.7rem;margin:5px 0 3px;">🛡️ Durability: <b style="color:${durCol}">${esc(pc.durability || '—')}</b> · Class: <b>${esc((pc.moat_class || '').toUpperCase())}</b></div>
+    ${pc.moat_txt ? `<div style="font-size:0.7rem;line-height:1.4;margin:3px 0;"><b>Moat:</b> ${esc(pc.moat_txt)}</div>` : ''}
+    ${pc.tailwind ? `<div style="font-size:0.7rem;color:var(--green-text);margin:2px 0;">✅ ${esc(pc.tailwind)}</div>` : ''}
+    ${pc.risk ? `<div style="font-size:0.7rem;color:var(--red-text);margin:2px 0;">⚠️ ${esc(pc.risk)}</div>` : ''}` : '';
+
+  // ── Peer rank vs the ~6 closest REAL-market competitors ──
+  const pr = pc.peer;
+  let peerBlock = '';
+  if (pr && pr.rank != null && Array.isArray(pr.peers)) {
+    const prCol = pr.rank <= Math.ceil(pr.of / 3) ? 'var(--green)' : pr.rank <= Math.ceil(pr.of * 2 / 3) ? 'var(--amber-text)' : '#f97316';
+    const vCol = v => /CLEAR LEADER/.test(v) ? 'var(--green)' : /STRONG/.test(v) ? 'var(--green-text)' : /SOLID/.test(v) ? 'var(--amber-text)' : /AVERAGE/.test(v) ? '#f97316' : /AVOID/.test(v) ? 'var(--red-text)' : /WEAK/.test(v) ? 'var(--red-text)' : 'var(--text2)';
+    const sCol = sc => sc >= 7.5 ? 'var(--green)' : sc >= 6.5 ? 'var(--amber-text)' : sc >= 5.5 ? '#f97316' : 'var(--red-text)';
+    const peerLines = pr.peers.map((p, i) =>
+      `<div style="font-size:0.68rem;margin:1px 0;display:flex;gap:5px;align-items:baseline;${p.self ? 'font-weight:700;color:var(--blue-text);' : ''}">`
+      + `<span style="width:16px;color:var(--text3);">${i + 1}.</span>`
+      + `<span style="flex:1;">${p.self ? '★ ' : ''}${esc(p.name)}</span>`
+      + (p.score != null ? `<span style="font-family:var(--mono);color:${sCol(p.score)};">${esc(p.score)}</span>` : '')
+      + (p.verdict ? `<span style="font-size:0.56rem;font-weight:700;color:${vCol(p.verdict)};width:78px;text-align:right;">${esc(p.verdict)}</span>` : '')
+      + `</div>`).join('');
+    const actCol = /EXIT|REDUCE/.test(pr.action || '') ? 'var(--red-text)' : /ADD/.test(pr.action || '') ? 'var(--green)' : 'var(--amber-text)';
+    peerBlock = `
+    <div style="border-top:1px solid var(--border);margin-top:7px;padding-top:5px;">
+      <div style="font-weight:700;font-size:0.75rem;">👥 Peer Rank: <span style="color:${prCol}">#${esc(pr.rank)} of ${esc(pr.of)}</span> <span style="color:var(--text3);font-size:0.62rem;">${esc(pr.set || 'closest competitors')}</span></div>
+      <div style="font-size:0.6rem;color:var(--text3);margin:1px 0 3px;">6 closest real competitors · Qual Score & verdict (best → weakest)</div>
+      ${peerLines}
+      ${pr.why ? `<div style="font-size:0.7rem;line-height:1.4;margin:5px 0 1px;"><b>Why ranked #${esc(pr.rank)}:</b> ${esc(pr.why)}</div>` : ''}
+      ${pr.best_own ? `<div style="font-size:0.68rem;color:var(--green-text);margin:2px 0;">✅ Best to own: <b>${esc(pr.best_own.name)}</b>${pr.best_own.why ? ` — ${esc(pr.best_own.why)}` : ''}</div>` : ''}
+      ${pr.avoid ? `<div style="font-size:0.68rem;color:var(--red-text);margin:2px 0;">⛔ Avoid: <b>${esc(pr.avoid.name)}</b>${pr.avoid.why ? ` — ${esc(pr.avoid.why)}` : ''}</div>` : ''}
+      ${pr.action ? `<div style="font-size:0.68rem;margin:2px 0;">🎯 Action: <b style="color:${actCol}">${esc(pr.action)}</b></div>` : ''}
+    </div>`;
+  }
+
+  return `
+    <h4>👥 ${esc(s.name || s.ticker)}${hasQ ? ` — Quality: <span style="color:${col}">${esc(q)}/10</span> <span style="font-size:0.7rem;color:var(--text2)">(${esc(pc.tier || '')})</span>` : ''}</h4>
+    <div style="font-size:0.62rem;color:var(--text3);margin:-2px 0 6px;">Pure qualitative business quality + qualitative peer rank. Live valuation: click for AI search.</div>
+    ${qualBlock}
+    ${peerBlock}
+    <div class="mt-conf">${hasQ ? `Quality rank #${esc(pc.rank)} of ${esc(pc.of)} · ` : ''}Confidence: ${esc(pc.conf || '—')}${pc.updated ? ' · ' + esc(pc.updated) : ''}</div>`;
+}
+
 (function initMgmtTip() {
   const tip = () => document.getElementById('mgmt-tip');
   document.addEventListener('mouseover', e => {
     const mcell = e.target.closest && e.target.closest('.mgmt-cell');
     const rcell = e.target.closest && e.target.closest('.rf-cell');
-    const cell = mcell || rcell;
+    const pcell = e.target.closest && e.target.closest('.peer-cell');
+    const cell = mcell || rcell || pcell;
     if (!cell) return;
     const t = cell.dataset.ticker;
     const s = allStocks.find(x => x.ticker === t);
@@ -3497,9 +3777,11 @@ function buildRfTip(rf, s) {
     let html = '';
     if (mcell && s.mgmt_trust) html = buildMgmtTip(s.mgmt_trust, s);
     else if (rcell && s.rf_score) html = buildRfTip(s.rf_score, s);
+    else if (pcell && s.peer_cmp) html = buildPeerTip(s.peer_cmp, s);
     if (!html) return;
     const el = tip();
     el.innerHTML = html;
+    el.style.maxWidth = pcell ? '470px' : '';
     el.style.display = 'block';
     const r = cell.getBoundingClientRect();
     const w = el.offsetWidth || 400, h = el.offsetHeight || 200;
@@ -3510,30 +3792,63 @@ function buildRfTip(rf, s) {
     el.style.top  = top + 'px';
   });
   document.addEventListener('mouseout', e => {
-    if (e.target.closest && (e.target.closest('.mgmt-cell') || e.target.closest('.rf-cell'))) tip().style.display = 'none';
+    if (e.target.closest && (e.target.closest('.mgmt-cell') || e.target.closest('.rf-cell') || e.target.closest('.peer-cell'))) tip().style.display = 'none';
   });
 })();
+
+// Movers v3 — volume + momentum + 52-week breakout/breakdown classifier
+// rvol = today vol / 30d avg | r = 1-day return % | h52 = % vs 52w high (<=0, 0 = at high) | l52 = % above 52w low (>=0, 0 = at low)
+function computeMover(rvol, r, h52, l52) {
+  if (rvol == null || r == null) return null;
+  const nearHigh = (h52 != null && h52 >= -2);   // within 2% of 52-week high
+  const nearLow  = (l52 != null && l52 <= 2);     // within 2% of 52-week low
+  if (nearHigh && rvol >= 7 && r >= 6)  return '⚡';   // strongest breakout — highest-conviction BUY
+  if (nearLow  && rvol >= 7 && r <= -6) return '🧊';   // strongest breakdown — sure-shot EXIT
+  if (nearHigh && rvol >= 3 && r >= 3)  return 'Z↑';   // 52-week-high breakout
+  if (nearLow  && rvol >= 3 && r <= -3) return 'Z↓';   // 52-week-low breakdown
+  const V = rvol >= 4 && Math.abs(r) >= 3;   // volume-led surge
+  const P = rvol >= 3 && Math.abs(r) >= 6;   // price-led surge
+  if (V && P) return 'V+P';
+  if (V) return 'V';
+  if (P) return 'P';
+  return 'No';
+}
+function moverStyle(m, r) {
+  r = r || 0;
+  if (m === '⚡') return 'color:var(--green);font-weight:800;font-size:1.1em';
+  if (m === '🧊') return 'color:var(--red-text);font-weight:800;font-size:1.1em';
+  if (m === 'Z↑') return 'color:var(--green);font-weight:800';
+  if (m === 'Z↓') return 'color:var(--red-text);font-weight:800';
+  if (m === 'V+P' || m === 'V') return r < 0 ? 'color:var(--red-text);font-weight:700' : 'color:var(--amber-text);font-weight:700';
+  if (m === 'P') return r < 0 ? 'color:#f97316;font-weight:600' : 'color:var(--green);font-weight:600';
+  return 'color:var(--text3)';
+}
 
 function renderAnalysisTable() {
   const tbody = document.getElementById('analysis-tbody');
   tbody.innerHTML = '';
+  if (!window._sectorsPopulated && Array.isArray(allStocks) && allStocks.length) { populateSectorDropdowns(); populateAccountDropdown(); const _htEl = document.getElementById('holding-type-analysis'); if (_htEl) _htEl.value = window._holdingType || 'Stocks'; window._sectorsPopulated = true; }
   // Respect current search query
   const searchQ = (document.getElementById('analysis-search')?.value || '').toLowerCase().trim();
 
-  const stocks = [...allStocks].map(s => {
+  const stocks = [...allStocks].map(orig => {
+    const s = accountAdjustStock(orig);
     const w52hPct = (s.week52_high && s.ltp) ? (s.ltp - s.week52_high) / s.week52_high * 100 : null;
     const w52lPct = (s.week52_low  && s.ltp) ? (s.ltp - s.week52_low)  / s.week52_low  * 100 : null;
     return {
       ...s,
-      buy_value:       (s.buy_avg || 0) * (s.quantity || 0),
-      pres_value:      (s.ltp || 0) * (s.quantity || 0),
+      buy_value:       (s.buy_value  != null) ? s.buy_value  : (s.buy_avg || 0) * (s.quantity || 0),
+      pres_value:      (s.pres_value != null) ? s.pres_value : (s.ltp || 0) * (s.quantity || 0),
       week52_high_pct: w52hPct != null ? Math.round(w52hPct * 10) / 10 : null,
       week52_low_pct:  w52lPct != null ? Math.round(w52lPct * 10) / 10 : null,
+      // Movers v2: recompute client-side (volume + momentum + 52-week breakout/breakdown)
+      movers: (s.vol_today_ratio != null && s.ret_1d != null) ? computeMover(s.vol_today_ratio, s.ret_1d, w52hPct, w52lPct) : (s.movers || null),
       // Expose conviction/moat from stocks data for sorting
       conviction: s.conviction || 0,
       moat_class:  s.moat_class || '',
       mgmt_trust_score: (s.mgmt_trust && typeof s.mgmt_trust.score === 'number') ? s.mgmt_trust.score : null,
       rf_score_val: (s.rf_score && typeof s.rf_score.score === 'number') ? s.rf_score.score : null,
+      qual_score: (s.peer_cmp && typeof s.peer_cmp.q === 'number') ? s.peer_cmp.q : null,
     };
   });
 
@@ -3552,9 +3867,9 @@ function renderAnalysisTable() {
       const oA = order[valA] ?? -1, oB = order[valB] ?? -1;
       return analysisSortDir === 'desc' ? oB - oA : oA - oB;
     }
-    // Movers: sort by conviction A+C > A > C > No
+    // Movers: sort by conviction ⚡ > 🧊 > Z↑ > Z↓ > V+P > V > P > No (price_break keeps A+C/A/C)
     if (analysisSortBy === 'price_break' || analysisSortBy === 'movers') {
-      const order = {'A+C': 3, 'A': 2, 'C': 1, 'No': 0};
+      const order = {'⚡': 8, '🧊': 7, 'Z↑': 6, 'Z↓': 5, 'V+P': 4, 'V': 3, 'P': 2, 'A+C': 4, 'A': 3, 'C': 2, 'No': 0};
       const oA = order[valA] ?? -1, oB = order[valB] ?? -1;
       return analysisSortDir === 'desc' ? oB - oA : oA - oB;
     }
@@ -3582,14 +3897,23 @@ function renderAnalysisTable() {
       const name   = (s.name   || '').toLowerCase();
       if (!ticker.includes(searchQ) && !name.includes(searchQ)) return;
     }
+    // Holdings-type master filter (independent of the chips; defaults to Stocks)
+    const _ht = s.holding_type || 'Stocks';
+    if (window._holdingType && window._holdingType !== 'All' && _ht !== window._holdingType) return;
     // Filter by chips (multi-select: row must pass ALL active filters)
     if (analysisFilters.has('conviction7') && (s.conviction || 0) < 7) return;
     if (analysisFilters.has('trust7') && !(s.mgmt_trust && typeof s.mgmt_trust.score === 'number' && s.mgmt_trust.score >= 7)) return;
+    if (analysisFilters.has('quality7') && !(s.peer_cmp && typeof s.peer_cmp.q === 'number' && s.peer_cmp.q >= 7)) return;
     if (analysisFilters.has('redflag') && !(s.rf_score && typeof s.rf_score.score === 'number' && s.rf_score.score < 5)) return;
     if (analysisFilters.has('widemoat') && s.moat_class !== 'wide') return;
     if (analysisFilters.has('strongbullish') && s.trend_signal !== 'Strong Bullish') return;
     if (analysisFilters.has('profit') && (s.pnl_abs || 0) <= 0) return;
     if (analysisFilters.has('movers') && (!s.movers || s.movers === 'No')) return;
+    if (analysisFilters.has('nearath') && !(s.ath_pct != null && s.ath_pct >= -5)) return;
+    if (analysisFilters.has('near52wkh') && !(s.week52_high_pct != null && s.week52_high_pct >= -3)) return;
+    if (analysisFilters.has('near52wkl') && !(s.week52_low_pct != null && s.week52_low_pct <= 5)) return;
+    if (window._sectorFilter && s.sector_group !== window._sectorFilter) return;
+    if (window._accountFilter && !(Array.isArray(s.accounts) && s.accounts.some(a => a.name === window._accountFilter))) return;
     if (analysisFilters.has('mustbuy') && !s.must_buy) return;
     if (analysisFilters.has('loss') && (s.pnl_abs || 0) >= 0) return;
 
@@ -3618,10 +3942,11 @@ function renderAnalysisTable() {
 
     const tr = document.createElement('tr');
     tr.innerHTML = `
-      <td><strong><span style="cursor:pointer;color:var(--blue-text);" title="View fundamental analysis card" onclick="goToCard('${esc(s.ticker)}')">${s.ticker}</span></strong></td>
+      <td><strong>${(Array.isArray(s.accounts) && s.accounts.length) ? `<span class="acct-exp" title="Show ${s.accounts.length} account${s.accounts.length>1?'s':''}" onclick="toggleAcctRow(this,'${esc(s.ticker)}')" style="cursor:pointer;color:var(--purple-text);margin-right:5px;user-select:none;font-weight:700;">\u25b8</span>` : ''}<span style="cursor:pointer;color:var(--blue-text);" title="View fundamental analysis card" onclick="goToCard('${esc(s.ticker)}')">${s.ticker}</span></strong></td>
       <td class="research-name" style="cursor:pointer;color:var(--blue-text);" title="Click to open Tickertape, Trendlyne, Tijori" data-ticker="${esc(s.ticker)}" data-name="${esc(s.name || s.ticker)}" onclick="openResearchTabsFromEl(event,this)"><span class="research-name" style="text-decoration:underline dotted;pointer-events:none;">${esc(s.name || s.ticker)}</span></td>
       ${mgmtTrustCell(s)}
       ${rfCell(s)}
+      ${qualCell(s)}
       <td title="Conviction score (/10) — overall analyst conviction in the thesis" style="text-align:center;font-weight:600;cursor:help;color:${ (s.conviction||0) >= 8 ? 'var(--green)' : (s.conviction||0) >= 6 ? 'var(--amber-text)' : (s.conviction||0) >= 4 ? '#f97316' : (s.conviction||0) >= 1 ? 'var(--red-text)' : 'var(--text3)' }">${s.conviction ? s.conviction+'/10' : '—'}</td>
       <td style="font-size:0.7rem;font-weight:600;color:${ s.moat_class==='wide' ? 'var(--green)' : s.moat_class==='narrow' ? 'var(--amber-text)' : 'var(--text3)' }">${s.moat_class === 'wide' ? '▲ Wide' : s.moat_class === 'narrow' ? '◆ Narrow' : '—'}</td>
       <td>${prv(f(s.quantity))}</td>
@@ -3630,7 +3955,7 @@ function renderAnalysisTable() {
       <td>${prv('₹' + f(s.pres_value))}${portPct ? '<br><span style="font-size:0.65rem;color:var(--text3)">'+portPct+'</span>' : ''}</td>
       <td class="${pc(pnlAbs)}">${prv('₹' + f(pnlAbs))}</td>
       <td class="${pc(pnlPct)}">${prv(f(pnlPct,1) + '%')}</td>
-      <td style="${ (s.movers==='A+C'||s.movers==='A') ? ((s.ret_1d||0) < 0 ? 'color:var(--red-text);font-weight:700' : 'color:var(--amber-text);font-weight:700') : s.movers==='C' ? ((s.ret_1d||0) < 0 ? 'color:#f97316;font-weight:600' : 'color:var(--green);font-weight:600') : 'color:var(--text3)' }">${s.movers || '—'}</td>
+      <td style="${moverStyle(s.movers, s.ret_1d)}">${s.movers || '—'}</td>
       <td style="text-align:center;font-weight:700;color:${ s.trend_score >= 70 ? (s.trend_signal==='Strong Bullish' ? 'var(--green)' : s.trend_signal==='Bullish' ? '#4ade80' : s.trend_signal==='Extended' ? 'var(--amber-text)' : 'var(--text2)') : s.trend_score >= 55 ? 'var(--amber-text)' : s.trend_score >= 35 ? 'var(--text2)' : s.trend_score != null ? 'var(--red-text)' : 'var(--text3)' }">${s.trend_score != null ? s.trend_score : '—'}</td>
       <td style="font-size:0.75rem;font-weight:600;color:${ s.trend_signal==='Strong Bullish' ? 'var(--green)' : s.trend_signal==='Bullish' ? '#4ade80' : s.trend_signal==='Extended' ? 'var(--amber-text)' : s.trend_signal==='Watch' ? '#f59e0b' : s.trend_signal==='Bearish' ? 'var(--red-text)' : 'var(--text3)' }">${s.trend_signal || '—'}</td>
       <td class="${pc(s.ret_1d)}">${fp(s.ret_1d)}</td>
@@ -3645,6 +3970,8 @@ function renderAnalysisTable() {
       <td class="${volClass(s.vol_today_ratio)}">${fVol(s.vol_today_ratio)}</td>
       <td class="neg">${s.week52_high_pct != null ? s.week52_high_pct.toFixed(1)+'%' : '—'}</td>
       <td class="pos">${s.week52_low_pct  != null ? '+'+s.week52_low_pct.toFixed(1)+'%'  : '—'}</td>
+      <td class="neg">${s.ath_pct != null ? s.ath_pct.toFixed(1)+'%' : '—'}</td>
+      <td class="pos">${s.atl_pct != null ? '+'+s.atl_pct.toFixed(1)+'%' : '—'}</td>
       <td>${f(s.mcap_cr)}</td>
       <td>${f(s.pe, 1)}</td>
       <td class="${pbClass(s.price_to_book)}">${f(s.price_to_book, 1)}</td>
@@ -3672,11 +3999,26 @@ function renderAnalysisTable() {
       <td style="text-align:center;color:${ s.days_above_200dma_10d >= 7 ? 'var(--green)' : s.days_above_200dma_10d >= 4 ? 'var(--amber-text)' : s.days_above_200dma_10d != null ? 'var(--red-text)' : 'var(--text3)' }">${s.days_above_200dma_10d != null ? s.days_above_200dma_10d+'/10' : '—'}</td>
     `;
     tbody.appendChild(tr);
+    if (Array.isArray(s.accounts) && s.accounts.length) {
+      const dr = document.createElement('tr');
+      dr.className = 'acct-detail-row';
+      dr.dataset.for = s.ticker;
+      dr.style.display = 'none';
+      const accRows = s.accounts.map(a => {
+        const inv = (a.invested != null) ? a.invested : ((a.buy_avg || 0) * (a.qty || 0));
+        const pres = (s.ltp || 0) * (a.qty || 0);
+        const pl = inv > 0 ? ((pres - inv) / inv * 100) : 0;
+        return `<tr><td>${esc(a.name)}</td><td style="text-align:right">${prv((a.qty||0).toLocaleString('en-IN'))}</td><td style="text-align:right">${prv('\u20b9'+f(a.buy_avg))}</td><td style="text-align:right">${prv('\u20b9'+f(inv,0))}</td><td style="text-align:right">${prv('\u20b9'+f(pres,0))}</td><td style="text-align:right;color:${pl>=0?'var(--green-text)':'var(--red-text)'}">${prv((pl>=0?'+':'')+pl.toFixed(1)+'%')}</td></tr>`;
+      }).join('');
+      dr.innerHTML = `<td colspan="99" style="padding:0;background:var(--bg2);"><div style="padding:6px 16px;"><div style="font-size:0.66rem;color:var(--text3);margin-bottom:3px;">\ud83d\udcc2 Held across ${s.accounts.length} account${s.accounts.length>1?'s':''}</div><table class="acct-inline-table" style="border-collapse:collapse;font-size:0.7rem;"><thead><tr style="color:var(--text3)"><th style="text-align:left;padding:2px 12px 2px 0">Account</th><th style="text-align:right;padding:2px 12px">Qty</th><th style="text-align:right;padding:2px 12px">Buy Avg</th><th style="text-align:right;padding:2px 12px">Invested</th><th style="text-align:right;padding:2px 12px">Present</th><th style="text-align:right;padding:2px 12px">P&L%</th></tr></thead><tbody>${accRows}</tbody></table></div></td>`;
+      tbody.appendChild(dr);
+    }
     visibleStocks.push(s);
   });
 
-  // Summary reflects current filter selection
-  updateSummary(visibleStocks.length > 0 && analysisFilters.size > 0 ? visibleStocks : allStocks);
+  // Summary reflects current filter selection (chips, sector dropdown, account, holdings type, search, or column funnels)
+  const anyAnalysisFilter = analysisFilters.size > 0 || !!window._sectorFilter || !!window._accountFilter || (window._holdingType && window._holdingType !== 'All') || !!searchQ || Object.keys(colFilters).length > 0;
+  updateSummary(anyAnalysisFilter && visibleStocks.length > 0 ? visibleStocks : allStocks, 'analysis');
   const ts = document.getElementById('last-updated').textContent;
   document.getElementById('last-updated-analysis').textContent = ts;
 }
@@ -3689,11 +4031,57 @@ let searchQuery  = '';
 let sortKey = 'pnl_pct_desc';
 
 // ── Summary bar ────────────────────────────────────────────────────────────
-function updateSummary(stocks) {
+// ── Benchmark index returns aligned under each portfolio return column ──
+function toggleBenchmarks() {
+  const blocks = document.querySelectorAll('.bench-block');
+  const arrow = document.getElementById('bench-arrow');
+  if (!blocks.length) return;
+  const anyHidden = [...blocks].some(el => !el.style.display || el.style.display === 'none');
+  blocks.forEach(el => { el.style.display = anyHidden ? 'block' : 'none'; });
+  if (arrow) arrow.style.transform = anyHidden ? 'rotate(180deg)' : '';
+}
+
+function renderBenchmarks() {
+  const order = [
+    ['nifty50',    'Nifty 50'],
+    ['smallcap250','Smallcap 250'],
+    ['midcap400',  'Midcap 150'],
+  ];
+  const cols = [
+    ['bench-day', 'ret_1d'],
+    ['bench-1m',  'ret_1m'],
+    ['bench-1y',  'ret_1y'],
+    ['bench-3y',  'ret_3y'],
+    ['bench-5y',  'ret_5y'],
+  ];
+  const b = window._benchmarks;
+  const legend = document.getElementById('bench-legend');
+  if (legend) {
+    legend.innerHTML = order.map(([k, label]) =>
+      `<div class="bench-row" style="color:var(--text3);font-weight:600;">${label}</div>`).join('');
+  }
+  const cell = (v) => {
+    if (v == null || isNaN(v)) return '<div class="bench-row" style="color:var(--text3);">—</div>';
+    const col = v >= 0 ? 'var(--green-text)' : 'var(--red-text)';
+    return `<div class="bench-row" style="color:${col};">${v >= 0 ? '+' : ''}${Number(v).toFixed(1)}%</div>`;
+  };
+  cols.forEach(([cid, field]) => {
+    const el = document.getElementById(cid);
+    if (!el) return;
+    el.innerHTML = order.map(([k]) => cell(b && b[k] ? b[k][field] : null)).join('');
+  });
+}
+
+function updateSummary(stocks, scope = 'all') {
   let invested = 0, current = 0, inProfit = 0, inLoss = 0;
-  let dayChgVal = 0, m1ChgVal = 0, y1ChgVal = 0;
+  let dayChgVal = 0, m1ChgVal = 0, y1ChgVal = 0, y3ChgVal = 0, y5ChgVal = 0;
+  // 3Y/5Y are buy-value-weighted hypotheticals (accumulated separately below).
+  // Day/1M/1Y are current-value-weighted; *Base sums exclude holdings with no
+  // price for that period so they don't dilute the percentage.
+  let dayBase = 0, m1Base = 0, y1Base = 0, y3Base = 0, y5Base = 0;
   let ewPnlSum = 0, ewPnlN = 0, ewDaySum = 0, ewDayN = 0;
   let ewM1Sum  = 0, ewM1N  = 0, ewY1Sum  = 0, ewY1N  = 0;
+  let ewY3Sum  = 0, ewY3N  = 0, ewY5Sum  = 0, ewY5N  = 0;
 
   stocks.forEach(s => {
     const qty = s.quantity || 0;
@@ -3703,18 +4091,25 @@ function updateSummary(stocks) {
     if (buy && qty) invested += buy * qty;
     if (ltp && qty) {
       current += ltp * qty;
-      
-      // Calculate change values based on historical % returns
-      // We assume historical prices = ltp / (1 + ret_pct/100)
-      const getHistoryVal = (retPct) => {
-        if (retPct == null) return ltp * qty;
-        const histPrice = ltp / (1 + (retPct / 100));
-        return histPrice * qty;
-      };
 
-      dayChgVal += (ltp * qty) - getHistoryVal(s.ret_1d);
-      m1ChgVal  += (ltp * qty) - getHistoryVal(s.ret_1m);
-      y1ChgVal  += (ltp * qty) - getHistoryVal(s.ret_1y);
+      // Historical value of TODAY's holding for a given % return: histPrice × qty.
+      // Stocks with no return for a period are excluded from BOTH the change and the
+      // base, so they don't dilute that period's percentage.
+      const histValOf = (retPct) => (ltp / (1 + (retPct / 100))) * qty;
+
+      if (s.ret_1d != null) { const h = histValOf(s.ret_1d); dayChgVal += (ltp * qty) - h; dayBase += h; }
+      if (s.ret_1m != null) { const h = histValOf(s.ret_1m); m1ChgVal  += (ltp * qty) - h; m1Base  += h; }
+      if (s.ret_1y != null) { const h = histValOf(s.ret_1y); y1ChgVal  += (ltp * qty) - h; y1Base  += h; }
+    }
+
+    // 3Y / 5Y P&L = HYPOTHETICAL: assume your current buy-value allocation had been
+    // deployed N years ago at the N-year-ago price. Buy-value-weighted average of the
+    // price returns. Holdings with no N-year price history (recently listed/added) are
+    // excluded, so weights renormalise across the stocks that actually have the history.
+    if (buy && qty) {
+      const bv = buy * qty;
+      if (s.ret_3y != null) { y3Base += bv; y3ChgVal += bv * (s.ret_3y / 100); }
+      if (s.ret_5y != null) { y5Base += bv; y5ChgVal += bv * (s.ret_5y / 100); }
     }
     
     // Equal-weight return accumulation
@@ -3722,6 +4117,8 @@ function updateSummary(stocks) {
     if (s.ret_1d != null)    { ewDaySum  += s.ret_1d;   ewDayN++;  }
     if (s.ret_1m != null)    { ewM1Sum   += s.ret_1m;   ewM1N++;   }
     if (s.ret_1y != null)    { ewY1Sum   += s.ret_1y;   ewY1N++;   }
+    if (s.ret_3y != null)    { ewY3Sum   += s.ret_3y;   ewY3N++;   }
+    if (s.ret_5y != null)    { ewY5Sum   += s.ret_5y;   ewY5N++;   }
 
     if (s.pnl_pct != null) {
       if (s.pnl_pct >= 0) inProfit++;
@@ -3734,21 +4131,26 @@ function updateSummary(stocks) {
   const ewDay = ewDayN  > 0 ? ewDaySum  / ewDayN  : null;
   const ewM1  = ewM1N   > 0 ? ewM1Sum   / ewM1N   : null;
   const ewY1  = ewY1N   > 0 ? ewY1Sum   / ewY1N   : null;
+  const ewY3  = ewY3N   > 0 ? ewY3Sum   / ewY3N   : null;
+  const ewY5  = ewY5N   > 0 ? ewY5Sum   / ewY5N   : null;
 
   const ewFmt = (v) => v != null ? `(EW: ${v >= 0 ? '+' : ''}${v.toFixed(1)}%)` : '';
 
   const pnlAbs = current - invested;
   const pnlPct = invested > 0 ? (pnlAbs / invested * 100) : 0;
   
-  const dayPct = current > 0 ? (dayChgVal / (current - dayChgVal) * 100) : 0;
-  const m1Pct  = current > 0 ? (m1ChgVal / (current - m1ChgVal) * 100) : 0;
-  const y1Pct  = current > 0 ? (y1ChgVal / (current - y1ChgVal) * 100) : 0;
+  const dayPct = dayBase > 0 ? (dayChgVal / dayBase * 100) : 0;
+  const m1Pct  = m1Base  > 0 ? (m1ChgVal / m1Base * 100) : 0;
+  const y1Pct  = y1Base  > 0 ? (y1ChgVal / y1Base * 100) : 0;
+  const y3Pct  = y3Base > 0 ? (y3ChgVal / y3Base * 100) : 0;
+  const y5Pct  = y5Base > 0 ? (y5ChgVal / y5Base * 100) : 0;
 
   const fmtLacs = (v) => (v / 100000).toLocaleString('en-IN', {minimumFractionDigits:2, maximumFractionDigits:2}) + ' L';
   const locked = (typeof privacyUnlocked !== 'undefined' && !privacyUnlocked);
   const pvt = (val) => locked ? '●●●' : val;
 
   // Dashboard Update
+  if (scope === 'all' || scope === 'dashboard') {
   document.getElementById('sum-invested').textContent = pvt('₹' + fmt(invested, 0));
   document.getElementById('sum-current').textContent  = pvt('₹' + fmt(current, 0));
 
@@ -3765,10 +4167,11 @@ function updateSummary(stocks) {
   document.getElementById('sum-count').textContent  = pvt(String(stocks.length));
   document.getElementById('sum-profit').textContent = pvt(String(inProfit));
   document.getElementById('sum-loss').textContent   = pvt(String(inLoss));
+  }
 
   // Analysis Update (Lac format for Top Bar)
   const anaInv = document.getElementById('ana-sum-invested');
-  if (anaInv) {
+  if ((scope === 'all' || scope === 'analysis') && anaInv) {
     anaInv.textContent = pvt('₹' + fmtLacs(invested));
     document.getElementById('ana-sum-current').textContent = pvt('₹' + fmtLacs(current));
 
@@ -3792,6 +4195,8 @@ function updateSummary(stocks) {
     setChg('ana-sum-day-abs', 'ana-sum-day-pct', dayChgVal, dayPct);
     setChg('ana-sum-1m-abs',  'ana-sum-1m-pct',  m1ChgVal,  m1Pct);
     setChg('ana-sum-1y-abs',  'ana-sum-1y-pct',  y1ChgVal,  y1Pct);
+    setChg('ana-sum-3y-abs',  'ana-sum-3y-pct',  y3ChgVal,  y3Pct);
+    setChg('ana-sum-5y-abs',  'ana-sum-5y-pct',  y5ChgVal,  y5Pct);
 
     // Equal-weight annotations on Analysis bar
     const setEW = (id, val) => {
@@ -3804,6 +4209,8 @@ function updateSummary(stocks) {
     setEW('ana-ew-day', ewDay);
     setEW('ana-ew-1m',  ewM1);
     setEW('ana-ew-1y',  ewY1);
+    setEW('ana-ew-3y',  ewY3);
+    setEW('ana-ew-5y',  ewY5);
 
     document.getElementById('ana-sum-count').textContent  = pvt(String(stocks.length));
     document.getElementById('ana-sum-profit').textContent = pvt(String(inProfit));
@@ -3813,6 +4220,7 @@ function updateSummary(stocks) {
 
 // ── Filter + Sort + Render ─────────────────────────────────────────────────
 function renderAll() {
+  if (!window._accountsPopulated && Array.isArray(allStocks) && allStocks.length) { populateAccountDropdown(); window._accountsPopulated = true; }
   // For 'exited': show stocks that have analysis but are no longer in portfolio (no live price)
   if (activeFilter === 'exited') {
     // Load all stocks from stocksMap (before price filtering) — these are stored in allStocksWithAnalysis
@@ -3828,10 +4236,15 @@ function renderAll() {
     } else {
       container.innerHTML = exitedStocks.map(s => renderCard({...s, _exited: true})).join('');
     }
+    updateSummary(exitedStocks, 'dashboard');
     return;
   }
 
   let visible = allStocks.filter(s => {
+    // Deep Analysis cards never show non-equity holdings (Gold / Silver / MF)
+    if ((s.holding_type || 'Stocks') !== 'Stocks') return false;
+    // Sector dropdown (applies regardless of chip selection)
+    if (window._sectorFilter && s.sector_group !== window._sectorFilter) return false;
     // Multi-select: row must pass ALL active deep filters
     if (deepActiveFilters.size === 0) return true;
     if (deepActiveFilters.has('wide')   && s.moat_class !== 'wide') return false;
@@ -3851,6 +4264,16 @@ function renderAll() {
       (s.sector || '').toLowerCase().includes(q)
     );
   }
+
+  // Account filter: show only stocks held in the selected account
+  if (window._accountFilter) {
+    visible = visible.filter(s => Array.isArray(s.accounts) && s.accounts.some(a => a.name === window._accountFilter));
+    // Scope each card's qty / value / P&L to the selected account's holding
+    visible = visible.map(accountAdjustStock);
+  }
+
+  // Headline summary follows the cards-page filters (sector, chips, search)
+  updateSummary(visible, 'dashboard');
 
   // Sort
   visible.sort((a, b) => {
@@ -3907,15 +4330,20 @@ async function loadData() {
   const pricesFetch  = fetch('prices.json' + ts_qs).then(r => r.ok ? r.json() : {});
   const mgmtFetch    = fetch('management_trust.json' + ts_qs).then(r => r.ok ? r.json() : {}).catch(() => ({}));
   const rfFetch      = fetch('red_flags.json' + ts_qs).then(r => r.ok ? r.json() : {}).catch(() => ({}));
+  const peerFetch    = fetch('peer_comparison.json' + ts_qs).then(r => r.ok ? r.json() : {}).catch(() => ({}));
+  const peerRankFetch = fetch('peer_rank.json' + ts_qs).then(r => r.ok ? r.json() : {}).catch(() => ({}));
 
-  const [stockDataArrays, prices, mgmtTrust, redFlags] = await Promise.all([
+  const [stockDataArrays, prices, mgmtTrust, redFlags, peerCmp, peerRank] = await Promise.all([
     Promise.all(stockFetches),
     pricesFetch,
     mgmtFetch,
-    rfFetch
+    rfFetch,
+    peerFetch,
+    peerRankFetch
   ]);
   window._mgmtTrust = mgmtTrust || {};
   window._redFlags = redFlags || {};
+  window._peerCmp = peerCmp || {};
 
   // Merge all stocks.json / Stocks_Fundamentals*.json files
   // We use a Map to ensure unique records by ticker
@@ -3963,6 +4391,10 @@ async function loadData() {
     // Still try to use valid price data from prices.json if any exists
   }
 
+  // Benchmark index returns (Nifty 50, Smallcap 250, Midcap 400) for the summary panel
+  window._benchmarks = prices._benchmarks || null;
+  renderBenchmarks();
+
   // Filter to ONLY stocks that have prices (are in the portfolio)
   // Validate prices quality — if fewer than 5 stocks have prices, it's corrupt data
   const validPricedTickers = Object.keys(prices).filter(t => prices[t]?.ltp != null && !/^\d/.test(t));
@@ -3994,6 +4426,15 @@ async function loadData() {
     // Attach Red Flags forensic scan (separate file) if present
     if (redFlags && redFlags[s.ticker]) {
       s.rf_score = redFlags[s.ticker];
+    }
+    // Attach Peer Comparison verdict (separate file) if present
+    if (peerCmp && peerCmp[s.ticker]) {
+      s.peer_cmp = peerCmp[s.ticker];
+    }
+    // Attach real-market peer rank (6 closest competitors) if present
+    if (peerRank && peerRank[s.ticker]) {
+      if (!s.peer_cmp) s.peer_cmp = {};
+      s.peer_cmp.peer = peerRank[s.ticker];
     }
   });
 
@@ -4300,13 +4741,18 @@ document.addEventListener('DOMContentLoaded', function() {
 // ── Boot ───────────────────────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', init);
 
-// Restore lock button label if already unlocked in this session or remembered device
-(function() {
-  if (sessionStorage.getItem('privacy_unlocked') === '1'
-      || localStorage.getItem('privacy_device_trusted') === 'stt-device-trusted-v1') {
-    document.querySelectorAll('#lock-btn, #lock-btn-2').forEach(b => b && (b.textContent = '🔓 Unlock'));
-  }
+// ── Account PINs ─────────────────────────────────────────────────────────────
+// Each 4-digit PIN (credin/pins.json) unlocks the numbers AND switches to that
+// person's account. Default on every load = all accounts + numbers locked.
+// Nothing is persisted, so a hard refresh always returns to the locked default.
+window._accountPins = [];
+(async function loadAccountPins() {
+  try {
+    const res = await fetch('credin/pins.json?t=' + Date.now());
+    if (res.ok) { const j = await res.json(); window._accountPins = Array.isArray(j.pins) ? j.pins : []; }
+  } catch (e) {}
 })();
+
 
 // ── Theme toggle ──────────────────────────────────────────────────────────
 function toggleTheme() {
@@ -4328,9 +4774,9 @@ function toggleTheme() {
 // ── Privacy lock ──────────────────────────────────────────────────────────
 const PRIVACY_PIN = '1520';
 const TRUSTED_TOKEN = 'stt-device-trusted-v1';
-// Restore unlock state: session flag OR a remembered-device token in localStorage
-let privacyUnlocked = sessionStorage.getItem('privacy_unlocked') === '1'
-                   || localStorage.getItem('privacy_device_trusted') === TRUSTED_TOKEN;
+// Always start LOCKED on every page load (numbers masked, all accounts).
+// Nothing is restored from storage, so a hard refresh resets to the locked default.
+let privacyUnlocked = false;
 
 // Private fields: columns by index (0-based) in the analysis table
 // 2=Qty, 3=Buy Value, 4=Present Value, 5=P&L, 6=P&L%
@@ -4353,6 +4799,7 @@ function maskPrivateData() {
    'ana-sum-invested','ana-sum-current','ana-sum-pnl-abs','ana-sum-pnl-pct',
    'ana-sum-day-abs','ana-sum-day-pct','ana-sum-1m-abs','ana-sum-1m-pct',
    'ana-sum-1y-abs','ana-sum-1y-pct',
+   'ana-sum-3y-abs','ana-sum-3y-pct','ana-sum-5y-abs','ana-sum-5y-pct',
    'ana-sum-count','ana-sum-profit','ana-sum-loss'].forEach(id => {
     const el = document.getElementById(id);
     if (el) {
@@ -4374,10 +4821,71 @@ function unmaskPrivateData() {
    'ana-sum-invested','ana-sum-current','ana-sum-pnl-abs','ana-sum-pnl-pct',
    'ana-sum-day-abs','ana-sum-day-pct','ana-sum-1m-abs','ana-sum-1m-pct',
    'ana-sum-1y-abs','ana-sum-1y-pct',
+   'ana-sum-3y-abs','ana-sum-3y-pct','ana-sum-5y-abs','ana-sum-5y-pct',
    'ana-sum-count','ana-sum-profit','ana-sum-loss'].forEach(id => {
     const el = document.getElementById(id);
     if (el && el.dataset.orig) { el.textContent = el.dataset.orig; delete el.dataset.orig; }
   });
+}
+
+// ── Portfolio Extract: full master JSON + Claude analysis prompt → clipboard ─
+function buildPortfolioExtract() {
+  const num = (v) => (typeof v === 'number' && isFinite(v)) ? Math.round(v * 100) / 100 : null;
+  const inv = allStocks.reduce((a, s) => a + (s.buy_avg || 0) * (s.quantity || 0), 0);
+  const cur = allStocks.reduce((a, s) => a + (s.ltp || 0) * (s.quantity || 0), 0);
+
+  const holdings = allStocks.map(s => {
+    const qty = s.quantity || 0, buy = s.buy_avg || 0, ltp = s.ltp || 0;
+    const present = ltp * qty, invested = buy * qty;
+    return {
+      ticker: s.ticker, name: s.name, sector: s.sector, holding_type: s.holding_type || 'Stocks',
+      conviction: s.conviction || 0, moat_class: s.moat_class, moat_type: s.moat_type, moat: s.moat,
+      qty, buy_avg: num(buy), ltp, invested: num(invested), present_value: num(present),
+      pnl_abs: num(s.pnl_abs), pnl_pct: num(s.pnl_pct), pct_of_portfolio: cur ? num(present / cur * 100) : null,
+      accounts: (s.accounts || []).map(a => ({ name: a.name, qty: a.qty, invested: a.invested })),
+      returns: { d1: num(s.ret_1d), m1: num(s.ret_1m), m6: num(s.ret_6m), y1: num(s.ret_1y), y3: num(s.ret_3y), y5: num(s.ret_5y) },
+      trend: { score: s.trend_score, signal: s.trend_signal, vs_200dma_pct: num(s.price_to_200dma_pct), movers: s.movers,
+               wk52_high_pct: num(s.week52_high_pct), wk52_low_pct: num(s.week52_low_pct), ath_pct: num(s.ath_pct) },
+      fundamentals: { mcap_cr: s.mcap_cr, pe: s.pe, pb: s.price_to_book, ev_ebitda: s.ev_ebitda, roe: s.roe, roa: s.roa,
+                      debt_to_equity: s.debt_to_equity, pat_cagr: s.pat_cagr, rev_cagr: s.rev_cagr, eps: s.eps,
+                      div_yield: s.div_yield, op_margin: s.operating_margin, profit_margin: s.profit_margin, promoter_pct: s.insider_pct },
+      management_trust: s.mgmt_trust || null,
+      red_flags: s.rf_score || null,
+      peer_analysis: s.peer_cmp || null,
+      quality: { score: (s.peer_cmp && s.peer_cmp.q) || null, pricing_power: s.pricing_power, capital_allocation: s.capital_allocation },
+      thesis: { leadership: s.leadership, non_replicable: s.non_rep, tailwinds: s.tailwinds, risks: s.risks, track: s.track, must_buy: !!s.must_buy }
+    };
+  });
+
+  return {
+    generated_at: new Date().toISOString(),
+    summary: { holdings_count: allStocks.length, invested: num(inv), present_value: num(cur), pnl_abs: num(cur - inv), pnl_pct: inv ? num((cur - inv) / inv * 100) : null },
+    holdings
+  };
+}
+
+function copyPortfolioExtract() {
+  if (typeof privacyUnlocked !== 'undefined' && !privacyUnlocked) { showToast('🔒 Unlock to extract data', 'amber'); return; }
+  const data = buildPortfolioExtract();
+  const prompt =
+`You are a senior equity portfolio strategist. Analyse the portfolio JSON below and give clear, actionable rebalancing recommendations for the NEXT 6 MONTHS.
+
+Use ALL the data: valuation & fundamentals (PE, PB, ROE, growth, debt), live P&L and position size (% of portfolio), trend/technicals (200DMA, 52wk, ATH%), conviction, moat, management_trust, red_flags and peer_analysis.
+
+Deliver:
+1. INCREASE — holdings to add to (best risk/reward: strong moat + trust + trend, reasonable valuation), with sizing %.
+2. REDUCE / EXIT — over-valued, weak fundamentals, red flags, broken trend, or oversized positions, with trim %.
+3. HOLD — keep as is.
+4. Concentration & sector risks, and any single-stock weight that is too high.
+5. A target action table: ticker | current % | action | target % | one-line reason.
+Be specific, reference the metrics, rank by priority. Indian market context (₹, NSE).
+
+PORTFOLIO JSON:
+${JSON.stringify(data, null, 2)}`;
+  navigator.clipboard.writeText(prompt).then(
+    () => showToast(`✅ Portfolio Extract copied (${data.holdings.length} holdings) — paste into Claude`, 'green'),
+    () => showToast('❌ Clipboard blocked — allow clipboard access', 'red')
+  );
 }
 
 // ── Excel Export ─────────────────────────────────────────────────────────
@@ -4537,10 +5045,8 @@ function applyPrivacyState() {
 function togglePrivacy() {
   if (!privacyUnlocked) {
     // Need to unlock — show PIN modal
-    document.getElementById('pin-modal-title').textContent = '🔓 Enter PIN to Unlock';
+    document.getElementById('pin-modal-title').textContent = '🔓 Enter PIN to unlock & open your account';
     document.getElementById('pin-input').value = '';
-    const rememberBox = document.getElementById('pin-remember');
-    if (rememberBox) rememberBox.checked = false;
     document.getElementById('pin-error').classList.remove('show');
     document.getElementById('pin-modal').classList.add('open');
     setTimeout(() => document.getElementById('pin-input').focus(), 100);
@@ -4555,17 +5061,21 @@ function togglePrivacy() {
 
 function submitPin() {
   const entered = document.getElementById('pin-input').value.trim();
-  if (entered === PRIVACY_PIN) {
+  const pins = Array.isArray(window._accountPins) ? window._accountPins : [];
+  let match = pins.find(p => String(p.pin) === entered);
+  // Fallback admin PIN (full portfolio) in case credin/pins.json is unavailable
+  if (!match && entered === PRIVACY_PIN) match = { name: 'Admin', account: '' };
+
+  if (match) {
     privacyUnlocked = true;
-    sessionStorage.setItem('privacy_unlocked', '1');
-    // If "remember this device" is checked, persist a trust token on THIS device only
-    const remember = document.getElementById('pin-remember');
-    if (remember && remember.checked) {
-      localStorage.setItem('privacy_device_trusted', TRUSTED_TOKEN);
-    }
+    const acct = match.account || '';
+    window._accountFilter = acct;
+    ['account-filter-analysis', 'account-filter-deep'].forEach(id => { const el = document.getElementById(id); if (el) el.value = acct; });
     closePinModal();
-    applyPrivacyState();
-    showToast(remember && remember.checked ? '🔓 Unlocked — this device remembered' : '🔓 Values unlocked', 'green');
+    renderAnalysisTable();
+    renderAll();
+    document.querySelectorAll('#lock-btn, #lock-btn-2').forEach(b => b && (b.textContent = '🔓 Unlock'));
+    showToast(`🔓 Unlocked${match.name ? ' — ' + match.name : ''}`, 'green');
   } else {
     const errEl = document.getElementById('pin-error');
     errEl.textContent = '❌ Incorrect PIN';

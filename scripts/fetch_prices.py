@@ -98,6 +98,14 @@ def find_col(df, keywords):
 sym_col  = find_col(df, ["symbol", "ticker", "scrip", "stock"])
 qty_col  = find_col(df, ["qty", "quantity", "shares", "units"])
 avg_col  = find_col(df, ["buy avg", "buyavg", "avg price", "avg cost", "purchase price", "buy_avg", "avg"])
+acct_col = find_col(df, ["account"])
+bv_col   = find_col(df, ["buy value", "buyvalue"])
+pv_col   = find_col(df, ["present value", "current value", "market value"])
+type_col = find_col(df, ["type", "asset class", "category"])
+if acct_col:
+    print(f"[INFO] Found Account column: {acct_col!r}")
+if type_col:
+    print(f"[INFO] Found Type column: {type_col!r}")
 
 missing = []
 if sym_col  is None: missing.append("Symbol/Ticker column (tried: symbol, ticker, scrip, stock)")
@@ -134,13 +142,87 @@ for col in df.columns:
 if mb_col:
     print(f"[INFO] Found MB column: {mb_col!r}")
 
+# ── Read the separate "Must Buy" sheet (a second tab in the same workbook) ──
+# The Google Sheet has a dedicated "MB" tab listing Must-Buy tickers. We always
+# merge it in, so Must-Buy works whether or not the main sheet has an MB column.
+MUSTBUY_SET = set()
+import re as _re_mb
+try:
+    all_sheets = pd.read_excel(portfolio_file, sheet_name=None, engine="openpyxl")
+    mb_sheet_name = None
+    for sname in all_sheets:
+        low = str(sname).strip().lower()
+        if any(kw in low for kw in ['must buy', 'mustbuy', 'must_buy', 'must-buy']) or low in ['mb', 'mustbuy']:
+            mb_sheet_name = sname
+            break
+    if mb_sheet_name is not None:
+        mb_df = all_sheets[mb_sheet_name]
+        # Prefer a symbol/ticker column; otherwise use the first column
+        mb_tcol = find_col(mb_df, ["symbol", "ticker", "scrip", "stock", "mustbuy", "must buy"])
+        if mb_tcol is None and len(mb_df.columns) > 0:
+            mb_tcol = mb_df.columns[0]
+        if mb_tcol is not None:
+            for v in mb_df[mb_tcol].dropna().astype(str):
+                t = _re_mb.sub(r'\s+', '', v.strip().upper())
+                t = _re_mb.sub(r'-[A-Z]$', '', t)   # strip Zerodha suffix
+                if t and not t.replace('.', '').isdigit():
+                    MUSTBUY_SET.add(t)
+        print(f"[INFO] Read Must Buy sheet {mb_sheet_name!r}: {len(MUSTBUY_SET)} tickers")
+    else:
+        print("[INFO] No separate Must Buy sheet found.")
+except Exception as e:
+    print(f"[WARN] Could not read Must Buy fallback sheet: {e}")
+
 # Filter valid rows using detected column names
 cols_to_keep = ["symbol", "qty", "buy_avg"]
 df = df.rename(columns={sym_col: "symbol", qty_col: "qty", avg_col: "buy_avg"})
-if mb_col and mb_col not in [sym_col, qty_col, avg_col]:
+if acct_col and acct_col not in [sym_col, qty_col, avg_col]:
+    df = df.rename(columns={acct_col: "account"})
+    cols_to_keep.append("account")
+if bv_col and bv_col not in [sym_col, qty_col, avg_col, acct_col]:
+    df = df.rename(columns={bv_col: "buy_value"})
+    cols_to_keep.append("buy_value")
+if mb_col and mb_col not in [sym_col, qty_col, avg_col, acct_col, bv_col]:
     df = df.rename(columns={mb_col: "must_buy"})
     cols_to_keep.append("must_buy")
+if pv_col and pv_col not in [sym_col, qty_col, avg_col, acct_col, bv_col, mb_col]:
+    df = df.rename(columns={pv_col: "present_value"})
+    cols_to_keep.append("present_value")
+if type_col and type_col not in [sym_col, qty_col, avg_col, acct_col, bv_col, mb_col, pv_col]:
+    df = df.rename(columns={type_col: "holding_type"})
+    cols_to_keep.append("holding_type")
 df = df[cols_to_keep].copy()
+# Exclude the spreadsheet TOTAL summary row(s) (Account Name == "TOTAL")
+if "account" in df.columns:
+    df = df[df["account"].astype(str).str.strip().str.upper() != "TOTAL"]
+
+# ── Separate non-equity holdings (Gold / Silver / MF) ───────────────────────
+# These are NOT on yfinance, so we price them straight from the sheet's
+# Present value column and keep them out of the equity (yfinance) pipeline.
+def _norm_htype(v):
+    s = str(v).strip().lower()
+    if s == "gold":   return "Gold"
+    if s == "silver": return "Silver"
+    if s in ("mf", "mutual fund", "mutual funds"): return "MF"
+    return "Stocks"
+
+import re as _re_ne
+def _clean_ne(t):
+    return _re_ne.sub(r'-[A-Z]$', '', str(t).strip())
+
+SECTOR_FOR_TYPE = {"Gold": "Gold", "Silver": "Silver", "MF": "Mutual Fund"}
+nonequity_df = pd.DataFrame()
+nonequity_tickers = set()
+if "holding_type" in df.columns:
+    _ht = df["holding_type"].map(_norm_htype)
+    nonequity_df = df[_ht != "Stocks"].copy()
+    if not nonequity_df.empty:
+        nonequity_df["holding_type"] = nonequity_df["holding_type"].map(_norm_htype)
+        nonequity_tickers = set(_clean_ne(s) for s in nonequity_df["symbol"])
+        # Drop them from the equity dataframe (priced from sheet instead)
+        df = df[_ht == "Stocks"].copy()
+        print(f"[INFO] Holding non-equity rows for {len(nonequity_tickers)} tickers "
+              f"(Gold/Silver/MF) priced from the sheet.")
 
 # Strip Zerodha risk-indicator suffixes like -T, -X, -E, -B, -Z etc.
 # e.g. MODISONLTD-T → MODISONLTD, LAKSELEC-X → LAKSELEC
@@ -156,11 +238,43 @@ df["qty"] = pd.to_numeric(df["qty"], errors="coerce")
 df["buy_avg"] = pd.to_numeric(df["buy_avg"], errors="coerce")
 df = df.dropna(subset=["qty", "buy_avg"])
 
-portfolio_cols = ["symbol", "qty", "buy_avg"]
-if "must_buy" in df.columns:
-    portfolio_cols.append("must_buy")
-portfolio = df[portfolio_cols].reset_index(drop=True)
-print(f"[INFO] Found {len(portfolio)} valid holdings in portfolio\n")
+# ── Aggregate by ticker across accounts ──────────────────────────────────────
+# The sheet now lists the same stock once per ACCOUNT. Collapse to one row per
+# ticker (total qty + buy-value-weighted average buy price) and remember the
+# per-account split so the dashboard can show it. df["symbol"] is already suffix
+# stripped above, so it doubles as the canonical (clean) ticker key.
+if "buy_value" in df.columns:
+    df["buy_value"] = pd.to_numeric(df["buy_value"], errors="coerce")
+    df["buy_value"] = df["buy_value"].fillna(df["qty"] * df["buy_avg"])
+else:
+    df["buy_value"] = df["qty"] * df["buy_avg"]
+
+accounts_map = {}
+if "account" in df.columns:
+    for _, r in df.iterrows():
+        tk = str(r["symbol"]).strip()
+        accounts_map.setdefault(tk, []).append({
+            "name": str(r["account"]).strip(),
+            "qty": float(r["qty"]),
+            "buy_avg": round(float(r["buy_avg"]), 2),
+            "invested": round(float(r["buy_value"]), 2),
+        })
+    for tk in accounts_map:
+        accounts_map[tk].sort(key=lambda a: -a["invested"])
+
+agg_rows = []
+for tk, g in df.groupby("symbol", sort=False):
+    tot_qty = float(g["qty"].sum())
+    tot_bv = float(g["buy_value"].sum())
+    wavg = round(tot_bv / tot_qty, 4) if tot_qty else 0.0
+    is_mb = ("must_buy" in g.columns and
+             any(str(v).strip().upper() == "MUSTBUY" for v in g["must_buy"]))
+    agg_rows.append({"symbol": str(tk).strip(), "qty": tot_qty, "buy_avg": wavg,
+                     "must_buy": "MUSTBUY" if is_mb else ""})
+
+portfolio = pd.DataFrame(agg_rows).reset_index(drop=True)
+print(f"[INFO] Found {len(portfolio)} unique holdings across "
+      f"{sum(len(v) for v in accounts_map.values()) or len(portfolio)} account rows\n")
 
 # ── Sanity check: abort if portfolio looks empty or corrupt ─────────────────
 # Load existing prices.json to use as fallback if fetch gives bad results
@@ -197,6 +311,9 @@ def _clean_ticker(t):
 
 new_stubs = []
 portfolio_tickers = set(_clean_ticker(row["symbol"]) for _, row in portfolio.iterrows())
+# Keep non-equity (Gold/Silver/MF) tickers in the "known" set so the removal
+# logic below does not wipe their stubs from stocks.json.
+portfolio_tickers |= nonequity_tickers
 
 for _, row in portfolio.iterrows():
     sym = _clean_ticker(row["symbol"])
@@ -245,9 +362,13 @@ prices = {}
 now_utc = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
 
 # Build lookup of buy_avg and qty from portfolio (use clean tickers as keys)
+def _is_mustbuy(row, clean_sym):
+    col_flag = ("must_buy" in portfolio.columns and str(row["must_buy"]).strip().upper() == "MUSTBUY")
+    return bool(col_flag or (clean_sym.strip().upper() in MUSTBUY_SET))
+
 portfolio_map = {
     _clean_ticker(row["symbol"]): {"qty": float(row["qty"]), "buy_avg": float(row["buy_avg"]),
-                                    "must_buy": str(row["must_buy"]).strip().upper() == "MUSTBUY" if "must_buy" in portfolio.columns else False}
+                                    "must_buy": _is_mustbuy(row, _clean_ticker(row["symbol"]))}
     for _, row in portfolio.iterrows()
 }
 
@@ -317,6 +438,10 @@ for _, row in portfolio.iterrows():
     fetched_vol_30m_ratio = None
     fetched_mover_a = None
     fetched_mover_c = None
+    fetched_mover_z = None
+    fetched_movers = None
+    fetched_ath_pct = None
+    fetched_atl_pct = None
     fetched_vol_today_ratio = None
     fetched_trend_score = None
     fetched_trend_signal = None
@@ -343,8 +468,8 @@ for _, row in portfolio.iterrows():
         try:
             ticker_obj = yf.Ticker(candidate)
             
-            # Fetch historical data for returns calculation (5 years max)
-            hist = ticker_obj.history(period="5y")
+            # Fetch full historical data (max) for returns + true all-time high/low
+            hist = ticker_obj.history(period="max")
             
             if not hist.empty and len(hist) > 1:
                 curr_price = hist['Close'].iloc[-1]
@@ -382,6 +507,17 @@ for _, row in portfolio.iterrows():
                 # 5-year return (~1200 trading days, slightly lower to account for holidays)
                 if len(hist) >= 1200:
                     ret_5y = round(((curr_price - hist['Close'].iloc[-1200]) / hist['Close'].iloc[-1200] * 100), 2)
+
+                # All-time high / low (from full history) — % from ATH (<=0) and % above ATL (>=0)
+                try:
+                    ath_v = float(hist['Close'].max())
+                    atl_v = float(hist['Close'].min())
+                    if ath_v > 0:
+                        fetched_ath_pct = round((curr_price - ath_v) / ath_v * 100, 2)
+                    if atl_v > 0:
+                        fetched_atl_pct = round((curr_price - atl_v) / atl_v * 100, 2)
+                except Exception:
+                    pass
             else:
                 # Fallback to fast_info
                 fi = ticker_obj.fast_info
@@ -509,12 +645,24 @@ for _, row in portfolio.iterrows():
                         if avg_30d > 0:
                             fetched_vol_today_ratio = round(today_vol / avg_30d, 2)
                             fetched_vol_yest_ratio  = round(yest_vol  / avg_30d, 2)
-                        # Mover A: strict — vol > 3x 30d AND > 3x 5d AND (ret > +3% OR ret < -3%)
-                        if avg_30d > 0 and avg_5d > 0 and ret_1d is not None:
-                            fetched_mover_a = (today_vol > 3 * avg_30d and today_vol > 3 * avg_5d and (ret_1d > 3.0 or ret_1d < -3.0))
-                        # Mover C: balanced — vol > 2x 30d AND (ret > +4% OR ret < -4%)
+                        # Movers v3: volume + momentum + 52-week breakout/breakdown
                         if avg_30d > 0 and ret_1d is not None:
-                            fetched_mover_c = (today_vol > 2 * avg_30d and (ret_1d > 4.0 or ret_1d < -4.0))
+                            rvol = today_vol / avg_30d
+                            ar = abs(ret_1d)
+                            cclose = float(hist['Close'].iloc[-1])
+                            near_high = bool(fetched_week52_high and cclose >= 0.98 * fetched_week52_high)
+                            near_low  = bool(fetched_week52_low  and cclose <= 1.02 * fetched_week52_low)
+                            if   near_high and rvol >= 7 and ret_1d >= 6:  fetched_movers = "\u26a1"
+                            elif near_low  and rvol >= 7 and ret_1d <= -6: fetched_movers = "\U0001f9ca"
+                            elif near_high and rvol >= 3 and ret_1d >= 3:  fetched_movers = "Z\u2191"
+                            elif near_low  and rvol >= 3 and ret_1d <= -3: fetched_movers = "Z\u2193"
+                            else:
+                                _V = rvol >= 4 and ar >= 3
+                                _P = rvol >= 3 and ar >= 6
+                                if   _V and _P: fetched_movers = "V+P"
+                                elif _V:        fetched_movers = "V"
+                                elif _P:        fetched_movers = "P"
+                                else:           fetched_movers = "No"
 
                         # 200DMA Trend Score (3-12 month positional framework)
                         try:
@@ -611,7 +759,11 @@ for _, row in portfolio.iterrows():
         "pnl_abs": pnl_abs,
         "updated": now_utc,
         "must_buy": portfolio_map.get(sym, {}).get("must_buy", False),
+        "holding_type": "Stocks",
     }
+    # Per-account holdings breakdown (same stock split across accounts)
+    if sym in accounts_map:
+        prices[sym]["accounts"] = accounts_map[sym]
     
     # Add fetched metadata if available
     if fetched_mcap is not None:
@@ -645,16 +797,14 @@ for _, row in portfolio.iterrows():
         prices[sym]["vol_today_ratio"] = fetched_vol_today_ratio
     if fetched_vol_yest_ratio is not None:
         prices[sym]["vol_yest_ratio"] = fetched_vol_yest_ratio
-    # Movers: combine A and C into one field
-    if fetched_mover_a is not None and fetched_mover_c is not None:
-        if fetched_mover_a and fetched_mover_c:
-            prices[sym]["movers"] = "A+C"
-        elif fetched_mover_a:
-            prices[sym]["movers"] = "A"
-        elif fetched_mover_c:
-            prices[sym]["movers"] = "C"
-        else:
-            prices[sym]["movers"] = "No"
+    # Movers v3 (⚡ / 🧊 / Z↑ / Z↓ / V+P / V / P / No)
+    if fetched_movers is not None:
+        prices[sym]["movers"] = fetched_movers
+    # All-time high/low percentages
+    if fetched_ath_pct is not None:
+        prices[sym]["ath_pct"] = fetched_ath_pct
+    if fetched_atl_pct is not None:
+        prices[sym]["atl_pct"] = fetched_atl_pct
     # Trend Signal (200DMA framework)
     if fetched_trend_score is not None:
         prices[sym]["trend_score"] = fetched_trend_score
@@ -749,6 +899,164 @@ if len(fallback_prices) > 10 and len(valid_new) < len(fallback_prices) * 0.5:
 else:
     # Filter out any remaining numeric-ticker entries
     prices = {k: v for k, v in prices.items() if not _re3.match(r'^\d', k)}
+
+# ── Benchmark index returns (Nifty 50 / Smallcap 250 / Midcap 400) ──────────
+# Stored under prices["_benchmarks"] for the dashboard's expandable Benchmarks panel.
+# Yahoo Finance symbols for these NSE indices are not fully standardised, so we try
+# a list of candidates per index and keep the first that returns history.
+BENCHMARK_SYMBOLS = {
+    "nifty50":     ["^NSEI"],                                  # Nifty 50 index (full history)
+    "smallcap250": ["HDFCSML250.NS", "MOSMALL250.NS"],         # Nifty Smallcap 250 (ETF proxy; ~3y history, no 5y on Yahoo)
+    "midcap400":   ["MID150BEES.NS", "MIDCAPETF.NS", "NIFTYMIDCAP150.NS", "^NSEMDCP50"],  # Nifty Midcap 150 (broad-midcap proxy)
+}
+
+def _ret(hist, n):
+    if len(hist) > n:
+        base = hist['Close'].iloc[-1 - n]
+        if base:
+            return round((hist['Close'].iloc[-1] - base) / base * 100, 2)
+    return None
+
+# Index-fund NAV source (AMFI via mfapi.in) — used to fill long-term returns that
+# the recently-launched ETFs don't have history for (e.g. Smallcap 250 5-year).
+def _mf_returns(scheme_code):
+    import requests as _rq
+    from datetime import datetime as _dt, timedelta as _td
+    d = _rq.get(f"https://api.mfapi.in/mf/{scheme_code}", timeout=30).json()
+    pts = []
+    for x in d.get("data", []):
+        try:
+            v = float(x["nav"])
+            if v > 0:
+                pts.append((_dt.strptime(x["date"], "%d-%m-%Y"), v))
+        except Exception:
+            pass
+    if len(pts) < 2:
+        return {}
+    pts.sort()
+    last_date, latest = pts[-1]
+    def r(days):
+        target = last_date - _td(days=days)
+        c = [p for p in pts if p[0] <= target]
+        if not c:
+            return None
+        base = c[-1][1]
+        return round((latest - base) / base * 100, 2) if base else None
+    prev = pts[-2][1]
+    return {
+        "ret_1d": round((latest - prev) / prev * 100, 2) if prev else None,
+        "ret_1m": r(30), "ret_1y": r(365), "ret_3y": r(365 * 3), "ret_5y": r(365 * 5),
+    }
+
+# Fallback index-fund scheme codes for periods the ETF can't cover
+BENCHMARK_MF_FALLBACK = {
+    "smallcap250": 148519,   # Nippon India Nifty Smallcap 250 Index Fund (history since Oct 2020)
+}
+
+benchmarks = {}
+for key, candidates in BENCHMARK_SYMBOLS.items():
+    for cand in candidates:
+        try:
+            h = yf.Ticker(cand).history(period="5y")
+            if h is None or h.empty or len(h) < 2:
+                continue
+            benchmarks[key] = {
+                "symbol": cand,
+                "ret_1d": _ret(h, 1),
+                "ret_1m": _ret(h, 21),
+                "ret_1y": _ret(h, 252),
+                "ret_3y": _ret(h, 756),
+                "ret_5y": _ret(h, 1200),
+            }
+            print(f"[INFO] Benchmark {key}: {cand} fetched")
+            break
+        except Exception as e:
+            print(f"[WARN] Benchmark {key} candidate {cand} failed: {e}")
+
+# Fill any missing long-term returns from the index-fund NAV source
+for key, scheme in BENCHMARK_MF_FALLBACK.items():
+    row = benchmarks.get(key)
+    if not row or any(row.get(f) is None for f in ("ret_3y", "ret_5y")):
+        try:
+            mf = _mf_returns(scheme)
+            if mf:
+                if not row:
+                    row = {"symbol": f"MF:{scheme}"}
+                    benchmarks[key] = row
+                for f in ("ret_1d", "ret_1m", "ret_1y", "ret_3y", "ret_5y"):
+                    if row.get(f) is None and mf.get(f) is not None:
+                        row[f] = mf[f]
+                print(f"[INFO] Benchmark {key}: filled long-term returns from index fund {scheme}")
+        except Exception as e:
+            print(f"[WARN] Benchmark {key} MF fallback {scheme} failed: {e}")
+
+if benchmarks:
+    prices["_benchmarks"] = benchmarks
+elif isinstance(fallback_prices, dict) and fallback_prices.get("_benchmarks"):
+    # Keep previous benchmark data if this run could not fetch any
+    prices["_benchmarks"] = fallback_prices["_benchmarks"]
+
+# ── Inject non-equity holdings (Gold / Silver / MF) priced from the sheet ────
+if not nonequity_df.empty:
+    ne = nonequity_df.copy()
+    ne["tk"] = ne["symbol"].map(_clean_ne)
+    ne["qty"] = pd.to_numeric(ne["qty"], errors="coerce")
+    ne["buy_avg"] = pd.to_numeric(ne["buy_avg"], errors="coerce")
+    if "buy_value" in ne.columns:
+        ne["buy_value"] = pd.to_numeric(ne["buy_value"], errors="coerce").fillna(ne["qty"] * ne["buy_avg"])
+    else:
+        ne["buy_value"] = ne["qty"] * ne["buy_avg"]
+    if "present_value" in ne.columns:
+        ne["present_value"] = pd.to_numeric(ne["present_value"], errors="coerce")
+    else:
+        ne["present_value"] = pd.NA
+    ne = ne.dropna(subset=["qty"])
+    ne = ne[ne["qty"] > 0]
+
+    stock_tickers_now = {s.get("ticker") for s in stocks}
+    ne_added = 0
+    for tk, g in ne.groupby("tk"):
+        tot_qty = float(g["qty"].sum())
+        if tot_qty <= 0:
+            continue
+        tot_bv = float(pd.to_numeric(g["buy_value"], errors="coerce").fillna(0).sum())
+        tot_pv = float(pd.to_numeric(g["present_value"], errors="coerce").fillna(0).sum())
+        wavg = round(tot_bv / tot_qty, 4) if tot_qty else 0.0
+        htype = g["holding_type"].iloc[0]
+        accts = [{
+            "name": str(r["account"]).strip() if "account" in g.columns else "",
+            "qty": float(r["qty"]),
+            "buy_avg": round(float(r["buy_avg"]), 2) if pd.notna(r["buy_avg"]) else 0.0,
+            "invested": round(float(r["buy_value"]), 2) if pd.notna(r["buy_value"]) else 0.0,
+        } for _, r in g.iterrows()]
+        accts.sort(key=lambda a: -a["invested"])
+        prices[tk] = {
+            "ltp": round(tot_pv / tot_qty, 4) if tot_qty else None,
+            "buy_avg": round(wavg, 2),
+            "quantity": tot_qty,
+            "pnl_pct": round((tot_pv - tot_bv) / tot_bv * 100, 2) if tot_bv else None,
+            "pnl_abs": round(tot_pv - tot_bv, 2),
+            "updated": now_utc,
+            "must_buy": False,
+            "holding_type": htype,
+            "accounts": accts,
+        }
+        if tk not in stock_tickers_now:
+            stocks.append({
+                "ticker": tk,
+                "name": str(g["symbol"].iloc[0]).strip(),
+                "sector": SECTOR_FOR_TYPE.get(htype, htype),
+                "nse_symbol": tk,
+                "moat_type": "\u2014",
+                "moat_class": "na",
+                "conviction": 0,
+                "holding_type": htype,
+                "is_non_equity": True,
+            })
+            stock_tickers_now.add(tk)
+        ne_added += 1
+    print(f"[INFO] Added {ne_added} non-equity (Gold/Silver/MF) holdings priced from the sheet.")
+
 import math
 
 def sanitise(obj):
