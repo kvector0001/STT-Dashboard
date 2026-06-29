@@ -1704,44 +1704,6 @@
     "mcap_3y": 150.73
   },
   {
-    "ticker": "VASCONEQ",
-    "name": "Vascon Engineers Limited",
-    "sector": "Real Estate / Construction",
-    "nse_symbol": "VASCONEQ",
-    "moat_type": "Narrow",
-    "moat_class": "narrow",
-    "conviction": 3,
-    "moat": "Mid-size real estate developer and construction contractor focused on Maharashtra, Pune, and Goa. Both real estate development and EPC contracting.",
-    "leadership": "Revenue ~₹1,500 Cr. Residential and commercial real estate in Pune. EPC contracting for industrial and institutional clients.",
-    "non_rep": "Local land bank and Pune market knowledge. However, moat is limited — real estate development is fragmented and competitive.",
-    "tailwinds": [
-      "Pune real estate growth",
-      "Maharashtra infrastructure projects",
-      "Affordable housing demand"
-    ],
-    "risks": [
-      "Currently -50% in portfolio — significant losses",
-      "High debt typical for real estate developers",
-      "Real estate cycle risk"
-    ],
-    "track": [
-      "Revenue from real estate vs EPC mix",
-      "Debt reduction",
-      "New project launches and bookings"
-    ],
-    "mcap_cr": 807.18,
-    "pe": 16.16279,
-    "roe": 4.36,
-    "ocf_cr": -122.49,
-    "debt_to_equity": 26.086,
-    "eps": 2.15,
-    "book_value": 49.291,
-    "div_yield": 0,
-    "pat_cagr": -83.6,
-    "rev_cagr": -34.5,
-    "mcap_3y": -18.29
-  },
-  {
     "ticker": "FRACTAL",
     "name": "FRACTAL ANALYTICS LIMITED",
     "sector": "AI / Data Analytics",
@@ -3024,45 +2986,6 @@
     "mcap_3y": 173.95
   },
   {
-    "ticker": "SKFINDIA",
-    "name": "SKF India Limited",
-    "sector": "Bearings",
-    "nse_symbol": "SKFINDIA",
-    "moat_type": "Wide",
-    "moat_class": "wide",
-    "conviction": 7,
-    "moat": "India subsidiary of SKF AB (Sweden). India's #1 or #2 bearing manufacturer — ~24-25% organized market share. Critical component in every rotating machine. Railway bearing locked-in relationship with Indian Railways.",
-    "leadership": "Revenue ~₹4,500 Cr. After-market (replacement bearings) is recurring revenue. SKF global metallurgy R&D and digital condition monitoring cannot be domestically replicated.",
-    "non_rep": "SKF seal technologies and bearing lubrication IP cannot be replicated. Indian Railways has approved SKF bearings for Vande Bharat bogies — requalification is a 2-year process.",
-    "tailwinds": [
-      "India railway rolling stock expansion",
-      "Wind energy turbine bearings",
-      "EV drivetrain precision bearings",
-      "Industrial automation"
-    ],
-    "risks": [
-      "Competition from Timken, Schaeffler (FAG), NSK",
-      "Auto slowdown near-term impact",
-      "Steel commodity cost impact"
-    ],
-    "track": [
-      "Railway and wind energy order intake",
-      "EV bearing product launches",
-      "After-market revenue growth"
-    ],
-    "mcap_cr": 8192.36,
-    "pe": 30.846983,
-    "roe": 13.54,
-    "ocf_cr": 362.84,
-    "debt_to_equity": 0.219,
-    "eps": 53.72,
-    "book_value": 268.909,
-    "div_yield": 241.0,
-    "pat_cagr": 0,
-    "rev_cagr": -51.0,
-    "mcap_3y": -62.34
-  },
-  {
     "ticker": "TEJASNET",
     "name": "Tejas Networks Limited",
     "sector": "Telecom Equipment",
@@ -3139,44 +3062,6 @@
     "pat_cagr": -79.2,
     "rev_cagr": 9.0,
     "mcap_3y": 65.77
-  },
-  {
-    "ticker": "ASALCBR",
-    "name": "Associated Alcohols & Breweries Limited",
-    "sector": "Specialty Chemicals / Pigments",
-    "nse_symbol": "ASALCBR",
-    "moat_type": "Narrow",
-    "moat_class": "narrow",
-    "conviction": 5,
-    "moat": "Note: ASALCBR on NSE is likely Asahi Songwon Colors — India's largest manufacturer of beta-phthalocyanine blue pigment (used in paints, inks, plastics). Dominant in Indian phthalocyanine pigment market.",
-    "leadership": "Revenue ~₹400 Cr. Exports 65%+ to global paint, ink, and plastic companies. Sole manufacturer of certain phthalocyanine pigment grades in India.",
-    "non_rep": "Copper phthalocyanine synthesis requires specialised reactors and waste treatment for copper effluent. Export-grade pigment purity standards took decades to qualify with global paint companies.",
-    "tailwinds": [
-      "India paint market growth (Asian Paints, Berger)",
-      "Export of specialty pigments to global markets",
-      "Plastic and textile pigment demand"
-    ],
-    "risks": [
-      "Copper raw material price volatility",
-      "Competition from Chinese pigment producers",
-      "Currency risk on 65%+ exports"
-    ],
-    "track": [
-      "Export revenue growth",
-      "Market share in phthalocyanine pigments",
-      "Gross margin vs copper prices"
-    ],
-    "mcap_cr": 1726.81,
-    "pe": 18.724146,
-    "roe": 14.56,
-    "ocf_cr": 51.77,
-    "debt_to_equity": 9.922,
-    "eps": 45.93,
-    "book_value": 364.385,
-    "div_yield": 23.0,
-    "pat_cagr": 4.9,
-    "rev_cagr": -1.6,
-    "mcap_3y": 123.21
   },
   {
     "ticker": "GREAVESCOT",
@@ -4111,44 +3996,6 @@
     "mcap_3y": 112.62
   },
   {
-    "ticker": "ISGEC",
-    "name": "Isgec Heavy Engineering Limited",
-    "sector": "Capital Goods",
-    "nse_symbol": "ISGEC",
-    "moat_type": "Narrow",
-    "moat_class": "narrow",
-    "conviction": 6,
-    "moat": "Multi-product heavy engineering conglomerate â€” boilers, presses, sugar equipment, process equipment. Deep domain expertise across niche industrial verticals across 80+ countries.",
-    "leadership": "Significant player in sugar plant equipment globally. Heat exchangers and pressure vessels. Exports to 80+ countries.",
-    "non_rep": "Diversified mix across specialised categories. JV with Hitachi (boilers) gives technology access. Global customer base.",
-    "tailwinds": [
-      "India infrastructure capex",
-      "Sugar sector modernization India/Africa",
-      "Defence manufacturing"
-    ],
-    "risks": [
-      "Currently -14% in portfolio â€” price correction ongoing",
-      "Project-based lumpy revenues",
-      "Competition from L&T, Bharat Forge in heavy engineering"
-    ],
-    "track": [
-      "Order book value and execution pace",
-      "Sugar equipment export orders",
-      "Margin recovery trajectory"
-    ],
-    "mcap_cr": 6750.01,
-    "pe": 61.94332,
-    "roe": 5.37,
-    "ocf_cr": 764.97,
-    "debt_to_equity": 32.93,
-    "eps": 14.82,
-    "book_value": 372.202,
-    "div_yield": 54.0,
-    "pat_cagr": 4.1,
-    "rev_cagr": 17.4,
-    "mcap_3y": 52.44
-  },
-  {
     "ticker": "HEG",
     "name": "HEG Limited",
     "sector": "Materials",
@@ -4533,45 +4380,6 @@
     "pat_cagr": 9.1,
     "rev_cagr": 42.6,
     "mcap_3y": 2.68
-  },
-  {
-    "ticker": "SIEMENS",
-    "name": "Siemens Limited",
-    "sector": "Capital Goods",
-    "nse_symbol": "SIEMENS",
-    "moat_type": "Wide",
-    "moat_class": "wide",
-    "conviction": 8,
-    "moat": "India subsidiary of Siemens AG. Access to world-class automation, electrification, digitalization. Products span power distribution, railway electrification, building automation, industrial software.",
-    "leadership": "One of India's most trusted industrial technology companies. 75%+ revenue from products (higher quality). Revenue ~â‚¹21,000 Cr.",
-    "non_rep": "Siemens global R&D, SIMATIC PLC, SCADA, digital twin platforms â€” none replicable domestically. National Railway corridor electrification contracts.",
-    "tailwinds": [
-      "India railway modernization Vande Bharat/metro/electrification",
-      "Smart grid and power distribution upgrades",
-      "India smart city and building automation",
-      "Industry 4.0"
-    ],
-    "risks": [
-      "Currently -3% in portfolio",
-      "Parent Siemens AG India Energy Business demerger pending",
-      "Premium valuation vs domestic peers"
-    ],
-    "track": [
-      "Railway and metro order wins",
-      "Energy business demerger timeline",
-      "Digital/software revenue as % of total"
-    ],
-    "mcap_cr": 129378.58,
-    "pe": 76.435936,
-    "roe": 0,
-    "ocf_cr": -356.93,
-    "debt_to_equity": 2.213,
-    "eps": 47.53,
-    "book_value": 388.917,
-    "div_yield": 39.0,
-    "pat_cagr": -36.4,
-    "rev_cagr": 14.6,
-    "mcap_3y": 75.27
   },
   {
     "ticker": "GRINDWELL",
@@ -5518,48 +5326,6 @@
     "mcap_3y": 68.51
   },
   {
-    "ticker": "3MINDIA",
-    "name": "3M India Limited",
-    "sector": "Diversified Industrials",
-    "nse_symbol": "3MINDIA",
-    "buy_avg": 33302.06,
-    "moat_type": "Wide",
-    "moat_class": "wide",
-    "conviction": 7,
-    "moat": "Indian subsidiary of 3M Company, USA (which holds 75%). Operates across four segments — Safety & Industrial, Transportation & Electronics, Health Care and Consumer — selling research-driven branded products (Scotch tapes, Scotch-Brite, Post-it, Command, abrasives, adhesives, films, PPE). The moat rests on 3M's global R&D/patent engine, brand strength and a deep multi-channel distribution network. Manufacturing at Ahmedabad, Bengaluru and Pune, with an R&D centre in Bengaluru.",
-    "leadership": "FY25 standalone revenue ~Rs 4,446 cr (TTM ~Rs 5,090 cr). High-quality financials — ROCE ~50% and ROE ~30%, near debt-free, asset-light, with large dividend payouts (100%+ in recent years). Promoter (3M Company) holding 75%. Market cap ~Rs 37,000 cr.",
-    "non_rep": "Access to 3M's worldwide technology, patent library and continuous product pipeline cannot be replicated by domestic peers. Long-established brands (Scotch, Post-it, Scotch-Brite) and qualified industrial/healthcare products create switching costs and pricing power; the very high RoCE reflects an asset-light, brand-and-distribution-led model.",
-    "tailwinds": [
-      "India industrial and manufacturing capex cycle",
-      "Premiumisation in consumer and stationery products",
-      "Auto, road-safety and electronics materials demand",
-      "Healthcare and PPE consumption growth"
-    ],
-    "risks": [
-      "Premium valuation (P/E ~65-70x)",
-      "Royalty and related-party payments to parent 3M",
-      "Cyclicality in industrial and auto end-markets",
-      "Limited free float (75% promoter holding)"
-    ],
-    "track": [
-      "Segment revenue mix (Safety & Industrial vs others)",
-      "EBITDA margin and RoCE trend",
-      "Royalty as % of sales",
-      "Dividend payout"
-    ],
-    "mcap_cr": 37501.42,
-    "pe": 71.78436,
-    "roe": 28.9,
-    "ocf_cr": 513.72,
-    "debt_to_equity": 9.6,
-    "eps": 463.75,
-    "book_value": 1562.354,
-    "div_yield": 48.0,
-    "pat_cagr": 201.8,
-    "rev_cagr": 16.8,
-    "mcap_3y": 43.21
-  },
-  {
     "ticker": "INVPRECQ",
     "name": "Investment & Precision Castings Limited",
     "sector": "Pending",
@@ -5609,6 +5375,314 @@
     "sector": "Basic Materials",
     "nse_symbol": "RATNAVEER",
     "buy_avg": 188.75,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "BEL",
+    "name": "Bharat Electronics Limited",
+    "sector": "Industrials",
+    "nse_symbol": "BEL",
+    "buy_avg": 0.0,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "SGBAUG28V",
+    "name": "auto",
+    "sector": "Pending",
+    "nse_symbol": "SGBAUG28V",
+    "buy_avg": 6097.16,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "SGBFEB29XI",
+    "name": "auto",
+    "sector": "Pending",
+    "nse_symbol": "SGBFEB29XI",
+    "buy_avg": 9081.0,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "SGBJAN30IX",
+    "name": "auto",
+    "sector": "Pending",
+    "nse_symbol": "SGBJAN30IX",
+    "buy_avg": 9077.0,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "SGBMR29XII",
+    "name": "auto",
+    "sector": "Pending",
+    "nse_symbol": "SGBMR29XII",
+    "buy_avg": 9071.0,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "SGBSEP29VI",
+    "name": "auto",
+    "sector": "Pending",
+    "nse_symbol": "SGBSEP29VI",
+    "buy_avg": 9224.33,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "GOLDBEES",
+    "name": "Nippon India ETF Gold BeES",
+    "sector": "Pending",
+    "nse_symbol": "GOLDBEES",
+    "buy_avg": 82.26,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "GOLDETF",
+    "name": "Mirae Asset Gold ETF",
+    "sector": "Pending",
+    "nse_symbol": "GOLDETF",
+    "buy_avg": 92.04,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "SGBAUG27",
+    "name": "auto",
+    "sector": "Pending",
+    "nse_symbol": "SGBAUG27",
+    "buy_avg": 9161.0,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "SGBAUG29V",
+    "name": "auto",
+    "sector": "Pending",
+    "nse_symbol": "SGBAUG29V",
+    "buy_avg": 8829.17,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "SGBD29VIII",
+    "name": "auto",
+    "sector": "Pending",
+    "nse_symbol": "SGBD29VIII",
+    "buy_avg": 9046.0,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "SGBJUL28IV",
+    "name": "auto",
+    "sector": "Pending",
+    "nse_symbol": "SGBJUL28IV",
+    "buy_avg": 12777.21,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "SILVERAG",
+    "name": "MIRAEAMC - MASILVER",
+    "sector": "Pending",
+    "nse_symbol": "SILVERAG",
+    "buy_avg": 222.0,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "SILVERCASE",
+    "name": "Zerodha Silver ETF",
+    "sector": "Pending",
+    "nse_symbol": "SILVERCASE",
+    "buy_avg": 25.35,
     "moat_type": "Pending",
     "moat_class": "pending",
     "conviction": 0,
