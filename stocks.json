@@ -1924,49 +1924,6 @@
     "sector_group": "Healthcare & Hospitals"
   },
   {
-    "ticker": "VASCONEQ",
-    "name": "Vascon Engineers Limited",
-    "sector": "Real Estate / Construction",
-    "nse_symbol": "VASCONEQ",
-    "moat_type": "Narrow",
-    "moat_class": "narrow",
-    "conviction": 3,
-    "moat": "Mid-size real estate developer and construction contractor focused on Maharashtra, Pune, and Goa. Both real estate development and EPC contracting.",
-    "leadership": "Revenue ~₹1,500 Cr. Residential and commercial real estate in Pune. EPC contracting for industrial and institutional clients.",
-    "non_rep": "Local land bank and Pune market knowledge. However, moat is limited — real estate development is fragmented and competitive.",
-    "tailwinds": [
-      "Pune real estate growth",
-      "Maharashtra infrastructure projects",
-      "Affordable housing demand"
-    ],
-    "risks": [
-      "Currently -50% in portfolio — significant losses",
-      "High debt typical for real estate developers",
-      "Real estate cycle risk"
-    ],
-    "track": [
-      "Revenue from real estate vs EPC mix",
-      "Debt reduction",
-      "New project launches and bookings"
-    ],
-    "mcap_cr": 861.54,
-    "pe": 17.251162,
-    "roe": 4.36,
-    "ocf_cr": -122.49,
-    "debt_to_equity": 26.086,
-    "eps": 2.15,
-    "book_value": 49.291,
-    "div_yield": 0,
-    "pat_cagr": -83.6,
-    "rev_cagr": -34.5,
-    "mcap_3y": 0.98,
-    "quality_score": 3.8,
-    "quality_tier": "Below-average",
-    "quality_rank": 159,
-    "quality_of": 160,
-    "sector_group": "Real Estate"
-  },
-  {
     "ticker": "FRACTAL",
     "name": "FRACTAL ANALYTICS LIMITED",
     "sector": "AI / Data Analytics",
@@ -3152,50 +3109,6 @@
     "sector_group": "Power & Utilities"
   },
   {
-    "ticker": "OMINFRAL",
-    "name": "Om Infra Limited",
-    "sector": "Infrastructure EPC / Construction",
-    "nse_symbol": "OMINFRAL",
-    "moat_type": "Narrow",
-    "moat_class": "narrow",
-    "conviction": 5,
-    "moat": "EPC contractor specialising in dam, hydro power, infrastructure, and real estate projects. Historical projects include Isarda Dam (Rajasthan, completed July 2025), Upper Krishna, Almatti dams. SRA project (Bandra Reclamation Mumbai). Bhilwara-Jaipur toll road (subsidiary).",
-    "leadership": "Revenue and profit growth inconsistent due to project-based EPC model. Q2 FY26 PAT ₹8 Cr (+74% QoQ). Mkt cap ₹947 Cr. PE ~37x (expensive). Limited liquidity on NSE.",
-    "non_rep": "EPC moat is relationship-based with government agencies and project execution track record. Bhilwara-Jaipur toll road revenue provides semi-recurring cash flow. Jaipur-Bhilwara tollway is now a subsidiary providing cash generation.",
-    "tailwinds": [
-      "India water and hydro infrastructure (PMKSY-AIBP dam projects)",
-      "Real estate development (SRA Bandra project completion driving value unlock)",
-      "Toll road concessions (Bhilwara-Jaipur), semi-recurring revenue"
-    ],
-    "risks": [
-      "Currently -31% in portfolio — significant losses",
-      "Project-based EPC is lumpy and execution-dependent",
-      "Government project delays and payment cycle risks",
-      "Toll road business is facing equity capital intensity for new projects"
-    ],
-    "track": [
-      "SRA Bandra project revenue and margin contribution",
-      "Bhilwara-Jaipur toll road EBITDA",
-      "New dam and hydro project order wins"
-    ],
-    "mcap_cr": 824.94,
-    "pe": 40.79048,
-    "roe": 2.57,
-    "ocf_cr": -4.33,
-    "debt_to_equity": 10.595,
-    "eps": 2.1,
-    "book_value": 74.045,
-    "div_yield": 47.0,
-    "pat_cagr": -52.5,
-    "rev_cagr": -6.9,
-    "mcap_3y": 106.87,
-    "quality_score": 4.6,
-    "quality_tier": "Below-average",
-    "quality_rank": 153,
-    "quality_of": 160,
-    "sector_group": "Construction / Infra EPC"
-  },
-  {
     "ticker": "WHIRLPOOL",
     "name": "Whirlpool of India Limited",
     "sector": "Consumer Durables",
@@ -3327,50 +3240,6 @@
     "sector_group": "Real Estate"
   },
   {
-    "ticker": "NIITLTD",
-    "name": "NIIT Limited",
-    "sector": "IT Education / Skills",
-    "nse_symbol": "NIITLTD",
-    "moat_type": "Narrow",
-    "moat_class": "narrow",
-    "conviction": 4,
-    "moat": "India's largest IT training and skills development company — 30+ years of brand heritage. Corporate learning (StackRoute) is the new growth driver. NIIT Foundation manages government skilling programmes.",
-    "leadership": "Revenue ~₹1,000 Cr. Post-divestiture of NIIT Technologies (now Coforge), NIIT Ltd is purely the skills/training business. Corporates (Accenture, TCS) use NIIT for talent transformation.",
-    "non_rep": "NIIT brand is synonymous with IT education in India. 30+ years of alumni base. Corporate LMS and bootcamp delivery for large IT companies is sticky (multi-year contracts).",
-    "tailwinds": [
-      "India IT skills demand growing with digital transformation",
-      "Corporate reskilling for AI/cloud",
-      "Government skill India programmes",
-      "Coding bootcamp growth (StackRoute)"
-    ],
-    "risks": [
-      "Competition from Coursera, UpGrad, Great Learning in online learning",
-      "Traditional classroom model disrupted by online platforms",
-      "Government skill contracts are low-margin"
-    ],
-    "track": [
-      "Corporate (StackRoute) revenue growth",
-      "Online learner registrations",
-      "EBITDA margin improvement"
-    ],
-    "mcap_cr": 1328.17,
-    "pe": 243.225,
-    "roe": 0.57,
-    "ocf_cr": 7.0,
-    "debt_to_equity": 0.65,
-    "eps": 0.4,
-    "book_value": 77.497,
-    "div_yield": 95.0,
-    "pat_cagr": 0,
-    "rev_cagr": 15.6,
-    "mcap_3y": -75.26,
-    "quality_score": 5.4,
-    "quality_tier": "Average",
-    "quality_rank": 127,
-    "quality_of": 160,
-    "sector_group": "IT / Software / Tech"
-  },
-  {
     "ticker": "RUSTOMJEE",
     "name": "Keystone Realtors Limited",
     "sector": "Real Estate",
@@ -3458,49 +3327,6 @@
     "sector_group": "Construction / Infra EPC"
   },
   {
-    "ticker": "CAPACITE",
-    "name": "Capacit'e Infraprojects Limited",
-    "sector": "Construction / EPC",
-    "nse_symbol": "CAPACITE",
-    "moat_type": "Narrow",
-    "moat_class": "narrow",
-    "conviction": 5,
-    "moat": "Construction contractor specialising in high-rise residential and commercial buildings in Mumbai, Bengaluru, and Pune. Mivan (aluminium formwork) technology expertise for fast-track construction.",
-    "leadership": "Revenue ~₹2,000 Cr. Order book ₹8,000+ Cr. Tier-1 contractor for Oberoi, Prestige, Rustomjee, Hiranandani projects. Mivan aluminium formwork speeds up concrete construction by 30-40%.",
-    "non_rep": "Mivan formwork expertise and HSE (Health, Safety, Environment) track record are prerequisites for tier-1 developer contracts. These developers will not risk reputation with unproven contractors.",
-    "tailwinds": [
-      "India real estate boom — residential under-supply",
-      "Mumbai high-rise development acceleration",
-      "Commercial real estate capex post-COVID recovery"
-    ],
-    "risks": [
-      "Currently -19% in portfolio",
-      "Construction is working capital intensive",
-      "Developer credit risk — if Oberoi/Prestige delays, Capacite's payment delays"
-    ],
-    "track": [
-      "Order book execution pace",
-      "Receivables days",
-      "Revenue growth vs order book"
-    ],
-    "mcap_cr": 1918.31,
-    "pe": 10.015018,
-    "roe": 10.63,
-    "ocf_cr": 223.3,
-    "debt_to_equity": 25.274,
-    "eps": 22.64,
-    "book_value": 215.282,
-    "div_yield": 0,
-    "pat_cagr": -16.1,
-    "rev_cagr": 6.0,
-    "mcap_3y": 36.47,
-    "quality_score": 5.3,
-    "quality_tier": "Average",
-    "quality_rank": 138,
-    "quality_of": 160,
-    "sector_group": "Construction / Infra EPC"
-  },
-  {
     "ticker": "RAILTEL",
     "name": "RailTel Corporation of India Limited",
     "sector": "Telecom / IT Infrastructure",
@@ -3543,94 +3369,6 @@
     "quality_rank": 12,
     "quality_of": 160,
     "sector_group": "Telecom & Towers"
-  },
-  {
-    "ticker": "AFFLE",
-    "name": "Affle 3i Limited",
-    "sector": "Ad Tech / Mobile Marketing",
-    "nse_symbol": "AFFLE",
-    "moat_type": "Wide",
-    "moat_class": "wide",
-    "conviction": 7,
-    "moat": "India's #1 mobile advertising and consumer intelligence platform. Proprietary CPCU (Cost Per Converted User) model — charges advertisers only for verified user conversions, not impressions. Proprietary data platform (consumer graph) with 3 Bn+ device profiles.",
-    "leadership": "Revenue ~₹2,000 Cr growing 25%+ p.a. Serves FMCG, BFSI, e-commerce, and OTT brands. International expansion via acquisitions (RevX, Fynd, MAAS). 74% promoter holding.",
-    "non_rep": "Consumer graph of 3 Bn+ device profiles with behavioural data is a data moat — cannot be replicated without 10+ years of mobile data collection. CPCU model vs CPM/CPC creates a sustainable performance-based advantage.",
-    "tailwinds": [
-      "India mobile internet users reaching 1 Bn",
-      "Digital advertising shift from TV to mobile",
-      "Programmatic advertising adoption in India",
-      "SEA, Middle East, Africa market expansion"
-    ],
-    "risks": [
-      "Google/Meta's walled gardens dominate digital ad spend",
-      "Privacy regulation (India DPDP Act) limiting data collection",
-      "Competition from InMobi and other ad tech platforms"
-    ],
-    "track": [
-      "Connected device count growth",
-      "CPCU revenue per converted user",
-      "International revenue %"
-    ],
-    "mcap_cr": 20990.61,
-    "pe": 46.178837,
-    "roe": 13.79,
-    "ocf_cr": 502.35,
-    "debt_to_equity": 0.405,
-    "eps": 32.32,
-    "book_value": 260.056,
-    "div_yield": 0,
-    "pat_cagr": 15.7,
-    "rev_cagr": 20.3,
-    "mcap_3y": 58.39,
-    "quality_score": 7.2,
-    "quality_tier": "High quality",
-    "quality_rank": 27,
-    "quality_of": 160,
-    "sector_group": "IT / Software / Tech"
-  },
-  {
-    "ticker": "SKFINDIA",
-    "name": "SKF India Limited",
-    "sector": "Bearings",
-    "nse_symbol": "SKFINDIA",
-    "moat_type": "Wide",
-    "moat_class": "wide",
-    "conviction": 7,
-    "moat": "India subsidiary of SKF AB (Sweden). India's #1 or #2 bearing manufacturer — ~24-25% organized market share. Critical component in every rotating machine. Railway bearing locked-in relationship with Indian Railways.",
-    "leadership": "Revenue ~₹4,500 Cr. After-market (replacement bearings) is recurring revenue. SKF global metallurgy R&D and digital condition monitoring cannot be domestically replicated.",
-    "non_rep": "SKF seal technologies and bearing lubrication IP cannot be replicated. Indian Railways has approved SKF bearings for Vande Bharat bogies — requalification is a 2-year process.",
-    "tailwinds": [
-      "India railway rolling stock expansion",
-      "Wind energy turbine bearings",
-      "EV drivetrain precision bearings",
-      "Industrial automation"
-    ],
-    "risks": [
-      "Competition from Timken, Schaeffler (FAG), NSK",
-      "Auto slowdown near-term impact",
-      "Steel commodity cost impact"
-    ],
-    "track": [
-      "Railway and wind energy order intake",
-      "EV bearing product launches",
-      "After-market revenue growth"
-    ],
-    "mcap_cr": 8136.01,
-    "pe": 30.617674,
-    "roe": 13.54,
-    "ocf_cr": 362.84,
-    "debt_to_equity": 0.219,
-    "eps": 53.75,
-    "book_value": 268.909,
-    "div_yield": 244.0,
-    "pat_cagr": 0,
-    "rev_cagr": -51.0,
-    "mcap_3y": -61.46,
-    "quality_score": 6.5,
-    "quality_tier": "Above-average",
-    "quality_rank": 52,
-    "quality_of": 160,
-    "sector_group": "Bearings"
   },
   {
     "ticker": "TEJASNET",
@@ -3721,49 +3459,6 @@
     "sector_group": "Auto Components & Mobility"
   },
   {
-    "ticker": "ASALCBR",
-    "name": "Associated Alcohols & Breweries Limited",
-    "sector": "Specialty Chemicals / Pigments",
-    "nse_symbol": "ASALCBR",
-    "moat_type": "Narrow",
-    "moat_class": "narrow",
-    "conviction": 5,
-    "moat": "Note: ASALCBR on NSE is likely Asahi Songwon Colors — India's largest manufacturer of beta-phthalocyanine blue pigment (used in paints, inks, plastics). Dominant in Indian phthalocyanine pigment market.",
-    "leadership": "Revenue ~₹400 Cr. Exports 65%+ to global paint, ink, and plastic companies. Sole manufacturer of certain phthalocyanine pigment grades in India.",
-    "non_rep": "Copper phthalocyanine synthesis requires specialised reactors and waste treatment for copper effluent. Export-grade pigment purity standards took decades to qualify with global paint companies.",
-    "tailwinds": [
-      "India paint market growth (Asian Paints, Berger)",
-      "Export of specialty pigments to global markets",
-      "Plastic and textile pigment demand"
-    ],
-    "risks": [
-      "Copper raw material price volatility",
-      "Competition from Chinese pigment producers",
-      "Currency risk on 65%+ exports"
-    ],
-    "track": [
-      "Export revenue growth",
-      "Market share in phthalocyanine pigments",
-      "Gross margin vs copper prices"
-    ],
-    "mcap_cr": 1674.3,
-    "pe": 18.158754,
-    "roe": 14.56,
-    "ocf_cr": 51.77,
-    "debt_to_equity": 9.922,
-    "eps": 45.92,
-    "book_value": 364.385,
-    "div_yield": 24.0,
-    "pat_cagr": 4.9,
-    "rev_cagr": -1.6,
-    "mcap_3y": 134.97,
-    "quality_score": 5.5,
-    "quality_tier": "Average",
-    "quality_rank": 119,
-    "quality_of": 160,
-    "sector_group": "Consumer / Retail"
-  },
-  {
     "ticker": "GREAVESCOT",
     "name": "Greaves Cotton Limited",
     "sector": "Engines / EV",
@@ -3849,52 +3544,6 @@
     "quality_rank": 56,
     "quality_of": 160,
     "sector_group": "Real Estate"
-  },
-  {
-    "ticker": "ARIS",
-    "name": "Arisinfra Solutions",
-    "sector": "Construction Materials / B2B Marketplace",
-    "nse_symbol": "ARIS",
-    "moat_type": "Narrow",
-    "moat_class": "narrow",
-    "conviction": 4,
-    "moat": "Technology-enabled B2B platform (incorporated 2021, listed June 2025) that aggregates and supplies bulk construction materials — aggregates, cement, steel, ready-mix concrete, walling solutions and related products — to real estate and infrastructure developers and contractors, reducing procurement intermediaries. Asset-light marketplace combining a vendor network with logistics and trade credit.",
-    "leadership": "FY25 revenue ~Rs 656 cr; turned profitable recently after prior years of losses. Market cap ~Rs 970 cr, P/E ~36, ROE ~6%, ROCE ~8%. Promoter holding ~37.6%. Operates across major Indian metros.",
-    "non_rep": "Edge is execution-based — vendor density, the technology/logistics layer and working-capital/credit underwriting — rather than a structural moat. Switching costs are low and the construction-materials category is competitive and fragmented, so durability is modest.",
-    "tailwinds": [
-      "India real estate and infrastructure capex cycle",
-      "Formalisation and digitisation of construction-materials procurement",
-      "Scale economics as order volumes / GMV grow"
-    ],
-    "risks": [
-      "Thin operating margins (~2-3%)",
-      "High working-capital intensity (debtor days ~135)",
-      "Statutory auditor change — PwC resigned May 2026 (governance watch)",
-      "Competitive, low-switching-cost B2B category",
-      "Short listed track record and historically volatile profitability"
-    ],
-    "track": [
-      "Revenue / GMV growth and gross margin",
-      "Working-capital days and cash conversion",
-      "Sustained profitability and ROCE",
-      "Auditor and governance updates"
-    ],
-    "mcap_cr": 976.72,
-    "pe": 17.464912,
-    "roe": 12.22,
-    "ocf_cr": 141.99,
-    "debt_to_equity": 9.356,
-    "eps": 6.84,
-    "book_value": 96.516,
-    "div_yield": 0,
-    "pat_cagr": 0,
-    "rev_cagr": 55.3,
-    "mcap_3y": -31.49,
-    "quality_score": 5.6,
-    "quality_tier": "Average",
-    "quality_rank": 114,
-    "quality_of": 160,
-    "sector_group": "Steel / Metals / Materials"
   },
   {
     "ticker": "QUESS",
@@ -4862,49 +4511,6 @@
     "sector_group": "Power & Utilities"
   },
   {
-    "ticker": "ISGEC",
-    "name": "Isgec Heavy Engineering Limited",
-    "sector": "Capital Goods",
-    "nse_symbol": "ISGEC",
-    "moat_type": "Narrow",
-    "moat_class": "narrow",
-    "conviction": 6,
-    "moat": "Multi-product heavy engineering conglomerate â€” boilers, presses, sugar equipment, process equipment. Deep domain expertise across niche industrial verticals across 80+ countries.",
-    "leadership": "Significant player in sugar plant equipment globally. Heat exchangers and pressure vessels. Exports to 80+ countries.",
-    "non_rep": "Diversified mix across specialised categories. JV with Hitachi (boilers) gives technology access. Global customer base.",
-    "tailwinds": [
-      "India infrastructure capex",
-      "Sugar sector modernization India/Africa",
-      "Defence manufacturing"
-    ],
-    "risks": [
-      "Currently -14% in portfolio â€” price correction ongoing",
-      "Project-based lumpy revenues",
-      "Competition from L&T, Bharat Forge in heavy engineering"
-    ],
-    "track": [
-      "Order book value and execution pace",
-      "Sugar equipment export orders",
-      "Margin recovery trajectory"
-    ],
-    "mcap_cr": 6777.22,
-    "pe": 62.06734,
-    "roe": 5.37,
-    "ocf_cr": 764.97,
-    "debt_to_equity": 32.93,
-    "eps": 14.85,
-    "book_value": 372.202,
-    "div_yield": 54.0,
-    "pat_cagr": 4.1,
-    "rev_cagr": 17.4,
-    "mcap_3y": 83.0,
-    "quality_score": 5.9,
-    "quality_tier": "Average",
-    "quality_rank": 89,
-    "quality_of": 160,
-    "sector_group": "Industrials (general)"
-  },
-  {
     "ticker": "HEG",
     "name": "HEG Limited",
     "sector": "Materials",
@@ -5166,49 +4772,6 @@
     "sector_group": "Power & Utilities"
   },
   {
-    "ticker": "TEGA",
-    "name": "Tega Industries Limited",
-    "sector": "Mining Equipment",
-    "nse_symbol": "TEGA",
-    "moat_type": "Wide",
-    "moat_class": "wide",
-    "conviction": 7,
-    "moat": "Global niche leader in mineral processing wear parts and mill liners. #2 globally by revenue for grinding mill liners. Proprietary rubber/polymer composite formulations â€” IP-backed.",
-    "leadership": "400+ clients across 70+ countries. ~55% domestic, ~45% export revenue split.",
-    "non_rep": "Rubber compound formulations for abrasion-resistant liners are proprietary. Requalification takes 12-18 months â€” very high switching cost.",
-    "tailwinds": [
-      "Global mining capex copper/lithium/iron ore for EV transition",
-      "India steel and cement capacity expansion",
-      "Critical minerals boom for battery supply chains"
-    ],
-    "risks": [
-      "Currently -10% in portfolio",
-      "Mining capex highly cyclical",
-      "Competition from Metso Outotec and Weir Group"
-    ],
-    "track": [
-      "Export order book",
-      "New product wins in lithium/copper mines",
-      "EBITDA margin stability"
-    ],
-    "mcap_cr": 13700.29,
-    "pe": 88.95609,
-    "roe": 5.94,
-    "ocf_cr": 350.34,
-    "debt_to_equity": 11.693,
-    "eps": 20.5,
-    "book_value": 449.925,
-    "div_yield": 11.0,
-    "pat_cagr": -63.6,
-    "rev_cagr": -1.7,
-    "mcap_3y": 127.37,
-    "quality_score": 6.0,
-    "quality_tier": "Above-average",
-    "quality_rank": 80,
-    "quality_of": 160,
-    "sector_group": "Mining & Minerals"
-  },
-  {
     "ticker": "ASHIANA",
     "name": "Ashiana Housing Limited",
     "sector": "Real Estate",
@@ -5382,93 +4945,6 @@
     "quality_rank": 66,
     "quality_of": 160,
     "sector_group": "Healthcare & Hospitals"
-  },
-  {
-    "ticker": "SIEMENS",
-    "name": "Siemens Limited",
-    "sector": "Capital Goods",
-    "nse_symbol": "SIEMENS",
-    "moat_type": "Wide",
-    "moat_class": "wide",
-    "conviction": 8,
-    "moat": "India subsidiary of Siemens AG. Access to world-class automation, electrification, digitalization. Products span power distribution, railway electrification, building automation, industrial software.",
-    "leadership": "One of India's most trusted industrial technology companies. 75%+ revenue from products (higher quality). Revenue ~â‚¹21,000 Cr.",
-    "non_rep": "Siemens global R&D, SIMATIC PLC, SCADA, digital twin platforms â€” none replicable domestically. National Railway corridor electrification contracts.",
-    "tailwinds": [
-      "India railway modernization Vande Bharat/metro/electrification",
-      "Smart grid and power distribution upgrades",
-      "India smart city and building automation",
-      "Industry 4.0"
-    ],
-    "risks": [
-      "Currently -3% in portfolio",
-      "Parent Siemens AG India Energy Business demerger pending",
-      "Premium valuation vs domestic peers"
-    ],
-    "track": [
-      "Railway and metro order wins",
-      "Energy business demerger timeline",
-      "Digital/software revenue as % of total"
-    ],
-    "mcap_cr": 132644.21,
-    "pe": 78.77961,
-    "roe": 0,
-    "ocf_cr": -356.93,
-    "debt_to_equity": 2.213,
-    "eps": 47.28,
-    "book_value": 388.917,
-    "div_yield": 39.0,
-    "pat_cagr": -36.4,
-    "rev_cagr": 14.6,
-    "mcap_3y": 81.65,
-    "quality_score": 6.7,
-    "quality_tier": "Above-average",
-    "quality_rank": 41,
-    "quality_of": 160,
-    "sector_group": "Industrials (general)"
-  },
-  {
-    "ticker": "HONAUT",
-    "name": "Honeywell Automation India Limited",
-    "sector": "Automation",
-    "nse_symbol": "HONAUT",
-    "moat_type": "Wide",
-    "moat_class": "wide",
-    "conviction": 7,
-    "moat": "India subsidiary of Honeywell International (Fortune 500). Leader in process automation, building solutions, combustion controls. Replacing a Honeywell DCS in a refinery takes 12-18 months and full plant shutdown.",
-    "leadership": "#1 in integrated industrial automation in India. Promoter: Honeywell Asia Pacific. Revenue growing steadily.",
-    "non_rep": "Technology sharing from parent for process solutions, sensing, building controls. Extreme switching cost on installed DCS base.",
-    "tailwinds": [
-      "India refinery and petrochemical capacity expansion",
-      "Smart buildings and green building mandates",
-      "Industrial safety/compliance regulations driving DCS upgrades"
-    ],
-    "risks": [
-      "Small float â€” illiquid stock",
-      "Parent dependent for all technology",
-      "Very high unit price â€” position sizing constraints"
-    ],
-    "track": [
-      "Revenue from engineering services exports",
-      "Process solutions order intake",
-      "Building solutions growth"
-    ],
-    "mcap_cr": 32823.7,
-    "pe": 62.53793,
-    "roe": 12.35,
-    "ocf_cr": 492.6,
-    "debt_to_equity": 2.476,
-    "eps": 593.24,
-    "book_value": 5046.735,
-    "div_yield": 30.0,
-    "pat_cagr": 14.1,
-    "rev_cagr": 5.9,
-    "mcap_3y": -6.55,
-    "quality_score": 6.9,
-    "quality_tier": "Above-average",
-    "quality_rank": 33,
-    "quality_of": 160,
-    "sector_group": "Industrials (general)"
   },
   {
     "ticker": "GRINDWELL",
@@ -5686,49 +5162,6 @@
     "quality_rank": 120,
     "quality_of": 160,
     "sector_group": "Consumer / Retail"
-  },
-  {
-    "ticker": "KPITTECH",
-    "name": "KPIT Technologies Limited",
-    "sector": "Technology",
-    "nse_symbol": "KPITTECH",
-    "moat_type": "Wide",
-    "moat_class": "wide",
-    "conviction": 8,
-    "moat": "A genuine specialist moat in automotive software, built on deep domain knowledge, safety-critical validation, embedded integration and long programme cycles. Once embedded in an OEM’s SDV stack, switching is expensive both technically and organisationally.",
-    "leadership": "KPIT reported FY25 revenue of USD 691 million with 18.7% constant-currency growth, 21% EBITDA margin, 19 consecutive growth quarters and USD 280 million of Q4 engagement wins, while describing itself as a leader in mobility solutions and strong among passenger-car OEMs.",
-    "non_rep": "The moat is not generic IT services; it is mobility-specific engineering depth across software-defined vehicles, middleware, propulsion and validation. That makes KPIT more comparable to a category specialist than a broad outsourcing vendor.",
-    "tailwinds": [
-      "Software-defined vehicle transition across OEMs globally",
-      "Rising software and electronics content per vehicle",
-      "Increasing outsourcing of automotive engineering complexity"
-    ],
-    "risks": [
-      "OEM program delays due to auto cycle or geopolitics",
-      "Customer concentration and pricing pressure",
-      "Failure to keep moat at the frontier of automotive AI and SDV stacks"
-    ],
-    "track": [
-      "Large deal wins, especially with top OEMs",
-      "Growth in products and solutions mix versus vanilla services",
-      "Margins, attrition and offshore delivery leverage"
-    ],
-    "mcap_cr": 20389.82,
-    "pe": 32.145924,
-    "roe": 19.73,
-    "ocf_cr": 1194.77,
-    "debt_to_equity": 23.624,
-    "eps": 23.3,
-    "book_value": 130.072,
-    "div_yield": 0,
-    "pat_cagr": -33.5,
-    "rev_cagr": 12.0,
-    "mcap_3y": -23.47,
-    "quality_score": 7.3,
-    "quality_tier": "High quality",
-    "quality_rank": 20,
-    "quality_of": 160,
-    "sector_group": "IT / Software / Tech"
   },
   {
     "ticker": "MSTCLTD",
@@ -6569,94 +6002,6 @@
     "quality_score": 4.5,
     "quality_tier": "Below-average",
     "quality_rank": 155,
-    "quality_of": 160,
-    "sector_group": "Industrials (general)"
-  },
-  {
-    "ticker": "IFGLEXPOR",
-    "name": "IFGL Refractories Limited",
-    "sector": "Basic Materials",
-    "nse_symbol": "IFGLEXPOR",
-    "moat_type": "Specialty refractories with global footprint",
-    "moat_class": "narrow",
-    "conviction": 5,
-    "moat": "Steel-industry refractories specialist (ladle / tundish flow-control systems) with manufacturing in India, US, Europe and China. FY26  total income ₹1,904 cr (+14% YoY); standalone total income ₹1,117 cr (+10% YoY). Q4 FY26 consolidated PAT ₹14.3 cr (vs ₹8.4 cr YoY); FY26 consolidated PAT ₹34.7 cr (vs ₹43.0 cr — down). EBITDA margin 8.6% Q4 / 7.7% FY26.",
-    "leadership": "Bajoria family promoter group (verify exact stake). Significant 2026 leadership churn — previous CEO resigned April 2026; Mukesh Harshadrai Rawal proposed as CEO from 16-Aug-2026; Chief Research Officer Narendra Kumar Mishra resigned 7-May-2026; Operations Director resignation announced 2-Jun-2026. Final dividend ₹2.15/share recommended for FY26 (record date 29-Jul-2026; 19th AGM 5-Aug-2026).",
-    "non_rep": "Refractory flow-control systems for steel ladle/tundish (high-stickiness consumable); global manufacturing footprint (India, US, Europe, China); legacy goodwill from 2017 amalgamation fully amortised — FY27 reported earnings will no longer carry the ~₹26.7 cr/year non-cash amortisation drag.",
-    "tailwinds": [
-      "India crude-steel capacity target ~300 MT by 2030 — refractory consumption tailwind",
-      "Goodwill amortisation ending FY27 — ~₹26.7 cr earnings tailwind (non-cash but EPS-accretive)",
-      "Q4 FY26 EBITDA expanded to ₹41.8 cr (+13% YoY) with margin to 8.6%",
-      "Recovery in domestic steel volumes and capacity expansion (JSW, Tata, AMNS, SAIL)"
-    ],
-    "risks": [
-      "Major management churn in 2026 (CEO, CRO, Operations Director) — governance / continuity signal",
-      "FY26 consolidated PAT down to ₹34.7 cr (from ₹43.0 cr) — margin compression",
-      "Standalone PAT FY26 ₹38.8 cr vs ₹57.6 cr FY25 — down ~33%",
-      "Export business facing geopolitical headwinds (US/EU tariff actions on steel)",
-      "Consolidated debt ₹195.6 cr vs cash ₹122 cr",
-      "Thin EBITDA margins (~8%) leave little buffer for input-cost spikes",
-      "New Labour Code one-time charge ₹5.2 cr in FY26"
-    ],
-    "track": [
-      "New CEO Mukesh Rawal's first-100-day plan (post 16-Aug-2026 join)",
-      "FY27 earnings step-up from end of ~₹26.7 cr goodwill amortisation",
-      "Consolidated EBITDA margin recovery toward double-digit",
-      "Export revenue trend amid US/EU steel tariff dynamics",
-      "Net debt trajectory (FY26 ₹195.6 cr debt vs ₹122 cr cash)",
-      "Standalone PAT recovery toward FY25 ₹57.6 cr base",
-      "Dividend continuity (FY26 ₹2.15/share)"
-    ],
-    "mcap_cr": 1356.88,
-    "pe": 39.21875,
-    "roe": 3.04,
-    "ocf_cr": 63.38,
-    "debt_to_equity": 17.764,
-    "eps": 4.8,
-    "book_value": 157.804,
-    "div_yield": 111.0,
-    "pat_cagr": 69.3,
-    "rev_cagr": 7.7,
-    "mcap_3y": 28.81,
-    "quality_score": 5.0,
-    "quality_tier": "Average",
-    "quality_rank": 147,
-    "quality_of": 160,
-    "sector_group": "Steel / Metals / Materials"
-  },
-  {
-    "ticker": "3MINDIA",
-    "name": "3M India Limited",
-    "sector": "Diversified Industrials",
-    "nse_symbol": "3MINDIA",
-    "buy_avg": 33302.06,
-    "moat_type": "Wide",
-    "moat_class": "wide",
-    "conviction": 7,
-    "moat": "Indian subsidiary of 3M Company, USA (which holds 75%). Operates across four segments — Safety & Industrial, Transportation & Electronics, Health Care and Consumer — selling research-driven branded products (Scotch tapes, Scotch-Brite, Post-it, Command, abrasives, adhesives, films, PPE). The moat rests on 3M's global R&D/patent engine, brand strength and a deep multi-channel distribution network. Manufacturing at Ahmedabad, Bengaluru and Pune, with an R&D centre in Bengaluru.",
-    "leadership": "FY25 standalone revenue ~Rs 4,446 cr (TTM ~Rs 5,090 cr). High-quality financials — ROCE ~50% and ROE ~30%, near debt-free, asset-light, with large dividend payouts (100%+ in recent years). Promoter (3M Company) holding 75%. Market cap ~Rs 37,000 cr.",
-    "non_rep": "Access to 3M's worldwide technology, patent library and continuous product pipeline cannot be replicated by domestic peers. Long-established brands (Scotch, Post-it, Scotch-Brite) and qualified industrial/healthcare products create switching costs and pricing power; the very high RoCE reflects an asset-light, brand-and-distribution-led model.",
-    "tailwinds": [
-      "India industrial and manufacturing capex cycle",
-      "Premiumisation in consumer and stationery products",
-      "Auto, road-safety and electronics materials demand",
-      "Healthcare and PPE consumption growth"
-    ],
-    "risks": [
-      "Premium valuation (P/E ~65-70x)",
-      "Royalty and related-party payments to parent 3M",
-      "Cyclicality in industrial and auto end-markets",
-      "Limited free float (75% promoter holding)"
-    ],
-    "track": [
-      "Segment revenue mix (Safety & Industrial vs others)",
-      "EBITDA margin and RoCE trend",
-      "Royalty as % of sales",
-      "Dividend payout"
-    ],
-    "quality_score": 6.6,
-    "quality_tier": "Above-average",
-    "quality_rank": 48,
     "quality_of": 160,
     "sector_group": "Industrials (general)"
   },
