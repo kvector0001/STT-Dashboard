@@ -6231,5 +6231,27 @@
     "moat_class": "pending",
     "conviction": 0,
     "holding_type": "Stocks"
+  },
+  {
+    "ticker": "Cash",
+    "name": "auto",
+    "sector": "Pending",
+    "nse_symbol": "Cash",
+    "buy_avg": 0.0,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
   }
 ]
