@@ -124,6 +124,10 @@
     }
     .summary-bar::-webkit-scrollbar { height: 3px; }
     .summary-bar::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+    .filter-scroll { scrollbar-width: thin; scrollbar-color: var(--purple) transparent; }
+    .filter-scroll::-webkit-scrollbar { height: 4px; }
+    .filter-scroll::-webkit-scrollbar-track { background: transparent; }
+    .filter-scroll::-webkit-scrollbar-thumb { background: var(--purple); border-radius: 4px; }
     .stat {
       display: flex;
       flex-direction: column;
@@ -626,7 +630,7 @@
 
     /* ── ANALYSIS TABLE ── */
     .analysis-table-container {
-      padding: 0 1rem 1rem;
+      padding: 0 0 1rem;
       overflow-x: auto;
       overflow-y: auto;
       max-height: calc(100vh - 280px);
@@ -674,6 +678,13 @@
       z-index: 5;
       background: var(--bg2);
       border-right: 2px solid var(--border);
+      width: 104px;
+      min-width: 104px;
+      max-width: 104px;
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
     .analysis-table th:first-child {
       z-index: 15; /* Top-left corner needs highest z-index */
@@ -1078,7 +1089,6 @@
       <button class="hdr-btn" id="excel-export-btn" onclick="exportFundamentalsExcel()" title="Export deep-analysis fundamentals to Excel (unlock required)" style="padding:4px 8px;display:flex;align-items:center;gap:5px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;"><rect width="24" height="24" rx="3" fill="#1D6F42"/><path d="M7 7h10v2H7zM7 11h10v2H7zM7 15h10v2H7z" fill="white" opacity="0.3"/><path d="M6 6l4 6-4 6h2.5l2.5-4 2.5 4H16l-4-6 4-6h-2.5L11 12 8.5 6H6z" fill="white"/></svg><span style="font-size:0.7rem;font-weight:600;">XLS</span></button>
       <button class="hdr-btn paste" onclick="showPasteModal()">📋 Paste Claude Response</button>
       <button class="hdr-btn export" onclick="quarterlyRefreshPrompt()" title="Copy batched prompt to deeply re-analyze ALL stocks (quarterly)">🔬 Refresh ALL</button>
-      <button class="hdr-btn export" onclick="pendingRefreshPrompt()" title="Copy batched prompt for ONLY stocks missing analysis/new fields">🟡 Refresh Pending</button>
       <button class="hdr-btn export" onclick="nextBatchPrompt()" title="Copy the NEXT batch prompt after pasting the previous batch's results">⏭ Next Batch</button>
       <button class="hdr-btn export" onclick="exportPendingJSON()">⬇ Export Pending for Claude</button>
       <button class="hdr-btn export" style="opacity:0.6;" onclick="exportStocksJSON()">⬇ Export ALL</button>
@@ -1168,11 +1178,11 @@
   <header class="header">
     <div class="header-top">
       <div class="header-actions">
-<button class="hdr-btn export" onclick="refreshDataBtn()" id="refresh-btn-analysis">🔄 Refresh Data</button>
-      <div id="refresh-progress-analysis" style="font-size:0.68rem;color:var(--text3);font-family:var(--mono);min-width:60px;"></div>
       <div class="last-updated" id="last-updated-analysis">Loading…</div>
-      <button class="hdr-btn" id="theme-toggle-2" onclick="toggleTheme()" title="Toggle dark/light mode">☀️ Light</button>
       <button class="hdr-btn" id="lock-btn-2" onclick="togglePrivacy()" title="Lock/unlock private values">🔒 Lock</button>
+      <button class="hdr-btn" id="theme-toggle-2" onclick="toggleTheme()" title="Toggle dark/light mode">☀️ Light</button>
+      <button class="hdr-btn export" onclick="refreshDataBtn()" id="refresh-btn-analysis">🔄 Refresh Data</button>
+      <div id="refresh-progress-analysis" style="font-size:0.68rem;color:var(--text3);font-family:var(--mono);"></div>
       <button class="hdr-btn" id="excel-export-btn-2" onclick="exportToExcel()" title="Export portfolio table to Excel (unlock required)" style="padding:4px 8px;display:flex;align-items:center;gap:5px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;"><rect width="24" height="24" rx="3" fill="#1D6F42"/><path d="M7 7h10v2H7zM7 11h10v2H7zM7 15h10v2H7z" fill="white" opacity="0.3"/><path d="M6 6l4 6-4 6h2.5l2.5-4 2.5 4H16l-4-6 4-6h-2.5L11 12 8.5 6H6z" fill="white"/></svg><span style="font-size:0.7rem;font-weight:600;">XLS</span></button>
       <button class="hdr-btn" id="portfolio-extract-btn" onclick="copyPortfolioExtract()" title="Copy a full Portfolio Extract (all metrics, deep analysis, peers, red flags, mgmt) + Claude analysis prompt to clipboard (unlock required)" style="padding:4px 10px;font-size:0.7rem;font-weight:600;">🧠 Portfolio Extract</button>
       </div>
@@ -1256,21 +1266,23 @@
   </div>
 
   <div style="padding: 8px 16px; background: var(--bg2); border-bottom: 1px solid var(--border); display: flex; gap: 8px; align-items: center;">
-    <span style="color: var(--text3);">🔍</span>
-    <div style="position:relative; width:30%;">
+    <span style="color: var(--text3); flex-shrink:0;">🔍</span>
+    <div style="position:relative; flex:1 1 200px; min-width:150px;">
       <input type="text" id="analysis-search" placeholder="Search ticker or name…" style="width:100%; padding: 6px 28px 6px 10px; background: var(--bg3); color: var(--text); border: 1px solid var(--border); border-radius: 4px; font-size: 13px;">
       <span id="search-clear" onclick="clearAnalysisSearch()" style="display:none;position:absolute;right:6px;top:50%;transform:translateY(-50%);cursor:pointer;color:var(--text3);font-size:14px;line-height:1;" title="Clear">✕</span>
     </div>
-    <select id="holding-type-analysis" onchange="setHoldingType(this.value)" title="Holdings type — independent filter, not affected by the All chip. Defaults to Stocks on every page load." style="background:var(--bg3);color:var(--text);border:1px solid var(--border);border-radius:4px;font-size:0.72rem;padding:5px 8px;">
+    <div class="filter-scroll" style="display:flex; gap:6px; align-items:center; overflow-x:auto; min-width:0; flex:0 1 auto; -webkit-overflow-scrolling:touch; padding-bottom:2px;">
+    <select id="account-filter-analysis" onchange="setAccountFilter(this.value)" title="Filter by account" style="flex:0 0 auto;background:var(--bg3);color:var(--text);border:1px solid var(--border);border-radius:4px;font-size:0.72rem;padding:5px 8px;max-width:130px;"><option value="">All A/c</option></select>
+    <select id="holding-type-analysis" onchange="setHoldingType(this.value)" title="Holdings type — independent filter, not affected by the All chip. Defaults to Stocks on every page load." style="flex:0 0 auto;background:var(--bg3);color:var(--text);border:1px solid var(--border);border-radius:4px;font-size:0.72rem;padding:5px 8px;">
       <option value="Stocks" selected>Stocks</option>
-      <option value="MF">Mutual Funds</option>
+      <option value="MF">MF</option>
       <option value="Gold">Gold</option>
       <option value="Silver">Silver</option>
-      <option value="All">All holdings</option>
+      <option value="All">All</option>
     </select>
-    <select id="sector-filter-analysis" onchange="setSectorFilter(this.value)" title="Filter by sector" style="background:var(--bg3);color:var(--text);border:1px solid var(--border);border-radius:4px;font-size:0.72rem;padding:5px 8px;max-width:200px;"><option value="">All sectors</option></select>
-    <select id="account-filter-analysis" onchange="setAccountFilter(this.value)" title="Filter by account" style="background:var(--bg3);color:var(--text);border:1px solid var(--border);border-radius:4px;font-size:0.72rem;padding:5px 8px;max-width:150px;"><option value="">All accounts</option></select>
-    <button onclick="resetAnalysisFilters()" title="Reset to default view (Stocks, all accounts)" style="background:var(--bg3);color:var(--text2);border:1px solid var(--border);border-radius:4px;font-size:0.85rem;line-height:1;padding:6px 10px;cursor:pointer;">✕</button>
+    <select id="sector-filter-analysis" onchange="setSectorFilter(this.value)" title="Filter by sector" style="flex:0 0 auto;background:var(--bg3);color:var(--text);border:1px solid var(--border);border-radius:4px;font-size:0.72rem;padding:5px 8px;max-width:130px;"><option value="">All Sec</option></select>
+    <button onclick="resetAnalysisFilters()" title="Reset to default view (Stocks, all accounts)" style="flex:0 0 auto;background:var(--bg3);color:var(--text2);border:1px solid var(--border);border-radius:4px;font-size:0.85rem;line-height:1;padding:6px 10px;cursor:pointer;">✕</button>
+    </div>
   </div>
   <div style="padding: 6px 16px; background: var(--bg2); border-bottom: 1px solid var(--border); display: flex; gap: 6px; flex-wrap: wrap; align-items: center;">
     <span style="font-size:0.72rem;color:var(--text3);margin-right:2px;">Filter:</span>
@@ -3443,7 +3455,7 @@ function populateSectorDropdowns() {
   const counts = {};
   allStocks.forEach(s => { if (s.sector_group) counts[s.sector_group] = (counts[s.sector_group]||0)+1; });
   const groups = Object.keys(counts).sort();
-  const optHtml = '<option value="">All sectors</option>' + groups.map(g => `<option value="${esc(g)}">${esc(g)} (${counts[g]})</option>`).join('');
+  const optHtml = '<option value="">All Sec</option>' + groups.map(g => `<option value="${esc(g)}">${esc(g)} (${counts[g]})</option>`).join('');
   ['sector-filter-analysis','sector-filter-deep'].forEach(id => { const el = document.getElementById(id); if (el) { el.innerHTML = optHtml; el.value = window._sectorFilter || ''; } });
 }
 function setSectorFilter(val) {
@@ -3458,7 +3470,7 @@ function populateAccountDropdown() {
   const set = new Set();
   allStocks.forEach(s => { if (Array.isArray(s.accounts)) s.accounts.forEach(a => { if (a && a.name) set.add(a.name); }); });
   const groups = [...set].sort();
-  const optHtml = '<option value="">All accounts</option>' + groups.map(g => `<option value="${esc(g)}">${esc(g)}</option>`).join('');
+  const optHtml = '<option value="">All A/c</option>' + groups.map(g => `<option value="${esc(g)}">${esc(g)}</option>`).join('');
   ['account-filter-analysis','account-filter-deep'].forEach(id => { const el = document.getElementById(id); if (el) { el.innerHTML = optHtml; el.value = window._accountFilter || ''; } });
 }
 function setAccountFilter(val) {
@@ -3493,6 +3505,19 @@ function toggleAcctRow(el, ticker) {
   const open = detail.style.display !== 'none';
   detail.style.display = open ? 'none' : '';
   el.textContent = open ? '\u25b8' : '\u25be';
+}
+// Toggle the account breakdown by tapping anywhere on the Symbol cell (blank
+// space or the arrow) — avoids the fat-finger problem of hitting the tiny arrow.
+// The ticker text itself keeps its own handler (stopPropagation) to open the card.
+function toggleAcctCell(cell, event) {
+  const arrow = cell.querySelector('.acct-exp');
+  if (!arrow) return;                 // no accounts on this row → nothing to expand
+  const row = cell.closest('tr');
+  const detail = row ? row.nextElementSibling : null;
+  if (!detail || !detail.classList.contains('acct-detail-row')) return;
+  const open = detail.style.display !== 'none';
+  detail.style.display = open ? 'none' : '';
+  arrow.textContent = open ? '\u25b8' : '\u25be';
 }
 window._holdingType = window._holdingType || 'Stocks';
 function setHoldingType(val) {
@@ -3942,7 +3967,7 @@ function renderAnalysisTable() {
 
     const tr = document.createElement('tr');
     tr.innerHTML = `
-      <td><strong>${(Array.isArray(s.accounts) && s.accounts.length) ? `<span class="acct-exp" title="Show ${s.accounts.length} account${s.accounts.length>1?'s':''}" onclick="toggleAcctRow(this,'${esc(s.ticker)}')" style="cursor:pointer;color:var(--purple-text);margin-right:5px;user-select:none;font-weight:700;">\u25b8</span>` : ''}<span style="cursor:pointer;color:var(--blue-text);" title="View fundamental analysis card" onclick="goToCard('${esc(s.ticker)}')">${s.ticker}</span></strong></td>
+      <td onclick="toggleAcctCell(this,event)" style="${(Array.isArray(s.accounts) && s.accounts.length) ? 'cursor:pointer;' : ''}"><strong>${(Array.isArray(s.accounts) && s.accounts.length) ? `<span class="acct-exp" title="Tap the symbol to show ${s.accounts.length} account${s.accounts.length>1?'s':''}" style="color:var(--purple-text);margin-right:5px;user-select:none;font-weight:700;">\u25b8</span>` : ''}<span style="cursor:pointer;color:var(--blue-text);" title="View fundamental analysis card" onclick="event.stopPropagation();goToCard('${esc(s.ticker)}')">${s.ticker}</span></strong></td>
       <td class="research-name" style="cursor:pointer;color:var(--blue-text);" title="Click to open Tickertape, Trendlyne, Tijori" data-ticker="${esc(s.ticker)}" data-name="${esc(s.name || s.ticker)}" onclick="openResearchTabsFromEl(event,this)"><span class="research-name" style="text-decoration:underline dotted;pointer-events:none;">${esc(s.name || s.ticker)}</span></td>
       ${mgmtTrustCell(s)}
       ${rfCell(s)}
@@ -4834,27 +4859,17 @@ function buildPortfolioExtract() {
   const inv = allStocks.reduce((a, s) => a + (s.buy_avg || 0) * (s.quantity || 0), 0);
   const cur = allStocks.reduce((a, s) => a + (s.ltp || 0) * (s.quantity || 0), 0);
 
+  // Dump EVERY field present on each holding (fundamentals, qualitative analysis,
+  // quality/sector scores, trend, returns, accounts, peers, red flags, mgmt trust,
+  // etc.) — then add the computed portfolio-level metrics. Nothing is left out.
   const holdings = allStocks.map(s => {
     const qty = s.quantity || 0, buy = s.buy_avg || 0, ltp = s.ltp || 0;
     const present = ltp * qty, invested = buy * qty;
-    return {
-      ticker: s.ticker, name: s.name, sector: s.sector, holding_type: s.holding_type || 'Stocks',
-      conviction: s.conviction || 0, moat_class: s.moat_class, moat_type: s.moat_type, moat: s.moat,
-      qty, buy_avg: num(buy), ltp, invested: num(invested), present_value: num(present),
-      pnl_abs: num(s.pnl_abs), pnl_pct: num(s.pnl_pct), pct_of_portfolio: cur ? num(present / cur * 100) : null,
-      accounts: (s.accounts || []).map(a => ({ name: a.name, qty: a.qty, invested: a.invested })),
-      returns: { d1: num(s.ret_1d), m1: num(s.ret_1m), m6: num(s.ret_6m), y1: num(s.ret_1y), y3: num(s.ret_3y), y5: num(s.ret_5y) },
-      trend: { score: s.trend_score, signal: s.trend_signal, vs_200dma_pct: num(s.price_to_200dma_pct), movers: s.movers,
-               wk52_high_pct: num(s.week52_high_pct), wk52_low_pct: num(s.week52_low_pct), ath_pct: num(s.ath_pct) },
-      fundamentals: { mcap_cr: s.mcap_cr, pe: s.pe, pb: s.price_to_book, ev_ebitda: s.ev_ebitda, roe: s.roe, roa: s.roa,
-                      debt_to_equity: s.debt_to_equity, pat_cagr: s.pat_cagr, rev_cagr: s.rev_cagr, eps: s.eps,
-                      div_yield: s.div_yield, op_margin: s.operating_margin, profit_margin: s.profit_margin, promoter_pct: s.insider_pct },
-      management_trust: s.mgmt_trust || null,
-      red_flags: s.rf_score || null,
-      peer_analysis: s.peer_cmp || null,
-      quality: { score: (s.peer_cmp && s.peer_cmp.q) || null, pricing_power: s.pricing_power, capital_allocation: s.capital_allocation },
-      thesis: { leadership: s.leadership, non_replicable: s.non_rep, tailwinds: s.tailwinds, risks: s.risks, track: s.track, must_buy: !!s.must_buy }
-    };
+    return Object.assign({}, s, {
+      invested: num(invested),
+      present_value: num(present),
+      pct_of_portfolio: cur ? num(present / cur * 100) : null,
+    });
   });
 
   return {
@@ -4865,7 +4880,7 @@ function buildPortfolioExtract() {
 }
 
 function copyPortfolioExtract() {
-  if (typeof privacyUnlocked !== 'undefined' && !privacyUnlocked) { showToast('🔒 Unlock to extract data', 'amber'); return; }
+  if (typeof privacyUnlocked !== 'undefined' && !privacyUnlocked) { showToast('🔒 Unlock data first', 'amber'); return; }
   const data = buildPortfolioExtract();
   const prompt =
 `You are a senior equity portfolio strategist. Analyse the portfolio JSON below and give clear, actionable rebalancing recommendations for the NEXT 6 MONTHS.
@@ -4891,7 +4906,7 @@ ${JSON.stringify(data, null, 2)}`;
 // ── Excel Export ─────────────────────────────────────────────────────────
 function exportToExcel() {
   if (!privacyUnlocked) {
-    showToast('🔒 Unlock to export data', 'amber');
+    showToast('🔒 Unlock data first', 'amber');
     return;
   }
   const src = visibleStocks.length > 0 ? visibleStocks : allStocks;
@@ -4967,7 +4982,7 @@ function exportToExcel() {
 // ── Fundamentals Excel Export (Deep Analysis tab) ─────────────────────────
 function exportFundamentalsExcel() {
   if (!privacyUnlocked) {
-    showToast('🔒 Unlock to export data', 'amber');
+    showToast('🔒 Unlock data first', 'amber');
     return;
   }
   const rows = allStocks.map((s, i) => ({

@@ -343,19 +343,16 @@ if new_stubs:
         json.dump(stocks, f, indent=2, ensure_ascii=False)
     print(f"[SUCCESS] Added {len(new_stubs)} new placeholder entries to stocks.json\n")
 
-# Remove stocks from stocks.json that are no longer in the portfolio (unless marked as "pending")
-# This ensures deleted rows in Google Sheet are removed from the dashboard
-initial_stock_count = len(stocks)
-stocks_to_keep = [s for s in stocks if s.get("ticker") in portfolio_tickers]
-removed_count = initial_stock_count - len(stocks_to_keep)
-if removed_count > 0:
-    stocks = stocks_to_keep
-    print(f"[INFO] Removed {removed_count} stocks no longer in portfolio\n")
-    # Save filtered stocks immediately
-    with open(stocks_path, "w", encoding="utf-8") as f:
-        json.dump(stocks, f, indent=2, ensure_ascii=False)
-else:
-    stocks = stocks_to_keep
+# NOTE: We intentionally do NOT delete stocks from stocks.json when a ticker
+# leaves the Google Sheet. Positions (qty / value) are rebuilt from the sheet
+# via prices.json each run, but the qualitative analysis (moat, conviction,
+# thesis, etc.) must persist forever so it always stays on the Deep Analysis
+# tab — even for holdings that are no longer in the current portfolio.
+# The stock simply becomes an "orphan" analysis card with no live position.
+not_in_portfolio = [s.get("ticker") for s in stocks if s.get("ticker") not in portfolio_tickers]
+if not_in_portfolio:
+    print(f"[INFO] Keeping qualitative analysis for {len(not_in_portfolio)} "
+          f"stock(s) no longer in the sheet: {', '.join(str(t) for t in not_in_portfolio)}\n")
 
 # ── Fetch prices ──────────────────────────────────────────────────────────────
 prices = {}
