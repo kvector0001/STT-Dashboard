@@ -1087,10 +1087,10 @@
       <button class="hdr-btn" id="theme-toggle" onclick="toggleTheme()" title="Toggle dark/light mode">☀️ Light</button>
       <button class="hdr-btn" id="lock-btn" onclick="togglePrivacy()" title="Lock/unlock private values">🔒 Lock</button>
       <button class="hdr-btn" id="excel-export-btn" onclick="exportFundamentalsExcel()" title="Export deep-analysis fundamentals to Excel (unlock required)" style="padding:4px 8px;display:flex;align-items:center;gap:5px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;"><rect width="24" height="24" rx="3" fill="#1D6F42"/><path d="M7 7h10v2H7zM7 11h10v2H7zM7 15h10v2H7z" fill="white" opacity="0.3"/><path d="M6 6l4 6-4 6h2.5l2.5-4 2.5 4H16l-4-6 4-6h-2.5L11 12 8.5 6H6z" fill="white"/></svg><span style="font-size:0.7rem;font-weight:600;">XLS</span></button>
-      <button class="hdr-btn paste" onclick="showPasteModal()">📋 Paste Claude Response</button>
+      <button class="hdr-btn paste" onclick="showPasteModal()">📋 Paste AI Response</button>
       <button class="hdr-btn export" onclick="quarterlyRefreshPrompt()" title="Copy batched prompt to deeply re-analyze ALL stocks (quarterly)">🔬 Refresh ALL</button>
       <button class="hdr-btn export" onclick="nextBatchPrompt()" title="Copy the NEXT batch prompt after pasting the previous batch's results">⏭ Next Batch</button>
-      <button class="hdr-btn export" onclick="exportPendingJSON()">⬇ Export Pending for Claude</button>
+      <button class="hdr-btn export" onclick="exportPendingJSON()" title="Copy a ready-to-paste AI analysis prompt for the stocks whose qualitative analysis is still pending">📋 Pending Prompt for AI</button>
       <button class="hdr-btn export" style="opacity:0.6;" onclick="exportStocksJSON()">⬇ Export ALL</button>
       <a class="hdr-btn" href="prompt_outputs/management_trust_findings.md" download="management_trust_findings.md" title="Download the full Management Trust scoring report for all 151 holdings" style="text-decoration:none;display:inline-flex;align-items:center;">👔 Mgmt Trust Report</a>
       <a class="hdr-btn" href="prompt_outputs/red_flags_findings.md" download="red_flags_findings.md" title="Download the full Red-Flag forensic scan report for all 151 holdings" style="text-decoration:none;display:inline-flex;align-items:center;">🚩 Red Flags Report</a>
@@ -1184,7 +1184,7 @@
       <button class="hdr-btn export" onclick="refreshDataBtn()" id="refresh-btn-analysis">🔄 Refresh Data</button>
       <div id="refresh-progress-analysis" style="font-size:0.68rem;color:var(--text3);font-family:var(--mono);"></div>
       <button class="hdr-btn" id="excel-export-btn-2" onclick="exportToExcel()" title="Export portfolio table to Excel (unlock required)" style="padding:4px 8px;display:flex;align-items:center;gap:5px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;"><rect width="24" height="24" rx="3" fill="#1D6F42"/><path d="M7 7h10v2H7zM7 11h10v2H7zM7 15h10v2H7z" fill="white" opacity="0.3"/><path d="M6 6l4 6-4 6h2.5l2.5-4 2.5 4H16l-4-6 4-6h-2.5L11 12 8.5 6H6z" fill="white"/></svg><span style="font-size:0.7rem;font-weight:600;">XLS</span></button>
-      <button class="hdr-btn" id="portfolio-extract-btn" onclick="copyPortfolioExtract()" title="Copy a full Portfolio Extract (all metrics, deep analysis, peers, red flags, mgmt) + Claude analysis prompt to clipboard (unlock required)" style="padding:4px 10px;font-size:0.7rem;font-weight:600;">🧠 Portfolio Extract</button>
+      <button class="hdr-btn" id="portfolio-extract-btn" onclick="copyPortfolioExtract()" title="Copy a full Portfolio Extract (all metrics, deep analysis, peers, red flags, mgmt) + AI analysis prompt to clipboard (unlock required)" style="padding:4px 10px;font-size:0.7rem;font-weight:600;">🧠 Portfolio Extract</button>
       </div>
     </div>
   </header>
@@ -1373,13 +1373,13 @@
 <!-- API KEY SETUP MODAL -->
 <div class="modal-overlay" id="paste-modal" onclick="if(event.target===this)closePasteModal()">
   <div class="modal-box">
-    <div class="modal-title">📋 Paste Claude's Analysis</div>
+    <div class="modal-title">📋 Paste AI's Analysis</div>
     <div class="modal-sub">
-      Paste the JSON block Claude returned below.
+      Paste the JSON block the AI returned below.
       It will be applied to the matching ticker automatically.
     </div>
     <textarea class="modal-textarea" id="paste-textarea"
-      placeholder='Paste Claude JSON here…
+      placeholder='Paste AI JSON here…
 
 Example:
 {
@@ -1501,7 +1501,7 @@ function renderCard(s) {
   const convPct = s.conviction ? Math.round(s.conviction / 10 * 100) : 0;
 
   const pendingBanner = pending
-    ? `<div class="pending-banner">⚠️ Fundamental analysis pending<button class="ask-claude-btn" onclick="askClaude('${esc(s.ticker)}',event)">✨ Ask Claude</button></div>`
+    ? `<div class="pending-banner">⚠️ Fundamental analysis pending<button class="ask-claude-btn" onclick="askClaude('${esc(s.ticker)}',event)">✨ Ask AI</button></div>`
     : s._exited
     ? `<div class="pending-banner" style="background:rgba(107,114,128,0.15);border-color:#6b7280;color:#9ca3af;">📤 Exited — no longer in portfolio</div>`
     : '';
@@ -2035,9 +2035,9 @@ Now return ONLY this JSON (fill every field; be specific, not generic; use null 
   navigator.clipboard.writeText(prompt).then(() => {
     if (btn) {
       btn.textContent = '✅ Prompt copied!';
-      setTimeout(() => { btn.textContent = '✨ Ask Claude'; }, 2500);
+      setTimeout(() => { btn.textContent = '✨ Ask AI'; }, 2500);
     }
-    showToast('✅ Detailed prompt copied — paste it in Claude, then paste JSON back here', 'green');
+    showToast('✅ Detailed prompt copied — paste it in the AI, then paste JSON back here', 'green');
   }).catch(() => {
     // Clipboard blocked — show fallback
     showPasteModal();
@@ -2186,20 +2186,15 @@ function exportPendingJSON() {
     showToast('✨ No pending stocks found!', 'green');
     return;
   }
-  
-  const priceFields = new Set(['ltp','buy_avg','quantity','pnl_pct','pnl_abs','updated','mcap_cr','pe','roe','ocf_cr','ret_1d','ret_1m','ret_6m','ret_1y','ret_2y','ret_3y','ret_4y','ret_5y','debt_to_equity','eps','book_value','div_yield','pat_cagr','rev_cagr','mcap_3y','vol_30m_ratio','vol_yest_ratio','vol_today_ratio','gross_margin','operating_margin','ebitda_margin','profit_margin','roa','qtrly_rev_growth','qtrly_earn_growth','fcf_cr','fcf_3yr_avg','opcf_3yr_avg','lfcf_cr','week52_high','week52_low','promoter_holding','insider_pct','price_to_book','ev_ebitda','movers','price_break','trend_score','trend_signal','price_to_200dma_pct','dma200_slope_30d_pct','days_above_200dma_10d','must_buy','name','ath_pct','atl_pct','accounts','holding_type']);
-  const exportData = pending.map(s => {
-    const out = {};
-    Object.entries(s).forEach(([k,v]) => { if (!priceFields.has(k)) out[k] = v; });
-    return out;
+  // Copy a ready-to-paste Claude analysis prompt for all pending stocks (single batch).
+  const prompt = buildAnalysisPrompt(pending, 1, 1, pending.length);
+  navigator.clipboard.writeText(prompt).then(() => {
+    showToast(`✅ Pending prompt copied (${pending.length} stock${pending.length>1?'s':''}) — paste into the AI (web search ON), then paste the JSON back here`, 'green');
+  }).catch(() => {
+    showPasteModal();
+    document.getElementById('paste-textarea').value = prompt;
+    showToast('Clipboard blocked — copy the prompt from the box below', '');
   });
-  
-  const blob = new Blob([JSON.stringify(exportData, null, 2)], {type: 'application/json'});
-  const url  = URL.createObjectURL(blob);
-  const a    = document.createElement('a');
-  a.href = url; a.download = `pending_analysis_${new Date().toISOString().slice(0,10)}.json`; a.click();
-  URL.revokeObjectURL(url);
-  showToast(`⬇ Exported ${pending.length} pending stocks`, 'green');
 }
 
 function exportStocksJSON() {
@@ -2316,7 +2311,7 @@ function copyCurrentBatch() {
   const prompt = buildAnalysisPrompt(batch, batchNum, totalBatches, targets.length);
 
   const label = analysisBatchMode === 'pending' ? 'Pending' : 'All';
-  const doneMsg = `✅ ${label} — Batch ${batchNum}/${totalBatches} (${batch.length} stocks) copied. Paste in Claude (web search ON) → paste JSON back → click "Next Batch".`;
+  const doneMsg = `✅ ${label} — Batch ${batchNum}/${totalBatches} (${batch.length} stocks) copied. Paste in the AI (web search ON) → paste JSON back → click "Next Batch".`;
 
   navigator.clipboard.writeText(prompt).then(() => {
     showToast(doneMsg, 'green');
@@ -3849,6 +3844,31 @@ function moverStyle(m, r) {
   return 'color:var(--text3)';
 }
 
+// Plain-English meaning of each Movers signal (thresholds calibrated for Indian small/mid-caps)
+const MOVER_MEANING = {
+  '\u26a1': 'Strongest breakout (high-conviction BUY): within 2% of 52W high, volume \u22657\u00d7, day \u2265+6%',
+  '\ud83e\uddca': 'Strongest breakdown (EXIT): within 2% of 52W low, volume \u22657\u00d7, day \u2264\u22126%',
+  'Z\u2191': '52W-high breakout: within 2% of 52W high, volume \u22653\u00d7, day \u2265+3%',
+  'Z\u2193': '52W-low breakdown: within 2% of 52W low, volume \u22653\u00d7, day \u2264\u22123%',
+  'V+P': 'Volume + Price surge: volume \u22654\u00d7 avg AND |day move| \u22656%',
+  'V': 'Volume-led: volume \u22654\u00d7 avg AND |day move| \u22653%',
+  'P': 'Price-led: volume \u22653\u00d7 avg AND |day move| \u22656%',
+  'No': 'No unusual volume/price activity today',
+};
+
+// Per-row tooltip: today's actual volume multiple, price change and 52-week proximity + what the signal means
+function moverTitle(s) {
+  const nums = [];
+  const vol = (s.vol_today_ratio != null) ? s.vol_today_ratio : s.vol_30m_ratio;
+  if (vol != null) nums.push(`Volume: ${vol.toFixed(1)}\u00d7 avg`);
+  if (s.ret_1d != null) nums.push(`Day: ${s.ret_1d >= 0 ? '+' : ''}${s.ret_1d.toFixed(1)}%`);
+  if (s.week52_high_pct != null) nums.push(`52W high: ${s.week52_high_pct.toFixed(1)}%`);
+  if (s.week52_low_pct != null) nums.push(`52W low: +${s.week52_low_pct.toFixed(1)}%`);
+  const meaning = MOVER_MEANING[s.movers] || '';
+  const line = nums.length ? nums.join('  |  ') : 'No intraday data';
+  return meaning ? `${s.movers} \u2014 ${meaning}\n\n${line}  (today)` : `${line}  (today)`;
+}
+
 function renderAnalysisTable() {
   const tbody = document.getElementById('analysis-tbody');
   tbody.innerHTML = '';
@@ -3980,7 +4000,7 @@ function renderAnalysisTable() {
       <td>${prv('₹' + f(s.pres_value))}${portPct ? '<br><span style="font-size:0.65rem;color:var(--text3)">'+portPct+'</span>' : ''}</td>
       <td class="${pc(pnlAbs)}">${prv('₹' + f(pnlAbs))}</td>
       <td class="${pc(pnlPct)}">${prv(f(pnlPct,1) + '%')}</td>
-      <td style="${moverStyle(s.movers, s.ret_1d)}">${s.movers || '—'}</td>
+      <td style="${moverStyle(s.movers, s.ret_1d)};cursor:help" title="${esc(moverTitle(s))}">${s.movers || '—'}</td>
       <td style="text-align:center;font-weight:700;color:${ s.trend_score >= 70 ? (s.trend_signal==='Strong Bullish' ? 'var(--green)' : s.trend_signal==='Bullish' ? '#4ade80' : s.trend_signal==='Extended' ? 'var(--amber-text)' : 'var(--text2)') : s.trend_score >= 55 ? 'var(--amber-text)' : s.trend_score >= 35 ? 'var(--text2)' : s.trend_score != null ? 'var(--red-text)' : 'var(--text3)' }">${s.trend_score != null ? s.trend_score : '—'}</td>
       <td style="font-size:0.75rem;font-weight:600;color:${ s.trend_signal==='Strong Bullish' ? 'var(--green)' : s.trend_signal==='Bullish' ? '#4ade80' : s.trend_signal==='Extended' ? 'var(--amber-text)' : s.trend_signal==='Watch' ? '#f59e0b' : s.trend_signal==='Bearish' ? 'var(--red-text)' : 'var(--text3)' }">${s.trend_signal || '—'}</td>
       <td class="${pc(s.ret_1d)}">${fp(s.ret_1d)}</td>
@@ -4898,7 +4918,7 @@ Be specific, reference the metrics, rank by priority. Indian market context (₹
 PORTFOLIO JSON:
 ${JSON.stringify(data, null, 2)}`;
   navigator.clipboard.writeText(prompt).then(
-    () => showToast(`✅ Portfolio Extract copied (${data.holdings.length} holdings) — paste into Claude`, 'green'),
+    () => showToast(`✅ Portfolio Extract copied (${data.holdings.length} holdings) — paste into the AI`, 'green'),
     () => showToast('❌ Clipboard blocked — allow clipboard access', 'red')
   );
 }
