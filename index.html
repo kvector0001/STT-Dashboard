@@ -2060,24 +2060,50 @@ function closePasteModal() {
   document.getElementById('paste-modal').classList.remove('open');
 }
 
+// Robustly parse pasted AI JSON. Tolerates: ```code fences```, a missing outer
+// [ ] around a batch (objects joined by commas), markdown-escaped keys like
+// "moat\_type", and leading/trailing prose around the JSON.
+function parsePastedAnalysis(raw) {
+  let s = (raw || '').trim();
+  // 1. Strip a ```json … ``` code fence if present
+  const fence = s.match(/```(?:json)?\s*([\s\S]*?)```/i);
+  if (fence) s = fence[1].trim();
+  // 2. Undo markdown auto-escaping that produces invalid JSON (e.g. moat\_type, bull\_case)
+  s = s.replace(/\\([_*~#>])/g, '$1');
+
+  const candidates = [];
+  candidates.push(s);
+  const fbk = s.indexOf('['), lbk = s.lastIndexOf(']');
+  const fb  = s.indexOf('{'), lb  = s.lastIndexOf('}');
+  // Whole array span (only trust it if it starts at the very beginning-ish)
+  if (fbk !== -1 && lbk > fbk && (fb === -1 || fbk <= fb)) candidates.push(s.slice(fbk, lbk + 1));
+  // Object span — covers a single object OR objects that lost their outer [ ]
+  if (fb !== -1 && lb > fb) {
+    const core = s.slice(fb, lb + 1);
+    candidates.push(core);            // single object, or comma-joined objects
+    candidates.push('[' + core + ']'); // wrap comma-joined objects into a valid array
+  }
+  let lastErr = 'no JSON object or array found';
+  for (const c of candidates) {
+    try {
+      const parsed = JSON.parse(c);
+      if (parsed && (Array.isArray(parsed) || typeof parsed === 'object')) return parsed;
+    } catch (e) { lastErr = e.message; }
+  }
+  return { __parseError: lastErr };
+}
+
 function applyPastedAnalysis(andPush = false) {
   const raw = document.getElementById('paste-textarea').value.trim();
   const errEl = document.getElementById('paste-error');
   errEl.classList.remove('show');
 
-  // Strip markdown code fences if present
-  let jsonStr = raw;
-  const fenceMatch = raw.match(/```(?:json)?\s*([\s\S]*?)```/);
-  if (fenceMatch) jsonStr = fenceMatch[1].trim();
-  // Match an array first (batch), else a single object
-  const arrMatch = jsonStr.match(/\[[\s\S]*\]/);
-  const objMatch = jsonStr.match(/\{[\s\S]*\}/);
-  if (arrMatch) jsonStr = arrMatch[0];
-  else if (objMatch) jsonStr = objMatch[0];
-
-  let data;
-  try { data = JSON.parse(jsonStr); }
-  catch(e) { errEl.textContent = '❌ Could not parse JSON: ' + e.message; errEl.classList.add('show'); return; }
+  const data = parsePastedAnalysis(raw);
+  if (data && data.__parseError) {
+    errEl.textContent = '❌ Could not parse JSON: ' + data.__parseError;
+    errEl.classList.add('show');
+    return;
+  }
 
   const priceFields = new Set(['ltp','buy_avg','quantity','pnl_pct','pnl_abs','updated']);
 
@@ -3869,6 +3895,19 @@ function moverTitle(s) {
   return meaning ? `${s.movers} \u2014 ${meaning}\n\n${line}  (today)` : `${line}  (today)`;
 }
 
+// Company-name hover tooltip: pulls the key qualitative analysis from the Deep
+// Analysis card (moat, market leadership, non-replicable edge) so you can preview
+// the thesis without leaving the table.
+function nameTooltip(s) {
+  const parts = [];
+  if (s.moat)       parts.push('\ud83d\udd12 Moat: ' + s.moat);
+  if (s.leadership) parts.push('\ud83c\udfc6 Market Leadership: ' + s.leadership);
+  if (s.non_rep)    parts.push('\ud83e\udde9 Non-Replicable Edge: ' + s.non_rep);
+  const hint = 'Click to open Tickertape, Trendlyne, Tijori';
+  if (!parts.length) return hint;
+  return `${s.name || s.ticker}\n\n${parts.join('\n\n')}\n\n(${hint})`;
+}
+
 function renderAnalysisTable() {
   const tbody = document.getElementById('analysis-tbody');
   tbody.innerHTML = '';
@@ -3988,7 +4027,7 @@ function renderAnalysisTable() {
     const tr = document.createElement('tr');
     tr.innerHTML = `
       <td onclick="toggleAcctCell(this,event)" style="${(Array.isArray(s.accounts) && s.accounts.length) ? 'cursor:pointer;' : ''}"><strong>${(Array.isArray(s.accounts) && s.accounts.length) ? `<span class="acct-exp" title="Tap the symbol to show ${s.accounts.length} account${s.accounts.length>1?'s':''}" style="color:var(--purple-text);margin-right:5px;user-select:none;font-weight:700;">\u25b8</span>` : ''}<span style="cursor:pointer;color:var(--blue-text);" title="View fundamental analysis card" onclick="event.stopPropagation();goToCard('${esc(s.ticker)}')">${s.ticker}</span></strong></td>
-      <td class="research-name" style="cursor:pointer;color:var(--blue-text);" title="Click to open Tickertape, Trendlyne, Tijori" data-ticker="${esc(s.ticker)}" data-name="${esc(s.name || s.ticker)}" onclick="openResearchTabsFromEl(event,this)"><span class="research-name" style="text-decoration:underline dotted;pointer-events:none;">${esc(s.name || s.ticker)}</span></td>
+      <td class="research-name" style="cursor:pointer;color:var(--blue-text);" title="${esc(nameTooltip(s))}" data-ticker="${esc(s.ticker)}" data-name="${esc(s.name || s.ticker)}" onclick="openResearchTabsFromEl(event,this)"><span class="research-name" style="text-decoration:underline dotted;pointer-events:none;">${esc(s.name || s.ticker)}</span></td>
       ${mgmtTrustCell(s)}
       ${rfCell(s)}
       ${qualCell(s)}
