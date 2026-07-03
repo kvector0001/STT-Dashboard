@@ -6253,5 +6253,27 @@
     "track": [
       "Add tracking KPIs"
     ]
+  },
+  {
+    "ticker": "IKS",
+    "name": "INVENTURUS KNOWLEDGE SO L",
+    "sector": "Healthcare",
+    "nse_symbol": "IKS",
+    "buy_avg": 1845.0,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
   }
 ]
