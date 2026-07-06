@@ -6275,5 +6275,60 @@
     "track": [
       "Add tracking KPIs"
     ]
+  },
+  {
+    "ticker": "IONEXCHANG",
+    "name": "ION EXCHANGE (INDIA) LTD",
+    "sector": "Industrials",
+    "nse_symbol": "IONEXCHANG",
+    "buy_avg": 420.2626,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "ADITYA BIRLA SUN LIFE ARBITRAGE FUND - DIRECT PLAN",
+    "name": "ADITYA BIRLA SUN LIFE ARBITRAGE FUND - DIRECT PLAN",
+    "sector": "Mutual Fund",
+    "nse_symbol": "ADITYA BIRLA SUN LIFE ARBITRAGE FUND - DIRECT PLAN",
+    "moat_type": "—",
+    "moat_class": "na",
+    "conviction": 0,
+    "holding_type": "MF",
+    "is_non_equity": true
+  },
+  {
+    "ticker": "EDELWEISS ARBITRAGE FUND - DIRECT PLAN",
+    "name": "EDELWEISS ARBITRAGE FUND - DIRECT PLAN",
+    "sector": "Mutual Fund",
+    "nse_symbol": "EDELWEISS ARBITRAGE FUND - DIRECT PLAN",
+    "moat_type": "—",
+    "moat_class": "na",
+    "conviction": 0,
+    "holding_type": "MF",
+    "is_non_equity": true
+  },
+  {
+    "ticker": "INVESCO INDIA ARBITRAGE FUND - DIRECT PLAN",
+    "name": "INVESCO INDIA ARBITRAGE FUND - DIRECT PLAN",
+    "sector": "Mutual Fund",
+    "nse_symbol": "INVESCO INDIA ARBITRAGE FUND - DIRECT PLAN",
+    "moat_type": "—",
+    "moat_class": "na",
+    "conviction": 0,
+    "holding_type": "MF",
+    "is_non_equity": true
   }
 ]
