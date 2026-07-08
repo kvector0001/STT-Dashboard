@@ -3,7 +3,7 @@ REM ============================================================
 REM  Find holdings missing a Management Trust / Red Flags score
 REM  and open a ready-to-fill worklist. No API key needed.
 REM ============================================================
-cd /d "%~dp0"
+cd /d "%~dp0.."
 python scripts\score_companies.py pending
 echo.
 echo ============================================================
@@ -20,5 +20,5 @@ echo      collect answers into prompt_outputs\_scores_to_merge.json
 echo      (shape: prompt_outputs\_scores_to_merge.template.json),
 echo      then run:   merge_scores.bat prompt_outputs\_scores_to_merge.json
 echo ============================================================
-start "" code "%~dp0prompt_outputs\_pending_scores_worklist.md" 2>nul
+start "" code "%~dp0..\prompt_outputs\_pending_scores_worklist.md" 2>nul
 pause

@@ -1,5 +1,5 @@
 @echo off
-cd /d "%~dp0"
+cd /d "%~dp0.."
 REM Resolve conflicts by keeping our local versions
 git checkout --ours prices.json
 git checkout --ours data/portfolio.xlsx

@@ -1,5 +1,5 @@
 @echo off
-cd /d "%~dp0"
+cd /d "%~dp0.."
 echo Starting Portfolio Dashboard...
 echo Open http://localhost:8000 in your browser
 echo.

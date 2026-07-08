@@ -1,5 +1,5 @@
 @echo off
-cd /d "%~dp0"
+cd /d "%~dp0.."
 title Portfolio - Morning Refresh & Push
 echo ============================================
 echo   PORTFOLIO MORNING REFRESH

@@ -8,7 +8,7 @@ REM
 REM  Usage:  merge_scores.bat path\to\reply.json
 REM  Default if no arg: prompt_outputs\_scores_to_merge.json
 REM ============================================================
-cd /d "%~dp0"
+cd /d "%~dp0.."
 set "FILE=%~1"
 if "%FILE%"=="" set "FILE=prompt_outputs\_scores_to_merge.json"
 if not exist "%FILE%" (

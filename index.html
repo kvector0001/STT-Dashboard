@@ -110,6 +110,13 @@
     .last-updated {
       font-size: 0.72rem;
       color: var(--text3);
+      cursor: pointer;
+    }
+    /* Bigger, easier-to-tap Lock/Unlock button on phones */
+    #lock-btn, #lock-btn-2 {
+      padding: 7px 14px;
+      font-size: 0.9rem;
+      font-weight: 700;
     }
 
     /* ── SUMMARY BAR ── */
@@ -1083,7 +1090,7 @@
     <div class="header-actions">
       <button class="hdr-btn export" onclick="refreshDataBtn()" id="refresh-btn">🔄 Refresh Data</button>
       <div id="refresh-progress" style="font-size:0.68rem;color:var(--text3);font-family:var(--mono);min-width:60px;"></div>
-      <div class="last-updated" id="last-updated">Loading…</div>
+      <div class="last-updated" id="last-updated" onclick="if(!privacyUnlocked)openPinModal()" title="🔒 Tap to unlock">Loading…</div>
       <button class="hdr-btn" id="theme-toggle" onclick="toggleTheme()" title="Toggle dark/light mode">☀️ Light</button>
       <button class="hdr-btn" id="lock-btn" onclick="togglePrivacy()" title="Lock/unlock private values">🔒 Lock</button>
       <button class="hdr-btn" id="excel-export-btn" onclick="exportFundamentalsExcel()" title="Export deep-analysis fundamentals to Excel (unlock required)" style="padding:4px 8px;display:flex;align-items:center;gap:5px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;"><rect width="24" height="24" rx="3" fill="#1D6F42"/><path d="M7 7h10v2H7zM7 11h10v2H7zM7 15h10v2H7z" fill="white" opacity="0.3"/><path d="M6 6l4 6-4 6h2.5l2.5-4 2.5 4H16l-4-6 4-6h-2.5L11 12 8.5 6H6z" fill="white"/></svg><span style="font-size:0.7rem;font-weight:600;">XLS</span></button>
@@ -1178,7 +1185,7 @@
   <header class="header">
     <div class="header-top">
       <div class="header-actions">
-      <div class="last-updated" id="last-updated-analysis">Loading…</div>
+      <div class="last-updated" id="last-updated-analysis" onclick="if(!privacyUnlocked)openPinModal()" title="🔒 Tap to unlock">Loading…</div>
       <button class="hdr-btn" id="lock-btn-2" onclick="togglePrivacy()" title="Lock/unlock private values">🔒 Lock</button>
       <button class="hdr-btn" id="theme-toggle-2" onclick="toggleTheme()" title="Toggle dark/light mode">☀️ Light</button>
       <button class="hdr-btn export" onclick="refreshDataBtn()" id="refresh-btn-analysis">🔄 Refresh Data</button>
@@ -4553,7 +4560,15 @@ async function init() {
     renderAnalysisTable();
     // Safety net: re-render table after browser settles (fixes first-load blank issue)
     setTimeout(renderAnalysisTable, 100);
-    
+
+    // Reflect the current lock state on the buttons
+    document.querySelectorAll('#lock-btn, #lock-btn-2').forEach(b => b && (b.textContent = privacyUnlocked ? '🔓 Unlock' : '🔒 Lock'));
+    // On first load, if still locked, auto-prompt for the PIN (Esc / Cancel keeps it locked)
+    if (!privacyUnlocked && !window._promptedUnlockOnce) {
+      window._promptedUnlockOnce = true;
+      setTimeout(openPinModal, 400);
+    }
+
     // Auto-refresh every 15 minutes
     setInterval(init, 15 * 60 * 1000);
   } catch (err) {
@@ -4858,9 +4873,21 @@ function toggleTheme() {
 // ── Privacy lock ──────────────────────────────────────────────────────────
 const PRIVACY_PIN = '1520';
 const TRUSTED_TOKEN = 'stt-device-trusted-v1';
-// Always start LOCKED on every page load (numbers masked, all accounts).
-// Nothing is restored from storage, so a hard refresh resets to the locked default.
+const UNLOCK_KEY = 'stt_unlock_v1';
+// Persist the unlock per device: once a PIN is entered, the SAME browser stays
+// unlocked (to that account) on future opens until you tap Lock. A new browser
+// or cleared storage starts locked and auto-prompts for the PIN.
 let privacyUnlocked = false;
+(function restoreUnlock() {
+  try {
+    const saved = JSON.parse(localStorage.getItem(UNLOCK_KEY) || 'null');
+    if (saved && typeof saved === 'object') {
+      privacyUnlocked = true;
+      window._accountFilter = saved.account || '';
+      window._unlockName = saved.name || '';
+    }
+  } catch (e) {}
+})();
 
 // Private fields: columns by index (0-based) in the analysis table
 // 2=Qty, 3=Buy Value, 4=Present Value, 5=P&L, 6=P&L%
@@ -5116,17 +5143,21 @@ function applyPrivacyState() {
   }
 }
 
+function openPinModal() {
+  document.getElementById('pin-modal-title').textContent = '🔓 Enter PIN to unlock & open your account';
+  document.getElementById('pin-input').value = '';
+  document.getElementById('pin-error').classList.remove('show');
+  document.getElementById('pin-modal').classList.add('open');
+  setTimeout(() => { const el = document.getElementById('pin-input'); if (el) el.focus(); }, 100);
+}
+
 function togglePrivacy() {
   if (!privacyUnlocked) {
-    // Need to unlock — show PIN modal
-    document.getElementById('pin-modal-title').textContent = '🔓 Enter PIN to unlock & open your account';
-    document.getElementById('pin-input').value = '';
-    document.getElementById('pin-error').classList.remove('show');
-    document.getElementById('pin-modal').classList.add('open');
-    setTimeout(() => document.getElementById('pin-input').focus(), 100);
+    openPinModal();
   } else {
-    // Lock it back — also forget this device
+    // Lock it back — forget this device so it re-prompts next time
     privacyUnlocked = false;
+    try { localStorage.removeItem(UNLOCK_KEY); } catch (e) {}
     sessionStorage.removeItem('privacy_unlocked');
     localStorage.removeItem('privacy_device_trusted');
     applyPrivacyState();
@@ -5144,6 +5175,8 @@ function submitPin() {
     privacyUnlocked = true;
     const acct = match.account || '';
     window._accountFilter = acct;
+    // Remember this device so it stays unlocked on future opens (until Lock is tapped)
+    try { localStorage.setItem(UNLOCK_KEY, JSON.stringify({ account: acct, name: match.name || '' })); } catch (e) {}
     ['account-filter-analysis', 'account-filter-deep'].forEach(id => { const el = document.getElementById(id); if (el) el.value = acct; });
     closePinModal();
     renderAnalysisTable();
@@ -5162,6 +5195,13 @@ function submitPin() {
 function closePinModal() {
   document.getElementById('pin-modal').classList.remove('open');
 }
+// Esc closes the PIN modal and keeps everything locked
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    const m = document.getElementById('pin-modal');
+    if (m && m.classList.contains('open')) closePinModal();
+  }
+});
 </script>
 </body>
 </html>
