@@ -657,13 +657,21 @@
       border-right: 1px solid var(--border);
       white-space: nowrap;
     }
-    /* Company name column: constrain width and allow wrapping */
-    .analysis-table td:nth-child(2) {
-      white-space: normal;
-      max-width: 160px;
-      min-width: 100px;
-      word-break: break-word;
-      line-height: 1.3;
+    /* Narrow metric columns (Movers / Trend Score / Trend Signal) */
+    .analysis-table th.col-mov, .analysis-table td.col-mov,
+    .analysis-table th.col-ts,  .analysis-table td.col-ts {
+      width: 46px; min-width: 40px; max-width: 52px;
+      text-align: center;
+      padding-left: 4px !important; padding-right: 4px !important;
+      white-space: normal; word-break: break-word;
+    }
+    .analysis-table th.col-sig, .analysis-table td.col-sig {
+      width: 72px; min-width: 60px; max-width: 78px;
+      padding-left: 5px !important; padding-right: 5px !important;
+      white-space: normal; word-break: break-word; line-height: 1.15;
+    }
+    .analysis-table th.col-mov, .analysis-table th.col-ts, .analysis-table th.col-sig {
+      font-size: 0.66rem;
     }
     .analysis-table th {
       background: var(--bg3);
@@ -677,7 +685,7 @@
     }
     .analysis-table th:hover { background: var(--border); }
     
-    /* Freeze first column (Ticker) */
+    /* Freeze first column (Company name) */
     .analysis-table th:first-child,
     .analysis-table td:first-child {
       position: sticky;
@@ -685,13 +693,14 @@
       z-index: 5;
       background: var(--bg2);
       border-right: 2px solid var(--border);
-      width: 104px;
-      min-width: 104px;
-      max-width: 104px;
+      width: 150px;
+      min-width: 130px;
+      max-width: 160px;
       padding-left: 0.5rem;
       padding-right: 0.5rem;
-      overflow: hidden;
-      text-overflow: ellipsis;
+      white-space: normal;
+      word-break: break-word;
+      line-height: 1.25;
     }
     .analysis-table th:first-child {
       z-index: 15; /* Top-left corner needs highest z-index */
@@ -1313,22 +1322,10 @@
     <table class="analysis-table">
       <thead>
         <tr>
-          <th onclick="sortAnalysis('ticker')">Symbol <span id="sort-ticker" class="sort-indicator"></span></th>
-          <th onclick="sortAnalysis('name')">Company Name <span id="sort-name" class="sort-indicator"></span></th>
-          <th class="cf-narrow" onclick="sortAnalysis('mgmt_trust_score')" title="Management Trust score (/10) — hover a score for the full breakdown">👔 <span class="col-filter-icon" data-col="mgmt_trust_score" title="Filter" onclick="event.stopPropagation();openColFilter('mgmt_trust_score',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-mgmt_trust_score" class="sort-indicator"></span></th>
-          <th class="cf-narrow" onclick="sortAnalysis('rf_score_val')" title="Red-Flag score (/10): higher = cleaner — hover a score for the full breakdown">🚩 <span class="col-filter-icon" data-col="rf_score_val" title="Filter" onclick="event.stopPropagation();openColFilter('rf_score_val',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-rf_score_val" class="sort-indicator"></span></th>
-          <th class="cf-narrow" onclick="sortAnalysis('qual_score')" title="Pure qualitative Quality score (/10) — moat, management, capital allocation, pricing power, growth. Hover for breakdown.">⭐ <span class="col-filter-icon" data-col="qual_score" title="Filter" onclick="event.stopPropagation();openColFilter('qual_score',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-qual_score" class="sort-indicator"></span></th>
-          <th onclick="sortAnalysis('conviction')" title="Conviction score (/10) — overall analyst conviction in the thesis">Conv. <span class="col-filter-icon" data-col="conviction" title="Filter" onclick="event.stopPropagation();openColFilter('conviction',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-conviction" class="sort-indicator"></span></th>
-          <th onclick="sortAnalysis('moat_class')">Moat <span id="sort-moat_class" class="sort-indicator"></span></th>
-          <th onclick="sortAnalysis('quantity')">Qty. <span id="sort-quantity" class="sort-indicator"></span></th>
-          <th onclick="sortAnalysis('ltp')">CMP <span id="sort-ltp" class="sort-indicator"></span></th>
-          <th onclick="sortAnalysis('buy_value')">Buy Value <span id="sort-buy_value" class="sort-indicator"></span></th>
-          <th onclick="sortAnalysis('pres_value')">Present Value <span id="sort-pres_value" class="sort-indicator"></span></th>
-          <th onclick="sortAnalysis('pnl_abs')">P&L <span id="sort-pnl_abs" class="sort-indicator"></span></th>
-          <th onclick="sortAnalysis('pnl_pct')">P&L % <span id="sort-pnl_pct" class="sort-indicator"></span></th>
-          <th onclick="sortAnalysis('movers')" title="Movers — volume + momentum + 52-week breakout (Indian small/mid-cap calibrated). ⚡ strongest breakout (high-conviction BUY): within 2% of 52W high AND vol ≥7× AND day ≥+6%. 🧊 strongest breakdown (EXIT): within 2% of 52W low AND vol ≥7× AND day ≤−6%. Z↑ 52W-high breakout: within 2% of high AND vol ≥3× AND day ≥+3%. Z↓ 52W-low breakdown: within 2% of low AND vol ≥3× AND day ≤−3%. V+P surge: vol ≥4× AND |day| ≥6%. V volume-led: vol ≥4× AND |day| ≥3%. P price-led: vol ≥3× AND |day| ≥6%. Sort: ⚡ &gt; 🧊 &gt; Z↑ &gt; Z↓ &gt; V+P &gt; V &gt; P">Movers <span class="col-filter-icon" data-col="movers" title="Filter" onclick="event.stopPropagation();openColFilter('movers',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-movers" class="sort-indicator"></span></th>
-          <th onclick="sortAnalysis('trend_score')" title="Trend Score (0–100) for 3–12 month positional holding | 3 inputs: Price vs 200DMA (40pts) + 200DMA Slope 30d (30pts) + Days above 200DMA last 10 sessions (30pts) | Strong Bullish: ≥85 AND 0–10% zone | Bullish: ≥70 AND 0–10% zone | Extended: ≥70 but &gt;10% | Watch: 55–69 | Hold: 35–54 | Bearish: &lt;35">Trend Score <span id="sort-trend_score" class="sort-indicator"></span></th>
-          <th onclick="sortAnalysis('trend_signal')" title="Trend Signal | Strong Bullish: score≥85 AND 0–10% above 200DMA | Bullish: score≥70 AND 0–10% above 200DMA | Extended: score≥70 but >10% above 200DMA (too extended for fresh entry) | Watch: 55–69 | Hold: 35–54 | Bearish: &lt;35">Trend Signal <span class="col-filter-icon" data-col="trend_signal" title="Filter" onclick="event.stopPropagation();openColFilter('trend_signal',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-trend_signal" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('name')">Company <span id="sort-name" class="sort-indicator"></span></th>
+          <th class="col-mov" onclick="sortAnalysis('movers')" title="Movers — volume + momentum + 52-week breakout (Indian small/mid-cap calibrated). ⚡ strongest breakout (high-conviction BUY): within 2% of 52W high AND vol ≥7× AND day ≥+6%. 🧊 strongest breakdown (EXIT): within 2% of 52W low AND vol ≥7× AND day ≤−6%. Z↑ 52W-high breakout: within 2% of high AND vol ≥3× AND day ≥+3%. Z↓ 52W-low breakdown: within 2% of low AND vol ≥3× AND day ≤−3%. V+P surge: vol ≥4× AND |day| ≥6%. V volume-led: vol ≥4× AND |day| ≥3%. P price-led: vol ≥3× AND |day| ≥6%. Sort: ⚡ &gt; 🧊 &gt; Z↑ &gt; Z↓ &gt; V+P &gt; V &gt; P. Click a cell for a re-rating catalyst prompt.">Movers <span class="col-filter-icon" data-col="movers" title="Filter" onclick="event.stopPropagation();openColFilter('movers',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-movers" class="sort-indicator"></span></th>
+          <th class="col-ts" onclick="sortAnalysis('trend_score')" title="Trend Score (0–100) for 3–12 month positional holding | 3 inputs: Price vs 200DMA (40pts) + 200DMA Slope 30d (30pts) + Days above 200DMA last 10 sessions (30pts) | Strong Bullish: ≥85 AND 0–10% zone | Bullish: ≥70 AND 0–10% zone | Extended: ≥70 but &gt;10% | Watch: 55–69 | Hold: 35–54 | Bearish: &lt;35">TS <span id="sort-trend_score" class="sort-indicator"></span></th>
+          <th class="col-sig" onclick="sortAnalysis('trend_signal')" title="Trend Signal | Strong Bullish: score≥85 AND 0–10% above 200DMA | Bullish: score≥70 AND 0–10% above 200DMA | Extended: score≥70 but >10% above 200DMA (too extended for fresh entry) | Watch: 55–69 | Hold: 35–54 | Bearish: &lt;35">Signal <span class="col-filter-icon" data-col="trend_signal" title="Filter" onclick="event.stopPropagation();openColFilter('trend_signal',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-trend_signal" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('ret_1d')" title="1-day price return (%)">1D Ret <span id="sort-ret_1d" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('ret_1m')" title="~21 trading day (1-month) price return (%)">1M Ret <span id="sort-ret_1m" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('ret_6m')" title="~126 trading day (6-month) price return (%)">6M Ret <span id="sort-ret_6m" class="sort-indicator"></span></th>
@@ -1337,6 +1334,18 @@
           <th onclick="sortAnalysis('ret_3y')" title="~756 trading day (3-year) price return (%)">3Y Ret <span id="sort-ret_3y" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('ret_4y')" title="~1008 trading day (4-year) price return (%)">4Y Ret <span id="sort-ret_4y" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('ret_5y')" title="~1200 trading day (5-year) price return (%)">5Y Ret <span id="sort-ret_5y" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('quantity')">Qty. <span id="sort-quantity" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('ltp')">CMP <span id="sort-ltp" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('buy_avg')" title="Average buying price per share (from the portfolio sheet)">Buy Price <span id="sort-buy_avg" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('buy_value')">Buy Value <span id="sort-buy_value" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('pres_value')">Present Value <span id="sort-pres_value" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('pnl_abs')">P&L <span id="sort-pnl_abs" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('pnl_pct')">P&L % <span id="sort-pnl_pct" class="sort-indicator"></span></th>
+          <th class="cf-narrow" onclick="sortAnalysis('mgmt_trust_score')" title="Management Trust score (/10) — hover a score for the full breakdown">👔 <span class="col-filter-icon" data-col="mgmt_trust_score" title="Filter" onclick="event.stopPropagation();openColFilter('mgmt_trust_score',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-mgmt_trust_score" class="sort-indicator"></span></th>
+          <th class="cf-narrow" onclick="sortAnalysis('qual_score')" title="Rating — pure qualitative Quality score (/10): moat, management, capital allocation, pricing power, growth. Hover for breakdown.">⭐ <span class="col-filter-icon" data-col="qual_score" title="Filter" onclick="event.stopPropagation();openColFilter('qual_score',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-qual_score" class="sort-indicator"></span></th>
+          <th class="cf-narrow" onclick="sortAnalysis('rf_score_val')" title="Red-Flag score (/10): higher = cleaner — hover a score for the full breakdown">🚩 <span class="col-filter-icon" data-col="rf_score_val" title="Filter" onclick="event.stopPropagation();openColFilter('rf_score_val',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-rf_score_val" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('conviction')" title="Conviction score (/10) — overall analyst conviction in the thesis">Conv. <span class="col-filter-icon" data-col="conviction" title="Filter" onclick="event.stopPropagation();openColFilter('conviction',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-conviction" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('moat_class')">Moat <span id="sort-moat_class" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('vol_30m_ratio')" title="Last 30-min volume vs average 30-min volume (intraday, 5m bars)">Vol 30m/Avg <span id="sort-vol_30m_ratio" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('vol_today_ratio')" title="Today's total volume ÷ 30-day average volume (excludes today from avg)">Vol Today/Avg <span id="sort-vol_today_ratio" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('week52_high_pct')" title="% below 52-week high: (CMP − 52W High) ÷ 52W High × 100">52W High% <span class="col-filter-icon" data-col="week52_high_pct" title="Filter" onclick="event.stopPropagation();openColFilter('week52_high_pct',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-week52_high_pct" class="sort-indicator"></span></th>
@@ -1438,6 +1447,7 @@ Example:
   <a id="aip-claude"   href="https://claude.ai"        target="_blank" rel="noopener"><svg width="15" height="15" viewBox="0 0 24 24" fill="#D97757" aria-hidden="true"><path d="M12 1l2 9 9 2-9 2-2 9-2-9-9-2 9-2z"/></svg> Claude</a>
   <a id="aip-chatgpt"  href="https://chatgpt.com"       target="_blank" rel="noopener"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#9aa0a6" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.6l8.1 4.7v9.4L12 21.4 3.9 16.7V7.3z"/></svg> ChatGPT</a>
   <a id="aip-deepseek" href="https://chat.deepseek.com" target="_blank" rel="noopener"><svg width="15" height="15" viewBox="0 0 24 24" fill="#4D6BFE" aria-hidden="true"><path d="M2.5 8c4.5-.3 6 3.5 9.5 3.5S17 7.7 21.5 8c.4 5.8-4 10-9.5 10S2.1 13.8 2.5 8z"/></svg> DeepSeek</a>
+  <a id="aip-gemini"   href="https://gemini.google.com/app" target="_blank" rel="noopener"><svg width="15" height="15" viewBox="0 0 24 24" fill="#4285F4" aria-hidden="true"><path d="M12 2c.6 5.4 4.6 9.4 10 10-5.4.6-9.4 4.6-10 10-.6-5.4-4.6-9.4-10-10 5.4-.6 9.4-4.6 10-10z"/></svg> Gemini</a>
 </div>
 
 <!-- COLUMN FILTER POPOVER -->
@@ -3050,6 +3060,7 @@ document.addEventListener('click', function(e) {
     if (pop && !pop.contains(e.target)
            && !e.target.closest('.metric-click')
            && !e.target.closest('.catalyst-link')
+           && !e.target.closest('.col-mov')
            && !e.target.closest('.kpi-link')) {
       pop.style.display = 'none';
     }
@@ -3066,14 +3077,17 @@ function showAiPicker(anchorEl, claudePrompt, chatgptPrompt) {
   const claudeEl   = document.getElementById('aip-claude');
   const chatgptEl  = document.getElementById('aip-chatgpt');
   const deepseekEl = document.getElementById('aip-deepseek');
+  const geminiEl   = document.getElementById('aip-gemini');
 
   // Clone nodes to remove old listeners
   const newClaude   = claudeEl.cloneNode(true);
   const newChatgpt  = chatgptEl.cloneNode(true);
   const newDeepseek = deepseekEl.cloneNode(true);
+  const newGemini   = geminiEl ? geminiEl.cloneNode(true) : null;
   claudeEl.replaceWith(newClaude);
   chatgptEl.replaceWith(newChatgpt);
   deepseekEl.replaceWith(newDeepseek);
+  if (geminiEl && newGemini) geminiEl.replaceWith(newGemini);
 
   newClaude.addEventListener('click', () => {
     navigator.clipboard.writeText(claudePrompt).catch(() => {});
@@ -3088,6 +3102,11 @@ function showAiPicker(anchorEl, claudePrompt, chatgptPrompt) {
   newDeepseek.addEventListener('click', () => {
     navigator.clipboard.writeText(chatgptPrompt).catch(() => {});
     showToast('📋 DeepSeek prompt copied — paste it in the chat', 'green');
+    pop.style.display = 'none';
+  });
+  if (newGemini) newGemini.addEventListener('click', () => {
+    navigator.clipboard.writeText(chatgptPrompt).catch(() => {});
+    showToast('📋 Gemini prompt copied — paste it in the chat', 'green');
     pop.style.display = 'none';
   });
 
@@ -3139,8 +3158,62 @@ Repeat for each KPI, then:
 }
 
 // ── Catalyst Analysis ──────────────────────────────────────────────────────
-function openCatalystAnalysis(ticker, companyName, anchorEl) {
-  const catalystPrompt = `# 🎯 EQUITY CATALYST ANALYSIS — REUSABLE FRAMEWORK v2.0
+// ── Movers → Re-rating trigger detector (click a Movers cell) ─────────────
+function openMoversAnalysis(ticker, anchorEl) {
+  const s = allStocks.find(x => x.ticker === ticker) || {};
+  const vol = (s.vol_today_ratio != null) ? s.vol_today_ratio : s.vol_30m_ratio;
+  const ctxLines = [
+    `Ticker: ${ticker}`,
+    `Company: ${s.name || 'Unknown'}`,
+    `Sector: ${s.sector || 'Unknown'}`,
+    `Movers signal today: ${s.movers || 'No'}`,
+    (vol != null ? `Volume: ${vol.toFixed(1)}x average` : ''),
+    (s.ret_1d != null ? `Day move: ${s.ret_1d >= 0 ? '+' : ''}${s.ret_1d.toFixed(1)}%` : ''),
+    (s.week52_high_pct != null ? `Vs 52W high: ${s.week52_high_pct.toFixed(1)}%` : ''),
+    (s.week52_low_pct != null ? `Vs 52W low: +${s.week52_low_pct.toFixed(1)}%` : ''),
+    (s.trend_signal ? `Trend: ${s.trend_signal} (score ${s.trend_score != null ? s.trend_score : '—'})` : ''),
+    (s.ret_1m != null ? `1M return: ${s.ret_1m >= 0 ? '+' : ''}${s.ret_1m.toFixed(1)}%` : ''),
+    (s.ret_6m != null ? `6M return: ${s.ret_6m >= 0 ? '+' : ''}${s.ret_6m.toFixed(1)}%` : ''),
+  ].filter(Boolean).join('\n');
+
+  const name = s.name || ticker;
+  const today = new Date().toISOString().slice(0, 10);
+  const prompt = `# 📈 MOVERS → RE-RATING TRIGGER DETECTOR
+
+## CONTEXT (from dashboard, ${today})
+${ctxLines}
+
+## YOUR ROLE
+You are a senior Indian-equities analyst. This stock is flashing an unusual **volume + price move** today (the "Movers" signal above). Your job is NOT to describe the technicals — it is to determine WHETHER a genuine, structural RE-RATING catalyst has just been triggered, or whether today's move is noise.
+
+## NON-NEGOTIABLE RULES
+1. NO HALLUCINATION. If you cannot verify a fact from a dated, credible source, write [UNVERIFIED] — never invent numbers, orders, filings or news.
+2. DATE-STAMP every news item (DD-Mon-YYYY) and name the source (exchange filing / result / concall / reputable media).
+3. Only news from the LAST 90 DAYS counts as a potential trigger. Older items are context only.
+4. Distinguish STRUCTURAL change (new capacity/order win, regulation, margin step-up, demerger, capex cycle, management change, sector re-rating) from TRANSIENT noise (block/bulk deal, index rebalance, unverified rumour, broad market move).
+5. Be explicit about what is already PRICED IN.
+
+## STEP 1 — MAP THE RE-RATING CATALYSTS (what COULD structurally re-rate ${name})
+Return a table (minimum 8 rows):
+| # | Catalyst | Type (order/capex/regulatory/margin/mgmt/demerger/sector) | Structural? (Y/N) | Status (not started / early / playing out) | Time horizon (3/6/12/24m) |
+
+## STEP 2 — HAS ANY CATALYST ACTUALLY TRIGGERED? (last 90 days)
+Web-search recent BSE/NSE announcements, quarterly results, concall transcripts, credible news and management interviews for ${name} (${ticker}) over the last 90 days. Return:
+| Date | Event / News | Source | Maps to which Step-1 catalyst | Structural or noise? | Explains today's volume+price move? (Y/Partial/N) |
+
+## STEP 3 — VERDICT
+- Has a real re-rating STARTED? → YES / NO / TOO EARLY, with a confidence %.
+- The single most important dated trigger and exactly how it changes the earnings or valuation path.
+- What is already priced in vs still open.
+- 2–3 dated, monitorable milestones to confirm the re-rating is real.
+- If today's move is just noise, say so plainly and explain why.
+
+End with a 3-line plain-English summary. This is analysis, not buy/sell advice.`;
+
+  showAiPicker(anchorEl, prompt);
+}
+
+function openCatalystAnalysis(ticker, companyName, anchorEl) {  const catalystPrompt = `# 🎯 EQUITY CATALYST ANALYSIS — REUSABLE FRAMEWORK v2.0
 
 ## VARIABLES (fill these before running)
 - STOCK_NAME: ${companyName}
@@ -4033,22 +4106,10 @@ function renderAnalysisTable() {
 
     const tr = document.createElement('tr');
     tr.innerHTML = `
-      <td onclick="toggleAcctCell(this,event)" style="${(Array.isArray(s.accounts) && s.accounts.length) ? 'cursor:pointer;' : ''}"><strong>${(Array.isArray(s.accounts) && s.accounts.length) ? `<span class="acct-exp" title="Tap the symbol to show ${s.accounts.length} account${s.accounts.length>1?'s':''}" style="color:var(--purple-text);margin-right:5px;user-select:none;font-weight:700;">\u25b8</span>` : ''}<span style="cursor:pointer;color:var(--blue-text);" title="View fundamental analysis card" onclick="event.stopPropagation();goToCard('${esc(s.ticker)}')">${s.ticker}</span></strong></td>
-      <td class="research-name" style="cursor:pointer;color:var(--blue-text);" title="${esc(nameTooltip(s))}" data-ticker="${esc(s.ticker)}" data-name="${esc(s.name || s.ticker)}" onclick="openResearchTabsFromEl(event,this)"><span class="research-name" style="text-decoration:underline dotted;pointer-events:none;">${esc(s.name || s.ticker)}</span></td>
-      ${mgmtTrustCell(s)}
-      ${rfCell(s)}
-      ${qualCell(s)}
-      <td title="Conviction score (/10) — overall analyst conviction in the thesis" style="text-align:center;font-weight:600;cursor:help;color:${ (s.conviction||0) >= 8 ? 'var(--green)' : (s.conviction||0) >= 6 ? 'var(--amber-text)' : (s.conviction||0) >= 4 ? '#f97316' : (s.conviction||0) >= 1 ? 'var(--red-text)' : 'var(--text3)' }">${s.conviction ? s.conviction+'/10' : '—'}</td>
-      <td style="font-size:0.7rem;font-weight:600;color:${ s.moat_class==='wide' ? 'var(--green)' : s.moat_class==='narrow' ? 'var(--amber-text)' : 'var(--text3)' }">${s.moat_class === 'wide' ? '▲ Wide' : s.moat_class === 'narrow' ? '◆ Narrow' : '—'}</td>
-      <td>${prv(f(s.quantity))}</td>
-      <td>${s.ltp != null ? '₹'+f(s.ltp,2) : '—'}</td>
-      <td>${prv('₹' + f(s.buy_value))}</td>
-      <td>${prv('₹' + f(s.pres_value))}${portPct ? '<br><span style="font-size:0.65rem;color:var(--text3)">'+portPct+'</span>' : ''}</td>
-      <td class="${pc(pnlAbs)}">${prv('₹' + f(pnlAbs))}</td>
-      <td class="${pc(pnlPct)}">${prv(f(pnlPct,1) + '%')}</td>
-      <td style="${moverStyle(s.movers, s.ret_1d)};cursor:help" title="${esc(moverTitle(s))}">${s.movers || '—'}</td>
-      <td style="text-align:center;font-weight:700;color:${ s.trend_score >= 70 ? (s.trend_signal==='Strong Bullish' ? 'var(--green)' : s.trend_signal==='Bullish' ? '#4ade80' : s.trend_signal==='Extended' ? 'var(--amber-text)' : 'var(--text2)') : s.trend_score >= 55 ? 'var(--amber-text)' : s.trend_score >= 35 ? 'var(--text2)' : s.trend_score != null ? 'var(--red-text)' : 'var(--text3)' }">${s.trend_score != null ? s.trend_score : '—'}</td>
-      <td style="font-size:0.75rem;font-weight:600;color:${ s.trend_signal==='Strong Bullish' ? 'var(--green)' : s.trend_signal==='Bullish' ? '#4ade80' : s.trend_signal==='Extended' ? 'var(--amber-text)' : s.trend_signal==='Watch' ? '#f59e0b' : s.trend_signal==='Bearish' ? 'var(--red-text)' : 'var(--text3)' }">${s.trend_signal || '—'}</td>
+      <td onclick="toggleAcctCell(this,event)" style="${(Array.isArray(s.accounts) && s.accounts.length) ? 'cursor:pointer;' : ''}" title="${esc(nameTooltip(s))}"><div style="display:flex;align-items:center;gap:4px;">${(Array.isArray(s.accounts) && s.accounts.length) ? `<span class="acct-exp" title="Tap to show ${s.accounts.length} account${s.accounts.length>1?'s':''}" style="color:var(--purple-text);user-select:none;font-weight:700;">\u25b8</span>` : ''}<span style="cursor:pointer;color:var(--blue-text);font-weight:700;font-size:0.72rem;" title="View fundamental analysis card" onclick="event.stopPropagation();goToCard('${esc(s.ticker)}')">${s.ticker}</span></div><span class="research-name" style="cursor:pointer;color:var(--text2);text-decoration:underline dotted;font-size:0.72rem;display:block;margin-top:1px;" data-ticker="${esc(s.ticker)}" data-name="${esc(s.name || s.ticker)}" onclick="event.stopPropagation();openResearchTabsFromEl(event,this)">${esc(s.name || s.ticker)}</span></td>
+      <td class="col-mov" style="${moverStyle(s.movers, s.ret_1d)};cursor:pointer" title="${esc(moverTitle(s))}" onclick="openMoversAnalysis('${esc(s.ticker)}', this)">${s.movers || '—'}</td>
+      <td class="col-ts" style="font-weight:700;color:${ s.trend_score >= 70 ? (s.trend_signal==='Strong Bullish' ? 'var(--green)' : s.trend_signal==='Bullish' ? '#4ade80' : s.trend_signal==='Extended' ? 'var(--amber-text)' : 'var(--text2)') : s.trend_score >= 55 ? 'var(--amber-text)' : s.trend_score >= 35 ? 'var(--text2)' : s.trend_score != null ? 'var(--red-text)' : 'var(--text3)' }">${s.trend_score != null ? s.trend_score : '—'}</td>
+      <td class="col-sig" style="font-size:0.7rem;font-weight:600;color:${ s.trend_signal==='Strong Bullish' ? 'var(--green)' : s.trend_signal==='Bullish' ? '#4ade80' : s.trend_signal==='Extended' ? 'var(--amber-text)' : s.trend_signal==='Watch' ? '#f59e0b' : s.trend_signal==='Bearish' ? 'var(--red-text)' : 'var(--text3)' }">${s.trend_signal || '—'}</td>
       <td class="${pc(s.ret_1d)}">${fp(s.ret_1d)}</td>
       <td class="${pc(s.ret_1m)}">${fp(s.ret_1m)}</td>
       <td class="${pc(s.ret_6m)}">${fp(s.ret_6m)}</td>
@@ -4057,6 +4118,18 @@ function renderAnalysisTable() {
       <td class="${pc(s.ret_3y)}">${fp(s.ret_3y)}</td>
       <td class="${pc(s.ret_4y)}">${fp(s.ret_4y)}</td>
       <td class="${pc(s.ret_5y)}">${fp(s.ret_5y)}</td>
+      <td>${prv(f(s.quantity))}</td>
+      <td>${s.ltp != null ? '₹'+f(s.ltp,2) : '—'}</td>
+      <td>${s.buy_avg != null ? '₹'+f(s.buy_avg,2) : '—'}</td>
+      <td>${prv('₹' + f(s.buy_value))}</td>
+      <td>${prv('₹' + f(s.pres_value))}${portPct ? '<br><span style="font-size:0.65rem;color:var(--text3)">'+portPct+'</span>' : ''}</td>
+      <td class="${pc(pnlAbs)}">${prv('₹' + f(pnlAbs))}</td>
+      <td class="${pc(pnlPct)}">${prv(f(pnlPct,1) + '%')}</td>
+      ${mgmtTrustCell(s)}
+      ${qualCell(s)}
+      ${rfCell(s)}
+      <td title="Conviction score (/10) — overall analyst conviction in the thesis" style="text-align:center;font-weight:600;cursor:help;color:${ (s.conviction||0) >= 8 ? 'var(--green)' : (s.conviction||0) >= 6 ? 'var(--amber-text)' : (s.conviction||0) >= 4 ? '#f97316' : (s.conviction||0) >= 1 ? 'var(--red-text)' : 'var(--text3)' }">${s.conviction ? s.conviction+'/10' : '—'}</td>
+      <td style="font-size:0.7rem;font-weight:600;color:${ s.moat_class==='wide' ? 'var(--green)' : s.moat_class==='narrow' ? 'var(--amber-text)' : 'var(--text3)' }">${s.moat_class === 'wide' ? '▲ Wide' : s.moat_class === 'narrow' ? '◆ Narrow' : '—'}</td>
       <td class="${volClass(s.vol_30m_ratio)}">${fVol(s.vol_30m_ratio)}</td>
       <td class="${volClass(s.vol_today_ratio)}">${fVol(s.vol_today_ratio)}</td>
       <td class="neg">${s.week52_high_pct != null ? s.week52_high_pct.toFixed(1)+'%' : '—'}</td>
