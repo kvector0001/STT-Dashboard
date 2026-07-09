@@ -3167,48 +3167,61 @@ function openMoversAnalysis(ticker, anchorEl) {
     `Company: ${s.name || 'Unknown'}`,
     `Sector: ${s.sector || 'Unknown'}`,
     `Movers signal today: ${s.movers || 'No'}`,
-    (vol != null ? `Volume: ${vol.toFixed(1)}x average` : ''),
+    (vol != null ? `Volume today: ${vol.toFixed(1)}x average` : ''),
     (s.ret_1d != null ? `Day move: ${s.ret_1d >= 0 ? '+' : ''}${s.ret_1d.toFixed(1)}%` : ''),
-    (s.week52_high_pct != null ? `Vs 52W high: ${s.week52_high_pct.toFixed(1)}%` : ''),
-    (s.week52_low_pct != null ? `Vs 52W low: +${s.week52_low_pct.toFixed(1)}%` : ''),
+    (s.ltp != null ? `Current price (CMP): ₹${s.ltp.toFixed(2)}` : ''),
+    `--- HOW MUCH IT HAS ALREADY RUN (priced-in check) ---`,
+    (s.ret_1m != null ? `1-month return: ${s.ret_1m >= 0 ? '+' : ''}${s.ret_1m.toFixed(1)}%` : ''),
+    (s.ret_6m != null ? `6-month return: ${s.ret_6m >= 0 ? '+' : ''}${s.ret_6m.toFixed(1)}%` : ''),
+    (s.ret_1y != null ? `1-year return: ${s.ret_1y >= 0 ? '+' : ''}${s.ret_1y.toFixed(1)}%` : ''),
+    (s.week52_high_pct != null ? `Distance from 52W high: ${s.week52_high_pct.toFixed(1)}%` : ''),
+    (s.ath_pct != null ? `Distance from all-time high: ${s.ath_pct.toFixed(1)}%` : ''),
+    `--- VALUATION ---`,
+    (s.pe != null ? `P/E: ${s.pe}` : ''),
+    (s.mcap_cr != null ? `Market cap: ₹${s.mcap_cr} Cr` : ''),
     (s.trend_signal ? `Trend: ${s.trend_signal} (score ${s.trend_score != null ? s.trend_score : '—'})` : ''),
-    (s.ret_1m != null ? `1M return: ${s.ret_1m >= 0 ? '+' : ''}${s.ret_1m.toFixed(1)}%` : ''),
-    (s.ret_6m != null ? `6M return: ${s.ret_6m >= 0 ? '+' : ''}${s.ret_6m.toFixed(1)}%` : ''),
   ].filter(Boolean).join('\n');
 
   const name = s.name || ticker;
   const today = new Date().toISOString().slice(0, 10);
-  const prompt = `# 📈 MOVERS → RE-RATING TRIGGER DETECTOR
+  const prompt = `# 📈 MOVERS → RE-RATING & FORWARD-UPSIDE DETECTOR
 
 ## CONTEXT (from dashboard, ${today})
 ${ctxLines}
 
 ## YOUR ROLE
-You are a senior Indian-equities analyst. This stock is flashing an unusual **volume + price move** today (the "Movers" signal above). Your job is NOT to describe the technicals — it is to determine WHETHER a genuine, structural RE-RATING catalyst has just been triggered, or whether today's move is noise.
+You are a senior Indian-equities analyst. This stock is flashing an unusual **volume + price move** today. Answer two things: (a) WHY it moved — is there a real structural catalyst, and (b) most importantly, **HOW MUCH UPSIDE IS LEFT from THIS price** after the run-up already in the stock. Do NOT be seduced by good news that is already discounted.
 
 ## NON-NEGOTIABLE RULES
-1. NO HALLUCINATION. If you cannot verify a fact from a dated, credible source, write [UNVERIFIED] — never invent numbers, orders, filings or news.
-2. DATE-STAMP every news item (DD-Mon-YYYY) and name the source (exchange filing / result / concall / reputable media).
-3. Only news from the LAST 90 DAYS counts as a potential trigger. Older items are context only.
-4. Distinguish STRUCTURAL change (new capacity/order win, regulation, margin step-up, demerger, capex cycle, management change, sector re-rating) from TRANSIENT noise (block/bulk deal, index rebalance, unverified rumour, broad market move).
-5. Be explicit about what is already PRICED IN.
+1. NO HALLUCINATION — write [UNVERIFIED] for anything you cannot source with a date.
+2. DATE-STAMP every news item; only the LAST 90 DAYS counts as a fresh trigger.
+3. ANTI-RECENCY / ANTI-ANCHORING: a stock already up 40–100% on a KNOWN catalyst has most of that catalyst PRICED IN. Do NOT extrapolate the recent rally. Base upside ONLY on incremental, not-yet-discounted drivers and EARNINGS UPGRADES — not mere execution of already-guided numbers.
+4. Separate “good company / good news” from “good RISK-REWARD FROM THIS PRICE.”
 
-## STEP 1 — MAP THE RE-RATING CATALYSTS (what COULD structurally re-rate ${name})
-Return a table (minimum 8 rows):
-| # | Catalyst | Type (order/capex/regulatory/margin/mgmt/demerger/sector) | Structural? (Y/N) | Status (not started / early / playing out) | Time horizon (3/6/12/24m) |
+## STEP 1 — RE-RATING CATALYSTS (minimum 8 rows)
+| # | Catalyst | Type (order/capex/regulatory/margin/mgmt/demerger/sector) | Structural? (Y/N) | Public since (date) | Already priced-in? (Y/Partial/N) |
 
-## STEP 2 — HAS ANY CATALYST ACTUALLY TRIGGERED? (last 90 days)
-Web-search recent BSE/NSE announcements, quarterly results, concall transcripts, credible news and management interviews for ${name} (${ticker}) over the last 90 days. Return:
-| Date | Event / News | Source | Maps to which Step-1 catalyst | Structural or noise? | Explains today's volume+price move? (Y/Partial/N) |
+## STEP 2 — WHAT TRIGGERED TODAY (last 90 days)
+Web-search BSE/NSE filings, results, concalls, credible media for the last 90 days:
+| Date | Event / News | Source | Maps to Step-1 catalyst | Structural or noise? | Explains today's move? (Y/Partial/N) |
 
-## STEP 3 — VERDICT
-- Has a real re-rating STARTED? → YES / NO / TOO EARLY, with a confidence %.
-- The single most important dated trigger and exactly how it changes the earnings or valuation path.
-- What is already priced in vs still open.
-- 2–3 dated, monitorable milestones to confirm the re-rating is real.
-- If today's move is just noise, say so plainly and explain why.
+## STEP 3 — HOW MUCH IS ALREADY IN THE PRICE (priced-in check)
+The stock is already up per the CONTEXT above (1M / 6M / 1Y returns) and near its 52W/all-time high at the stated P/E. State EXPLICITLY what % of the bull thesis the market has ALREADY discovered and re-rated. If it has run hard on now-public news, say plainly: “largely priced in.”
 
-End with a 3-line plain-English summary. This is analysis, not buy/sell advice.`;
+## STEP 4 — FORWARD-RETURN CONVICTION (the key output)
+Give a probability % + 2-line reasoning for each target FROM the current CMP. Be brutally honest — if most catalysts are already in the price after a big run, conviction MUST be low and you must say so.
+| Target from CMP | Implied price | Conviction (%) | What would have to happen (NEW triggers / earnings upgrades, not known guidance) |
+| +50% in 6 months  | | XX% | |
+| +100% (2x) in 12 months | | XX% | |
+| Downside −25% risk | | XX% | |
+
+Then give a single **Overall Conviction Rating (0–10)** for “attractive FRESH entry at CMP for a 6–12 month double”, with one-line justification. 0–3 = mostly priced in / late; 4–6 = balanced; 7–10 = genuine not-yet-priced asymmetry.
+
+## STEP 5 — VERDICT (3 lines, plain English)
+- Is remaining risk-reward asymmetric UP, balanced, or “buy-the-rumour-sell-the-news” (late stage)?
+- The single NOT-yet-priced trigger or earnings upgrade that could still drive another big re-rate.
+- If positives are already baked in after a 40–100% run, say so bluntly.
+This is analysis, not buy/sell advice.`;
 
   showAiPicker(anchorEl, prompt);
 }
