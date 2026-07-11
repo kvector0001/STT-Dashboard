@@ -1323,7 +1323,7 @@
       <thead>
         <tr>
           <th onclick="sortAnalysis('name')">Company <span id="sort-name" class="sort-indicator"></span></th>
-          <th class="col-mov" onclick="sortAnalysis('movers')" title="Movers — volume + momentum + 52-week breakout (Indian small/mid-cap calibrated). ⚡ strongest breakout (high-conviction BUY): within 2% of 52W high AND vol ≥7× AND day ≥+6%. 🧊 strongest breakdown (EXIT): within 2% of 52W low AND vol ≥7× AND day ≤−6%. Z↑ 52W-high breakout: within 2% of high AND vol ≥3× AND day ≥+3%. Z↓ 52W-low breakdown: within 2% of low AND vol ≥3× AND day ≤−3%. V+P surge: vol ≥4× AND |day| ≥6%. V volume-led: vol ≥4× AND |day| ≥3%. P price-led: vol ≥3× AND |day| ≥6%. Sort: ⚡ &gt; 🧊 &gt; Z↑ &gt; Z↓ &gt; V+P &gt; V &gt; P. Click a cell for a re-rating catalyst prompt.">Movers <span class="col-filter-icon" data-col="movers" title="Filter" onclick="event.stopPropagation();openColFilter('movers',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-movers" class="sort-indicator"></span></th>
+          <th class="col-mov" onclick="sortAnalysis('movers')" title="Movers — unusual volume + price move, shown by LEVEL. 🔥 LIFETIME-HIGH breakout: at/near all-time high AND vol ≥3× AND day ≥+3%. 🚀 52-WEEK-HIGH breakout: near 52W high AND vol ≥3× AND day ≥+3%. 🧊 LIFETIME-LOW breakdown (EXIT): at/near all-time low AND vol ≥3× AND day ≤−3%. ❄️ 52-WEEK-LOW breakdown: near 52W low AND vol ≥3× AND day ≤−3%. V+P surge: vol ≥4× AND |day| ≥6%. V volume-led: vol ≥4× AND |day| ≥3%. P price-led: vol ≥3× AND |day| ≥6%. Sort: 🔥 &gt; 🚀 &gt; 🧊 &gt; ❄️ &gt; V+P &gt; V &gt; P. Click a cell for a re-rating catalyst prompt.">Movers <span class="col-filter-icon" data-col="movers" title="Filter" onclick="event.stopPropagation();openColFilter('movers',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-movers" class="sort-indicator"></span></th>
           <th class="col-ts" onclick="sortAnalysis('trend_score')" title="Trend Score (0–100) for 3–12 month positional holding | 3 inputs: Price vs 200DMA (40pts) + 200DMA Slope 30d (30pts) + Days above 200DMA last 10 sessions (30pts) | Strong Bullish: ≥85 AND 0–10% zone | Bullish: ≥70 AND 0–10% zone | Extended: ≥70 but &gt;10% | Watch: 55–69 | Hold: 35–54 | Bearish: &lt;35">TS <span id="sort-trend_score" class="sort-indicator"></span></th>
           <th class="col-sig" onclick="sortAnalysis('trend_signal')" title="Trend Signal | Strong Bullish: score≥85 AND 0–10% above 200DMA | Bullish: score≥70 AND 0–10% above 200DMA | Extended: score≥70 but >10% above 200DMA (too extended for fresh entry) | Watch: 55–69 | Hold: 35–54 | Bearish: &lt;35">Signal <span class="col-filter-icon" data-col="trend_signal" title="Filter" onclick="event.stopPropagation();openColFilter('trend_signal',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-trend_signal" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('ret_1d')" title="1-day price return (%)">1D Ret <span id="sort-ret_1d" class="sort-indicator"></span></th>
@@ -3936,16 +3936,20 @@ function buildPeerTip(pc, s) {
   });
 })();
 
-// Movers v3 — volume + momentum + 52-week breakout/breakdown classifier
-// rvol = today vol / 30d avg | r = 1-day return % | h52 = % vs 52w high (<=0, 0 = at high) | l52 = % above 52w low (>=0, 0 = at low)
-function computeMover(rvol, r, h52, l52) {
+// Movers v4 — volume + momentum, distinguishing LIFETIME (all-time) vs 52-week levels
+// rvol = today vol / 30d avg | r = 1-day return % | h52/l52 = % vs 52w high/low | ath/atl = % vs all-time high/low
+function computeMover(rvol, r, h52, l52, ath, atl) {
   if (rvol == null || r == null) return null;
-  const nearHigh = (h52 != null && h52 >= -2);   // within 2% of 52-week high
+  const nearAth  = (ath != null && ath >= -2);   // within 2% of all-time high (ath <= 0)
+  const nearAtl  = (atl != null && atl <= 2);     // within 2% above all-time low (atl >= 0)
+  const nearHigh = (h52 != null && h52 >= -2);    // within 2% of 52-week high
   const nearLow  = (l52 != null && l52 <= 2);     // within 2% of 52-week low
-  if (nearHigh && rvol >= 7 && r >= 6)  return '⚡';   // strongest breakout — highest-conviction BUY
-  if (nearLow  && rvol >= 7 && r <= -6) return '🧊';   // strongest breakdown — sure-shot EXIT
-  if (nearHigh && rvol >= 3 && r >= 3)  return 'Z↑';   // 52-week-high breakout
-  if (nearLow  && rvol >= 3 && r <= -3) return 'Z↓';   // 52-week-low breakdown
+  const strongUp = rvol >= 3 && r >= 3;
+  const strongDn = rvol >= 3 && r <= -3;
+  if (nearAth && strongUp) return '🔥';   // LIFETIME (all-time) high breakout
+  if (nearAtl && strongDn) return '🧊';   // LIFETIME (all-time) low breakdown
+  if (nearHigh && strongUp) return '🚀';  // 52-week high breakout
+  if (nearLow  && strongDn) return '❄️';  // 52-week low breakdown
   const V = rvol >= 4 && Math.abs(r) >= 3;   // volume-led surge
   const P = rvol >= 3 && Math.abs(r) >= 6;   // price-led surge
   if (V && P) return 'V+P';
@@ -3955,10 +3959,10 @@ function computeMover(rvol, r, h52, l52) {
 }
 function moverStyle(m, r) {
   r = r || 0;
-  if (m === '⚡') return 'color:var(--green);font-weight:800;font-size:1.1em';
-  if (m === '🧊') return 'color:var(--red-text);font-weight:800;font-size:1.1em';
-  if (m === 'Z↑') return 'color:var(--green);font-weight:800';
-  if (m === 'Z↓') return 'color:var(--red-text);font-weight:800';
+  if (m === '🔥') return 'color:var(--green);font-weight:800;font-size:1.15em';
+  if (m === '🧊') return 'color:var(--red-text);font-weight:800;font-size:1.15em';
+  if (m === '🚀') return 'color:var(--green);font-weight:800';
+  if (m === '❄️') return 'color:var(--red-text);font-weight:800';
   if (m === 'V+P' || m === 'V') return r < 0 ? 'color:var(--red-text);font-weight:700' : 'color:var(--amber-text);font-weight:700';
   if (m === 'P') return r < 0 ? 'color:#f97316;font-weight:600' : 'color:var(--green);font-weight:600';
   return 'color:var(--text3)';
@@ -3966,13 +3970,13 @@ function moverStyle(m, r) {
 
 // Plain-English meaning of each Movers signal (thresholds calibrated for Indian small/mid-caps)
 const MOVER_MEANING = {
-  '\u26a1': 'Strongest breakout (high-conviction BUY): within 2% of 52W high, volume \u22657\u00d7, day \u2265+6%',
-  '\ud83e\uddca': 'Strongest breakdown (EXIT): within 2% of 52W low, volume \u22657\u00d7, day \u2264\u22126%',
-  'Z\u2191': '52W-high breakout: within 2% of 52W high, volume \u22653\u00d7, day \u2265+3%',
-  'Z\u2193': '52W-low breakdown: within 2% of 52W low, volume \u22653\u00d7, day \u2264\u22123%',
-  'V+P': 'Volume + Price surge: volume \u22654\u00d7 avg AND |day move| \u22656%',
-  'V': 'Volume-led: volume \u22654\u00d7 avg AND |day move| \u22653%',
-  'P': 'Price-led: volume \u22653\u00d7 avg AND |day move| \u22656%',
+  '🔥': 'LIFETIME-HIGH breakout — at/near all-time high, volume ≥3× avg, day ≥+3%',
+  '🚀': '52-WEEK-HIGH breakout — within 2% of 52W high, volume ≥3× avg, day ≥+3%',
+  '🧊': 'LIFETIME-LOW breakdown (EXIT) — at/near all-time low, volume ≥3× avg, day ≤−3%',
+  '❄️': '52-WEEK-LOW breakdown — within 2% of 52W low, volume ≥3× avg, day ≤−3%',
+  'V+P': 'Volume + Price surge: volume ≥4× avg AND |day move| ≥6%',
+  'V': 'Volume-led: volume ≥4× avg AND |day move| ≥3%',
+  'P': 'Price-led: volume ≥3× avg AND |day move| ≥6%',
   'No': 'No unusual volume/price activity today',
 };
 
@@ -3983,6 +3987,7 @@ function moverTitle(s) {
   if (vol != null) nums.push(`Volume: ${vol.toFixed(1)}\u00d7 avg`);
   if (s.ret_1d != null) nums.push(`Day: ${s.ret_1d >= 0 ? '+' : ''}${s.ret_1d.toFixed(1)}%`);
   if (s.week52_high_pct != null) nums.push(`52W high: ${s.week52_high_pct.toFixed(1)}%`);
+  if (s.ath_pct != null) nums.push(`ATH: ${s.ath_pct.toFixed(1)}%`);
   if (s.week52_low_pct != null) nums.push(`52W low: +${s.week52_low_pct.toFixed(1)}%`);
   const meaning = MOVER_MEANING[s.movers] || '';
   const line = nums.length ? nums.join('  |  ') : 'No intraday data';
@@ -4020,7 +4025,7 @@ function renderAnalysisTable() {
       week52_high_pct: w52hPct != null ? Math.round(w52hPct * 10) / 10 : null,
       week52_low_pct:  w52lPct != null ? Math.round(w52lPct * 10) / 10 : null,
       // Movers v2: recompute client-side (volume + momentum + 52-week breakout/breakdown)
-      movers: (s.vol_today_ratio != null && s.ret_1d != null) ? computeMover(s.vol_today_ratio, s.ret_1d, w52hPct, w52lPct) : (s.movers || null),
+      movers: (s.vol_today_ratio != null && s.ret_1d != null) ? computeMover(s.vol_today_ratio, s.ret_1d, w52hPct, w52lPct, s.ath_pct, s.atl_pct) : (s.movers || null),
       // Expose conviction/moat from stocks data for sorting
       conviction: s.conviction || 0,
       moat_class:  s.moat_class || '',
@@ -4047,7 +4052,7 @@ function renderAnalysisTable() {
     }
     // Movers: sort by conviction ⚡ > 🧊 > Z↑ > Z↓ > V+P > V > P > No (price_break keeps A+C/A/C)
     if (analysisSortBy === 'price_break' || analysisSortBy === 'movers') {
-      const order = {'⚡': 8, '🧊': 7, 'Z↑': 6, 'Z↓': 5, 'V+P': 4, 'V': 3, 'P': 2, 'A+C': 4, 'A': 3, 'C': 2, 'No': 0};
+      const order = {'🔥': 9, '🚀': 8, '🧊': 7, '❄️': 6, 'V+P': 4, 'V': 3, 'P': 2, 'A+C': 4, 'A': 3, 'C': 2, 'No': 0};
       const oA = order[valA] ?? -1, oB = order[valB] ?? -1;
       return analysisSortDir === 'desc' ? oB - oA : oA - oB;
     }

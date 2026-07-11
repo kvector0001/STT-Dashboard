@@ -647,17 +647,21 @@ for _, row in portfolio.iterrows():
                         if avg_30d > 0:
                             fetched_vol_today_ratio = round(today_vol / avg_30d, 2)
                             fetched_vol_yest_ratio  = round(yest_vol  / avg_30d, 2)
-                        # Movers v3: volume + momentum + 52-week breakout/breakdown
+                        # Movers v4: volume + momentum, LIFETIME (all-time) vs 52-week levels
                         if avg_30d > 0 and ret_1d is not None:
                             rvol = today_vol / avg_30d
                             ar = abs(ret_1d)
                             cclose = float(hist['Close'].iloc[-1])
                             near_high = bool(fetched_week52_high and cclose >= 0.98 * fetched_week52_high)
                             near_low  = bool(fetched_week52_low  and cclose <= 1.02 * fetched_week52_low)
-                            if   near_high and rvol >= 7 and ret_1d >= 6:  fetched_movers = "\u26a1"
-                            elif near_low  and rvol >= 7 and ret_1d <= -6: fetched_movers = "\U0001f9ca"
-                            elif near_high and rvol >= 3 and ret_1d >= 3:  fetched_movers = "Z\u2191"
-                            elif near_low  and rvol >= 3 and ret_1d <= -3: fetched_movers = "Z\u2193"
+                            near_ath  = bool(fetched_ath_pct is not None and fetched_ath_pct >= -2)
+                            near_atl  = bool(fetched_atl_pct is not None and fetched_atl_pct <= 2)
+                            strong_up = rvol >= 3 and ret_1d >= 3
+                            strong_dn = rvol >= 3 and ret_1d <= -3
+                            if   near_ath and strong_up:  fetched_movers = "\U0001f525"   # 🔥 lifetime high breakout
+                            elif near_atl and strong_dn:  fetched_movers = "\U0001f9ca"   # 🧊 lifetime low breakdown
+                            elif near_high and strong_up: fetched_movers = "\U0001f680"   # 🚀 52-week high breakout
+                            elif near_low  and strong_dn: fetched_movers = "\u2744\ufe0f" # ❄️ 52-week low breakdown
                             else:
                                 _V = rvol >= 4 and ar >= 3
                                 _P = rvol >= 3 and ar >= 6
