@@ -1326,6 +1326,7 @@
           <th class="col-mov" onclick="sortAnalysis('movers')" title="Movers — unusual volume + price move, shown by LEVEL. 🔥 LIFETIME-HIGH breakout: at/near all-time high AND vol ≥3× AND day ≥+3%. 🚀 52-WEEK-HIGH breakout: near 52W high AND vol ≥3× AND day ≥+3%. 🧊 LIFETIME-LOW breakdown (EXIT): at/near all-time low AND vol ≥3× AND day ≤−3%. ❄️ 52-WEEK-LOW breakdown: near 52W low AND vol ≥3× AND day ≤−3%. V+P surge: vol ≥4× AND |day| ≥6%. V volume-led: vol ≥4× AND |day| ≥3%. P price-led: vol ≥3× AND |day| ≥6%. Sort: 🔥 &gt; 🚀 &gt; 🧊 &gt; ❄️ &gt; V+P &gt; V &gt; P. Click a cell for a re-rating catalyst prompt.">Movers <span class="col-filter-icon" data-col="movers" title="Filter" onclick="event.stopPropagation();openColFilter('movers',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-movers" class="sort-indicator"></span></th>
           <th class="col-mov" onclick="sortAnalysis('movers_w')" title="WEEKLY breakout/breakdown (5-day) — same 🔥 lifetime-high / 🚀 52wk-high / 🧊 lifetime-low / ❄️ 52wk-low levels. Thresholds: weekly volume ≥1.5× avg AND 5-day move ≥±8%, at that level.">Wk <span id="sort-movers_w" class="sort-indicator"></span></th>
           <th class="col-mov" onclick="sortAnalysis('movers_m')" title="MONTHLY breakout/breakdown (21-day) — same 🔥/🚀/🧊/❄️ levels. Thresholds: monthly volume ≥1.3× avg AND 21-day move ≥±15%, at that level.">Mo <span id="sort-movers_m" class="sort-indicator"></span></th>
+          <th class="col-mov" onclick="sortAnalysis('movers_alloc')" title="Allocation overlay (reads Daily/Weekly/Monthly together): 💎 max-conviction increase (monthly breakout confirmed by weekly) · 🌱 early build (trending up, pre-breakout) · ⏳ extended/watch (breakout but short-term weakening) · 🚨 exit/de-rate (breakdown).">Alloc <span id="sort-movers_alloc" class="sort-indicator"></span></th>
           <th class="col-ts" onclick="sortAnalysis('trend_score')" title="Trend Score (0–100) for 3–12 month positional holding | 3 inputs: Price vs 200DMA (40pts) + 200DMA Slope 30d (30pts) + Days above 200DMA last 10 sessions (30pts) | Strong Bullish: ≥85 AND 0–10% zone | Bullish: ≥70 AND 0–10% zone | Extended: ≥70 but &gt;10% | Watch: 55–69 | Hold: 35–54 | Bearish: &lt;35">TS <span id="sort-trend_score" class="sort-indicator"></span></th>
           <th class="col-sig" onclick="sortAnalysis('trend_signal')" title="Trend Signal | Strong Bullish: score≥85 AND 0–10% above 200DMA | Bullish: score≥70 AND 0–10% above 200DMA | Extended: score≥70 but >10% above 200DMA (too extended for fresh entry) | Watch: 55–69 | Hold: 35–54 | Bearish: &lt;35">Signal <span class="col-filter-icon" data-col="trend_signal" title="Filter" onclick="event.stopPropagation();openColFilter('trend_signal',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-trend_signal" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('ret_1d')" title="1-day price return (%)">1D Ret <span id="sort-ret_1d" class="sort-indicator"></span></th>
@@ -3947,6 +3948,7 @@ function computeMover(rvol, r, h52, l52, ath, atl, opt) {
   const upT   = opt.upT  != null ? opt.upT  : 3;
   const dnT   = opt.dnT  != null ? opt.dnT  : 3;
   const surge = opt.surge !== false;   // volume/price surge codes (daily only by default)
+  const trend = opt.trend || null;     // {vol, up} trending thresholds (weekly/monthly only)
   const nearAth  = (ath != null && ath >= -2);   // within 2% of all-time high (ath <= 0)
   const nearAtl  = (atl != null && atl <= 2);     // within 2% above all-time low (atl >= 0)
   const nearHigh = (h52 != null && h52 >= -2);    // within 2% of 52-week high
@@ -3957,6 +3959,15 @@ function computeMover(rvol, r, h52, l52, ath, atl, opt) {
   if (nearAtl && strongDn) return '🧊';   // LIFETIME (all-time) low breakdown
   if (nearHigh && strongUp) return '🚀';  // 52-week high breakout
   if (nearLow  && strongDn) return '❄️';  // 52-week low breakdown
+  // Trending (weekly/monthly): meaningful move + volume but NOT yet at an extreme
+  if (trend) {
+    const atHigh = nearAth || nearHigh, atLow = nearAtl || nearLow;
+    if (!atHigh && rvol >= trend.vol && r >=  trend.up) return '📈';  // 📈 trending up (early re-rating)
+    if (!atLow  && rvol >= trend.vol && r <= -trend.up) return '📉';  // 📉 trending down (early de-rating)
+    return 'No';
+  }
+  // Daily SUSPECT override (huge volume spike, possible pump) — overrides V/V+P/P
+  if (opt.suspect && rvol >= 10 && Math.abs(r) >= 3) return '⚠️';
   if (surge) {
     const V = rvol >= 4 && Math.abs(r) >= 3;   // volume-led surge
     const P = rvol >= 3 && Math.abs(r) >= 6;   // price-led surge
@@ -3966,16 +3977,49 @@ function computeMover(rvol, r, h52, l52, ath, atl, opt) {
   }
   return 'No';
 }
+
+// Overlay allocation tag — reads the base tags across all 3 timeframes (daily/weekly/monthly)
+// 💎 max-conviction increase | 🌱 early/build (pre-breakout) | ⏳ extended/watch | 🚨 exit/de-rate
+function computeAlloc(d, w, m) {
+  const down  = t => t === '🧊' || t === '❄️' || t === '📉';
+  const up    = t => t === '🔥' || t === '🚀' || t === '📈';
+  const brkUp = t => t === '🔥' || t === '🚀';
+  const brkDn = t => t === '🧊' || t === '❄️';
+  if (brkDn(m) || (brkDn(w) && down(m))) return '🚨';                 // exit / de-rate hard
+  if (brkUp(m) && up(w)) return '💎';                                 // confirmed multi-TF breakout → max conviction
+  if ((w === '📈' || m === '📈') && !down(d) && !down(w) && !down(m)) return '🌱';  // early build
+  if (brkUp(m) && down(w)) return '⏳';                                    // breakout but short-term weakening → watch
+  return '';
+}
 function moverStyle(m, r) {
   r = r || 0;
   if (m === '🔥') return 'color:var(--green);font-weight:800;font-size:1.15em';
   if (m === '🧊') return 'color:var(--red-text);font-weight:800;font-size:1.15em';
   if (m === '🚀') return 'color:var(--green);font-weight:800';
   if (m === '❄️') return 'color:var(--red-text);font-weight:800';
+  if (m === '📈') return 'color:#4ade80;font-weight:700';
+  if (m === '📉') return 'color:#f97316;font-weight:700';
+  if (m === '⚠️') return 'color:var(--amber-text);font-weight:700';
   if (m === 'V+P' || m === 'V') return r < 0 ? 'color:var(--red-text);font-weight:700' : 'color:var(--amber-text);font-weight:700';
   if (m === 'P') return r < 0 ? 'color:#f97316;font-weight:600' : 'color:var(--green);font-weight:600';
   return 'color:var(--text3)';
 }
+
+// Overlay allocation tag styling + meanings
+function allocStyle(a) {
+  if (a === '💎') return 'color:#818cf8;font-weight:800';
+  if (a === '🌱') return 'color:var(--green);font-weight:700';
+  if (a === '⏳') return 'color:var(--amber-text);font-weight:700';
+  if (a === '🚨') return 'color:var(--red-text);font-weight:800';
+  return 'color:var(--text3)';
+}
+const ALLOC_MEANING = {
+  '💎': 'Max-conviction INCREASE — monthly breakout confirmed by weekly momentum',
+  '🌱': 'Early / BUILD — trending up, not yet a breakout (start building before the breakout)',
+  '⏳': 'Extended / WATCH — breakout in place but short-term momentum weakening',
+  '🚨': 'EXIT / de-rate — breakdown (52W / lifetime low, or monthly downtrend)',
+};
+function allocTitle(a) { return ALLOC_MEANING[a] || 'No allocation signal'; }
 
 // Plain-English meaning of each Movers signal (thresholds calibrated for Indian small/mid-caps)
 const MOVER_MEANING = {
@@ -3983,6 +4027,9 @@ const MOVER_MEANING = {
   '🚀': '52-WEEK-HIGH breakout — within 2% of 52W high, volume ≥3× avg, day ≥+3%',
   '🧊': 'LIFETIME-LOW breakdown (EXIT) — at/near all-time low, volume ≥3× avg, day ≤−3%',
   '❄️': '52-WEEK-LOW breakdown — within 2% of 52W low, volume ≥3× avg, day ≤−3%',
+  '📈': 'Trending UP (early re-rating) — volume + move, not yet at a high (weekly/monthly)',
+  '📉': 'Trending DOWN (early de-rating) — volume + move, not yet at a low (weekly/monthly)',
+  '⚠️': 'SUSPECT — abnormal volume spike (≥10× avg) with |day| ≥3%; verify before acting',
   'V+P': 'Volume + Price surge: volume ≥4× avg AND |day move| ≥6%',
   'V': 'Volume-led: volume ≥4× avg AND |day move| ≥3%',
   'P': 'Price-led: volume ≥3× avg AND |day move| ≥6%',
@@ -3995,7 +4042,7 @@ function moverTitleTF(s, tf) {
   const vol = tf === 'w' ? s.vol_week_ratio : s.vol_month_ratio;
   const ret = tf === 'w' ? s.ret_1w : s.ret_1m;
   const label = tf === 'w' ? 'Weekly' : 'Monthly';
-  const lvl = { '🔥':'Lifetime-high breakout', '🚀':'52-week-high breakout', '🧊':'Lifetime-low breakdown', '❄️':'52-week-low breakdown', 'No':'No breakout/breakdown' }[m] || '';
+  const lvl = { '🔥':'Lifetime-high breakout', '🚀':'52-week-high breakout', '📈':'Trending up (pre-breakout)', '🧊':'Lifetime-low breakdown', '❄️':'52-week-low breakdown', '📉':'Trending down (pre-breakdown)', 'No':'No breakout/breakdown' }[m] || '';
   const nums = [];
   if (vol != null) nums.push(`${label} volume: ${vol.toFixed(1)}× avg`);
   if (ret != null) nums.push(`${label} move: ${ret >= 0 ? '+' : ''}${ret.toFixed(1)}%`);
@@ -4043,16 +4090,20 @@ function renderAnalysisTable() {
     const s = accountAdjustStock(orig);
     const w52hPct = (s.week52_high && s.ltp) ? (s.ltp - s.week52_high) / s.week52_high * 100 : null;
     const w52lPct = (s.week52_low  && s.ltp) ? (s.ltp - s.week52_low)  / s.week52_low  * 100 : null;
+    const _mvD = (s.vol_today_ratio != null && s.ret_1d != null) ? computeMover(s.vol_today_ratio, s.ret_1d, w52hPct, w52lPct, s.ath_pct, s.atl_pct, {suspect:true}) : (s.movers || null);
+    const _mvW = (s.vol_week_ratio != null && s.ret_1w != null) ? computeMover(s.vol_week_ratio, s.ret_1w, w52hPct, w52lPct, s.ath_pct, s.atl_pct, {volT:1.5, upT:8, dnT:8, surge:false, trend:{vol:1.3, up:5}}) : (s.movers_w || null);
+    const _mvM = (s.vol_month_ratio != null && s.ret_1m != null) ? computeMover(s.vol_month_ratio, s.ret_1m, w52hPct, w52lPct, s.ath_pct, s.atl_pct, {volT:1.3, upT:12, dnT:12, surge:false, trend:{vol:1.2, up:8}}) : (s.movers_m || null);
     return {
       ...s,
       buy_value:       (s.buy_value  != null) ? s.buy_value  : (s.buy_avg || 0) * (s.quantity || 0),
       pres_value:      (s.pres_value != null) ? s.pres_value : (s.ltp || 0) * (s.quantity || 0),
       week52_high_pct: w52hPct != null ? Math.round(w52hPct * 10) / 10 : null,
       week52_low_pct:  w52lPct != null ? Math.round(w52lPct * 10) / 10 : null,
-      // Movers v2: recompute client-side (volume + momentum + 52-week breakout/breakdown)
-      movers: (s.vol_today_ratio != null && s.ret_1d != null) ? computeMover(s.vol_today_ratio, s.ret_1d, w52hPct, w52lPct, s.ath_pct, s.atl_pct) : (s.movers || null),
-      movers_w: (s.vol_week_ratio != null && s.ret_1w != null) ? computeMover(s.vol_week_ratio, s.ret_1w, w52hPct, w52lPct, s.ath_pct, s.atl_pct, {volT:1.5, upT:8, dnT:8, surge:false}) : (s.movers_w || null),
-      movers_m: (s.vol_month_ratio != null && s.ret_1m != null) ? computeMover(s.vol_month_ratio, s.ret_1m, w52hPct, w52lPct, s.ath_pct, s.atl_pct, {volT:1.3, upT:15, dnT:15, surge:false}) : (s.movers_m || null),
+      // Movers v5: recompute client-side (level tags + trending + suspect + overlay)
+      movers: _mvD,
+      movers_w: _mvW,
+      movers_m: _mvM,
+      movers_alloc: computeAlloc(_mvD, _mvW, _mvM),
       // Expose conviction/moat from stocks data for sorting
       conviction: s.conviction || 0,
       moat_class:  s.moat_class || '',
@@ -4078,8 +4129,13 @@ function renderAnalysisTable() {
       return analysisSortDir === 'desc' ? oB - oA : oA - oB;
     }
     // Movers: sort by conviction ⚡ > 🧊 > Z↑ > Z↓ > V+P > V > P > No (price_break keeps A+C/A/C)
+    if (analysisSortBy === 'movers_alloc') {
+      const order = {'💎': 4, '🌱': 3, '⏳': 2, '🚨': 1, '': 0};
+      const oA = order[valA] ?? -1, oB = order[valB] ?? -1;
+      return analysisSortDir === 'desc' ? oB - oA : oA - oB;
+    }
     if (analysisSortBy === 'price_break' || analysisSortBy === 'movers' || analysisSortBy === 'movers_w' || analysisSortBy === 'movers_m') {
-      const order = {'🔥': 9, '🚀': 8, '🧊': 7, '❄️': 6, 'V+P': 4, 'V': 3, 'P': 2, 'A+C': 4, 'A': 3, 'C': 2, 'No': 0};
+      const order = {'🔥': 11, '🚀': 10, '📈': 9, '🧊': 8, '❄️': 7, '📉': 6, 'V+P': 4, 'V': 3, 'P': 2, 'A+C': 4, 'A': 3, 'C': 2, 'No': 1, '⚠️': 0};
       const oA = order[valA] ?? -1, oB = order[valB] ?? -1;
       return analysisSortDir === 'desc' ? oB - oA : oA - oB;
     }
@@ -4156,6 +4212,7 @@ function renderAnalysisTable() {
       <td class="col-mov" style="${moverStyle(s.movers, s.ret_1d)};cursor:pointer" title="${esc(moverTitle(s))}" onclick="openMoversAnalysis('${esc(s.ticker)}', this)">${s.movers || '—'}</td>
       <td class="col-mov" style="${moverStyle(s.movers_w, s.ret_1w)}" title="${esc(moverTitleTF(s,'w'))}">${s.movers_w || '—'}</td>
       <td class="col-mov" style="${moverStyle(s.movers_m, s.ret_1m)}" title="${esc(moverTitleTF(s,'m'))}">${s.movers_m || '—'}</td>
+      <td class="col-mov" style="${allocStyle(s.movers_alloc)}" title="${esc(allocTitle(s.movers_alloc))}">${s.movers_alloc || '—'}</td>
       <td class="col-ts" style="font-weight:700;color:${ s.trend_score >= 70 ? (s.trend_signal==='Strong Bullish' ? 'var(--green)' : s.trend_signal==='Bullish' ? '#4ade80' : s.trend_signal==='Extended' ? 'var(--amber-text)' : 'var(--text2)') : s.trend_score >= 55 ? 'var(--amber-text)' : s.trend_score >= 35 ? 'var(--text2)' : s.trend_score != null ? 'var(--red-text)' : 'var(--text3)' }">${s.trend_score != null ? s.trend_score : '—'}</td>
       <td class="col-sig" style="font-size:0.7rem;font-weight:600;color:${ s.trend_signal==='Strong Bullish' ? 'var(--green)' : s.trend_signal==='Bullish' ? '#4ade80' : s.trend_signal==='Extended' ? 'var(--amber-text)' : s.trend_signal==='Watch' ? '#f59e0b' : s.trend_signal==='Bearish' ? 'var(--red-text)' : 'var(--text3)' }">${s.trend_signal || '—'}</td>
       <td class="${pc(s.ret_1d)}">${fp(s.ret_1d)}</td>

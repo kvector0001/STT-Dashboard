@@ -2,6 +2,19 @@
 fetch_prices.py — Portfolio price fetcher
 Reads Portfolio.xlsx, fetches live prices from yfinance, writes prices.json.
 Also auto-updates stocks.json with placeholder entries for any new tickers.
+
+CHANGELOG — Momentum classifier v5:
+  * Monthly breakout threshold relaxed from ±15% to ±12%.
+  * Added 📈/📉 trending tags (weekly & monthly only): meaningful move + volume
+    but NOT near a high/low extreme  (weekly rvol≥1.3× & |ret_1w|≥5%,
+    monthly rvol≥1.2× & |ret_1m|≥8%).
+  * Added ⚠️ SUSPECT daily override (rvol≥10× AND |ret_1d|≥3%) — takes
+    precedence over V / V+P / P surge codes.
+  * Added overlay allocation tag (movers_alloc) computed from all 3 timeframes:
+    💎 max-conviction increase · 🌱 early build · ⏳ extended/watch · 🚨 exit.
+  * Sort rank: 🔥>🚀>📈>🧊>❄️>📉>V+P>V>P>No>⚠️.
+  Preserved: rvol formulas, location defs, V/V+P/P codes, "ATH before 52-week"
+  ordering, and the 🧊=lifetime-low / ❄️=52-week-low mapping.
 """
 
 import json
@@ -440,6 +453,7 @@ for _, row in portfolio.iterrows():
     fetched_movers = None
     fetched_movers_w = None
     fetched_movers_m = None
+    fetched_movers_alloc = None
     fetched_vol_week_ratio = None
     fetched_vol_month_ratio = None
     fetched_ath_pct = None
@@ -666,6 +680,8 @@ for _, row in portfolio.iterrows():
                             elif near_atl and strong_dn:  fetched_movers = "\U0001f9ca"   # 🧊 lifetime low breakdown
                             elif near_high and strong_up: fetched_movers = "\U0001f680"   # 🚀 52-week high breakout
                             elif near_low  and strong_dn: fetched_movers = "\u2744\ufe0f" # ❄️ 52-week low breakdown
+                            elif rvol >= 10 and ar >= 3:
+                                fetched_movers = "\u26a0\ufe0f"  # ⚠️ SUSPECT — abnormal volume spike (>=10x) with |day|>=3%, overrides V/V+P/P
                             else:
                                 _V = rvol >= 4 and ar >= 3
                                 _P = rvol >= 3 and ar >= 6
@@ -688,7 +704,7 @@ for _, row in portfolio.iterrows():
                             return round(recent / base, 2) if base and base > 0 else None
                         fetched_vol_week_ratio  = _vol_ratio(5, 25)
                         fetched_vol_month_ratio = _vol_ratio(21, 126)
-                        def _mover_tf(rv, ret, vol_t, up_t, dn_t):
+                        def _mover_tf(rv, ret, vol_t, up_t, dn_t, tr_vol, tr_up):
                             if rv is None or ret is None:
                                 return None
                             na  = fetched_ath_pct is not None and fetched_ath_pct >= -2
@@ -701,9 +717,24 @@ for _, row in portfolio.iterrows():
                             if nl and dn:  return "\U0001f9ca"
                             if nh and up:  return "\U0001f680"
                             if nlo and dn: return "\u2744\ufe0f"
+                            at_high = na or nh
+                            at_low  = nl or nlo
+                            if (not at_high) and rv >= tr_vol and ret >=  tr_up: return "\U0001f4c8"  # 📈 trending up
+                            if (not at_low)  and rv >= tr_vol and ret <= -tr_up: return "\U0001f4c9"  # 📉 trending down
                             return "No"
-                        fetched_movers_w = _mover_tf(fetched_vol_week_ratio, ret_1w, 1.5, 8, 8)
-                        fetched_movers_m = _mover_tf(fetched_vol_month_ratio, ret_1m, 1.3, 15, 15)
+                        fetched_movers_w = _mover_tf(fetched_vol_week_ratio, ret_1w, 1.5, 8, 8, 1.3, 5)
+                        fetched_movers_m = _mover_tf(fetched_vol_month_ratio, ret_1m, 1.3, 12, 12, 1.2, 8)
+                        def _alloc(d, w, m):
+                            down = lambda t: t in ("\U0001f9ca", "\u2744\ufe0f", "\U0001f4c9")
+                            up   = lambda t: t in ("\U0001f525", "\U0001f680", "\U0001f4c8")
+                            bup  = lambda t: t in ("\U0001f525", "\U0001f680")
+                            bdn  = lambda t: t in ("\U0001f9ca", "\u2744\ufe0f")
+                            if bdn(m) or (bdn(w) and down(m)): return "\U0001f6a8"
+                            if bup(m) and up(w): return "\U0001f48e"
+                            if (w == "\U0001f4c8" or m == "\U0001f4c8") and not down(d) and not down(w) and not down(m): return "\U0001f331"
+                            if bup(m) and down(w): return "\u23f3"
+                            return ""
+                        fetched_movers_alloc = _alloc(fetched_movers, fetched_movers_w, fetched_movers_m)
 
                         # 200DMA Trend Score (3-12 month positional framework)
                         try:
@@ -845,6 +876,8 @@ for _, row in portfolio.iterrows():
         prices[sym]["movers_w"] = fetched_movers_w
     if fetched_movers_m is not None:
         prices[sym]["movers_m"] = fetched_movers_m
+    if fetched_movers_alloc:
+        prices[sym]["movers_alloc"] = fetched_movers_alloc
     if fetched_vol_week_ratio is not None:
         prices[sym]["vol_week_ratio"] = fetched_vol_week_ratio
     if fetched_vol_month_ratio is not None:
