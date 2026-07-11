@@ -1327,6 +1327,7 @@
           <th class="col-ts" onclick="sortAnalysis('trend_score')" title="Trend Score (0–100) for 3–12 month positional holding | 3 inputs: Price vs 200DMA (40pts) + 200DMA Slope 30d (30pts) + Days above 200DMA last 10 sessions (30pts) | Strong Bullish: ≥85 AND 0–10% zone | Bullish: ≥70 AND 0–10% zone | Extended: ≥70 but &gt;10% | Watch: 55–69 | Hold: 35–54 | Bearish: &lt;35">TS <span id="sort-trend_score" class="sort-indicator"></span></th>
           <th class="col-sig" onclick="sortAnalysis('trend_signal')" title="Trend Signal | Strong Bullish: score≥85 AND 0–10% above 200DMA | Bullish: score≥70 AND 0–10% above 200DMA | Extended: score≥70 but >10% above 200DMA (too extended for fresh entry) | Watch: 55–69 | Hold: 35–54 | Bearish: &lt;35">Signal <span class="col-filter-icon" data-col="trend_signal" title="Filter" onclick="event.stopPropagation();openColFilter('trend_signal',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-trend_signal" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('ret_1d')" title="1-day price return (%)">1D Ret <span id="sort-ret_1d" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('ret_1w')" title="~5 trading day (1-week) price return (%)">1W Ret <span id="sort-ret_1w" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('ret_1m')" title="~21 trading day (1-month) price return (%)">1M Ret <span id="sort-ret_1m" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('ret_6m')" title="~126 trading day (6-month) price return (%)">6M Ret <span id="sort-ret_6m" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('ret_1y')" title="~252 trading day (1-year) price return (%)">1Y Ret <span id="sort-ret_1y" class="sort-indicator"></span></th>
@@ -2199,7 +2200,7 @@ function applyPastedAnalysis(andPush = false) {
 async function pushAnalysisToGitHub() {
   showToast('⏳ Pushing to GitHub…', '');
   // Build full stocks array without price-only fields
-  const priceFields = new Set(['ltp','buy_avg','quantity','pnl_pct','pnl_abs','updated','mcap_cr','pe','roe','ocf_cr','ret_1d','ret_1m','ret_6m','ret_1y','ret_2y','ret_3y','ret_4y','ret_5y','debt_to_equity','eps','book_value','div_yield','pat_cagr','rev_cagr','mcap_3y','vol_30m_ratio','vol_yest_ratio','vol_today_ratio','gross_margin','operating_margin','ebitda_margin','profit_margin','roa','qtrly_rev_growth','qtrly_earn_growth','fcf_cr','fcf_3yr_avg','opcf_3yr_avg','lfcf_cr','week52_high','week52_low','promoter_holding','insider_pct','price_to_book','ev_ebitda','movers','price_break','trend_score','trend_signal','price_to_200dma_pct','dma200_slope_30d_pct','days_above_200dma_10d','must_buy','name','pres_value','buy_value','week52_high_pct','week52_low_pct','ath_pct','atl_pct','accounts','holding_type']);
+  const priceFields = new Set(['ltp','buy_avg','quantity','pnl_pct','pnl_abs','updated','mcap_cr','pe','roe','ocf_cr','ret_1d','ret_1w','ret_1m','ret_6m','ret_1y','ret_2y','ret_3y','ret_4y','ret_5y','debt_to_equity','eps','book_value','div_yield','pat_cagr','rev_cagr','mcap_3y','vol_30m_ratio','vol_yest_ratio','vol_today_ratio','gross_margin','operating_margin','ebitda_margin','profit_margin','roa','qtrly_rev_growth','qtrly_earn_growth','fcf_cr','fcf_3yr_avg','opcf_3yr_avg','lfcf_cr','week52_high','week52_low','promoter_holding','insider_pct','price_to_book','ev_ebitda','movers','price_break','trend_score','trend_signal','price_to_200dma_pct','dma200_slope_30d_pct','days_above_200dma_10d','must_buy','name','pres_value','buy_value','week52_high_pct','week52_low_pct','ath_pct','atl_pct','accounts','holding_type']);
   const exportData = allStocks.map(s => {
     const out = {};
     Object.entries(s).forEach(([k, v]) => { if (!priceFields.has(k)) out[k] = v; });
@@ -4124,6 +4125,7 @@ function renderAnalysisTable() {
       <td class="col-ts" style="font-weight:700;color:${ s.trend_score >= 70 ? (s.trend_signal==='Strong Bullish' ? 'var(--green)' : s.trend_signal==='Bullish' ? '#4ade80' : s.trend_signal==='Extended' ? 'var(--amber-text)' : 'var(--text2)') : s.trend_score >= 55 ? 'var(--amber-text)' : s.trend_score >= 35 ? 'var(--text2)' : s.trend_score != null ? 'var(--red-text)' : 'var(--text3)' }">${s.trend_score != null ? s.trend_score : '—'}</td>
       <td class="col-sig" style="font-size:0.7rem;font-weight:600;color:${ s.trend_signal==='Strong Bullish' ? 'var(--green)' : s.trend_signal==='Bullish' ? '#4ade80' : s.trend_signal==='Extended' ? 'var(--amber-text)' : s.trend_signal==='Watch' ? '#f59e0b' : s.trend_signal==='Bearish' ? 'var(--red-text)' : 'var(--text3)' }">${s.trend_signal || '—'}</td>
       <td class="${pc(s.ret_1d)}">${fp(s.ret_1d)}</td>
+      <td class="${pc(s.ret_1w)}">${fp(s.ret_1w)}</td>
       <td class="${pc(s.ret_1m)}">${fp(s.ret_1m)}</td>
       <td class="${pc(s.ret_6m)}">${fp(s.ret_6m)}</td>
       <td class="${pc(s.ret_1y)}">${fp(s.ret_1y)}</td>
@@ -5099,6 +5101,7 @@ function exportToExcel() {
     'Trend Score':      s.trend_score,
     'Trend Signal':     s.trend_signal || '',
     '1D Ret%':          s.ret_1d,
+    '1W Ret%':          s.ret_1w,
     '1M Ret%':          s.ret_1m,
     '6M Ret%':          s.ret_6m,
     '1Y Ret%':          s.ret_1y,

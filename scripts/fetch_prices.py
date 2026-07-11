@@ -417,6 +417,7 @@ for _, row in portfolio.iterrows():
     fetched_pe = None
     fetched_roe = None
     ret_1d = None
+    ret_1w = None
     ret_1m = None
     ret_6m = None
     ret_1y = None
@@ -476,6 +477,10 @@ for _, row in portfolio.iterrows():
                 # 1-day return
                 if len(hist) >= 2:
                     ret_1d = round(((curr_price - hist['Close'].iloc[-2]) / hist['Close'].iloc[-2] * 100), 2)
+                
+                # 1-week return (~5 trading days)
+                if len(hist) >= 6:
+                    ret_1w = round(((curr_price - hist['Close'].iloc[-6]) / hist['Close'].iloc[-6] * 100), 2)
                 
                 # 1-month return (~21 trading days)
                 if len(hist) >= 21:
@@ -847,6 +852,8 @@ for _, row in portfolio.iterrows():
     # Add return percentages
     if ret_1d is not None:
         prices[sym]["ret_1d"] = ret_1d
+    if ret_1w is not None:
+        prices[sym]["ret_1w"] = ret_1w
     if ret_1m is not None:
         prices[sym]["ret_1m"] = ret_1m
     if ret_6m is not None:
