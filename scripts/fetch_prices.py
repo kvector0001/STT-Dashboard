@@ -438,6 +438,10 @@ for _, row in portfolio.iterrows():
     fetched_mover_c = None
     fetched_mover_z = None
     fetched_movers = None
+    fetched_movers_w = None
+    fetched_movers_m = None
+    fetched_vol_week_ratio = None
+    fetched_vol_month_ratio = None
     fetched_ath_pct = None
     fetched_atl_pct = None
     fetched_vol_today_ratio = None
@@ -670,6 +674,37 @@ for _, row in portfolio.iterrows():
                                 elif _P:        fetched_movers = "P"
                                 else:           fetched_movers = "No"
 
+                        # Weekly / Monthly volume ratios + breakout/breakdown (level-based)
+                        vols = hist['Volume']
+                        cclose2 = float(hist['Close'].iloc[-1])
+                        def _vol_ratio(win, base_win):
+                            if len(vols) < win + 3:
+                                return None
+                            recent = float(vols.tail(win).mean())
+                            if len(vols) >= base_win + win:
+                                base = float(vols.tail(base_win + win).iloc[:-win].mean())
+                            else:
+                                base = float(vols.iloc[:-win].mean())
+                            return round(recent / base, 2) if base and base > 0 else None
+                        fetched_vol_week_ratio  = _vol_ratio(5, 25)
+                        fetched_vol_month_ratio = _vol_ratio(21, 126)
+                        def _mover_tf(rv, ret, vol_t, up_t, dn_t):
+                            if rv is None or ret is None:
+                                return None
+                            na  = fetched_ath_pct is not None and fetched_ath_pct >= -2
+                            nl  = fetched_atl_pct is not None and fetched_atl_pct <= 2
+                            nh  = bool(fetched_week52_high and cclose2 >= 0.98 * fetched_week52_high)
+                            nlo = bool(fetched_week52_low  and cclose2 <= 1.02 * fetched_week52_low)
+                            up = rv >= vol_t and ret >= up_t
+                            dn = rv >= vol_t and ret <= -dn_t
+                            if na and up:  return "\U0001f525"
+                            if nl and dn:  return "\U0001f9ca"
+                            if nh and up:  return "\U0001f680"
+                            if nlo and dn: return "\u2744\ufe0f"
+                            return "No"
+                        fetched_movers_w = _mover_tf(fetched_vol_week_ratio, ret_1w, 1.5, 8, 8)
+                        fetched_movers_m = _mover_tf(fetched_vol_month_ratio, ret_1m, 1.3, 15, 15)
+
                         # 200DMA Trend Score (3-12 month positional framework)
                         try:
                             if len(hist) >= 210:  # need 200 bars + buffer
@@ -803,9 +838,17 @@ for _, row in portfolio.iterrows():
         prices[sym]["vol_today_ratio"] = fetched_vol_today_ratio
     if fetched_vol_yest_ratio is not None:
         prices[sym]["vol_yest_ratio"] = fetched_vol_yest_ratio
-    # Movers v3 (⚡ / 🧊 / Z↑ / Z↓ / V+P / V / P / No)
+    # Movers v4 (🔥 lifetime-high / 🚀 52wk-high / 🧊 lifetime-low / ❄️ 52wk-low / V+P / V / P / No)
     if fetched_movers is not None:
         prices[sym]["movers"] = fetched_movers
+    if fetched_movers_w is not None:
+        prices[sym]["movers_w"] = fetched_movers_w
+    if fetched_movers_m is not None:
+        prices[sym]["movers_m"] = fetched_movers_m
+    if fetched_vol_week_ratio is not None:
+        prices[sym]["vol_week_ratio"] = fetched_vol_week_ratio
+    if fetched_vol_month_ratio is not None:
+        prices[sym]["vol_month_ratio"] = fetched_vol_month_ratio
     # All-time high/low percentages
     if fetched_ath_pct is not None:
         prices[sym]["ath_pct"] = fetched_ath_pct

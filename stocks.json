@@ -6440,5 +6440,49 @@
     "conviction": 0,
     "holding_type": "MF",
     "is_non_equity": true
+  },
+  {
+    "ticker": "LOKESHMACH",
+    "name": "Lokesh Machines Limited",
+    "sector": "Industrials",
+    "nse_symbol": "LOKESHMACH",
+    "buy_avg": 330.35,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "VIPULORG",
+    "name": "Vipul Organics Limited",
+    "sector": "Basic Materials",
+    "nse_symbol": "VIPULORG",
+    "buy_avg": 264.8723,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
   }
 ]
