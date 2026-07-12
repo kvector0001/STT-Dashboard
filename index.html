@@ -1322,7 +1322,7 @@
     <table class="analysis-table">
       <thead>
         <tr>
-          <th onclick="sortAnalysis('name')">Company <span id="sort-name" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('name')">Company <span id="sort-name" class="sort-indicator"></span> <span id="clear-all-filters" onclick="event.stopPropagation();clearAllFilters()" title="Clear ALL filters (chips + column funnels + search + sector/account)" style="display:none;cursor:pointer;color:var(--red-text);font-weight:700;font-size:0.6rem;border:1px solid var(--red-text);border-radius:4px;padding:0 4px;margin-left:3px;vertical-align:middle;">✕ clear</span></th>
           <th class="col-mov" onclick="sortAnalysis('movers')" oncontextmenu="return openMoversBulk('movers',event)" title="Movers — unusual volume + price move, shown by LEVEL. 🔥 LIFETIME-HIGH breakout: at/near all-time high AND vol ≥3× AND day ≥+3%. 🚀 52-WEEK-HIGH breakout: near 52W high AND vol ≥3× AND day ≥+3%. 🧊 LIFETIME-LOW breakdown (EXIT): at/near all-time low AND vol ≥3× AND day ≤−3%. ❄️ 52-WEEK-LOW breakdown: near 52W low AND vol ≥3× AND day ≤−3%. V+P surge: vol ≥4× AND |day| ≥6%. V volume-led: vol ≥4× AND |day| ≥3%. P price-led: vol ≥3× AND |day| ≥6%. Sort: 🔥 &gt; 🚀 &gt; 🧊 &gt; ❄️ &gt; V+P &gt; V &gt; P. Click a cell for a re-rating catalyst prompt. Right-click this header for a combined prompt across all currently-filtered stocks.">Mov(D) <span class="col-filter-icon" data-col="movers" title="Filter" onclick="event.stopPropagation();openColFilter('movers',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-movers" class="sort-indicator"></span></th>
           <th class="col-mov" onclick="sortAnalysis('movers_w')" oncontextmenu="return openMoversBulk('movers_w',event)" title="WEEKLY breakout/breakdown (5-day) — same 🔥 lifetime-high / 🚀 52wk-high / 🧊 lifetime-low / ❄️ 52wk-low levels. Thresholds: weekly volume ≥1.5× avg AND 5-day move ≥±8%, at that level. Click a cell for a single-stock structural prompt; right-click this header for a combined prompt across all filtered stocks.">Mov(Wk) <span class="col-filter-icon" data-col="movers_w" title="Filter" onclick="event.stopPropagation();openColFilter('movers_w',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-movers_w" class="sort-indicator"></span></th>
           <th class="col-mov" onclick="sortAnalysis('movers_m')" oncontextmenu="return openMoversBulk('movers_m',event)" title="MONTHLY breakout/breakdown (21-day) — same 🔥/🚀/🧊/❄️ levels. Thresholds: monthly volume ≥1.3× avg AND 21-day move ≥±15%, at that level. Click a cell for a single-stock structural prompt; right-click this header for a combined prompt across all filtered stocks.">Mov(M) <span class="col-filter-icon" data-col="movers_m" title="Filter" onclick="event.stopPropagation();openColFilter('movers_m',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-movers_m" class="sort-indicator"></span></th>
@@ -3263,30 +3263,74 @@ function _moverPrompt(list, tf) {
   const multi = shown.length > 1;
   const trunc = list.length > MAX ? `\n(Showing first ${MAX} of ${list.length} filtered stocks.)` : '';
   if (tf === 'alloc') {
-    return `# 💎 ALLOCATION DECISION — STRUCTURAL CONFIRMATION
+    return `# 💎 ALLOCATION DECISION — DEEP STRUCTURAL, SECTOR & PEER REVIEW
 
 ## CONTEXT (dashboard, ${today})
-The allocation overlay fuses Daily/Weekly/Monthly momentum: 💎 max-conviction increase · 🌱 early build (pre-breakout) · ⏳ extended/watch · 🚨 exit/de-rate.
+The allocation overlay fuses Daily/Weekly/Monthly momentum: 💎 max-conviction increase · 🌱 early build (pre-breakout) · ⏳ extended/watch · 🚨 exit/de-rate. It flags WHERE to look — your job is to confirm or reject it with hard, sourced fundamentals before any money moves.
 
 ${ctx}${trunc}
 
 ## YOUR ROLE
-You are a senior Indian-equities portfolio manager. For ${multi ? 'EACH stock' : 'this stock'}, VERIFY with dated, sourced evidence whether the STRUCTURAL fundamentals support the overlay's implied action, then give a final position call.
+You are a senior Indian-equities portfolio manager deciding whether to **INCREASE / START-SMALL / HOLD / TRIM / EXIT** ${multi ? 'each position' : 'this position'}. Be brutally objective. Momentum alone is NOT a reason to add — you only add when a genuine, not-yet-priced structural improvement is underway at a sensible valuation.
 
-## RULES
-1. NO HALLUCINATION — [UNVERIFIED] for anything you cannot source with a date.
-2. DATE-STAMP news; only the last ${meta.look} days count as fresh.
-3. ANTI-RECENCY: a stock already up a lot on KNOWN news has that priced in — do not extrapolate the rally.
+## NON-NEGOTIABLE RULES
+1. NO HALLUCINATION — write [UNVERIFIED] for anything you cannot source with a date. Never invent numbers.
+2. DATE-STAMP every data point / news item; only the last ${meta.look} days count as a fresh trigger.
+3. ANTI-RECENCY / ANTI-ANCHORING: a stock already up a lot on KNOWN news has that priced in. Do NOT extrapolate the rally. Base the increase case ONLY on incremental drivers and earnings UPGRADES not yet in consensus.
+4. Separate "great company" from "great risk-reward FROM THIS PRICE (CMP)".
 
-## FOR ${multi ? 'EACH STOCK' : 'THE STOCK'} OUTPUT
+## 1) DECISION SUMMARY — OUTPUT THIS TABLE FIRST (before any deep dive)
+| Stock | Conviction (0–10) | Action (INCREASE/START-SMALL/HOLD/TRIM/EXIT) | 6M: upside% / downside% | 12M: upside% / downside% | One-line why |
+|-------|-------------------|----------------------------------------------|-------------------------|--------------------------|--------------|
+${multi ? '(one row per stock above)' : '(this stock)'}
+
+Conviction scale: 0–3 mostly priced-in / late or deteriorating · 4–6 balanced · 7–10 genuine not-yet-priced asymmetry worth adding.
+
+## 2) PER-STOCK DEEP DIVE — repeat the full block below for ${multi ? 'EVERY stock' : 'the stock'}
 ### {TICKER} — {NAME}
-- **Structural change** (order book / capex / margins / regulation / management / demerger / sector cycle) with dates + sources.
-- **Re-rating or De-rating?** and whether it is early or late.
-- **Already priced in?** (%) given the run-up shown.
-- **Allocation call:** INCREASE / START-SMALL / HOLD / TRIM / EXIT + one-line position-sizing rationale.
+
+**A. Conviction & forward returns (lead with this)**
+- Conviction score (0–10) + 2-line justification.
+- 6-month: base-case upside % and downside % from CMP, each with probability and the single driver.
+- 12-month: base-case upside % and downside % from CMP, each with probability and the single driver.
+
+**B. Sector / theme re-rating check**
+- Is the WHOLE sector or theme re-rating right now, or is this a single-stock move? Name the sector and where it is in its cycle (early / mid / late / peaking).
+- Are the closest peers moving together (confirming a sector re-rate) or diverging? What is driving the sector — policy, capex cycle, demand, pricing, global cue?
+- Is this stock a leader or a laggard within that re-rating?
+
+**C. Company deep dive (cover EVERY item, with dated sources)**
+- Business & revenue mix, end-markets, competitive moat & pricing power.
+- Order book / pipeline, capex & capacity additions and when they monetise.
+- Growth: last 6 quarters revenue/EBITDA/PAT QoQ & YoY; is growth accelerating or fading?
+- Margins: gross/EBITDA/PAT trajectory and the reason for any change.
+- Balance sheet: net debt, D/E, interest cover, working-capital trend, cash flow (OCF/FCF).
+- Returns: ROCE / ROE trend vs cost of capital.
+- Management quality, promoter holding & pledge, capital-allocation track record, guidance credibility.
+- Valuation: current P/E, EV/EBITDA and P/B vs its own 5-yr history AND vs peers — cheap, fair or expensive?
+- Key risks / red flags (governance, receivables, concentration, dilution, regulation).
+
+**D. Peer comparison table (this stock vs 3–5 closest listed peers)**
+| Metric | {TICKER} | Peer 1 | Peer 2 | Peer 3 |
+| Rev growth (YoY) | | | | |
+| EBITDA margin % | | | | |
+| ROCE % | | | | |
+| P/E | | | | |
+| EV/EBITDA | | | | |
+| 6M price % | | | | |
+Then 2 lines: who is cheapest, who is best-quality, and where THIS stock ranks.
+
+**E. Structural change & catalyst (the increase thesis)**
+- What specifically changed (order/capex/margin/regulation/management/demerger/sector cycle), dated & sourced.
+- What % of the bull thesis is ALREADY priced in after the run-up shown in CONTEXT.
+- The ONE not-yet-priced trigger or earnings upgrade that would justify adding more.
+
+**F. Allocation verdict (plain English)**
+- Final call: INCREASE / START-SMALL / HOLD / TRIM / EXIT.
+- Position-sizing rationale and what single development would make you add vs trim.
 ${multi ? `
-## THEN
-Rank all names from "add most" to "exit first" (Stock | Action | Not-yet-priced upside | Key risk).
+## 3) PORTFOLIO RANKING
+Rank all ${shown.length} stocks from "add most" to "exit first": Stock | Conviction | Action | 12M upside% / downside% | Not-yet-priced trigger | Key risk.
 ` : ''}This is analysis, not buy/sell advice.`;
   }
   return `# 📊 STRUCTURAL RE-RATING / DE-RATING SCAN — ${meta.label}
@@ -3624,6 +3668,8 @@ let analysisFilters = new Set();  // multi-select filter chips for Dashboard tab
 function setAnalysisFilter(filter, el) {
   if (filter === 'all') {
     analysisFilters.clear();
+    colFilters = {};                 // 'All' also clears every column funnel filter
+    updateColFilterIcons();
     document.querySelectorAll('.analysis-chip').forEach(b => b.classList.remove('active'));
     document.querySelector('.analysis-chip[data-afilter="all"]').classList.add('active');
   } else {
@@ -3826,6 +3872,35 @@ function updateColFilterIcons() {
     ic.classList.toggle('active', !!(colFilters[f] && colFilters[f].size));
   });
 }
+
+// Quick-clear a single column filter (double-click the funnel icon).
+function clearColFilter(field) {
+  const had = !!colFilters[field];
+  if (had) { delete colFilters[field]; updateColFilterIcons(); renderAnalysisTable(); }
+  const pop = document.getElementById('col-filter-pop');
+  if (pop) pop.style.display = 'none';
+  if (had) showToast('Column filter cleared', '');
+}
+
+// Clear EVERY filter (chips, column funnels, search, sector, account).
+function clearAllFilters() {
+  analysisFilters.clear();
+  colFilters = {};
+  window._sectorFilter = ''; window._accountFilter = '';
+  const sb = document.getElementById('analysis-search'); if (sb) sb.value = '';
+  ['sector-filter-analysis','sector-filter-deep','account-filter-analysis','account-filter-deep'].forEach(id => { const el = document.getElementById(id); if (el) el.value = ''; });
+  document.querySelectorAll('.analysis-chip').forEach(b => b.classList.remove('active'));
+  const allChip = document.querySelector('.analysis-chip[data-afilter="all"]'); if (allChip) allChip.classList.add('active');
+  updateColFilterIcons();
+  renderAnalysisTable();
+  showToast('All filters cleared', 'green');
+}
+
+// Double-click any funnel icon to clear just that column's filter.
+document.addEventListener('dblclick', e => {
+  const ic = e.target.closest('.col-filter-icon');
+  if (ic) { e.preventDefault(); e.stopPropagation(); clearColFilter(ic.dataset.col); }
+});
 
 function openColFilter(field, iconEl) {
   const pop = document.getElementById('col-filter-pop');
@@ -4414,6 +4489,8 @@ function renderAnalysisTable() {
 
   // Summary reflects current filter selection (chips, sector dropdown, account, holdings type, search, or column funnels)
   const anyAnalysisFilter = analysisFilters.size > 0 || !!window._sectorFilter || !!window._accountFilter || (window._holdingType && window._holdingType !== 'All') || !!searchQ || Object.keys(colFilters).length > 0;
+  // Clear-all button ignores the default 'Stocks' holding-type toggle (it isn't a user filter).
+  const _caf = document.getElementById('clear-all-filters'); if (_caf) _caf.style.display = (analysisFilters.size > 0 || !!window._sectorFilter || !!window._accountFilter || !!searchQ || Object.keys(colFilters).length > 0) ? 'inline-block' : 'none';
   updateSummary(anyAnalysisFilter && visibleStocks.length > 0 ? visibleStocks : allStocks, 'analysis');
   const ts = document.getElementById('last-updated').textContent;
   document.getElementById('last-updated-analysis').textContent = ts;
