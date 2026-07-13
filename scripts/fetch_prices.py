@@ -724,17 +724,27 @@ for _, row in portfolio.iterrows():
                             return "No"
                         fetched_movers_w = _mover_tf(fetched_vol_week_ratio, ret_1w, 1.5, 8, 8, 1.3, 5)
                         fetched_movers_m = _mover_tf(fetched_vol_month_ratio, ret_1m, 1.3, 12, 12, 1.2, 8)
-                        def _alloc(d, w, m):
+                        # Allocation-ACTION overlay (momentum x 200DMA trend context).
+                        # 💎 ADD · 🌱 START-SMALL/watch · ⏳ HOLD/TRIM (already ran) · 🚨 REDUCE.
+                        # Thresholds calibrated on the live portfolio; CALLED AFTER the 200DMA block below.
+                        def _alloc(d, w, m, ext, slope, da, r1m):
                             down = lambda t: t in ("\U0001f9ca", "\u2744\ufe0f", "\U0001f4c9")
                             up   = lambda t: t in ("\U0001f525", "\U0001f680", "\U0001f4c8")
-                            bup  = lambda t: t in ("\U0001f525", "\U0001f680")
-                            bdn  = lambda t: t in ("\U0001f9ca", "\u2744\ufe0f")
-                            if bdn(m) or (bdn(w) and down(m)): return "\U0001f6a8"
-                            if bup(m) and up(w): return "\U0001f48e"
-                            if (w == "\U0001f4c8" or m == "\U0001f4c8") and not down(d) and not down(w) and not down(m): return "\U0001f331"
-                            if bup(m) and down(w): return "\u23f3"
+                            m_up, m_dn = up(m), down(m)
+                            w_up, w_dn = up(w), down(w)
+                            up_cat = m_up or w_up
+                            have_trend = ext is not None and slope is not None
+                            if m_dn or (w_dn and slope is not None and slope < 0) or (ext is not None and slope is not None and ext < -8 and slope < -3):
+                                return "\U0001f6a8"  # 🚨 REDUCE
+                            if not up_cat:
+                                return ""
+                            if (ext is not None and ext > 50) or (r1m is not None and r1m > 30):
+                                return "\u23f3"  # ⏳ HOLD/TRIM
+                            if m_up and have_trend and slope >= 1 and ext <= 40 and (r1m is None or r1m <= 20) and (da is None or da >= 6) and not w_dn:
+                                return "\U0001f48e"  # 💎 ADD
+                            if up_cat and (slope is None or slope >= -2) and (r1m is None or r1m <= 28):
+                                return "\U0001f331"  # 🌱 START-SMALL
                             return ""
-                        fetched_movers_alloc = _alloc(fetched_movers, fetched_movers_w, fetched_movers_m)
 
                         # 200DMA Trend Score (3-12 month positional framework)
                         try:
@@ -798,6 +808,11 @@ for _, row in portfolio.iterrows():
                                 else:                               fetched_trend_signal = 'Bearish'
                         except Exception:
                             pass
+
+                        # Allocation action (needs the 200DMA context computed just above)
+                        fetched_movers_alloc = _alloc(fetched_movers, fetched_movers_w, fetched_movers_m,
+                                                      fetched_price_to_200dma_pct, fetched_dma200_slope_30d_pct,
+                                                      fetched_days_above_200dma_10d, ret_1m)
                 except Exception:
                     pass
 

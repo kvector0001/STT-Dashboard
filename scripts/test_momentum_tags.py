@@ -17,25 +17,31 @@ from momentum_classifier import (  # noqa: E402
 
 # --- Worked example 1: WELCORP at an all-time high -------------------------
 # Weekly rvol 3.64 / +12.0% and Monthly rvol 1.57 / +15.4%, both sitting at ATH.
-# Expectation: 🔥 on both weekly & monthly; overlay = 💎 (confirmed breakout building).
+# Expectation: 🔥 on both weekly & monthly; but it is +63% above a rising 200DMA
+# (very extended) -> allocation overlay = ⏳ HOLD/TRIM (don't chase).
 def test_welcorp_at_ath():
     w = classify_weekly(3.64, 12.04, near_ath=True, near_52wh=True)
     m = classify_monthly(1.57, 15.38, near_ath=True, near_52wh=True)
     d = classify_daily(1.2, 0.8)  # quiet on the day
     assert w == FIRE, w
     assert m == FIRE, m
-    assert overlay_alloc(d, w, m) == GEM
+    # ext=63% (>50) -> extended -> TRIM regardless of the modest 1M move
+    assert overlay_alloc(d, w, m, ext=63, slope=9.4, da=10, r1m=15) == HOUR
 
 
 # --- Worked example 2: trending-up (early re-rating, pre-breakout) ----------
-# Meaningful move + volume but NOT near any extreme -> 📈, and overlay = 🌱.
+# Meaningful move + volume but NOT near any extreme -> 📈. Allocation depends on
+# the 200DMA context: early + rising trend + not extended -> 💎 ADD.
 def test_trending_up():
     w = classify_weekly(1.6, 9.0, near_ath=False, near_52wh=False)
     m = classify_monthly(1.4, 10.0, near_ath=False, near_52wh=False)
     d = classify_daily(1.1, 0.5)
     assert w == UP, w
     assert m == UP, m
-    assert overlay_alloc(d, w, m) == SEED
+    # HAPPYFORGE-like: 1M move 10%, +14% above a rising 200DMA, holding above -> ADD
+    assert overlay_alloc(d, w, m, ext=14, slope=3.0, da=10, r1m=10) == GEM
+    # Same tags but 200DMA still flat/turning (slope 0.4) -> not yet confirmed -> START-SMALL
+    assert overlay_alloc(d, w, m, ext=14, slope=0.4, da=10, r1m=10) == SEED
     # A strong-up weekly that IS near the 52w high must NOT be 📈 (it's a 🚀 breakout).
     assert classify_weekly(1.6, 9.0, near_52wh=True) == ROCKET
 
@@ -59,12 +65,13 @@ def test_monthly_threshold_12pct():
     assert classify_monthly(1.4, 11.0, near_ath=True, near_52wh=True) == "No"
 
 
-# --- Overlay coverage: 🚨 exit, ⏳ watch -----------------------------------
+# --- Overlay coverage: 🚨 reduce, ⏳ trim, and downtrend-bounce guard --------
 def test_overlay_edges():
-    assert overlay_alloc("No", "No", ICE) == SIREN        # monthly breakdown -> exit
-    assert overlay_alloc("No", DOWN, SNOW) == SIREN       # weekly+monthly down -> exit
-    assert overlay_alloc("No", DOWN, FIRE) == HOUR        # monthly up but weekly down -> watch
-    assert overlay_alloc("No", "No", "No") == ""          # nothing notable
+    assert overlay_alloc("No", "No", ICE) == SIREN                       # monthly breakdown -> reduce
+    assert overlay_alloc("No", DOWN, UP, ext=5, slope=-4.0) == SIREN     # weekly down on a falling 200DMA -> reduce
+    assert overlay_alloc("No", UP, UP, ext=-16, slope=-8.7, da=0, r1m=29) == SIREN  # bounce below a falling 200DMA
+    assert overlay_alloc("No", UP, ROCKET, ext=45, slope=-0.8, da=10, r1m=42) == HOUR  # GREAVESCOT: already ran 42% -> trim
+    assert overlay_alloc("No", "No", "No") == ""                          # nothing notable
 
 
 def _run():

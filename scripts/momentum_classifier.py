@@ -108,18 +108,31 @@ def classify_monthly(rvol, ret, **levels):
     return classify(rvol, ret, vol_t=1.3, up_t=12, dn_t=12, trend_vol=1.2, trend_up=8, **levels)
 
 
-def overlay_alloc(daily, weekly, monthly):
-    """Post-process across timeframes -> allocation overlay tag ('' if none)."""
-    down = lambda t: t in (ICE, SNOW, DOWN)
+def overlay_alloc(daily, weekly, monthly, ext=None, slope=None, da=None, r1m=None):
+    """Allocation-ACTION overlay: momentum tags x 200DMA trend context.
+
+    ext=price vs 200DMA %, slope=200DMA 30d slope %, da=days above 200DMA (of 10),
+    r1m=1-month return %. Returns:
+      GEM   💎 ADD (increase) — early confirmed re-rating, not extended
+      SEED  🌱 START-SMALL / watch — early, unconfirmed
+      HOUR  ⏳ HOLD / TRIM — already ran (>30% 1M) or very extended (>50% ext)
+      SIREN 🚨 REDUCE — de-rating / below a falling 200DMA
+    Thresholds calibrated on the live portfolio (see repo memory).
+    """
     up = lambda t: t in (FIRE, ROCKET, UP)
-    bup = lambda t: t in (FIRE, ROCKET)      # breakout up (confirmed)
-    bdn = lambda t: t in (ICE, SNOW)         # breakdown
-    if bdn(monthly) or (bdn(weekly) and down(monthly)):
+    dn = lambda t: t in (ICE, SNOW, DOWN)
+    m_up, m_dn = up(monthly), dn(monthly)
+    w_up, w_dn = up(weekly), dn(weekly)
+    up_cat = m_up or w_up
+    have_trend = ext is not None and slope is not None
+    if m_dn or (w_dn and slope is not None and slope < 0) or (ext is not None and slope is not None and ext < -8 and slope < -3):
         return SIREN
-    if bup(monthly) and up(weekly):
-        return GEM
-    if (weekly == UP or monthly == UP) and not down(daily) and not down(weekly) and not down(monthly):
-        return SEED
-    if bup(monthly) and down(weekly):
+    if not up_cat:
+        return ""
+    if (ext is not None and ext > 50) or (r1m is not None and r1m > 30):
         return HOUR
+    if m_up and have_trend and slope >= 1 and ext <= 40 and (r1m is None or r1m <= 20) and (da is None or da >= 6) and not w_dn:
+        return GEM
+    if up_cat and (slope is None or slope >= -2) and (r1m is None or r1m <= 28):
+        return SEED
     return ""

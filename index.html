@@ -1326,7 +1326,7 @@
           <th class="col-mov" onclick="sortAnalysis('movers')" oncontextmenu="return openMoversBulk('movers',event)" title="Movers — unusual volume + price move, shown by LEVEL. 🔥 LIFETIME-HIGH breakout: at/near all-time high AND vol ≥3× AND day ≥+3%. 🚀 52-WEEK-HIGH breakout: near 52W high AND vol ≥3× AND day ≥+3%. 🧊 LIFETIME-LOW breakdown (EXIT): at/near all-time low AND vol ≥3× AND day ≤−3%. ❄️ 52-WEEK-LOW breakdown: near 52W low AND vol ≥3× AND day ≤−3%. V+P surge: vol ≥4× AND |day| ≥6%. V volume-led: vol ≥4× AND |day| ≥3%. P price-led: vol ≥3× AND |day| ≥6%. Sort: 🔥 &gt; 🚀 &gt; 🧊 &gt; ❄️ &gt; V+P &gt; V &gt; P. Click a cell for a re-rating catalyst prompt. Right-click this header for a combined prompt across all currently-filtered stocks.">Mov(D) <span class="col-filter-icon" data-col="movers" title="Filter" onclick="event.stopPropagation();openColFilter('movers',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-movers" class="sort-indicator"></span></th>
           <th class="col-mov" onclick="sortAnalysis('movers_w')" oncontextmenu="return openMoversBulk('movers_w',event)" title="WEEKLY breakout/breakdown (5-day) — same 🔥 lifetime-high / 🚀 52wk-high / 🧊 lifetime-low / ❄️ 52wk-low levels. Thresholds: weekly volume ≥1.5× avg AND 5-day move ≥±8%, at that level. Click a cell for a single-stock structural prompt; right-click this header for a combined prompt across all filtered stocks.">Mov(Wk) <span class="col-filter-icon" data-col="movers_w" title="Filter" onclick="event.stopPropagation();openColFilter('movers_w',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-movers_w" class="sort-indicator"></span></th>
           <th class="col-mov" onclick="sortAnalysis('movers_m')" oncontextmenu="return openMoversBulk('movers_m',event)" title="MONTHLY breakout/breakdown (21-day) — same 🔥/🚀/🧊/❄️ levels. Thresholds: monthly volume ≥1.3× avg AND 21-day move ≥±15%, at that level. Click a cell for a single-stock structural prompt; right-click this header for a combined prompt across all filtered stocks.">Mov(M) <span class="col-filter-icon" data-col="movers_m" title="Filter" onclick="event.stopPropagation();openColFilter('movers_m',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-movers_m" class="sort-indicator"></span></th>
-          <th class="col-mov" onclick="sortAnalysis('movers_alloc')" oncontextmenu="return openMoversBulk('movers_alloc',event)" title="Allocation overlay (reads Daily/Weekly/Monthly together): 💎 max-conviction increase (monthly breakout confirmed by weekly) · 🌱 early build (trending up, pre-breakout) · ⏳ extended/watch (breakout but short-term weakening) · 🚨 exit/de-rate (breakdown). Click a cell for a single-stock allocation prompt; right-click this header for a combined prompt across all filtered stocks.">Alloc <span class="col-filter-icon" data-col="movers_alloc" title="Filter" onclick="event.stopPropagation();openColFilter('movers_alloc',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-movers_alloc" class="sort-indicator"></span></th>
+          <th class="col-mov" onclick="sortAnalysis('movers_alloc')" oncontextmenu="return openMoversBulk('movers_alloc',event)" title="Allocation ACTION = momentum × 200DMA trend. 💎 ADD/increase — early confirmed re-rating (monthly up, 1M move ≤20%, ≤40% above a RISING 200DMA). 🌱 START-SMALL/watch — early, trend not yet confirmed. ⏳ HOLD/TRIM — already ran (>30% in 1M) or very extended (>50% above 200DMA); don't chase. 🚨 REDUCE — de-rating: breakdown or price below a falling 200DMA. Click a cell for a single-stock allocation prompt; right-click this header for a combined prompt across all filtered stocks.">Alloc <span class="col-filter-icon" data-col="movers_alloc" title="Filter" onclick="event.stopPropagation();openColFilter('movers_alloc',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-movers_alloc" class="sort-indicator"></span></th>
           <th class="col-ts" onclick="sortAnalysis('trend_score')" title="Trend Score (0–100) for 3–12 month positional holding | 3 inputs: Price vs 200DMA (40pts) + 200DMA Slope 30d (30pts) + Days above 200DMA last 10 sessions (30pts) | Strong Bullish: ≥85 AND 0–10% zone | Bullish: ≥70 AND 0–10% zone | Extended: ≥70 but &gt;10% | Watch: 55–69 | Hold: 35–54 | Bearish: &lt;35">TS <span id="sort-trend_score" class="sort-indicator"></span></th>
           <th class="col-sig" onclick="sortAnalysis('trend_signal')" title="Trend Signal | Strong Bullish: score≥85 AND 0–10% above 200DMA | Bullish: score≥70 AND 0–10% above 200DMA | Extended: score≥70 but >10% above 200DMA (too extended for fresh entry) | Watch: 55–69 | Hold: 35–54 | Bearish: &lt;35">Signal <span class="col-filter-icon" data-col="trend_signal" title="Filter" onclick="event.stopPropagation();openColFilter('trend_signal',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-trend_signal" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('ret_1d')" title="1-day price return (%)">1D Ret <span id="sort-ret_1d" class="sort-indicator"></span></th>
@@ -3266,7 +3266,7 @@ function _moverPrompt(list, tf) {
     return `# 💎 ALLOCATION DECISION — DEEP STRUCTURAL, SECTOR & PEER REVIEW
 
 ## CONTEXT (dashboard, ${today})
-The allocation overlay fuses Daily/Weekly/Monthly momentum: 💎 max-conviction increase · 🌱 early build (pre-breakout) · ⏳ extended/watch · 🚨 exit/de-rate. It flags WHERE to look — your job is to confirm or reject it with hard, sourced fundamentals before any money moves.
+The allocation overlay fuses momentum (Daily/Weekly/Monthly) with the 200DMA trend context: 💎 ADD/increase (early confirmed re-rating, not extended) · 🌱 START-SMALL/watch (early, unconfirmed) · ⏳ HOLD/TRIM (already ran / extended) · 🚨 REDUCE (de-rating). It flags WHERE to look — your job is to confirm or reject it with hard, sourced fundamentals before any money moves.
 
 ${ctx}${trunc}
 
@@ -3725,7 +3725,7 @@ const colFilterDefs = {
   movers:   { label: 'Mov(D)',  type: 'set', get: s => _moverTag(s, 'd') },
   movers_w: { label: 'Mov(Wk)', type: 'set', get: s => _moverTag(s, 'w') },
   movers_m: { label: 'Mov(M)',  type: 'set', get: s => _moverTag(s, 'm') },
-  movers_alloc: { label: 'Alloc', type: 'set', get: s => computeAlloc(_moverTag(s,'d'), _moverTag(s,'w'), _moverTag(s,'m')) || null },
+  movers_alloc: { label: 'Alloc', type: 'set', get: s => computeAlloc(_moverTag(s,'d'), _moverTag(s,'w'), _moverTag(s,'m'), { ext: s.price_to_200dma_pct, slope: s.dma200_slope_30d_pct, da: s.days_above_200dma_10d, r1m: s.ret_1m }) || null },
   week52_high_pct: { label: '52W High%', type: 'range',
     get: s => (s.week52_high && s.ltp) ? (s.ltp - s.week52_high) / s.week52_high * 100 : null,
     options: [ {key:'near', label:'0 to −3% (near high)', min:-3, max:0.001}, {key:'3-10', label:'−3 to −10%', min:-10, max:-3}, {key:'10-25', label:'−10 to −25%', min:-25, max:-10}, {key:'25+', label:'below −25%', min:-Infinity, max:-25} ] },
@@ -4179,17 +4179,31 @@ function computeMover(rvol, r, h52, l52, ath, atl, opt) {
   return 'No';
 }
 
-// Overlay allocation tag — reads the base tags across all 3 timeframes (daily/weekly/monthly)
-// 💎 max-conviction increase | 🌱 early/build (pre-breakout) | ⏳ extended/watch | 🚨 exit/de-rate
-function computeAlloc(d, w, m) {
-  const down  = t => t === '🧊' || t === '❄️' || t === '📉';
-  const up    = t => t === '🔥' || t === '🚀' || t === '📈';
-  const brkUp = t => t === '🔥' || t === '🚀';
-  const brkDn = t => t === '🧊' || t === '❄️';
-  if (brkDn(m) || (brkDn(w) && down(m))) return '🚨';                 // exit / de-rate hard
-  if (brkUp(m) && up(w)) return '💎';                                 // confirmed multi-TF breakout → max conviction
-  if ((w === '📈' || m === '📈') && !down(d) && !down(w) && !down(m)) return '🌱';  // early build
-  if (brkUp(m) && down(w)) return '⏳';                                    // breakout but short-term weakening → watch
+// Allocation-ACTION overlay — combines the momentum tags (Daily/Weekly/Monthly) with the
+// 200DMA trend context (extension, slope, days-above) and the recent 1-month run, to suggest
+// whether to INCREASE / START-SMALL / HOLD-TRIM / REDUCE allocation. Thresholds calibrated on
+// the live portfolio (see repo memory). ctx = {ext, slope, da, r1m}.
+//   💎 ADD · 🌱 START-SMALL/watch · ⏳ HOLD/TRIM (already ran) · 🚨 REDUCE (de-rating)
+function computeAlloc(d, w, m, ctx) {
+  ctx = ctx || {};
+  const ext = ctx.ext, slope = ctx.slope, da = ctx.da, r1m = ctx.r1m;
+  const up = t => t === '🔥' || t === '🚀' || t === '📈';
+  const dn = t => t === '🧊' || t === '❄️' || t === '📉';
+  const mUp = up(m), mDn = dn(m), wUp = up(w), wDn = dn(w);
+  const upCat = mUp || wUp;
+  const haveTrend = (ext != null && slope != null);
+  // 1) REDUCE — de-rating / rolling over / below a falling long-term trend
+  if (mDn
+      || (wDn && slope != null && slope < 0)
+      || (ext != null && slope != null && ext < -8 && slope < -3)) return '🚨';
+  if (!upCat) return '';
+  // 2) HOLD / TRIM — up-momentum but the sharp move already happened (extended / already ran)
+  if ((ext != null && ext > 50) || (r1m != null && r1m > 30)) return '⏳';
+  // 3) ADD (increase) — monthly re-rating, still early, long-term trend rising, not extended
+  if (mUp && haveTrend && slope >= 1 && ext <= 40
+      && (r1m == null || r1m <= 20) && (da == null || da >= 6) && !wDn) return '💎';
+  // 4) START-SMALL / WATCH — early momentum but not yet confirmed
+  if (upCat && (slope == null || slope >= -2) && (r1m == null || r1m <= 28)) return '🌱';
   return '';
 }
 function moverStyle(m, r) {
@@ -4215,10 +4229,10 @@ function allocStyle(a) {
   return 'color:var(--text3)';
 }
 const ALLOC_MEANING = {
-  '💎': 'Max-conviction INCREASE — monthly breakout confirmed by weekly momentum',
-  '🌱': 'Early / BUILD — trending up, not yet a breakout (start building before the breakout)',
-  '⏳': 'Extended / WATCH — breakout in place but short-term momentum weakening',
-  '🚨': 'EXIT / de-rate — breakdown (52W / lifetime low, or monthly downtrend)',
+  '💎': 'ADD / increase allocation — monthly re-rating just confirmed, still EARLY (1M move ≤20%, ≤40% above a RISING 200DMA, holding above the line). Best fresh-entry setup.',
+  '🌱': 'START-SMALL / WATCH — early up-momentum but not yet confirmed (200DMA flat/turning, weekly-only, or a bit further along). Build a small position, wait for confirmation.',
+  '⏳': 'HOLD / TRIM into strength — the sharp move already ran (>30% in 1M) or very extended (>50% above 200DMA). Don’t chase; trim the temporary overweight.',
+  '🚨': 'REDUCE — de-rating: monthly breakdown, weekly breakdown on a falling trend, or price below a falling 200DMA.',
 };
 function allocTitle(a) { return ALLOC_MEANING[a] || 'No allocation signal'; }
 
@@ -4304,7 +4318,7 @@ function renderAnalysisTable() {
       movers: _mvD,
       movers_w: _mvW,
       movers_m: _mvM,
-      movers_alloc: computeAlloc(_mvD, _mvW, _mvM),
+      movers_alloc: computeAlloc(_mvD, _mvW, _mvM, { ext: s.price_to_200dma_pct, slope: s.dma200_slope_30d_pct, da: s.days_above_200dma_10d, r1m: s.ret_1m }),
       // Expose conviction/moat from stocks data for sorting
       conviction: s.conviction || 0,
       moat_class:  s.moat_class || '',
