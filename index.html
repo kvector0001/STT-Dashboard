@@ -1214,7 +1214,10 @@
     <div class="stat">
       <div class="stat-label">Current Value</div>
       <div class="stat-value" id="ana-sum-current">—</div>
-      <div id="ana-bench-toggle" onclick="toggleBenchmarks()" title="Show benchmark index returns below each return column" style="cursor:pointer;user-select:none;margin-top:6px;display:inline-flex;align-items:center;gap:4px;font-size:0.7rem;color:var(--text3);white-space:nowrap;">📊 Benchmarks <span id="bench-arrow" style="transition:transform .2s;">▾</span></div>
+      <div style="display:flex;gap:10px;align-items:center;margin-top:6px;flex-wrap:wrap;">
+        <div id="ana-acct-toggle" onclick="toggleAccountwise()" title="Per-account summary (invested, value, P&L, cash). Click an account row to filter · Ctrl/Cmd+Click to combine several accounts." style="cursor:pointer;user-select:none;display:inline-flex;align-items:center;gap:4px;font-size:0.7rem;color:var(--text3);white-space:nowrap;">👥 Accountwise <span id="acct-arrow" style="transition:transform .2s;">▾</span></div>
+        <div id="ana-bench-toggle" onclick="toggleBenchmarks()" title="Show benchmark index returns below each return column" style="cursor:pointer;user-select:none;display:inline-flex;align-items:center;gap:4px;font-size:0.7rem;color:var(--text3);white-space:nowrap;">📊 Benchmarks <span id="bench-arrow" style="transition:transform .2s;">▾</span></div>
+      </div>
     </div>
     <div class="stat">
       <div class="stat-label">Overall P&L ₹ (%)</div>
@@ -1272,14 +1275,21 @@
     </div>
     <div class="stat">
       <div class="stat-label">Win/Loss</div>
-      <div style="display: flex; gap: 8px;">
+      <div style="display: flex; gap: 8px; align-items: baseline;">
         <span class="stat-value green" id="ana-sum-profit">0</span>
         <span class="stat-value red" id="ana-sum-loss">0</span>
-        <span class="stat-value" style="color:var(--text3)">/</span>
-        <span class="stat-value" id="ana-sum-count">0</span>
+        <span class="stat-value green" id="ana-sum-winpct" style="font-size:0.8rem;">—</span>
       </div>
+      <div style="font-size:0.62rem;color:var(--text3);margin-top:1px;">of <span id="ana-sum-count">0</span></div>
+    </div>
+    <div class="stat">
+      <div class="stat-label">Cash</div>
+      <div class="stat-value" id="ana-sum-cash">—</div>
+      <div style="font-size:0.62rem;color:var(--text3);margin-top:1px;" id="ana-sum-cash-note"></div>
     </div>
   </div>
+
+  <div id="accountwise-panel" style="display:none; padding:8px 16px 10px; background:var(--bg2); border-bottom:1px solid var(--border); overflow-x:auto;"></div>
 
   <div style="padding: 8px 16px; background: var(--bg2); border-bottom: 1px solid var(--border); display: flex; gap: 8px; align-items: center;">
     <span style="color: var(--text3); flex-shrink:0;">🔍</span>
@@ -3774,34 +3784,64 @@ function setSectorFilter(val) {
   if (typeof renderAll === 'function') renderAll();
 }
 
+// ── Account selection (supports multi-select via Ctrl/Cmd+Click) ──────────
+// window._accountFilters = array of selected account names ([] = All accounts).
+window._accountFilters = window._accountFilters || [];
+function accSel() { return Array.isArray(window._accountFilters) ? window._accountFilters : []; }
+function accActive() { return accSel().length > 0; }
+
 function populateAccountDropdown() {
   if (!Array.isArray(allStocks) || !allStocks.length) return;
   const set = new Set();
   allStocks.forEach(s => { if (Array.isArray(s.accounts)) s.accounts.forEach(a => { if (a && a.name) set.add(a.name); }); });
+  if (window._cash && window._cash.by_account) Object.keys(window._cash.by_account).forEach(n => set.add(n));
   const groups = [...set].sort();
+  window._allAccounts = groups;
+  const sel = accSel();
   const optHtml = '<option value="">All A/c</option>' + groups.map(g => `<option value="${esc(g)}">${esc(g)}</option>`).join('');
-  ['account-filter-analysis','account-filter-deep'].forEach(id => { const el = document.getElementById(id); if (el) { el.innerHTML = optHtml; el.value = window._accountFilter || ''; } });
+  ['account-filter-analysis','account-filter-deep'].forEach(id => { const el = document.getElementById(id); if (el) { el.innerHTML = optHtml; el.value = sel.length === 1 ? sel[0] : ''; } });
 }
 function setAccountFilter(val) {
-  window._accountFilter = val || '';
-  ['account-filter-analysis','account-filter-deep'].forEach(id => { const el = document.getElementById(id); if (el && el.value !== window._accountFilter) el.value = window._accountFilter; });
+  // Dropdown = single-select (empty = All). Replaces any multi-selection.
+  window._accountFilters = val ? [val] : [];
+  syncAccountUI();
   if (typeof renderAnalysisTable === 'function') renderAnalysisTable();
   if (typeof renderAll === 'function') renderAll();
 }
-// When an account is selected, return a stock view scoped to THAT account's
-// holding (qty / buy avg / invested / present value / P&L) instead of the
-// portfolio-wide totals. Returns the stock unchanged when no account is active.
+// Panel row click: plain = select just this; Ctrl/Cmd = toggle in/out of the set.
+function toggleAccountSelection(name, additive) {
+  let sel = accSel().slice();
+  if (additive) {
+    const i = sel.indexOf(name);
+    if (i >= 0) sel.splice(i, 1); else sel.push(name);
+  } else {
+    sel = (sel.length === 1 && sel[0] === name) ? [] : [name];
+  }
+  window._accountFilters = sel;
+  syncAccountUI();
+  if (typeof renderAnalysisTable === 'function') renderAnalysisTable();
+  if (typeof renderAll === 'function') renderAll();
+}
+function syncAccountUI() {
+  const sel = accSel();
+  ['account-filter-analysis','account-filter-deep'].forEach(id => { const el = document.getElementById(id); if (el) el.value = sel.length === 1 ? sel[0] : ''; });
+  renderAccountwise();
+}
+// When account(s) are selected, return a stock view scoped to the SUM of the
+// selected accounts' holdings (qty / buy avg / invested / present value / P&L).
 function accountAdjustStock(s) {
-  const acctName = window._accountFilter;
-  if (!acctName || !Array.isArray(s.accounts)) return s;
-  const a = s.accounts.find(x => x.name === acctName);
-  if (!a) return s;
-  const qty = a.qty || 0, buyAvg = a.buy_avg || 0, ltp = s.ltp || 0;
+  const sel = accSel();
+  if (!sel.length || !Array.isArray(s.accounts)) return s;
+  const matched = s.accounts.filter(a => sel.includes(a.name));
+  if (!matched.length) return s;   // filtered out by the row filter anyway
+  let qty = 0, inv = 0;
+  matched.forEach(a => { qty += a.qty || 0; inv += (a.invested != null ? a.invested : (a.buy_avg || 0) * (a.qty || 0)); });
+  const buyAvg = qty > 0 ? inv / qty : 0, ltp = s.ltp || 0;
   return {
     ...s,
     quantity:  qty,
     buy_avg:   buyAvg,
-    buy_value: (a.invested != null) ? a.invested : buyAvg * qty,
+    buy_value: inv,
     pres_value: ltp * qty,
     pnl_abs:   (ltp - buyAvg) * qty,
     pnl_pct:   buyAvg > 0 ? (ltp - buyAvg) / buyAvg * 100 : null,
@@ -3840,7 +3880,7 @@ function resetAnalysisFilters() {
   window._holdingType = 'Stocks';
   const ht = document.getElementById('holding-type-analysis'); if (ht) ht.value = 'Stocks';
   // Account + sector -> all
-  window._accountFilter = '';
+  window._accountFilters = [];
   window._sectorFilter = '';
   ['account-filter-analysis','account-filter-deep'].forEach(id => { const el = document.getElementById(id); if (el) el.value = ''; });
   ['sector-filter-analysis','sector-filter-deep'].forEach(id => { const el = document.getElementById(id); if (el) el.value = ''; });
@@ -3905,7 +3945,7 @@ function clearColFilter(field) {
 function clearAllFilters() {
   analysisFilters.clear();
   colFilters = {};
-  window._sectorFilter = ''; window._accountFilter = '';
+  window._sectorFilter = ''; window._accountFilters = [];
   const sb = document.getElementById('analysis-search'); if (sb) sb.value = '';
   ['sector-filter-analysis','sector-filter-deep','account-filter-analysis','account-filter-deep'].forEach(id => { const el = document.getElementById(id); if (el) el.value = ''; });
   document.querySelectorAll('.analysis-chip').forEach(b => b.classList.remove('active'));
@@ -4426,7 +4466,7 @@ function renderAnalysisTable() {
     if (analysisFilters.has('near52wkh') && !(s.week52_high_pct != null && s.week52_high_pct >= -3)) return;
     if (analysisFilters.has('near52wkl') && !(s.week52_low_pct != null && s.week52_low_pct <= 5)) return;
     if (window._sectorFilter && s.sector_group !== window._sectorFilter) return;
-    if (window._accountFilter && !(Array.isArray(s.accounts) && s.accounts.some(a => a.name === window._accountFilter))) return;
+    if (accActive() && !(Array.isArray(s.accounts) && s.accounts.some(a => accSel().includes(a.name)))) return;
     if (analysisFilters.has('mustbuy') && !s.must_buy) return;
     if (analysisFilters.has('loss') && (s.pnl_abs || 0) >= 0) return;
 
@@ -4534,9 +4574,9 @@ function renderAnalysisTable() {
   });
 
   // Summary reflects current filter selection (chips, sector dropdown, account, holdings type, search, or column funnels)
-  const anyAnalysisFilter = analysisFilters.size > 0 || !!window._sectorFilter || !!window._accountFilter || (window._holdingType && window._holdingType !== 'All') || !!searchQ || Object.keys(colFilters).length > 0;
+  const anyAnalysisFilter = analysisFilters.size > 0 || !!window._sectorFilter || accActive() || (window._holdingType && window._holdingType !== 'All') || !!searchQ || Object.keys(colFilters).length > 0;
   // Clear-all button ignores the default 'Stocks' holding-type toggle (it isn't a user filter).
-  const _caf = document.getElementById('clear-all-filters'); if (_caf) _caf.style.display = (analysisFilters.size > 0 || !!window._sectorFilter || !!window._accountFilter || !!searchQ || Object.keys(colFilters).length > 0) ? 'inline-block' : 'none';
+  const _caf = document.getElementById('clear-all-filters'); if (_caf) _caf.style.display = (analysisFilters.size > 0 || !!window._sectorFilter || accActive() || !!searchQ || Object.keys(colFilters).length > 0) ? 'inline-block' : 'none';
   updateSummary(anyAnalysisFilter && visibleStocks.length > 0 ? visibleStocks : allStocks, 'analysis');
   const ts = document.getElementById('last-updated').textContent;
   document.getElementById('last-updated-analysis').textContent = ts;
@@ -4589,6 +4629,89 @@ function renderBenchmarks() {
     if (!el) return;
     el.innerHTML = order.map(([k]) => cell(b && b[k] ? b[k][field] : null)).join('');
   });
+}
+
+// ── Accountwise summary panel ─────────────────────────────────────────────
+// Mirrors the whole top summary (invested / value / P&L / day / 1M-5Y / cash)
+// for every account. Click a row to filter · Ctrl/Cmd+Click to combine accounts.
+function summarize(stocks) {
+  let invested = 0, current = 0, inProfit = 0, inLoss = 0;
+  let dayC = 0, dB = 0, m1C = 0, m1B = 0, y1C = 0, y1B = 0, y3C = 0, y3B = 0, y5C = 0, y5B = 0;
+  stocks.forEach(s => {
+    const qty = s.quantity || 0, buy = s.buy_avg || 0, ltp = s.ltp || 0;
+    if (buy && qty) invested += buy * qty;
+    if (ltp && qty) {
+      current += ltp * qty;
+      const h = r => (ltp / (1 + (r / 100))) * qty;
+      if (s.ret_1d != null) { const x = h(s.ret_1d); dayC += ltp * qty - x; dB += x; }
+      if (s.ret_1m != null) { const x = h(s.ret_1m); m1C += ltp * qty - x; m1B += x; }
+      if (s.ret_1y != null) { const x = h(s.ret_1y); y1C += ltp * qty - x; y1B += x; }
+    }
+    if (buy && qty) { const bv = buy * qty;
+      if (s.ret_3y != null) { y3B += bv; y3C += bv * (s.ret_3y / 100); }
+      if (s.ret_5y != null) { y5B += bv; y5C += bv * (s.ret_5y / 100); }
+    }
+    if (s.pnl_pct != null) { if (s.pnl_pct >= 0) inProfit++; else inLoss++; }
+  });
+  const pnlAbs = current - invested;
+  return { invested, current, pnlAbs, pnlPct: invested > 0 ? pnlAbs / invested * 100 : 0,
+    dayAbs: dayC, dayPct: dB > 0 ? dayC / dB * 100 : 0, m1Pct: m1B > 0 ? m1C / m1B * 100 : 0,
+    y1Pct: y1B > 0 ? y1C / y1B * 100 : 0, y3Pct: y3B > 0 ? y3C / y3B * 100 : 0,
+    y5Pct: y5B > 0 ? y5C / y5B * 100 : 0, inProfit, inLoss };
+}
+function computeAccountMetrics(name) {
+  const ht = window._holdingType || 'Stocks';
+  const scoped = [];
+  (allStocks || []).forEach(s => {
+    if (!Array.isArray(s.accounts)) return;
+    const _ht = s.holding_type || 'Stocks';
+    if (ht !== 'All' && _ht !== ht) return;
+    const a = s.accounts.find(x => x.name === name);
+    if (!a) return;
+    const qty = a.qty || 0, buyAvg = a.buy_avg || 0, ltp = s.ltp || 0;
+    scoped.push({ ...s, quantity: qty, buy_avg: buyAvg, ltp, pnl_pct: buyAvg > 0 ? (ltp - buyAvg) / buyAvg * 100 : null });
+  });
+  const m = summarize(scoped);
+  m.cash = (window._cash && window._cash.by_account && window._cash.by_account[name]) || 0;
+  return m;
+}
+function onAccountwiseClick(e, name) { if (e) e.preventDefault(); toggleAccountSelection(name, !!(e && (e.ctrlKey || e.metaKey))); }
+function toggleAccountwise() {
+  const panel = document.getElementById('accountwise-panel');
+  const arrow = document.getElementById('acct-arrow');
+  if (!panel) return;
+  const open = panel.style.display !== 'none';
+  panel.style.display = open ? 'none' : 'block';
+  if (arrow) arrow.style.transform = open ? '' : 'rotate(180deg)';
+  if (!open) renderAccountwise();
+}
+function renderAccountwise() {
+  const panel = document.getElementById('accountwise-panel');
+  if (!panel || panel.style.display === 'none') return;   // only build when open
+  const accts = (window._allAccounts && window._allAccounts.length) ? window._allAccounts
+    : (window._cash && window._cash.by_account ? Object.keys(window._cash.by_account).sort() : []);
+  if (!accts.length) { panel.innerHTML = '<div style="color:var(--text3);font-size:0.75rem;">No account data.</div>'; return; }
+  const locked = (typeof privacyUnlocked !== 'undefined' && !privacyUnlocked);
+  const L = v => locked ? '●●●' : '₹' + (v / 100000).toFixed(2) + 'L';
+  const pnlCell = (abs, pct) => { if (locked) return '<span>●●●</span>'; const c = abs >= 0 ? 'var(--green)' : 'var(--red-text)'; return `<span style="color:${c}">${abs >= 0 ? '+' : '-'}₹${Math.abs(abs / 100000).toFixed(2)}L (${pct >= 0 ? '+' : ''}${pct.toFixed(1)}%)</span>`; };
+  const pctCell = pct => { const c = pct >= 0 ? 'var(--green)' : 'var(--red-text)'; return `<span style="color:${c}">${pct >= 0 ? '+' : ''}${pct.toFixed(1)}%</span>`; };
+  const sel = accSel();
+  const mk = (name, m, isSel) => {
+    const dec = m.inProfit + m.inLoss;
+    const wp = dec > 0 ? Math.round(m.inProfit / dec * 100) + '%' : '—';
+    return `<tr onclick="onAccountwiseClick(event,'${esc(name)}')" style="cursor:pointer;${isSel ? 'background:var(--bg3);' : ''}">
+      <td style="text-align:left;font-weight:700;color:${isSel ? 'var(--purple-text)' : 'var(--text2)'};white-space:nowrap;">${isSel ? '✓ ' : ''}${esc(name)}</td>
+      <td>${L(m.invested)}</td><td>${L(m.current)}</td><td>${pnlCell(m.pnlAbs, m.pnlPct)}</td><td>${pnlCell(m.dayAbs, m.dayPct)}</td>
+      <td>${pctCell(m.m1Pct)}</td><td>${pctCell(m.y1Pct)}</td><td>${pctCell(m.y3Pct)}</td><td>${pctCell(m.y5Pct)}</td>
+      <td>${L(m.cash)}</td>
+      <td style="white-space:nowrap;"><span style="color:var(--green)">${m.inProfit}</span>/<span style="color:var(--red-text)">${m.inLoss}</span> <span style="color:var(--green)">${wp}</span></td></tr>`;
+  };
+  const rows = accts.map(name => mk(name, computeAccountMetrics(name), sel.includes(name))).join('');
+  panel.innerHTML = `<style>.acctwise-table th,.acctwise-table td{padding:3px 8px;border-bottom:1px solid var(--border);text-align:right;}.acctwise-table th:first-child,.acctwise-table td:first-child{text-align:left;}.acctwise-table tbody tr:hover{background:var(--bg3);}</style>
+  <div style="font-size:0.62rem;color:var(--text3);margin-bottom:4px;">Per-account summary (${esc(window._holdingType || 'Stocks')}). Click an account to filter · Ctrl/Cmd+Click to combine several · click again to clear.</div>
+  <table class="acctwise-table" style="width:100%;border-collapse:collapse;font-size:0.7rem;white-space:nowrap;min-width:760px;">
+    <thead><tr style="color:var(--text3);"><th>Account</th><th>Invested</th><th>Cur Value</th><th>Overall P&L</th><th>Day P&L</th><th>1M</th><th>1Y</th><th>3Y</th><th>5Y</th><th>Cash</th><th>Win/Loss</th></tr></thead>
+    <tbody>${rows}</tbody></table>`;
 }
 
 function updateSummary(stocks, scope = 'all') {
@@ -4734,6 +4857,23 @@ function updateSummary(stocks, scope = 'all') {
     document.getElementById('ana-sum-count').textContent  = pvt(String(stocks.length));
     document.getElementById('ana-sum-profit').textContent = pvt(String(inProfit));
     document.getElementById('ana-sum-loss').textContent   = pvt(String(inLoss));
+
+    // Win-rate % (green) + Cash (Lacs, reflects selected accounts)
+    const wpEl = document.getElementById('ana-sum-winpct');
+    if (wpEl) {
+      const decided = inProfit + inLoss;
+      wpEl.textContent = pvt(decided > 0 ? Math.round(inProfit / decided * 100) + '%' : '—');
+    }
+    const cashEl = document.getElementById('ana-sum-cash');
+    if (cashEl && window._cash && window._cash.by_account) {
+      const sel = accSel();
+      let cashVal = 0;
+      if (sel.length) sel.forEach(n => { cashVal += window._cash.by_account[n] || 0; });
+      else cashVal = window._cash.total != null ? window._cash.total : Object.values(window._cash.by_account).reduce((a, b) => a + b, 0);
+      cashEl.textContent = pvt('₹' + fmtLacs(cashVal));
+      const noteEl = document.getElementById('ana-sum-cash-note');
+      if (noteEl) noteEl.textContent = sel.length ? (sel.length === 1 ? sel[0] : sel.length + ' a/c') : 'all a/c';
+    }
   }
 }
 
@@ -4785,8 +4925,8 @@ function renderAll() {
   }
 
   // Account filter: show only stocks held in the selected account
-  if (window._accountFilter) {
-    visible = visible.filter(s => Array.isArray(s.accounts) && s.accounts.some(a => a.name === window._accountFilter));
+  if (accActive()) {
+    visible = visible.filter(s => Array.isArray(s.accounts) && s.accounts.some(a => accSel().includes(a.name)));
     // Scope each card's qty / value / P&L to the selected account's holding
     visible = visible.map(accountAdjustStock);
   }
@@ -4913,6 +5053,9 @@ async function loadData() {
   // Benchmark index returns (Nifty 50, Smallcap 250, Midcap 400) for the summary panel
   window._benchmarks = prices._benchmarks || null;
   renderBenchmarks();
+
+  // Cash position per account (from the sheet's Type=Cash rows)
+  window._cash = prices._cash || null;
 
   // Filter to ONLY stocks that have prices (are in the portfolio)
   // Validate prices quality — if fewer than 5 stocks have prices, it's corrupt data
@@ -5311,7 +5454,7 @@ let privacyUnlocked = false;
     const saved = JSON.parse(localStorage.getItem(UNLOCK_KEY) || 'null');
     if (saved && typeof saved === 'object') {
       privacyUnlocked = true;
-      window._accountFilter = saved.account || '';
+      window._accountFilters = saved.account ? [saved.account] : [];
       window._unlockName = saved.name || '';
     }
   } catch (e) {}
@@ -5603,7 +5746,7 @@ function submitPin() {
   if (match) {
     privacyUnlocked = true;
     const acct = match.account || '';
-    window._accountFilter = acct;
+    window._accountFilters = acct ? [acct] : [];
     // Remember this device so it stays unlocked on future opens (until Lock is tapped)
     try { localStorage.setItem(UNLOCK_KEY, JSON.stringify({ account: acct, name: match.name || '' })); } catch (e) {}
     ['account-filter-analysis', 'account-filter-deep'].forEach(id => { const el = document.getElementById(id); if (el) el.value = acct; });

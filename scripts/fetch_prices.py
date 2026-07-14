@@ -209,6 +209,22 @@ df = df[cols_to_keep].copy()
 if "account" in df.columns:
     df = df[df["account"].astype(str).str.strip().str.upper() != "TOTAL"]
 
+# ── Extract Cash rows (Type == "Cash") per account, then drop from pricing ──
+# Cash rows have qty 0 / blank buy-avg and would otherwise be filtered out and lost.
+# Stored under prices["_cash"] = {"by_account": {...}, "total": N} for the summary.
+cash_by_account = {}
+if "holding_type" in df.columns:
+    _cash_mask = df["holding_type"].astype(str).str.strip().str.lower() == "cash"
+    if _cash_mask.any():
+        _amt_col = "present_value" if "present_value" in df.columns else ("buy_value" if "buy_value" in df.columns else None)
+        for _, _cr in df[_cash_mask].iterrows():
+            _acct = str(_cr["account"]).strip() if "account" in df.columns else "—"
+            _amt = pd.to_numeric(pd.Series([_cr.get(_amt_col)]), errors="coerce").iloc[0] if _amt_col else None
+            if _amt is not None and not pd.isna(_amt) and float(_amt) != 0:
+                cash_by_account[_acct] = round(cash_by_account.get(_acct, 0.0) + float(_amt), 2)
+        df = df[~_cash_mask].copy()
+        print(f"[INFO] Cash: {len(cash_by_account)} accounts, total Rs {sum(cash_by_account.values()):,.0f}")
+
 # ── Separate non-equity holdings (Gold / Silver / MF) ───────────────────────
 # These are NOT on yfinance, so we price them straight from the sheet's
 # Present value column and keep them out of the equity (yfinance) pipeline.
@@ -1104,6 +1120,12 @@ if benchmarks:
 elif isinstance(fallback_prices, dict) and fallback_prices.get("_benchmarks"):
     # Keep previous benchmark data if this run could not fetch any
     prices["_benchmarks"] = fallback_prices["_benchmarks"]
+
+# ── Cash position per account (from the sheet's Type=Cash rows) ──────────────
+if cash_by_account:
+    prices["_cash"] = {"by_account": cash_by_account, "total": round(sum(cash_by_account.values()), 2)}
+elif isinstance(fallback_prices, dict) and fallback_prices.get("_cash"):
+    prices["_cash"] = fallback_prices["_cash"]
 
 # ── Inject non-equity holdings (Gold / Silver / MF) priced from the sheet ────
 if not nonequity_df.empty:
