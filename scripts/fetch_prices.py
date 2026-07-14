@@ -305,6 +305,21 @@ portfolio = pd.DataFrame(agg_rows).reset_index(drop=True)
 print(f"[INFO] Found {len(portfolio)} unique holdings across "
       f"{sum(len(v) for v in accounts_map.values()) or len(portfolio)} account rows\n")
 
+# ── Sheet reference price per ticker (Present value / Qty) ───────────────────
+# Used later for a sanity check against the yfinance price: a large gap means the
+# yfinance symbol resolved to the WRONG security (e.g. a post-demerger namesake),
+# in which case we trust the sheet price and blank the wrong-security returns.
+sheet_ltp_map = {}
+if "present_value" in df.columns:
+    _pv_s = pd.to_numeric(df["present_value"], errors="coerce")
+    _q_s = pd.to_numeric(df["qty"], errors="coerce")
+    _ref = pd.DataFrame({"symbol": df["symbol"].astype(str).str.strip(), "_pv": _pv_s, "_q": _q_s})
+    for _tk, _gg in _ref.groupby("symbol", sort=False):
+        _pv = _gg["_pv"].sum()
+        _q = _gg["_q"].sum()
+        if _q and _q > 0 and _pv and _pv > 0:
+            sheet_ltp_map[str(_tk).strip()] = float(_pv) / float(_q)
+
 # ── Sanity check: abort if portfolio looks empty or corrupt ─────────────────
 # Load existing prices.json to use as fallback if fetch gives bad results
 prices_path = "prices.json"
@@ -1199,6 +1214,47 @@ def sanitise(obj):
     if isinstance(obj, float) and (math.isnan(obj) or math.isinf(obj)):
         return None
     return obj
+
+# ── Price sanity check ──────────────────────────────────────────────────────
+# If the yfinance LTP diverges > 25% from the sheet's own value (Present value /
+# Qty), the yfinance symbol almost certainly resolved to the WRONG security
+# (e.g. a namesake that survived a demerger, like SKF India vs the demerged
+# SKFINDUS). In that case trust the sheet price for VALUE/P&L and blank all the
+# yfinance-derived returns & technicals so no summary/momentum math uses the
+# wrong-security series. Frontend flags these with a ⚠️.
+PRICE_DIVERGENCE = 0.25
+_BLANK_ON_SUSPECT = (
+    "ret_1d", "ret_1w", "ret_1m", "ret_6m", "ret_1y", "ret_2y", "ret_3y", "ret_5y",
+    "week52_high", "week52_low", "ath_pct", "atl_pct",
+    "vol_today_ratio", "vol_week_ratio", "vol_month_ratio", "vol_30m_ratio",
+    "vol_yest_ratio", "vol_30d_ratio", "mcap_3y",
+    "movers", "movers_w", "movers_m", "movers_alloc",
+    "trend_score", "trend_signal", "price_to_200dma_pct",
+    "dma200_slope_30d_pct", "days_above_200dma_10d",
+)
+_suspect_syms = []
+for _sym, _e in prices.items():
+    if _sym.startswith("_") or not isinstance(_e, dict):
+        continue
+    _sl = sheet_ltp_map.get(_sym)
+    _yl = _e.get("ltp")
+    if _sl and _yl and _sl > 0 and abs(float(_yl) - _sl) / _sl > PRICE_DIVERGENCE:
+        _e["price_source"] = "sheet"
+        _e["price_suspect"] = True
+        _e["yf_ltp"] = round(float(_yl), 2)
+        _e["ltp"] = round(float(_sl), 2)
+        _ba = _e.get("buy_avg") or 0
+        _q = _e.get("quantity") or 0
+        if _ba and _q:
+            _e["pnl_abs"] = round((_e["ltp"] - _ba) * _q, 2)
+            _e["pnl_pct"] = round((_e["ltp"] - _ba) / _ba * 100, 2)
+        for _k in _BLANK_ON_SUSPECT:
+            if _k in _e:
+                _e[_k] = None
+        _suspect_syms.append(_sym)
+if _suspect_syms:
+    print(f"[WARN] Price mismatch >{int(PRICE_DIVERGENCE*100)}% vs sheet — using sheet price, "
+          f"returns blanked for: {_suspect_syms}")
 
 with open("prices.json", "w", encoding="utf-8") as f:
     json.dump(sanitise(prices), f, indent=2, ensure_ascii=False)
