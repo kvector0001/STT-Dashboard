@@ -1326,7 +1326,7 @@
           <th class="col-mov" onclick="sortAnalysis('movers')" oncontextmenu="return openMoversBulk('movers',event)" title="Movers — unusual volume + price move, shown by LEVEL. 🔥 LIFETIME-HIGH breakout: at/near all-time high AND vol ≥3× AND day ≥+3%. 🚀 52-WEEK-HIGH breakout: near 52W high AND vol ≥3× AND day ≥+3%. 🧊 LIFETIME-LOW breakdown (EXIT): at/near all-time low AND vol ≥3× AND day ≤−3%. ❄️ 52-WEEK-LOW breakdown: near 52W low AND vol ≥3× AND day ≤−3%. V+P surge: vol ≥4× AND |day| ≥6%. V volume-led: vol ≥4× AND |day| ≥3%. P price-led: vol ≥3× AND |day| ≥6%. Sort: 🔥 &gt; 🚀 &gt; 🧊 &gt; ❄️ &gt; V+P &gt; V &gt; P. Click a cell for a re-rating catalyst prompt. Right-click this header for a combined prompt across all currently-filtered stocks.">Mov(D) <span class="col-filter-icon" data-col="movers" title="Filter" onclick="event.stopPropagation();openColFilter('movers',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-movers" class="sort-indicator"></span></th>
           <th class="col-mov" onclick="sortAnalysis('movers_w')" oncontextmenu="return openMoversBulk('movers_w',event)" title="WEEKLY breakout/breakdown (5-day) — same 🔥 lifetime-high / 🚀 52wk-high / 🧊 lifetime-low / ❄️ 52wk-low levels. Thresholds: weekly volume ≥1.5× avg AND 5-day move ≥±8%, at that level. Click a cell for a single-stock structural prompt; right-click this header for a combined prompt across all filtered stocks.">Mov(Wk) <span class="col-filter-icon" data-col="movers_w" title="Filter" onclick="event.stopPropagation();openColFilter('movers_w',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-movers_w" class="sort-indicator"></span></th>
           <th class="col-mov" onclick="sortAnalysis('movers_m')" oncontextmenu="return openMoversBulk('movers_m',event)" title="MONTHLY breakout/breakdown (21-day) — same 🔥/🚀/🧊/❄️ levels. Thresholds: monthly volume ≥1.3× avg AND 21-day move ≥±15%, at that level. Click a cell for a single-stock structural prompt; right-click this header for a combined prompt across all filtered stocks.">Mov(M) <span class="col-filter-icon" data-col="movers_m" title="Filter" onclick="event.stopPropagation();openColFilter('movers_m',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-movers_m" class="sort-indicator"></span></th>
-          <th class="col-mov" onclick="sortAnalysis('movers_alloc')" oncontextmenu="return openMoversBulk('movers_alloc',event)" title="Allocation ACTION = momentum × 200DMA trend. 🏆 STRONG ADD — monthly catalyst in the low-risk sweet spot (≤20% above a RISING 200DMA, holding ≥9/10 days). 💎 ADD/increase — early confirmed re-rating (monthly up, 1M ≤20%, ≤40% above a RISING 200DMA). 🌱 START-SMALL/watch — early, trend not yet confirmed. ⏳ HOLD/TRIM — already ran (>30% in 1M) or very extended (>50% above 200DMA); don't chase. 🚨 REDUCE — de-rating: breakdown or price below a falling 200DMA. Click a cell for a single-stock allocation prompt; right-click this header for a combined prompt across all filtered stocks.">Alloc <span class="col-filter-icon" data-col="movers_alloc" title="Filter" onclick="event.stopPropagation();openColFilter('movers_alloc',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-movers_alloc" class="sort-indicator"></span></th>
+          <th class="col-mov" onclick="sortAnalysis('movers_alloc')" oncontextmenu="return openMoversBulk('movers_alloc',event)" title="Allocation ACTION = momentum × 200DMA trend (incl. Trend Score). 🏆 STRONG ADD — monthly catalyst in the low-risk sweet spot (≤20% above a RISING 200DMA, holding ≥9/10 days). 💎 ADD/increase — early confirmed re-rating (monthly up, 1M ≤20%, ≤40% above a RISING 200DMA). 🌱 START-SMALL/watch — early, trend not yet confirmed. ⏳ HOLD — already ran (>30% 1M / >50% ext) OR a healthy pullback in a strong uptrend (TS≥70 & 200DMA rising); not a reduce. 🚨 REDUCE — genuine de-rating: new low, below a falling 200DMA, or monthly downtrend without a strong rising 200DMA. Click a cell for a single-stock allocation prompt; right-click this header for a combined prompt across all filtered stocks.">Alloc <span class="col-filter-icon" data-col="movers_alloc" title="Filter" onclick="event.stopPropagation();openColFilter('movers_alloc',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-movers_alloc" class="sort-indicator"></span></th>
           <th class="col-ts" onclick="sortAnalysis('trend_score')" title="Trend Score (0–100) for 3–12 month positional holding | 3 inputs: Price vs 200DMA (40pts) + 200DMA Slope 30d (30pts) + Days above 200DMA last 10 sessions (30pts) | Strong Bullish: ≥85 AND 0–10% zone | Bullish: ≥70 AND 0–10% zone | Extended: ≥70 but &gt;10% | Watch: 55–69 | Hold: 35–54 | Bearish: &lt;35">TS <span id="sort-trend_score" class="sort-indicator"></span></th>
           <th class="col-sig" onclick="sortAnalysis('trend_signal')" title="Trend Signal | Strong Bullish: score≥85 AND 0–10% above 200DMA | Bullish: score≥70 AND 0–10% above 200DMA | Extended: score≥70 but >10% above 200DMA (too extended for fresh entry) | Watch: 55–69 | Hold: 35–54 | Bearish: &lt;35">Signal <span class="col-filter-icon" data-col="trend_signal" title="Filter" onclick="event.stopPropagation();openColFilter('trend_signal',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-trend_signal" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('ret_1d')" title="1-day price return (%)">1D Ret <span id="sort-ret_1d" class="sort-indicator"></span></th>
@@ -3279,13 +3279,15 @@ The overlay is a pure PRICE/VOLUME technical trigger from these inputs (all show
 - da = how many of the last 10 sessions closed above the 200DMA (is price holding above?).
 - 1M = 1-month price return (how much of the move has already happened?).
 - Daily / Weekly / Monthly momentum tags = unusual volume + price move on that timeframe (🔥/🚀 breakout, 📈 trending up, 🧊/❄️/📉 down).
+- TrendScore (0–100) = 200DMA-based trend quality (price vs 200DMA + slope + days above); ≥70 with a rising 200DMA = a genuine uptrend.
 Decision rules (first match wins):
-- 🚨 REDUCE — monthly breakdown, OR weekly breakdown while the 200DMA is falling, OR price >8% below a falling 200DMA.
-- ⏳ HOLD/TRIM — up-momentum but the move already ran (1M >30%) or very extended (ext >50%).
+- 🚨 REDUCE — genuine de-rating: a new 52wk/lifetime low, OR price >3% below a FALLING 200DMA, OR a monthly downtrend WITHOUT a strong rising 200DMA.
+- ⏳ HOLD — down-momentum but price still above a rising/flat 200DMA (a healthy PULLBACK, not a breakdown), OR up-momentum that already ran (1M >30%) or is very extended (ext >50%).
 - 🏆 STRONG ADD — monthly up AND in the low-risk sweet spot: ext ≤20%, 200DMA rising (slope ≥1), holding above the line (da ≥9), still early (1M ≤20%).
 - 💎 ADD — monthly up, 200DMA rising (slope ≥1), not extended (ext ≤40%), still early (1M ≤20%), holding (da ≥6).
 - 🌱 START-SMALL — early up-momentum but not yet confirmed (trend flat/turning, weekly-only, or a bit further along).
-For EACH stock: (a) state its ext / slope / da / 1M values and WHICH rule fired, (b) in one line say why that means increase / keep / reduce TECHNICALLY, then (c) confirm or OVERRIDE it with the fundamental work below (the technical tag cannot see dilution/QIP, debt, FCF, governance — you must).
+NOTE: a monthly/weekly dip in a stock whose 200DMA is still RISING and TrendScore ≥70 is treated as a PULLBACK (⏳ HOLD), not a REDUCE — the long-term trend overrides short-term momentum.
+For EACH stock: (a) state its ext / slope / da / 1M / TrendScore values and WHICH rule fired, (b) in one line say why that means increase / keep / reduce TECHNICALLY, then (c) confirm or OVERRIDE it with the fundamental work below (the technical tag cannot see dilution/QIP, debt, FCF, governance — you must).
 
 ## YOUR ROLE
 You are a senior Indian-equities portfolio manager deciding whether to **INCREASE / START-SMALL / HOLD / TRIM / EXIT** ${multi ? 'each position' : 'this position'}. Be brutally objective. Momentum alone is NOT a reason to add — you only add when a genuine, not-yet-priced structural improvement is underway at a sensible valuation.
@@ -3742,7 +3744,7 @@ const colFilterDefs = {
   movers:   { label: 'Mov(D)',  type: 'set', get: s => _moverTag(s, 'd') },
   movers_w: { label: 'Mov(Wk)', type: 'set', get: s => _moverTag(s, 'w') },
   movers_m: { label: 'Mov(M)',  type: 'set', get: s => _moverTag(s, 'm') },
-  movers_alloc: { label: 'Alloc', type: 'set', get: s => computeAlloc(_moverTag(s,'d'), _moverTag(s,'w'), _moverTag(s,'m'), { ext: s.price_to_200dma_pct, slope: s.dma200_slope_30d_pct, da: s.days_above_200dma_10d, r1m: s.ret_1m }) || null },
+  movers_alloc: { label: 'Alloc', type: 'set', get: s => computeAlloc(_moverTag(s,'d'), _moverTag(s,'w'), _moverTag(s,'m'), { ext: s.price_to_200dma_pct, slope: s.dma200_slope_30d_pct, da: s.days_above_200dma_10d, r1m: s.ret_1m, ts: s.trend_score }) || null },
   week52_high_pct: { label: '52W High%', type: 'range',
     get: s => (s.week52_high && s.ltp) ? (s.ltp - s.week52_high) / s.week52_high * 100 : null,
     options: [ {key:'near', label:'0 to −3% (near high)', min:-3, max:0.001}, {key:'3-10', label:'−3 to −10%', min:-10, max:-3}, {key:'10-25', label:'−10 to −25%', min:-25, max:-10}, {key:'25+', label:'below −25%', min:-Infinity, max:-25} ] },
@@ -4197,32 +4199,40 @@ function computeMover(rvol, r, h52, l52, ath, atl, opt) {
 }
 
 // Allocation-ACTION overlay — combines the momentum tags (Daily/Weekly/Monthly) with the
-// 200DMA trend context (extension, slope, days-above) and the recent 1-month run, to suggest
-// whether to INCREASE / START-SMALL / HOLD-TRIM / REDUCE allocation. Thresholds calibrated on
-// the live portfolio (see repo memory). ctx = {ext, slope, da, r1m}.
-//   🏆 STRONG ADD · 💎 ADD · 🌱 START-SMALL/watch · ⏳ HOLD/TRIM (already ran) · 🚨 REDUCE
+// 200DMA trend context (extension, slope, days-above, Trend Score) and the recent 1-month run,
+// to suggest whether to INCREASE / START-SMALL / HOLD-TRIM / REDUCE allocation. Thresholds
+// calibrated on the live portfolio (see repo memory). ctx = {ext, slope, da, r1m, ts}.
+//   🏆 STRONG ADD · 💎 ADD · 🌱 START-SMALL/watch · ⏳ HOLD/TRIM (extended OR pullback) · 🚨 REDUCE
 function computeAlloc(d, w, m, ctx) {
   ctx = ctx || {};
-  const ext = ctx.ext, slope = ctx.slope, da = ctx.da, r1m = ctx.r1m;
+  const ext = ctx.ext, slope = ctx.slope, da = ctx.da, r1m = ctx.r1m, ts = ctx.ts;
   const up = t => t === '🔥' || t === '🚀' || t === '📈';
   const dn = t => t === '🧊' || t === '❄️' || t === '📉';
+  const hardDn = t => t === '🧊' || t === '❄️';          // new 52wk/lifetime LOW = real breakdown
   const mUp = up(m), mDn = dn(m), wUp = up(w), wDn = dn(w);
   const upCat = mUp || wUp;
   const haveTrend = (ext != null && slope != null);
-  // 1) REDUCE — de-rating / rolling over / below a falling long-term trend
-  if (mDn
-      || (wDn && slope != null && slope < 0)
-      || (ext != null && slope != null && ext < -8 && slope < -3)) return '🚨';
+  // Long-term trend still healthy? (rising 200DMA + price above it + holding + decent Trend Score)
+  const strongTrend = slope != null && slope >= 1 && ext != null && ext > 0
+                      && (da == null || da >= 7) && (ts == null || ts >= 70);
+  const belowFallingMA = ext != null && slope != null && ext < -3 && slope < -1;
+
+  // 1) REDUCE — genuine de-rating (Stage 4), NOT a mere pullback:
+  //    new lows, OR price below a falling 200DMA, OR a monthly downtrend without a strong uptrend.
+  if (hardDn(m) || belowFallingMA || (mDn && !strongTrend)) return '🚨';
+  // 2) Down-momentum but price still above a rising/flat 200DMA → healthy PULLBACK → HOLD/watch
+  if (mDn || wDn) return '⏳';
+  // 3) No up-catalyst → nothing to act on
   if (!upCat) return '';
-  // 2) HOLD / TRIM — up-momentum but the sharp move already happened (extended / already ran)
+  // 4) Up-momentum but the sharp move already happened (extended / already ran) → HOLD/TRIM
   if ((ext != null && ext > 50) || (r1m != null && r1m > 30)) return '⏳';
-  // 3) STRONG ADD — monthly catalyst in the LOW-RISK sweet spot: near a rising mean & holding
+  // 5) STRONG ADD — monthly catalyst in the LOW-RISK sweet spot (near a rising mean & holding)
   if (mUp && haveTrend && slope >= 1 && ext <= 20 && da != null && da >= 9
       && (r1m == null || r1m <= 20) && !wDn) return '🏆';
-  // 4) ADD (increase) — monthly re-rating, still early, long-term trend rising, not extended
+  // 6) ADD (increase) — monthly re-rating, still early, long-term trend rising, not extended
   if (mUp && haveTrend && slope >= 1 && ext <= 40
       && (r1m == null || r1m <= 20) && (da == null || da >= 6) && !wDn) return '💎';
-  // 5) START-SMALL / WATCH — early momentum but not yet confirmed
+  // 7) START-SMALL / WATCH — early momentum but not yet confirmed
   if (upCat && (slope == null || slope >= -2) && (r1m == null || r1m <= 28)) return '🌱';
   return '';
 }
@@ -4253,8 +4263,8 @@ const ALLOC_MEANING = {
   '🏆': 'STRONG ADD — monthly catalyst AND price in the low-risk sweet spot (≤20% above a RISING 200DMA, holding ≥9/10 days, 1M ≤20%). Highest-conviction, lowest-risk entry.',
   '💎': 'ADD / increase — monthly re-rating, still EARLY (1M ≤20%, ≤40% above a RISING 200DMA, holding above the line). Good fresh-entry setup, a touch more extended than 🏆.',
   '🌱': 'START-SMALL / WATCH — early up-momentum but not yet confirmed (200DMA flat/turning, weekly-only, or a bit further along). Build a small position, wait for confirmation.',
-  '⏳': 'HOLD / TRIM into strength — the sharp move already ran (>30% in 1M) or very extended (>50% above 200DMA). Don’t chase; trim the temporary overweight.',
-  '🚨': 'REDUCE — de-rating: monthly breakdown, weekly breakdown on a falling trend, or price below a falling 200DMA.',
+  '⏳': 'HOLD / watch — EITHER already ran (>30% in 1M or >50% above 200DMA — don’t chase, trim into strength) OR a healthy pullback inside a strong uptrend (200DMA still rising, price above it). Not a reduce.',
+  '🚨': 'REDUCE — genuine de-rating: new 52wk/lifetime low, price below a falling 200DMA, or a monthly downtrend without a strong rising 200DMA.',
 };
 function allocTitle(a) { return ALLOC_MEANING[a] || 'No allocation signal'; }
 
@@ -4340,7 +4350,7 @@ function renderAnalysisTable() {
       movers: _mvD,
       movers_w: _mvW,
       movers_m: _mvM,
-      movers_alloc: computeAlloc(_mvD, _mvW, _mvM, { ext: s.price_to_200dma_pct, slope: s.dma200_slope_30d_pct, da: s.days_above_200dma_10d, r1m: s.ret_1m }),
+      movers_alloc: computeAlloc(_mvD, _mvW, _mvM, { ext: s.price_to_200dma_pct, slope: s.dma200_slope_30d_pct, da: s.days_above_200dma_10d, r1m: s.ret_1m, ts: s.trend_score }),
       // Expose conviction/moat from stocks data for sorting
       conviction: s.conviction || 0,
       moat_class:  s.moat_class || '',

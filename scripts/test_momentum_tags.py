@@ -69,12 +69,17 @@ def test_monthly_threshold_12pct():
     assert classify_monthly(1.4, 11.0, near_ath=True, near_52wh=True) == "No"
 
 
-# --- Overlay coverage: 🚨 reduce, ⏳ trim, and downtrend-bounce guard --------
+# --- Overlay coverage: pullback-vs-reduce (TS-aware) + trim + guards ---------
 def test_overlay_edges():
-    assert overlay_alloc("No", "No", ICE) == SIREN                       # monthly breakdown -> reduce
-    assert overlay_alloc("No", DOWN, UP, ext=5, slope=-4.0) == SIREN     # weekly down on a falling 200DMA -> reduce
-    assert overlay_alloc("No", UP, UP, ext=-16, slope=-8.7, da=0, r1m=29) == SIREN  # bounce below a falling 200DMA
-    assert overlay_alloc("No", UP, ROCKET, ext=45, slope=-0.8, da=10, r1m=42) == HOUR  # GREAVESCOT: already ran 42% -> trim
+    assert overlay_alloc("No", "No", ICE) == SIREN                       # new lifetime low -> reduce
+    assert overlay_alloc("No", UP, UP, ext=-16, slope=-8.7, da=0, r1m=29) == SIREN  # below a falling 200DMA -> reduce
+    assert overlay_alloc("No", UP, ROCKET, ext=45, slope=-0.8, da=10, r1m=42) == HOUR  # GREAVESCOT: already ran 42% -> hold/trim
+    # SOUTHWEST case: monthly dip but 200DMA rising hard + TS high -> PULLBACK -> HOLD, not reduce
+    assert overlay_alloc("No", "No", DOWN, ext=11, slope=8.0, da=10, r1m=-11, ts=88) == HOUR
+    # Same monthly dip but the 200DMA is flat and TS weak -> genuine de-rating -> REDUCE
+    assert overlay_alloc("No", "No", DOWN, ext=11, slope=0.4, da=10, r1m=-11, ts=50) == SIREN
+    # EIMCO case: weekly dip, monthly up, price above a (mildly falling) 200DMA -> HOLD, not reduce
+    assert overlay_alloc("No", DOWN, UP, ext=8, slope=-4.5, da=10, r1m=12) == HOUR
     assert overlay_alloc("No", "No", "No") == ""                          # nothing notable
 
 

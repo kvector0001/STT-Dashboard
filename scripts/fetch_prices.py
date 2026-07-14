@@ -724,18 +724,26 @@ for _, row in portfolio.iterrows():
                             return "No"
                         fetched_movers_w = _mover_tf(fetched_vol_week_ratio, ret_1w, 1.5, 8, 8, 1.3, 5)
                         fetched_movers_m = _mover_tf(fetched_vol_month_ratio, ret_1m, 1.3, 12, 12, 1.2, 8)
-                        # Allocation-ACTION overlay (momentum x 200DMA trend context).
-                        # 💎 ADD · 🌱 START-SMALL/watch · ⏳ HOLD/TRIM (already ran) · 🚨 REDUCE.
+                        # Allocation-ACTION overlay (momentum x 200DMA trend context incl. Trend Score).
+                        # 🏆 STRONG ADD · 💎 ADD · 🌱 START-SMALL · ⏳ HOLD (extended or pullback) · 🚨 REDUCE.
                         # Thresholds calibrated on the live portfolio; CALLED AFTER the 200DMA block below.
-                        def _alloc(d, w, m, ext, slope, da, r1m):
+                        def _alloc(d, w, m, ext, slope, da, r1m, ts):
                             down = lambda t: t in ("\U0001f9ca", "\u2744\ufe0f", "\U0001f4c9")
                             up   = lambda t: t in ("\U0001f525", "\U0001f680", "\U0001f4c8")
+                            hard_dn = lambda t: t in ("\U0001f9ca", "\u2744\ufe0f")  # new 52wk/lifetime low
                             m_up, m_dn = up(m), down(m)
                             w_up, w_dn = up(w), down(w)
                             up_cat = m_up or w_up
                             have_trend = ext is not None and slope is not None
-                            if m_dn or (w_dn and slope is not None and slope < 0) or (ext is not None and slope is not None and ext < -8 and slope < -3):
+                            strong_trend = (slope is not None and slope >= 1 and ext is not None and ext > 0
+                                            and (da is None or da >= 7) and (ts is None or ts >= 70))
+                            below_falling_ma = ext is not None and slope is not None and ext < -3 and slope < -1
+                            # 1) REDUCE — genuine de-rating (Stage 4), not a mere pullback
+                            if hard_dn(m) or below_falling_ma or (m_dn and not strong_trend):
                                 return "\U0001f6a8"  # 🚨 REDUCE
+                            # 2) Down-momentum but still above a rising/flat 200DMA → pullback → HOLD
+                            if m_dn or w_dn:
+                                return "\u23f3"  # ⏳ HOLD/watch
                             if not up_cat:
                                 return ""
                             if (ext is not None and ext > 50) or (r1m is not None and r1m > 30):
@@ -814,7 +822,7 @@ for _, row in portfolio.iterrows():
                         # Allocation action (needs the 200DMA context computed just above)
                         fetched_movers_alloc = _alloc(fetched_movers, fetched_movers_w, fetched_movers_m,
                                                       fetched_price_to_200dma_pct, fetched_dma200_slope_30d_pct,
-                                                      fetched_days_above_200dma_10d, ret_1m)
+                                                      fetched_days_above_200dma_10d, ret_1m, fetched_trend_score)
                 except Exception:
                     pass
 

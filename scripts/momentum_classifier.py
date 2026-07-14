@@ -109,26 +109,33 @@ def classify_monthly(rvol, ret, **levels):
     return classify(rvol, ret, vol_t=1.3, up_t=12, dn_t=12, trend_vol=1.2, trend_up=8, **levels)
 
 
-def overlay_alloc(daily, weekly, monthly, ext=None, slope=None, da=None, r1m=None):
-    """Allocation-ACTION overlay: momentum tags x 200DMA trend context.
+def overlay_alloc(daily, weekly, monthly, ext=None, slope=None, da=None, r1m=None, ts=None):
+    """Allocation-ACTION overlay: momentum tags x 200DMA trend context (incl. Trend Score).
 
     ext=price vs 200DMA %, slope=200DMA 30d slope %, da=days above 200DMA (of 10),
-    r1m=1-month return %. Returns:
+    r1m=1-month return %, ts=Trend Score 0-100. Returns:
       TROPHY 🏆 STRONG ADD — catalyst in the low-risk sweet spot (ext<=20, da>=9)
       GEM   💎 ADD (increase) — early confirmed re-rating, not extended
       SEED  🌱 START-SMALL / watch — early, unconfirmed
-      HOUR  ⏳ HOLD / TRIM — already ran (>30% 1M) or very extended (>50% ext)
-      SIREN 🚨 REDUCE — de-rating / below a falling 200DMA
-    Thresholds calibrated on the live portfolio (see repo memory).
+      HOUR  ⏳ HOLD — already ran/extended OR a healthy pullback in a strong uptrend
+      SIREN 🚨 REDUCE — genuine de-rating / below a falling 200DMA
+    A monthly/weekly dip in a stock with a RISING 200DMA and TS>=70 is a PULLBACK (HOLD),
+    not a REDUCE. Thresholds calibrated on the live portfolio (see repo memory).
     """
     up = lambda t: t in (FIRE, ROCKET, UP)
     dn = lambda t: t in (ICE, SNOW, DOWN)
+    hard_dn = lambda t: t in (ICE, SNOW)
     m_up, m_dn = up(monthly), dn(monthly)
     w_up, w_dn = up(weekly), dn(weekly)
     up_cat = m_up or w_up
     have_trend = ext is not None and slope is not None
-    if m_dn or (w_dn and slope is not None and slope < 0) or (ext is not None and slope is not None and ext < -8 and slope < -3):
+    strong_trend = (slope is not None and slope >= 1 and ext is not None and ext > 0
+                    and (da is None or da >= 7) and (ts is None or ts >= 70))
+    below_falling_ma = ext is not None and slope is not None and ext < -3 and slope < -1
+    if hard_dn(monthly) or below_falling_ma or (m_dn and not strong_trend):
         return SIREN
+    if m_dn or w_dn:
+        return HOUR
     if not up_cat:
         return ""
     if (ext is not None and ext > 50) or (r1m is not None and r1m > 30):
