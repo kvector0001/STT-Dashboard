@@ -6238,12 +6238,12 @@
   },
   {
     "ticker": "BEL",
-    "name": "BEL",
-    "sector": "Pending",
+    "name": "Bharat Electronics Limited",
+    "sector": "Defense / Electronics",
     "nse_symbol": "BEL",
-    "moat_type": "Pending",
-    "moat_class": "pending",
-    "conviction": 0,
+    "moat_type": "Wide",
+    "moat_class": "wide",
+    "conviction": 8,
     "holding_type": "Stocks",
     "mcap_cr": 300285.72,
     "pe": 49.493973,
@@ -6255,16 +6255,37 @@
     "div_yield": 105.0,
     "pat_cagr": 4.5,
     "rev_cagr": 11.7,
-    "mcap_3y": 238.29
+    "mcap_3y": 238.29,
+    "sector_group": "Defense",
+    "moat": "India's largest defense-electronics PSU (Navratna). Dominant supplier of radars, sonars, electronic warfare, missile electronics, communications and C4I systems to the armed forces, co-developed deeply with DRDO.",
+    "leadership": "Order book ~Rs 75,000+ Cr on revenue ~Rs 23,000 Cr; near-monopoly in several indigenous defense-electronics categories, with defense ~60%+ of sales and strong ROE (~28%).",
+    "non_rep": "Decades of DRDO co-development, security clearances and a captive defense customer make the position extremely hard to replicate; Atmanirbhar indigenisation mandates lock in domestic sourcing.",
+    "tailwinds": [
+      "Rising Indian defense capex & indigenisation (Atmanirbhar Bharat)",
+      "Large multi-year order book & pipeline",
+      "Diversification into non-defense (space, EVSE, medical, civilian systems)",
+      "Defense-electronics export push"
+    ],
+    "risks": [
+      "Government / defense-budget dependence & lumpy order flow",
+      "PSU pricing & margin oversight",
+      "Imported-component supply-chain risk",
+      "Rich valuation (P/E ~50)"
+    ],
+    "track": [
+      "Order inflows & book-to-bill",
+      "Non-defense revenue share",
+      "Execution / EBITDA margin"
+    ]
   },
   {
     "ticker": "INOXWIND",
-    "name": "INOXWIND",
-    "sector": "Pending",
+    "name": "Inox Wind Limited",
+    "sector": "Wind Energy / Capital Goods",
     "nse_symbol": "INOXWIND",
-    "moat_type": "Pending",
-    "moat_class": "pending",
-    "conviction": 0,
+    "moat_type": "Narrow",
+    "moat_class": "narrow",
+    "conviction": 5,
     "holding_type": "Stocks",
     "mcap_cr": 14014.28,
     "pe": 31.188461,
@@ -6276,16 +6297,37 @@
     "div_yield": 0,
     "pat_cagr": -47.0,
     "rev_cagr": -2.4,
-    "mcap_3y": 108.68
+    "mcap_3y": 108.68,
+    "sector_group": "Renewables / Capital Goods",
+    "moat": "Integrated wind-turbine OEM (turbines, blades, towers) plus EPC and O&M, part of the Inox GFL group, supplying 3 MW+ WTGs for India's renewable build-out after a group-backed balance-sheet clean-up.",
+    "leadership": "One of India's few domestic wind OEMs with a multi-GW order book; recurring O&M (via Inox Green) adds an annuity revenue layer.",
+    "non_rep": "In-house manufacturing across the wind value chain plus a growing common-infrastructure O&M annuity base; type-certified turbines and land/evacuation tie-ups are hard to assemble quickly.",
+    "tailwinds": [
+      "India's wind-capacity addition targets",
+      "Turnaround: debt reduced, back to profitability",
+      "Large executable order book",
+      "Annuity O&M via Inox Green"
+    ],
+    "risks": [
+      "Historically cyclical, lumpy execution & past losses",
+      "Working-capital intensity",
+      "Auction-pricing / policy pressure",
+      "Execution-ramp risk"
+    ],
+    "track": [
+      "Order book & MW delivered",
+      "EBITDA margin & net debt",
+      "O&M portfolio growth"
+    ]
   },
   {
     "ticker": "INVPRECQ",
-    "name": "INVPRECQ",
-    "sector": "Pending",
+    "name": "Investment & Precision Castings Limited",
+    "sector": "Precision Castings / Capital Goods",
     "nse_symbol": "INVPRECQ",
-    "moat_type": "Pending",
-    "moat_class": "pending",
-    "conviction": 0,
+    "moat_type": "Narrow",
+    "moat_class": "narrow",
+    "conviction": 5,
     "holding_type": "Stocks",
     "mcap_cr": 0.0,
     "pe": null,
@@ -6297,16 +6339,37 @@
     "div_yield": 0,
     "pat_cagr": 98.9,
     "rev_cagr": 20.4,
-    "mcap_3y": 19.55
+    "mcap_3y": 19.55,
+    "sector_group": "Capital Goods",
+    "moat": "Bhavnagar-based investment (lost-wax) castings maker in ferrous, non-ferrous, nickel & cobalt alloys, supplying fully-machined ready-to-use components to auto OEMs and vacuum/superalloy castings for aerospace, defense and medical implants.",
+    "leadership": "Small but long-established (since 1975) precision-castings player; a rising aerospace/defense/medical mix has lifted margins and profit (5-yr PAT CAGR ~96%).",
+    "non_rep": "Metallurgical know-how plus aerospace/defense quality certifications and OEM approvals for critical castings take years to qualify — a high barrier for new suppliers.",
+    "tailwinds": [
+      "Aerospace & defense localisation / import substitution",
+      "Rising value-added (vacuum / superalloy) castings mix",
+      "Auto & medical-implant demand",
+      "Margin expansion as mix shifts"
+    ],
+    "risks": [
+      "Small scale (~Rs 800 Cr mcap) & customer concentration",
+      "High working-capital / inventory intensity",
+      "Elevated valuation (P/E ~66, ~8x book)",
+      "Modest ROE (~10-13%)"
+    ],
+    "track": [
+      "Aerospace / defense revenue share",
+      "EBITDA margin & ROCE",
+      "Working-capital / inventory days"
+    ]
   },
   {
     "ticker": "RATNAVEER",
-    "name": "RATNAVEER",
-    "sector": "Pending",
+    "name": "Ratnaveer Precision Engineering Limited",
+    "sector": "Stainless Steel Products",
     "nse_symbol": "RATNAVEER",
-    "moat_type": "Pending",
-    "moat_class": "pending",
-    "conviction": 0,
+    "moat_type": "Narrow",
+    "moat_class": "narrow",
+    "conviction": 5,
     "holding_type": "Stocks",
     "mcap_cr": 1283.75,
     "pe": 16.177319,
@@ -6318,7 +6381,28 @@
     "div_yield": 0,
     "pat_cagr": 38.0,
     "rev_cagr": 22.6,
-    "mcap_3y": 36.38
+    "mcap_3y": 36.38,
+    "sector_group": "Metals / Manufacturing",
+    "moat": "Stainless-steel value-added products — finishing sheets, washers (India's largest SS washer exporter), tubes/pipes and sheet metal — now expanding into Copper Clad Laminates (CCL) for electronics import-substitution.",
+    "leadership": "Large SS washer exporter (3,300+ SKUs across 30+ countries) with the core stainless business growing 20%+, and the ECMS-approved CCL project as optionality on electronics localisation.",
+    "non_rep": "Scale and SKU breadth in SS washers plus an export network; a first-mover attempt at integrated domestic CCL manufacturing if executed.",
+    "tailwinds": [
+      "Stainless demand (solar, railways, defense, renewables)",
+      "Copper Clad Laminate import substitution (ECMS/PLI)",
+      "Export growth & value-added mix",
+      "Capacity additions (Phase-II/III)"
+    ],
+    "risks": [
+      "Large upcoming equity dilution (QIP + warrants ~25-35%)",
+      "Negative FCF during heavy capex; debt nearly doubled",
+      "Rising debtor days / working-capital",
+      "Unproven CCL / electronics pivot"
+    ],
+    "track": [
+      "QIP pricing & dilution",
+      "CCL Line-1 commissioning (Nov-2026)",
+      "FCF, debtor days & ROCE"
+    ]
   },
   {
     "ticker": "Cash",
@@ -6344,24 +6428,32 @@
   },
   {
     "ticker": "IKS",
-    "name": "INVENTURUS KNOWLEDGE SO L",
-    "sector": "Healthcare",
+    "name": "Inventurus Knowledge Solutions Limited",
+    "sector": "Healthcare Tech / RCM",
     "nse_symbol": "IKS",
     "buy_avg": 1845.0,
-    "moat_type": "Pending",
-    "moat_class": "pending",
-    "conviction": 0,
-    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
-    "leadership": "Pending",
-    "non_rep": "Pending",
+    "moat_type": "Narrow",
+    "moat_class": "narrow",
+    "conviction": 6,
+    "moat": "Tech-enabled healthcare services (revenue-cycle management, clinical documentation, virtual care operations) for US physician groups and health systems, embedded into sticky multi-year provider workflows.",
+    "leadership": "One of the larger India-based healthcare RCM/ops providers to large US medical groups; strong ~30%+ ROE and high PAT growth on a scaled revenue base.",
+    "non_rep": "Deeply embedded in customer clinical/billing workflows with domain-trained talent and proprietary tech; long onboarding and high switching costs make displacement hard, with AI/automation layered on scaled ops.",
     "tailwinds": [
-      "Pending analysis"
+      "US healthcare cost pressure driving outsourcing",
+      "Physician administrative-burden reduction",
+      "AI-led automation of RCM & clinical documentation",
+      "Cross-sell into large existing accounts"
     ],
     "risks": [
-      "Pending analysis"
+      "High client concentration (large customers)",
+      "US healthcare policy / reimbursement changes",
+      "AI disruption cuts both ways",
+      "Premium valuation (P/E ~45)"
     ],
     "track": [
-      "Add tracking KPIs"
+      "Net revenue retention & client additions",
+      "Automation-led margin expansion",
+      "Client concentration"
     ],
     "mcap_cr": 31929.25,
     "pe": 45.072224,
@@ -6373,28 +6465,37 @@
     "div_yield": 0,
     "pat_cagr": 38.6,
     "rev_cagr": 18.5,
-    "mcap_3y": -3.81
+    "mcap_3y": -3.81,
+    "sector_group": "Healthcare"
   },
   {
     "ticker": "IONEXCHANG",
-    "name": "ION EXCHANGE (INDIA) LTD",
-    "sector": "Industrials",
+    "name": "Ion Exchange (India) Limited",
+    "sector": "Water Treatment",
     "nse_symbol": "IONEXCHANG",
     "buy_avg": 420.2626,
-    "moat_type": "Pending",
-    "moat_class": "pending",
-    "conviction": 0,
-    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
-    "leadership": "Pending",
-    "non_rep": "Pending",
+    "moat_type": "Narrow",
+    "moat_class": "narrow",
+    "conviction": 6,
+    "moat": "India's leading integrated water & environment company across engineering (water/wastewater/ZLD plants), chemicals (ion-exchange resins & specialty) and consumer (Zero-B), with in-house resin manufacturing exported globally.",
+    "leadership": "One of very few end-to-end domestic water players, with strong brand across industrial, municipal and consumer segments plus large project and recurring chemical/O&M revenue.",
+    "non_rep": "In-house ion-exchange resin manufacturing plus decades of water-engineering IP and references; few Indian peers span engineering + chemicals + consumer.",
     "tailwinds": [
-      "Pending analysis"
+      "India water infrastructure & municipal spend (Jal Jeevan)",
+      "Industrial ZLD & water-reuse mandates",
+      "Resin exports & specialty chemicals",
+      "Consumer water (Zero-B) growth"
     ],
     "risks": [
-      "Pending analysis"
+      "Project-execution lumpiness & receivables",
+      "Recent one-off PAT dip",
+      "Working-capital intensity",
+      "Government-order dependence"
     ],
     "track": [
-      "Add tracking KPIs"
+      "Order book & execution",
+      "Chemicals / consumer revenue mix",
+      "Working capital & receivables"
     ],
     "mcap_cr": 5552.77,
     "pe": 38.906116,
@@ -6406,7 +6507,8 @@
     "div_yield": 27.0,
     "pat_cagr": -61.9,
     "rev_cagr": 3.4,
-    "mcap_3y": 12.35
+    "mcap_3y": 12.35,
+    "sector_group": "Water / Environment"
   },
   {
     "ticker": "ADITYA BIRLA SUN LIFE ARBITRAGE FUND - DIRECT PLAN",
@@ -6444,45 +6546,63 @@
   {
     "ticker": "LOKESHMACH",
     "name": "Lokesh Machines Limited",
-    "sector": "Industrials",
+    "sector": "Machine Tools / Defense",
     "nse_symbol": "LOKESHMACH",
     "buy_avg": 330.35,
-    "moat_type": "Pending",
-    "moat_class": "pending",
-    "conviction": 0,
-    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
-    "leadership": "Pending",
-    "non_rep": "Pending",
+    "moat_type": "Narrow",
+    "moat_class": "narrow",
+    "conviction": 5,
+    "moat": "Hyderabad-based maker of CNC and special-purpose machines for auto/engineering, expanding into defense (gun barrels and small-arms components), integrating from machine-building to precision components.",
+    "leadership": "Established machine-tool builder with a growing defense order pipeline; small base showing high recent profit growth off a low level.",
+    "non_rep": "Machine-tool engineering plus defense/ordnance qualification and approvals; being both a machine builder and a component maker is uncommon.",
     "tailwinds": [
-      "Pending analysis"
+      "Defense indigenisation (small arms, barrels, ammunition)",
+      "Capex revival in auto/engineering machine tools",
+      "CNC import substitution",
+      "Operating leverage off a small base"
     ],
     "risks": [
-      "Pending analysis"
+      "Very small scale & lumpy defense orders",
+      "Extremely high valuation (P/E ~345) on a tiny profit base",
+      "Elevated debt (high D/E)",
+      "Execution & working capital"
     ],
     "track": [
-      "Add tracking KPIs"
-    ]
+      "Defense order inflows & execution",
+      "Margin & ROCE improvement",
+      "Debt reduction"
+    ],
+    "sector_group": "Defense / Capital Goods"
   },
   {
     "ticker": "VIPULORG",
     "name": "Vipul Organics Limited",
-    "sector": "Basic Materials",
+    "sector": "Specialty Chemicals / Dyes & Pigments",
     "nse_symbol": "VIPULORG",
     "buy_avg": 264.8723,
-    "moat_type": "Pending",
-    "moat_class": "pending",
-    "conviction": 0,
-    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
-    "leadership": "Pending",
-    "non_rep": "Pending",
+    "moat_type": "Narrow",
+    "moat_class": "narrow",
+    "conviction": 5,
+    "moat": "Specialty-chemicals maker of dyes, pigments (azo, lake) and pigment intermediates for textiles, inks, coatings, plastics and food colours, exporting to 40+ countries, now expanding via a new Sayakha (Gujarat) plant into higher-value pigments.",
+    "leadership": "Small-cap colour/pigment player with a diversified export book and new greenfield capacity to drive the next growth leg.",
+    "non_rep": "Product breadth across dyes/pigments plus regulatory approvals for export and food-grade colours, with relationships across multiple end-industries.",
     "tailwinds": [
-      "Pending analysis"
+      "China+1 shift in specialty chemicals / pigments",
+      "New Sayakha capacity ramping",
+      "Export growth & higher-value pigment mix",
+      "Food-colour / niche demand"
     ],
     "risks": [
-      "Pending analysis"
+      "Small scale & competitive, commoditising dye segments",
+      "Raw-material (crude / intermediates) price volatility",
+      "High valuation (P/E ~64) on a small base",
+      "New-capacity ramp execution"
     ],
     "track": [
-      "Add tracking KPIs"
-    ]
+      "New plant utilisation & revenue ramp",
+      "Gross margin vs raw-material prices",
+      "Export growth & debt"
+    ],
+    "sector_group": "Specialty Chemicals"
   }
 ]

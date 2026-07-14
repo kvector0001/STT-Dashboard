@@ -40,6 +40,7 @@ YFINANCE_SYMBOL_OVERRIDES = {
     "PARKHOSPS": "PARKHOSPS.BO",
     "INCAP": "INCAP.BO",
     "MAFANG": "MAFANG.NS",   # .BO only has 1 row of history; .NS has full 5y
+    "SKFINDUS": "SKFINDUS.NS",  # demerged SKF India Industrial entity (NOT SKFINDIA/SKF India)
 }
 
 # ── Path resolution (Google Sheets vs local vs GitHub Actions) ──────────────
@@ -115,10 +116,13 @@ acct_col = find_col(df, ["account"])
 bv_col   = find_col(df, ["buy value", "buyvalue"])
 pv_col   = find_col(df, ["present value", "current value", "market value"])
 type_col = find_col(df, ["type", "asset class", "category"])
+ts_col   = find_col(df, ["timestamp", "time stamp", "last updated", "updated at"])
 if acct_col:
     print(f"[INFO] Found Account column: {acct_col!r}")
 if type_col:
     print(f"[INFO] Found Type column: {type_col!r}")
+if ts_col:
+    print(f"[INFO] Found Timestamp column: {ts_col!r}")
 
 missing = []
 if sym_col  is None: missing.append("Symbol/Ticker column (tried: symbol, ticker, scrip, stock)")
@@ -204,6 +208,9 @@ if pv_col and pv_col not in [sym_col, qty_col, avg_col, acct_col, bv_col, mb_col
 if type_col and type_col not in [sym_col, qty_col, avg_col, acct_col, bv_col, mb_col, pv_col]:
     df = df.rename(columns={type_col: "holding_type"})
     cols_to_keep.append("holding_type")
+if ts_col and ts_col not in [sym_col, qty_col, avg_col, acct_col, bv_col, mb_col, pv_col, type_col]:
+    df = df.rename(columns={ts_col: "sheet_ts"})
+    cols_to_keep.append("sheet_ts")
 df = df[cols_to_keep].copy()
 # Exclude the spreadsheet TOTAL summary row(s) (Account Name == "TOTAL")
 if "account" in df.columns:
@@ -319,6 +326,17 @@ if "present_value" in df.columns:
         _q = _gg["_q"].sum()
         if _q and _q > 0 and _pv and _pv > 0:
             sheet_ltp_map[str(_tk).strip()] = float(_pv) / float(_q)
+
+# Latest sheet Timestamp per ticker — lets the sanity check tighten the tolerance
+# to 20% when the sheet was updated TODAY (fresh), vs 25% otherwise.
+sheet_ts_map = {}
+if "sheet_ts" in df.columns:
+    _ts = pd.to_datetime(df["sheet_ts"], errors="coerce")
+    _tref = pd.DataFrame({"symbol": df["symbol"].astype(str).str.strip(), "_ts": _ts})
+    for _tk, _gg in _tref.groupby("symbol", sort=False):
+        _mx = _gg["_ts"].max()
+        if pd.notna(_mx):
+            sheet_ts_map[str(_tk).strip()] = _mx
 
 # ── Sanity check: abort if portfolio looks empty or corrupt ─────────────────
 # Load existing prices.json to use as fallback if fetch gives bad results
@@ -1216,13 +1234,15 @@ def sanitise(obj):
     return obj
 
 # ── Price sanity check ──────────────────────────────────────────────────────
-# If the yfinance LTP diverges > 25% from the sheet's own value (Present value /
-# Qty), the yfinance symbol almost certainly resolved to the WRONG security
-# (e.g. a namesake that survived a demerger, like SKF India vs the demerged
-# SKFINDUS). In that case trust the sheet price for VALUE/P&L and blank all the
-# yfinance-derived returns & technicals so no summary/momentum math uses the
-# wrong-security series. Frontend flags these with a ⚠️.
-PRICE_DIVERGENCE = 0.25
+# If the yfinance LTP diverges materially from the sheet's own value (Present
+# value / Qty), the yfinance symbol almost certainly resolved to the WRONG
+# security (e.g. a namesake that survived a demerger, like SKF India vs the
+# demerged SKFINDUS). Tolerance is 20% when the sheet row was updated TODAY
+# (fresh & trustworthy), else 25%. On a trip we trust the sheet price for
+# VALUE/P&L and blank all yfinance-derived returns/technicals so no summary or
+# momentum math uses the wrong-security series. Frontend flags these with ⚠️.
+from datetime import date as _date
+_today = _date.today()
 _BLANK_ON_SUSPECT = (
     "ret_1d", "ret_1w", "ret_1m", "ret_6m", "ret_1y", "ret_2y", "ret_3y", "ret_5y",
     "week52_high", "week52_low", "ath_pct", "atl_pct",
@@ -1238,9 +1258,15 @@ for _sym, _e in prices.items():
         continue
     _sl = sheet_ltp_map.get(_sym)
     _yl = _e.get("ltp")
-    if _sl and _yl and _sl > 0 and abs(float(_yl) - _sl) / _sl > PRICE_DIVERGENCE:
+    if not (_sl and _yl and _sl > 0):
+        continue
+    _ts = sheet_ts_map.get(_sym)
+    _fresh = bool(_ts is not None and hasattr(_ts, "date") and _ts.date() == _today)
+    _tol = 0.20 if _fresh else 0.25
+    if abs(float(_yl) - _sl) / _sl > _tol:
         _e["price_source"] = "sheet"
         _e["price_suspect"] = True
+        _e["price_ts_fresh"] = _fresh
         _e["yf_ltp"] = round(float(_yl), 2)
         _e["ltp"] = round(float(_sl), 2)
         _ba = _e.get("buy_avg") or 0
@@ -1251,10 +1277,9 @@ for _sym, _e in prices.items():
         for _k in _BLANK_ON_SUSPECT:
             if _k in _e:
                 _e[_k] = None
-        _suspect_syms.append(_sym)
+        _suspect_syms.append(f"{_sym}({'fresh' if _fresh else 'stale'},tol={int(_tol*100)}%)")
 if _suspect_syms:
-    print(f"[WARN] Price mismatch >{int(PRICE_DIVERGENCE*100)}% vs sheet — using sheet price, "
-          f"returns blanked for: {_suspect_syms}")
+    print(f"[WARN] Price mismatch vs sheet — using sheet price, returns blanked for: {_suspect_syms}")
 
 with open("prices.json", "w", encoding="utf-8") as f:
     json.dump(sanitise(prices), f, indent=2, ensure_ascii=False)
