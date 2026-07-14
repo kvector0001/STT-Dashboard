@@ -740,6 +740,8 @@ for _, row in portfolio.iterrows():
                                 return ""
                             if (ext is not None and ext > 50) or (r1m is not None and r1m > 30):
                                 return "\u23f3"  # ⏳ HOLD/TRIM
+                            if m_up and have_trend and slope >= 1 and ext <= 20 and da is not None and da >= 9 and (r1m is None or r1m <= 20) and not w_dn:
+                                return "\U0001f3c6"  # 🏆 STRONG ADD (low-risk sweet spot)
                             if m_up and have_trend and slope >= 1 and ext <= 40 and (r1m is None or r1m <= 20) and (da is None or da >= 6) and not w_dn:
                                 return "\U0001f48e"  # 💎 ADD
                             if up_cat and (slope is None or slope >= -2) and (r1m is None or r1m <= 28):

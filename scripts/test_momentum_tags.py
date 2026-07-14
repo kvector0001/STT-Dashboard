@@ -11,7 +11,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from momentum_classifier import (  # noqa: E402
     classify_daily, classify_weekly, classify_monthly, overlay_alloc,
-    FIRE, ROCKET, UP, DOWN, ICE, SNOW, SUSPECT, GEM, SEED, HOUR, SIREN,
+    FIRE, ROCKET, UP, DOWN, ICE, SNOW, SUSPECT, GEM, TROPHY, SEED, HOUR, SIREN,
 )
 
 
@@ -38,8 +38,12 @@ def test_trending_up():
     d = classify_daily(1.1, 0.5)
     assert w == UP, w
     assert m == UP, m
-    # HAPPYFORGE-like: 1M move 10%, +14% above a rising 200DMA, holding above -> ADD
-    assert overlay_alloc(d, w, m, ext=14, slope=3.0, da=10, r1m=10) == GEM
+    # HAPPYFORGE-like: +32% above a rising 200DMA (past the sweet spot) but early -> ADD
+    assert overlay_alloc(d, w, m, ext=32, slope=7.0, da=10, r1m=17) == GEM
+    # TVSELECT/RATNAVEER-like sweet spot: ext<=20 AND da>=9 -> STRONG ADD
+    assert overlay_alloc(d, w, m, ext=8, slope=2.2, da=10, r1m=13) == TROPHY
+    # ext just over the sweet-spot cap (20) stays a regular ADD, not STRONG
+    assert overlay_alloc(d, w, m, ext=25, slope=2.2, da=10, r1m=13) == GEM
     # Same tags but 200DMA still flat/turning (slope 0.4) -> not yet confirmed -> START-SMALL
     assert overlay_alloc(d, w, m, ext=14, slope=0.4, da=10, r1m=10) == SEED
     # A strong-up weekly that IS near the 52w high must NOT be 📈 (it's a 🚀 breakout).

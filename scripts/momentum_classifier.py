@@ -36,6 +36,7 @@ UP = "\U0001f4c8"       # 📈
 DOWN = "\U0001f4c9"     # 📉
 SUSPECT = "\u26a0\ufe0f"  # ⚠️
 GEM = "\U0001f48e"      # 💎
+TROPHY = "\U0001f3c6"   # 🏆
 SEED = "\U0001f331"     # 🌱
 HOUR = "\u23f3"         # ⏳
 SIREN = "\U0001f6a8"    # 🚨
@@ -113,6 +114,7 @@ def overlay_alloc(daily, weekly, monthly, ext=None, slope=None, da=None, r1m=Non
 
     ext=price vs 200DMA %, slope=200DMA 30d slope %, da=days above 200DMA (of 10),
     r1m=1-month return %. Returns:
+      TROPHY 🏆 STRONG ADD — catalyst in the low-risk sweet spot (ext<=20, da>=9)
       GEM   💎 ADD (increase) — early confirmed re-rating, not extended
       SEED  🌱 START-SMALL / watch — early, unconfirmed
       HOUR  ⏳ HOLD / TRIM — already ran (>30% 1M) or very extended (>50% ext)
@@ -131,6 +133,8 @@ def overlay_alloc(daily, weekly, monthly, ext=None, slope=None, da=None, r1m=Non
         return ""
     if (ext is not None and ext > 50) or (r1m is not None and r1m > 30):
         return HOUR
+    if m_up and have_trend and slope >= 1 and ext <= 20 and da is not None and da >= 9 and (r1m is None or r1m <= 20) and not w_dn:
+        return TROPHY
     if m_up and have_trend and slope >= 1 and ext <= 40 and (r1m is None or r1m <= 20) and (da is None or da >= 6) and not w_dn:
         return GEM
     if up_cat and (slope is None or slope >= -2) and (r1m is None or r1m <= 28):
