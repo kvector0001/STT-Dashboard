@@ -6604,5 +6604,49 @@
       "Export growth & debt"
     ],
     "sector_group": "Specialty Chemicals"
+  },
+  {
+    "ticker": "HONAUT",
+    "name": "Honeywell Automation India Limited",
+    "sector": "Industrials",
+    "nse_symbol": "HONAUT",
+    "buy_avg": 39160.0,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "SIEMENS",
+    "name": "Siemens Limited",
+    "sector": "Industrials",
+    "nse_symbol": "SIEMENS",
+    "buy_avg": 3647.9083,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
   }
 ]
