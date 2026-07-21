@@ -5,7 +5,7 @@
     "quantity": 1.0,
     "pnl_pct": 82.97,
     "pnl_abs": 43.03,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -68,7 +68,7 @@
     "quantity": 183.0,
     "pnl_pct": 186.65,
     "pnl_abs": 96929.85,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -111,7 +111,7 @@
     "vol_week_ratio": 0.58,
     "vol_month_ratio": 0.62,
     "ath_pct": -1.35,
-    "atl_pct": 1189.13,
+    "atl_pct": 1189.12,
     "trend_score": 88,
     "trend_signal": "Extended",
     "price_to_200dma_pct": 19.74,
@@ -147,7 +147,7 @@
     "quantity": 101.0,
     "pnl_pct": 677.42,
     "pnl_abs": 153759.4,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -220,7 +220,7 @@
     "quantity": 540.0,
     "pnl_pct": 1177.33,
     "pnl_abs": 85115.83,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -278,7 +278,7 @@
     "quantity": 112.0,
     "pnl_pct": null,
     "pnl_abs": null,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -351,7 +351,7 @@
     "quantity": 1.0,
     "pnl_pct": 114.75,
     "pnl_abs": 127.69,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -418,7 +418,7 @@
     "quantity": 51.0,
     "pnl_pct": -8.35,
     "pnl_abs": -2106.85,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -491,7 +491,7 @@
     "quantity": 100.0,
     "pnl_pct": 150.58,
     "pnl_abs": 43810.0,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -558,7 +558,7 @@
     "quantity": 449.0,
     "pnl_pct": 182.08,
     "pnl_abs": 191645.86,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -631,7 +631,7 @@
     "quantity": 298.0,
     "pnl_pct": 118.22,
     "pnl_abs": 14723.55,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -703,7 +703,7 @@
     "quantity": 1.0,
     "pnl_pct": 81.82,
     "pnl_abs": 182.0,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -769,7 +769,7 @@
     "quantity": 1.0,
     "pnl_pct": 39.45,
     "pnl_abs": 232.3,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -787,7 +787,7 @@
     "debt_to_equity": 5.654,
     "eps": 4.84,
     "book_value": 1038.04,
-    "div_yield": 35.0,
+    "div_yield": 37.0,
     "pat_cagr": -56.0,
     "rev_cagr": 17.8,
     "mcap_3y": -27.95,
@@ -836,7 +836,7 @@
     "quantity": 69.0,
     "pnl_pct": -34.04,
     "pnl_abs": -10874.65,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -914,7 +914,7 @@
     "quantity": 6123.0,
     "pnl_pct": 286.99,
     "pnl_abs": 884409.79,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -966,7 +966,7 @@
     "quantity": 1.0,
     "pnl_pct": 169.68,
     "pnl_abs": 203.11,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -1012,7 +1012,7 @@
     "quantity": 18.0,
     "pnl_pct": 247.53,
     "pnl_abs": 71455.65,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -1084,7 +1084,7 @@
     "quantity": 369.0,
     "pnl_pct": 301.94,
     "pnl_abs": 553754.39,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -1163,7 +1163,7 @@
     "quantity": 1.0,
     "pnl_pct": 480.36,
     "pnl_abs": 121.29,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -1227,7 +1227,7 @@
     "quantity": 4.0,
     "pnl_pct": 1365.68,
     "pnl_abs": 119956.35,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -1300,7 +1300,7 @@
     "quantity": 1.0,
     "pnl_pct": 89.24,
     "pnl_abs": 127.3,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -1318,7 +1318,7 @@
     "debt_to_equity": 27.26,
     "eps": 19.05,
     "book_value": 130.09,
-    "div_yield": 218.0,
+    "div_yield": 223.0,
     "pat_cagr": -41.2,
     "rev_cagr": 25.5,
     "mcap_3y": 57.3,
@@ -1367,7 +1367,7 @@
     "quantity": 271.0,
     "pnl_pct": 228.69,
     "pnl_abs": 30703.68,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -1420,7 +1420,7 @@
     "quantity": 289.0,
     "pnl_pct": 219.03,
     "pnl_abs": 272699.79,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -1497,7 +1497,7 @@
     "quantity": 48.0,
     "pnl_pct": 1.04,
     "pnl_abs": 895.6,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -1576,7 +1576,7 @@
     "quantity": 1.0,
     "pnl_pct": 833.21,
     "pnl_abs": 446.6,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -1643,7 +1643,7 @@
     "quantity": 1.0,
     "pnl_pct": 355.95,
     "pnl_abs": 1480.4,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -1707,7 +1707,7 @@
     "quantity": 991.0,
     "pnl_pct": 110.73,
     "pnl_abs": 215270.07,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -1794,7 +1794,7 @@
     "quantity": 20.0,
     "pnl_pct": 15.19,
     "pnl_abs": 3340.0,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -1861,7 +1861,7 @@
     "quantity": 21.0,
     "pnl_pct": 16.84,
     "pnl_abs": 5276.2,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -1931,7 +1931,7 @@
     "quantity": 7.0,
     "pnl_pct": -14.61,
     "pnl_abs": -3196.7,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -1998,7 +1998,7 @@
     "quantity": 66.0,
     "pnl_pct": 13.7,
     "pnl_abs": 3502.35,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -2070,7 +2070,7 @@
     "quantity": 132.0,
     "pnl_pct": 8.85,
     "pnl_abs": 6324.0,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -2139,7 +2139,7 @@
     "quantity": 222.0,
     "pnl_pct": 17.31,
     "pnl_abs": 5266.68,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -2207,7 +2207,7 @@
     "quantity": 59.0,
     "pnl_pct": -4.82,
     "pnl_abs": -3240.1,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -2249,7 +2249,7 @@
     "vol_week_ratio": 0.45,
     "vol_month_ratio": 0.77,
     "ath_pct": -39.34,
-    "atl_pct": 317341.5,
+    "atl_pct": 317341.59,
     "trend_score": 88,
     "trend_signal": "Extended",
     "price_to_200dma_pct": 18.09,
@@ -2284,7 +2284,7 @@
     "quantity": 69.0,
     "pnl_pct": -4.13,
     "pnl_abs": -4059.6,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -2350,7 +2350,7 @@
     "quantity": 67.0,
     "pnl_pct": -26.56,
     "pnl_abs": -6665.1,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -2417,7 +2417,7 @@
     "quantity": 356.0,
     "pnl_pct": 31.05,
     "pnl_abs": 52544.57,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -2504,7 +2504,7 @@
     "quantity": 255.0,
     "pnl_pct": 159.72,
     "pnl_abs": 106651.56,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -2572,7 +2572,7 @@
     "quantity": 267.0,
     "pnl_pct": 2.39,
     "pnl_abs": 2464.06,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -2646,7 +2646,7 @@
     "quantity": 5.0,
     "pnl_pct": -19.95,
     "pnl_abs": -161.95,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -2709,7 +2709,7 @@
     "quantity": 1.0,
     "pnl_pct": -14.92,
     "pnl_abs": -58.8,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -2776,7 +2776,7 @@
     "quantity": 20.0,
     "pnl_pct": -10.64,
     "pnl_abs": -4315.0,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -2805,7 +2805,7 @@
     "vol_week_ratio": 0.56,
     "vol_month_ratio": 1.58,
     "ath_pct": -46.03,
-    "atl_pct": 6259.1,
+    "atl_pct": 6259.09,
     "trend_score": 70,
     "trend_signal": "Bullish",
     "price_to_200dma_pct": 9.42,
@@ -2839,7 +2839,7 @@
     "quantity": 245.0,
     "pnl_pct": 8.69,
     "pnl_abs": 11777.1,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -2930,7 +2930,7 @@
     "quantity": 41.0,
     "pnl_pct": -4.46,
     "pnl_abs": -6453.2,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -3001,7 +3001,7 @@
     "quantity": 38.0,
     "pnl_pct": 9.58,
     "pnl_abs": 4043.6,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -3069,7 +3069,7 @@
     "quantity": 27.0,
     "pnl_pct": 97.12,
     "pnl_abs": 12193.2,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -3087,7 +3087,7 @@
     "debt_to_equity": 87.071,
     "eps": 20.39,
     "book_value": 508.17,
-    "div_yield": 2.0,
+    "div_yield": 3.0,
     "pat_cagr": -20.9,
     "rev_cagr": 26.9,
     "mcap_3y": 232.27,
@@ -3100,7 +3100,7 @@
     "vol_week_ratio": 0.94,
     "vol_month_ratio": 0.96,
     "ath_pct": -7.77,
-    "atl_pct": 23621.71,
+    "atl_pct": 23621.7,
     "trend_score": 75,
     "trend_signal": "Extended",
     "price_to_200dma_pct": 42.91,
@@ -3136,7 +3136,7 @@
     "quantity": 142.0,
     "pnl_pct": 38.82,
     "pnl_abs": 47694.7,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -3204,7 +3204,7 @@
     "quantity": 20.0,
     "pnl_pct": 35.35,
     "pnl_abs": 7358.8,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -3277,7 +3277,7 @@
     "quantity": 349.0,
     "pnl_pct": -5.35,
     "pnl_abs": -3202.11,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -3346,7 +3346,7 @@
     "quantity": 43.0,
     "pnl_pct": 9.76,
     "pnl_abs": 2429.95,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -3417,7 +3417,7 @@
     "quantity": 453.0,
     "pnl_pct": 17.82,
     "pnl_abs": 16995.7,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -3453,7 +3453,7 @@
     "vol_week_ratio": 0.42,
     "vol_month_ratio": 3.09,
     "ath_pct": -15.49,
-    "atl_pct": 26640.2,
+    "atl_pct": 26640.21,
     "trend_score": 67,
     "trend_signal": "Watch",
     "price_to_200dma_pct": 35.35,
@@ -3487,7 +3487,7 @@
     "quantity": 57.0,
     "pnl_pct": 5.31,
     "pnl_abs": 6020.05,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -3523,7 +3523,7 @@
     "debt_to_equity": 2.381,
     "eps": 37.45,
     "book_value": 228.93,
-    "div_yield": 91.0,
+    "div_yield": 89.0,
     "pat_cagr": 28.7,
     "rev_cagr": 18.7,
     "mcap_3y": -5.16,
@@ -3572,7 +3572,7 @@
     "quantity": 21.0,
     "pnl_pct": -18.95,
     "pnl_abs": -4859.6,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -3590,7 +3590,7 @@
     "debt_to_equity": 35.781,
     "eps": 73.09,
     "book_value": 311.03,
-    "div_yield": 415.0,
+    "div_yield": 420.0,
     "pat_cagr": -2.7,
     "rev_cagr": 12.2,
     "mcap_3y": 140.24,
@@ -3640,7 +3640,7 @@
     "quantity": 59.0,
     "pnl_pct": 52.59,
     "pnl_abs": 32772.55,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -3709,7 +3709,7 @@
     "quantity": 223.0,
     "pnl_pct": 14.39,
     "pnl_abs": 16970.14,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -3781,7 +3781,7 @@
     "quantity": 56.0,
     "pnl_pct": -0.33,
     "pnl_abs": -346.4,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -3855,7 +3855,7 @@
     "quantity": 197.0,
     "pnl_pct": -5.3,
     "pnl_abs": -5594.5,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -3936,7 +3936,7 @@
     "quantity": 36.0,
     "pnl_pct": 4.58,
     "pnl_abs": 7134.3,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -4027,7 +4027,7 @@
     "quantity": 83.0,
     "pnl_pct": 61.48,
     "pnl_abs": 66168.2,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -4096,7 +4096,7 @@
     "quantity": 10.0,
     "pnl_pct": -8.04,
     "pnl_abs": -1578.3,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -4159,7 +4159,7 @@
     "quantity": 45.0,
     "pnl_pct": 34.43,
     "pnl_abs": 10219.75,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -4209,7 +4209,7 @@
     "quantity": 244.0,
     "pnl_pct": 51.64,
     "pnl_abs": 39911.03,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -4278,7 +4278,7 @@
     "quantity": 36.0,
     "pnl_pct": 8.4,
     "pnl_abs": 7782.75,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -4365,7 +4365,7 @@
     "quantity": 24.0,
     "pnl_pct": 9.33,
     "pnl_abs": 1856.4,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -4394,7 +4394,7 @@
     "vol_week_ratio": 0.56,
     "vol_month_ratio": 0.26,
     "ath_pct": -9.04,
-    "atl_pct": 24694.88,
+    "atl_pct": 24694.9,
     "trend_score": 88,
     "trend_signal": "Extended",
     "price_to_200dma_pct": 12.76,
@@ -4428,7 +4428,7 @@
     "quantity": 120.0,
     "pnl_pct": -0.31,
     "pnl_abs": -198.05,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -4505,7 +4505,7 @@
     "quantity": 215.0,
     "pnl_pct": 3.8,
     "pnl_abs": 1771.36,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -4579,7 +4579,7 @@
     "quantity": 377.0,
     "pnl_pct": 3.86,
     "pnl_abs": 4806.75,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -4651,7 +4651,7 @@
     "quantity": 33.0,
     "pnl_pct": -0.15,
     "pnl_abs": -52.0,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -4730,7 +4730,7 @@
     "quantity": 647.0,
     "pnl_pct": 36.58,
     "pnl_abs": 38148.8,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -4758,7 +4758,7 @@
     "debt_to_equity": 25.279,
     "eps": 7.84,
     "book_value": 33.07,
-    "div_yield": 200.0,
+    "div_yield": 191.0,
     "pat_cagr": 68.0,
     "rev_cagr": 36.6,
     "mcap_3y": 69.11,
@@ -4805,7 +4805,7 @@
     "quantity": 72.0,
     "pnl_pct": 3.1,
     "pnl_abs": 615.95,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -4872,7 +4872,7 @@
     "quantity": 403.0,
     "pnl_pct": 37.77,
     "pnl_abs": 32422.32,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -4947,7 +4947,7 @@
     "quantity": 204.0,
     "pnl_pct": -1.15,
     "pnl_abs": -1481.9,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -5008,7 +5008,7 @@
     "quantity": 17.0,
     "pnl_pct": 9.31,
     "pnl_abs": 6162.25,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -5077,7 +5077,7 @@
     "quantity": 402.0,
     "pnl_pct": 3.58,
     "pnl_abs": 4096.66,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -5156,7 +5156,7 @@
     "quantity": 896.0,
     "pnl_pct": 70.61,
     "pnl_abs": 100475.65,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -5231,7 +5231,7 @@
     "quantity": 173.0,
     "pnl_pct": -3.55,
     "pnl_abs": -2638.35,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -5302,7 +5302,7 @@
     "quantity": 53.0,
     "pnl_pct": -18.35,
     "pnl_abs": -7095.5,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -5371,7 +5371,7 @@
     "quantity": 124.0,
     "pnl_pct": 5.92,
     "pnl_abs": 1178.58,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -5438,7 +5438,7 @@
     "quantity": 86.0,
     "pnl_pct": 73.58,
     "pnl_abs": 29033.55,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -5511,7 +5511,7 @@
     "quantity": 63.0,
     "pnl_pct": 27.92,
     "pnl_abs": 12736.85,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -5582,7 +5582,7 @@
     "quantity": 859.0,
     "pnl_pct": -6.43,
     "pnl_abs": -10431.61,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -5650,7 +5650,7 @@
     "quantity": 196.0,
     "pnl_pct": 6.37,
     "pnl_abs": 7128.3,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -5727,7 +5727,7 @@
     "quantity": 97.0,
     "pnl_pct": 69.87,
     "pnl_abs": 29673.2,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -5796,7 +5796,7 @@
     "quantity": 43.0,
     "pnl_pct": 109.95,
     "pnl_abs": 34158.4,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -5857,7 +5857,7 @@
     "quantity": 94.0,
     "pnl_pct": -30.41,
     "pnl_abs": -24187.4,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -5929,7 +5929,7 @@
     "quantity": 62.0,
     "pnl_pct": 98.23,
     "pnl_abs": 101221.5,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -6007,7 +6007,7 @@
     "quantity": 98.0,
     "pnl_pct": -2.05,
     "pnl_abs": -3800.0,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -6056,7 +6056,7 @@
     "vol_week_ratio": 0.31,
     "vol_month_ratio": 0.29,
     "ath_pct": -30.07,
-    "atl_pct": 10281.18,
+    "atl_pct": 10281.17,
     "trend_score": 75,
     "trend_signal": "Extended",
     "price_to_200dma_pct": 23.44,
@@ -6092,7 +6092,7 @@
     "quantity": 546.0,
     "pnl_pct": 4.29,
     "pnl_abs": 3187.22,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -6172,7 +6172,7 @@
     "quantity": 146.0,
     "pnl_pct": 5.29,
     "pnl_abs": 4383.34,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -6239,7 +6239,7 @@
     "quantity": 65.0,
     "pnl_pct": 1.27,
     "pnl_abs": 112.45,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -6303,7 +6303,7 @@
     "quantity": 94.0,
     "pnl_pct": 128.43,
     "pnl_abs": 32351.98,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -6363,7 +6363,7 @@
     "quantity": 132.0,
     "pnl_pct": 15.66,
     "pnl_abs": 5460.8,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -6381,7 +6381,7 @@
     "debt_to_equity": 69.752,
     "eps": 13.14,
     "book_value": 53.99,
-    "div_yield": 15.0,
+    "div_yield": 16.0,
     "pat_cagr": 2094.4,
     "rev_cagr": 46.1,
     "vol_yest_ratio": 0.07,
@@ -6427,7 +6427,7 @@
     "quantity": 40.0,
     "pnl_pct": 16.17,
     "pnl_abs": 15668.9,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -6486,7 +6486,7 @@
     "quantity": 405.0,
     "pnl_pct": 30.86,
     "pnl_abs": 69983.51,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -6516,7 +6516,7 @@
     "debt_to_equity": 7.213,
     "eps": 10.29,
     "book_value": 96.21,
-    "div_yield": 51.0,
+    "div_yield": 50.0,
     "pat_cagr": 17.1,
     "rev_cagr": 45.4,
     "mcap_3y": 44.83,
@@ -6566,7 +6566,7 @@
     "quantity": 350.0,
     "pnl_pct": 50.07,
     "pnl_abs": 29086.12,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -6633,7 +6633,7 @@
     "quantity": 2557.0,
     "pnl_pct": -6.18,
     "pnl_abs": -8960.5,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -6702,7 +6702,7 @@
     "quantity": 38.0,
     "pnl_pct": 7.26,
     "pnl_abs": 12452.5,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -6757,7 +6757,7 @@
     "vol_week_ratio": 1.06,
     "vol_month_ratio": 1.16,
     "ath_pct": -13.87,
-    "atl_pct": 684103.58,
+    "atl_pct": 684103.7,
     "trend_score": 75,
     "trend_signal": "Extended",
     "price_to_200dma_pct": 35.4,
@@ -6793,7 +6793,7 @@
     "quantity": 1891.0,
     "pnl_pct": -7.39,
     "pnl_abs": -3693.31,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -6861,7 +6861,7 @@
     "quantity": 287.0,
     "pnl_pct": 6.78,
     "pnl_abs": 11272.15,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -6946,7 +6946,7 @@
     "quantity": 28.0,
     "pnl_pct": 70.8,
     "pnl_abs": 13929.2,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -7013,7 +7013,7 @@
     "quantity": 249.0,
     "pnl_pct": 0.02,
     "pnl_abs": 6.1,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -7081,7 +7081,7 @@
     "quantity": 188.0,
     "pnl_pct": -8.16,
     "pnl_abs": -4064.99,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -7112,7 +7112,7 @@
     "vol_week_ratio": 0.19,
     "vol_month_ratio": 0.53,
     "ath_pct": -23.75,
-    "atl_pct": 34665.21,
+    "atl_pct": 34665.22,
     "trend_score": 88,
     "trend_signal": "Extended",
     "price_to_200dma_pct": 15.5,
@@ -7148,7 +7148,7 @@
     "quantity": 3.0,
     "pnl_pct": -18.1,
     "pnl_abs": -2975.1,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -7216,7 +7216,7 @@
     "quantity": 7.0,
     "pnl_pct": -1.92,
     "pnl_abs": -1036.0,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -7289,7 +7289,7 @@
     "quantity": 23.0,
     "pnl_pct": -36.17,
     "pnl_abs": -10029.7,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -7369,7 +7369,7 @@
     "quantity": 42.0,
     "pnl_pct": 4.5,
     "pnl_abs": 1548.9,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -7437,7 +7437,7 @@
     "quantity": 145.0,
     "pnl_pct": 9.18,
     "pnl_abs": 4819.31,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -7516,7 +7516,7 @@
     "quantity": 307.0,
     "pnl_pct": 14.7,
     "pnl_abs": 4387.12,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -7584,7 +7584,7 @@
     "quantity": 2.0,
     "pnl_pct": -1.49,
     "pnl_abs": -1170.0,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -7657,7 +7657,7 @@
     "quantity": 115.0,
     "pnl_pct": 10.1,
     "pnl_abs": 5936.35,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -7723,7 +7723,7 @@
     "quantity": 24.0,
     "pnl_pct": 0.55,
     "pnl_abs": 477.4,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -7759,7 +7759,7 @@
     "vol_week_ratio": 1.51,
     "vol_month_ratio": 0.81,
     "ath_pct": -21.49,
-    "atl_pct": 52072.34,
+    "atl_pct": 52072.36,
     "trend_score": 88,
     "trend_signal": "Extended",
     "price_to_200dma_pct": 10.16,
@@ -7793,7 +7793,7 @@
     "quantity": 246.0,
     "pnl_pct": 22.73,
     "pnl_abs": 21482.91,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -7873,7 +7873,7 @@
     "quantity": 72.0,
     "pnl_pct": 29.84,
     "pnl_abs": 26953.2,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -7897,7 +7897,7 @@
     "debt_to_equity": 25.042,
     "eps": 61.24,
     "book_value": 310.14,
-    "div_yield": 32.0,
+    "div_yield": 31.0,
     "pat_cagr": -47.0,
     "rev_cagr": 9.9,
     "mcap_3y": 513.32,
@@ -7947,7 +7947,7 @@
     "quantity": 198.0,
     "pnl_pct": 4.15,
     "pnl_abs": 3452.61,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -8017,7 +8017,7 @@
     "quantity": 1.0,
     "pnl_pct": 128.13,
     "pnl_abs": 335.7,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -8084,7 +8084,7 @@
     "quantity": 6.0,
     "pnl_pct": 1731.18,
     "pnl_abs": 107178.9,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -8147,7 +8147,7 @@
     "quantity": 300.0,
     "pnl_pct": 24.84,
     "pnl_abs": 16422.0,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -8193,7 +8193,7 @@
     "quantity": 11.0,
     "pnl_pct": 322.73,
     "pnl_abs": 2859.05,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -8256,7 +8256,7 @@
     "quantity": 5.0,
     "pnl_pct": 98.81,
     "pnl_abs": 10546.5,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -8274,7 +8274,7 @@
     "debt_to_equity": 0.304,
     "eps": 48.29,
     "book_value": 310.08,
-    "div_yield": 24.0,
+    "div_yield": 25.0,
     "pat_cagr": 21.2,
     "rev_cagr": -13.0,
     "mcap_3y": 126.11,
@@ -8322,7 +8322,7 @@
     "quantity": 13.0,
     "pnl_pct": -8.52,
     "pnl_abs": -947.2,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -8394,7 +8394,7 @@
     "quantity": 148.0,
     "pnl_pct": -5.99,
     "pnl_abs": -599.64,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -8457,7 +8457,7 @@
     "quantity": 70.0,
     "pnl_pct": 10.6,
     "pnl_abs": 3891.75,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -8524,7 +8524,7 @@
     "quantity": 169.0,
     "pnl_pct": 24.04,
     "pnl_abs": 14343.6,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -8597,7 +8597,7 @@
     "quantity": 449.0,
     "pnl_pct": -14.0,
     "pnl_abs": -5774.41,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -8664,7 +8664,7 @@
     "quantity": 4980.0,
     "pnl_pct": 14.44,
     "pnl_abs": 21064.4,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -8737,7 +8737,7 @@
     "quantity": 15.0,
     "pnl_pct": 5.86,
     "pnl_abs": 1341.3,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -8803,7 +8803,7 @@
     "quantity": 122.0,
     "pnl_pct": -0.68,
     "pnl_abs": -339.86,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -8835,7 +8835,7 @@
     "vol_week_ratio": 1.23,
     "vol_month_ratio": 0.24,
     "ath_pct": -44.35,
-    "atl_pct": 2998.15,
+    "atl_pct": 2998.14,
     "trend_score": 18,
     "trend_signal": "Bearish",
     "price_to_200dma_pct": -4.89,
@@ -8871,7 +8871,7 @@
     "quantity": 91.0,
     "pnl_pct": 41.35,
     "pnl_abs": 6529.03,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -8933,7 +8933,7 @@
     "quantity": 20.0,
     "pnl_pct": -6.04,
     "pnl_abs": -1193.5,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -9000,7 +9000,7 @@
     "quantity": 50.0,
     "pnl_pct": 25.5,
     "pnl_abs": 3044.4,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -9064,7 +9064,7 @@
     "quantity": 50.0,
     "pnl_pct": 0.5,
     "pnl_abs": 72.5,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -9082,7 +9082,7 @@
     "debt_to_equity": 2.817,
     "eps": 9.9,
     "book_value": 70.52,
-    "div_yield": 129.0,
+    "div_yield": 131.0,
     "pat_cagr": 25.3,
     "rev_cagr": 27.6,
     "mcap_3y": 133.99,
@@ -9132,7 +9132,7 @@
     "quantity": 32.0,
     "pnl_pct": 11.67,
     "pnl_abs": 2313.6,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -9194,7 +9194,7 @@
     "quantity": 46.0,
     "pnl_pct": -4.69,
     "pnl_abs": -930.4,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -9260,7 +9260,7 @@
     "quantity": 172.0,
     "pnl_pct": -8.32,
     "pnl_abs": -4320.74,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -9329,7 +9329,7 @@
     "quantity": 49.0,
     "pnl_pct": 92.1,
     "pnl_abs": 15035.5,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -9396,7 +9396,7 @@
     "quantity": 218.0,
     "pnl_pct": 34.07,
     "pnl_abs": 13588.92,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -9458,7 +9458,7 @@
     "quantity": 67.0,
     "pnl_pct": 4.19,
     "pnl_abs": 1447.3,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -9528,7 +9528,7 @@
     "quantity": 20.0,
     "pnl_pct": 34.89,
     "pnl_abs": 2578.0,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -9592,7 +9592,7 @@
     "quantity": 39.0,
     "pnl_pct": -23.33,
     "pnl_abs": -1021.22,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -9654,7 +9654,7 @@
     "quantity": 1.0,
     "pnl_pct": 59.87,
     "pnl_abs": 99.3,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -9720,7 +9720,7 @@
     "quantity": 55.0,
     "pnl_pct": 0.17,
     "pnl_abs": 85.3,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -9751,7 +9751,7 @@
     "vol_week_ratio": 1.35,
     "vol_month_ratio": 0.78,
     "ath_pct": -46.24,
-    "atl_pct": 36912.56,
+    "atl_pct": 36912.57,
     "trend_score": 62,
     "trend_signal": "Watch",
     "price_to_200dma_pct": 3.11,
@@ -9787,7 +9787,7 @@
     "quantity": 110.0,
     "pnl_pct": -8.83,
     "pnl_abs": -1757.8,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -9805,7 +9805,7 @@
     "debt_to_equity": 164.311,
     "eps": 11.63,
     "book_value": 94.47,
-    "div_yield": 363.0,
+    "div_yield": 362.0,
     "pat_cagr": 17.8,
     "rev_cagr": 5.6,
     "mcap_3y": 150.26,
@@ -9854,7 +9854,7 @@
     "quantity": 32.0,
     "pnl_pct": -7.15,
     "pnl_abs": -2137.6,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -9908,7 +9908,7 @@
     "quantity": 1.0,
     "pnl_pct": 33.97,
     "pnl_abs": 39.41,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -9963,7 +9963,7 @@
     "quantity": 14.0,
     "pnl_pct": 12.51,
     "pnl_abs": 1250.2,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -10025,7 +10025,7 @@
     "quantity": 516.0,
     "pnl_pct": 4.11,
     "pnl_abs": 2067.87,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -10043,7 +10043,7 @@
     "debt_to_equity": 16.248,
     "eps": 4.38,
     "book_value": 52.38,
-    "div_yield": 196.0,
+    "div_yield": 198.0,
     "pat_cagr": 29.5,
     "rev_cagr": 20.4,
     "vol_yest_ratio": 5.43,
@@ -10089,7 +10089,7 @@
     "quantity": 1342.0,
     "pnl_pct": -7.84,
     "pnl_abs": -7841.17,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -10191,7 +10191,7 @@
     "quantity": 3272.077,
     "pnl_pct": 0.17,
     "pnl_abs": 165.89,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": false,
     "holding_type": "MF",
     "accounts": [
@@ -10209,7 +10209,7 @@
     "quantity": 11266.534,
     "pnl_pct": 0.16,
     "pnl_abs": 412.35,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": false,
     "holding_type": "MF",
     "accounts": [
@@ -10227,7 +10227,7 @@
     "quantity": 7500.0,
     "pnl_pct": 42.98,
     "pnl_abs": 265175.0,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": false,
     "holding_type": "Gold",
     "accounts": [
@@ -10245,7 +10245,7 @@
     "quantity": 3393.0,
     "pnl_pct": 50.24,
     "pnl_abs": 156895.64,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": false,
     "holding_type": "Gold",
     "accounts": [
@@ -10263,7 +10263,7 @@
     "quantity": 3973.047,
     "pnl_pct": 249.34,
     "pnl_abs": 124671.44,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": false,
     "holding_type": "Gold",
     "accounts": [
@@ -10281,7 +10281,7 @@
     "quantity": 10106.785,
     "pnl_pct": 203.61,
     "pnl_abs": 305409.67,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": false,
     "holding_type": "Gold",
     "accounts": [
@@ -10305,7 +10305,7 @@
     "quantity": 2713.804,
     "pnl_pct": 0.19,
     "pnl_abs": 187.26,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": false,
     "holding_type": "MF",
     "accounts": [
@@ -10323,7 +10323,7 @@
     "quantity": 74916.47,
     "pnl_pct": 4.96,
     "pnl_abs": 51098.68,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": false,
     "holding_type": "MF",
     "accounts": [
@@ -10347,7 +10347,7 @@
     "quantity": 15.0,
     "pnl_pct": 55.0,
     "pnl_abs": 75585.0,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": false,
     "holding_type": "Gold",
     "accounts": [
@@ -10365,7 +10365,7 @@
     "quantity": 50.0,
     "pnl_pct": 144.98,
     "pnl_abs": 419592.0,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": false,
     "holding_type": "Gold",
     "accounts": [
@@ -10389,7 +10389,7 @@
     "quantity": 6.0,
     "pnl_pct": 60.5,
     "pnl_abs": 32051.06,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": false,
     "holding_type": "Gold",
     "accounts": [
@@ -10407,7 +10407,7 @@
     "quantity": 2.0,
     "pnl_pct": 55.8,
     "pnl_abs": 10096.04,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": false,
     "holding_type": "Gold",
     "accounts": [
@@ -10425,7 +10425,7 @@
     "quantity": 3.0,
     "pnl_pct": 56.36,
     "pnl_abs": 15354.0,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": false,
     "holding_type": "Gold",
     "accounts": [
@@ -10443,7 +10443,7 @@
     "quantity": 1.0,
     "pnl_pct": 56.77,
     "pnl_abs": 5153.0,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": false,
     "holding_type": "Gold",
     "accounts": [
@@ -10461,7 +10461,7 @@
     "quantity": 19.0,
     "pnl_pct": 10.21,
     "pnl_abs": 24791.0,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": false,
     "holding_type": "Gold",
     "accounts": [
@@ -10479,7 +10479,7 @@
     "quantity": 1.0,
     "pnl_pct": 55.45,
     "pnl_abs": 5030.0,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": false,
     "holding_type": "Gold",
     "accounts": [
@@ -10497,7 +10497,7 @@
     "quantity": 3.0,
     "pnl_pct": 53.4,
     "pnl_abs": 14777.0,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": false,
     "holding_type": "Gold",
     "accounts": [
@@ -10515,7 +10515,7 @@
     "quantity": 112.0,
     "pnl_pct": -2.89,
     "pnl_abs": -717.92,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": false,
     "holding_type": "Silver",
     "accounts": [
@@ -10533,7 +10533,7 @@
     "quantity": 6642.0,
     "pnl_pct": -11.53,
     "pnl_abs": -19409.66,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": false,
     "holding_type": "Silver",
     "accounts": [
@@ -10551,7 +10551,7 @@
     "quantity": 953.1179999999999,
     "pnl_pct": 95.9,
     "pnl_abs": 57539.79,
-    "updated": "2026-07-21 10:47 UTC",
+    "updated": "2026-07-21 11:27 UTC",
     "must_buy": false,
     "holding_type": "MF",
     "accounts": [
