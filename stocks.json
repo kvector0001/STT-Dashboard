@@ -6945,5 +6945,27 @@
     "track": [
       "Add tracking KPIs"
     ]
+  },
+  {
+    "ticker": "LCL",
+    "name": "LOHIA CORP LIMITED",
+    "sector": "Industrials",
+    "nse_symbol": "LCL",
+    "buy_avg": 563.0,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
   }
 ]
