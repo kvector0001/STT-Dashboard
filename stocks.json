@@ -6967,5 +6967,49 @@
     "track": [
       "Add tracking KPIs"
     ]
+  },
+  {
+    "ticker": "ELECON",
+    "name": "Elecon Engineering Company Limited",
+    "sector": "Industrials",
+    "nse_symbol": "ELECON",
+    "buy_avg": 453.2468,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
+  },
+  {
+    "ticker": "SIMPLEXCAS",
+    "name": "Simplex Castings Limited",
+    "sector": "Industrials",
+    "nse_symbol": "SIMPLEXCAS",
+    "buy_avg": 118.8459,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
   }
 ]
