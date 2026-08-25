@@ -7121,5 +7121,27 @@
     "pat_cagr": 24.6,
     "rev_cagr": 34.8,
     "mcap_3y": 1136.47
+  },
+  {
+    "ticker": "RATNAMANI",
+    "name": "Ratnamani Metals & Tubes Limited",
+    "sector": "Basic Materials",
+    "nse_symbol": "RATNAMANI",
+    "buy_avg": 2702.9014,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
   }
 ]
