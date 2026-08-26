@@ -7143,5 +7143,27 @@
     "track": [
       "Add tracking KPIs"
     ]
+  },
+  {
+    "ticker": "CYIENT",
+    "name": "Cyient Limited",
+    "sector": "Industrials",
+    "nse_symbol": "CYIENT",
+    "buy_avg": 979.2331,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
   }
 ]
