@@ -69,6 +69,7 @@ MT_WEIGHTS = {"promoter_profile": 0.20, "ownership_behaviour": 0.25,
 RF_WEIGHTS = {"accounting": 0.30, "governance": 0.30, "financial": 0.20, "business": 0.20}
 DEF_SOURCES = ("Dashboard financials + curated governance/risk flags + public "
                "filings (BSE/NSE/screener.in), analyst knowledge")
+NON_COMPANY_HOLDING_TYPES = {"cash", "gold", "silver", "mf", "mutual fund", "mutual funds"}
 
 
 def load(path, default):
@@ -92,6 +93,12 @@ def stock_rows():
 
 def keyset(d):
     return {k for k in d if not k.startswith("_")}
+
+
+def is_company_holding(row):
+    ticker = str(row.get("ticker") or "").strip().lower()
+    holding_type = str(row.get("holding_type") or "").strip().lower()
+    return bool(ticker and ticker != "cash" and holding_type not in NON_COMPANY_HOLDING_TYPES)
 
 
 # ──────────────────────────────────────────────────────────────────────────
@@ -186,7 +193,7 @@ def cmd_pending():
     missing = []
     for r in rows:
         t = r.get("ticker")
-        if not t:
+        if not is_company_holding(r):
             continue
         need_mt = t not in mt_keys
         need_rf = t not in rf_keys

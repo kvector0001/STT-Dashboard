@@ -2,171 +2,210 @@
 
 > 4-category weighted score - **Accounting (30%)**, **Governance (30%)**, **Financial (20%)**, **Business (20%)** - where **10 = clean** and **0-3 = serious red flags**. Higher = cleaner. **Not investment advice.**
 
-_Generated 2026-06-18 for 151 holdings. Verdict: **CLEAN** >= 8.0 | **MINOR** 6.5-7.9 | **MODERATE** 5.0-6.4 | **SERIOUS** < 5.0 | **N/A** for ETFs. Sorted worst-first._
+_Generated 2026-08-26 for 174 holdings. Verdict: **CLEAN** >= 8.0 | **MINOR** 6.5-7.9 | **MODERATE** 5.0-6.4 | **SERIOUS** < 5.0 | **N/A** for ETFs. Sorted worst-first._
 
 
 ## Summary Table
 
 | # | Company | Ticker | Sector | Score | Verdict | Confidence |
 |---|---------|--------|--------|------:|---------|-----------|
-| 1 | Om Infra Limited | OMINFRAL | Infrastructure EPC / Construction | 4.3 | SERIOUS | High |
-| 2 | EMBASSY DEVELOPMENTS LTD | EMBDL | Real Estate | 4.5 | SERIOUS | High |
-| 3 | Synergy Green Industries Limited | SGIL | Industrials | 4.6 | SERIOUS | High |
-| 4 | Arisinfra Solutions | ARIS | Construction Materials / B2B Marketplace | 4.7 | SERIOUS | High |
-| 5 | Jyoti CNC Automation Limited | JYOTICNC | Industrials | 4.7 | SERIOUS | High |
-| 6 | Vascon Engineers Limited | VASCONEQ | Real Estate / Construction | 4.8 | SERIOUS | Low |
-| 7 | Fredun Pharmaceuticals Limited | FREDUN | Pharma / Formulations | 4.8 | SERIOUS | Low |
-| 8 | KPI Green Energy Limited | KPIGREEN | Utilities | 4.8 | SERIOUS | High |
-| 9 | Lakshmi Electrical Control Systems | LAKSELEC | Electrical Equipment | 4.8 | SERIOUS | High |
-| 10 | Suven Life Sciences Limited | SUVEN | Pharma CDMO / CNS | 4.8 | SERIOUS | Low |
-| 11 | Wockhardt Limited | WOCKPHARMA | Healthcare | 4.8 | SERIOUS | High |
-| 12 | Raymond Realty Limited | RAYMONDREL | Real Estate | 4.9 | SERIOUS | High |
-| 13 | Suzlon Energy Limited | SUZLON | Industrials | 4.9 | SERIOUS | High |
-| 14 | TVS Electronics Limited | TVSELECT | Electronics / IT Peripherals | 4.9 | SERIOUS | High |
-| 15 | South West Pinnacle Exploration Limited | SOUTHWEST | Oil & Gas Services | 5.0 | MODERATE | Moderate |
-| 16 | Scoda Tubes Limited | SCODATUBES | Steel Tubes | 5.0 | MODERATE | Moderate |
-| 17 | SHREEJI SHIPPING GLOBAL L | SHREEJISPG | Steel Pipes / Infrastructure | 5.0 | MODERATE | Moderate |
-| 18 | STALLION IND FLUOROCHEM L | STALLION | Specialty Chemicals / Refrigerants | 5.0 | MODERATE | Moderate |
-| 19 | Signpost India Limited | SIGNPOST | Outdoor Media / OOH | 5.0 | MODERATE | Moderate |
-| 20 | GMR Airports Limited | GMRAIRPORT | Airport Infrastructure | 5.0 | MODERATE | High |
-| 21 | MOSCHIP TECHNOLOGIES LTD | MOSCHIP | Semiconductors / Embedded | 5.0 | MODERATE | Low |
-| 22 | PTC India Limited | PTC | Power Trading | 5.0 | MODERATE | High |
-| 23 | Ramco Systems Limited | RAMCOSYS | Enterprise Software / ERP | 5.1 | MODERATE | Moderate |
-| 24 | CLEAN MAX ENVIRO EN SOL L | CLEANMAX | Utilities | 5.1 | MODERATE | High |
-| 25 | HLE Glascoat Limited | HLEGLAS | Industrials | 5.1 | MODERATE | Moderate |
-| 26 | Raymond Limited | RAYMOND | Textiles / Real Estate | 5.2 | MODERATE | Moderate |
-| 27 | Anupam Rasayan India Ltd | ANURAS | Pharma / API | 5.2 | MODERATE | Moderate |
-| 28 | Tejas Networks Limited | TEJASNET | Telecom Equipment | 5.2 | MODERATE | Moderate |
-| 29 | Viyash Scientific Limited | VIYASH | Healthcare | 5.2 | MODERATE | Low |
-| 30 | Transindia Real Estate Limited | TREL | Textiles / Paper | 5.3 | MODERATE | Low |
-| 31 | Capacit'e Infraprojects Limited | CAPACITE | Construction / EPC | 5.3 | MODERATE | Moderate |
-| 32 | IFGL Refractories Limited | IFGLEXPOR | Basic Materials | 5.3 | MODERATE | Moderate |
-| 33 | Keystone Realtors Limited | RUSTOMJEE | Real Estate | 5.3 | MODERATE | Moderate |
-| 34 | Landmark Cars Limited | LANDMARK | Auto Dealerships | 5.4 | MODERATE | Moderate |
-| 35 | Indus Towers Limited | INDUSTOWER | Telecom Infrastructure | 5.5 | MODERATE | Moderate |
-| 36 | The Shipping Corporation of India Limited | SCI | PSU Shipping | 5.5 | MODERATE | Moderate |
-| 37 | UNICOMMERCE ESOLUTIONS L | UNIECOM | SaaS / E-commerce Software | 5.5 | MODERATE | Low |
-| 38 | R K SWAMY LIMITED | RKSWAMY | Marketing Services / Advertising | 5.6 | MODERATE | Moderate |
-| 39 | Rashi Peripherals Limited | RPTECH | IT Distribution | 5.6 | MODERATE | Moderate |
-| 40 | Cyient DLM Limited | CYIENTDLM | Defence Electronics / EMS | 5.6 | MODERATE | Moderate |
-| 41 | Entero Healthcare Solutions Limited | ENTERO | Healthcare Distribution | 5.6 | MODERATE | Low |
-| 42 | Greaves Cotton Limited | GREAVESCOT | Engines / EV | 5.6 | MODERATE | Moderate |
-| 43 | Incap Limited | INCAP | Industrial Equipment / Pending Verification | 5.6 | MODERATE | Low |
-| 44 | Shankara Building Products Limited | SHANKARA | Building Materials Retail | 5.6 | MODERATE | Moderate |
-| 45 | Urban Company Limited | URBANCO | Technology / Consumer Services | 5.6 | MODERATE | Moderate |
-| 46 | Associated Alcohols & Breweries Limited | ASALCBR | Specialty Chemicals / Pigments | 5.7 | MODERATE | Low |
-| 47 | HealthCare Global Enterprises Limited | HCG | Healthcare / Oncology | 5.8 | MODERATE | Moderate |
-| 48 | MTAR Technologies Limited | MTARTECH | Precision Engineering / Defence | 5.8 | MODERATE | Moderate |
-| 49 | DEE DEVELOPMENT ENG LTD | DEEDEV | Industrial Piping / Engineering | 5.8 | MODERATE | Moderate |
-| 50 | Avantel Limited | AVANTEL | Defence Electronics / Satellite | 5.8 | MODERATE | Moderate |
-| 51 | Rir Power Electronics Limited | RIR | Power Electronics | 5.8 | MODERATE | Moderate |
-| 52 | FRACTAL ANALYTICS LIMITED | FRACTAL | AI / Data Analytics | 5.8 | MODERATE | Moderate |
-| 53 | Avalon Technologies Limited | AVALON | EMS / Electronics | 5.8 | MODERATE | Low |
-| 54 | Biocon Limited | BIOCON | Biopharma / Biosimilars | 5.8 | MODERATE | Moderate |
-| 55 | Borosil Limited | BOROLTD | Consumer Cyclical | 5.8 | MODERATE | Moderate |
-| 56 | Gujarat Industries Power Company Limited | GIPCL | PSU Power | 5.8 | MODERATE | Moderate |
-| 57 | Isgec Heavy Engineering Limited | ISGEC | Capital Goods | 5.8 | MODERATE | Moderate |
-| 58 | MMP Industries Limited | MMP | Aluminium Products | 5.8 | MODERATE | Low |
-| 59 | NLC India Limited | NLCINDIA | PSU Power | 5.8 | MODERATE | Moderate |
-| 60 | Pitti Engineering Limited | PITTIENG | Engineering Components | 5.8 | MODERATE | Moderate |
-| 61 | SJVN Limited | SJVN | PSU Power | 5.8 | MODERATE | Moderate |
-| 62 | Tega Industries Limited | TEGA | Mining Equipment | 5.8 | MODERATE | Moderate |
-| 63 | Wendt (India) Limited | WENDT | Industrials | 5.8 | MODERATE | Moderate |
-| 64 | Whirlpool of India Limited | WHIRLPOOL | Consumer Durables | 5.8 | MODERATE | High |
-| 65 | NEPHROCARE HEALTH SERV L | NEPHROPLUS | Dialysis / Renal Healthcare | 6.0 | MODERATE | Low |
-| 66 | GALA PRECISION ENG LTD | GALAPREC | Precision Components | 6.0 | MODERATE | Moderate |
-| 67 | Modison Limited | MODISONLTD | Electrical Contacts / Components | 6.0 | MODERATE | Moderate |
-| 68 | Siemens Energy India Limited | ENRIN | Water / Environment Infrastructure | 6.0 | MODERATE | Low |
-| 69 | Salzer Electronics Limited | SALZERELEC | Electrical Components | 6.0 | MODERATE | Moderate |
-| 70 | Gujarat Mineral Development Corporation Limited | GMDCLTD | PSU Mining | 6.0 | MODERATE | Moderate |
-| 71 | Yatharth Hospital & Trauma Care Services Limited | YATHARTH | Healthcare | 6.0 | MODERATE | Moderate |
-| 72 | Universal Cables Limited | UNIVCABLES | Cables & Wires | 6.0 | MODERATE | Moderate |
-| 73 | Ashiana Housing Limited | ASHIANA | Real Estate | 6.0 | MODERATE | Moderate |
-| 74 | Bharat Bijlee Limited | BBL | Electrical Equipment | 6.0 | MODERATE | Moderate |
-| 75 | Eldeco Housing and Industries Limited | ELDEHSG | Real Estate | 6.0 | MODERATE | Low |
-| 76 | GAUDIUM IVF N WOMEN H L | GAUDIUMIVF | Healthcare | 6.0 | MODERATE | Low |
-| 77 | Interarch Building Solutions Limited | INTERARCH | Pre-engineered Buildings | 6.0 | MODERATE | Low |
-| 78 | JNK India Limited | JNKINDIA | Capital Goods | 6.0 | MODERATE | Low |
-| 79 | Kamdhenu Limited | KAMDHENU | Basic Materials | 6.0 | MODERATE | Low |
-| 80 | LAXMI DENTAL LIMITED | LAXMIDENTL | Dental Products | 6.0 | MODERATE | Low |
-| 81 | MSTC Limited | MSTCLTD | Industrials | 6.0 | MODERATE | Moderate |
-| 82 | Park Medi World Limited | PARKHOSPS | Healthcare | 6.0 | MODERATE | Low |
-| 83 | Power Finance Corporation Limited | PFC | PSU Finance | 6.0 | MODERATE | Moderate |
-| 84 | POWERICA LIMITED | POWERICA | Power Equipment | 6.0 | MODERATE | Low |
-| 85 | Quess Corp Limited | QUESS | Staffing / Business Services | 6.0 | MODERATE | Moderate |
-| 86 | Redington Limited | REDINGTON | Technology | 6.0 | MODERATE | Moderate |
-| 87 | Sansera Engineering Limited | SANSERA | Auto Ancillary | 6.0 | MODERATE | Moderate |
-| 88 | Shilpa Medicare Limited | SHILPAMED | Pharma / Oncology API | 6.0 | MODERATE | Moderate |
-| 89 | Welspun Corp Limited | WELCORP | Steel Pipes | 6.0 | MODERATE | Moderate |
-| 90 | Protean eGov Technologies Limited | PROTEAN | Government Tech / FinTech | 6.1 | MODERATE | Moderate |
-| 91 | Aeroflex Industries Limited | AEROFLEX | Industrials | 6.2 | MODERATE | Low |
-| 92 | Affle 3i Limited | AFFLE | Ad Tech / Mobile Marketing | 6.2 | MODERATE | Moderate |
-| 93 | DIFFUSION ENGINEERS LTD | DIFFNKG | Industrial Equipment / Speciality Machinery | 6.2 | MODERATE | Low |
-| 94 | ECOS (INDIA) MOB & HOSP L | ECOSMOBLTY | EV Mobility | 6.2 | MODERATE | Low |
-| 95 | Usha Martin Limited | USHAMART | Basic Materials | 6.2 | MODERATE | Moderate |
-| 96 | Syrma SGS Technology Limited | SYRMA | EMS / Electronics | 6.3 | MODERATE | Moderate |
-| 97 | Astra Microwave Products Limited | ASTRAMICRO | Defence Electronics | 6.3 | MODERATE | Moderate |
-| 98 | Menon Bearings Limited | MENONBE | Engine Components | 6.3 | MODERATE | Moderate |
-| 99 | RUBICON RESEARCH LIMITED | RUBICON | Pharma / CDMO | 6.3 | MODERATE | Moderate |
-| 100 | Eimco Elecon (India) Limited | EIMCOELECO | Mining Equipment | 6.3 | MODERATE | Moderate |
-| 101 | Borosil Scientific Limited | BOROSCI | Scientific Glassware | 6.3 | MODERATE | Moderate |
-| 102 | Graphite India Limited | GRAPHITE | Graphite Electrodes | 6.3 | MODERATE | Moderate |
-| 103 | CESC Limited | CESC | Power Utility | 6.3 | MODERATE | Moderate |
-| 104 | CMS Info Systems Limited | CMSINFO | Cash Management / ATM Services | 6.3 | MODERATE | Moderate |
-| 105 | HBL ENGINEERING LTD | HBLENGINE | Defence Electronics / Batteries | 6.4 | MODERATE | Moderate |
-| 106 | NIIT Limited | NIITLTD | IT Education / Skills | 6.4 | MODERATE | Moderate |
-| 107 | Amara Raja Energy & Mobility Limited | ARE&M | Energy Storage / Batteries | 6.5 | MINOR | Moderate |
-| 108 | INDEGENE LIMITED | INDGN | Healthcare Technology / CRO | 6.5 | MINOR | Moderate |
-| 109 | RateGain Travel Technologies Limited | RATEGAIN | Travel Tech / SaaS | 6.5 | MINOR | Moderate |
-| 110 | Blue Jet Healthcare Limited | BLUEJET | Pharma / Contrast Media | 6.5 | MINOR | Moderate |
-| 111 | Netweb Technologies India Limited | NETWEB | AI Infrastructure / HPC | 6.5 | MINOR | Moderate |
-| 112 | Gulf Oil Lubricants India Limited | GULFOILLUB | Lubricants | 6.5 | MINOR | Moderate |
-| 113 | Latent View Analytics Limited | LATENTVIEW | IT / Analytics | 6.5 | MINOR | Moderate |
-| 114 | RailTel Corporation of India Limited | RAILTEL | Telecom / IT Infrastructure | 6.5 | MINOR | Moderate |
-| 115 | Sona BLW Precision Forgings Limited | SONACOMS | Auto Components / Precision Forgings | 6.5 | MINOR | Moderate |
-| 116 | HEG Limited | HEG | Materials | 6.6 | MINOR | Moderate |
-| 117 | Oriental Hotels Limited | ORIENTHOT | Consumer Cyclical | 6.6 | MINOR | Moderate |
-| 118 | Aster DM Healthcare Limited | ASTERDM | Healthcare | 6.7 | MINOR | Moderate |
-| 119 | Kirloskar Pneumatic Company Limited | KIRLPNU | Industrial Equipment / Compressors | 6.7 | MINOR | Moderate |
-| 120 | Sasken Technologies Limited | SASKEN | IT / Embedded Software | 6.8 | MINOR | Moderate |
-| 121 | EIH Limited | EIHOTEL | Consumer Cyclical | 6.8 | MINOR | Moderate |
-| 122 | INOX India Limited | INOXINDIA | Industrial Equipment | 6.8 | MINOR | Moderate |
-| 123 | KPIT Technologies Limited | KPITTECH | Technology | 6.8 | MINOR | Moderate |
-| 124 | V.S.T. Tillers Tractors Limited | VSTTILLERS | Agricultural Equipment | 6.8 | MINOR | Moderate |
-| 125 | C. E. Info Systems Limited | MAPMYINDIA | Digital Maps / Location Tech | 6.9 | MINOR | Moderate |
-| 126 | ADITYA BIRLA LIFES BRAN L | ABLBL | Consumer Cyclical | 6.9 | MINOR | Moderate |
-| 127 | Tata Communications Limited | TATACOMM | Telecom / Data Networking | 6.9 | MINOR | Moderate |
-| 128 | D-Link (India) Limited | DLINKINDIA | Networking Hardware | 7.0 | MINOR | Moderate |
-| 129 | HAPPY FORGINGS LIMITED | HAPPYFORGE | Forgings / Auto Components | 7.0 | MINOR | Moderate |
-| 130 | Data Patterns (India) Limited | DATAPATTNS | Defence Electronics | 7.0 | MINOR | Moderate |
-| 131 | Triveni Engineering & Industries Limited | TRIVENI | Sugar / Power | 7.1 | MINOR | Moderate |
-| 132 | Carborundum Universal Limited | CARBORUNIV | Abrasives & Ceramics | 7.1 | MINOR | High |
-| 133 | Elgi Equipments Limited | ELGIEQUIP | Industrials | 7.1 | MINOR | High |
-| 134 | Grindwell Norton Limited | GRINDWELL | Abrasives | 7.1 | MINOR | High |
-| 135 | Kennametal India Limited | KENNAMET | Industrials | 7.1 | MINOR | Moderate |
-| 136 | KSB Limited | KSB | Industrials | 7.1 | MINOR | Moderate |
-| 137 | Neuland Laboratories Limited | NEULANDLAB | Pharma CDMO / API | 7.3 | MINOR | Moderate |
-| 138 | Thermax Limited | THERMAX | Capital Goods | 7.3 | MINOR | Moderate |
-| 139 | Triveni Turbine Limited | TRITURBINE | Capital Goods | 7.5 | MINOR | Moderate |
-| 140 | Hitachi Energy India Limited | POWERINDIA | Power Transmission / Automation | 7.6 | MINOR | Moderate |
-| 141 | The Great Eastern Shipping Company Limited | GESHIP | Shipping | 7.6 | MINOR | High |
-| 142 | Honeywell Automation India Limited | HONAUT | Automation | 7.6 | MINOR | High |
-| 143 | Ingersoll-Rand (India) Limited | INGERRAND | Industrials | 7.6 | MINOR | High |
-| 144 | Narayana Hrudayalaya Limited | NH | Healthcare | 7.8 | MINOR | Moderate |
-| 145 | Siemens Limited | SIEMENS | Capital Goods | 7.8 | MINOR | High |
-| 146 | SKF India Limited | SKFINDIA | Bearings | 7.8 | MINOR | Moderate |
-| 147 | SKF India Limited | SKFINDUS | Bearings | 7.8 | MINOR | Moderate |
-| 148 | 3M India Limited | 3MINDIA | Diversified Industrials | 8.2 | CLEAN | High |
-| 149 | Nippon India ETF Nifty 50 BeES | NIFTYBEES | Index ETF | 8.0 | N/A (ETF) | High |
-| 150 | Mirae Asset NYSE FANG+ETF | MAFANG | ETF | 8.0 | N/A (ETF) | High |
-| 151 | Motilal Oswal NASDAQ 100 ETF | MON100 | ETF | 8.0 | N/A (ETF) | High |
+| 1 | Simplex Castings Limited | SIMPLEXCAS | Castings / Heavy Engineering | 4.0 | SERIOUS | Low |
+| 2 | OMINFRAL | OMINFRAL |  | 4.3 | SERIOUS | High |
+| 3 | EMBASSY DEVELOPMENTS LTD | EMBDL | Real Estate | 4.5 | SERIOUS | High |
+| 4 | Synergy Green Industries Limited | SGIL | Industrials | 4.6 | SERIOUS | High |
+| 5 | ARIS | ARIS |  | 4.7 | SERIOUS | High |
+| 6 | Jyoti CNC Automation Limited | JYOTICNC | Industrials | 4.7 | SERIOUS | High |
+| 7 | VASCONEQ | VASCONEQ |  | 4.8 | SERIOUS | Low |
+| 8 | Fredun Pharmaceuticals Limited | FREDUN | Pharma / Formulations | 4.8 | SERIOUS | Low |
+| 9 | KPI Green Energy Limited | KPIGREEN | Utilities | 4.8 | SERIOUS | High |
+| 10 | Lakshmi Electrical Control Systems | LAKSELEC | Electrical Equipment | 4.8 | SERIOUS | High |
+| 11 | Suven Life Sciences Limited | SUVEN | Pharma CDMO / CNS | 4.8 | SERIOUS | Low |
+| 12 | Wockhardt Limited | WOCKPHARMA | Healthcare | 4.8 | SERIOUS | High |
+| 13 | Raymond Realty Limited | RAYMONDREL | Real Estate | 4.9 | SERIOUS | High |
+| 14 | Suzlon Energy Limited | SUZLON | Industrials | 4.9 | SERIOUS | High |
+| 15 | TVS Electronics Limited | TVSELECT | Electronics / IT Peripherals | 4.9 | SERIOUS | High |
+| 16 | South West Pinnacle Exploration Limited | SOUTHWEST | Oil & Gas Services | 5.0 | MODERATE | Moderate |
+| 17 | Scoda Tubes Limited | SCODATUBES | Steel Tubes | 5.0 | MODERATE | Moderate |
+| 18 | SHREEJI SHIPPING GLOBAL L | SHREEJISPG | Steel Pipes / Infrastructure | 5.0 | MODERATE | Moderate |
+| 19 | STALLION IND FLUOROCHEM L | STALLION | Specialty Chemicals / Refrigerants | 5.0 | MODERATE | Moderate |
+| 20 | Signpost India Limited | SIGNPOST | Outdoor Media / OOH | 5.0 | MODERATE | Moderate |
+| 21 | GMR Airports Limited | GMRAIRPORT | Airport Infrastructure | 5.0 | MODERATE | High |
+| 22 | MOSCHIP TECHNOLOGIES LTD | MOSCHIP | Semiconductors / Embedded | 5.0 | MODERATE | Low |
+| 23 | PTC India Limited | PTC | Power Trading | 5.0 | MODERATE | High |
+| 24 | Lokesh Machines Limited | LOKESHMACH | Machine Tools / Defense | 5.0 | MODERATE | Moderate |
+| 25 | Ramco Systems Limited | RAMCOSYS | Enterprise Software / ERP | 5.1 | MODERATE | Moderate |
+| 26 | CLEAN MAX ENVIRO EN SOL L | CLEANMAX | Utilities | 5.1 | MODERATE | High |
+| 27 | HLE Glascoat Limited | HLEGLAS | Industrials | 5.1 | MODERATE | Moderate |
+| 28 | Raymond Limited | RAYMOND | Textiles / Real Estate | 5.2 | MODERATE | Moderate |
+| 29 | Anupam Rasayan India Ltd | ANURAS | Pharma / API | 5.2 | MODERATE | Moderate |
+| 30 | Tejas Networks Limited | TEJASNET | Telecom Equipment | 5.2 | MODERATE | Moderate |
+| 31 | Viyash Scientific Limited | VIYASH | Healthcare | 5.2 | MODERATE | Low |
+| 32 | Transindia Real Estate Limited | TREL | Textiles / Paper | 5.3 | MODERATE | Low |
+| 33 | CAPACITE | CAPACITE |  | 5.3 | MODERATE | Moderate |
+| 34 | IFGLEXPOR | IFGLEXPOR |  | 5.3 | MODERATE | Moderate |
+| 35 | Keystone Realtors Limited | RUSTOMJEE | Real Estate | 5.3 | MODERATE | Moderate |
+| 36 | Landmark Cars Limited | LANDMARK | Auto Dealerships | 5.4 | MODERATE | Moderate |
+| 37 | Ratnaveer Precision Engineering Limited | RATNAVEER | Stainless Steel Products | 5.4 | MODERATE | Moderate |
+| 38 | Time Technoplast Limited | TIMETECHNO | Industrial Packaging / Polymers | 5.4 | MODERATE | Moderate |
+| 39 | Indus Towers Limited | INDUSTOWER | Telecom Infrastructure | 5.5 | MODERATE | Moderate |
+| 40 | The Shipping Corporation of India Limited | SCI | PSU Shipping | 5.5 | MODERATE | Moderate |
+| 41 | UNICOMMERCE ESOLUTIONS L | UNIECOM | SaaS / E-commerce Software | 5.5 | MODERATE | Low |
+| 42 | R K SWAMY LIMITED | RKSWAMY | Marketing Services / Advertising | 5.6 | MODERATE | Moderate |
+| 43 | Rashi Peripherals Limited | RPTECH | IT Distribution | 5.6 | MODERATE | Moderate |
+| 44 | Cyient DLM Limited | CYIENTDLM | Defence Electronics / EMS | 5.6 | MODERATE | Moderate |
+| 45 | Entero Healthcare Solutions Limited | ENTERO | Healthcare Distribution | 5.6 | MODERATE | Low |
+| 46 | Greaves Cotton Limited | GREAVESCOT | Engines / EV | 5.6 | MODERATE | Moderate |
+| 47 | Incap Limited | INCAP | Industrial Equipment / Pending Verification | 5.6 | MODERATE | Low |
+| 48 | Shankara Building Products Limited | SHANKARA | Building Materials Retail | 5.6 | MODERATE | Moderate |
+| 49 | Urban Company Limited | URBANCO | Technology / Consumer Services | 5.6 | MODERATE | Moderate |
+| 50 | ASALCBR | ASALCBR |  | 5.7 | MODERATE | Low |
+| 51 | Ion Exchange (India) Limited | IONEXCHANG | Water Treatment | 5.7 | MODERATE | Moderate |
+| 52 | HealthCare Global Enterprises Limited | HCG | Healthcare / Oncology | 5.8 | MODERATE | Moderate |
+| 53 | MTAR Technologies Limited | MTARTECH | Precision Engineering / Defence | 5.8 | MODERATE | Moderate |
+| 54 | DEE DEVELOPMENT ENG LTD | DEEDEV | Industrial Piping / Engineering | 5.8 | MODERATE | Moderate |
+| 55 | Avantel Limited | AVANTEL | Defence Electronics / Satellite | 5.8 | MODERATE | Moderate |
+| 56 | Rir Power Electronics Limited | RIR | Power Electronics | 5.8 | MODERATE | Moderate |
+| 57 | FRACTAL ANALYTICS LIMITED | FRACTAL | AI / Data Analytics | 5.8 | MODERATE | Moderate |
+| 58 | Avalon Technologies Limited | AVALON | EMS / Electronics | 5.8 | MODERATE | Low |
+| 59 | Biocon Limited | BIOCON | Biopharma / Biosimilars | 5.8 | MODERATE | Moderate |
+| 60 | Borosil Limited | BOROLTD | Consumer Cyclical | 5.8 | MODERATE | Moderate |
+| 61 | Gujarat Industries Power Company Limited | GIPCL | PSU Power | 5.8 | MODERATE | Moderate |
+| 62 | ISGEC | ISGEC |  | 5.8 | MODERATE | Moderate |
+| 63 | MMP Industries Limited | MMP | Aluminium Products | 5.8 | MODERATE | Low |
+| 64 | NLC India Limited | NLCINDIA | PSU Power | 5.8 | MODERATE | Moderate |
+| 65 | Pitti Engineering Limited | PITTIENG | Engineering Components | 5.8 | MODERATE | Moderate |
+| 66 | SJVN Limited | SJVN | PSU Power | 5.8 | MODERATE | Moderate |
+| 67 | TEGA | TEGA |  | 5.8 | MODERATE | Moderate |
+| 68 | Wendt (India) Limited | WENDT | Industrials | 5.8 | MODERATE | Moderate |
+| 69 | Whirlpool of India Limited | WHIRLPOOL | Consumer Durables | 5.8 | MODERATE | High |
+| 70 | Inox Wind Limited | INOXWIND | Wind Energy / Capital Goods | 5.8 | MODERATE | Moderate |
+| 71 | NEPHROCARE HEALTH SERV L | NEPHROPLUS | Dialysis / Renal Healthcare | 6.0 | MODERATE | Low |
+| 72 | GALA PRECISION ENG LTD | GALAPREC | Precision Components | 6.0 | MODERATE | Moderate |
+| 73 | Modison Limited | MODISONLTD | Electrical Contacts / Components | 6.0 | MODERATE | Moderate |
+| 74 | Siemens Energy India Limited | ENRIN | Water / Environment Infrastructure | 6.0 | MODERATE | Low |
+| 75 | Salzer Electronics Limited | SALZERELEC | Electrical Components | 6.0 | MODERATE | Moderate |
+| 76 | Gujarat Mineral Development Corporation Limited | GMDCLTD | PSU Mining | 6.0 | MODERATE | Moderate |
+| 77 | Yatharth Hospital & Trauma Care Services Limited | YATHARTH | Healthcare | 6.0 | MODERATE | Moderate |
+| 78 | Universal Cables Limited | UNIVCABLES | Cables & Wires | 6.0 | MODERATE | Moderate |
+| 79 | Ashiana Housing Limited | ASHIANA | Real Estate | 6.0 | MODERATE | Moderate |
+| 80 | Bharat Bijlee Limited | BBL | Electrical Equipment | 6.0 | MODERATE | Moderate |
+| 81 | Eldeco Housing and Industries Limited | ELDEHSG | Real Estate | 6.0 | MODERATE | Low |
+| 82 | GAUDIUM IVF N WOMEN H L | GAUDIUMIVF | Healthcare | 6.0 | MODERATE | Low |
+| 83 | Interarch Building Solutions Limited | INTERARCH | Pre-engineered Buildings | 6.0 | MODERATE | Low |
+| 84 | JNK India Limited | JNKINDIA | Capital Goods | 6.0 | MODERATE | Low |
+| 85 | Kamdhenu Limited | KAMDHENU | Basic Materials | 6.0 | MODERATE | Low |
+| 86 | LAXMI DENTAL LIMITED | LAXMIDENTL | Dental Products | 6.0 | MODERATE | Low |
+| 87 | MSTC Limited | MSTCLTD | Industrials | 6.0 | MODERATE | Moderate |
+| 88 | Park Medi World Limited | PARKHOSPS | Healthcare | 6.0 | MODERATE | Low |
+| 89 | Power Finance Corporation Limited | PFC | PSU Finance | 6.0 | MODERATE | Moderate |
+| 90 | POWERICA LIMITED | POWERICA | Power Equipment | 6.0 | MODERATE | Low |
+| 91 | Quess Corp Limited | QUESS | Staffing / Business Services | 6.0 | MODERATE | Moderate |
+| 92 | Redington Limited | REDINGTON | Technology | 6.0 | MODERATE | Moderate |
+| 93 | Sansera Engineering Limited | SANSERA | Auto Ancillary | 6.0 | MODERATE | Moderate |
+| 94 | Shilpa Medicare Limited | SHILPAMED | Pharma / Oncology API | 6.0 | MODERATE | Moderate |
+| 95 | Welspun Corp Limited | WELCORP | Steel Pipes | 6.0 | MODERATE | Moderate |
+| 96 | Vipul Organics Limited | VIPULORG | Specialty Chemicals / Dyes & Pigments | 6.0 | MODERATE | Moderate |
+| 97 | Bhansali Engineering Polymers Limited | BEPL | Petrochemicals / Polymers | 6.0 | MODERATE | Moderate |
+| 98 | Epigral Limited | EPIGRAL | Specialty Chemicals (Chlor-alkali) | 6.0 | MODERATE | Moderate |
+| 99 | Ram Ratna Wires Limited | RAMRAT | Electrical Equipment (Winding Wires) | 6.0 | MODERATE | Moderate |
+| 100 | Protean eGov Technologies Limited | PROTEAN | Government Tech / FinTech | 6.1 | MODERATE | Moderate |
+| 101 | Aeroflex Industries Limited | AEROFLEX | Industrials | 6.2 | MODERATE | Low |
+| 102 | AFFLE | AFFLE |  | 6.2 | MODERATE | Moderate |
+| 103 | DIFFUSION ENGINEERS LTD | DIFFNKG | Industrial Equipment / Speciality Machinery | 6.2 | MODERATE | Low |
+| 104 | ECOS (INDIA) MOB & HOSP L | ECOSMOBLTY | EV Mobility | 6.2 | MODERATE | Low |
+| 105 | Usha Martin Limited | USHAMART | Basic Materials | 6.2 | MODERATE | Moderate |
+| 106 | Elecon Engineering Company Limited | ELECON | Industrial Machinery (Gears) | 6.2 | MODERATE | Moderate |
+| 107 | Lohia Corp Limited | LCL | Industrial Machinery | 6.2 | MODERATE | Low |
+| 108 | Syrma SGS Technology Limited | SYRMA | EMS / Electronics | 6.3 | MODERATE | Moderate |
+| 109 | Astra Microwave Products Limited | ASTRAMICRO | Defence Electronics | 6.3 | MODERATE | Moderate |
+| 110 | Menon Bearings Limited | MENONBE | Engine Components | 6.3 | MODERATE | Moderate |
+| 111 | RUBICON RESEARCH LIMITED | RUBICON | Pharma / CDMO | 6.3 | MODERATE | Moderate |
+| 112 | Eimco Elecon (India) Limited | EIMCOELECO | Mining Equipment | 6.3 | MODERATE | Moderate |
+| 113 | Borosil Scientific Limited | BOROSCI | Scientific Glassware | 6.3 | MODERATE | Moderate |
+| 114 | Graphite India Limited | GRAPHITE | Graphite Electrodes | 6.3 | MODERATE | Moderate |
+| 115 | CESC Limited | CESC | Power Utility | 6.3 | MODERATE | Moderate |
+| 116 | CMS Info Systems Limited | CMSINFO | Cash Management / ATM Services | 6.3 | MODERATE | Moderate |
+| 117 | HBL ENGINEERING LTD | HBLENGINE | Defence Electronics / Batteries | 6.4 | MODERATE | Moderate |
+| 118 | NIITLTD | NIITLTD |  | 6.4 | MODERATE | Moderate |
+| 119 | Amara Raja Energy & Mobility Limited | ARE&M | Energy Storage / Batteries | 6.5 | MINOR | Moderate |
+| 120 | INDEGENE LIMITED | INDGN | Healthcare Technology / CRO | 6.5 | MINOR | Moderate |
+| 121 | RateGain Travel Technologies Limited | RATEGAIN | Travel Tech / SaaS | 6.5 | MINOR | Moderate |
+| 122 | Blue Jet Healthcare Limited | BLUEJET | Pharma / Contrast Media | 6.5 | MINOR | Moderate |
+| 123 | Netweb Technologies India Limited | NETWEB | AI Infrastructure / HPC | 6.5 | MINOR | Moderate |
+| 124 | Gulf Oil Lubricants India Limited | GULFOILLUB | Lubricants | 6.5 | MINOR | Moderate |
+| 125 | Latent View Analytics Limited | LATENTVIEW | IT / Analytics | 6.5 | MINOR | Moderate |
+| 126 | RailTel Corporation of India Limited | RAILTEL | Telecom / IT Infrastructure | 6.5 | MINOR | Moderate |
+| 127 | Sona BLW Precision Forgings Limited | SONACOMS | Auto Components / Precision Forgings | 6.5 | MINOR | Moderate |
+| 128 | HEG Limited | HEG | Materials | 6.6 | MINOR | Moderate |
+| 129 | Oriental Hotels Limited | ORIENTHOT | Consumer Cyclical | 6.6 | MINOR | Moderate |
+| 130 | Investment & Precision Castings Limited | INVPRECQ | Precision Castings / Capital Goods | 6.6 | MINOR | Moderate |
+| 131 | Century Enka Limited | CENTENKA | Textiles / Synthetic Yarn | 6.6 | MINOR | Moderate |
+| 132 | Aster DM Healthcare Limited | ASTERDM | Healthcare | 6.7 | MINOR | Moderate |
+| 133 | Kirloskar Pneumatic Company Limited | KIRLPNU | Industrial Equipment / Compressors | 6.7 | MINOR | Moderate |
+| 134 | Sasken Technologies Limited | SASKEN | IT / Embedded Software | 6.8 | MINOR | Moderate |
+| 135 | EIH Limited | EIHOTEL | Consumer Cyclical | 6.8 | MINOR | Moderate |
+| 136 | INOX India Limited | INOXINDIA | Industrial Equipment | 6.8 | MINOR | Moderate |
+| 137 | KPITTECH | KPITTECH |  | 6.8 | MINOR | Moderate |
+| 138 | V.S.T. Tillers Tractors Limited | VSTTILLERS | Agricultural Equipment | 6.8 | MINOR | Moderate |
+| 139 | Inventurus Knowledge Solutions Limited | IKS | Healthcare Tech / RCM | 6.8 | MINOR | Moderate |
+| 140 | AVT Natural Products Limited | AVTNPL | Specialty Chemicals / Natural Extracts | 6.8 | MINOR | Moderate |
+| 141 | C. E. Info Systems Limited | MAPMYINDIA | Digital Maps / Location Tech | 6.9 | MINOR | Moderate |
+| 142 | ADITYA BIRLA LIFES BRAN L | ABLBL | Consumer Cyclical | 6.9 | MINOR | Moderate |
+| 143 | Tata Communications Limited | TATACOMM | Telecom / Data Networking | 6.9 | MINOR | Moderate |
+| 144 | D-Link (India) Limited | DLINKINDIA | Networking Hardware | 7.0 | MINOR | Moderate |
+| 145 | HAPPY FORGINGS LIMITED | HAPPYFORGE | Forgings / Auto Components | 7.0 | MINOR | Moderate |
+| 146 | Data Patterns (India) Limited | DATAPATTNS | Defence Electronics | 7.0 | MINOR | Moderate |
+| 147 | R Systems International Limited | RSYSTEMS | IT / Software Services | 7.0 | MINOR | Moderate |
+| 148 | Zensar Technologies Limited | ZENSARTECH | IT / Software Services | 7.0 | MINOR | Moderate |
+| 149 | Triveni Engineering & Industries Limited | TRIVENI | Sugar / Power | 7.1 | MINOR | Moderate |
+| 150 | Carborundum Universal Limited | CARBORUNIV | Abrasives & Ceramics | 7.1 | MINOR | High |
+| 151 | Elgi Equipments Limited | ELGIEQUIP | Industrials | 7.1 | MINOR | High |
+| 152 | Grindwell Norton Limited | GRINDWELL | Abrasives | 7.1 | MINOR | High |
+| 153 | Kennametal India Limited | KENNAMET | Industrials | 7.1 | MINOR | Moderate |
+| 154 | KSB Limited | KSB | Industrials | 7.1 | MINOR | Moderate |
+| 155 | Neuland Laboratories Limited | NEULANDLAB | Pharma CDMO / API | 7.3 | MINOR | Moderate |
+| 156 | Thermax Limited | THERMAX | Capital Goods | 7.3 | MINOR | Moderate |
+| 157 | Cyient Limited | CYIENT | IT / Engineering Services (ER&D) | 7.4 | MINOR | Moderate |
+| 158 | Triveni Turbine Limited | TRITURBINE | Capital Goods | 7.5 | MINOR | Moderate |
+| 159 | Hitachi Energy India Limited | POWERINDIA | Power Transmission / Automation | 7.6 | MINOR | Moderate |
+| 160 | The Great Eastern Shipping Company Limited | GESHIP | Shipping | 7.6 | MINOR | High |
+| 161 | Honeywell Automation India Limited | HONAUT | Industrial Automation | 7.6 | MINOR | High |
+| 162 | Ingersoll-Rand (India) Limited | INGERRAND | Industrials | 7.6 | MINOR | High |
+| 163 | Gujarat Pipavav Port Limited | GPPL | Ports / Logistics | 7.6 | MINOR | Moderate |
+| 164 | Tata Motors Limited (Commercial Vehicles) | TMCV | Automobiles / Commercial Vehicles | 7.7 | MINOR | Moderate |
+| 165 | Narayana Hrudayalaya Limited | NH | Healthcare | 7.8 | MINOR | Moderate |
+| 166 | Siemens Limited | SIEMENS | Electrical Equipment / Automation | 7.8 | MINOR | High |
+| 167 | SKFINDIA | SKFINDIA |  | 7.8 | MINOR | Moderate |
+| 168 | SKF India Limited | SKFINDUS | Bearings | 7.8 | MINOR | Moderate |
+| 169 | Ratnamani Metals & Tubes Limited | RATNAMANI | Steel Pipes & Tubes | 7.8 | MINOR | High |
+| 170 | Bharat Electronics Limited | BEL | Defense / Electronics | 8.0 | CLEAN | Moderate |
+| 171 | 3MINDIA | 3MINDIA |  | 8.2 | CLEAN | High |
+| 172 | Nippon India ETF Nifty 50 BeES | NIFTYBEES | Index ETF | 8.0 | N/A (ETF) | High |
+| 173 | Mirae Asset NYSE FANG+ETF | MAFANG | ETF | 8.0 | N/A (ETF) | High |
+| 174 | Motilal Oswal NASDAQ 100 ETF | MON100 | ETF | 8.0 | N/A (ETF) | High |
 
 ---
 
 ## Detailed Assessments
 
-### Om Infra Limited (OMINFRAL) - 4.3 / 10 - SERIOUS
-*Sector: Infrastructure EPC / Construction - Confidence: High - Updated: 2026-06-18*
+### Simplex Castings Limited (SIMPLEXCAS) - 4.0 / 10 - SERIOUS
+*Sector: Castings / Heavy Engineering - Confidence: Low - Updated: 2026-08-26*
+
+**Summary:** Elevated risk: sub-scale, volatile profitability and working-capital/balance-sheet stress.
+
+| Category (weight) | Score | Key reason |
+|---|:---:|---|
+| Accounting (30%) | 4 | Small-cap accounting quality uncertain. |
+| Governance (30%) | 4 | Limited governance visibility. |
+| Financial (20%) | 4 | Working-capital and balance-sheet stress. |
+| Business (20%) | 4 | Concentrated, cyclical, sub-scale business. |
+
+*Sources: Dashboard financials + curated governance/risk flags + public filings (BSE/NSE/screener.in), analyst knowledge*
+
+---
+
+### OMINFRAL (OMINFRAL) - 4.3 / 10 - SERIOUS
+*Sector: n/a - Confidence: High - Updated: 2026-06-18*
 
 **Summary:** Serious: sub-scale EPC contractor with lumpy, loss-making execution and negative cash flow.
 
@@ -232,8 +271,8 @@ _Generated 2026-06-18 for 151 holdings. Verdict: **CLEAN** >= 8.0 | **MINOR** 6.
 
 ---
 
-### Arisinfra Solutions (ARIS) - 4.7 / 10 - SERIOUS
-*Sector: Construction Materials / B2B Marketplace - Confidence: High - Updated: 2026-06-18*
+### ARIS (ARIS) - 4.7 / 10 - SERIOUS
+*Sector: n/a - Confidence: High - Updated: 2026-06-18*
 
 **Summary:** Serious-leaning: a recent auditor resignation, low promoter stake and thin, working-capital-heavy economics are clear governance flags.
 
@@ -279,8 +318,8 @@ _Generated 2026-06-18 for 151 holdings. Verdict: **CLEAN** >= 8.0 | **MINOR** 6.
 
 ---
 
-### Vascon Engineers Limited (VASCONEQ) - 4.8 / 10 - SERIOUS
-*Sector: Real Estate / Construction - Confidence: Low - Updated: 2026-06-18*
+### VASCONEQ (VASCONEQ) - 4.8 / 10 - SERIOUS
+*Sector: n/a - Confidence: Low - Updated: 2026-06-18*
 
 **Summary:** Serious-leaning: small EPC/real-estate firm with a history of balance-sheet stress, dilution and a low promoter stake.
 
@@ -639,6 +678,26 @@ _Generated 2026-06-18 for 151 holdings. Verdict: **CLEAN** >= 8.0 | **MINOR** 6.
 
 ---
 
+### Lokesh Machines Limited (LOKESHMACH) - 5.0 / 10 - MODERATE
+*Sector: Machine Tools / Defense - Confidence: Moderate - Updated: 2026-07-14*
+
+**Summary:** Moderate-to-elevated risk: weak returns and high leverage dominate; the defense story is optionality, not yet proof.
+
+| Category (weight) | Score | Key reason |
+|---|:---:|---|
+| Accounting (30%) | 5 | Thin, volatile profits; monitor conversion. |
+| Governance (30%) | 5 | Limited small-cap disclosure. |
+| Financial (20%) | 4 | High debt (elevated D/E) and very low ROE (~2%). |
+| Business (20%) | 6 | Defense pivot early; auto/engineering cyclical. |
+
+**Amber flags:**
+- High debt & very low returns (ROE ~2%)
+- Very high valuation on a tiny profit base
+
+*Sources: Public filings (BSE/NSE/screener.in), shareholding & financials, analyst knowledge*
+
+---
+
 ### Ramco Systems Limited (RAMCOSYS) - 5.1 / 10 - MODERATE
 *Sector: Enterprise Software / ERP - Confidence: Moderate - Updated: 2026-06-18*
 
@@ -804,8 +863,8 @@ _Generated 2026-06-18 for 151 holdings. Verdict: **CLEAN** >= 8.0 | **MINOR** 6.
 
 ---
 
-### Capacit'e Infraprojects Limited (CAPACITE) - 5.3 / 10 - MODERATE
-*Sector: Construction / EPC - Confidence: Moderate - Updated: 2026-06-18*
+### CAPACITE (CAPACITE) - 5.3 / 10 - MODERATE
+*Sector: n/a - Confidence: Moderate - Updated: 2026-06-18*
 
 **Summary:** Moderate: contractor with strong order book but heavy working capital and developer-credit exposure.
 
@@ -824,8 +883,8 @@ _Generated 2026-06-18 for 151 holdings. Verdict: **CLEAN** >= 8.0 | **MINOR** 6.
 
 ---
 
-### IFGL Refractories Limited (IFGLEXPOR) - 5.3 / 10 - MODERATE
-*Sector: Basic Materials - Confidence: Moderate - Updated: 2026-06-18*
+### IFGLEXPOR (IFGLEXPOR) - 5.3 / 10 - MODERATE
+*Sector: n/a - Confidence: Moderate - Updated: 2026-06-18*
 
 **Summary:** Moderate red flags: significant 2026 management churn, a sharp earnings decline and thin margins.
 
@@ -881,6 +940,43 @@ _Generated 2026-06-18 for 151 holdings. Verdict: **CLEAN** >= 8.0 | **MINOR** 6.
 - OEM agency-model transition risk
 
 *Sources: Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge*
+
+---
+
+### Ratnaveer Precision Engineering Limited (RATNAVEER) - 5.4 / 10 - MODERATE
+*Sector: Stainless Steel Products - Confidence: Moderate - Updated: 2026-07-14*
+
+**Summary:** Moderate: the financials show heavy cash burn, rising debt/receivables and large impending dilution — quality flags despite a clean promoter.
+
+| Category (weight) | Score | Key reason |
+|---|:---:|---|
+| Accounting (30%) | 6 | Profit growing; monitor receivables quality. |
+| Governance (30%) | 6 | Clean, unpledged, but aggressive serial capital raises. |
+| Financial (20%) | 4 | Negative FCF (~Rs 155 Cr), debt nearly doubled, debtor days 27->60. |
+| Business (20%) | 5 | Unproven CCL electronics pivot; impending dilution. |
+
+**Amber flags:**
+- ~25-35% impending dilution (QIP + promoter warrants)
+- Negative FCF; debt nearly doubled
+- Debtor days 27 -> 60
+
+*Sources: Public filings (BSE/NSE/screener.in), shareholding & financials, analyst knowledge*
+
+---
+
+### Time Technoplast Limited (TIMETECHNO) - 5.4 / 10 - MODERATE
+*Sector: Industrial Packaging / Polymers - Confidence: Moderate - Updated: 2026-08-26*
+
+**Summary:** Some historical governance/RPT and cash-conversion concerns; improving with deleveraging.
+
+| Category (weight) | Score | Key reason |
+|---|:---:|---|
+| Accounting (30%) | 5 | Cash-conversion and capitalisation to watch. |
+| Governance (30%) | 5 | Past RPT/monetisation-delay perceptions. |
+| Financial (20%) | 6 | Leverage reducing; working-capital heavy. |
+| Business (20%) | 6 | Polymer-price cyclicality; base-packaging commoditisation. |
+
+*Sources: Dashboard financials + curated governance/risk flags + public filings (BSE/NSE/screener.in), analyst knowledge*
 
 ---
 
@@ -1107,8 +1203,8 @@ _Generated 2026-06-18 for 151 holdings. Verdict: **CLEAN** >= 8.0 | **MINOR** 6.
 
 ---
 
-### Associated Alcohols & Breweries Limited (ASALCBR) - 5.7 / 10 - MODERATE
-*Sector: Specialty Chemicals / Pigments - Confidence: Low - Updated: 2026-06-18*
+### ASALCBR (ASALCBR) - 5.7 / 10 - MODERATE
+*Sector: n/a - Confidence: Low - Updated: 2026-06-18*
 
 **Summary:** Moderate: established alcohol/ENA business; a source-file description mismatch reduces confidence.
 
@@ -1123,6 +1219,28 @@ _Generated 2026-06-18 for 151 holdings. Verdict: **CLEAN** >= 8.0 | **MINOR** 6.
 - Source-file identity/data conflict ? verify
 
 *Sources: Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge*
+
+---
+
+### Ion Exchange (India) Limited (IONEXCHANG) - 5.7 / 10 - MODERATE
+*Sector: Water Treatment - Confidence: Moderate - Updated: 2026-07-14*
+
+**Summary:** Moderate: a reputable franchise, but the FY24 internal-control/fraud disclosure is a genuine governance flag to watch.
+
+| Category (weight) | Score | Key reason |
+|---|:---:|---|
+| Accounting (30%) | 6 | Recent PAT dip tied to a disclosed irregularity. |
+| Governance (30%) | 5 | FY24 employee embezzlement/financial-irregularity disclosure — internal-control lapse. |
+| Financial (20%) | 6 | Manageable leverage; project receivables. |
+| Business (20%) | 6 | Project execution lumpiness. |
+
+**Critical flags:**
+- FY24 disclosed financial irregularity/embezzlement by an employee (internal-control lapse)
+
+**Amber flags:**
+- Project execution lumpiness & receivables
+
+*Sources: Public filings (BSE/NSE/screener.in), shareholding & financials, analyst knowledge*
 
 ---
 
@@ -1326,8 +1444,8 @@ _Generated 2026-06-18 for 151 holdings. Verdict: **CLEAN** >= 8.0 | **MINOR** 6.
 
 ---
 
-### Isgec Heavy Engineering Limited (ISGEC) - 5.8 / 10 - MODERATE
-*Sector: Capital Goods - Confidence: Moderate - Updated: 2026-06-18*
+### ISGEC (ISGEC) - 5.8 / 10 - MODERATE
+*Sector: n/a - Confidence: Moderate - Updated: 2026-06-18*
 
 **Summary:** Moderate: established heavy-engineering family business; lumpy, low-return project earnings are the flags.
 
@@ -1424,8 +1542,8 @@ _Generated 2026-06-18 for 151 holdings. Verdict: **CLEAN** >= 8.0 | **MINOR** 6.
 
 ---
 
-### Tega Industries Limited (TEGA) - 5.8 / 10 - MODERATE
-*Sector: Mining Equipment - Confidence: Moderate - Updated: 2026-06-18*
+### TEGA (TEGA) - 5.8 / 10 - MODERATE
+*Sector: n/a - Confidence: Moderate - Updated: 2026-06-18*
 
 **Summary:** Moderate: niche mining-equipment maker; cyclicality is the main flag.
 
@@ -1483,6 +1601,26 @@ _Generated 2026-06-18 for 151 holdings. Verdict: **CLEAN** >= 8.0 | **MINOR** 6.
 - Intense competition
 
 *Sources: Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge*
+
+---
+
+### Inox Wind Limited (INOXWIND) - 5.8 / 10 - MODERATE
+*Sector: Wind Energy / Capital Goods - Confidence: Moderate - Updated: 2026-07-14*
+
+**Summary:** Moderate: forensic profile improving post-cleanup, but past leverage/dilution and group related-party complexity remain.
+
+| Category (weight) | Score | Key reason |
+|---|:---:|---|
+| Accounting (30%) | 6 | Improving conversion after past strain. |
+| Governance (30%) | 6 | Related-party transactions across group entities. |
+| Financial (20%) | 5 | History of high debt, working-capital stress and dilution. |
+| Business (20%) | 6 | Cyclical, lumpy order execution. |
+
+**Amber flags:**
+- Related-party dealings within the Inox group
+- History of losses, dilution and working-capital stress
+
+*Sources: Public filings (BSE/NSE/screener.in), shareholding & financials, analyst knowledge*
 
 ---
 
@@ -1978,6 +2116,74 @@ _Generated 2026-06-18 for 151 holdings. Verdict: **CLEAN** >= 8.0 | **MINOR** 6.
 
 ---
 
+### Vipul Organics Limited (VIPULORG) - 6.0 / 10 - MODERATE
+*Sector: Specialty Chemicals / Dyes & Pigments - Confidence: Moderate - Updated: 2026-07-14*
+
+**Summary:** Broadly acceptable small-cap profile; watch raw-material volatility and execution of the new capacity.
+
+| Category (weight) | Score | Key reason |
+|---|:---:|---|
+| Accounting (30%) | 6 | Small base; reasonable conversion. |
+| Governance (30%) | 6 | Adequate small-cap governance. |
+| Financial (20%) | 6 | Expansion-linked debt; manageable. |
+| Business (20%) | 6 | RM (crude/intermediate) price volatility; competitive dyes segment. |
+
+**Amber flags:**
+- Raw-material price volatility
+- New-capacity ramp execution risk
+
+*Sources: Public filings (BSE/NSE/screener.in), shareholding & financials, analyst knowledge*
+
+---
+
+### Bhansali Engineering Polymers Limited (BEPL) - 6.0 / 10 - MODERATE
+*Sector: Petrochemicals / Polymers - Confidence: Moderate - Updated: 2026-08-26*
+
+**Summary:** No serious forensic flags; principal risk is commodity cyclicality and single-product concentration.
+
+| Category (weight) | Score | Key reason |
+|---|:---:|---|
+| Accounting (30%) | 6 | Reasonable accounting; commodity inventory swings. |
+| Governance (30%) | 6 | No notable governance red flags. |
+| Financial (20%) | 7 | Low debt, cash-generative in up-cycles. |
+| Business (20%) | 5 | Cyclical, single-product (ABS/SAN) concentration. |
+
+*Sources: Dashboard financials + curated governance/risk flags + public filings (BSE/NSE/screener.in), analyst knowledge*
+
+---
+
+### Epigral Limited (EPIGRAL) - 6.0 / 10 - MODERATE
+*Sector: Specialty Chemicals (Chlor-alkali) - Confidence: Moderate - Updated: 2026-08-26*
+
+**Summary:** No serious flags; risks are capex/debt during expansion and chemical-price cyclicality.
+
+| Category (weight) | Score | Key reason |
+|---|:---:|---|
+| Accounting (30%) | 6 | Reasonable accounting; capitalisation to monitor. |
+| Governance (30%) | 6 | No notable governance issues. |
+| Financial (20%) | 6 | Capex-driven leverage during expansion. |
+| Business (20%) | 6 | Chlor-alkali/derivative price cyclicality. |
+
+*Sources: Dashboard financials + curated governance/risk flags + public filings (BSE/NSE/screener.in), analyst knowledge*
+
+---
+
+### Ram Ratna Wires Limited (RAMRAT) - 6.0 / 10 - MODERATE
+*Sector: Electrical Equipment (Winding Wires) - Confidence: Moderate - Updated: 2026-08-26*
+
+**Summary:** No forensic concerns; risks are commodity pass-through, thin margins and working capital.
+
+| Category (weight) | Score | Key reason |
+|---|:---:|---|
+| Accounting (30%) | 6 | Reasonable accounting. |
+| Governance (30%) | 6 | No governance red flags. |
+| Financial (20%) | 6 | Working-capital-intensive, moderate leverage. |
+| Business (20%) | 6 | Commoditised, competitive conversion business. |
+
+*Sources: Dashboard financials + curated governance/risk flags + public filings (BSE/NSE/screener.in), analyst knowledge*
+
+---
+
 ### Protean eGov Technologies Limited (PROTEAN) - 6.1 / 10 - MODERATE
 *Sector: Government Tech / FinTech - Confidence: Moderate - Updated: 2026-06-18*
 
@@ -2020,8 +2226,8 @@ _Generated 2026-06-18 for 151 holdings. Verdict: **CLEAN** >= 8.0 | **MINOR** 6.
 
 ---
 
-### Affle 3i Limited (AFFLE) - 6.2 / 10 - MODERATE
-*Sector: Ad Tech / Mobile Marketing - Confidence: Moderate - Updated: 2026-06-18*
+### AFFLE (AFFLE) - 6.2 / 10 - MODERATE
+*Sector: n/a - Confidence: Moderate - Updated: 2026-06-18*
 
 **Summary:** Moderate: low-debt, cash-generative ad-tech; acquisition accounting and privacy regulation are the watch-items.
 
@@ -2096,6 +2302,38 @@ _Generated 2026-06-18 for 151 holdings. Verdict: **CLEAN** >= 8.0 | **MINOR** 6.
 - Input-cost cyclicality
 
 *Sources: Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge*
+
+---
+
+### Elecon Engineering Company Limited (ELECON) - 6.2 / 10 - MODERATE
+*Sector: Industrial Machinery (Gears) - Confidence: Moderate - Updated: 2026-08-26*
+
+**Summary:** Cleaned-up balance sheet; watch historical governance and capex-cycle exposure.
+
+| Category (weight) | Score | Key reason |
+|---|:---:|---|
+| Accounting (30%) | 6 | Improved accounting quality post-turnaround. |
+| Governance (30%) | 6 | Historically mixed; now steadier. |
+| Financial (20%) | 7 | Net-cash after deleveraging. |
+| Business (20%) | 6 | Industrial capex-cycle sensitivity. |
+
+*Sources: Dashboard financials + curated governance/risk flags + public filings (BSE/NSE/screener.in), analyst knowledge*
+
+---
+
+### Lohia Corp Limited (LCL) - 6.2 / 10 - MODERATE
+*Sector: Industrial Machinery - Confidence: Low - Updated: 2026-08-26*
+
+**Summary:** No known flags but thin public disclosure history; risks are cyclicality and newly-listed transparency.
+
+| Category (weight) | Score | Key reason |
+|---|:---:|---|
+| Accounting (30%) | 6 | Limited public accounting history. |
+| Governance (30%) | 6 | Governance track record not yet established. |
+| Financial (20%) | 7 | Healthy balance sheet for a machinery maker. |
+| Business (20%) | 6 | Customer capex-cycle and niche concentration. |
+
+*Sources: Dashboard financials + curated governance/risk flags + public filings (BSE/NSE/screener.in), analyst knowledge*
 
 ---
 
@@ -2296,8 +2534,8 @@ _Generated 2026-06-18 for 151 holdings. Verdict: **CLEAN** >= 8.0 | **MINOR** 6.
 
 ---
 
-### NIIT Limited (NIITLTD) - 6.4 / 10 - MODERATE
-*Sector: IT Education / Skills - Confidence: Moderate - Updated: 2026-06-18*
+### NIITLTD (NIITLTD) - 6.4 / 10 - MODERATE
+*Sector: n/a - Confidence: Moderate - Updated: 2026-06-18*
 
 **Summary:** Moderate: clean, cash-return-oriented governance, but a structurally disrupted training business drags it down.
 
@@ -2534,6 +2772,42 @@ _Generated 2026-06-18 for 151 holdings. Verdict: **CLEAN** >= 8.0 | **MINOR** 6.
 
 ---
 
+### Investment & Precision Castings Limited (INVPRECQ) - 6.6 / 10 - MINOR
+*Sector: Precision Castings / Capital Goods - Confidence: Moderate - Updated: 2026-07-14*
+
+**Summary:** Mostly clean: promoter-stable and unpledged; the main flags are working-capital intensity and small size.
+
+| Category (weight) | Score | Key reason |
+|---|:---:|---|
+| Accounting (30%) | 7 | Reasonable cash conversion; profit growing. |
+| Governance (30%) | 7 | Clean promoter, no pledge. |
+| Financial (20%) | 6 | Moderate debt; high inventory days. |
+| Business (20%) | 6 | Small scale and customer concentration. |
+
+**Amber flags:**
+- High inventory / working-capital days
+- Small scale & customer concentration
+
+*Sources: Public filings (BSE/NSE/screener.in), shareholding & financials, analyst knowledge*
+
+---
+
+### Century Enka Limited (CENTENKA) - 6.6 / 10 - MINOR
+*Sector: Textiles / Synthetic Yarn - Confidence: Moderate - Updated: 2026-08-26*
+
+**Summary:** Clean books; risks are commoditisation and import competition, not governance.
+
+| Category (weight) | Score | Key reason |
+|---|:---:|---|
+| Accounting (30%) | 7 | Conservative accounting. |
+| Governance (30%) | 7 | No governance concerns. |
+| Financial (20%) | 7 | Low leverage, cash on books. |
+| Business (20%) | 5 | Commoditised yarn; import pressure. |
+
+*Sources: Dashboard financials + curated governance/risk flags + public filings (BSE/NSE/screener.in), analyst knowledge*
+
+---
+
 ### Aster DM Healthcare Limited (ASTERDM) - 6.7 / 10 - MINOR
 *Sector: Healthcare - Confidence: Moderate - Updated: 2026-06-18*
 
@@ -2631,8 +2905,8 @@ _Generated 2026-06-18 for 151 holdings. Verdict: **CLEAN** >= 8.0 | **MINOR** 6.
 
 ---
 
-### KPIT Technologies Limited (KPITTECH) - 6.8 / 10 - MINOR
-*Sector: Technology - Confidence: Moderate - Updated: 2026-06-18*
+### KPITTECH (KPITTECH) - 6.8 / 10 - MINOR
+*Sector: n/a - Confidence: Moderate - Updated: 2026-06-18*
 
 **Summary:** Minor: clean, founder-led automotive-software firm; OEM cyclicality and customer concentration are the flags.
 
@@ -2667,6 +2941,42 @@ _Generated 2026-06-18 for 151 holdings. Verdict: **CLEAN** >= 8.0 | **MINOR** 6.
 - Rising small-tractor competition
 
 *Sources: Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge*
+
+---
+
+### Inventurus Knowledge Solutions Limited (IKS) - 6.8 / 10 - MINOR
+*Sector: Healthcare Tech / RCM - Confidence: Moderate - Updated: 2026-07-14*
+
+**Summary:** Broadly clean for a young listing; main watch is client concentration and receivables as it scales.
+
+| Category (weight) | Score | Key reason |
+|---|:---:|---|
+| Accounting (30%) | 7 | High growth; monitor receivables and acquired-entity accounting. |
+| Governance (30%) | 7 | Newly listed; disclosures adequate. |
+| Financial (20%) | 7 | Manageable leverage; strong cash generation. |
+| Business (20%) | 6 | US client concentration and policy/reimbursement exposure. |
+
+**Amber flags:**
+- Client concentration
+- US healthcare policy/reimbursement risk
+
+*Sources: Public filings (BSE/NSE/screener.in), shareholding & financials, analyst knowledge*
+
+---
+
+### AVT Natural Products Limited (AVTNPL) - 6.8 / 10 - MINOR
+*Sector: Specialty Chemicals / Natural Extracts - Confidence: Moderate - Updated: 2026-08-26*
+
+**Summary:** No major accounting/governance flags; risks are agri-commodity and FX cyclicality rather than integrity.
+
+| Category (weight) | Score | Key reason |
+|---|:---:|---|
+| Accounting (30%) | 7 | Clean reported accounts; no restatements known. |
+| Governance (30%) | 7 | Reputable group; no notable RPT/board concerns. |
+| Financial (20%) | 7 | Manageable leverage; high working-capital intensity. |
+| Business (20%) | 6 | Crop-yield, FX and customer-concentration cyclicality. |
+
+*Sources: Dashboard financials + curated governance/risk flags + public filings (BSE/NSE/screener.in), analyst knowledge*
 
 ---
 
@@ -2784,6 +3094,38 @@ _Generated 2026-06-18 for 151 holdings. Verdict: **CLEAN** >= 8.0 | **MINOR** 6.
 - Defence concentration
 
 *Sources: Dashboard financials (OCF/PAT, debt, FCF, dilution) + curated risk flags + public filings (BSE/NSE/screener.in), analyst knowledge*
+
+---
+
+### R Systems International Limited (RSYSTEMS) - 7.0 / 10 - MINOR
+*Sector: IT / Software Services - Confidence: Moderate - Updated: 2026-08-26*
+
+**Summary:** No forensic concerns; risks are scale, client concentration and transition execution.
+
+| Category (weight) | Score | Key reason |
+|---|:---:|---|
+| Accounting (30%) | 7 | Clean IT-services accounting. |
+| Governance (30%) | 7 | Institutional governance under Blackstone. |
+| Financial (20%) | 8 | Cash-generative, low leverage. |
+| Business (20%) | 6 | Sub-scale vs Tier-1s; client concentration. |
+
+*Sources: Dashboard financials + curated governance/risk flags + public filings (BSE/NSE/screener.in), analyst knowledge*
+
+---
+
+### Zensar Technologies Limited (ZENSARTECH) - 7.0 / 10 - MINOR
+*Sector: IT / Software Services - Confidence: Moderate - Updated: 2026-08-26*
+
+**Summary:** No forensic concerns; risks are execution consistency and client concentration.
+
+| Category (weight) | Score | Key reason |
+|---|:---:|---|
+| Accounting (30%) | 7 | Clean IT-services accounting. |
+| Governance (30%) | 7 | Sound RPG governance. |
+| Financial (20%) | 8 | Net-cash, cash-generative. |
+| Business (20%) | 6 | Discretionary-spend sensitivity; account concentration. |
+
+*Sources: Dashboard financials + curated governance/risk flags + public filings (BSE/NSE/screener.in), analyst knowledge*
 
 ---
 
@@ -2941,6 +3283,22 @@ _Generated 2026-06-18 for 151 holdings. Verdict: **CLEAN** >= 8.0 | **MINOR** 6.
 
 ---
 
+### Cyient Limited (CYIENT) - 7.4 / 10 - MINOR
+*Sector: IT / Engineering Services (ER&D) - Confidence: Moderate - Updated: 2026-08-26*
+
+**Summary:** No forensic concerns; risks are execution and client concentration.
+
+| Category (weight) | Score | Key reason |
+|---|:---:|---|
+| Accounting (30%) | 8 | Clean, transparent accounting. |
+| Governance (30%) | 8 | Strong governance and disclosure. |
+| Financial (20%) | 7 | Healthy balance sheet, cash-generative. |
+| Business (20%) | 6 | Aerospace/comms client concentration; cyclicality. |
+
+*Sources: Dashboard financials + curated governance/risk flags + public filings (BSE/NSE/screener.in), analyst knowledge*
+
+---
+
 ### Triveni Turbine Limited (TRITURBINE) - 7.5 / 10 - MINOR
 *Sector: Capital Goods - Confidence: Moderate - Updated: 2026-06-18*
 
@@ -3000,7 +3358,7 @@ _Generated 2026-06-18 for 151 holdings. Verdict: **CLEAN** >= 8.0 | **MINOR** 6.
 ---
 
 ### Honeywell Automation India Limited (HONAUT) - 7.6 / 10 - MINOR
-*Sector: Automation - Confidence: High - Updated: 2026-06-18*
+*Sector: Industrial Automation - Confidence: High - Updated: 2026-06-18*
 
 **Summary:** Minor: debt-free, well-governed MNC; modest near-term growth is the only flag.
 
@@ -3038,6 +3396,38 @@ _Generated 2026-06-18 for 151 holdings. Verdict: **CLEAN** >= 8.0 | **MINOR** 6.
 
 ---
 
+### Gujarat Pipavav Port Limited (GPPL) - 7.6 / 10 - MINOR
+*Sector: Ports / Logistics - Confidence: Moderate - Updated: 2026-08-26*
+
+**Summary:** Clean, well-governed; principal risk is competitive/volume and concession/tariff regulation.
+
+| Category (weight) | Score | Key reason |
+|---|:---:|---|
+| Accounting (30%) | 8 | Clean MNC-standard accounting. |
+| Governance (30%) | 8 | Strong governance under Maersk. |
+| Financial (20%) | 8 | Net-cash, strong cash flow. |
+| Business (20%) | 6 | Volume competition and concession/tariff risk. |
+
+*Sources: Dashboard financials + curated governance/risk flags + public filings (BSE/NSE/screener.in), analyst knowledge*
+
+---
+
+### Tata Motors Limited (Commercial Vehicles) (TMCV) - 7.7 / 10 - MINOR
+*Sector: Automobiles / Commercial Vehicles - Confidence: Moderate - Updated: 2026-08-26*
+
+**Summary:** Top-tier governance; main risk is CV-demand cyclicality and demerger-transition comparability.
+
+| Category (weight) | Score | Key reason |
+|---|:---:|---|
+| Accounting (30%) | 8 | Tata-standard accounting and disclosure. |
+| Governance (30%) | 9 | Strong governance framework. |
+| Financial (20%) | 7 | Cyclical earnings; improving CV balance sheet. |
+| Business (20%) | 6 | Deep CV cyclicality and competition. |
+
+*Sources: Dashboard financials + curated governance/risk flags + public filings (BSE/NSE/screener.in), analyst knowledge*
+
+---
+
 ### Narayana Hrudayalaya Limited (NH) - 7.8 / 10 - MINOR
 *Sector: Healthcare - Confidence: Moderate - Updated: 2026-06-18*
 
@@ -3058,7 +3448,7 @@ _Generated 2026-06-18 for 151 holdings. Verdict: **CLEAN** >= 8.0 | **MINOR** 6.
 ---
 
 ### Siemens Limited (SIEMENS) - 7.8 / 10 - MINOR
-*Sector: Capital Goods - Confidence: High - Updated: 2026-06-18*
+*Sector: Electrical Equipment / Automation - Confidence: High - Updated: 2026-06-18*
 
 **Summary:** Minor: blue-chip MNC, debt-free with exemplary governance; the demerger and valuation are the watch-items.
 
@@ -3077,8 +3467,8 @@ _Generated 2026-06-18 for 151 holdings. Verdict: **CLEAN** >= 8.0 | **MINOR** 6.
 
 ---
 
-### SKF India Limited (SKFINDIA) - 7.8 / 10 - MINOR
-*Sector: Bearings - Confidence: Moderate - Updated: 2026-06-18*
+### SKFINDIA (SKFINDIA) - 7.8 / 10 - MINOR
+*Sector: n/a - Confidence: Moderate - Updated: 2026-06-18*
 
 **Summary:** Minor: debt-free, well-governed MNC bearings maker; auto-cycle sensitivity and the demerger are the flags.
 
@@ -3116,8 +3506,43 @@ _Generated 2026-06-18 for 151 holdings. Verdict: **CLEAN** >= 8.0 | **MINOR** 6.
 
 ---
 
-### 3M India Limited (3MINDIA) - 8.2 / 10 - CLEAN
-*Sector: Diversified Industrials - Confidence: High - Updated: 2026-06-18*
+### Ratnamani Metals & Tubes Limited (RATNAMANI) - 7.8 / 10 - MINOR
+*Sector: Steel Pipes & Tubes - Confidence: High - Updated: 2026-08-26*
+
+**Summary:** Clean, high-quality balance sheet; main risk is project-order cyclicality, not integrity.
+
+| Category (weight) | Score | Key reason |
+|---|:---:|---|
+| Accounting (30%) | 8 | Conservative, clean accounting. |
+| Governance (30%) | 8 | Strong governance record. |
+| Financial (20%) | 8 | Net-cash, strong cash generation. |
+| Business (20%) | 7 | Order lumpiness and raw-material cyclicality. |
+
+*Sources: Dashboard financials + curated governance/risk flags + public filings (BSE/NSE/screener.in), analyst knowledge*
+
+---
+
+### Bharat Electronics Limited (BEL) - 8.0 / 10 - CLEAN
+*Sector: Defense / Electronics - Confidence: Moderate - Updated: 2026-07-14*
+
+**Summary:** Very clean forensic profile: strong cash conversion, net cash and audited PSU governance; only cyclicality of defense orders.
+
+| Category (weight) | Score | Key reason |
+|---|:---:|---|
+| Accounting (30%) | 8 | Strong profit-to-OCF conversion; healthy margins. |
+| Governance (30%) | 8 | CAG-audited PSU; clean disclosures. |
+| Financial (20%) | 9 | Net cash, strong FCF, low leverage. |
+| Business (20%) | 7 | Government/defense-budget dependence and order lumpiness. |
+
+**Amber flags:**
+- Defense-budget dependence & lumpy order flow
+
+*Sources: Public filings (BSE/NSE/screener.in), shareholding & financials, analyst knowledge*
+
+---
+
+### 3MINDIA (3MINDIA) - 8.2 / 10 - CLEAN
+*Sector: n/a - Confidence: High - Updated: 2026-06-18*
 
 **Summary:** Clean: blue-chip MNC with near-debt-free books and exemplary governance; parent royalty/RPT and rich valuation are the only watch-items.
 

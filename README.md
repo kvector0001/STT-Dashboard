@@ -11,30 +11,38 @@ A self-hosted Indian stock portfolio fundamental analysis dashboard deployed on 
 
 ## Setup
 
-### 1. Install dependencies
-```bash
-pip install yfinance pandas openpyxl
+### 1. Open the inner project folder
+```powershell
+cd "C:\Users\shashirekha\OneDrive - Microsoft\Shashi\Dashboard\Dashboard"
 ```
 
-### 2. Add your portfolio file
-Place your Zerodha portfolio Excel export as `data/portfolio.xlsx` in this repo.
-
-On your local machine the script also reads from:
-```
-C:\Users\krunal.kapadiya\OneDrive - PUMA\BACKUPS\Krunal\0. STT - Port\Dashboard\Portfolio.xlsx
+### 2. Install dependencies
+```powershell
+python -m pip install -r requirements.txt
 ```
 
-### 3. Fetch prices locally
-```bash
-cd portfolio-dashboard
+### 3. Run the local dashboard
+```powershell
+python app.py
+```
+
+Open `http://localhost:8000`. You can also run `bat/start_dashboard.bat`.
+
+Flask mode serves the site and enables the local refresh, streamed refresh, and
+save/push API routes. For read-only viewing, `python -m http.server 8000` also
+works, but those API-backed actions are unavailable.
+
+### 4. Refresh portfolio data
+```powershell
 python scripts/fetch_prices.py
 ```
 
-### 4. View locally
-```bash
-python -m http.server 8000
-# Open http://localhost:8000
-```
+The fetcher downloads the configured Google Sheet first and writes the snapshot
+to `data/portfolio.xlsx`. If the download fails locally, it falls back to
+`Portfolio.xlsx`, `Data/Portfolio.xlsx`, or the existing tracked snapshot.
+
+> A refresh can replace `data/portfolio.xlsx`. Review local workbook changes
+> before refreshing, committing, or pushing personal portfolio data.
 
 ### 5. Deploy to GitHub Pages
 - Push this repo to GitHub
@@ -42,7 +50,8 @@ python -m http.server 8000
 - Your dashboard will be live at `https://YOUR_USERNAME.github.io/portfolio-dashboard/`
 
 ## Auto Price Refresh
-GitHub Actions refreshes prices daily at **4:00 PM IST (10:30 UTC), Mon–Fri**.
+GitHub Actions runs on weekdays during market hours, with a morning extended-data
+run. Manual and repository-dispatch runs also include extended data.
 
 You can also trigger it manually from the **Actions** tab on GitHub.
 
@@ -56,9 +65,13 @@ You can also trigger it manually from the **Actions** tab on GitHub.
 | `prompt_outputs/management_trust_findings.md` | Downloadable Management Trust report (auto-generated) |
 | `prompt_outputs/red_flags_findings.md` | Downloadable Red-Flag report (auto-generated) |
 | `scripts/score_companies.py` | Maintains the two score files (`pending` / `merge` / `report`) |
-| `data/portfolio.xlsx` | Portfolio file used by GitHub Actions for daily refresh |
+| `scripts/fetch_prices.py` | Downloads holdings, aggregates accounts, and refreshes prices/momentum |
+| `scripts/fetch_extended_data.py` | Refreshes fundamentals and long-period returns |
+| `data/portfolio.xlsx` | Tracked snapshot downloaded from the Google Sheet and used by automation |
 
-> **Keep `data/portfolio.xlsx` updated** — this is what GitHub Actions uses for daily price refresh.
+Cash is stored separately in `prices.json` metadata. Gold, silver, and mutual
+fund holdings are priced from the sheet rather than Yahoo Finance. Missing or
+suspect returns remain `null` and are excluded from aggregate return calculations.
 
 ## Updating the Data
 

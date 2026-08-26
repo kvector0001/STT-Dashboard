@@ -1,0 +1,513 @@
+{
+  "AVTNPL": {
+    "name": "AVT Natural Products Limited",
+    "sector": "Specialty Chemicals / Natural Extracts",
+    "sector_group": "Chemicals",
+    "moat_type": "Narrow",
+    "moat_class": "narrow",
+    "conviction": 6,
+    "moat": "One of the world's largest producers of marigold-derived lutein and spice oleoresins/natural food colours, backward-integrated into contract farming for marigold and paprika. Serves global F&B, feed and nutraceutical majors from a food-grade, customer-audited extraction base. Part of the AV Thomas (A.V. Birla-unrelated) group.",
+    "leadership": "Global leader in marigold oleoresin/lutein and a leading Indian natural-extracts exporter; predominantly export-driven with long-standing MNC customers.",
+    "non_rep": "Contract-farming network, extraction know-how and food-grade certifications (recurring customer audits) create switching friction; natural-colour formulations are recipe-protected.",
+    "tailwinds": [
+      "Global shift from synthetic to natural food colours & ingredients",
+      "Rising nutraceutical / lutein (eye-health) demand",
+      "Clean-label F&B trend",
+      "Rupee weakness aids exporters"
+    ],
+    "risks": [
+      "Agri-commodity price & crop-yield volatility (marigold, paprika)",
+      "Customer concentration in global F&B majors",
+      "FX and export-demand cyclicality",
+      "Working-capital heavy (crop inventory)"
+    ],
+    "track": [
+      "Value-added (nutraceutical) revenue mix",
+      "Gross margin vs raw-marigold cost",
+      "Export order book & new customer wins"
+    ],
+    "mcap_cr": 1327.0,
+    "pe": 15.85
+  },
+  "BEPL": {
+    "name": "Bhansali Engineering Polymers Limited",
+    "sector": "Petrochemicals / Polymers",
+    "sector_group": "Chemicals",
+    "moat_type": "Narrow",
+    "moat_class": "narrow",
+    "conviction": 5,
+    "moat": "One of only two domestic manufacturers of ABS and SAN resins (styrenics) used in autos, appliances and durables, with a technology/JV lineage from Nippon A&L (Japan) for grades. Import-substitution play with a domestic-capacity and grade-approval edge.",
+    "leadership": "#2 domestic ABS/SAN producer alongside INEOS Styrolution India in a duopoly-like structure; expanding capacity with Nippon A&L technology support.",
+    "non_rep": "Polymer-grade approvals with auto/appliance OEMs are sticky; the Nippon A&L tie-up and scale give a cost/quality edge over imports.",
+    "tailwinds": [
+      "Import substitution in engineering plastics",
+      "Auto & appliance demand growth",
+      "China+1 / anti-dumping support for domestic resins",
+      "Premiumisation of consumer durables"
+    ],
+    "risks": [
+      "Styrene / butadiene input & spread volatility",
+      "Cyclical, single-product concentration",
+      "Import competition & dumping",
+      "Capacity-expansion execution timing"
+    ],
+    "track": [
+      "ABS-minus-styrene spread per tonne",
+      "Capacity utilisation & expansion ramp",
+      "Volume growth vs imports"
+    ],
+    "mcap_cr": 3226.0,
+    "pe": 16.12
+  },
+  "CENTENKA": {
+    "name": "Century Enka Limited",
+    "sector": "Textiles / Synthetic Yarn",
+    "sector_group": "Textiles",
+    "moat_type": "None",
+    "moat_class": "narrow",
+    "conviction": 5,
+    "moat": "Established nylon filament yarn (NFY) and nylon tyre-cord/industrial yarn producer under the B.K. Birla group, diversifying into polyester and value-added yarns. Scale and integration in an otherwise fragmented, commoditised synthetic-yarn market.",
+    "leadership": "One of India's larger nylon filament yarn makers, supplying textile and tyre-cord segments; legacy Birla-lineage brand.",
+    "non_rep": "Capital intensity and long-standing tyre/textile relationships give some entry friction, but the core product is largely commoditised.",
+    "tailwinds": [
+      "Domestic textile & tyre demand",
+      "Import substitution in nylon yarn",
+      "Value-added / technical yarn diversification",
+      "China+1 in synthetic yarns"
+    ],
+    "risks": [
+      "Caprolactam input & margin cyclicality",
+      "Cheap Chinese imports pressuring prices",
+      "Low pricing power / commoditised output",
+      "Uncertain capex returns"
+    ],
+    "track": [
+      "Nylon yarn spreads",
+      "Value-added product mix",
+      "Capacity utilisation"
+    ],
+    "mcap_cr": 1206.0,
+    "pe": 8.2
+  },
+  "CYIENT": {
+    "name": "Cyient Limited",
+    "sector": "IT / Engineering Services (ER&D)",
+    "sector_group": "IT / Software",
+    "moat_type": "Narrow",
+    "moat_class": "narrow",
+    "conviction": 6,
+    "moat": "Engineering R&D (ER&D) and geospatial services with decades-long embedded relationships in aerospace (Pratt & Whitney, Airbus), rail and communications, plus a semiconductor/DLM arm (demerged as Cyient DLM). Domain-heavy, certification-gated design work is sticky.",
+    "leadership": "Mid-tier Indian ER&D leader with strong aerospace & geospatial franchises; founder-led (BVR Mohan Reddy). Services business separated from Cyient DLM.",
+    "non_rep": "Aerospace/rail engineering carries high certification and switching barriers; multi-year design programmes lock in vendors across the product lifecycle.",
+    "tailwinds": [
+      "Global ER&D outsourcing & China+1",
+      "Aerospace recovery & new programmes",
+      "Digital engineering / geospatial demand",
+      "Semiconductor & DLM localisation"
+    ],
+    "risks": [
+      "Client concentration in aerospace/communications",
+      "Uneven execution & margin volatility",
+      "Wage inflation & attrition in ER&D",
+      "Discretionary-spend cyclicality"
+    ],
+    "track": [
+      "Services organic growth & margin",
+      "Order intake / large-deal wins",
+      "Aerospace vertical recovery"
+    ],
+    "mcap_cr": 10191.0,
+    "pe": 28.72
+  },
+  "ELECON": {
+    "name": "Elecon Engineering Company Limited",
+    "sector": "Industrial Machinery (Gears)",
+    "sector_group": "Capital Goods / Engineering",
+    "moat_type": "Narrow",
+    "moat_class": "narrow",
+    "conviction": 7,
+    "moat": "Asia's largest industrial gear and gearbox manufacturer with a dominant domestic share and a strong material-handling franchise; a large installed base drives high-margin spares/aftermarket. Deep engineering IP plus a post-deleveraging, net-cash balance sheet.",
+    "leadership": "#1 in industrial gears in India (among the largest in Asia); serves power, cement, steel, sugar and mining, with a growing exports/defence gearing book.",
+    "non_rep": "Custom gear design, application know-how and a wide installed base create aftermarket stickiness and reference-based repeat orders that new entrants cannot quickly match.",
+    "tailwinds": [
+      "India industrial capex revival",
+      "Import substitution in gears",
+      "High-margin spares/aftermarket annuity",
+      "Exports & defence/marine gearing"
+    ],
+    "risks": [
+      "Capex-cycle cyclicality",
+      "Steel raw-material cost swings",
+      "Execution on order-book growth",
+      "Valuation already re-rated"
+    ],
+    "track": [
+      "Order book & book-to-bill",
+      "Aftermarket revenue share",
+      "EBITDA margin trajectory"
+    ],
+    "mcap_cr": 9565.0,
+    "pe": 40.48
+  },
+  "EPIGRAL": {
+    "name": "Epigral Limited",
+    "sector": "Specialty Chemicals (Chlor-alkali)",
+    "sector_group": "Chemicals",
+    "moat_type": "Narrow",
+    "moat_class": "narrow",
+    "conviction": 7,
+    "moat": "Integrated chlor-alkali producer (caustic soda, chlorine) forward-integrated into high-value derivatives — CPVC resin, epichlorohydrin (ECH), chloromethanes and hydrogen peroxide — where integration and derivative mix lift margins well above commodity chlor-alkali. Formerly Meghmani Finechem (Patel group).",
+    "leadership": "Among India's few integrated makers of CPVC and ECH, with captive power and chlorine integration providing a cost edge.",
+    "non_rep": "Chlorine is uneconomic to transport, so co-located chlorine-consuming derivatives create a structural integration moat; ECH/CPVC processes carry high technical barriers.",
+    "tailwinds": [
+      "Import substitution in CPVC & ECH",
+      "Housing/plumbing (CPVC) demand",
+      "Derivatives-led margin expansion",
+      "China+1 in specialty chemicals"
+    ],
+    "risks": [
+      "Caustic / ECU price cyclicality",
+      "Capex-heavy expansion & execution",
+      "Chinese dumping in derivatives",
+      "Energy / power cost swings"
+    ],
+    "track": [
+      "Derivatives revenue share vs commodity",
+      "ECU realisation",
+      "New-plant (ECH/derivatives) ramp"
+    ],
+    "mcap_cr": 5353.0,
+    "pe": 19.77
+  },
+  "GPPL": {
+    "name": "Gujarat Pipavav Port Limited",
+    "sector": "Ports / Logistics",
+    "sector_group": "Logistics / Infrastructure",
+    "moat_type": "Narrow",
+    "moat_class": "narrow",
+    "conviction": 6,
+    "moat": "Long-concession private deep-water port on Gujarat's west coast operated by APM Terminals (Maersk), handling containers, bulk and LPG/liquids with rail/road connectivity. Concession plus marine infrastructure form a regional moat, tempered by nearby Mundra/JNPT competition.",
+    "leadership": "Established gateway port with Maersk parentage and a long lease concession; net-cash balance sheet and steady dividends.",
+    "non_rep": "Port concessions, marine infrastructure and hinterland rail linkages are licence-gated and non-replicable; the Maersk network provides captive container volumes.",
+    "tailwinds": [
+      "West-coast EXIM trade growth",
+      "Container & LPG volume ramp",
+      "Dedicated Freight Corridor connectivity",
+      "Steady, dividend-friendly cash flows"
+    ],
+    "risks": [
+      "Volume competition from Mundra/APSEZ & JNPT",
+      "Concession/tariff regulatory risk",
+      "Trade-cycle & freight-rate sensitivity",
+      "Muted historical volume growth"
+    ],
+    "track": [
+      "Container (TEU) & bulk volume growth",
+      "Realisation per TEU",
+      "Dividend payout & utilisation"
+    ],
+    "mcap_cr": 7956.0,
+    "pe": 14.24
+  },
+  "HONAUT": {
+    "name": "Honeywell Automation India Limited",
+    "sector": "Industrial Automation",
+    "sector_group": "Capital Goods / Engineering",
+    "moat_type": "Wide",
+    "moat_class": "wide",
+    "conviction": 7,
+    "moat": "Indian arm of Honeywell — process & building automation, distributed control systems, sensing and industrial software with a large installed base across refining, chemicals and infrastructure. Parent technology access plus deeply embedded control systems create very high switching costs.",
+    "leadership": "Leading process-automation & control-systems provider in India; MNC parentage, strong brand, net-cash and high return ratios.",
+    "non_rep": "DCS and automation platforms are embedded in plants with multi-decade replacement cycles and safety certifications, making them extremely sticky and hard to displace.",
+    "tailwinds": [
+      "India industrial & infrastructure capex",
+      "Automation, energy-efficiency & digitalisation",
+      "Building-management-systems demand",
+      "Parent technology pipeline (IIoT, sustainability)"
+    ],
+    "risks": [
+      "Rich valuation vs modest growth",
+      "Lumpy project cycles",
+      "Related-party pricing / royalty to parent",
+      "Import content & FX"
+    ],
+    "track": [
+      "Order booking & backlog",
+      "EBITDA margin",
+      "Services/software revenue mix"
+    ],
+    "mcap_cr": 32505.0,
+    "pe": 58.98
+  },
+  "LCL": {
+    "name": "Lohia Corp Limited",
+    "sector": "Industrial Machinery",
+    "sector_group": "Capital Goods / Engineering",
+    "moat_type": "Narrow",
+    "moat_class": "narrow",
+    "conviction": 6,
+    "moat": "Global leader in machinery for woven polypropylene (raffia) — tape lines, looms and winders for FIBC/woven-sack production — with a dominant world share and a large global installed base driving spares/service. Recently listed.",
+    "leadership": "World's largest maker of raffia/woven-sack machinery, exporting to 100+ countries, with a strong aftermarket from its installed base.",
+    "non_rep": "Decades of application engineering, a worldwide installed base and service network make the aftermarket sticky in a niche with few credible global competitors.",
+    "tailwinds": [
+      "Global packaging & FIBC demand",
+      "Aftermarket spares/service annuity",
+      "Make-in-India machinery / import substitution",
+      "Diversification into new machinery lines"
+    ],
+    "risks": [
+      "Customer capex-cycle cyclicality",
+      "Export / FX & global-demand sensitivity",
+      "Concentrated niche (raffia) exposure",
+      "Newly listed — limited public track record"
+    ],
+    "track": [
+      "Order book & export mix",
+      "Aftermarket revenue share",
+      "New product-line traction"
+    ],
+    "mcap_cr": 3069.0,
+    "pe": 32.08
+  },
+  "RAMRAT": {
+    "name": "Ram Ratna Wires Limited",
+    "sector": "Electrical Equipment (Winding Wires)",
+    "sector_group": "Electrical Equipment",
+    "moat_type": "Narrow",
+    "moat_class": "narrow",
+    "conviction": 6,
+    "moat": "Leading domestic maker of winding wires (enamelled copper/aluminium) for motors, transformers, appliances and EVs under the 'RR' brand, with scale and pan-India distribution in a value-added but competitive segment.",
+    "leadership": "Among India's largest winding-wire manufacturers, expanding capacity and value-added/specialty wires.",
+    "non_rep": "OEM approvals for motor/transformer-grade winding wire and a pan-India brand/distribution give stickiness, though copper is a pass-through commodity.",
+    "tailwinds": [
+      "Electrification, motors & transformer demand",
+      "EV & premium-appliance winding wires",
+      "Import substitution & China+1",
+      "Capex-led capacity expansion"
+    ],
+    "risks": [
+      "Copper pass-through & thin conversion margins",
+      "Working-capital intensity",
+      "Competition & commoditisation",
+      "Volume-linked, low-margin model"
+    ],
+    "track": [
+      "Conversion margin per tonne",
+      "Value-added product share",
+      "Capacity utilisation & volumes"
+    ],
+    "mcap_cr": 4570.0,
+    "pe": 36.1
+  },
+  "RATNAMANI": {
+    "name": "Ratnamani Metals & Tubes Limited",
+    "sector": "Steel Pipes & Tubes",
+    "sector_group": "Metals / Pipes",
+    "moat_type": "Wide",
+    "moat_class": "wide",
+    "conviction": 8,
+    "moat": "India's largest stainless-steel pipes & tubes maker and a leading carbon-steel (LSAW/HSAW/welded) pipe producer for oil & gas, refineries, chemicals and water, with approvals from global EPC/energy majors. Metallurgical certifications plus scale create a durable moat.",
+    "leadership": "#1 in SS pipes in India with a strong CS-pipe franchise; trusted vendor to ONGC/refineries and global energy projects, with consistent high return ratios and a net-cash balance sheet.",
+    "non_rep": "Stringent metallurgical approvals, project-vendor qualifications and a critical-service track record take years to earn and are sticky across the energy/chemical value chain.",
+    "tailwinds": [
+      "Oil & gas / city-gas pipeline capex",
+      "Refinery, chemical & water infrastructure",
+      "Import substitution in specialty pipes",
+      "Exports to global energy projects"
+    ],
+    "risks": [
+      "Project-order lumpiness & cyclicality",
+      "Nickel / steel raw-material volatility",
+      "End-market capex-cycle dependence",
+      "Rich valuation"
+    ],
+    "track": [
+      "Order book (SS + CS) & book-to-bill",
+      "EBITDA margin per segment",
+      "Capacity-expansion ramp"
+    ],
+    "mcap_cr": 19005.0,
+    "pe": 43.9
+  },
+  "RSYSTEMS": {
+    "name": "R Systems International Limited",
+    "sector": "IT / Software Services",
+    "sector_group": "IT / Software",
+    "moat_type": "Narrow",
+    "moat_class": "narrow",
+    "conviction": 6,
+    "moat": "Mid-tier digital product-engineering and IT services firm (software engineering, data/analytics, cloud) with a global delivery base, now Blackstone-controlled — adding scale, enterprise access and M&A capital. Differentiated in outsourced product engineering (OPD).",
+    "leadership": "Niche product-engineering-led IT services company with ~17% ROE and reasonable valuation; Blackstone acquired a controlling stake to support large-client mining and tuck-ins.",
+    "non_rep": "Embedded product-engineering relationships and domain IP create switching costs; Blackstone backing widens enterprise access and capital for acquisitions.",
+    "tailwinds": [
+      "Digital & product-engineering outsourcing",
+      "AI/data-led services demand",
+      "Blackstone-backed scale & M&A",
+      "China+1 / cost-arbitrage in software"
+    ],
+    "risks": [
+      "Small scale vs Tier-1 IT peers",
+      "Client concentration & discretionary spend",
+      "Ownership-transition & integration execution",
+      "Wage inflation & attrition"
+    ],
+    "track": [
+      "Organic constant-currency growth",
+      "Large-client additions",
+      "EBIT margin & utilisation"
+    ],
+    "mcap_cr": 2881.0,
+    "pe": 15.63,
+    "roe": 17.3
+  },
+  "SIEMENS": {
+    "name": "Siemens Limited",
+    "sector": "Electrical Equipment / Automation",
+    "sector_group": "Capital Goods / Engineering",
+    "moat_type": "Wide",
+    "moat_class": "wide",
+    "conviction": 8,
+    "moat": "Blue-chip industrial with leadership across automation, electrification (switchgear, transformers), motors/drives, rail transport and digital industries, backed by deep German-parent technology and a vast installed base. Post-Energy-demerger, a focused automation & infrastructure franchise.",
+    "leadership": "Among India's strongest capital-goods/automation franchises, with market leadership in multiple segments, a net-cash balance sheet, premium brand and marquee customers.",
+    "non_rep": "Installed base, technology depth, safety/quality certifications and long-cycle infrastructure relationships create high switching costs and reference-driven wins that are very hard to replicate.",
+    "tailwinds": [
+      "India capex, electrification & data-centre demand",
+      "Rail/metro & infrastructure spend",
+      "Factory automation & digitalisation",
+      "Parent technology pipeline"
+    ],
+    "risks": [
+      "Very rich valuation (high P/E)",
+      "Project-cycle lumpiness",
+      "Related-party royalty/pricing to parent",
+      "Demerger comparability & execution"
+    ],
+    "track": [
+      "Order inflow & backlog",
+      "Segment margins (automation vs infrastructure)",
+      "Base-order momentum"
+    ],
+    "mcap_cr": 145671.0,
+    "pe": 86.46
+  },
+  "SIMPLEXCAS": {
+    "name": "Simplex Castings Limited",
+    "sector": "Castings / Heavy Engineering",
+    "sector_group": "Capital Goods / Engineering",
+    "moat_type": "None",
+    "moat_class": "narrow",
+    "conviction": 4,
+    "moat": "Small engineering-castings and heavy-fabrication maker supplying railways, defence, steel and power sectors with critical/heavy castings. Niche capability but sub-scale with a modest, volatile track record.",
+    "leadership": "Small-cap castings & heavy-engineering supplier with railway/defence approvals; capability-led but limited in scale and earnings consistency.",
+    "non_rep": "Railway/defence vendor approvals and heavy-casting tooling give some entry friction, but scale and reliability are lacking.",
+    "tailwinds": [
+      "Railway & defence indigenisation capex",
+      "Import substitution in heavy castings",
+      "Infrastructure & steel-sector demand",
+      "Order-book-led growth"
+    ],
+    "risks": [
+      "Sub-scale, volatile profitability",
+      "Working-capital & receivable stress",
+      "Customer/sector concentration (railways)",
+      "Execution & balance-sheet risk"
+    ],
+    "track": [
+      "Order book & execution",
+      "Margin stability",
+      "Receivable days / cash flow"
+    ],
+    "mcap_cr": 491.0,
+    "pe": 21.01
+  },
+  "TIMETECHNO": {
+    "name": "Time Technoplast Limited",
+    "sector": "Industrial Packaging / Polymers",
+    "sector_group": "Packaging",
+    "moat_type": "Narrow",
+    "moat_class": "narrow",
+    "conviction": 6,
+    "moat": "Leading polymer-products maker — industrial packaging (HDPE drums, IBCs, jerricans), composite type-IV LPG/CNG cylinders and technical/infrastructure products — with a pan-India and overseas footprint. Scale, UN-certified MNC customer approvals and a shift to value-added products.",
+    "leadership": "India's #1 in industrial polymer packaging (drums/IBCs) and an emerging leader in composite cylinders, with growing exports, richer product mix and ongoing deleveraging.",
+    "non_rep": "UN-certified packaging approvals from chemical/pharma MNCs and a wide plant network create switching friction; composite-cylinder technology is a high-barrier growth vector.",
+    "tailwinds": [
+      "Chemical/pharma packaging demand & China+1",
+      "Composite (type-IV) LPG/CNG/H2 cylinder adoption",
+      "Value-added product migration",
+      "Export growth"
+    ],
+    "risks": [
+      "Polymer (HDPE) input price volatility",
+      "Capex-led growth execution",
+      "Working-capital intensity",
+      "Commoditisation in base packaging"
+    ],
+    "track": [
+      "Value-added & composite-cylinder revenue share",
+      "ROCE & debt reduction",
+      "Capacity utilisation"
+    ],
+    "mcap_cr": 9124.0,
+    "pe": 16.39
+  },
+  "TMCV": {
+    "name": "Tata Motors Limited (Commercial Vehicles)",
+    "sector": "Automobiles / Commercial Vehicles",
+    "sector_group": "Automobiles",
+    "moat_type": "Narrow",
+    "moat_class": "narrow",
+    "conviction": 6,
+    "moat": "India's largest commercial-vehicle maker (trucks and buses) and the demerged CV-focused Tata Motors entity, with a dominant M&HCV share, the widest CV sales-service-spares network and a captive financing ecosystem. Market leadership, brand and network drive scale advantages.",
+    "leadership": "#1 in Indian commercial vehicles (M&HCV and buses) with a nationwide dealer/service footprint and Tata brand trust; earnings are geared to the freight/infrastructure cycle.",
+    "non_rep": "A nationwide sales-service-spares network, fleet relationships and CV homologation scale are extremely hard to replicate; the brand and resale-value ecosystem lock in fleet buyers.",
+    "tailwinds": [
+      "Infra & freight-led CV demand cycle",
+      "Fleet replacement & tighter emission norms",
+      "CV electrification & CNG/LNG shift",
+      "Premiumisation, aftermarket & financing"
+    ],
+    "risks": [
+      "Deep CV-demand cyclicality",
+      "Competition (Ashok Leyland, VECV, Daimler)",
+      "Commodity (steel) & margin swings",
+      "Demerger transition & comparability"
+    ],
+    "track": [
+      "M&HCV volume & market share",
+      "EBITDA margin through the cycle",
+      "Aftermarket & financing contribution"
+    ],
+    "mcap_cr": 174891.0,
+    "pe": 41.66
+  },
+  "ZENSARTECH": {
+    "name": "Zensar Technologies Limited",
+    "sector": "IT / Software Services",
+    "sector_group": "IT / Software",
+    "moat_type": "Narrow",
+    "moat_class": "narrow",
+    "conviction": 6,
+    "moat": "Mid-tier digital IT services firm (RPG group) focused on experience, engineering and data/AI across banking, hi-tech/manufacturing and consumer verticals, with an improving margin and delivery profile and a reasonable valuation.",
+    "leadership": "RPG-group mid-cap IT services company with a strong hi-tech/BFSI book and a margin/growth turnaround underway; net-cash and attractively valued vs peers.",
+    "non_rep": "Embedded digital-engineering relationships and vertical domain expertise create switching costs, though scale is smaller than Tier-1 peers.",
+    "tailwinds": [
+      "Digital & AI-led services demand",
+      "Vendor consolidation to stable mid-caps",
+      "BFSI & hi-tech recovery",
+      "Cost-arbitrage / China+1 in software"
+    ],
+    "risks": [
+      "Discretionary-spend & macro sensitivity",
+      "Client concentration (top accounts)",
+      "Wage inflation & attrition",
+      "Execution consistency vs Tier-1s"
+    ],
+    "track": [
+      "Constant-currency growth & book-to-bill",
+      "EBIT margin recovery",
+      "Large-deal TCV & top-account trends"
+    ],
+    "mcap_cr": 10707.0,
+    "pe": 14.13
+  }
+}

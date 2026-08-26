@@ -1,0 +1,347 @@
+{
+  "AVTNPL": {
+    "mgmt_trust": {
+      "confidence": "Moderate", "etf": false,
+      "summary": "Reputable AV Thomas group promoter; clean, low-profile management with stable ownership but cyclical, export-dependent execution.",
+      "pillars": {
+        "promoter_profile": {"score": 7, "reason": "Long-standing AV Thomas group; clean reputation, no known regulatory issues."},
+        "ownership_behaviour": {"score": 7, "reason": "Stable promoter holding, no pledging; orderly conduct."},
+        "capital_allocation": {"score": 6, "reason": "Steady but modest returns; working-capital heavy agri model."},
+        "governance": {"score": 7, "reason": "Clean disclosures as a listed group entity."},
+        "execution": {"score": 6, "reason": "Export/agri cyclicality; value-added shift progressing gradually."}
+      }
+    },
+    "red_flags": {
+      "confidence": "Moderate", "etf": false,
+      "summary": "No major accounting/governance flags; risks are agri-commodity and FX cyclicality rather than integrity.",
+      "categories": {
+        "accounting": {"score": 7, "reason": "Clean reported accounts; no restatements known."},
+        "governance": {"score": 7, "reason": "Reputable group; no notable RPT/board concerns."},
+        "financial": {"score": 7, "reason": "Manageable leverage; high working-capital intensity."},
+        "business": {"score": 6, "reason": "Crop-yield, FX and customer-concentration cyclicality."}
+      }
+    }
+  },
+  "BEPL": {
+    "mgmt_trust": {
+      "confidence": "Moderate", "etf": false,
+      "summary": "Bhansali promoter with Nippon A&L technology tie-up; competent but single-product, cyclical execution.",
+      "pillars": {
+        "promoter_profile": {"score": 6, "reason": "Established promoter; niche styrenics focus."},
+        "ownership_behaviour": {"score": 6, "reason": "Stable holding; no material pledging concerns."},
+        "capital_allocation": {"score": 6, "reason": "Capacity expansion sensible but commodity-spread dependent."},
+        "governance": {"score": 6, "reason": "Adequate governance; MNC JV oversight helps."},
+        "execution": {"score": 6, "reason": "Delivery tied to ABS-styrene spread cycle."}
+      }
+    },
+    "red_flags": {
+      "confidence": "Moderate", "etf": false,
+      "summary": "No serious forensic flags; principal risk is commodity cyclicality and single-product concentration.",
+      "categories": {
+        "accounting": {"score": 6, "reason": "Reasonable accounting; commodity inventory swings."},
+        "governance": {"score": 6, "reason": "No notable governance red flags."},
+        "financial": {"score": 7, "reason": "Low debt, cash-generative in up-cycles."},
+        "business": {"score": 5, "reason": "Cyclical, single-product (ABS/SAN) concentration."}
+      }
+    }
+  },
+  "CENTENKA": {
+    "mgmt_trust": {
+      "confidence": "Moderate", "etf": false,
+      "summary": "Clean B.K. Birla lineage but historically weak capital returns and low-growth execution.",
+      "pillars": {
+        "promoter_profile": {"score": 7, "reason": "B.K. Birla group; clean, conservative promoter."},
+        "ownership_behaviour": {"score": 7, "reason": "Stable holding, no pledging."},
+        "capital_allocation": {"score": 5, "reason": "Modest ROCE; commoditised reinvestment."},
+        "governance": {"score": 7, "reason": "Clean disclosures, established board."},
+        "execution": {"score": 5, "reason": "Low-growth, cyclical yarn business."}
+      }
+    },
+    "red_flags": {
+      "confidence": "Moderate", "etf": false,
+      "summary": "Clean books; risks are commoditisation and import competition, not governance.",
+      "categories": {
+        "accounting": {"score": 7, "reason": "Conservative accounting."},
+        "governance": {"score": 7, "reason": "No governance concerns."},
+        "financial": {"score": 7, "reason": "Low leverage, cash on books."},
+        "business": {"score": 5, "reason": "Commoditised yarn; import pressure."}
+      }
+    }
+  },
+  "CYIENT": {
+    "mgmt_trust": {
+      "confidence": "Moderate", "etf": false,
+      "summary": "Well-regarded founder (BVR Mohan Reddy) and clean governance; execution and M&A discipline the swing factor.",
+      "pillars": {
+        "promoter_profile": {"score": 8, "reason": "Respected founder; strong professional reputation."},
+        "ownership_behaviour": {"score": 7, "reason": "Stable promoter holding; no pledging."},
+        "capital_allocation": {"score": 6, "reason": "Mixed M&A record; DLM demerger to sharpen focus."},
+        "governance": {"score": 8, "reason": "Clean disclosures, credible board."},
+        "execution": {"score": 6, "reason": "Uneven services growth/margins across cycles."}
+      }
+    },
+    "red_flags": {
+      "confidence": "Moderate", "etf": false,
+      "summary": "No forensic concerns; risks are execution and client concentration.",
+      "categories": {
+        "accounting": {"score": 8, "reason": "Clean, transparent accounting."},
+        "governance": {"score": 8, "reason": "Strong governance and disclosure."},
+        "financial": {"score": 7, "reason": "Healthy balance sheet, cash-generative."},
+        "business": {"score": 6, "reason": "Aerospace/comms client concentration; cyclicality."}
+      }
+    }
+  },
+  "ELECON": {
+    "mgmt_trust": {
+      "confidence": "Moderate", "etf": false,
+      "summary": "Strong operational turnaround and deleveraging under the Patel promoters; governance improving from a mixed past.",
+      "pillars": {
+        "promoter_profile": {"score": 6, "reason": "Prayasvin Patel promoter; improved credibility post-turnaround."},
+        "ownership_behaviour": {"score": 6, "reason": "Past pledging largely cleared; holding stable."},
+        "capital_allocation": {"score": 7, "reason": "Deleveraged to net-cash; disciplined focus on core gears."},
+        "governance": {"score": 6, "reason": "Governance adequate, improving."},
+        "execution": {"score": 8, "reason": "Excellent recent execution and margin expansion."}
+      }
+    },
+    "red_flags": {
+      "confidence": "Moderate", "etf": false,
+      "summary": "Cleaned-up balance sheet; watch historical governance and capex-cycle exposure.",
+      "categories": {
+        "accounting": {"score": 6, "reason": "Improved accounting quality post-turnaround."},
+        "governance": {"score": 6, "reason": "Historically mixed; now steadier."},
+        "financial": {"score": 7, "reason": "Net-cash after deleveraging."},
+        "business": {"score": 6, "reason": "Industrial capex-cycle sensitivity."}
+      }
+    }
+  },
+  "EPIGRAL": {
+    "mgmt_trust": {
+      "confidence": "Moderate", "etf": false,
+      "summary": "Meghmani/Patel promoter with value-accretive integration; capex-led execution well managed so far.",
+      "pillars": {
+        "promoter_profile": {"score": 7, "reason": "Patel (Meghmani) group; credible chemicals track record."},
+        "ownership_behaviour": {"score": 7, "reason": "Stable holding; no pledging concerns."},
+        "capital_allocation": {"score": 7, "reason": "Integration/derivative capex has been value-accretive."},
+        "governance": {"score": 6, "reason": "Adequate governance post-Meghmani reorganisation."},
+        "execution": {"score": 7, "reason": "Strong ramp of derivatives capacity."}
+      }
+    },
+    "red_flags": {
+      "confidence": "Moderate", "etf": false,
+      "summary": "No serious flags; risks are capex/debt during expansion and chemical-price cyclicality.",
+      "categories": {
+        "accounting": {"score": 6, "reason": "Reasonable accounting; capitalisation to monitor."},
+        "governance": {"score": 6, "reason": "No notable governance issues."},
+        "financial": {"score": 6, "reason": "Capex-driven leverage during expansion."},
+        "business": {"score": 6, "reason": "Chlor-alkali/derivative price cyclicality."}
+      }
+    }
+  },
+  "GPPL": {
+    "mgmt_trust": {
+      "confidence": "High", "etf": false,
+      "summary": "APM Terminals (Maersk) control brings strong MNC governance; execution limited by muted volume growth.",
+      "pillars": {
+        "promoter_profile": {"score": 8, "reason": "APM Terminals/Maersk parent; strong global standards."},
+        "ownership_behaviour": {"score": 8, "reason": "Stable MNC ownership; shareholder-friendly dividends."},
+        "capital_allocation": {"score": 7, "reason": "Net-cash, disciplined capex, consistent payouts."},
+        "governance": {"score": 8, "reason": "High disclosure and board quality."},
+        "execution": {"score": 6, "reason": "Flat container volumes vs competition."}
+      }
+    },
+    "red_flags": {
+      "confidence": "Moderate", "etf": false,
+      "summary": "Clean, well-governed; principal risk is competitive/volume and concession/tariff regulation.",
+      "categories": {
+        "accounting": {"score": 8, "reason": "Clean MNC-standard accounting."},
+        "governance": {"score": 8, "reason": "Strong governance under Maersk."},
+        "financial": {"score": 8, "reason": "Net-cash, strong cash flow."},
+        "business": {"score": 6, "reason": "Volume competition and concession/tariff risk."}
+      }
+    }
+  },
+  "LCL": {
+    "mgmt_trust": {
+      "confidence": "Low", "etf": false,
+      "summary": "Global niche machinery leader (Lohia) but a newly listed, family-run entity with limited public track record.",
+      "pillars": {
+        "promoter_profile": {"score": 6, "reason": "Lohia family; strong operating pedigree, thin public history."},
+        "ownership_behaviour": {"score": 6, "reason": "Recently listed; ownership conduct not yet seasoned."},
+        "capital_allocation": {"score": 6, "reason": "Reasonable but limited public capital-allocation record."},
+        "governance": {"score": 6, "reason": "New to public markets; governance to be proven."},
+        "execution": {"score": 7, "reason": "Established global market leadership in raffia machinery."}
+      }
+    },
+    "red_flags": {
+      "confidence": "Low", "etf": false,
+      "summary": "No known flags but thin public disclosure history; risks are cyclicality and newly-listed transparency.",
+      "categories": {
+        "accounting": {"score": 6, "reason": "Limited public accounting history."},
+        "governance": {"score": 6, "reason": "Governance track record not yet established."},
+        "financial": {"score": 7, "reason": "Healthy balance sheet for a machinery maker."},
+        "business": {"score": 6, "reason": "Customer capex-cycle and niche concentration."}
+      }
+    }
+  },
+  "RAMRAT": {
+    "mgmt_trust": {
+      "confidence": "Moderate", "etf": false,
+      "summary": "Kabra-family winding-wire maker; competent but low-margin, working-capital-heavy conversion model.",
+      "pillars": {
+        "promoter_profile": {"score": 6, "reason": "Established family promoter; steady conduct."},
+        "ownership_behaviour": {"score": 6, "reason": "Stable holding; no major pledging."},
+        "capital_allocation": {"score": 6, "reason": "Capacity-led growth in a thin-margin business."},
+        "governance": {"score": 6, "reason": "Adequate governance, no notable flags."},
+        "execution": {"score": 6, "reason": "Volume-led execution; copper pass-through limits margin."}
+      }
+    },
+    "red_flags": {
+      "confidence": "Moderate", "etf": false,
+      "summary": "No forensic concerns; risks are commodity pass-through, thin margins and working capital.",
+      "categories": {
+        "accounting": {"score": 6, "reason": "Reasonable accounting."},
+        "governance": {"score": 6, "reason": "No governance red flags."},
+        "financial": {"score": 6, "reason": "Working-capital-intensive, moderate leverage."},
+        "business": {"score": 6, "reason": "Commoditised, competitive conversion business."}
+      }
+    }
+  },
+  "RATNAMANI": {
+    "mgmt_trust": {
+      "confidence": "High", "etf": false,
+      "summary": "High-quality Sanghvi-family franchise: disciplined capital allocation, net-cash, consistent execution and clean governance.",
+      "pillars": {
+        "promoter_profile": {"score": 8, "reason": "Sanghvi family; excellent long-term track record."},
+        "ownership_behaviour": {"score": 8, "reason": "Stable holding, no pledging, shareholder-aligned."},
+        "capital_allocation": {"score": 8, "reason": "High ROCE, net-cash, disciplined capacity additions."},
+        "governance": {"score": 8, "reason": "Clean disclosures and credible board."},
+        "execution": {"score": 8, "reason": "Consistent delivery across pipe cycles."}
+      }
+    },
+    "red_flags": {
+      "confidence": "High", "etf": false,
+      "summary": "Clean, high-quality balance sheet; main risk is project-order cyclicality, not integrity.",
+      "categories": {
+        "accounting": {"score": 8, "reason": "Conservative, clean accounting."},
+        "governance": {"score": 8, "reason": "Strong governance record."},
+        "financial": {"score": 8, "reason": "Net-cash, strong cash generation."},
+        "business": {"score": 7, "reason": "Order lumpiness and raw-material cyclicality."}
+      }
+    }
+  },
+  "RSYSTEMS": {
+    "mgmt_trust": {
+      "confidence": "Moderate", "etf": false,
+      "summary": "Blackstone control brings institutional governance and capital; execution in transition to a scaled platform.",
+      "pillars": {
+        "promoter_profile": {"score": 7, "reason": "Blackstone-controlled; professional, well-capitalised owner."},
+        "ownership_behaviour": {"score": 7, "reason": "PE-led, institutional ownership conduct."},
+        "capital_allocation": {"score": 7, "reason": "M&A-supported growth with disciplined backing."},
+        "governance": {"score": 7, "reason": "Governance strengthened under Blackstone."},
+        "execution": {"score": 6, "reason": "Ownership-transition and integration execution ongoing."}
+      }
+    },
+    "red_flags": {
+      "confidence": "Moderate", "etf": false,
+      "summary": "No forensic concerns; risks are scale, client concentration and transition execution.",
+      "categories": {
+        "accounting": {"score": 7, "reason": "Clean IT-services accounting."},
+        "governance": {"score": 7, "reason": "Institutional governance under Blackstone."},
+        "financial": {"score": 8, "reason": "Cash-generative, low leverage."},
+        "business": {"score": 6, "reason": "Sub-scale vs Tier-1s; client concentration."}
+      }
+    }
+  },
+  "SIMPLEXCAS": {
+    "mgmt_trust": {
+      "confidence": "Low", "etf": false,
+      "summary": "Small-cap castings maker with a weak, volatile track record and limited governance visibility.",
+      "pillars": {
+        "promoter_profile": {"score": 4, "reason": "Small promoter; inconsistent operating record."},
+        "ownership_behaviour": {"score": 5, "reason": "Limited visibility; small-cap ownership risk."},
+        "capital_allocation": {"score": 4, "reason": "Weak returns; balance-sheet stress history."},
+        "governance": {"score": 4, "reason": "Thin governance track record."},
+        "execution": {"score": 4, "reason": "Volatile earnings and delivery."}
+      }
+    },
+    "red_flags": {
+      "confidence": "Low", "etf": false,
+      "summary": "Elevated risk: sub-scale, volatile profitability and working-capital/balance-sheet stress.",
+      "categories": {
+        "accounting": {"score": 4, "reason": "Small-cap accounting quality uncertain."},
+        "governance": {"score": 4, "reason": "Limited governance visibility."},
+        "financial": {"score": 4, "reason": "Working-capital and balance-sheet stress."},
+        "business": {"score": 4, "reason": "Concentrated, cyclical, sub-scale business."}
+      }
+    }
+  },
+  "TIMETECHNO": {
+    "mgmt_trust": {
+      "confidence": "Moderate", "etf": false,
+      "summary": "Category leader under the Jain promoters; deleveraging and value-migration positive, but historical governance/RPT and monetisation delays temper trust.",
+      "pillars": {
+        "promoter_profile": {"score": 6, "reason": "Anil Jain promoter; strong operator, mixed governance perception."},
+        "ownership_behaviour": {"score": 6, "reason": "Stable holding; past pledging reduced."},
+        "capital_allocation": {"score": 6, "reason": "Deleveraging and value-added shift; monetisation slower than promised."},
+        "governance": {"score": 5, "reason": "Historical RPT/disclosure concerns to monitor."},
+        "execution": {"score": 6, "reason": "Steady operational delivery; composite cylinders scaling."}
+      }
+    },
+    "red_flags": {
+      "confidence": "Moderate", "etf": false,
+      "summary": "Some historical governance/RPT and cash-conversion concerns; improving with deleveraging.",
+      "categories": {
+        "accounting": {"score": 5, "reason": "Cash-conversion and capitalisation to watch."},
+        "governance": {"score": 5, "reason": "Past RPT/monetisation-delay perceptions."},
+        "financial": {"score": 6, "reason": "Leverage reducing; working-capital heavy."},
+        "business": {"score": 6, "reason": "Polymer-price cyclicality; base-packaging commoditisation."}
+      }
+    }
+  },
+  "TMCV": {
+    "mgmt_trust": {
+      "confidence": "High", "etf": false,
+      "summary": "Tata-group ownership provides top-tier governance and stewardship; execution geared to the CV cycle.",
+      "pillars": {
+        "promoter_profile": {"score": 9, "reason": "Tata group; among India's most trusted promoters."},
+        "ownership_behaviour": {"score": 8, "reason": "Stable, institutional ownership conduct."},
+        "capital_allocation": {"score": 7, "reason": "Disciplined CV capital allocation; cyclical returns."},
+        "governance": {"score": 9, "reason": "Strong Tata governance and disclosure."},
+        "execution": {"score": 7, "reason": "Market leader; cyclical delivery."}
+      }
+    },
+    "red_flags": {
+      "confidence": "Moderate", "etf": false,
+      "summary": "Top-tier governance; main risk is CV-demand cyclicality and demerger-transition comparability.",
+      "categories": {
+        "accounting": {"score": 8, "reason": "Tata-standard accounting and disclosure."},
+        "governance": {"score": 9, "reason": "Strong governance framework."},
+        "financial": {"score": 7, "reason": "Cyclical earnings; improving CV balance sheet."},
+        "business": {"score": 6, "reason": "Deep CV cyclicality and competition."}
+      }
+    }
+  },
+  "ZENSARTECH": {
+    "mgmt_trust": {
+      "confidence": "Moderate", "etf": false,
+      "summary": "RPG-group (Goenka) ownership with a credible turnaround; execution consistency the key watch item.",
+      "pillars": {
+        "promoter_profile": {"score": 7, "reason": "RPG group; reputable, professional promoter."},
+        "ownership_behaviour": {"score": 7, "reason": "Stable holding; no pledging."},
+        "capital_allocation": {"score": 7, "reason": "Net-cash, disciplined; buyback/dividend friendly."},
+        "governance": {"score": 7, "reason": "Sound governance under RPG."},
+        "execution": {"score": 6, "reason": "Turnaround delivering; consistency vs Tier-1s to prove."}
+      }
+    },
+    "red_flags": {
+      "confidence": "Moderate", "etf": false,
+      "summary": "No forensic concerns; risks are execution consistency and client concentration.",
+      "categories": {
+        "accounting": {"score": 7, "reason": "Clean IT-services accounting."},
+        "governance": {"score": 7, "reason": "Sound RPG governance."},
+        "financial": {"score": 8, "reason": "Net-cash, cash-generative."},
+        "business": {"score": 6, "reason": "Discretionary-spend sensitivity; account concentration."}
+      }
+    }
+  }
+}

@@ -9,11 +9,19 @@ import time
 from datetime import datetime, timezone, timedelta
 import pandas as pd
 import yfinance as yf
-import re
+
+from yahoo_symbols import yahoo_symbol_candidates
 
 # ── Paths ──────────────────────────────────────────────────────────────────
 STOCKS_PATH = "stocks.json"
 PRICES_PATH = "prices.json"
+
+
+def save_data(stocks, prices):
+    with open(STOCKS_PATH, "w", encoding="utf-8") as f:
+        json.dump(stocks, f, indent=2, ensure_ascii=False)
+    with open(PRICES_PATH, "w", encoding="utf-8") as f:
+        json.dump(prices, f, indent=2, ensure_ascii=False)
 
 def get_return(hist, days):
     if len(hist) < 2: return None
@@ -43,23 +51,15 @@ def fetch_all():
 
     for i, stock in enumerate(stocks):
         ticker = stock["ticker"]
-        # Use ticker directly (like fetch_prices.py)
-        yf_sym = ticker
-        
-        # Clean suffix for Yahoo
-        clean_yf = re.sub(r'-[A-Z]$', '', yf_sym)
-        
-        # Try .NS then .BO
         t_obj = None
-        for suffix in [".NS", ".BO"]:
+        for test_sym in yahoo_symbol_candidates(ticker, stock.get("nse_symbol")):
             try:
-                test_sym = clean_yf + suffix
-                t_obj = yf.Ticker(test_sym)
-                # Quick check if it exists
-                if t_obj.fast_info.last_price > 0:
+                candidate = yf.Ticker(test_sym)
+                if candidate.fast_info.last_price > 0:
+                    t_obj = candidate
                     break
-            except:
-                t_obj = None
+            except Exception:
+                continue
 
         if not t_obj:
             print(f"  [{(i+1):>3}/{len(stocks)}] ❌ {ticker} - Not found on Yahoo")
@@ -105,13 +105,11 @@ def fetch_all():
 
         # Save every 10 stocks for progress
         if (i+1) % 10 == 0:
-            with open(STOCKS_PATH, "w", encoding="utf-8") as f:
-                json.dump(stocks, f, indent=2, ensure_ascii=False)
-            with open(PRICES_PATH, "w", encoding="utf-8") as f:
-                json.dump(prices, f, indent=2, ensure_ascii=False)
+            save_data(stocks, prices)
             print(f"  [Progress] Saved update at stock {i+1}")
 
-    # Final Save update
+    save_data(stocks, prices)
+    print("  [Final] Saved all extended-data updates")
 
 if __name__ == "__main__":
     fetch_all()
