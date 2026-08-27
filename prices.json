@@ -5,7 +5,7 @@
     "quantity": 1.0,
     "pnl_pct": 64.33,
     "pnl_abs": 33.36,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -54,11 +54,9 @@
     "insider_pct": 57.17,
     "ret_1d": -0.95,
     "ret_1w": -1.48,
-    "ret_1m": -10.22,
-    "ret_6m": -17.95,
-    "ret_1y": -40.56,
-    "ret_3y": -44.07,
-    "ret_5y": -44.07
+    "ret_1m": -9.29,
+    "ret_6m": -16.74,
+    "ret_1y": -38.32
   },
   "ASTERDM": {
     "ltp": 754.8,
@@ -66,7 +64,7 @@
     "quantity": 183.0,
     "pnl_pct": 165.98,
     "pnl_abs": 86196.9,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -127,13 +125,13 @@
     "insider_pct": 63.69,
     "ret_1d": -0.96,
     "ret_1w": -1.42,
-    "ret_1m": -7.77,
-    "ret_6m": 17.97,
-    "ret_1y": 26.41,
+    "ret_1m": -7.27,
+    "ret_6m": 16.73,
+    "ret_1y": 26.35,
     "ret_2y": 90.84,
-    "ret_3y": 219.66,
+    "ret_3y": 223.85,
     "ret_4y": 319.83,
-    "ret_5y": 411.86
+    "ret_5y": 433.44
   },
   "ASTRAMICRO": {
     "ltp": 1687.5,
@@ -141,7 +139,7 @@
     "quantity": 101.0,
     "pnl_pct": 650.9,
     "pnl_abs": 147739.8,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -196,13 +194,13 @@
     "insider_pct": 30.57,
     "ret_1d": -0.66,
     "ret_1w": 0.2,
-    "ret_1m": -4.87,
-    "ret_6m": 76.66,
-    "ret_1y": 62.86,
+    "ret_1m": -2.23,
+    "ret_6m": 70.23,
+    "ret_1y": 69.08,
     "ret_2y": 92.25,
-    "ret_3y": 361.03,
+    "ret_3y": 346.4,
     "ret_4y": 528.74,
-    "ret_5y": 1015.82
+    "ret_5y": 727.22
   },
   "AVANTEL": {
     "ltp": 158.05,
@@ -210,7 +208,7 @@
     "quantity": 540.0,
     "pnl_pct": 1080.53,
     "pnl_abs": 78117.43,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -258,12 +256,10 @@
     "insider_pct": 45.25,
     "ret_1d": 0.71,
     "ret_1w": -3.01,
-    "ret_1m": -2.09,
-    "ret_6m": 10.0,
-    "ret_1y": 4.91,
-    "ret_2y": -14.74,
-    "ret_3y": -22.47,
-    "ret_5y": -22.47
+    "ret_1m": -1.08,
+    "ret_6m": 8.35,
+    "ret_1y": 6.85,
+    "ret_2y": -14.74
   },
   "BEL": {
     "ltp": 411.0,
@@ -271,7 +267,7 @@
     "quantity": 112.0,
     "pnl_pct": null,
     "pnl_abs": null,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -306,7 +302,7 @@
     "vol_week_ratio": 0.83,
     "vol_month_ratio": 0.72,
     "ath_pct": -12.14,
-    "atl_pct": 41840.84,
+    "atl_pct": 41840.83,
     "trend_score": 26,
     "trend_signal": "Bearish",
     "price_to_200dma_pct": -1.74,
@@ -326,13 +322,13 @@
     "insider_pct": 53.42,
     "ret_1d": 1.01,
     "ret_1w": 0.39,
-    "ret_1m": 6.19,
-    "ret_6m": -5.92,
-    "ret_1y": 11.09,
+    "ret_1m": 6.93,
+    "ret_6m": -7.96,
+    "ret_1y": 12.97,
     "ret_2y": 36.8,
-    "ret_3y": 227.3,
+    "ret_3y": 220.96,
     "ret_4y": 357.98,
-    "ret_5y": 611.72
+    "ret_5y": 535.68
   },
   "BOROLTD": {
     "ltp": 244.07,
@@ -340,7 +336,7 @@
     "quantity": 1.0,
     "pnl_pct": 119.33,
     "pnl_abs": 132.79,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -389,13 +385,13 @@
     "insider_pct": 67.86,
     "ret_1d": -4.42,
     "ret_1w": -5.33,
-    "ret_1m": 5.26,
-    "ret_6m": 1.17,
-    "ret_1y": -26.99,
+    "ret_1m": 3.51,
+    "ret_6m": 3.33,
+    "ret_1y": -27.58,
     "ret_2y": -42.87,
-    "ret_3y": -35.89,
+    "ret_3y": -34.86,
     "ret_4y": -17.58,
-    "ret_5y": 44.66
+    "ret_5y": 2.32
   },
   "DLINKINDIA": {
     "ltp": 438.0,
@@ -403,7 +399,7 @@
     "quantity": 51.0,
     "pnl_pct": -11.44,
     "pnl_abs": -2884.6,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -458,13 +454,13 @@
     "insider_pct": 59.25,
     "ret_1d": -1.31,
     "ret_1w": -0.09,
-    "ret_1m": -2.3,
-    "ret_6m": 11.7,
-    "ret_1y": -0.93,
+    "ret_1m": -3.1,
+    "ret_6m": 12.43,
+    "ret_1y": 0.47,
     "ret_2y": -16.74,
-    "ret_3y": 53.57,
+    "ret_3y": 53.94,
     "ret_4y": 201.9,
-    "ret_5y": 298.16
+    "ret_5y": 265.11
   },
   "HBLENGINE": {
     "ltp": 665.75,
@@ -472,7 +468,7 @@
     "quantity": 100.0,
     "pnl_pct": 128.82,
     "pnl_abs": 37480.0,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -522,13 +518,13 @@
     "insider_pct": 8.07,
     "ret_1d": -2.65,
     "ret_1w": -6.61,
-    "ret_1m": -5.97,
-    "ret_6m": -6.05,
-    "ret_1y": -14.36,
+    "ret_1m": -4.8,
+    "ret_6m": -4.91,
+    "ret_1y": -13.36,
     "ret_2y": 3.19,
-    "ret_3y": 199.09,
+    "ret_3y": 193.45,
     "ret_4y": 688.14,
-    "ret_5y": 1356.96
+    "ret_5y": 1170.41
   },
   "HCG": {
     "ltp": 699.95,
@@ -536,7 +532,7 @@
     "quantity": 449.0,
     "pnl_pct": 198.59,
     "pnl_abs": 209022.16,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -590,13 +586,13 @@
     "insider_pct": 70.64,
     "ret_1d": -0.88,
     "ret_1w": -4.18,
-    "ret_1m": 3.73,
-    "ret_6m": 21.44,
-    "ret_1y": 2.96,
+    "ret_1m": 4.52,
+    "ret_6m": 22.57,
+    "ret_1y": 2.0,
     "ret_2y": 80.42,
-    "ret_3y": 105.66,
+    "ret_3y": 107.02,
     "ret_4y": 155.5,
-    "ret_5y": 204.13
+    "ret_5y": 206.32
   },
   "INCAP": {
     "ltp": 82.5,
@@ -604,7 +600,7 @@
     "quantity": 298.0,
     "pnl_pct": 97.41,
     "pnl_abs": 12130.95,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -664,12 +660,12 @@
     "ret_1d": -2.42,
     "ret_1w": -8.59,
     "ret_1m": -9.34,
-    "ret_6m": 3.0,
-    "ret_1y": 14.05,
+    "ret_6m": -13.32,
+    "ret_1y": 10.57,
     "ret_2y": 36.52,
-    "ret_3y": 126.99,
+    "ret_3y": 126.39,
     "ret_4y": 172.4,
-    "ret_5y": 260.19,
+    "ret_5y": 237.9,
     "name": "Incap Limited"
   },
   "INDUSTOWER": {
@@ -678,7 +674,7 @@
     "quantity": 1.0,
     "pnl_pct": 70.8,
     "pnl_abs": 157.5,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -731,13 +727,13 @@
     "insider_pct": 51.31,
     "ret_1d": 0.6,
     "ret_1w": 3.02,
-    "ret_1m": 2.1,
-    "ret_6m": -14.56,
-    "ret_1y": 11.13,
+    "ret_1m": 0.34,
+    "ret_6m": -14.53,
+    "ret_1y": 15.09,
     "ret_2y": -9.35,
-    "ret_3y": 129.15,
+    "ret_3y": 130.02,
     "ret_4y": 79.74,
-    "ret_5y": 92.79
+    "ret_5y": 48.16
   },
   "LAKSELEC": {
     "ltp": 838.0,
@@ -745,7 +741,7 @@
     "quantity": 1.0,
     "pnl_pct": 42.3,
     "pnl_abs": 249.1,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -794,13 +790,13 @@
     "insider_pct": 45.93,
     "ret_1d": 0.36,
     "ret_1w": -0.42,
-    "ret_1m": 6.53,
-    "ret_6m": 12.0,
-    "ret_1y": -12.9,
+    "ret_1m": 7.32,
+    "ret_6m": 10.83,
+    "ret_1y": -11.46,
     "ret_2y": -39.88,
-    "ret_3y": -42.19,
+    "ret_3y": -43.54,
     "ret_4y": 35.88,
-    "ret_5y": 101.78
+    "ret_5y": 93.59
   },
   "LATENTVIEW": {
     "ltp": 275.25,
@@ -808,7 +804,7 @@
     "quantity": 2.0,
     "pnl_pct": -38.23,
     "pnl_abs": -340.75,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -863,13 +859,12 @@
     "insider_pct": 71.4,
     "ret_1d": 0.57,
     "ret_1w": -2.31,
-    "ret_1m": -13.33,
-    "ret_6m": -19.08,
-    "ret_1y": -35.15,
+    "ret_1m": -11.34,
+    "ret_6m": -17.5,
+    "ret_1y": -35.22,
     "ret_2y": -46.12,
-    "ret_3y": -27.56,
-    "ret_4y": -26.26,
-    "ret_5y": -43.68
+    "ret_3y": -31.4,
+    "ret_4y": -26.26
   },
   "MAFANG": {
     "ltp": 206.55,
@@ -877,7 +872,7 @@
     "quantity": 6123.0,
     "pnl_pct": 310.4,
     "pnl_abs": 956538.73,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -915,13 +910,13 @@
     "week52_low": 149.74,
     "ret_1d": -0.19,
     "ret_1w": -0.45,
-    "ret_1m": 8.07,
-    "ret_6m": 34.57,
-    "ret_1y": 29.25,
+    "ret_1m": 7.95,
+    "ret_6m": 33.45,
+    "ret_1y": 29.39,
     "ret_2y": 116.69,
-    "ret_3y": 215.63,
+    "ret_3y": 223.54,
     "ret_4y": 394.73,
-    "ret_5y": 289.5
+    "ret_5y": 264.29
   },
   "MON100": {
     "ltp": 326.94,
@@ -929,7 +924,7 @@
     "quantity": 1.0,
     "pnl_pct": 173.13,
     "pnl_abs": 207.24,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -940,7 +935,7 @@
         "invested": 119.7
       }
     ],
-    "pe": 32.8,
+    "pe": 36.43,
     "mcap_3y": 165.78,
     "vol_yest_ratio": 1.35,
     "vol_30m_ratio": 2.51,
@@ -961,13 +956,13 @@
     "week52_low": 200.65,
     "ret_1d": -0.64,
     "ret_1w": -2.81,
-    "ret_1m": 2.66,
-    "ret_6m": 43.19,
-    "ret_1y": 62.54,
+    "ret_1m": 3.67,
+    "ret_6m": 42.34,
+    "ret_1y": 60.74,
     "ret_2y": 103.45,
-    "ret_3y": 165.16,
+    "ret_3y": 165.78,
     "ret_4y": 226.52,
-    "ret_5y": 190.33
+    "ret_5y": 187.85
   },
   "MTARTECH": {
     "ltp": 7081.5,
@@ -975,7 +970,7 @@
     "quantity": 18.0,
     "pnl_pct": 341.56,
     "pnl_abs": 98599.65,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -1029,13 +1024,13 @@
     "insider_pct": 29.32,
     "ret_1d": -0.01,
     "ret_1w": -0.45,
-    "ret_1m": 36.34,
-    "ret_6m": 92.35,
-    "ret_1y": 371.6,
+    "ret_1m": 29.85,
+    "ret_6m": 92.25,
+    "ret_1y": 385.77,
     "ret_2y": 303.41,
-    "ret_3y": 213.13,
+    "ret_3y": 212.15,
     "ret_4y": 401.98,
-    "ret_5y": 458.81
+    "ret_5y": 331.14
   },
   "NH": {
     "ltp": 1903.8,
@@ -1043,7 +1038,7 @@
     "quantity": 369.0,
     "pnl_pct": 283.05,
     "pnl_abs": 519105.44,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -1104,13 +1099,13 @@
     "insider_pct": 67.23,
     "ret_1d": 1.12,
     "ret_1w": 5.81,
-    "ret_1m": -8.06,
-    "ret_6m": 2.35,
-    "ret_1y": 3.37,
+    "ret_1m": -8.48,
+    "ret_6m": 3.06,
+    "ret_1y": 7.36,
     "ret_2y": 50.72,
-    "ret_3y": 91.7,
+    "ret_3y": 94.5,
     "ret_4y": 190.55,
-    "ret_5y": 276.37
+    "ret_5y": 264.2
   },
   "ORIENTHOT": {
     "ltp": 139.15,
@@ -1118,7 +1113,7 @@
     "quantity": 1.0,
     "pnl_pct": 451.09,
     "pnl_abs": 113.9,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -1167,13 +1162,13 @@
     "insider_pct": 69.32,
     "ret_1d": -1.25,
     "ret_1w": 1.35,
-    "ret_1m": 3.09,
-    "ret_6m": 40.14,
-    "ret_1y": 0.93,
+    "ret_1m": 4.81,
+    "ret_6m": 38.68,
+    "ret_1y": 2.44,
     "ret_2y": -4.27,
-    "ret_3y": 67.96,
+    "ret_3y": 67.76,
     "ret_4y": 114.3,
-    "ret_5y": 303.83
+    "ret_5y": 267.17
   },
   "POWERINDIA": {
     "ltp": 33880.0,
@@ -1181,7 +1176,7 @@
     "quantity": 4.0,
     "pnl_pct": 1442.87,
     "pnl_abs": 126736.35,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -1199,9 +1194,9 @@
       }
     ],
     "mcap_cr": 151011.17,
-    "pe": 130.44,
+    "pe": 131.12,
     "debt_to_equity": 1.663,
-    "eps": 259.74,
+    "eps": 258.38,
     "book_value": 1161.25,
     "div_yield": 2.0,
     "pat_cagr": 123.5,
@@ -1236,13 +1231,13 @@
     "insider_pct": 71.54,
     "ret_1d": 2.28,
     "ret_1w": 1.13,
-    "ret_1m": 6.99,
-    "ret_6m": 35.63,
-    "ret_1y": 74.23,
+    "ret_1m": 8.44,
+    "ret_6m": 33.41,
+    "ret_1y": 71.33,
     "ret_2y": 181.31,
-    "ret_3y": 689.08,
+    "ret_3y": 676.52,
     "ret_4y": 885.77,
-    "ret_5y": 1426.68
+    "ret_5y": 1349.76
   },
   "REDINGTON": {
     "ltp": 358.4,
@@ -1250,7 +1245,7 @@
     "quantity": 1.0,
     "pnl_pct": 151.24,
     "pnl_abs": 215.75,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -1300,13 +1295,13 @@
     "insider_pct": 26.0,
     "ret_1d": 1.19,
     "ret_1w": 2.96,
-    "ret_1m": 24.68,
-    "ret_6m": 51.01,
-    "ret_1y": 50.48,
+    "ret_1m": 15.26,
+    "ret_6m": 49.77,
+    "ret_1y": 56.86,
     "ret_2y": 78.83,
-    "ret_3y": 149.93,
+    "ret_3y": 146.25,
     "ret_4y": 208.5,
-    "ret_5y": 175.95
+    "ret_5y": 181.86
   },
   "RIR": {
     "ltp": 162.21,
@@ -1314,7 +1309,7 @@
     "quantity": 271.0,
     "pnl_pct": 227.42,
     "pnl_abs": 30532.95,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -1365,11 +1360,7 @@
     "insider_pct": 67.65,
     "ret_1d": -1.37,
     "ret_1w": -1.32,
-    "ret_1m": 1.85,
-    "ret_6m": -1.06,
-    "ret_1y": -1.06,
-    "ret_3y": -1.06,
-    "ret_5y": -1.06
+    "ret_1m": 3.38
   },
   "SYRMA": {
     "ltp": 1493.5,
@@ -1377,7 +1368,7 @@
     "quantity": 289.0,
     "pnl_pct": 246.68,
     "pnl_abs": 307119.69,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -1438,12 +1429,11 @@
     "insider_pct": 59.61,
     "ret_1d": 1.32,
     "ret_1w": 3.45,
-    "ret_1m": 11.29,
-    "ret_6m": 79.28,
-    "ret_1y": 99.85,
+    "ret_1m": 8.51,
+    "ret_6m": 79.37,
+    "ret_1y": 105.77,
     "ret_2y": 242.28,
-    "ret_3y": 216.83,
-    "ret_5y": 385.45
+    "ret_3y": 218.81
   },
   "TATACOMM": {
     "ltp": 1689.6,
@@ -1451,7 +1441,7 @@
     "quantity": 48.0,
     "pnl_pct": -6.14,
     "pnl_abs": -5306.0,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -1512,13 +1502,13 @@
     "insider_pct": 60.47,
     "ret_1d": 2.44,
     "ret_1w": 0.72,
-    "ret_1m": -5.12,
-    "ret_6m": 4.62,
-    "ret_1y": 6.91,
+    "ret_1m": -4.74,
+    "ret_6m": 2.69,
+    "ret_1y": 9.1,
     "ret_2y": -9.82,
-    "ret_3y": 3.71,
+    "ret_3y": 3.27,
     "ret_4y": 67.16,
-    "ret_5y": 30.31
+    "ret_5y": 33.18
   },
   "USHAMART": {
     "ltp": 489.15,
@@ -1526,7 +1516,7 @@
     "quantity": 1.0,
     "pnl_pct": 812.59,
     "pnl_abs": 435.55,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -1541,7 +1531,7 @@
     "pe": 28.02,
     "debt_to_equity": 6.922,
     "eps": 17.46,
-    "book_value": 108.35,
+    "book_value": 108.47,
     "div_yield": 76.0,
     "pat_cagr": 40.8,
     "rev_cagr": 16.4,
@@ -1575,13 +1565,13 @@
     "insider_pct": 40.18,
     "ret_1d": -1.41,
     "ret_1w": -1.31,
-    "ret_1m": -3.62,
-    "ret_6m": 15.75,
-    "ret_1y": 26.98,
+    "ret_1m": -1.91,
+    "ret_6m": 15.78,
+    "ret_1y": 27.49,
     "ret_2y": 47.5,
-    "ret_3y": 48.87,
+    "ret_3y": 48.36,
     "ret_4y": 230.94,
-    "ret_5y": 647.3
+    "ret_5y": 470.25
   },
   "WOCKPHARMA": {
     "ltp": 1962.0,
@@ -1589,7 +1579,7 @@
     "quantity": 1.0,
     "pnl_pct": 371.75,
     "pnl_abs": 1546.1,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -1604,7 +1594,7 @@
     "pe": 77.8,
     "debt_to_equity": 42.284,
     "eps": 25.22,
-    "book_value": 304.44,
+    "book_value": 299.95,
     "rev_cagr": 25.9,
     "mcap_3y": 641.36,
     "vol_yest_ratio": 0.52,
@@ -1628,20 +1618,20 @@
     "ebitda_margin": 20.48,
     "opcf_3yr_avg": 195.67,
     "fcf_3yr_avg": -119.33,
-    "price_to_book": 6.44,
+    "price_to_book": 6.54,
     "ev_ebitda": 43.49,
     "week52_high": 2422.3,
     "week52_low": 1086.7,
     "insider_pct": 51.02,
     "ret_1d": 4.25,
     "ret_1w": 7.18,
-    "ret_1m": 2.37,
-    "ret_6m": 42.47,
-    "ret_1y": 35.41,
+    "ret_1m": 3.05,
+    "ret_6m": 43.88,
+    "ret_1y": 33.45,
     "ret_2y": 102.3,
-    "ret_3y": 662.68,
+    "ret_3y": 641.36,
     "ret_4y": 738.64,
-    "ret_5y": 437.2
+    "ret_5y": 389.06
   },
   "AEROFLEX": {
     "ltp": 522.1,
@@ -1649,7 +1639,7 @@
     "quantity": 991.0,
     "pnl_pct": 166.14,
     "pnl_abs": 322991.77,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -1722,12 +1712,10 @@
     "insider_pct": 69.8,
     "ret_1d": -2.66,
     "ret_1w": 9.85,
-    "ret_1m": 15.87,
-    "ret_6m": 129.83,
-    "ret_1y": 190.85,
-    "ret_2y": 212.15,
-    "ret_3y": 221.09,
-    "ret_5y": 221.09
+    "ret_1m": 22.39,
+    "ret_6m": 127.89,
+    "ret_1y": 196.81,
+    "ret_2y": 212.15
   },
   "ANURAS": {
     "ltp": 1259.8,
@@ -1735,7 +1723,7 @@
     "quantity": 20.0,
     "pnl_pct": 14.59,
     "pnl_abs": 3208.0,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -1784,13 +1772,13 @@
     "insider_pct": 83.94,
     "ret_1d": -0.62,
     "ret_1w": 1.65,
-    "ret_1m": 3.74,
-    "ret_6m": -0.71,
-    "ret_1y": 11.42,
+    "ret_1m": 4.05,
+    "ret_6m": -0.76,
+    "ret_1y": 11.93,
     "ret_2y": 56.29,
-    "ret_3y": 36.32,
+    "ret_3y": 35.54,
     "ret_4y": 51.32,
-    "ret_5y": 72.25
+    "ret_5y": 57.56
   },
   "ARE&M": {
     "ltp": 911.9,
@@ -1798,7 +1786,7 @@
     "quantity": 138.0,
     "pnl_pct": -2.48,
     "pnl_abs": -3195.5,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -1853,13 +1841,13 @@
     "insider_pct": 33.27,
     "ret_1d": -0.96,
     "ret_1w": -2.04,
-    "ret_1m": 3.28,
-    "ret_6m": 8.17,
-    "ret_1y": -6.49,
+    "ret_1m": 0.56,
+    "ret_6m": 7.46,
+    "ret_1y": -5.46,
     "ret_2y": -39.84,
-    "ret_3y": 50.54,
+    "ret_3y": 50.8,
     "ret_4y": 87.87,
-    "ret_5y": 40.28
+    "ret_5y": 36.87
   },
   "AVALON": {
     "ltp": 2256.6,
@@ -1867,7 +1855,7 @@
     "quantity": 21.0,
     "pnl_pct": 51.27,
     "pnl_abs": 16061.8,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -1885,9 +1873,9 @@
       }
     ],
     "mcap_cr": 15076.74,
-    "pe": 112.6,
+    "pe": 113.68,
     "debt_to_equity": 29.503,
-    "eps": 20.04,
+    "eps": 19.85,
     "book_value": 108.03,
     "pat_cagr": 145.3,
     "rev_cagr": 49.8,
@@ -1922,12 +1910,11 @@
     "insider_pct": 54.47,
     "ret_1d": 1.36,
     "ret_1w": 0.49,
-    "ret_1m": 34.54,
-    "ret_6m": 128.29,
-    "ret_1y": 161.7,
+    "ret_1m": 28.25,
+    "ret_6m": 120.26,
+    "ret_1y": 167.46,
     "ret_2y": 339.54,
-    "ret_3y": 279.26,
-    "ret_5y": 466.98
+    "ret_3y": 283.51
   },
   "AVTNPL": {
     "ltp": 85.64,
@@ -1935,7 +1922,7 @@
     "quantity": 1243.0,
     "pnl_pct": 6.19,
     "pnl_abs": 6209.78,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -1985,13 +1972,13 @@
     "insider_pct": 77.27,
     "ret_1d": -1.51,
     "ret_1w": -3.2,
-    "ret_1m": 23.15,
-    "ret_6m": 31.83,
-    "ret_1y": 19.37,
+    "ret_1m": 22.38,
+    "ret_6m": 32.12,
+    "ret_1y": 18.34,
     "ret_2y": -6.14,
-    "ret_3y": 2.51,
+    "ret_3y": 0.42,
     "ret_4y": -1.96,
-    "ret_5y": 24.77
+    "ret_5y": 4.67
   },
   "BEPL": {
     "ltp": 121.43,
@@ -1999,7 +1986,7 @@
     "quantity": 838.0,
     "pnl_pct": 1.79,
     "pnl_abs": 1791.14,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -2053,13 +2040,13 @@
     "insider_pct": 63.08,
     "ret_1d": -5.39,
     "ret_1w": -1.46,
-    "ret_1m": 6.02,
-    "ret_6m": 52.13,
-    "ret_1y": 19.2,
+    "ret_1m": 8.6,
+    "ret_6m": 52.82,
+    "ret_1y": 21.42,
     "ret_2y": -20.47,
-    "ret_3y": 61.07,
+    "ret_3y": 60.78,
     "ret_4y": 105.27,
-    "ret_5y": 30.24
+    "ret_5y": 29.76
   },
   "BIOCON": {
     "ltp": 418.4,
@@ -2067,7 +2054,7 @@
     "quantity": 66.0,
     "pnl_pct": 8.05,
     "pnl_abs": 2056.95,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -2084,6 +2071,7 @@
         "invested": 783.6
       }
     ],
+    "mcap_cr": 68127.81,
     "pe": 122.34,
     "debt_to_equity": 42.145,
     "eps": 3.42,
@@ -2121,13 +2109,13 @@
     "insider_pct": 48.12,
     "ret_1d": 0.22,
     "ret_1w": 1.43,
-    "ret_1m": -2.95,
-    "ret_6m": 5.82,
-    "ret_1y": 16.38,
+    "ret_1m": -1.63,
+    "ret_6m": 6.09,
+    "ret_1y": 16.91,
     "ret_2y": 17.66,
-    "ret_3y": 53.78,
+    "ret_3y": 55.54,
     "ret_4y": 35.8,
-    "ret_5y": 22.06
+    "ret_5y": 26.87
   },
   "BLUEJET": {
     "ltp": 585.6,
@@ -2135,7 +2123,7 @@
     "quantity": 132.0,
     "pnl_pct": 8.13,
     "pnl_abs": 5809.2,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -2189,12 +2177,10 @@
     "insider_pct": 76.02,
     "ret_1d": -0.76,
     "ret_1w": -1.63,
-    "ret_1m": -2.85,
-    "ret_6m": 46.49,
-    "ret_1y": -20.36,
-    "ret_2y": 23.57,
-    "ret_3y": 42.18,
-    "ret_5y": 42.18
+    "ret_1m": -4.38,
+    "ret_6m": 47.1,
+    "ret_1y": -17.07,
+    "ret_2y": 23.57
   },
   "BOROSCI": {
     "ltp": 125.89,
@@ -2202,7 +2188,7 @@
     "quantity": 222.0,
     "pnl_pct": -8.16,
     "pnl_abs": -2483.34,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -2225,7 +2211,21 @@
     "eps": 4.85,
     "book_value": 49.63,
     "rev_cagr": 11.2,
+    "vol_yest_ratio": 0.42,
     "vol_30m_ratio": 0.47,
+    "vol_today_ratio": 0.41,
+    "movers": "No",
+    "movers_w": "No",
+    "movers_m": "No",
+    "vol_week_ratio": 0.61,
+    "vol_month_ratio": 0.53,
+    "ath_pct": -43.74,
+    "atl_pct": 24.68,
+    "trend_score": 54,
+    "trend_signal": "Hold",
+    "price_to_200dma_pct": -1.3,
+    "dma200_slope_30d_pct": 0.7,
+    "days_above_200dma_10d": 5,
     "gross_margin": 65.36,
     "operating_margin": 3.34,
     "profit_margin": 9.02,
@@ -2238,11 +2238,11 @@
     "week52_low": 96.64,
     "insider_pct": 73.74,
     "ret_1d": -0.93,
-    "ret_1m": -19.89,
-    "ret_6m": 20.24,
-    "ret_1y": -9.91,
-    "ret_3y": -19.66,
-    "ret_5y": -19.66
+    "ret_1w": -1.42,
+    "ret_1m": -18.99,
+    "ret_6m": 19.1,
+    "ret_1y": -10.05,
+    "ret_2y": -33.13
   },
   "CARBORUNIV": {
     "ltp": 1103.2,
@@ -2250,7 +2250,7 @@
     "quantity": 59.0,
     "pnl_pct": -3.15,
     "pnl_abs": -2119.1,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -2291,7 +2291,7 @@
     "vol_week_ratio": 1.44,
     "vol_month_ratio": 0.97,
     "ath_pct": -38.13,
-    "atl_pct": 323674.78,
+    "atl_pct": 323674.58,
     "trend_score": 88,
     "trend_signal": "Extended",
     "price_to_200dma_pct": 17.12,
@@ -2311,13 +2311,13 @@
     "insider_pct": 40.93,
     "ret_1d": -0.23,
     "ret_1w": -3.02,
-    "ret_1m": 4.72,
-    "ret_6m": 32.61,
-    "ret_1y": 19.56,
+    "ret_1m": 5.22,
+    "ret_6m": 32.04,
+    "ret_1y": 19.21,
     "ret_2y": -29.24,
-    "ret_3y": -4.99,
+    "ret_3y": -3.98,
     "ret_4y": 31.55,
-    "ret_5y": 43.5
+    "ret_5y": 32.88
   },
   "CENTENKA": {
     "ltp": 547.3,
@@ -2325,7 +2325,7 @@
     "quantity": 160.0,
     "pnl_pct": -11.9,
     "pnl_abs": -11823.9,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -2380,13 +2380,13 @@
     "insider_pct": 38.85,
     "ret_1d": -1.84,
     "ret_1w": -3.47,
-    "ret_1m": -8.8,
-    "ret_6m": 28.86,
-    "ret_1y": 11.5,
+    "ret_1m": -8.01,
+    "ret_6m": 28.83,
+    "ret_1y": 10.56,
     "ret_2y": -30.74,
-    "ret_3y": 31.96,
+    "ret_3y": 31.32,
     "ret_4y": 30.7,
-    "ret_5y": 41.88
+    "ret_5y": 42.82
   },
   "CMSINFO": {
     "ltp": 239.95,
@@ -2394,7 +2394,7 @@
     "quantity": 35.0,
     "pnl_pct": -35.93,
     "pnl_abs": -4708.85,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -2444,13 +2444,12 @@
     "insider_pct": 7.71,
     "ret_1d": -2.52,
     "ret_1w": -3.85,
-    "ret_1m": -13.58,
-    "ret_6m": -19.61,
-    "ret_1y": -45.64,
+    "ret_1m": -10.63,
+    "ret_6m": -20.36,
+    "ret_1y": -44.08,
     "ret_2y": -56.97,
-    "ret_3y": -35.64,
-    "ret_4y": -1.7,
-    "ret_5y": 6.98
+    "ret_3y": -35.03,
+    "ret_4y": -1.7
   },
   "CYIENT": {
     "ltp": 1052.7,
@@ -2458,7 +2457,7 @@
     "quantity": 133.0,
     "pnl_pct": 7.5,
     "pnl_abs": 9771.1,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -2527,7 +2526,7 @@
     "quantity": 356.0,
     "pnl_pct": 70.47,
     "pnl_abs": 119258.97,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -2599,12 +2598,11 @@
     "insider_pct": 52.11,
     "ret_1d": 1.57,
     "ret_1w": 10.98,
-    "ret_1m": 18.87,
-    "ret_6m": 159.58,
-    "ret_1y": 83.85,
+    "ret_1m": 19.51,
+    "ret_6m": 159.29,
+    "ret_1y": 89.21,
     "ret_2y": -0.86,
-    "ret_3y": 63.72,
-    "ret_5y": 92.68
+    "ret_3y": 64.95
   },
   "DEEDEV": {
     "ltp": 635.8,
@@ -2612,7 +2610,7 @@
     "quantity": 255.0,
     "pnl_pct": 142.8,
     "pnl_abs": 95355.06,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -2666,12 +2664,10 @@
     "insider_pct": 65.13,
     "ret_1d": -0.19,
     "ret_1w": 2.18,
-    "ret_1m": -3.67,
-    "ret_6m": 112.54,
-    "ret_1y": 133.06,
-    "ret_2y": 79.05,
-    "ret_3y": 89.61,
-    "ret_5y": 89.61
+    "ret_1m": -1.62,
+    "ret_6m": 109.18,
+    "ret_1y": 130.11,
+    "ret_2y": 79.05
   },
   "DIFFNKG": {
     "ltp": 402.55,
@@ -2679,7 +2675,7 @@
     "quantity": 267.0,
     "pnl_pct": 4.12,
     "pnl_abs": 4252.96,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -2739,11 +2735,9 @@
     "insider_pct": 75.36,
     "ret_1d": 3.54,
     "ret_1w": 0.56,
-    "ret_1m": 4.1,
-    "ret_6m": 49.79,
-    "ret_1y": 17.72,
-    "ret_3y": 99.83,
-    "ret_5y": 99.83
+    "ret_1m": 6.18,
+    "ret_6m": 53.81,
+    "ret_1y": 17.29
   },
   "ECOSMOBLTY": {
     "ltp": 114.09,
@@ -2751,7 +2745,7 @@
     "quantity": 5.0,
     "pnl_pct": -29.72,
     "pnl_abs": -241.2,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -2800,11 +2794,9 @@
     "insider_pct": 71.0,
     "ret_1d": 2.21,
     "ret_1w": 1.58,
-    "ret_1m": -11.72,
-    "ret_6m": -21.76,
-    "ret_1y": -60.06,
-    "ret_3y": -73.5,
-    "ret_5y": -73.5
+    "ret_1m": -13.67,
+    "ret_6m": -23.31,
+    "ret_1y": -59.15
   },
   "EIHOTEL": {
     "ltp": 300.05,
@@ -2812,7 +2804,7 @@
     "quantity": 1.0,
     "pnl_pct": -23.85,
     "pnl_abs": -94.0,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -2862,13 +2854,13 @@
     "insider_pct": 70.52,
     "ret_1d": -1.14,
     "ret_1w": 0.05,
-    "ret_1m": -10.23,
-    "ret_6m": -5.35,
-    "ret_1y": -26.7,
+    "ret_1m": -9.23,
+    "ret_6m": -6.2,
+    "ret_1y": -25.66,
     "ret_2y": -20.54,
-    "ret_3y": 44.63,
+    "ret_3y": 42.32,
     "ret_4y": 98.2,
-    "ret_5y": 191.62
+    "ret_5y": 118.04
   },
   "EIMCOELECO": {
     "ltp": 2211.2,
@@ -2876,7 +2868,7 @@
     "quantity": 20.0,
     "pnl_pct": 9.06,
     "pnl_abs": 3673.0,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -2926,13 +2918,13 @@
     "insider_pct": 53.71,
     "ret_1d": 0.25,
     "ret_1w": 1.43,
-    "ret_1m": 23.41,
-    "ret_6m": 40.77,
-    "ret_1y": -1.9,
+    "ret_1m": 26.48,
+    "ret_6m": 38.95,
+    "ret_1y": -0.9,
     "ret_2y": -18.39,
-    "ret_3y": 210.55,
+    "ret_3y": 204.48,
     "ret_4y": 524.3,
-    "ret_5y": 444.88
+    "ret_5y": 467.46
   },
   "ELECON": {
     "ltp": 423.25,
@@ -2940,7 +2932,7 @@
     "quantity": 288.0,
     "pnl_pct": -6.68,
     "pnl_abs": -8719.29,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -3002,13 +2994,13 @@
     "insider_pct": 63.16,
     "ret_1d": -0.48,
     "ret_1w": -6.3,
-    "ret_1m": -0.12,
-    "ret_6m": 0.31,
-    "ret_1y": -26.04,
+    "ret_1m": 1.44,
+    "ret_6m": 0.21,
+    "ret_1y": -23.53,
     "ret_2y": -29.79,
-    "ret_3y": 9.98,
+    "ret_3y": 7.87,
     "ret_4y": 141.49,
-    "ret_5y": 428.56
+    "ret_5y": 448.21
   },
   "ELGIEQUIP": {
     "ltp": 599.25,
@@ -3016,7 +3008,7 @@
     "quantity": 321.0,
     "pnl_pct": 4.8,
     "pnl_abs": 8810.01,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -3089,13 +3081,13 @@
     "insider_pct": 45.03,
     "ret_1d": -2.96,
     "ret_1w": -5.25,
-    "ret_1m": 3.83,
-    "ret_6m": 10.48,
-    "ret_1y": 21.25,
+    "ret_1m": 5.29,
+    "ret_6m": 11.23,
+    "ret_1y": 24.57,
     "ret_2y": -6.64,
-    "ret_3y": 19.24,
+    "ret_3y": 18.98,
     "ret_4y": 48.82,
-    "ret_5y": 215.45
+    "ret_5y": 209.77
   },
   "ENRIN": {
     "ltp": 3256.4,
@@ -3103,7 +3095,7 @@
     "quantity": 41.0,
     "pnl_pct": -7.77,
     "pnl_abs": -11250.2,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -3163,11 +3155,9 @@
     "insider_pct": 27.53,
     "ret_1d": -2.09,
     "ret_1w": -5.21,
-    "ret_1m": 2.7,
-    "ret_6m": 8.63,
-    "ret_1y": -3.58,
-    "ret_3y": 19.26,
-    "ret_5y": 19.26
+    "ret_1m": 4.31,
+    "ret_6m": 11.51,
+    "ret_1y": -2.26
   },
   "ENTERO": {
     "ltp": 1753.5,
@@ -3175,7 +3165,7 @@
     "quantity": 110.0,
     "pnl_pct": 25.54,
     "pnl_abs": 39243.9,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -3235,12 +3225,10 @@
     "insider_pct": 65.92,
     "ret_1d": 6.4,
     "ret_1w": 24.5,
-    "ret_1m": 43.47,
-    "ret_6m": 70.52,
-    "ret_1y": 42.62,
-    "ret_2y": 34.36,
-    "ret_3y": 52.54,
-    "ret_5y": 52.54
+    "ret_1m": 41.07,
+    "ret_6m": 65.28,
+    "ret_1y": 43.11,
+    "ret_2y": 34.36
   },
   "EPIGRAL": {
     "ltp": 1206.4,
@@ -3248,7 +3236,7 @@
     "quantity": 155.0,
     "pnl_pct": 7.86,
     "pnl_abs": 13619.7,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -3315,13 +3303,13 @@
     "insider_pct": 68.86,
     "ret_1d": -3.43,
     "ret_1w": 7.67,
-    "ret_1m": 7.02,
-    "ret_6m": 30.77,
-    "ret_1y": -33.92,
+    "ret_1m": 9.15,
+    "ret_6m": 30.8,
+    "ret_1y": -32.35,
     "ret_2y": -37.04,
-    "ret_3y": 28.35,
+    "ret_3y": 34.31,
     "ret_4y": -18.91,
-    "ret_5y": 125.05
+    "ret_5y": 41.9
   },
   "FREDUN": {
     "ltp": 1492.7,
@@ -3329,7 +3317,7 @@
     "quantity": 27.0,
     "pnl_pct": 221.01,
     "pnl_abs": 27747.9,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -3368,12 +3356,7 @@
     "week52_low": 1400.0,
     "insider_pct": 55.06,
     "ret_1d": -0.11,
-    "ret_1w": 1.42,
-    "ret_1m": 3.9,
-    "ret_6m": 3.9,
-    "ret_1y": 3.9,
-    "ret_3y": 3.9,
-    "ret_5y": 3.9
+    "ret_1w": 1.42
   },
   "GALAPREC": {
     "ltp": 1039.8,
@@ -3381,7 +3364,7 @@
     "quantity": 142.0,
     "pnl_pct": 20.16,
     "pnl_abs": 24775.9,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -3434,11 +3417,9 @@
     "insider_pct": 72.06,
     "ret_1d": -0.08,
     "ret_1w": 0.99,
-    "ret_1m": -3.25,
-    "ret_6m": 39.58,
-    "ret_1y": 24.41,
-    "ret_3y": 37.33,
-    "ret_5y": 37.33
+    "ret_1m": -1.36,
+    "ret_6m": 35.62,
+    "ret_1y": 23.42
   },
   "GESHIP": {
     "ltp": 1317.2,
@@ -3446,7 +3427,7 @@
     "quantity": 20.0,
     "pnl_pct": 26.54,
     "pnl_abs": 5524.8,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -3463,7 +3444,7 @@
         "invested": 1059.2
       }
     ],
-    "mcap_cr": 18805.29,
+    "mcap_cr": 18805.62,
     "pe": 5.03,
     "debt_to_equity": 6.409,
     "eps": 261.91,
@@ -3501,13 +3482,13 @@
     "insider_pct": 30.77,
     "ret_1d": -1.13,
     "ret_1w": 1.4,
-    "ret_1m": -2.87,
-    "ret_6m": -0.47,
-    "ret_1y": 42.36,
+    "ret_1m": -2.91,
+    "ret_6m": -0.45,
+    "ret_1y": 43.43,
     "ret_2y": 1.74,
-    "ret_3y": 94.87,
+    "ret_3y": 93.97,
     "ret_4y": 198.38,
-    "ret_5y": 372.58
+    "ret_5y": 402.54
   },
   "GIPCL": {
     "ltp": 200.48,
@@ -3515,7 +3496,7 @@
     "quantity": 519.0,
     "pnl_pct": 15.95,
     "pnl_abs": 14316.1,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -3571,13 +3552,13 @@
     "insider_pct": 65.43,
     "ret_1d": -0.49,
     "ret_1w": 17.8,
-    "ret_1m": 23.26,
-    "ret_6m": 39.4,
-    "ret_1y": 10.46,
+    "ret_1m": 23.75,
+    "ret_6m": 38.94,
+    "ret_1y": 12.5,
     "ret_2y": -7.01,
-    "ret_3y": 79.37,
+    "ret_3y": 80.81,
     "ret_4y": 157.06,
-    "ret_5y": 178.28
+    "ret_5y": 149.21
   },
   "GPPL": {
     "ltp": 169.1,
@@ -3585,7 +3566,7 @@
     "quantity": 549.0,
     "pnl_pct": 2.15,
     "pnl_abs": 1956.42,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -3647,13 +3628,13 @@
     "insider_pct": 44.04,
     "ret_1d": -0.21,
     "ret_1w": 2.6,
-    "ret_1m": 12.6,
-    "ret_6m": -5.19,
-    "ret_1y": 14.18,
+    "ret_1m": 12.28,
+    "ret_6m": -5.49,
+    "ret_1y": 14.68,
     "ret_2y": -20.78,
-    "ret_3y": 54.65,
+    "ret_3y": 58.16,
     "ret_4y": 151.5,
-    "ret_5y": 110.1
+    "ret_5y": 93.33
   },
   "GRAPHITE": {
     "ltp": 683.0,
@@ -3661,7 +3642,7 @@
     "quantity": 43.0,
     "pnl_pct": 17.91,
     "pnl_abs": 4461.7,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -3696,7 +3677,7 @@
     "vol_week_ratio": 0.39,
     "vol_month_ratio": 0.86,
     "ath_pct": -22.46,
-    "atl_pct": 31320.45,
+    "atl_pct": 31320.46,
     "trend_score": 100,
     "trend_signal": "Strong Bullish",
     "price_to_200dma_pct": 6.02,
@@ -3716,13 +3697,13 @@
     "insider_pct": 65.96,
     "ret_1d": -0.89,
     "ret_1w": -4.75,
-    "ret_1m": 2.45,
-    "ret_6m": -4.0,
-    "ret_1y": 30.88,
+    "ret_1m": 2.6,
+    "ret_6m": -5.43,
+    "ret_1y": 32.58,
     "ret_2y": 29.76,
-    "ret_3y": 65.13,
+    "ret_3y": 68.53,
     "ret_4y": 65.27,
-    "ret_5y": 16.44
+    "ret_5y": 34.89
   },
   "GREAVESCOT": {
     "ltp": 191.17,
@@ -3730,7 +3711,7 @@
     "quantity": 453.0,
     "pnl_pct": -9.22,
     "pnl_abs": -8798.12,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -3785,13 +3766,13 @@
     "insider_pct": 56.58,
     "ret_1d": -2.27,
     "ret_1w": 0.09,
-    "ret_1m": -20.23,
-    "ret_6m": 26.29,
-    "ret_1y": -6.92,
+    "ret_1m": -17.53,
+    "ret_6m": 22.36,
+    "ret_1y": -4.67,
     "ret_2y": 11.74,
-    "ret_3y": 42.51,
+    "ret_3y": 40.88,
     "ret_4y": 18.84,
-    "ret_5y": 52.91
+    "ret_5y": 51.05
   },
   "GRINDWELL": {
     "ltp": 2024.1,
@@ -3799,7 +3780,7 @@
     "quantity": 66.0,
     "pnl_pct": 1.6,
     "pnl_abs": 2098.35,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -3866,13 +3847,13 @@
     "insider_pct": 58.31,
     "ret_1d": -1.54,
     "ret_1w": -1.71,
-    "ret_1m": -4.47,
-    "ret_6m": 21.5,
-    "ret_1y": 30.08,
+    "ret_1m": -3.7,
+    "ret_6m": 22.93,
+    "ret_1y": 30.47,
     "ret_2y": -16.32,
-    "ret_3y": -12.21,
+    "ret_3y": -12.47,
     "ret_4y": 10.52,
-    "ret_5y": 66.9
+    "ret_5y": 38.09
   },
   "GULFOILLUB": {
     "ltp": 1154.3,
@@ -3880,7 +3861,7 @@
     "quantity": 21.0,
     "pnl_pct": -5.46,
     "pnl_abs": -1398.8,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -3930,13 +3911,13 @@
     "insider_pct": 68.66,
     "ret_1d": -0.73,
     "ret_1w": 0.26,
-    "ret_1m": 8.82,
-    "ret_6m": 5.63,
-    "ret_1y": -3.78,
+    "ret_1m": 9.48,
+    "ret_6m": 5.59,
+    "ret_1y": -3.06,
     "ret_2y": -12.16,
-    "ret_3y": 123.95,
+    "ret_3y": 121.48,
     "ret_4y": 203.13,
-    "ret_5y": 119.4
+    "ret_5y": 124.09
   },
   "HAPPYFORGE": {
     "ltp": 2250.8,
@@ -3944,7 +3925,7 @@
     "quantity": 59.0,
     "pnl_pct": 113.12,
     "pnl_abs": 70485.35,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -3962,9 +3943,9 @@
       }
     ],
     "mcap_cr": 21242.77,
-    "pe": 65.0,
+    "pe": 64.79,
     "debt_to_equity": 15.489,
-    "eps": 34.63,
+    "eps": 34.74,
     "book_value": 225.56,
     "div_yield": 18.0,
     "pat_cagr": 39.1,
@@ -3999,12 +3980,10 @@
     "insider_pct": 78.48,
     "ret_1d": 1.73,
     "ret_1w": -3.32,
-    "ret_1m": 35.66,
-    "ret_6m": 69.28,
-    "ret_1y": 139.11,
-    "ret_2y": 85.0,
-    "ret_3y": 120.33,
-    "ret_5y": 120.33
+    "ret_1m": 35.46,
+    "ret_6m": 67.84,
+    "ret_1y": 147.92,
+    "ret_2y": 85.0
   },
   "HEG": {
     "ltp": 710.2,
@@ -4012,7 +3991,7 @@
     "quantity": 223.0,
     "pnl_pct": 34.29,
     "pnl_abs": 40440.89,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -4067,13 +4046,13 @@
     "insider_pct": 59.38,
     "ret_1d": -0.47,
     "ret_1w": -0.25,
-    "ret_1m": 5.58,
-    "ret_6m": 23.39,
-    "ret_1y": 45.48,
+    "ret_1m": 7.73,
+    "ret_6m": 22.43,
+    "ret_1y": 49.35,
     "ret_2y": 76.41,
-    "ret_3y": 114.25,
+    "ret_3y": 112.99,
     "ret_4y": 196.33,
-    "ret_5y": 70.53
+    "ret_5y": 79.76
   },
   "IKS": {
     "ltp": 1750.6,
@@ -4081,7 +4060,7 @@
     "quantity": 56.0,
     "pnl_pct": -7.33,
     "pnl_abs": -7749.6,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -4140,11 +4119,9 @@
     "insider_pct": 70.98,
     "ret_1d": 0.53,
     "ret_1w": -2.29,
-    "ret_1m": -3.77,
-    "ret_6m": 22.21,
-    "ret_1y": 12.61,
-    "ret_3y": -10.72,
-    "ret_5y": -10.72
+    "ret_1m": -1.78,
+    "ret_6m": 23.49,
+    "ret_1y": 9.41
   },
   "INDGN": {
     "ltp": 567.35,
@@ -4152,7 +4129,7 @@
     "quantity": 197.0,
     "pnl_pct": 5.82,
     "pnl_abs": 6146.7,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -4219,12 +4196,10 @@
     "insider_pct": 55.67,
     "ret_1d": -0.41,
     "ret_1w": 0.11,
-    "ret_1m": 8.83,
-    "ret_6m": 15.53,
-    "ret_1y": 0.16,
-    "ret_2y": -0.73,
-    "ret_3y": 0.15,
-    "ret_5y": 0.15
+    "ret_1m": 10.71,
+    "ret_6m": 13.9,
+    "ret_1y": 1.4,
+    "ret_2y": -0.73
   },
   "INGERRAND": {
     "ltp": 4609.4,
@@ -4232,7 +4207,7 @@
     "quantity": 30.0,
     "pnl_pct": 6.5,
     "pnl_abs": 8441.6,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -4305,13 +4280,13 @@
     "insider_pct": 75.19,
     "ret_1d": 0.71,
     "ret_1w": -2.04,
-    "ret_1m": 7.57,
-    "ret_6m": 17.03,
-    "ret_1y": 22.83,
+    "ret_1m": 7.75,
+    "ret_6m": 14.33,
+    "ret_1y": 25.04,
     "ret_2y": 13.59,
-    "ret_3y": 54.32,
+    "ret_3y": 58.48,
     "ret_4y": 197.19,
-    "ret_5y": 448.87
+    "ret_5y": 331.5
   },
   "INOXINDIA": {
     "ltp": 2177.9,
@@ -4319,7 +4294,7 @@
     "quantity": 83.0,
     "pnl_pct": 67.97,
     "pnl_abs": 73148.5,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -4374,12 +4349,10 @@
     "insider_pct": 75.03,
     "ret_1d": 13.04,
     "ret_1w": 13.22,
-    "ret_1m": 15.73,
-    "ret_6m": 90.39,
-    "ret_1y": 89.28,
-    "ret_2y": 83.66,
-    "ret_3y": 132.36,
-    "ret_5y": 132.36
+    "ret_1m": 14.78,
+    "ret_6m": 89.66,
+    "ret_1y": 90.16,
+    "ret_2y": 83.66
   },
   "INTERARCH": {
     "ltp": 1685.6,
@@ -4387,7 +4360,7 @@
     "quantity": 10.0,
     "pnl_pct": -14.14,
     "pnl_abs": -2776.3,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -4436,11 +4409,9 @@
     "insider_pct": 59.27,
     "ret_1d": -0.33,
     "ret_1w": -0.16,
-    "ret_1m": -6.35,
-    "ret_6m": -11.39,
-    "ret_1y": -16.82,
-    "ret_3y": 41.83,
-    "ret_5y": 41.83
+    "ret_1m": -5.85,
+    "ret_6m": -10.53,
+    "ret_1y": -16.99
   },
   "INVPRECQ": {
     "ltp": 1285.0,
@@ -4448,7 +4419,7 @@
     "quantity": 45.0,
     "pnl_pct": 94.79,
     "pnl_abs": 28138.75,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -4486,12 +4457,7 @@
     "week52_low": 1166.0,
     "insider_pct": 65.33,
     "ret_1d": 0.0,
-    "ret_1w": -4.21,
-    "ret_1m": 2.27,
-    "ret_6m": 2.27,
-    "ret_1y": 2.27,
-    "ret_3y": 2.27,
-    "ret_5y": 2.27
+    "ret_1w": -4.21
   },
   "JNKINDIA": {
     "ltp": 444.75,
@@ -4499,7 +4465,7 @@
     "quantity": 244.0,
     "pnl_pct": 40.4,
     "pnl_abs": 31224.63,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -4553,12 +4519,10 @@
     "insider_pct": 70.67,
     "ret_1d": -1.88,
     "ret_1w": -1.24,
-    "ret_1m": -2.87,
-    "ret_6m": 86.7,
-    "ret_1y": 48.92,
-    "ret_2y": -42.43,
-    "ret_3y": -35.88,
-    "ret_5y": -35.88
+    "ret_1m": -3.0,
+    "ret_6m": 83.12,
+    "ret_1y": 46.9,
+    "ret_2y": -42.43
   },
   "KENNAMET": {
     "ltp": 4515.1,
@@ -4566,7 +4530,7 @@
     "quantity": 36.0,
     "pnl_pct": 75.41,
     "pnl_abs": 69876.75,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -4640,13 +4604,12 @@
     "insider_pct": 75.15,
     "ret_1d": 4.38,
     "ret_1w": 21.39,
-    "ret_1m": 57.0,
-    "ret_6m": 83.01,
-    "ret_1y": 113.5,
+    "ret_1m": 60.18,
+    "ret_6m": 84.81,
+    "ret_1y": 112.06,
     "ret_2y": 124.19,
-    "ret_3y": 225.37,
-    "ret_4y": 598.18,
-    "ret_5y": 225.37
+    "ret_3y": 323.29,
+    "ret_4y": 598.18
   },
   "KSB": {
     "ltp": 793.85,
@@ -4654,7 +4617,7 @@
     "quantity": 24.0,
     "pnl_pct": -4.29,
     "pnl_abs": -854.4,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -4707,13 +4670,13 @@
     "insider_pct": 69.97,
     "ret_1d": -0.33,
     "ret_1w": -1.08,
-    "ret_1m": -5.79,
-    "ret_6m": 11.25,
-    "ret_1y": -1.09,
+    "ret_1m": -6.34,
+    "ret_6m": 1.84,
+    "ret_1y": -5.06,
     "ret_2y": -13.34,
-    "ret_3y": 53.71,
+    "ret_3y": 55.77,
     "ret_4y": 159.89,
-    "ret_5y": 246.97
+    "ret_5y": 215.06
   },
   "LANDMARK": {
     "ltp": 506.15,
@@ -4721,7 +4684,7 @@
     "quantity": 120.0,
     "pnl_pct": -5.19,
     "pnl_abs": -3324.05,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -4782,12 +4745,11 @@
     "insider_pct": 55.22,
     "ret_1d": -1.95,
     "ret_1w": -0.6,
-    "ret_1m": -5.89,
-    "ret_6m": 21.58,
-    "ret_1y": -11.12,
+    "ret_1m": -6.21,
+    "ret_6m": 21.39,
+    "ret_1y": -10.54,
     "ret_2y": -13.36,
-    "ret_3y": -29.87,
-    "ret_5y": 11.1
+    "ret_3y": -28.99
   },
   "LAXMIDENTL": {
     "ltp": 194.82,
@@ -4795,7 +4757,7 @@
     "quantity": 206.0,
     "pnl_pct": -10.2,
     "pnl_abs": -4559.01,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -4849,11 +4811,9 @@
     "insider_pct": 68.17,
     "ret_1d": -0.71,
     "ret_1w": -1.7,
-    "ret_1m": -10.45,
-    "ret_6m": 4.08,
-    "ret_1y": -44.76,
-    "ret_3y": -64.61,
-    "ret_5y": -64.61
+    "ret_1m": -8.06,
+    "ret_6m": 1.96,
+    "ret_1y": -43.26
   },
   "LCL": {
     "ltp": 566.0,
@@ -4861,7 +4821,7 @@
     "quantity": 165.0,
     "pnl_pct": 0.61,
     "pnl_abs": 567.75,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -4919,11 +4879,7 @@
     "insider_pct": 0.0,
     "ret_1d": -5.38,
     "ret_1w": 4.84,
-    "ret_1m": 14.44,
-    "ret_6m": 14.44,
-    "ret_1y": 14.44,
-    "ret_3y": 14.44,
-    "ret_5y": 14.44
+    "ret_1m": 14.44
   },
   "LOKESHMACH": {
     "ltp": 297.6,
@@ -4931,7 +4887,7 @@
     "quantity": 377.0,
     "pnl_pct": -9.91,
     "pnl_abs": -12346.75,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -4986,13 +4942,13 @@
     "insider_pct": 52.17,
     "ret_1d": -3.67,
     "ret_1w": -9.65,
-    "ret_1m": -10.35,
-    "ret_6m": 64.45,
-    "ret_1y": 33.06,
+    "ret_1m": -12.08,
+    "ret_6m": 63.93,
+    "ret_1y": 41.4,
     "ret_2y": -19.27,
-    "ret_3y": 50.61,
+    "ret_3y": 49.96,
     "ret_4y": 225.42,
-    "ret_5y": 500.61
+    "ret_5y": 504.88
   },
   "MAPMYINDIA": {
     "ltp": 977.1,
@@ -5000,7 +4956,7 @@
     "quantity": 33.0,
     "pnl_pct": -8.84,
     "pnl_abs": -3125.95,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -5062,13 +5018,12 @@
     "insider_pct": 69.43,
     "ret_1d": -3.11,
     "ret_1w": -2.99,
-    "ret_1m": -15.75,
-    "ret_6m": -8.87,
-    "ret_1y": -43.34,
+    "ret_1m": -17.28,
+    "ret_6m": -6.38,
+    "ret_1y": -42.32,
     "ret_2y": -54.66,
-    "ret_3y": -37.9,
-    "ret_4y": -25.25,
-    "ret_5y": -29.2
+    "ret_3y": -38.26,
+    "ret_4y": -25.25
   },
   "MENONBE": {
     "ltp": 283.35,
@@ -5076,7 +5031,7 @@
     "quantity": 647.0,
     "pnl_pct": 75.81,
     "pnl_abs": 79052.14,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -5137,13 +5092,13 @@
     "insider_pct": 70.62,
     "ret_1d": 2.35,
     "ret_1w": 1.5,
-    "ret_1m": 29.04,
-    "ret_6m": 146.32,
-    "ret_1y": 125.94,
+    "ret_1m": 31.81,
+    "ret_6m": 147.53,
+    "ret_1y": 128.41,
     "ret_2y": 125.24,
-    "ret_3y": 117.11,
+    "ret_3y": 118.48,
     "ret_4y": 236.41,
-    "ret_5y": 308.38
+    "ret_5y": 321.49
   },
   "MMP": {
     "ltp": 403.45,
@@ -5151,7 +5106,7 @@
     "quantity": 72.0,
     "pnl_pct": 46.31,
     "pnl_abs": 9194.75,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -5199,13 +5154,13 @@
     "insider_pct": 0.0,
     "ret_1d": 0.69,
     "ret_1w": -0.71,
-    "ret_1m": 44.12,
-    "ret_6m": 68.56,
-    "ret_1y": 43.39,
+    "ret_1m": 43.6,
+    "ret_6m": 68.28,
+    "ret_1y": 44.69,
     "ret_2y": -1.44,
-    "ret_3y": 100.18,
+    "ret_3y": 102.45,
     "ret_4y": 159.89,
-    "ret_5y": 181.94
+    "ret_5y": 186.99
   },
   "MODISONLTD": {
     "ltp": 404.95,
@@ -5213,7 +5168,7 @@
     "quantity": 403.0,
     "pnl_pct": 90.12,
     "pnl_abs": 77356.82,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -5274,13 +5229,13 @@
     "insider_pct": 69.79,
     "ret_1d": -1.62,
     "ret_1w": -0.25,
-    "ret_1m": 52.38,
-    "ret_6m": 191.66,
-    "ret_1y": 159.69,
+    "ret_1m": 53.89,
+    "ret_6m": 197.8,
+    "ret_1y": 154.65,
     "ret_2y": 167.87,
-    "ret_3y": 440.95,
+    "ret_3y": 436.59,
     "ret_4y": 586.01,
-    "ret_5y": 504.81
+    "ret_5y": 550.38
   },
   "NEPHROPLUS": {
     "ltp": 685.45,
@@ -5288,7 +5243,7 @@
     "quantity": 204.0,
     "pnl_pct": 8.16,
     "pnl_abs": 10543.9,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -5335,11 +5290,8 @@
     "insider_pct": 49.3,
     "ret_1d": -1.18,
     "ret_1w": 1.68,
-    "ret_1m": -2.92,
-    "ret_6m": 20.79,
-    "ret_1y": 45.45,
-    "ret_3y": 45.45,
-    "ret_5y": 45.45
+    "ret_1m": 0.34,
+    "ret_6m": 19.11
   },
   "NETWEB": {
     "ltp": 5272.2,
@@ -5347,7 +5299,7 @@
     "quantity": 17.0,
     "pnl_pct": 35.36,
     "pnl_abs": 23415.55,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -5402,12 +5354,11 @@
     "insider_pct": 65.13,
     "ret_1d": 0.01,
     "ret_1w": -2.72,
-    "ret_1m": 20.88,
-    "ret_6m": 45.33,
-    "ret_1y": 122.43,
+    "ret_1m": 25.75,
+    "ret_6m": 42.67,
+    "ret_1y": 130.26,
     "ret_2y": 112.34,
-    "ret_3y": 515.68,
-    "ret_5y": 480.68
+    "ret_3y": 520.45
   },
   "NLCINDIA": {
     "ltp": 268.8,
@@ -5415,7 +5366,7 @@
     "quantity": 402.0,
     "pnl_pct": -5.67,
     "pnl_abs": -6496.04,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -5456,7 +5407,7 @@
     "vol_week_ratio": 0.44,
     "vol_month_ratio": 0.38,
     "ath_pct": -27.53,
-    "atl_pct": 14753.83,
+    "atl_pct": 14753.82,
     "trend_score": 48,
     "trend_signal": "Hold",
     "price_to_200dma_pct": -4.54,
@@ -5476,13 +5427,13 @@
     "insider_pct": 72.52,
     "ret_1d": -0.96,
     "ret_1w": -1.19,
-    "ret_1m": -9.46,
-    "ret_6m": 2.03,
-    "ret_1y": 17.94,
+    "ret_1m": -7.91,
+    "ret_6m": 2.44,
+    "ret_1y": 16.18,
     "ret_2y": 2.21,
-    "ret_3y": 128.63,
+    "ret_3y": 113.8,
     "ret_4y": 310.49,
-    "ret_5y": 496.6
+    "ret_5y": 371.19
   },
   "PARKHOSPS": {
     "ltp": 290.0,
@@ -5490,7 +5441,7 @@
     "quantity": 896.0,
     "pnl_pct": 82.61,
     "pnl_abs": 117544.45,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -5548,14 +5499,11 @@
     "week52_high": 305.25,
     "week52_low": 138.15,
     "insider_pct": 83.94,
-    "ret_1d": 0.33,
+    "ret_1d": 0.17,
     "ret_1w": 6.46,
-    "ret_1m": 3.9,
-    "ret_6m": 53.61,
-    "name": "Park Medi World Limited",
-    "ret_1y": 96.11,
-    "ret_3y": 96.11,
-    "ret_5y": 96.11
+    "ret_1m": 3.91,
+    "ret_6m": 53.89,
+    "name": "Park Medi World Limited"
   },
   "PFC": {
     "ltp": 355.85,
@@ -5563,7 +5511,7 @@
     "quantity": 173.0,
     "pnl_pct": -17.26,
     "pnl_abs": -12845.35,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -5581,10 +5529,10 @@
       }
     ],
     "mcap_cr": 117434.12,
-    "pe": 4.54,
+    "pe": 4.51,
     "ocf_cr": 15517.24,
     "debt_to_equity": 536.837,
-    "eps": 78.32,
+    "eps": 78.94,
     "book_value": 433.11,
     "div_yield": 428.0,
     "pat_cagr": 2.1,
@@ -5618,13 +5566,13 @@
     "insider_pct": 56.0,
     "ret_1d": -1.21,
     "ret_1w": -1.13,
-    "ret_1m": -14.99,
-    "ret_6m": -13.61,
-    "ret_1y": -6.5,
+    "ret_1m": -14.82,
+    "ret_6m": -12.99,
+    "ret_1y": -3.92,
     "ret_2y": -24.51,
-    "ret_3y": 87.98,
+    "ret_3y": 87.25,
     "ret_4y": 362.19,
-    "ret_5y": 386.09
+    "ret_5y": 339.71
   },
   "RAMCOSYS": {
     "ltp": 556.2,
@@ -5632,7 +5580,7 @@
     "quantity": 86.0,
     "pnl_pct": 21.23,
     "pnl_abs": 8376.35,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -5686,13 +5634,13 @@
     "insider_pct": 63.77,
     "ret_1d": 0.56,
     "ret_1w": 0.7,
-    "ret_1m": -5.74,
-    "ret_6m": 21.16,
+    "ret_1m": -8.13,
+    "ret_6m": 23.08,
     "ret_1y": 29.35,
     "ret_2y": 37.93,
-    "ret_3y": 99.25,
+    "ret_3y": 91.27,
     "ret_4y": 96.23,
-    "ret_5y": 23.2
+    "ret_5y": 22.65
   },
   "RATEGAIN": {
     "ltp": 918.25,
@@ -5700,7 +5648,7 @@
     "quantity": 63.0,
     "pnl_pct": 26.79,
     "pnl_abs": 12223.45,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -5754,13 +5702,12 @@
     "insider_pct": 53.82,
     "ret_1d": -1.69,
     "ret_1w": -2.7,
-    "ret_1m": -0.53,
-    "ret_6m": 80.37,
-    "ret_1y": 85.49,
+    "ret_1m": 2.43,
+    "ret_6m": 79.12,
+    "ret_1y": 74.16,
     "ret_2y": 28.33,
-    "ret_3y": 89.86,
-    "ret_4y": 174.84,
-    "ret_5y": 170.03
+    "ret_3y": 78.75,
+    "ret_4y": 174.84
   },
   "RATNAVEER": {
     "ltp": 294.89,
@@ -5768,7 +5715,7 @@
     "quantity": 859.0,
     "pnl_pct": 56.23,
     "pnl_abs": 91170.91,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -5822,12 +5769,10 @@
     "insider_pct": 56.46,
     "ret_1d": 5.59,
     "ret_1w": 9.97,
-    "ret_1m": 58.54,
-    "ret_6m": 93.68,
-    "ret_1y": 99.55,
-    "ret_2y": 65.12,
-    "ret_3y": 127.98,
-    "ret_5y": 127.98
+    "ret_1m": 59.62,
+    "ret_6m": 93.0,
+    "ret_1y": 94.84,
+    "ret_2y": 65.12
   },
   "RAYMOND": {
     "ltp": 614.0,
@@ -5835,7 +5780,7 @@
     "quantity": 196.0,
     "pnl_pct": 7.47,
     "pnl_abs": 8363.1,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -5895,13 +5840,13 @@
     "insider_pct": 51.22,
     "ret_1d": -1.14,
     "ret_1w": -6.5,
-    "ret_1m": 4.33,
-    "ret_6m": 54.43,
-    "ret_1y": -2.23,
+    "ret_1m": 5.46,
+    "ret_6m": 51.53,
+    "ret_1y": -0.78,
     "ret_2y": -69.69,
-    "ret_3y": -68.57,
+    "ret_3y": -68.61,
     "ret_4y": -37.68,
-    "ret_5y": 57.27
+    "ret_5y": 37.52
   },
   "RPTECH": {
     "ltp": 782.5,
@@ -5909,7 +5854,7 @@
     "quantity": 97.0,
     "pnl_pct": 78.72,
     "pnl_abs": 33431.95,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -5964,12 +5909,10 @@
     "insider_pct": 71.97,
     "ret_1d": 0.46,
     "ret_1w": -8.6,
-    "ret_1m": 1.39,
-    "ret_6m": 130.0,
-    "ret_1y": 175.05,
-    "ret_2y": 82.75,
-    "ret_3y": 146.27,
-    "ret_5y": 146.27
+    "ret_1m": -3.53,
+    "ret_6m": 112.84,
+    "ret_1y": 177.33,
+    "ret_2y": 82.75
   },
   "RSYSTEMS": {
     "ltp": 239.1,
@@ -5977,7 +5920,7 @@
     "quantity": 735.0,
     "pnl_pct": -12.12,
     "pnl_abs": -24236.92,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -6037,13 +5980,13 @@
     "insider_pct": 73.59,
     "ret_1d": -0.42,
     "ret_1w": -1.03,
-    "ret_1m": -9.5,
-    "ret_6m": -17.54,
-    "ret_1y": -48.59,
+    "ret_1m": -9.25,
+    "ret_6m": -16.74,
+    "ret_1y": -47.58,
     "ret_2y": -49.15,
-    "ret_3y": -43.54,
+    "ret_3y": -43.67,
     "ret_4y": 6.22,
-    "ret_5y": 30.16
+    "ret_5y": 26.49
   },
   "RUBICON": {
     "ltp": 1841.0,
@@ -6051,7 +5994,7 @@
     "quantity": 43.0,
     "pnl_pct": 154.8,
     "pnl_abs": 48094.7,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -6104,11 +6047,8 @@
     "insider_pct": 77.59,
     "ret_1d": 1.22,
     "ret_1w": 4.57,
-    "ret_1m": 20.63,
-    "ret_6m": 138.09,
-    "ret_1y": 193.35,
-    "ret_3y": 193.35,
-    "ret_5y": 193.35
+    "ret_1m": 22.84,
+    "ret_6m": 133.68
   },
   "SALZERELEC": {
     "ltp": 547.25,
@@ -6116,7 +6056,7 @@
     "quantity": 94.0,
     "pnl_pct": -35.33,
     "pnl_abs": -28102.5,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -6172,13 +6112,13 @@
     "insider_pct": 44.03,
     "ret_1d": -1.66,
     "ret_1w": -3.75,
-    "ret_1m": -4.09,
-    "ret_6m": -16.94,
-    "ret_1y": -34.82,
+    "ret_1m": -4.03,
+    "ret_6m": -16.77,
+    "ret_1y": -32.71,
     "ret_2y": -48.49,
-    "ret_3y": 71.27,
+    "ret_3y": 67.29,
     "ret_4y": 208.01,
-    "ret_5y": 274.3
+    "ret_5y": 258.53
   },
   "SANSERA": {
     "ltp": 3842.8,
@@ -6186,7 +6126,7 @@
     "quantity": 62.0,
     "pnl_pct": 131.2,
     "pnl_abs": 135203.7,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -6247,13 +6187,13 @@
     "insider_pct": 29.21,
     "ret_1d": 0.16,
     "ret_1w": -1.47,
-    "ret_1m": 18.86,
-    "ret_6m": 63.29,
-    "ret_1y": 199.38,
+    "ret_1m": 18.78,
+    "ret_6m": 67.88,
+    "ret_1y": 207.46,
     "ret_2y": 153.5,
-    "ret_3y": 310.1,
+    "ret_3y": 317.97,
     "ret_4y": 424.69,
-    "ret_5y": 373.9
+    "ret_5y": 415.11
   },
   "SASKEN": {
     "ltp": 1861.4,
@@ -6261,7 +6201,7 @@
     "quantity": 98.0,
     "pnl_pct": -1.53,
     "pnl_abs": -2839.6,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -6332,13 +6272,13 @@
     "insider_pct": 56.39,
     "ret_1d": -0.09,
     "ret_1w": -0.68,
-    "ret_1m": 3.77,
-    "ret_6m": 62.51,
-    "ret_1y": 31.7,
+    "ret_1m": 6.56,
+    "ret_6m": 64.5,
+    "ret_1y": 31.52,
     "ret_2y": 15.64,
-    "ret_3y": 105.17,
+    "ret_3y": 103.97,
     "ret_4y": 152.78,
-    "ret_5y": 56.5
+    "ret_5y": 60.72
   },
   "SCODATUBES": {
     "ltp": 130.93,
@@ -6346,7 +6286,7 @@
     "quantity": 546.0,
     "pnl_pct": -3.67,
     "pnl_abs": -2720.5,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -6412,11 +6352,9 @@
     "insider_pct": 70.81,
     "ret_1d": 1.61,
     "ret_1w": 3.35,
-    "ret_1m": -11.4,
-    "ret_6m": -3.24,
-    "ret_1y": -26.26,
-    "ret_3y": -10.93,
-    "ret_5y": -10.93
+    "ret_1m": -10.17,
+    "ret_6m": -4.84,
+    "ret_1y": -24.9
   },
   "SGIL": {
     "ltp": 597.85,
@@ -6424,7 +6362,7 @@
     "quantity": 56.0,
     "pnl_pct": 1.77,
     "pnl_abs": 581.5,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -6470,13 +6408,13 @@
     "insider_pct": 72.99,
     "ret_1d": 1.94,
     "ret_1w": 6.37,
-    "ret_1m": 0.79,
-    "ret_6m": 14.98,
-    "ret_1y": 8.9,
+    "ret_1m": 0.28,
+    "ret_6m": 15.94,
+    "ret_1y": 6.1,
     "ret_2y": 49.65,
-    "ret_3y": 199.08,
+    "ret_3y": 200.35,
     "ret_4y": 270.72,
-    "ret_5y": 289.02
+    "ret_5y": 304.66
   },
   "SHANKARA": {
     "ltp": 146.95,
@@ -6484,7 +6422,7 @@
     "quantity": 65.0,
     "pnl_pct": 7.51,
     "pnl_abs": 667.55,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -6534,13 +6472,13 @@
     "insider_pct": 71.06,
     "ret_1d": -0.45,
     "ret_1w": 3.33,
-    "ret_1m": 4.74,
-    "ret_6m": 46.99,
-    "ret_1y": -86.94,
+    "ret_1m": 5.48,
+    "ret_6m": 33.07,
+    "ret_1y": -85.77,
     "ret_2y": -75.19,
-    "ret_3y": -79.88,
+    "ret_3y": -79.32,
     "ret_4y": -79.01,
-    "ret_5y": -72.84
+    "ret_5y": -73.01
   },
   "SHREEJISPG": {
     "ltp": 640.35,
@@ -6548,7 +6486,7 @@
     "quantity": 94.0,
     "pnl_pct": 138.95,
     "pnl_abs": 35002.78,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -6596,11 +6534,9 @@
     "insider_pct": 89.1,
     "ret_1d": 0.21,
     "ret_1w": 4.4,
-    "ret_1m": 2.6,
-    "ret_6m": 59.73,
-    "ret_1y": 151.65,
-    "ret_3y": 151.65,
-    "ret_5y": 151.65
+    "ret_1m": -0.48,
+    "ret_6m": 60.51,
+    "ret_1y": 151.65
   },
   "SIMPLEXCAS": {
     "ltp": 108.9,
@@ -6608,7 +6544,7 @@
     "quantity": 1968.0,
     "pnl_pct": -8.67,
     "pnl_abs": -20339.28,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -6675,13 +6611,13 @@
     "insider_pct": 72.66,
     "ret_1d": -3.54,
     "ret_1w": -6.6,
-    "ret_1m": 7.61,
-    "ret_6m": 20.75,
-    "ret_1y": 43.48,
+    "ret_1m": 10.0,
+    "ret_6m": 11.4,
+    "ret_1y": 48.06,
     "ret_2y": 109.54,
-    "ret_3y": 905.91,
+    "ret_3y": 780.5,
     "ret_4y": 1164.81,
-    "ret_5y": 1164.81
+    "ret_5y": 1231.3
   },
   "SKFINDUS": {
     "ltp": 2891.6,
@@ -6689,7 +6625,7 @@
     "quantity": 40.0,
     "pnl_pct": 19.33,
     "pnl_abs": 18736.9,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -6735,11 +6671,8 @@
     "insider_pct": 52.58,
     "ret_1d": 0.94,
     "ret_1w": 5.01,
-    "ret_1m": 9.21,
-    "ret_6m": 15.38,
-    "ret_1y": 8.57,
-    "ret_3y": 8.57,
-    "ret_5y": 8.57
+    "ret_1m": 9.05,
+    "ret_6m": 15.05
   },
   "SONACOMS": {
     "ltp": 819.0,
@@ -6747,7 +6680,7 @@
     "quantity": 445.0,
     "pnl_pct": 42.28,
     "pnl_abs": 108296.09,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -6814,13 +6747,13 @@
     "insider_pct": 27.92,
     "ret_1d": 3.02,
     "ret_1w": -0.35,
-    "ret_1m": 13.67,
-    "ret_6m": 51.55,
-    "ret_1y": 82.66,
+    "ret_1m": 7.23,
+    "ret_6m": 50.62,
+    "ret_1y": 81.63,
     "ret_2y": 20.22,
-    "ret_3y": 49.76,
+    "ret_3y": 50.3,
     "ret_4y": 42.84,
-    "ret_5y": 77.24
+    "ret_5y": 31.47
   },
   "SOUTHWEST": {
     "ltp": 206.89,
@@ -6828,7 +6761,7 @@
     "quantity": 350.0,
     "pnl_pct": 24.64,
     "pnl_abs": 14316.12,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -6882,13 +6815,13 @@
     "insider_pct": 66.14,
     "ret_1d": -2.25,
     "ret_1w": -3.94,
-    "ret_1m": -9.95,
-    "ret_6m": 13.6,
-    "ret_1y": 53.67,
+    "ret_1m": -8.44,
+    "ret_6m": 13.51,
+    "ret_1y": 52.55,
     "ret_2y": 87.13,
-    "ret_3y": 55.89,
+    "ret_3y": 57.18,
     "ret_4y": 10.87,
-    "ret_5y": 127.92
+    "ret_5y": 46.86
   },
   "SUZLON": {
     "ltp": 46.81,
@@ -6896,7 +6829,7 @@
     "quantity": 2557.0,
     "pnl_pct": -17.41,
     "pnl_abs": -25223.02,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -6952,13 +6885,13 @@
     "insider_pct": 18.66,
     "ret_1d": -0.28,
     "ret_1w": -0.4,
-    "ret_1m": -1.35,
-    "ret_6m": 8.41,
-    "ret_1y": -18.49,
+    "ret_1m": -1.24,
+    "ret_6m": 8.18,
+    "ret_1y": -17.83,
     "ret_2y": -39.65,
-    "ret_3y": 151.67,
+    "ret_3y": 140.05,
     "ret_4y": 603.16,
-    "ret_5y": 749.66
+    "ret_5y": 623.11
   },
   "THERMAX": {
     "ltp": 3962.7,
@@ -6966,7 +6899,7 @@
     "quantity": 35.0,
     "pnl_pct": -11.53,
     "pnl_abs": -18078.0,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -7033,13 +6966,13 @@
     "insider_pct": 73.66,
     "ret_1d": -0.15,
     "ret_1w": -1.77,
-    "ret_1m": -9.49,
-    "ret_6m": 24.86,
-    "ret_1y": 22.09,
+    "ret_1m": -6.79,
+    "ret_6m": 25.03,
+    "ret_1y": 21.62,
     "ret_2y": -11.17,
-    "ret_3y": 59.42,
+    "ret_3y": 57.33,
     "ret_4y": 92.13,
-    "ret_5y": 193.98
+    "ret_5y": 205.88
   },
   "TMCV": {
     "ltp": 473.1,
@@ -7047,7 +6980,7 @@
     "quantity": 110.0,
     "pnl_pct": 4.48,
     "pnl_abs": 2233.0,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -7096,11 +7029,8 @@
     "insider_pct": 45.17,
     "ret_1d": -2.2,
     "ret_1w": -0.94,
-    "ret_1m": 15.0,
-    "ret_6m": -0.29,
-    "ret_1y": 45.22,
-    "ret_3y": 45.22,
-    "ret_5y": 45.22
+    "ret_1m": 14.01,
+    "ret_6m": -2.63
   },
   "TREL": {
     "ltp": 26.49,
@@ -7108,7 +7038,7 @@
     "quantity": 1891.0,
     "pnl_pct": 0.22,
     "pnl_abs": 107.6,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -7160,12 +7090,10 @@
     "insider_pct": 74.87,
     "ret_1d": 0.38,
     "ret_1w": -1.63,
-    "ret_1m": 8.52,
-    "ret_6m": 13.01,
-    "ret_1y": -20.26,
-    "ret_2y": -44.33,
-    "ret_3y": -25.95,
-    "ret_5y": -25.95
+    "ret_1m": 10.42,
+    "ret_6m": 12.25,
+    "ret_1y": -20.21,
+    "ret_2y": -44.33
   },
   "TRITURBINE": {
     "ltp": 583.45,
@@ -7173,7 +7101,7 @@
     "quantity": 321.0,
     "pnl_pct": 0.67,
     "pnl_abs": 1247.76,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -7240,13 +7168,13 @@
     "insider_pct": 59.73,
     "ret_1d": 1.58,
     "ret_1w": 0.59,
-    "ret_1m": -5.27,
-    "ret_6m": 18.18,
-    "ret_1y": 10.56,
+    "ret_1m": -3.96,
+    "ret_6m": 17.65,
+    "ret_1y": 11.05,
     "ret_2y": -21.76,
-    "ret_3y": 49.68,
+    "ret_3y": 49.47,
     "ret_4y": 210.52,
-    "ret_5y": 393.55
+    "ret_5y": 254.73
   },
   "UNIVCABLES": {
     "ltp": 1607.3,
@@ -7254,7 +7182,7 @@
     "quantity": 28.0,
     "pnl_pct": 128.76,
     "pnl_abs": 25330.8,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -7269,7 +7197,7 @@
     "pe": 27.89,
     "debt_to_equity": 62.258,
     "eps": 57.62,
-    "book_value": 545.03,
+    "book_value": 539.26,
     "div_yield": 29.0,
     "pat_cagr": 113.1,
     "rev_cagr": 57.5,
@@ -7284,7 +7212,7 @@
     "vol_week_ratio": 0.5,
     "vol_month_ratio": 1.28,
     "ath_pct": -7.89,
-    "atl_pct": 48194.13,
+    "atl_pct": 48194.12,
     "trend_score": 75,
     "trend_signal": "Extended",
     "price_to_200dma_pct": 63.45,
@@ -7297,20 +7225,20 @@
     "qtrly_earn_growth": 113.1,
     "opcf_3yr_avg": 90.72,
     "fcf_3yr_avg": -73.83,
-    "price_to_book": 2.95,
+    "price_to_book": 2.98,
     "ev_ebitda": 22.23,
     "week52_high": 1774.9,
     "week52_low": 576.0,
     "insider_pct": 73.25,
     "ret_1d": 1.81,
     "ret_1w": -2.24,
-    "ret_1m": 19.3,
-    "ret_6m": 138.42,
-    "ret_1y": 119.57,
+    "ret_1m": 20.73,
+    "ret_6m": 135.4,
+    "ret_1y": 121.52,
     "ret_2y": 135.63,
-    "ret_3y": 228.54,
+    "ret_3y": 231.26,
     "ret_4y": 801.72,
-    "ret_5y": 908.15
+    "ret_5y": 900.79
   },
   "URBANCO": {
     "ltp": 167.36,
@@ -7318,7 +7246,7 @@
     "quantity": 533.0,
     "pnl_pct": 13.93,
     "pnl_abs": 10907.21,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -7386,11 +7314,8 @@
     "insider_pct": 32.81,
     "ret_1d": -0.1,
     "ret_1w": 15.03,
-    "ret_1m": 27.51,
-    "ret_6m": 55.08,
-    "ret_1y": 0.32,
-    "ret_3y": 0.32,
-    "ret_5y": 0.32
+    "ret_1m": 28.25,
+    "ret_6m": 54.86
   },
   "VIPULORG": {
     "ltp": 259.35,
@@ -7398,7 +7323,7 @@
     "quantity": 188.0,
     "pnl_pct": -2.08,
     "pnl_abs": -1038.19,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -7447,13 +7372,13 @@
     "insider_pct": 77.86,
     "ret_1d": 0.74,
     "ret_1w": -1.24,
-    "ret_1m": -2.22,
-    "ret_6m": 28.01,
-    "ret_1y": 21.12,
+    "ret_1m": 2.59,
+    "ret_6m": 23.62,
+    "ret_1y": 19.89,
     "ret_2y": 11.42,
-    "ret_3y": 143.33,
+    "ret_3y": 148.39,
     "ret_4y": 64.15,
-    "ret_5y": 93.34
+    "ret_5y": 92.66
   },
   "VSTTILLERS": {
     "ltp": 4375.0,
@@ -7461,7 +7386,7 @@
     "quantity": 3.0,
     "pnl_pct": -20.16,
     "pnl_abs": -3315.0,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -7476,7 +7401,7 @@
     "pe": 34.86,
     "debt_to_equity": 0.175,
     "eps": 125.49,
-    "book_value": 1266.09,
+    "book_value": 1222.37,
     "div_yield": 45.0,
     "pat_cagr": 9.5,
     "rev_cagr": 11.0,
@@ -7504,20 +7429,20 @@
     "qtrly_earn_growth": 9.5,
     "opcf_3yr_avg": 85.59,
     "fcf_3yr_avg": 67.52,
-    "price_to_book": 3.46,
+    "price_to_book": 3.58,
     "ev_ebitda": 18.58,
     "week52_high": 6374.0,
     "week52_low": 4275.0,
     "insider_pct": 58.78,
     "ret_1d": -0.98,
     "ret_1w": -1.29,
-    "ret_1m": -0.09,
-    "ret_6m": -25.14,
-    "ret_1y": -17.38,
+    "ret_1m": -1.87,
+    "ret_6m": -24.54,
+    "ret_1y": -18.02,
     "ret_2y": 13.57,
-    "ret_3y": 41.2,
+    "ret_3y": 40.59,
     "ret_4y": 69.76,
-    "ret_5y": 78.33
+    "ret_5y": 57.39
   },
   "WENDT": {
     "ltp": 8376.0,
@@ -7525,7 +7450,7 @@
     "quantity": 10.0,
     "pnl_pct": 7.62,
     "pnl_abs": 5932.5,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -7586,13 +7511,13 @@
     "insider_pct": 40.59,
     "ret_1d": 2.79,
     "ret_1w": 3.29,
-    "ret_1m": 1.79,
-    "ret_6m": 24.25,
-    "ret_1y": -16.74,
+    "ret_1m": 3.36,
+    "ret_6m": 24.53,
+    "ret_1y": -15.59,
     "ret_2y": -43.42,
-    "ret_3y": -37.65,
+    "ret_3y": -37.01,
     "ret_4y": 5.4,
-    "ret_5y": 102.27
+    "ret_5y": 97.66
   },
   "WHIRLPOOL": {
     "ltp": 841.15,
@@ -7600,7 +7525,7 @@
     "quantity": 23.0,
     "pnl_pct": -30.24,
     "pnl_abs": -8386.35,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -7662,13 +7587,13 @@
     "insider_pct": 42.37,
     "ret_1d": 9.0,
     "ret_1w": 8.43,
-    "ret_1m": 6.63,
-    "ret_6m": -8.56,
-    "ret_1y": -35.49,
+    "ret_1m": 4.4,
+    "ret_6m": -6.86,
+    "ret_1y": -34.29,
     "ret_2y": -59.0,
-    "ret_3y": -42.48,
+    "ret_3y": -43.43,
     "ret_4y": -52.39,
-    "ret_5y": -57.6
+    "ret_5y": -61.68
   },
   "YATHARTH": {
     "ltp": 973.05,
@@ -7676,7 +7601,7 @@
     "quantity": 42.0,
     "pnl_pct": 18.62,
     "pnl_abs": 6414.6,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -7732,12 +7657,11 @@
     "insider_pct": 56.94,
     "ret_1d": 0.8,
     "ret_1w": 14.77,
-    "ret_1m": 16.9,
-    "ret_6m": 39.69,
-    "ret_1y": 37.77,
+    "ret_1m": 17.87,
+    "ret_6m": 39.56,
+    "ret_1y": 37.69,
     "ret_2y": 94.39,
-    "ret_3y": 178.9,
-    "ret_5y": 191.64
+    "ret_3y": 183.86
   },
   "ZENSARTECH": {
     "ltp": 463.75,
@@ -7745,7 +7669,7 @@
     "quantity": 399.0,
     "pnl_pct": -9.58,
     "pnl_abs": -19593.73,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -7801,13 +7725,13 @@
     "insider_pct": 50.17,
     "ret_1d": -1.72,
     "ret_1w": -4.37,
-    "ret_1m": -13.31,
-    "ret_6m": -12.49,
-    "ret_1y": -41.21,
+    "ret_1m": -10.97,
+    "ret_6m": -14.28,
+    "ret_1y": -40.75,
     "ret_2y": -38.44,
-    "ret_3y": 1.85,
+    "ret_3y": 0.6,
     "ret_4y": 98.88,
-    "ret_5y": 11.6
+    "ret_5y": 12.49
   },
   "ASHIANA": {
     "ltp": 365.55,
@@ -7815,7 +7739,7 @@
     "quantity": 145.0,
     "pnl_pct": 0.96,
     "pnl_abs": 505.56,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -7878,13 +7802,13 @@
     "insider_pct": 71.85,
     "ret_1d": -0.85,
     "ret_1w": -0.48,
-    "ret_1m": -4.72,
-    "ret_6m": 13.24,
-    "ret_1y": 18.58,
+    "ret_1m": -5.43,
+    "ret_6m": 12.3,
+    "ret_1y": 14.08,
     "ret_2y": 2.08,
-    "ret_3y": 82.82,
+    "ret_3y": 83.18,
     "ret_4y": 159.26,
-    "ret_5y": 143.74
+    "ret_5y": 108.6
   },
   "GMRAIRPORT": {
     "ltp": 98.68,
@@ -7892,7 +7816,7 @@
     "quantity": 307.0,
     "pnl_pct": 1.53,
     "pnl_abs": 457.52,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -7943,13 +7867,13 @@
     "insider_pct": 71.44,
     "ret_1d": -0.17,
     "ret_1w": -1.72,
-    "ret_1m": -7.86,
-    "ret_6m": -3.51,
-    "ret_1y": 11.08,
+    "ret_1m": -5.03,
+    "ret_6m": -3.5,
+    "ret_1y": 11.25,
     "ret_2y": 3.86,
-    "ret_3y": 89.4,
+    "ret_3y": 88.68,
     "ret_4y": 177.97,
-    "ret_5y": 275.75
+    "ret_5y": 165.85
   },
   "HONAUT": {
     "ltp": 36800.0,
@@ -7957,7 +7881,7 @@
     "quantity": 2.0,
     "pnl_pct": -6.03,
     "pnl_abs": -4720.0,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -8012,13 +7936,13 @@
     "insider_pct": 75.15,
     "ret_1d": 0.97,
     "ret_1w": 0.23,
-    "ret_1m": -8.24,
-    "ret_6m": 16.75,
-    "ret_1y": -2.72,
+    "ret_1m": -6.85,
+    "ret_6m": 17.38,
+    "ret_1y": -3.11,
     "ret_2y": -28.86,
-    "ret_3y": -12.41,
+    "ret_3y": -12.49,
     "ret_4y": -7.32,
-    "ret_5y": -6.21
+    "ret_5y": -13.39
   },
   "POWERICA": {
     "ltp": 519.0,
@@ -8026,7 +7950,7 @@
     "quantity": 115.0,
     "pnl_pct": 1.5,
     "pnl_abs": 882.1,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -8080,11 +8004,7 @@
     "insider_pct": 77.18,
     "ret_1d": -2.44,
     "ret_1w": -2.79,
-    "ret_1m": -2.75,
-    "ret_6m": 33.08,
-    "ret_1y": 33.08,
-    "ret_3y": 33.08,
-    "ret_5y": 33.08
+    "ret_1m": -1.07
   },
   "SIEMENS": {
     "ltp": 4095.0,
@@ -8092,7 +8012,7 @@
     "quantity": 24.0,
     "pnl_pct": 12.26,
     "pnl_abs": 10730.2,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -8147,13 +8067,13 @@
     "insider_pct": 76.91,
     "ret_1d": 1.29,
     "ret_1w": 5.54,
-    "ret_1m": 12.17,
-    "ret_6m": 22.81,
-    "ret_1y": 29.68,
+    "ret_1m": 11.92,
+    "ret_6m": 23.32,
+    "ret_1y": 30.04,
     "ret_2y": -0.68,
-    "ret_3y": 84.22,
+    "ret_3y": 86.89,
     "ret_4y": 157.52,
-    "ret_5y": 221.55
+    "ret_5y": 231.18
   },
   "TRIVENI": {
     "ltp": 282.21,
@@ -8161,7 +8081,7 @@
     "quantity": 246.0,
     "pnl_pct": -26.54,
     "pnl_abs": -25082.43,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -8223,13 +8143,13 @@
     "insider_pct": 67.42,
     "ret_1d": -1.24,
     "ret_1w": -5.95,
-    "ret_1m": 20.68,
-    "ret_6m": -26.72,
-    "ret_1y": -17.47,
+    "ret_1m": 24.65,
+    "ret_6m": -28.65,
+    "ret_1y": -15.87,
     "ret_2y": -36.82,
-    "ret_3y": -2.37,
+    "ret_3y": -2.77,
     "ret_4y": 13.71,
-    "ret_5y": 78.07
+    "ret_5y": 45.83
   },
   "WELCORP": {
     "ltp": 2405.8,
@@ -8237,7 +8157,7 @@
     "quantity": 72.0,
     "pnl_pct": 91.77,
     "pnl_abs": 82890.0,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -8273,7 +8193,7 @@
     "vol_week_ratio": 10.56,
     "vol_month_ratio": 2.75,
     "ath_pct": -0.14,
-    "atl_pct": 53377.08,
+    "atl_pct": 53377.09,
     "trend_score": 75,
     "trend_signal": "Extended",
     "price_to_200dma_pct": 108.61,
@@ -8293,13 +8213,13 @@
     "insider_pct": 49.84,
     "ret_1d": 4.3,
     "ret_1w": 19.98,
-    "ret_1m": 41.77,
-    "ret_6m": 202.76,
-    "ret_1y": 171.73,
+    "ret_1m": 45.37,
+    "ret_6m": 192.62,
+    "ret_1y": 176.07,
     "ret_2y": 236.78,
-    "ret_3y": 633.0,
+    "ret_3y": 633.55,
     "ret_4y": 1000.92,
-    "ret_5y": 2046.12
+    "ret_5y": 1807.66
   },
   "MSTCLTD": {
     "ltp": 722.25,
@@ -8307,7 +8227,7 @@
     "quantity": 1.0,
     "pnl_pct": 175.67,
     "pnl_abs": 460.25,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -8356,13 +8276,13 @@
     "insider_pct": 64.75,
     "ret_1d": -2.07,
     "ret_1w": 4.32,
-    "ret_1m": 17.63,
-    "ret_6m": 59.33,
-    "ret_1y": 65.24,
+    "ret_1m": 19.43,
+    "ret_6m": 59.83,
+    "ret_1y": 67.39,
     "ret_2y": -3.24,
-    "ret_3y": 75.36,
+    "ret_3y": 77.64,
     "ret_4y": 227.78,
-    "ret_5y": 247.68
+    "ret_5y": 96.33
   },
   "NEULANDLAB": {
     "ltp": 23496.0,
@@ -8370,7 +8290,7 @@
     "quantity": 6.0,
     "pnl_pct": 2177.08,
     "pnl_abs": 134784.9,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -8420,13 +8340,13 @@
     "insider_pct": 37.74,
     "ret_1d": -0.21,
     "ret_1w": -0.31,
-    "ret_1m": 19.29,
-    "ret_6m": 76.58,
-    "ret_1y": 74.02,
+    "ret_1m": 22.36,
+    "ret_6m": 78.27,
+    "ret_1y": 78.72,
     "ret_2y": 95.81,
-    "ret_3y": 511.32,
+    "ret_3y": 496.92,
     "ret_4y": 1684.43,
-    "ret_5y": 1321.01
+    "ret_5y": 1348.0
   },
   "NIFTYBEES": {
     "ltp": 275.74,
@@ -8434,7 +8354,7 @@
     "quantity": 300.0,
     "pnl_pct": 25.11,
     "pnl_abs": 16605.0,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -8445,7 +8365,7 @@
         "invested": 66117.0
       }
     ],
-    "pe": 21.28,
+    "pe": 21.63,
     "mcap_3y": 27.69,
     "vol_yest_ratio": 0.7,
     "vol_30m_ratio": 1.11,
@@ -8466,13 +8386,13 @@
     "week52_low": 251.7,
     "ret_1d": -0.43,
     "ret_1w": 0.41,
-    "ret_1m": 0.81,
-    "ret_6m": -4.21,
-    "ret_1y": -2.59,
+    "ret_1m": -0.03,
+    "ret_6m": -4.47,
+    "ret_1y": -1.78,
     "ret_2y": -0.03,
-    "ret_3y": 28.23,
+    "ret_3y": 27.69,
     "ret_4y": 47.82,
-    "ret_5y": 52.98
+    "ret_5y": 40.91
   },
   "SUVEN": {
     "ltp": 368.1,
@@ -8480,7 +8400,7 @@
     "quantity": 11.0,
     "pnl_pct": 357.06,
     "pnl_abs": 3163.2,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -8524,13 +8444,13 @@
     "insider_pct": 66.57,
     "ret_1d": -1.1,
     "ret_1w": -1.47,
-    "ret_1m": 17.47,
-    "ret_6m": 145.79,
-    "ret_1y": 60.29,
+    "ret_1m": 23.01,
+    "ret_6m": 150.0,
+    "ret_1y": 67.85,
     "ret_2y": 148.03,
-    "ret_3y": 454.79,
+    "ret_3y": 445.33,
     "ret_4y": 454.54,
-    "ret_5y": 375.93
+    "ret_5y": 291.33
   },
   "TIMETECHNO": {
     "ltp": 185.67,
@@ -8538,7 +8458,7 @@
     "quantity": 245.0,
     "pnl_pct": -8.9,
     "pnl_abs": -4441.85,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -8587,13 +8507,13 @@
     "insider_pct": 48.6,
     "ret_1d": 0.2,
     "ret_1w": -3.11,
-    "ret_1m": -14.18,
-    "ret_6m": -1.77,
-    "ret_1y": -22.45,
+    "ret_1m": -10.89,
+    "ret_6m": -1.06,
+    "ret_1y": -19.47,
     "ret_2y": -3.42,
-    "ret_3y": 172.51,
+    "ret_3y": 172.91,
     "ret_4y": 259.4,
-    "ret_5y": 418.48
+    "ret_5y": 432.08
   },
   "CLEANMAX": {
     "ltp": 1274.6,
@@ -8601,7 +8521,7 @@
     "quantity": 68.0,
     "pnl_pct": -11.21,
     "pnl_abs": -10948.0,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -8647,11 +8567,7 @@
     "insider_pct": 70.72,
     "ret_1d": 7.81,
     "ret_1w": 4.47,
-    "ret_1m": -4.04,
-    "ret_6m": 46.93,
-    "ret_1y": 46.93,
-    "ret_3y": 46.93,
-    "ret_5y": 46.93
+    "ret_1m": -2.63
   },
   "DATAPATTNS": {
     "ltp": 4666.7,
@@ -8659,7 +8575,7 @@
     "quantity": 5.0,
     "pnl_pct": 118.62,
     "pnl_abs": 12660.5,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -8708,13 +8624,12 @@
     "insider_pct": 53.23,
     "ret_1d": -2.36,
     "ret_1w": -0.71,
-    "ret_1m": 5.19,
-    "ret_6m": 52.31,
-    "ret_1y": 82.88,
+    "ret_1m": 4.59,
+    "ret_6m": 44.19,
+    "ret_1y": 86.66,
     "ret_2y": 63.42,
-    "ret_3y": 131.4,
-    "ret_4y": 529.64,
-    "ret_5y": 526.26
+    "ret_3y": 122.53,
+    "ret_4y": 529.64
   },
   "ELDEHSG": {
     "ltp": 781.8,
@@ -8722,7 +8637,7 @@
     "quantity": 45.0,
     "pnl_pct": -1.16,
     "pnl_abs": -411.85,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -8783,13 +8698,12 @@
     "insider_pct": 70.1,
     "ret_1d": -2.22,
     "ret_1w": -5.04,
-    "ret_1m": -0.87,
-    "ret_6m": -11.1,
-    "ret_1y": 4.81,
+    "ret_1m": 1.4,
+    "ret_6m": -11.97,
+    "ret_1y": 5.96,
     "ret_2y": -17.75,
-    "ret_3y": 15.56,
-    "ret_4y": 51.55,
-    "ret_5y": 6.19
+    "ret_3y": 13.14,
+    "ret_4y": 51.55
   },
   "EMBDL": {
     "ltp": 62.16,
@@ -8797,7 +8711,7 @@
     "quantity": 148.0,
     "pnl_pct": -8.04,
     "pnl_abs": -803.88,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -8808,6 +8722,7 @@
         "invested": 10003.56
       }
     ],
+    "mcap_cr": 8640.45,
     "debt_to_equity": 53.414,
     "eps": -6.83,
     "book_value": 71.01,
@@ -8841,13 +8756,13 @@
     "insider_pct": 64.88,
     "ret_1d": -0.03,
     "ret_1w": -1.46,
-    "ret_1m": 0.19,
-    "ret_6m": 5.73,
-    "ret_1y": -37.17,
+    "ret_1m": 1.22,
+    "ret_6m": 4.95,
+    "ret_1y": -35.36,
     "ret_2y": -56.28,
-    "ret_3y": -8.92,
+    "ret_3y": -7.43,
     "ret_4y": -15.02,
-    "ret_5y": -54.11
+    "ret_5y": -60.77
   },
   "GMDCLTD": {
     "ltp": 567.25,
@@ -8855,7 +8770,7 @@
     "quantity": 70.0,
     "pnl_pct": 8.11,
     "pnl_abs": 2978.25,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -8904,13 +8819,13 @@
     "insider_pct": 74.05,
     "ret_1d": -2.02,
     "ret_1w": 0.94,
-    "ret_1m": -1.22,
-    "ret_6m": 0.46,
-    "ret_1y": 37.11,
+    "ret_1m": 1.36,
+    "ret_6m": -1.66,
+    "ret_1y": 41.07,
     "ret_2y": 59.89,
-    "ret_3y": 262.46,
+    "ret_3y": 262.14,
     "ret_4y": 259.65,
-    "ret_5y": 803.78
+    "ret_5y": 764.59
   },
   "HLEGLAS": {
     "ltp": 314.85,
@@ -8918,7 +8833,7 @@
     "quantity": 169.0,
     "pnl_pct": -10.81,
     "pnl_abs": -6451.85,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -8974,13 +8889,13 @@
     "insider_pct": 73.86,
     "ret_1d": 0.45,
     "ret_1w": 0.98,
-    "ret_1m": -26.44,
-    "ret_6m": -0.88,
-    "ret_1y": -41.89,
+    "ret_1m": -25.82,
+    "ret_6m": -2.27,
+    "ret_1y": -40.5,
     "ret_2y": -25.34,
-    "ret_3y": -47.09,
+    "ret_3y": -46.25,
     "ret_4y": -48.93,
-    "ret_5y": -62.28
+    "ret_5y": -76.56
   },
   "INOXWIND": {
     "ltp": 72.0,
@@ -8988,7 +8903,7 @@
     "quantity": 449.0,
     "pnl_pct": -21.64,
     "pnl_abs": -8926.39,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -9037,13 +8952,13 @@
     "insider_pct": 47.23,
     "ret_1d": -1.64,
     "ret_1w": -2.57,
-    "ret_1m": -6.01,
-    "ret_6m": -24.35,
-    "ret_1y": -49.53,
+    "ret_1m": -3.97,
+    "ret_6m": -23.78,
+    "ret_1y": -49.31,
     "ret_2y": -67.75,
-    "ret_3y": 28.26,
+    "ret_3y": 28.57,
     "ret_4y": 194.63,
-    "ret_5y": 171.95
+    "ret_5y": 147.1
   },
   "KAMDHENU": {
     "ltp": 35.63,
@@ -9051,7 +8966,7 @@
     "quantity": 4980.0,
     "pnl_pct": 21.6,
     "pnl_abs": 31522.4,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -9106,13 +9021,13 @@
     "insider_pct": 52.42,
     "ret_1d": -0.59,
     "ret_1w": 5.85,
-    "ret_1m": -0.61,
-    "ret_6m": 67.75,
-    "ret_1y": 29.55,
+    "ret_1m": 4.61,
+    "ret_6m": 55.59,
+    "ret_1y": 30.49,
     "ret_2y": -25.35,
-    "ret_3y": 20.51,
+    "ret_3y": 20.89,
     "ret_4y": 244.07,
-    "ret_5y": 338.34
+    "ret_5y": 192.94
   },
   "KIRLPNU": {
     "ltp": 731.5,
@@ -9120,7 +9035,7 @@
     "quantity": 132.0,
     "pnl_pct": -0.7,
     "pnl_abs": -679.8,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -9169,12 +9084,11 @@
     "insider_pct": 45.9,
     "ret_1d": 0.4,
     "ret_1w": -1.12,
-    "ret_1m": -2.64,
-    "ret_6m": 27.28,
-    "ret_1y": 17.53,
+    "ret_1m": 0.15,
+    "ret_6m": 28.2,
+    "ret_1y": 19.38,
     "ret_2y": 12.3,
-    "ret_3y": 144.95,
-    "ret_5y": 144.98
+    "ret_3y": 142.35
   },
   "KPIGREEN": {
     "ltp": 316.65,
@@ -9182,7 +9096,7 @@
     "quantity": 211.0,
     "pnl_pct": -19.1,
     "pnl_abs": -15778.01,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -9238,13 +9152,13 @@
     "insider_pct": 54.84,
     "ret_1d": -1.66,
     "ret_1w": 3.13,
-    "ret_1m": -18.88,
-    "ret_6m": -17.46,
-    "ret_1y": -37.82,
+    "ret_1m": -17.49,
+    "ret_6m": -17.31,
+    "ret_1y": -36.36,
     "ret_2y": -49.24,
-    "ret_3y": 78.63,
+    "ret_3y": 76.17,
     "ret_4y": 314.66,
-    "ret_5y": 2142.25
+    "ret_5y": 1843.58
   },
   "MOSCHIP": {
     "ltp": 219.36,
@@ -9252,7 +9166,7 @@
     "quantity": 91.0,
     "pnl_pct": 26.41,
     "pnl_abs": 4170.31,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -9299,11 +9213,9 @@
     "insider_pct": 42.66,
     "ret_1d": 6.72,
     "ret_1w": 6.33,
-    "ret_1m": 3.95,
-    "ret_6m": 12.67,
-    "ret_1y": 28.09,
-    "ret_3y": 10.38,
-    "ret_5y": 10.38
+    "ret_1m": 6.8,
+    "ret_6m": 12.21,
+    "ret_1y": 31.54
   },
   "PITTIENG": {
     "ltp": 1129.65,
@@ -9311,7 +9223,7 @@
     "quantity": 20.0,
     "pnl_pct": 14.32,
     "pnl_abs": 2830.5,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -9341,7 +9253,7 @@
     "vol_week_ratio": 2.79,
     "vol_month_ratio": 3.04,
     "ath_pct": -22.48,
-    "atl_pct": 14612.34,
+    "atl_pct": 14612.35,
     "trend_score": 67,
     "trend_signal": "Watch",
     "price_to_200dma_pct": 26.75,
@@ -9361,13 +9273,13 @@
     "insider_pct": 58.29,
     "ret_1d": 0.55,
     "ret_1w": 7.42,
-    "ret_1m": 18.76,
-    "ret_6m": 25.9,
-    "ret_1y": 18.72,
+    "ret_1m": 21.7,
+    "ret_6m": 27.61,
+    "ret_1y": 19.37,
     "ret_2y": -15.92,
-    "ret_3y": 119.83,
+    "ret_3y": 122.8,
     "ret_4y": 218.88,
-    "ret_5y": 683.69
+    "ret_5y": 586.29
   },
   "QUESS": {
     "ltp": 356.95,
@@ -9375,7 +9287,7 @@
     "quantity": 50.0,
     "pnl_pct": 49.5,
     "pnl_abs": 5909.4,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -9425,13 +9337,13 @@
     "insider_pct": 68.17,
     "ret_1d": -3.71,
     "ret_1w": 5.53,
-    "ret_1m": 17.23,
-    "ret_6m": 85.52,
-    "ret_1y": 37.48,
+    "ret_1m": 16.36,
+    "ret_6m": 88.04,
+    "ret_1y": 40.21,
     "ret_2y": -46.96,
-    "ret_3y": -6.85,
+    "ret_3y": -6.78,
     "ret_4y": -32.65,
-    "ret_5y": -52.21
+    "ret_5y": -57.14
   },
   "RAILTEL": {
     "ltp": 279.05,
@@ -9439,7 +9351,7 @@
     "quantity": 50.0,
     "pnl_pct": -4.65,
     "pnl_abs": -680.0,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -9493,13 +9405,13 @@
     "insider_pct": 72.84,
     "ret_1d": -0.66,
     "ret_1w": -0.61,
-    "ret_1m": -4.51,
-    "ret_6m": -11.43,
-    "ret_1y": -20.14,
+    "ret_1m": -4.75,
+    "ret_6m": -10.03,
+    "ret_1y": -17.86,
     "ret_2y": -39.72,
-    "ret_3y": 63.18,
+    "ret_3y": 65.95,
     "ret_4y": 192.54,
-    "ret_5y": 141.49
+    "ret_5y": 126.87
   },
   "RAYMONDREL": {
     "ltp": 565.4,
@@ -9507,7 +9419,7 @@
     "quantity": 32.0,
     "pnl_pct": -8.73,
     "pnl_abs": -1731.2,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -9555,11 +9467,9 @@
     "insider_pct": 55.34,
     "ret_1d": -1.7,
     "ret_1w": -2.19,
-    "ret_1m": -14.05,
-    "ret_6m": 32.74,
-    "ret_1y": -10.87,
-    "ret_3y": -41.48,
-    "ret_5y": -41.48
+    "ret_1m": -12.29,
+    "ret_6m": 32.43,
+    "ret_1y": -8.91
   },
   "RUSTOMJEE": {
     "ltp": 381.8,
@@ -9567,7 +9477,7 @@
     "quantity": 46.0,
     "pnl_pct": -11.41,
     "pnl_abs": -2262.1,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -9617,12 +9527,11 @@
     "insider_pct": 93.83,
     "ret_1d": 0.71,
     "ret_1w": 2.92,
-    "ret_1m": -5.97,
-    "ret_6m": -12.66,
-    "ret_1y": -41.34,
+    "ret_1m": -5.67,
+    "ret_6m": -10.15,
+    "ret_1y": -41.32,
     "ret_2y": -49.24,
-    "ret_3y": -32.8,
-    "ret_5y": -31.23
+    "ret_3y": -38.91
   },
   "SCI": {
     "ltp": 292.55,
@@ -9630,7 +9539,7 @@
     "quantity": 172.0,
     "pnl_pct": -3.14,
     "pnl_abs": -1628.94,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -9685,13 +9594,13 @@
     "insider_pct": 63.75,
     "ret_1d": 1.4,
     "ret_1w": 0.48,
-    "ret_1m": 5.01,
-    "ret_6m": 10.26,
-    "ret_1y": 44.02,
+    "ret_1m": 5.06,
+    "ret_6m": 9.08,
+    "ret_1y": 46.63,
     "ret_2y": 13.06,
-    "ret_3y": 212.6,
+    "ret_3y": 211.35,
     "ret_4y": 186.79,
-    "ret_5y": 192.03
+    "ret_5y": 133.93
   },
   "SHILPAMED": {
     "ltp": 901.85,
@@ -9699,7 +9608,7 @@
     "quantity": 49.0,
     "pnl_pct": 170.7,
     "pnl_abs": 27866.15,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -9749,13 +9658,13 @@
     "insider_pct": 57.02,
     "ret_1d": 4.77,
     "ret_1w": 9.85,
-    "ret_1m": 49.16,
-    "ret_6m": 175.42,
-    "ret_1y": 112.69,
+    "ret_1m": 49.57,
+    "ret_6m": 165.45,
+    "ret_1y": 121.11,
     "ret_2y": 152.43,
-    "ret_3y": 394.49,
+    "ret_3y": 419.08,
     "ret_4y": 334.62,
-    "ret_5y": 216.71
+    "ret_5y": 214.72
   },
   "SJVN": {
     "ltp": 65.26,
@@ -9763,7 +9672,7 @@
     "quantity": 1779.0,
     "pnl_pct": -10.66,
     "pnl_abs": -13845.78,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -9819,13 +9728,13 @@
     "insider_pct": 81.85,
     "ret_1d": -0.9,
     "ret_1w": -0.46,
-    "ret_1m": -4.94,
-    "ret_6m": -12.71,
-    "ret_1y": -32.73,
+    "ret_1m": -4.15,
+    "ret_6m": -11.41,
+    "ret_1y": -32.63,
     "ret_2y": -48.98,
-    "ret_3y": 23.75,
+    "ret_3y": 26.81,
     "ret_4y": 151.86,
-    "ret_5y": 195.84
+    "ret_5y": 163.15
   },
   "STALLION": {
     "ltp": 215.65,
@@ -9833,7 +9742,7 @@
     "quantity": 218.0,
     "pnl_pct": 17.85,
     "pnl_abs": 7120.86,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -9880,11 +9789,9 @@
     "insider_pct": 64.32,
     "ret_1d": -3.73,
     "ret_1w": -4.94,
-    "ret_1m": -11.74,
-    "ret_6m": 67.98,
-    "ret_1y": 45.94,
-    "ret_3y": 71.15,
-    "ret_5y": 71.15
+    "ret_1m": -11.71,
+    "ret_6m": 76.81,
+    "ret_1y": 45.74
   },
   "TEJASNET": {
     "ltp": 511.15,
@@ -9892,7 +9799,7 @@
     "quantity": 67.0,
     "pnl_pct": -0.89,
     "pnl_abs": -308.1,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -9944,13 +9851,13 @@
     "insider_pct": 1.95,
     "ret_1d": 1.21,
     "ret_1w": 0.38,
-    "ret_1m": -1.7,
-    "ret_6m": 60.84,
-    "ret_1y": -16.12,
+    "ret_1m": 0.8,
+    "ret_6m": 37.76,
+    "ret_1y": -14.96,
     "ret_2y": -60.74,
-    "ret_3y": -38.46,
+    "ret_3y": -37.54,
     "ret_4y": 3.37,
-    "ret_5y": 38.23
+    "ret_5y": 16.39
   },
   "UNIECOM": {
     "ltp": 84.0,
@@ -9958,7 +9865,7 @@
     "quantity": 39.0,
     "pnl_pct": -33.36,
     "pnl_abs": -1639.95,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -10006,12 +9913,10 @@
     "insider_pct": 47.8,
     "ret_1d": -1.64,
     "ret_1w": -5.23,
-    "ret_1m": -1.18,
-    "ret_6m": -21.6,
-    "ret_1y": -39.03,
-    "ret_2y": -62.1,
-    "ret_3y": -60.02,
-    "ret_5y": -60.02
+    "ret_1m": -0.93,
+    "ret_6m": -23.59,
+    "ret_1y": -37.57,
+    "ret_2y": -62.1
   },
   "VIYASH": {
     "ltp": 259.5,
@@ -10019,7 +9924,7 @@
     "quantity": 1.0,
     "pnl_pct": 56.47,
     "pnl_abs": 93.65,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -10067,13 +9972,13 @@
     "insider_pct": 67.29,
     "ret_1d": -1.48,
     "ret_1w": -2.39,
-    "ret_1m": 1.07,
-    "ret_6m": 18.35,
-    "ret_1y": 48.43,
+    "ret_1m": 3.02,
+    "ret_6m": 15.08,
+    "ret_1y": 49.21,
     "ret_2y": 56.23,
-    "ret_3y": 154.41,
+    "ret_3y": 158.08,
     "ret_4y": 101.4,
-    "ret_5y": 11.4
+    "ret_5y": 43.61
   },
   "CESC": {
     "ltp": 152.13,
@@ -10081,7 +9986,7 @@
     "quantity": 110.0,
     "pnl_pct": -15.97,
     "pnl_abs": -3180.1,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -10130,13 +10035,13 @@
     "insider_pct": 6.34,
     "ret_1d": -0.78,
     "ret_1w": -2.86,
-    "ret_1m": -3.87,
-    "ret_6m": -1.43,
-    "ret_1y": -0.72,
+    "ret_1m": -4.34,
+    "ret_6m": -1.26,
+    "ret_1y": 0.88,
     "ret_2y": -12.51,
-    "ret_3y": 122.05,
+    "ret_3y": 124.79,
     "ret_4y": 135.44,
-    "ret_5y": 155.37
+    "ret_5y": 110.67
   },
   "FRACTAL": {
     "ltp": 840.25,
@@ -10144,7 +10049,7 @@
     "quantity": 32.0,
     "pnl_pct": -10.08,
     "pnl_abs": -3014.4,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -10186,11 +10091,8 @@
     "insider_pct": 64.45,
     "ret_1d": 1.29,
     "ret_1w": -1.75,
-    "ret_1m": 6.85,
-    "ret_6m": 3.91,
-    "ret_1y": -0.81,
-    "ret_3y": -0.81,
-    "ret_5y": -0.81
+    "ret_1m": 8.87,
+    "ret_6m": 3.52
   },
   "GAUDIUMIVF": {
     "ltp": 119.34,
@@ -10198,7 +10100,7 @@
     "quantity": 1.0,
     "pnl_pct": 2.88,
     "pnl_abs": 3.34,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -10240,11 +10142,7 @@
     "insider_pct": 91.86,
     "ret_1d": 2.0,
     "ret_1w": 4.98,
-    "ret_1m": -16.54,
-    "ret_6m": 48.69,
-    "ret_1y": 48.69,
-    "ret_3y": 48.69,
-    "ret_5y": 48.69
+    "ret_1m": -14.84
   },
   "JYOTICNC": {
     "ltp": 1029.8,
@@ -10252,7 +10150,7 @@
     "quantity": 14.0,
     "pnl_pct": 44.31,
     "pnl_abs": 4426.8,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -10300,12 +10198,10 @@
     "insider_pct": 67.69,
     "ret_1d": 1.69,
     "ret_1w": 8.43,
-    "ret_1m": 25.16,
-    "ret_6m": 22.82,
-    "ret_1y": 8.38,
-    "ret_2y": -15.75,
-    "ret_3y": 137.17,
-    "ret_5y": 137.17
+    "ret_1m": 26.71,
+    "ret_6m": 22.84,
+    "ret_1y": 10.99,
+    "ret_2y": -15.75
   },
   "RAMRAT": {
     "ltp": 569.6,
@@ -10313,7 +10209,7 @@
     "quantity": 91.0,
     "pnl_pct": 30.87,
     "pnl_abs": 12225.85,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -10363,13 +10259,12 @@
     "insider_pct": 76.61,
     "ret_1d": 8.76,
     "ret_1w": 17.08,
-    "ret_1m": 24.78,
-    "ret_6m": 80.02,
-    "ret_1y": 66.69,
+    "ret_1m": 23.76,
+    "ret_6m": 80.62,
+    "ret_1y": 68.1,
     "ret_2y": 135.2,
-    "ret_3y": 266.85,
-    "ret_4y": 793.51,
-    "ret_5y": 915.58
+    "ret_3y": 278.17,
+    "ret_4y": 793.51
   },
   "RKSWAMY": {
     "ltp": 94.01,
@@ -10377,7 +10272,7 @@
     "quantity": 516.0,
     "pnl_pct": -3.57,
     "pnl_abs": -1796.97,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -10426,12 +10321,10 @@
     "insider_pct": 69.61,
     "ret_1d": 0.87,
     "ret_1w": -1.9,
-    "ret_1m": -7.39,
-    "ret_6m": -3.9,
-    "ret_1y": -39.93,
-    "ret_2y": -62.78,
-    "ret_3y": -62.88,
-    "ret_5y": -62.88
+    "ret_1m": -8.18,
+    "ret_6m": -2.93,
+    "ret_1y": -38.47,
+    "ret_2y": -62.78
   },
   "RATNAMANI": {
     "ltp": 2654.8,
@@ -10439,7 +10332,7 @@
     "quantity": 72.0,
     "pnl_pct": -1.78,
     "pnl_abs": -3463.3,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -10521,7 +10414,7 @@
     "quantity": 198.0,
     "pnl_pct": -10.53,
     "pnl_abs": -8763.99,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -10538,6 +10431,7 @@
         "invested": 33628.0
       }
     ],
+    "mcap_cr": 4622.18,
     "pe": 45.25,
     "debt_to_equity": 35.976,
     "eps": 8.31,
@@ -10575,13 +10469,12 @@
     "insider_pct": 44.33,
     "ret_1d": 1.33,
     "ret_1w": 0.78,
-    "ret_1m": -11.3,
-    "ret_6m": 0.56,
-    "ret_1y": -15.18,
+    "ret_1m": -9.94,
+    "ret_6m": 2.04,
+    "ret_1y": -15.86,
     "ret_2y": -45.42,
-    "ret_3y": -20.14,
-    "ret_4y": 104.77,
-    "ret_5y": 103.94
+    "ret_3y": -20.61,
+    "ret_4y": 104.77
   },
   "_benchmarks": {
     "nifty50": {
@@ -10627,7 +10520,7 @@
     "quantity": 3272.077,
     "pnl_pct": 0.91,
     "pnl_abs": 908.33,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": false,
     "holding_type": "MF",
     "accounts": [
@@ -10645,7 +10538,7 @@
     "quantity": 11266.534,
     "pnl_pct": 0.93,
     "pnl_abs": 2315.27,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": false,
     "holding_type": "MF",
     "accounts": [
@@ -10663,7 +10556,7 @@
     "quantity": 7500.0,
     "pnl_pct": 57.42,
     "pnl_abs": 354275.0,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": false,
     "holding_type": "Gold",
     "accounts": [
@@ -10673,13 +10566,7 @@
         "buy_avg": 82.26,
         "invested": 616975.0
       }
-    ],
-    "ret_1d": -2.06,
-    "ret_1m": 11.32,
-    "ret_6m": -0.89,
-    "ret_1y": 57.54,
-    "ret_3y": 157.52,
-    "ret_5y": 218.28
+    ]
   },
   "GOLDETF": {
     "ltp": 152.28,
@@ -10687,7 +10574,7 @@
     "quantity": 3393.0,
     "pnl_pct": 65.45,
     "pnl_abs": 204397.64,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": false,
     "holding_type": "Gold",
     "accounts": [
@@ -10697,13 +10584,7 @@
         "buy_avg": 92.04,
         "invested": 312288.4
       }
-    ],
-    "ret_1d": -1.97,
-    "ret_1m": 11.17,
-    "ret_6m": 0.37,
-    "ret_1y": 58.51,
-    "ret_3y": 158.6,
-    "ret_5y": 158.6
+    ]
   },
   "HDFC GOLD ETF FUND OF FUND - DIRECT PLAN": {
     "ltp": 49.4972,
@@ -10711,7 +10592,7 @@
     "quantity": 3973.047,
     "pnl_pct": 293.31,
     "pnl_abs": 146654.7,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": false,
     "holding_type": "Gold",
     "accounts": [
@@ -10729,7 +10610,7 @@
     "quantity": 10106.785,
     "pnl_pct": 241.99,
     "pnl_abs": 362970.84,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": false,
     "holding_type": "Gold",
     "accounts": [
@@ -10753,7 +10634,7 @@
     "quantity": 2713.804,
     "pnl_pct": 0.95,
     "pnl_abs": 946.31,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": false,
     "holding_type": "MF",
     "accounts": [
@@ -10771,7 +10652,7 @@
     "quantity": 74916.47,
     "pnl_pct": 5.69,
     "pnl_abs": 58665.24,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": false,
     "holding_type": "MF",
     "accounts": [
@@ -10795,7 +10676,7 @@
     "quantity": 15.0,
     "pnl_pct": 72.31,
     "pnl_abs": 99359.55,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": false,
     "holding_type": "Gold",
     "accounts": [
@@ -10813,7 +10694,7 @@
     "quantity": 50.0,
     "pnl_pct": 169.52,
     "pnl_abs": 490592.0,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": false,
     "holding_type": "Gold",
     "accounts": [
@@ -10837,7 +10718,7 @@
     "quantity": 6.0,
     "pnl_pct": 77.03,
     "pnl_abs": 40805.0,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": false,
     "holding_type": "Gold",
     "accounts": [
@@ -10855,7 +10736,7 @@
     "quantity": 2.0,
     "pnl_pct": 73.61,
     "pnl_abs": 13318.0,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": false,
     "holding_type": "Gold",
     "accounts": [
@@ -10873,7 +10754,7 @@
     "quantity": 3.0,
     "pnl_pct": 71.79,
     "pnl_abs": 19557.0,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": false,
     "holding_type": "Gold",
     "accounts": [
@@ -10891,7 +10772,7 @@
     "quantity": 1.0,
     "pnl_pct": 73.2,
     "pnl_abs": 6644.0,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": false,
     "holding_type": "Gold",
     "accounts": [
@@ -10909,7 +10790,7 @@
     "quantity": 19.0,
     "pnl_pct": 22.09,
     "pnl_abs": 53632.81,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": false,
     "holding_type": "Gold",
     "accounts": [
@@ -10927,7 +10808,7 @@
     "quantity": 1.0,
     "pnl_pct": 73.63,
     "pnl_abs": 6679.0,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": false,
     "holding_type": "Gold",
     "accounts": [
@@ -10945,7 +10826,7 @@
     "quantity": 3.0,
     "pnl_pct": 70.26,
     "pnl_abs": 19442.0,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": false,
     "holding_type": "Gold",
     "accounts": [
@@ -10963,7 +10844,7 @@
     "quantity": 112.0,
     "pnl_pct": 3.48,
     "pnl_abs": 865.76,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": false,
     "holding_type": "Silver",
     "accounts": [
@@ -10973,13 +10854,7 @@
         "buy_avg": 222.0,
         "invested": 24864.0
       }
-    ],
-    "ret_1d": -1.52,
-    "ret_1m": 9.68,
-    "ret_6m": -4.11,
-    "ret_1y": 107.19,
-    "ret_3y": 204.45,
-    "ret_5y": 223.3
+    ]
   },
   "SILVERCASE": {
     "ltp": 23.95,
@@ -10987,7 +10862,7 @@
     "quantity": 6642.0,
     "pnl_pct": -5.53,
     "pnl_abs": -9313.82,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": false,
     "holding_type": "Silver",
     "accounts": [
@@ -10997,13 +10872,7 @@
         "buy_avg": 25.35,
         "invested": 168389.72
       }
-    ],
-    "ret_1d": -1.48,
-    "ret_1m": 9.51,
-    "ret_6m": -9.92,
-    "ret_1y": 106.24,
-    "ret_3y": 137.37,
-    "ret_5y": 137.37
+    ]
   },
   "UTI NIFTY 50 INDEX FUND - DIRECT PLAN": {
     "ltp": 124.4725,
@@ -11011,7 +10880,7 @@
     "quantity": 953.1179999999999,
     "pnl_pct": 97.74,
     "pnl_abs": 58640.01,
-    "updated": "2026-08-27 14:48 UTC",
+    "updated": "2026-08-27 15:05 UTC",
     "must_buy": false,
     "holding_type": "MF",
     "accounts": [
@@ -11028,45 +10897,5 @@
         "invested": 19998.99
       }
     ]
-  },
-  "SIGNPOST": {
-    "ret_1d": 0.04,
-    "ret_1m": -14.94,
-    "ret_6m": 7.73,
-    "ret_1y": -6.49,
-    "ret_3y": -19.67,
-    "ret_5y": -19.67
-  },
-  "PROTEAN": {
-    "ret_1d": -1.56,
-    "ret_1m": -11.81,
-    "ret_6m": -4.46,
-    "ret_1y": -31.26,
-    "ret_3y": -61.68,
-    "ret_5y": -61.68
-  },
-  "PTC": {
-    "ret_1d": 0.43,
-    "ret_1m": 6.14,
-    "ret_6m": 7.56,
-    "ret_1y": -3.41,
-    "ret_3y": 72.06,
-    "ret_5y": 146.7
-  },
-  "BBL": {
-    "ret_1d": 1.35,
-    "ret_1m": -7.85,
-    "ret_6m": -0.77,
-    "ret_1y": -16.19,
-    "ret_3y": 32.3,
-    "ret_5y": 286.91
-  },
-  "TVSELECT": {
-    "ret_1d": -0.02,
-    "ret_1m": -9.6,
-    "ret_6m": 19.34,
-    "ret_1y": 6.15,
-    "ret_3y": 20.75,
-    "ret_5y": 175.83
   }
 }
