@@ -5347,5 +5347,89 @@
     "amber_flags": [],
     "summary": "No forensic concerns; risks are execution consistency and client concentration.",
     "sources": "Dashboard financials + curated governance/risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "AGI": {
+    "score": 6.0,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-08-28",
+    "categories": {
+      "accounting": {
+        "score": 6,
+        "reason": "Reasonable accounting; energy/inventory swings."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "HNG insolvency-bid litigation adds governance noise."
+      },
+      "financial": {
+        "score": 6,
+        "reason": "Capex-heavy but manageable leverage."
+      },
+      "business": {
+        "score": 6,
+        "reason": "Cyclical, energy-intensive container glass."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [],
+    "summary": "No serious accounting flags; energy cyclicality and the HNG acquisition are the main watch items.",
+    "sources": "Dashboard financials + curated governance/risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "ASAHIINDIA": {
+    "score": 7.1,
+    "verdict": "MINOR",
+    "confidence": "Moderate",
+    "updated": "2026-08-28",
+    "categories": {
+      "accounting": {
+        "score": 7,
+        "reason": "Clean accounting; strategic-parent oversight."
+      },
+      "governance": {
+        "score": 8,
+        "reason": "Strong governance under AGC/Maruti."
+      },
+      "financial": {
+        "score": 6,
+        "reason": "Higher leverage from glass-capacity capex."
+      },
+      "business": {
+        "score": 7,
+        "reason": "Auto-cycle exposure, but dominant share."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [],
+    "summary": "Well-governed with strong parentage; elevated leverage from float-glass capex is the key risk.",
+    "sources": "Dashboard financials + curated governance/risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
+  },
+  "MMFL": {
+    "score": 5.6,
+    "verdict": "MODERATE",
+    "confidence": "Moderate",
+    "updated": "2026-08-28",
+    "categories": {
+      "accounting": {
+        "score": 6,
+        "reason": "Reasonable accounting; cyclical inventory."
+      },
+      "governance": {
+        "score": 6,
+        "reason": "No notable governance red flags."
+      },
+      "financial": {
+        "score": 5,
+        "reason": "Leverage from capacity/acquisitions; cyclical cash flows."
+      },
+      "business": {
+        "score": 5,
+        "reason": "Deep CV-cycle and export-customer concentration."
+      }
+    },
+    "critical_flags": [],
+    "amber_flags": [],
+    "summary": "No forensic concerns; risks are CV cyclicality, export concentration and leverage.",
+    "sources": "Dashboard financials + curated governance/risk flags + public filings (BSE/NSE/screener.in), analyst knowledge"
   }
 }

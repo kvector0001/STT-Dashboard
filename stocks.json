@@ -7166,5 +7166,104 @@
     "sector_group": "IT / Software",
     "mcap_cr": 10191.0,
     "pe": 28.72
+  },
+  {
+    "ticker": "AGI",
+    "name": "AGI Greenpac Limited",
+    "sector": "Glass & Specialty Packaging",
+    "nse_symbol": "AGI",
+    "buy_avg": 775.5961,
+    "moat_type": "Narrow",
+    "moat_class": "narrow",
+    "conviction": 6,
+    "moat": "One of India's largest container-glass and specialty-packaging makers (glass bottles for liquor, beer, food, pharma and cosmetics) with a growing premium/specialty glass, caps-&-closures and PET business. Capital-intensive furnaces and premium-glass (spirits/perfume) capability give some differentiation in an otherwise cyclical, energy-heavy industry.",
+    "leadership": "Among the top-2 container-glass producers in India (Somany/HSIL lineage); expanding specialty glass and closures, and pursued the HNG insolvency acquisition to consolidate share.",
+    "non_rep": "Glass furnaces are capital- and energy-intensive with long build times; premium/specialty glass approvals (spirits, perfume) and closures capability create moderate switching friction.",
+    "tailwinds": [
+      "Premiumisation of spirits/beer packaging",
+      "Food & pharma glass-packaging demand",
+      "Industry consolidation / import substitution (HNG)",
+      "Sustainability shift to recyclable glass"
+    ],
+    "risks": [
+      "Energy (gas/power) cost cyclicality",
+      "High capital intensity & furnace capex",
+      "HNG acquisition litigation / integration uncertainty",
+      "Container-glass overcapacity & competition"
+    ],
+    "track": [
+      "Specialty/premium glass revenue mix",
+      "Energy cost per tonne & margins",
+      "HNG deal resolution & capacity utilisation"
+    ],
+    "sector_group": "Packaging",
+    "mcap_cr": 5013.0,
+    "pe": 13.84
+  },
+  {
+    "ticker": "ASAHIINDIA",
+    "name": "Asahi India Glass Limited",
+    "sector": "Auto & Architectural Glass",
+    "nse_symbol": "ASAHIINDIA",
+    "buy_avg": 949.95,
+    "moat_type": "Wide",
+    "moat_class": "wide",
+    "conviction": 7,
+    "moat": "India's largest integrated glass company and the dominant automotive-glass supplier (~70% OEM share) with decades-long approvals at Maruti Suzuki, Hyundai and others, plus a large architectural/float-glass business. Backed by AGC (Asahi Glass, Japan) technology and a Maruti/Suzuki shareholding.",
+    "leadership": "#1 in Indian auto glass with an entrenched OEM position; integrated float-to-value-added glass and a growing architectural/consumer (AIS Windows) franchise.",
+    "non_rep": "Auto glass is a certification-gated, model-life-locked business; OEM co-development and single/dual-source approvals plus AGC technology and float integration are extremely hard to replicate.",
+    "tailwinds": [
+      "Auto production growth & glass premiumisation (larger/laminated)",
+      "Architectural/float glass & construction demand",
+      "Value-added glass (solar-control, acoustic) mix",
+      "China+1 / import substitution in float glass"
+    ],
+    "risks": [
+      "Auto-cycle cyclicality & OEM concentration",
+      "High leverage from float-glass capex",
+      "Energy & soda-ash input costs",
+      "Rich valuation (high P/E)"
+    ],
+    "track": [
+      "Auto vs architectural mix & margins",
+      "Value-added glass share",
+      "Leverage / ROCE trajectory"
+    ],
+    "sector_group": "Auto Ancillary",
+    "mcap_cr": 24287.0,
+    "pe": 55.04
+  },
+  {
+    "ticker": "MMFL",
+    "name": "M M Forgings Limited",
+    "sector": "Auto Ancillary / Forgings",
+    "nse_symbol": "MMFL",
+    "buy_avg": 641.0,
+    "moat_type": "Narrow",
+    "moat_class": "narrow",
+    "conviction": 6,
+    "moat": "Chennai-based maker of steel forgings and machined components (crankshafts, front-axle beams, connecting rods) for commercial vehicles, tractors and off-highway, with a large export franchise (US/Europe). Scale forging capacity plus in-house machining and long OEM relationships give a mid-tier cost/quality edge.",
+    "leadership": "Among India's larger CV/off-highway forging exporters; integrated forging + machining with a diversified global customer base and acquired overseas capacity.",
+    "non_rep": "Forging dies, metallurgical process control and multi-year OEM/Tier-1 approvals for safety-critical drivetrain parts create switching friction, though the product is cyclical and competitive.",
+    "tailwinds": [
+      "Global CV & off-highway demand recovery",
+      "Export / China+1 in forgings",
+      "Machining value-addition & content growth",
+      "EV-agnostic components (axles, chassis)"
+    ],
+    "risks": [
+      "Deep CV-cycle cyclicality",
+      "Export & customer concentration",
+      "Steel input & FX volatility",
+      "Leverage from capacity/acquisitions"
+    ],
+    "track": [
+      "Export order book & customer additions",
+      "Machined (value-added) revenue share",
+      "EBITDA margin & leverage through the cycle"
+    ],
+    "sector_group": "Auto Ancillary",
+    "mcap_cr": 3098.0,
+    "pe": 18.25
   }
 ]

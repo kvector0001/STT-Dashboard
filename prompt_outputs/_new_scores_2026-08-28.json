@@ -1,0 +1,71 @@
+{
+  "AGI": {
+    "mgmt_trust": {
+      "confidence": "Moderate", "etf": false,
+      "summary": "Somany/HSIL-lineage promoter with a decent record; the contested HNG acquisition adds execution and governance watch items.",
+      "pillars": {
+        "promoter_profile": {"score": 7, "reason": "Somany (HSIL) lineage; established packaging promoter."},
+        "ownership_behaviour": {"score": 6, "reason": "Stable holding; no major pledging concerns."},
+        "capital_allocation": {"score": 6, "reason": "Specialty-glass expansion sensible; HNG bid is a large, contested bet."},
+        "governance": {"score": 6, "reason": "Adequate governance; HNG insolvency litigation to monitor."},
+        "execution": {"score": 6, "reason": "Steady packaging execution; integration risk ahead."}
+      }
+    },
+    "red_flags": {
+      "confidence": "Moderate", "etf": false,
+      "summary": "No serious accounting flags; energy cyclicality and the HNG acquisition are the main watch items.",
+      "categories": {
+        "accounting": {"score": 6, "reason": "Reasonable accounting; energy/inventory swings."},
+        "governance": {"score": 6, "reason": "HNG insolvency-bid litigation adds governance noise."},
+        "financial": {"score": 6, "reason": "Capex-heavy but manageable leverage."},
+        "business": {"score": 6, "reason": "Cyclical, energy-intensive container glass."}
+      }
+    }
+  },
+  "ASAHIINDIA": {
+    "mgmt_trust": {
+      "confidence": "Moderate", "etf": false,
+      "summary": "Strong AGC + Maruti/Suzuki parentage underpins high governance and stewardship; leverage is the main watch item.",
+      "pillars": {
+        "promoter_profile": {"score": 8, "reason": "AGC Japan + Maruti/Suzuki backing; strong pedigree."},
+        "ownership_behaviour": {"score": 8, "reason": "Stable strategic ownership; no pledging."},
+        "capital_allocation": {"score": 7, "reason": "Disciplined but capex/leverage-heavy in float glass."},
+        "governance": {"score": 8, "reason": "Strong disclosures and board quality."},
+        "execution": {"score": 7, "reason": "Consistent auto-glass leadership; architectural ramp."}
+      }
+    },
+    "red_flags": {
+      "confidence": "Moderate", "etf": false,
+      "summary": "Well-governed with strong parentage; elevated leverage from float-glass capex is the key risk.",
+      "categories": {
+        "accounting": {"score": 7, "reason": "Clean accounting; strategic-parent oversight."},
+        "governance": {"score": 8, "reason": "Strong governance under AGC/Maruti."},
+        "financial": {"score": 6, "reason": "Higher leverage from glass-capacity capex."},
+        "business": {"score": 7, "reason": "Auto-cycle exposure, but dominant share."}
+      }
+    }
+  },
+  "MMFL": {
+    "mgmt_trust": {
+      "confidence": "Moderate", "etf": false,
+      "summary": "Founder-led forging exporter with a reasonable record; cyclicality and leverage temper the score.",
+      "pillars": {
+        "promoter_profile": {"score": 6, "reason": "Vidyashankar Krishnan family; established forging operator."},
+        "ownership_behaviour": {"score": 6, "reason": "Stable holding; watch pledging/leverage."},
+        "capital_allocation": {"score": 6, "reason": "Capacity + overseas acquisitions; mixed through-cycle returns."},
+        "governance": {"score": 6, "reason": "Adequate governance, no notable flags."},
+        "execution": {"score": 6, "reason": "Cyclical, export-led delivery."}
+      }
+    },
+    "red_flags": {
+      "confidence": "Moderate", "etf": false,
+      "summary": "No forensic concerns; risks are CV cyclicality, export concentration and leverage.",
+      "categories": {
+        "accounting": {"score": 6, "reason": "Reasonable accounting; cyclical inventory."},
+        "governance": {"score": 6, "reason": "No notable governance red flags."},
+        "financial": {"score": 5, "reason": "Leverage from capacity/acquisitions; cyclical cash flows."},
+        "business": {"score": 5, "reason": "Deep CV-cycle and export-customer concentration."}
+      }
+    }
+  }
+}

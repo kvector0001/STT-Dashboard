@@ -8356,5 +8356,149 @@
       "name": "Kiri Industries",
       "why": "litigation/leverage history"
     }
+  },
+  "AGI": {
+    "set": "Container & specialty glass (India)",
+    "of": 6,
+    "rank": 1,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "AGI Greenpac",
+        "score": 6.8,
+        "verdict": "CLEAR LEADER",
+        "self": true
+      },
+      {
+        "name": "Piramal Glass (unlisted)",
+        "score": 7.0,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Borosil",
+        "score": 6.5,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "La Opala RG",
+        "score": 6.5,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Empire Industries (Vitrum)",
+        "score": 5.5,
+        "verdict": "AVERAGE"
+      },
+      {
+        "name": "Hindusthan National Glass",
+        "score": 4.0,
+        "verdict": "WEAK"
+      }
+    ],
+    "why": "Scaled, profitable container-glass leader with premium/closures optionality; trails only unlisted Piramal Glass on premium breadth.",
+    "best_own": {
+      "name": "Piramal Glass",
+      "why": "premium/specialty scale (unlisted)"
+    },
+    "avoid": {
+      "name": "Hindusthan National Glass",
+      "why": "distressed / insolvency"
+    }
+  },
+  "ASAHIINDIA": {
+    "set": "Automotive glass (India)",
+    "of": 6,
+    "rank": 1,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Asahi India Glass",
+        "score": 7.5,
+        "verdict": "CLEAR LEADER",
+        "self": true
+      },
+      {
+        "name": "Saint-Gobain Sekurit (unlisted)",
+        "score": 7.4,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Gujarat Guardian (unlisted)",
+        "score": 6.5,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Sisecam Flat Glass India",
+        "score": 6.2,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Borosil",
+        "score": 6.0,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "Triveni Glass",
+        "score": 4.5,
+        "verdict": "WEAK"
+      }
+    ],
+    "why": "Dominant OEM auto-glass share with AGC technology and float integration; a near-duopoly with Saint-Gobain.",
+    "best_own": {
+      "name": "Asahi India Glass",
+      "why": "OEM lock-in + float integration"
+    },
+    "avoid": {
+      "name": "Triveni Glass",
+      "why": "sub-scale, weak"
+    }
+  },
+  "MMFL": {
+    "set": "Auto / CV forgings (India)",
+    "of": 6,
+    "rank": 4,
+    "action": "HOLD",
+    "peers": [
+      {
+        "name": "Bharat Forge",
+        "score": 7.5,
+        "verdict": "CLEAR LEADER"
+      },
+      {
+        "name": "Ramkrishna Forgings",
+        "score": 7.0,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "Happy Forgings",
+        "score": 7.0,
+        "verdict": "STRONG"
+      },
+      {
+        "name": "CIE Automotive India",
+        "score": 6.5,
+        "verdict": "SOLID"
+      },
+      {
+        "name": "M M Forgings",
+        "score": 6.0,
+        "verdict": "SOLID",
+        "self": true
+      },
+      {
+        "name": "Talbros Engineering",
+        "score": 5.5,
+        "verdict": "AVERAGE"
+      }
+    ],
+    "why": "Solid mid-tier CV/export forger with integrated machining, but sub-scale and more cyclical/levered than Bharat Forge or Ramkrishna.",
+    "best_own": {
+      "name": "Bharat Forge",
+      "why": "scale + diversification (defence/aero)"
+    },
+    "avoid": {
+      "name": "Talbros Engineering",
+      "why": "sub-scale, cyclical"
+    }
   }
 }
