@@ -166,7 +166,13 @@ if mb_col:
 # The Google Sheet has a dedicated "MB" tab listing Must-Buy tickers. We always
 # merge it in, so Must-Buy works whether or not the main sheet has an MB column.
 MUSTBUY_SET = set()
+MB_STATUS = {}   # ticker -> 'mustbuy' | 'bullish' | 'others' (from the MB tab, column E)
 import re as _re_mb
+def _norm_mb(v):
+    s = str(v).strip().lower()
+    if 'must' in s: return 'mustbuy'
+    if 'bull' in s: return 'bullish'
+    return 'others'
 try:
     all_sheets = pd.read_excel(portfolio_file, sheet_name=None, engine="openpyxl")
     mb_sheet_name = None
@@ -177,17 +183,29 @@ try:
             break
     if mb_sheet_name is not None:
         mb_df = all_sheets[mb_sheet_name]
-        # Prefer a symbol/ticker column; otherwise use the first column
-        mb_tcol = find_col(mb_df, ["symbol", "ticker", "scrip", "stock", "mustbuy", "must buy"])
+        # Ticker column
+        mb_tcol = find_col(mb_df, ["symbol", "ticker", "scrip", "stock"])
         if mb_tcol is None and len(mb_df.columns) > 0:
             mb_tcol = mb_df.columns[0]
+        # Status column: prefer a column literally named 'MB', else the 5th column (E)
+        mb_status_col = next((c for c in mb_df.columns if str(c).strip().lower() == 'mb'), None)
+        if mb_status_col is None and len(mb_df.columns) >= 5:
+            mb_status_col = mb_df.columns[4]
         if mb_tcol is not None:
-            for v in mb_df[mb_tcol].dropna().astype(str):
-                t = _re_mb.sub(r'\s+', '', v.strip().upper())
+            for _, _r in mb_df.iterrows():
+                raw = _r[mb_tcol]
+                if pd.isna(raw):
+                    continue
+                t = _re_mb.sub(r'\s+', '', str(raw).strip().upper())
                 t = _re_mb.sub(r'-[A-Z]$', '', t)   # strip Zerodha suffix
-                if t and not t.replace('.', '').isdigit():
+                if not t or t.replace('.', '').isdigit():
+                    continue
+                st = _norm_mb(_r[mb_status_col]) if (mb_status_col is not None and not pd.isna(_r[mb_status_col])) else 'others'
+                MB_STATUS[t] = st
+                if st == 'mustbuy':
                     MUSTBUY_SET.add(t)
-        print(f"[INFO] Read Must Buy sheet {mb_sheet_name!r}: {len(MUSTBUY_SET)} tickers")
+        from collections import Counter as _MBC
+        print(f"[INFO] Read Must Buy sheet {mb_sheet_name!r}: {len(MB_STATUS)} tickers | {dict(_MBC(MB_STATUS.values()))}")
     else:
         print("[INFO] No separate Must Buy sheet found.")
 except Exception as e:
@@ -419,14 +437,51 @@ if not_in_portfolio:
     print(f"[INFO] Keeping qualitative analysis for {len(not_in_portfolio)} "
           f"stock(s) no longer in the sheet: {', '.join(str(t) for t in not_in_portfolio)}\n")
 
+# ── Watchlist: also price ANALYZED candidates I don't own yet (qty 0) ────────
+# So the Alpha-Doubler engine's local Stage-1 can score them alongside holdings.
+# Sources: (1) optional user-editable watchlist.json (a list of tickers) and
+# (2) auto — any analyzed stock (has a management_trust entry, moat_type !=
+# Pending) that is not in the sheet and not a non-equity/ETF holding.
+def _load_watchlist():
+    wl = set()
+    wp = "watchlist.json"
+    if os.path.exists(wp):
+        try:
+            data = json.load(open(wp, encoding="utf-8"))
+            wl |= {str(x).strip() for x in (data if isinstance(data, list) else data.get("tickers", []))}
+        except Exception as e:
+            print(f"[WARN] watchlist.json unreadable: {e}")
+    try:
+        _mt = json.load(open("management_trust.json", encoding="utf-8"))
+        analyzed = {k for k in _mt if k != "_meta"}
+    except Exception:
+        analyzed = set()
+    for s in stocks:
+        t = s.get("ticker")
+        if (t in analyzed and t not in portfolio_tickers and t not in nonequity_tickers
+                and str(s.get("moat_type")) != "Pending"):
+            wl.add(t)
+    wl.discard("Cash")
+    return sorted(wl)
+
+watchlist_tickers = _load_watchlist()
+WATCHLIST_SET = set(watchlist_tickers)
+if watchlist_tickers:
+    wl_rows = pd.DataFrame([{"symbol": t, "qty": 0.0, "buy_avg": 0.0} for t in watchlist_tickers])
+    for c in portfolio.columns:
+        if c not in wl_rows.columns:
+            wl_rows[c] = None
+    portfolio = pd.concat([portfolio, wl_rows[list(portfolio.columns)]], ignore_index=True)
+    print(f"[INFO] Watchlist: pricing {len(watchlist_tickers)} analyzed non-held candidate(s) "
+          f"(qty 0) so the alpha engine can score them locally.")
+
 # ── Fetch prices ──────────────────────────────────────────────────────────────
 prices = {}
 now_utc = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
 
 # Build lookup of buy_avg and qty from portfolio (use clean tickers as keys)
 def _is_mustbuy(row, clean_sym):
-    col_flag = ("must_buy" in portfolio.columns and str(row["must_buy"]).strip().upper() == "MUSTBUY")
-    return bool(col_flag or (clean_sym.strip().upper() in MUSTBUY_SET))
+    return MB_STATUS.get(clean_sym.strip().upper(), 'others') == 'mustbuy'
 
 portfolio_map = {
     _clean_ticker(row["symbol"]): {"qty": float(row["qty"]), "buy_avg": float(row["buy_avg"]),
@@ -480,6 +535,8 @@ for _, row in portfolio.iterrows():
     fetched_sector = None
     fetched_mcap = None
     fetched_pe = None
+    fetched_forward_pe = None
+    fetched_forward_eps = None
     fetched_roe = None
     ret_1d = None
     ret_1w = None
@@ -516,6 +573,8 @@ for _, row in portfolio.iterrows():
     fetched_price_to_200dma_pct = None
     fetched_dma200_slope_30d_pct = None
     fetched_days_above_200dma_10d = None
+    fetched_rsi14 = None
+    fetched_price_to_50dma_pct = None
     fetched_gross_margin = None
     fetched_op_margin = None
     fetched_profit_margin = None
@@ -610,6 +669,8 @@ for _, row in portfolio.iterrows():
                         fetched_mcap = round(mcap / 10_000_000, 2)  # Convert to Crores
                     
                     fetched_pe = info.get("trailingPE")
+                    fetched_forward_pe = info.get("forwardPE")
+                    fetched_forward_eps = info.get("forwardEps")
                     fetched_roe = info.get("returnOnEquity")
 
                     # Additional fundamental metrics
@@ -866,8 +927,25 @@ for _, row in portfolio.iterrows():
                                 elif score >= 70 and in_sweet_zone: fetched_trend_signal = 'Bullish'
                                 elif score >= 70:                    fetched_trend_signal = 'Extended'
                                 elif score >= 55:                    fetched_trend_signal = 'Watch'
-                                elif score >= 35:                    fetched_trend_signal = 'Hold'
-                                else:                               fetched_trend_signal = 'Bearish'
+                        except Exception:
+                            pass
+
+                        # RSI(14) + 50-DMA (short-term momentum inputs for the Setup signal)
+                        try:
+                            close_s2 = hist['Close'].dropna()
+                            if len(close_s2) >= 15:
+                                delta = close_s2.diff()
+                                gain = delta.clip(lower=0).rolling(14).mean()
+                                loss = (-delta.clip(upper=0)).rolling(14).mean()
+                                rs = gain / loss.replace(0, float('nan'))
+                                rsi_series = 100 - (100 / (1 + rs))
+                                rv = rsi_series.iloc[-1]
+                                if rv == rv:  # not NaN
+                                    fetched_rsi14 = round(float(rv), 1)
+                            if len(close_s2) >= 50:
+                                dma50 = float(close_s2.rolling(50).mean().iloc[-1])
+                                if dma50 > 0:
+                                    fetched_price_to_50dma_pct = round((float(close_s2.iloc[-1]) - dma50) / dma50 * 100, 2)
                         except Exception:
                             pass
 
@@ -913,12 +991,25 @@ for _, row in portfolio.iterrows():
     # Per-account holdings breakdown (same stock split across accounts)
     if sym in accounts_map:
         prices[sym]["accounts"] = accounts_map[sym]
-    
+
+    # Watchlist candidates (analyzed but not held): flag so the dashboard keeps
+    # them out of the held summary while the alpha engine still reads their data.
+    if sym in WATCHLIST_SET:
+        prices[sym]["watchlist"] = True
+    # Must-Buy status from the MB tab (column E): 'mustbuy' | 'bullish' | 'others'
+    _mbs = MB_STATUS.get(sym.strip().upper())
+    if _mbs:
+        prices[sym]["mb_status"] = _mbs
+
     # Add fetched metadata if available
     if fetched_mcap is not None:
         prices[sym]["mcap_cr"] = fetched_mcap
     if fetched_pe is not None:
         prices[sym]["pe"] = round(fetched_pe, 2) if fetched_pe > 0 else None
+    if fetched_forward_pe is not None:
+        prices[sym]["forward_pe"] = round(fetched_forward_pe, 2) if fetched_forward_pe > 0 else None
+    if fetched_forward_eps is not None:
+        prices[sym]["forward_eps"] = round(fetched_forward_eps, 2)
     if fetched_roe is not None:
         prices[sym]["roe"] = round(fetched_roe * 100, 2) if fetched_roe else None
     if fetched_ocf is not None:
@@ -975,6 +1066,10 @@ for _, row in portfolio.iterrows():
         prices[sym]["dma200_slope_30d_pct"] = fetched_dma200_slope_30d_pct
     if fetched_days_above_200dma_10d is not None:
         prices[sym]["days_above_200dma_10d"] = fetched_days_above_200dma_10d
+    if fetched_rsi14 is not None:
+        prices[sym]["rsi14"] = fetched_rsi14
+    if fetched_price_to_50dma_pct is not None:
+        prices[sym]["price_to_50dma_pct"] = fetched_price_to_50dma_pct
     if fetched_gross_margin is not None:
         prices[sym]["gross_margin"] = fetched_gross_margin
     if fetched_op_margin is not None:
@@ -1106,7 +1201,7 @@ def _mf_returns(scheme_code):
     prev = pts[-2][1]
     return {
         "ret_1d": round((latest - prev) / prev * 100, 2) if prev else None,
-        "ret_1m": r(30), "ret_1y": r(365), "ret_3y": r(365 * 3), "ret_5y": r(365 * 5),
+        "ret_1m": r(30), "ret_6m": r(182), "ret_1y": r(365), "ret_3y": r(365 * 3), "ret_5y": r(365 * 5),
     }
 
 # Fallback index-fund scheme codes for periods the ETF can't cover
@@ -1125,6 +1220,7 @@ for key, candidates in BENCHMARK_SYMBOLS.items():
                 "symbol": cand,
                 "ret_1d": _ret(h, 1),
                 "ret_1m": _ret(h, 21),
+                "ret_6m": _ret(h, 126),
                 "ret_1y": _ret(h, 252),
                 "ret_3y": _ret(h, 756),
                 "ret_5y": _ret(h, 1200),
@@ -1144,7 +1240,7 @@ for key, scheme in BENCHMARK_MF_FALLBACK.items():
                 if not row:
                     row = {"symbol": f"MF:{scheme}"}
                     benchmarks[key] = row
-                for f in ("ret_1d", "ret_1m", "ret_1y", "ret_3y", "ret_5y"):
+                for f in ("ret_1d", "ret_1m", "ret_6m", "ret_1y", "ret_3y", "ret_5y"):
                     if row.get(f) is None and mf.get(f) is not None:
                         row[f] = mf[f]
                 print(f"[INFO] Benchmark {key}: filled long-term returns from index fund {scheme}")
@@ -1254,6 +1350,7 @@ _BLANK_ON_SUSPECT = (
     "movers", "movers_w", "movers_m", "movers_alloc",
     "trend_score", "trend_signal", "price_to_200dma_pct",
     "dma200_slope_30d_pct", "days_above_200dma_10d",
+    "rsi14", "price_to_50dma_pct",
 )
 _suspect_syms = []
 for _sym, _e in prices.items():

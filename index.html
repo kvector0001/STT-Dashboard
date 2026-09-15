@@ -156,6 +156,13 @@
     }
     .stat-value.green { color: var(--green-text); }
     .stat-value.red   { color: var(--red-text); }
+    /* Compact, stacked layout for the Dashboard (analysis) summary strip */
+    #summary-bar-analysis { gap: 0.8rem; padding-left: 1rem; }
+    #summary-bar-analysis .stat-label { font-size: 0.6rem; }
+    #summary-bar-analysis .stat-value { font-size: 0.78rem; }
+    #summary-bar-analysis [id$="-group"] { display: block !important; }
+    #summary-bar-analysis [id$="-group"] .stat-value { line-height: 1.15; }
+    #summary-bar-analysis [id^="ana-ew-"] { font-size: 0.55rem !important; }
     .stat-divider {
       width: 1px;
       background: var(--border);
@@ -1210,17 +1217,17 @@
     <div class="stat">
       <div class="stat-label">Invested</div>
       <div class="stat-value" id="ana-sum-invested">—</div>
-    </div>
-    <div class="stat">
-      <div class="stat-label">Current Value</div>
-      <div class="stat-value" id="ana-sum-current">—</div>
-      <div style="display:flex;gap:10px;align-items:center;margin-top:6px;flex-wrap:wrap;">
+      <div style="display:flex;flex-direction:column;gap:3px;align-items:flex-start;margin-top:6px;">
         <div id="ana-acct-toggle" onclick="toggleAccountwise()" title="Per-account summary (invested, value, P&L, cash). Click an account row to filter · Ctrl/Cmd+Click to combine several accounts." style="cursor:pointer;user-select:none;display:inline-flex;align-items:center;gap:4px;font-size:0.7rem;color:var(--text3);white-space:nowrap;">👥 Accountwise <span id="acct-arrow" style="transition:transform .2s;">▾</span></div>
         <div id="ana-bench-toggle" onclick="toggleBenchmarks()" title="Show benchmark index returns below each return column" style="cursor:pointer;user-select:none;display:inline-flex;align-items:center;gap:4px;font-size:0.7rem;color:var(--text3);white-space:nowrap;">📊 Benchmarks <span id="bench-arrow" style="transition:transform .2s;">▾</span></div>
       </div>
     </div>
     <div class="stat">
-      <div class="stat-label">Overall P&L ₹ (%)</div>
+      <div class="stat-label">Current Value</div>
+      <div class="stat-value" id="ana-sum-current">—</div>
+    </div>
+    <div class="stat">
+      <div class="stat-label">Overall</div>
       <div id="ana-sum-pnl-group" style="display: flex; gap: 8px; align-items: baseline;">
         <div class="stat-value" id="ana-sum-pnl-abs">—</div>
         <div class="stat-value" id="ana-sum-pnl-pct">—</div>
@@ -1229,7 +1236,7 @@
       <div class="bench-block" id="bench-legend" style="display:none;"></div>
     </div>
     <div class="stat">
-      <div class="stat-label">Day's PL%</div>
+      <div class="stat-label">1D</div>
       <div id="ana-sum-day-group" style="display: flex; gap: 8px; align-items: baseline;">
         <div class="stat-value" id="ana-sum-day-abs">—</div>
         <div class="stat-value" id="ana-sum-day-pct">—</div>
@@ -1237,8 +1244,8 @@
       <div style="font-size:0.65rem;color:var(--text3);margin-top:1px;" id="ana-ew-day"></div>
       <div class="bench-block" id="bench-day" style="display:none;"></div>
     </div>
-    <div class="stat">
-      <div class="stat-label">1 Month P&L (%)</div>
+    <div class="stat" style="margin-left:1.75rem;">
+      <div class="stat-label">1M</div>
       <div id="ana-sum-1m-group" style="display: flex; gap: 8px; align-items: baseline;">
         <div class="stat-value" id="ana-sum-1m-abs">—</div>
         <div class="stat-value" id="ana-sum-1m-pct">—</div>
@@ -1247,7 +1254,16 @@
       <div class="bench-block" id="bench-1m" style="display:none;"></div>
     </div>
     <div class="stat">
-      <div class="stat-label">1 Year P&L (%)</div>
+      <div class="stat-label">6M</div>
+      <div id="ana-sum-6m-group" style="display: flex; gap: 8px; align-items: baseline;">
+        <div class="stat-value" id="ana-sum-6m-abs">—</div>
+        <div class="stat-value" id="ana-sum-6m-pct">—</div>
+      </div>
+      <div style="font-size:0.65rem;color:var(--text3);margin-top:1px;" id="ana-ew-6m"></div>
+      <div class="bench-block" id="bench-6m" style="display:none;"></div>
+    </div>
+    <div class="stat">
+      <div class="stat-label">1Y</div>
       <div id="ana-sum-1y-group" style="display: flex; gap: 8px; align-items: baseline;">
         <div class="stat-value" id="ana-sum-1y-abs">—</div>
         <div class="stat-value" id="ana-sum-1y-pct">—</div>
@@ -1256,7 +1272,7 @@
       <div class="bench-block" id="bench-1y" style="display:none;"></div>
     </div>
     <div class="stat" title="Hypothetical: your current buy-value allocation deployed 3 years ago at the 3-year-ago price, weighted by buy value. Excludes holdings with no 3-year price history (recently listed/added). EW = simple equal-weight average of every holding's 3Y return.">
-      <div class="stat-label">3 Year P&L (%)</div>
+      <div class="stat-label">3Y</div>
       <div id="ana-sum-3y-group" style="display: flex; gap: 8px; align-items: baseline;">
         <div class="stat-value" id="ana-sum-3y-abs">—</div>
         <div class="stat-value" id="ana-sum-3y-pct">—</div>
@@ -1265,13 +1281,18 @@
       <div class="bench-block" id="bench-3y" style="display:none;"></div>
     </div>
     <div class="stat" title="Hypothetical: your current buy-value allocation deployed 5 years ago at the 5-year-ago price, weighted by buy value. Excludes holdings with no 5-year price history (recently listed/added). EW = simple equal-weight average of every holding's 5Y return.">
-      <div class="stat-label">5 Year P&L (%)</div>
+      <div class="stat-label">5Y</div>
       <div id="ana-sum-5y-group" style="display: flex; gap: 8px; align-items: baseline;">
         <div class="stat-value" id="ana-sum-5y-abs">—</div>
         <div class="stat-value" id="ana-sum-5y-pct">—</div>
       </div>
       <div style="font-size:0.65rem;color:var(--text3);margin-top:1px;" id="ana-ew-5y"></div>
       <div class="bench-block" id="bench-5y" style="display:none;"></div>
+    </div>
+    <div class="stat">
+      <div class="stat-label">Cash</div>
+      <div class="stat-value" id="ana-sum-cash">—</div>
+      <div style="font-size:0.62rem;color:var(--text3);margin-top:1px;" id="ana-sum-cash-note"></div>
     </div>
     <div class="stat">
       <div class="stat-label">Win/Loss</div>
@@ -1281,11 +1302,6 @@
         <span class="stat-value green" id="ana-sum-winpct" style="font-size:0.8rem;">—</span>
       </div>
       <div style="font-size:0.62rem;color:var(--text3);margin-top:1px;">of <span id="ana-sum-count">0</span></div>
-    </div>
-    <div class="stat">
-      <div class="stat-label">Cash</div>
-      <div class="stat-value" id="ana-sum-cash">—</div>
-      <div style="font-size:0.62rem;color:var(--text3);margin-top:1px;" id="ana-sum-cash-note"></div>
     </div>
   </div>
 
@@ -1318,13 +1334,14 @@
     <button class="analysis-chip" data-afilter="quality7" onclick="setAnalysisFilter('quality7',this)">⭐ Quality 7+</button>
     <button class="analysis-chip" data-afilter="redflag" onclick="setAnalysisFilter('redflag',this)">🚩 Red Flags (&lt;5)</button>
     <button class="analysis-chip" data-afilter="widemoat" onclick="setAnalysisFilter('widemoat',this)">Wide Moat</button>
-    <button class="analysis-chip" data-afilter="strongbullish" onclick="setAnalysisFilter('strongbullish',this)">Strong Bullish</button>
     <button class="analysis-chip" data-afilter="profit" onclick="setAnalysisFilter('profit',this)">In Profit</button>
     <button class="analysis-chip" data-afilter="movers" onclick="setAnalysisFilter('movers',this)" title="Show any stock moving on ANY timeframe — Daily, Weekly or Monthly (excludes 'No')">Movers</button>
     <button class="analysis-chip" data-afilter="nearath" onclick="setAnalysisFilter('nearath',this)" title="Within 5% of all-time high">🔼 Near ATH</button>
     <button class="analysis-chip" data-afilter="near52wkh" onclick="setAnalysisFilter('near52wkh',this)" title="Within 3% of 52-week high">🔼 Near 52wk High</button>
     <button class="analysis-chip" data-afilter="near52wkl" onclick="setAnalysisFilter('near52wkl',this)" title="Within 5% of 52-week low">🔽 Near 52wk Low</button>
-    <button class="analysis-chip" data-afilter="mustbuy" onclick="setAnalysisFilter('mustbuy',this)">★ Must Buy</button>
+    <button class="analysis-chip" data-afilter="mbbull" onclick="setAnalysisFilter('mbbull',this)" title="Rows flagged MUSTBUY or Bullish in the MB sheet (column E — the MB column)">★ MB/Bullish</button>
+    <button class="analysis-chip" data-afilter="increase" onclick="setAnalysisFilter('increase',this)" title="Add candidates: Alloc says add (🏆/💎) AND the Trends (ST,LT) signal is BUY 🟢">⏫ Increase</button>
+    <button class="analysis-chip" data-afilter="exit" onclick="setAnalysisFilter('exit',this)" title="Exit candidates: Alloc says reduce (🚨) AND the Trends (ST,LT) signal is EXIT 🔴">⏬ Exit</button>
     <button class="analysis-chip" data-afilter="loss" onclick="setAnalysisFilter('loss',this)">In Loss</button>
   </div>
 
@@ -1337,8 +1354,7 @@
           <th class="col-mov" onclick="sortAnalysis('movers_w')" oncontextmenu="return openMoversBulk('movers_w',event)" title="WEEKLY breakout/breakdown (5-day) — same 🔥 lifetime-high / 🚀 52wk-high / 🧊 lifetime-low / ❄️ 52wk-low levels. Thresholds: weekly volume ≥1.5× avg AND 5-day move ≥±8%, at that level. Click a cell for a single-stock structural prompt; right-click this header for a combined prompt across all filtered stocks.">Mov(Wk) <span class="col-filter-icon" data-col="movers_w" title="Filter" onclick="event.stopPropagation();openColFilter('movers_w',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-movers_w" class="sort-indicator"></span></th>
           <th class="col-mov" onclick="sortAnalysis('movers_m')" oncontextmenu="return openMoversBulk('movers_m',event)" title="MONTHLY breakout/breakdown (21-day) — same 🔥/🚀/🧊/❄️ levels. Thresholds: monthly volume ≥1.3× avg AND 21-day move ≥±12%, at that level. Click a cell for a single-stock structural prompt; right-click this header for a combined prompt across all filtered stocks.">Mov(M) <span class="col-filter-icon" data-col="movers_m" title="Filter" onclick="event.stopPropagation();openColFilter('movers_m',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-movers_m" class="sort-indicator"></span></th>
           <th class="col-mov" onclick="sortAnalysis('movers_alloc')" oncontextmenu="return openMoversBulk('movers_alloc',event)" title="Allocation ACTION = momentum × 200DMA trend (incl. Trend Score). 🏆 STRONG ADD — monthly catalyst in the low-risk sweet spot (≤20% above a RISING 200DMA, holding ≥9/10 days). 💎 ADD/increase — early confirmed re-rating (monthly up, 1M ≤20%, ≤40% above a RISING 200DMA). 🌱 START-SMALL/watch — early, trend not yet confirmed. ⏳ HOLD — already ran (>30% 1M / >50% ext) OR a healthy pullback in a strong uptrend (TS≥70 & 200DMA rising); not a reduce. 🚨 REDUCE — genuine de-rating: new low, below a falling 200DMA, or monthly downtrend without a strong rising 200DMA. Click a cell for a single-stock allocation prompt; right-click this header for a combined prompt across all filtered stocks.">Alloc <span class="col-filter-icon" data-col="movers_alloc" title="Filter" onclick="event.stopPropagation();openColFilter('movers_alloc',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-movers_alloc" class="sort-indicator"></span></th>
-          <th class="col-ts" onclick="sortAnalysis('trend_score')" title="Trend Score (0–100) for 3–12 month positional holding | 3 inputs: Price vs 200DMA (40pts) + 200DMA Slope 30d (30pts) + Days above 200DMA last 10 sessions (30pts) | Strong Bullish: ≥85 AND 0–10% zone | Bullish: ≥70 AND 0–10% zone | Extended: ≥70 but &gt;10% | Watch: 55–69 | Hold: 35–54 | Bearish: &lt;35">TS <span id="sort-trend_score" class="sort-indicator"></span></th>
-          <th class="col-sig" onclick="sortAnalysis('trend_signal')" title="Trend Signal | Strong Bullish: score≥85 AND 0–10% above 200DMA | Bullish: score≥70 AND 0–10% above 200DMA | Extended: score≥70 but >10% above 200DMA (too extended for fresh entry) | Watch: 55–69 | Hold: 35–54 | Bearish: &lt;35">Signal <span class="col-filter-icon" data-col="trend_signal" title="Filter" onclick="event.stopPropagation();openColFilter('trend_signal',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-trend_signal" class="sort-indicator"></span></th>
+          <th class="col-sig" onclick="sortAnalysis('setup')" oncontextmenu="return openSetupBulk(event)" title="TRENDS (ST,LT) — colored dot = the Setup signal, then (Sn-ST, Sn-LT) scores 0-100. Sn(ST)=short-term (RSI/50DMA/volume/1W-1M); Sn(LT)=long-term (Trend Score/relative-strength/6M-1Y/200DMA), reconciled with the Alloc guard. DOTS: 🟢 BUY leader+fresh entry · 🔵 ACCUMULATE leader pulling back · ⚪ HOLD · 🟠 BOUNCE dead-cat · 🔴 EXIT broken · · N/A insufficient history. Click a cell to deep-dive one stock; RIGHT-CLICK this header for ONE combined analysis of ALL filtered stocks.">Trends (ST,LT) <span class="col-filter-icon" data-col="setup" title="Filter" onclick="event.stopPropagation();openColFilter('setup',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-setup" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('ret_1d')" title="1-day price return (%)">1D Ret <span id="sort-ret_1d" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('ret_1w')" title="~5 trading day (1-week) price return (%)">1W Ret <span id="sort-ret_1w" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('ret_1m')" title="~21 trading day (1-month) price return (%)">1M Ret <span id="sort-ret_1m" class="sort-indicator"></span></th>
@@ -1348,26 +1364,29 @@
           <th onclick="sortAnalysis('ret_3y')" title="~756 trading day (3-year) price return (%)">3Y Ret <span id="sort-ret_3y" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('ret_4y')" title="~1008 trading day (4-year) price return (%)">4Y Ret <span id="sort-ret_4y" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('ret_5y')" title="~1200 trading day (5-year) price return (%)">5Y Ret <span id="sort-ret_5y" class="sort-indicator"></span></th>
-          <th onclick="sortAnalysis('quantity')">Qty. <span id="sort-quantity" class="sort-indicator"></span></th>
-          <th onclick="sortAnalysis('ltp')">CMP <span id="sort-ltp" class="sort-indicator"></span></th>
-          <th onclick="sortAnalysis('buy_avg')" title="Average buying price per share (from the portfolio sheet)">Buy Price <span id="sort-buy_avg" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('buy_value')">Buy Value <span id="sort-buy_value" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('pres_value')">Present Value <span id="sort-pres_value" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('pnl_abs')">P&L <span id="sort-pnl_abs" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('pnl_pct')">P&L % <span id="sort-pnl_pct" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('quantity')">Qty. <span id="sort-quantity" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('ltp')">CMP <span id="sort-ltp" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('buy_avg')" title="Average buying price per share (from the portfolio sheet)">Buy Price <span id="sort-buy_avg" class="sort-indicator"></span></th>
           <th class="cf-narrow" onclick="sortAnalysis('mgmt_trust_score')" title="Management Trust score (/10) — hover a score for the full breakdown">👔 <span class="col-filter-icon" data-col="mgmt_trust_score" title="Filter" onclick="event.stopPropagation();openColFilter('mgmt_trust_score',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-mgmt_trust_score" class="sort-indicator"></span></th>
           <th class="cf-narrow" onclick="sortAnalysis('qual_score')" title="Rating — pure qualitative Quality score (/10): moat, management, capital allocation, pricing power, growth. Hover for breakdown.">⭐ <span class="col-filter-icon" data-col="qual_score" title="Filter" onclick="event.stopPropagation();openColFilter('qual_score',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-qual_score" class="sort-indicator"></span></th>
           <th class="cf-narrow" onclick="sortAnalysis('rf_score_val')" title="Red-Flag score (/10): higher = cleaner — hover a score for the full breakdown">🚩 <span class="col-filter-icon" data-col="rf_score_val" title="Filter" onclick="event.stopPropagation();openColFilter('rf_score_val',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-rf_score_val" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('conviction')" title="Conviction score (/10) — overall analyst conviction in the thesis">Conv. <span class="col-filter-icon" data-col="conviction" title="Filter" onclick="event.stopPropagation();openColFilter('conviction',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-conviction" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('moat_class')">Moat <span id="sort-moat_class" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('vol_30m_ratio')" title="Last 30-min volume vs average 30-min volume (intraday, 5m bars)">Vol 30m/Avg <span id="sort-vol_30m_ratio" class="sort-indicator"></span></th>
-          <th onclick="sortAnalysis('vol_today_ratio')" title="Today's total volume ÷ 30-day average volume (excludes today from avg)">Vol Today/Avg <span id="sort-vol_today_ratio" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('vol_today_ratio')" title="Today's total volume ÷ 30-day average daily volume. Volx = multiple of average (drives Mov(D)).">Volx(D) <span id="sort-vol_today_ratio" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('vol_week_ratio')" title="This week's volume ÷ average weekly volume. Volx = multiple of average (drives Mov(Wk)).">Volx(Wk) <span id="sort-vol_week_ratio" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('vol_month_ratio')" title="This month's volume ÷ average monthly volume. Volx = multiple of average (drives Mov(M)).">Volx(M) <span id="sort-vol_month_ratio" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('week52_high_pct')" title="% below 52-week high: (CMP − 52W High) ÷ 52W High × 100">52W High% <span class="col-filter-icon" data-col="week52_high_pct" title="Filter" onclick="event.stopPropagation();openColFilter('week52_high_pct',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-week52_high_pct" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('week52_low_pct')" title="% above 52-week low: (CMP − 52W Low) ÷ 52W Low × 100">52W Low% <span class="col-filter-icon" data-col="week52_low_pct" title="Filter" onclick="event.stopPropagation();openColFilter('week52_low_pct',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-week52_low_pct" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('ath_pct')" title="% below all-time high: (CMP − ATH) ÷ ATH × 100. 0% = at all-time high.">ATH% <span class="col-filter-icon" data-col="ath_pct" title="Filter" onclick="event.stopPropagation();openColFilter('ath_pct',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-ath_pct" class="sort-indicator"></span></th>
-          <th onclick="sortAnalysis('atl_pct')" title="% above all-time low: (CMP − ATL) ÷ ATL × 100. 0% = at all-time low.">ATL% <span class="col-filter-icon" data-col="atl_pct" title="Filter" onclick="event.stopPropagation();openColFilter('atl_pct',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-atl_pct" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('mcap_cr')" title="Market capitalisation in Indian Crores (₹)">Market Cap (Cr) <span id="sort-mcap_cr" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('pe')" title="Trailing twelve-month Price / Earnings ratio">P/E <span id="sort-pe" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('forward_pe')" title="Forward P/E — price ÷ analyst forward EPS estimate. Only where analysts cover the stock (sparse for small-caps); blank otherwise. For inflection stocks the deep-dive computes a truer forward P/E.">Fwd P/E <span id="sort-forward_pe" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('peg')" title="PEG — FORWARD-first: Fwd P/E ÷ forward EPS growth (marked ᶠ); falls back to trailing TTM P/E ÷ PAT growth when no analyst estimate. &lt;1 cheap-for-growth · 1–2 fair · &gt;2 expensive · '—' when growth ≤0 (not meaningful). Forward avoids the base-effect that makes depressed-base years look falsely cheap.">PEG <span class="col-filter-icon" data-col="peg" title="Filter" onclick="event.stopPropagation();openColFilter('peg',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-peg" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('price_to_book')" title="Price / Book value ratio">P/B <span id="sort-price_to_book" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('ev_ebitda')" title="Enterprise Value / EBITDA">EV/EBITDA <span id="sort-ev_ebitda" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('roe')" title="Return on Equity — Net profit ÷ shareholders equity (%)">ROE % <span id="sort-roe" class="sort-indicator"></span></th>
@@ -1383,14 +1402,9 @@
           <th onclick="sortAnalysis('operating_margin')" title="Operating Margin = Operating Income ÷ Revenue × 100 (%)">Op Margin% <span id="sort-operating_margin" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('ebitda_margin')" title="EBITDA Margin = EBITDA ÷ Revenue × 100 (%)">EBITDA Margin% <span id="sort-ebitda_margin" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('profit_margin')" title="Net Profit Margin = Net Income ÷ Revenue × 100 (%)">Profit Margin% <span id="sort-profit_margin" class="sort-indicator"></span></th>
-          <th onclick="sortAnalysis('roa')" title="Return on Assets = Net Income ÷ Total Assets × 100 (%)">ROA% <span id="sort-roa" class="sort-indicator"></span></th>
-          <th onclick="sortAnalysis('qtrly_rev_growth')" title="Quarterly Revenue Growth YoY (%)">Qtrly Rev Growth <span id="sort-qtrly_rev_growth" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('qtrly_earn_growth')" title="Quarterly Earnings Growth YoY (%)">Qtrly Earn Growth <span id="sort-qtrly_earn_growth" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('insider_pct')" title="Insider / Promoter holding percentage (%)">Insider% <span id="sort-insider_pct" class="sort-indicator"></span></th>
-          <th onclick="sortAnalysis('must_buy')" title="Must Buy flag from Google Sheet">MB <span id="sort-must_buy" class="sort-indicator"></span></th>
-          <th onclick="sortAnalysis('price_to_200dma_pct')" title="Price vs 200-day Moving Average: (Close − DMA200) ÷ DMA200 × 100 | 0–10%=ideal breakout zone, &gt;20%=extended, &lt;0%=below trend">vs 200DMA% <span id="sort-price_to_200dma_pct" class="sort-indicator"></span></th>
-          <th onclick="sortAnalysis('dma200_slope_30d_pct')" title="200DMA Slope over 30 trading days: (DMA200_today − DMA200_30d_ago) ÷ DMA200_30d_ago × 100 | Positive=rising trend, Negative=falling trend">200DMA Slope <span id="sort-dma200_slope_30d_pct" class="sort-indicator"></span></th>
-          <th onclick="sortAnalysis('days_above_200dma_10d')" title="Days price closed above 200DMA in last 10 sessions | 7–10=strong hold, 4–6=watch, 0–3=weak/breakdown">Days&gt;200DMA <span id="sort-days_above_200dma_10d" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('mb_status')" title="Must-Buy status from the MB sheet (column E): ★ MUSTBUY · ▲ Bullish · — Others">MB <span class="col-filter-icon" data-col="mb_status" title="Filter" onclick="event.stopPropagation();openColFilter('mb_status',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-mb_status" class="sort-indicator"></span></th>
         </tr>
       </thead>
       <tbody id="analysis-tbody">
@@ -1487,6 +1501,13 @@ function convictionClass(c) {
   return 'conv-low';
 }
 
+// Conviction number without the "/10" suffix; integers show plain (5), decimals to 1dp (5.3)
+function fmtConv(c) {
+  const v = Number(c);
+  if (!c || isNaN(v)) return '';
+  return v % 1 === 0 ? String(v) : v.toFixed(1);
+}
+
 function moatBadge(moat_class, moat_type) {
   if (moat_class === 'wide')    return `<span class="badge badge-wide">▲ Wide Moat</span>`;
   if (moat_class === 'narrow')  return `<span class="badge badge-narrow">◆ Narrow Moat</span>`;
@@ -1577,7 +1598,7 @@ function renderCard(s) {
     <div class="conviction-bar-wrap">
       <div class="conviction-bar ${cc}" style="width:${convPct}%"></div>
     </div>
-    <span class="conviction-score ${cc}">${s.conviction ? s.conviction + '/10' : 'N/A'}</span>
+    <span class="conviction-score ${cc}">${s.conviction ? fmtConv(s.conviction) : 'N/A'}</span>
   </div>
 
   <div class="metrics-grid">
@@ -3075,6 +3096,7 @@ document.addEventListener('click', function(e) {
            && !e.target.closest('.metric-click')
            && !e.target.closest('.catalyst-link')
            && !e.target.closest('.col-mov')
+           && !e.target.closest('.col-sig')
            && !e.target.closest('.kpi-link')) {
       pop.style.display = 'none';
     }
@@ -3408,6 +3430,144 @@ function openMoversBulk(field, ev) {
   if (!list.length) { showToast('No moving stocks in the current filtered view for this column', ''); return false; }
   const anchor = (ev && ev.currentTarget) ? ev.currentTarget : document.body;
   showAiPicker(anchor, _moverPrompt(list, tf));
+  return false;
+}
+
+// ════════════════ SETUP SIGNAL — composite Short-term + Long-term clocks ════════════════
+function _benchRet6mFor(s) {
+  const b = window._benchmarks || {};
+  const mc = s.mcap_cr || 0;
+  const key = mc >= 50000 ? 'nifty50' : mc >= 15000 ? 'midcap400' : 'smallcap250';
+  const r = b[key] && b[key].ret_6m;
+  return (r != null) ? r : ((b.smallcap250 && b.smallcap250.ret_6m) || 0);
+}
+// Short-term clock (0-100): RSI + price-vs-50DMA + 1W/1M + volume + monthly mover
+function snST(s) {
+  let sc = 0;
+  const rsi = s.rsi14, r1m = s.ret_1m, r1w = s.ret_1w, p50 = s.price_to_50dma_pct;
+  const vol = (s.vol_today_ratio != null ? s.vol_today_ratio : s.vol_week_ratio);
+  const mm = s.movers_m || '';
+  if (rsi != null) { if (rsi >= 50 && rsi <= 65) sc += 30; else if ((rsi >= 45 && rsi < 50) || (rsi > 65 && rsi <= 72)) sc += 22; else if (rsi > 72) sc += 8; else if (rsi >= 40) sc += 15; else sc += 4; } else sc += 12;
+  if (p50 != null) { if (p50 >= 0 && p50 <= 8) sc += 25; else if (p50 > 8) sc += 18; else if (p50 >= -4) sc += 12; else sc += 0; } else sc += 10;
+  const rr = (r1m != null ? r1m : 0) + (r1w != null ? r1w : 0);
+  if (rr > 8) sc += 20; else if (rr > 2) sc += 15; else if (rr > -2) sc += 10; else if (rr > -8) sc += 4; else sc += 0;
+  if (vol != null) { if (vol >= 1.5 && (r1w == null || r1w >= 0)) sc += 15; else if (vol >= 1.2) sc += 10; else sc += 5; } else sc += 6;
+  if (mm) { if (/🔥|🚀|📈/.test(mm)) sc += 10; else if (/❄️|🧊|📉/.test(mm)) sc += 0; else sc += 5; } else sc += 5;
+  if (rsi != null && rsi > 78) sc = Math.min(sc, 55); // overbought: don't chase
+  return Math.max(0, Math.min(100, Math.round(sc)));
+}
+// Long-term clock (0-100): TS + relative strength vs index + 6M/1Y + near-highs + 200DMA slope
+function snLT(s) {
+  let sc = 0;
+  const ts = s.trend_score, r6 = s.ret_6m, r1y = s.ret_1y, ath = s.ath_pct, slope = s.dma200_slope_30d_pct;
+  const rs = (r6 != null) ? (r6 - _benchRet6mFor(s)) : null;
+  if (ts != null) sc += Math.round(ts / 100 * 35); else sc += 12;
+  if (rs != null) { if (rs > 15) sc += 25; else if (rs > 5) sc += 20; else if (rs > -5) sc += 12; else if (rs > -15) sc += 5; else sc += 0; } else sc += 10;
+  const rr = (r6 != null ? r6 : 0) + (r1y != null ? r1y : 0);
+  if (rr > 40) sc += 20; else if (rr > 10) sc += 15; else if (rr > 0) sc += 10; else if (rr > -20) sc += 4; else sc += 0;
+  if (ath != null) { if (ath > -8) sc += 10; else if (ath > -20) sc += 7; else if (ath > -40) sc += 3; else sc += 0; } else sc += 4;
+  if (slope != null) { if (slope > 1) sc += 10; else if (slope > 0.3) sc += 7; else if (slope >= 0) sc += 4; else sc += 0; } else sc += 3;
+  return Math.max(0, Math.min(100, Math.round(sc)));
+}
+const SETUP_META = {
+  BUY:        { label: 'BUY',        emoji: '🟢', color: 'var(--green)' },
+  ACCUMULATE: { label: 'ACCUMULATE', emoji: '🔵', color: '#3b82f6' },
+  HOLD:       { label: 'HOLD',       emoji: '⚪', color: 'var(--text3)' },
+  BOUNCE:     { label: 'BOUNCE',     emoji: '🟠', color: '#f97316' },
+  EXIT:       { label: 'EXIT',       emoji: '🔴', color: 'var(--red-text)' },
+  NA:         { label: 'N/A',        emoji: '·',  color: 'var(--text3)' },
+};
+const SETUP_MEANING = {
+  BUY: 'leader in an uptrend WITH a fresh short-term entry (both clocks up)',
+  ACCUMULATE: 'long-term leader pulling back short-term (own-quality name; add when the short-term turns)',
+  HOLD: 'no clear edge either way',
+  BOUNCE: 'broken long-term trend but bouncing short-term (dead-cat — sell into strength, do not buy)',
+  EXIT: 'both clocks down / broken — exit candidate',
+  NA: 'insufficient price history for a reliable signal (no 200-DMA / RSI yet) — not actionable',
+};
+function setupOf(s) {
+  const st = snST(s), lt = snLT(s);
+  // Data-integrity guard: without a 200-DMA trend AND RSI we cannot judge either clock — never emit a false BUY/EXIT.
+  if (s.trend_score == null || s.rsi14 == null) return { key: 'NA', st, lt };
+  const ltStrong = lt >= 60, ltWeak = lt < 45, stStrong = st >= 60, stWeak = st < 45;
+  const buyGrade = lt >= 72 && st >= 66;   // stricter BUY: only strong leaders with solid fresh momentum
+  let key;
+  if (buyGrade) key = 'BUY';
+  else if (ltStrong && stWeak) key = 'ACCUMULATE';
+  else if (ltWeak && stStrong) key = 'BOUNCE';
+  else if (ltWeak && stWeak) key = 'EXIT';
+  else key = 'HOLD';
+  const a = s.movers_alloc || '';                       // Alloc guard: never contradict the overlay
+  if (/🚨/.test(a)) { if (key === 'BUY') key = 'ACCUMULATE'; else if (key === 'HOLD' && ltWeak) key = 'EXIT'; }
+  else if (/🏆|💎/.test(a)) { if (key === 'ACCUMULATE' && stStrong) key = 'BUY'; else if (key === 'HOLD' && ltStrong) key = 'ACCUMULATE'; }
+  return { key, st, lt };
+}
+function setupCell(s) {
+  const u = setupOf(s); const m = SETUP_META[u.key] || SETUP_META.HOLD;
+  const scores = (u.key === 'NA') ? '(—)' : `(${u.st},${u.lt})`;
+  const tip = `${m.label} — ${SETUP_MEANING[u.key] || ''}. Sn(ST) ${u.st}/100 · Sn(LT) ${u.lt}/100${s.movers_alloc ? ' · Alloc ' + s.movers_alloc : ''}. Click to deep-dive this stock; right-click the header to analyze all filtered stocks together.`;
+  return `<td class="col-sig" style="cursor:pointer;text-align:center;" title="${esc(tip)}" onclick="openSetupAnalysis('${esc(s.ticker)}',this)"><span style="display:inline-flex;align-items:center;gap:4px;font-size:0.66rem;font-weight:700;white-space:nowrap;"><span style="color:${m.color};font-size:0.8rem;line-height:1;">${m.emoji}</span><span style="color:var(--text2);">${scores}</span></span></td>`;
+}
+// Deep-dive context + prompt (single or bulk) — the Gate-2 confirmation prompt.
+function _setupCtx(s) {
+  const u = setupOf(s);
+  const n = (v, d = 1, suf = '') => (v != null && !isNaN(v)) ? ((v >= 0 && suf === '%') ? '+' : '') + Number(v).toFixed(d) + suf : '—';
+  const rs = (s.ret_6m != null) ? (s.ret_6m - _benchRet6mFor(s)) : null;
+  return [
+    `• ${s.ticker} (${s.name || '?'}) — ${s.sector || 'sector n/a'} | SETUP: ${SETUP_META[u.key].emoji} ${u.key} — ${SETUP_MEANING[u.key]}`,
+    `   Short-term Sn(ST) ${u.st}/100: RSI ${n(s.rsi14, 0)} · vs50DMA ${n(s.price_to_50dma_pct, 1, '%')} · 1W ${n(s.ret_1w, 1, '%')} · 1M ${n(s.ret_1m, 1, '%')} · vol ${n(s.vol_today_ratio, 1)}x · monthly ${s.movers_m || 'No'}`,
+    `   Long-term Sn(LT) ${u.lt}/100: TS ${s.trend_score ?? '—'} · vs200DMA ${n(s.price_to_200dma_pct, 1, '%')} (slope ${n(s.dma200_slope_30d_pct, 1, '%')}) · 6M ${n(s.ret_6m, 1, '%')} · 1Y ${n(s.ret_1y, 1, '%')} · RS-vs-index ${n(rs, 1, '%')} · vsATH ${n(s.ath_pct, 1, '%')}`,
+    `   Alloc: ${s.movers_alloc || '—'} | P/E ${s.pe ?? '—'} · MCap ₹${s.mcap_cr ?? '—'}Cr · Conv ${s.conviction ?? '—'} · Mgmt ${(s.mgmt_trust && s.mgmt_trust.score) ?? '—'} · RedFlag ${(s.rf_score && s.rf_score.score) ?? '—'} · Quality ${(s.peer_cmp && s.peer_cmp.q) ?? '—'} | CMP ₹${s.ltp != null ? Number(s.ltp).toFixed(2) : '—'}`,
+  ].join('\n');
+}
+function _setupPrompt(list) {
+  const today = new Date().toISOString().slice(0, 10);
+  const MAX = 30; const shown = list.slice(0, MAX);
+  const multi = shown.length > 1;
+  const ctx = shown.map(_setupCtx).join('\n');
+  const trunc = list.length > MAX ? `\n(Showing first ${MAX} of ${list.length} filtered stocks.)` : '';
+  return `# 🎯 SETUP DEEP-DIVE — STRUCTURAL + TECHNICAL CONFIRMATION (Gate 2)
+
+## CONTEXT (dashboard, ${today})
+Each stock carries a composite SETUP from two clocks: **Sn(ST)** short-term (RSI, 50-DMA, 1W/1M, volume, monthly mover) and **Sn(LT)** long-term (200-DMA Trend Score, relative strength vs its index, 6M/1Y, distance from ATH, 200-DMA slope), reconciled with the Alloc overlay. 🟢 BUY = leader + fresh entry · 🔵 ACCUMULATE = leader pulling back · ⚪ HOLD · 🟠 BOUNCE = dead-cat · 🔴 EXIT = broken.
+
+${ctx}${trunc}
+
+## YOUR ROLE
+You are a senior Indian-equities analyst acting as the CONFIRMATION GATE on a rule-based signal. The rules found ${multi ? 'these names' : 'this name'}; your job is to confirm or REJECT with hard, dated, sourced fundamentals + technicals before any capital moves. Momentum alone is never a reason to act.
+
+## NON-NEGOTIABLE RULES
+1. NO HALLUCINATION — [UNVERIFIED] for anything you cannot source with a date. Never invent numbers.
+2. DATE-STAMP every fact; only the last 180 days counts as a fresh trigger.
+3. ANTI-RECENCY: a stock already up on KNOWN news has it priced in. Judge upside only on NOT-yet-priced drivers and earnings upgrades.
+4. Value on FORWARD / normalized earnings, not trailing P/E — especially where an inflection is underway.
+5. Separate "great company" from "great risk-reward FROM CMP".
+
+## OUTPUT — for ${multi ? 'EACH stock' : 'the stock'}
+### {TICKER} — {NAME}  ·  Setup: {🟢/🔵/⚪/🟠/🔴}
+**1. Does the fundamental picture CONFIRM the setup?** (Yes / Partly / No + why, dated)
+**2. The structural lever** — is there a real driver (order win / capex commissioned / deleveraging / margin inflection / regulation / demerger / sector re-rate)? Dated + sourced. Or is the move just technical / noise?
+**3. Newsflow (last 90–180 days)** — BSE/NSE filings, results, concalls, credible media that maps to the move.
+**4. Forward valuation** — TTM P/E vs FORWARD P/E on normalized earnings; cheap / fair / expensive vs its own history and peers, given the expected newsflow.
+**5. How much is already priced in** — % of the thesis the market has discovered after the run shown above.
+**6. Technical read** — the 200-DMA/50-DMA structure, RSI, volume: fresh breakout, buyable pullback to support, extended chase, or breakdown?
+**7. Action + conviction (0–10)** — INCREASE / START-SMALL / HOLD / TRIM / EXIT, a position-sizing note, the single NOT-yet-priced trigger, and the exact INVALIDATION level (e.g. decisive close below the 200-DMA).
+${multi ? `
+## THEN — RANKING
+Rank all ${shown.length} from "add most" to "exit first": Stock | Setup | Conviction | Action | 12M upside% / downside% | Not-yet-priced trigger | Invalidation.
+` : ''}This is analysis, not buy/sell advice.`;
+}
+function openSetupAnalysis(ticker, el) {
+  const s = (visibleStocks || []).find(x => x.ticker === ticker) || (allStocks || []).find(x => x.ticker === ticker);
+  if (!s) return;
+  showAiPicker(el, _setupPrompt([s]));
+}
+function openSetupBulk(ev) {
+  if (ev) { ev.preventDefault(); ev.stopPropagation(); }
+  const list = (visibleStocks || []).slice();
+  if (!list.length) { showToast('No stocks in the current filtered view', ''); return false; }
+  const anchor = (ev && ev.currentTarget) ? ev.currentTarget : document.body;
+  showAiPicker(anchor, _setupPrompt(list));
   return false;
 }
 
@@ -3751,6 +3911,11 @@ const colFilterDefs = {
     get: s => (typeof s.conviction === 'number' && s.conviction > 0) ? s.conviction : null,
     options: [ {key:'8+', label:'8 – 10', min:8, max:Infinity}, {key:'6-7', label:'6 – 7', min:6, max:8}, {key:'4-5', label:'4 – 5', min:4, max:6}, {key:'1-3', label:'1 – 3', min:1, max:4} ] },
   trend_signal: { label: 'Trend Signal', type: 'set', get: s => s.trend_signal || null },
+  setup: { label: 'Setup', type: 'set', get: s => { const k = setupOf(s).key; const m = SETUP_META[k]; return m ? (m.emoji + ' ' + m.label) : null; } },
+  mb_status: { label: 'MB', type: 'set', get: s => s.mb_status ? ({mustbuy:'★ Must Buy', bullish:'▲ Bullish', others:'Others'}[s.mb_status] || s.mb_status) : null },
+  peg: { label: 'PEG', type: 'range',
+    get: s => { const v = pegOf(s); return (typeof v === 'number') ? v : null; },
+    options: [ {key:'<1', label:'< 1 (cheap for growth)', min:-Infinity, max:1}, {key:'1-2', label:'1 – 2 (fair)', min:1, max:2}, {key:'2-3', label:'2 – 3', min:2, max:3}, {key:'3+', label:'> 3 (expensive)', min:3, max:Infinity} ] },
   movers:   { label: 'Mov(D)',  type: 'set', get: s => _moverTag(s, 'd') },
   movers_w: { label: 'Mov(Wk)', type: 'set', get: s => _moverTag(s, 'w') },
   movers_m: { label: 'Mov(M)',  type: 'set', get: s => _moverTag(s, 'm') },
@@ -4308,6 +4473,26 @@ const ALLOC_MEANING = {
 };
 function allocTitle(a) { return ALLOC_MEANING[a] || 'No allocation signal'; }
 
+// PEG — FORWARD-first (Fwd P/E ÷ forward EPS growth), falling back to trailing (TTM P/E ÷ PAT growth).
+// Forward avoids the trailing base-effect that makes depressed-base years look absurdly cheap.
+function pegOf(s) {
+  if (s.forward_pe != null && s.forward_pe > 0 && s.forward_eps != null && s.eps != null && s.eps > 0) {
+    const gF = (s.forward_eps - s.eps) / s.eps * 100;   // 1-yr forward EPS growth %
+    if (gF > 0) return s.forward_pe / gF;
+  }
+  if (s.pe != null && s.pe > 0 && s.pat_cagr != null && s.pat_cagr > 0) return s.pe / s.pat_cagr;
+  return null;
+}
+function pegBasis(s) {
+  if (s.forward_pe != null && s.forward_pe > 0 && s.forward_eps != null && s.eps != null && s.eps > 0
+      && ((s.forward_eps - s.eps) / s.eps * 100) > 0) return 'fwd';
+  if (s.pe != null && s.pe > 0 && s.pat_cagr != null && s.pat_cagr > 0) return 'ttm';
+  return '';
+}
+function pegClass(v) { return v == null ? '' : v < 1 ? 'pos' : v <= 2 ? 'amber' : 'neg'; }
+// 0-100 score color for the ST/LT trend columns.
+function snColor(v) { return v == null ? 'var(--text3)' : v >= 70 ? 'var(--green)' : v >= 55 ? 'var(--amber-text)' : v >= 40 ? 'var(--text2)' : 'var(--red-text)'; }
+
 // Plain-English meaning of each Movers signal (thresholds calibrated for Indian small/mid-caps)
 const MOVER_MEANING = {
   '🔥': 'LIFETIME-HIGH breakout — at/near all-time high, volume ≥3× avg, day ≥+3%',
@@ -4380,7 +4565,7 @@ function renderAnalysisTable() {
     const _mvD = (s.vol_today_ratio != null && s.ret_1d != null) ? computeMover(s.vol_today_ratio, s.ret_1d, w52hPct, w52lPct, s.ath_pct, s.atl_pct, {suspect:true}) : (s.movers || null);
     const _mvW = (s.vol_week_ratio != null && s.ret_1w != null) ? computeMover(s.vol_week_ratio, s.ret_1w, w52hPct, w52lPct, s.ath_pct, s.atl_pct, {volT:1.5, upT:8, dnT:8, surge:false, trend:{vol:1.3, up:5}}) : (s.movers_w || null);
     const _mvM = (s.vol_month_ratio != null && s.ret_1m != null) ? computeMover(s.vol_month_ratio, s.ret_1m, w52hPct, w52lPct, s.ath_pct, s.atl_pct, {volT:1.3, upT:12, dnT:12, surge:false, trend:{vol:1.2, up:8}}) : (s.movers_m || null);
-    return {
+    const row = {
       ...s,
       buy_value:       (s.buy_value  != null) ? s.buy_value  : (s.buy_avg || 0) * (s.quantity || 0),
       pres_value:      (s.pres_value != null) ? s.pres_value : (s.ltp || 0) * (s.quantity || 0),
@@ -4398,6 +4583,12 @@ function renderAnalysisTable() {
       rf_score_val: (s.rf_score && typeof s.rf_score.score === 'number') ? s.rf_score.score : null,
       qual_score: (s.peer_cmp && typeof s.peer_cmp.q === 'number') ? s.peer_cmp.q : null,
     };
+    row.setup = setupOf(row).key;   // composite Setup signal (for sort/filter)
+    row.sn_st = (row.rsi14 != null) ? snST(row) : null;        // short-term clock (for ST column)
+    row.sn_lt = (row.trend_score != null) ? snLT(row) : null;  // long-term clock (for LT column)
+    row.peg = pegOf(row);           // forward-first PEG (for sort/filter)
+    row.peg_basis = pegBasis(row);  // 'fwd' | 'ttm' | ''
+    return row;
   });
 
   // Sort
@@ -4413,6 +4604,18 @@ function renderAnalysisTable() {
     if (analysisSortBy === 'trend_signal') {
       const order = {'Strong Bullish': 5, 'Bullish': 4, 'Extended': 3, 'Watch': 2, 'Hold': 1, 'Bearish': 0};
       const oA = order[valA] ?? -1, oB = order[valB] ?? -1;
+      return analysisSortDir === 'desc' ? oB - oA : oA - oB;
+    }
+    // Setup sort order: BUY > ACCUMULATE > HOLD > BOUNCE > EXIT
+    if (analysisSortBy === 'setup') {
+      const order = {'BUY': 5, 'ACCUMULATE': 4, 'HOLD': 3, 'BOUNCE': 2, 'EXIT': 1};
+      const oA = order[valA] ?? -1, oB = order[valB] ?? -1;
+      return analysisSortDir === 'desc' ? oB - oA : oA - oB;
+    }
+    // MB status order: mustbuy > bullish > others
+    if (analysisSortBy === 'mb_status') {
+      const order = {'mustbuy': 3, 'bullish': 2, 'others': 1};
+      const oA = order[valA] ?? 0, oB = order[valB] ?? 0;
       return analysisSortDir === 'desc' ? oB - oA : oA - oB;
     }
     // Movers: sort by conviction ⚡ > 🧊 > Z↑ > Z↓ > V+P > V > P > No (price_break keeps A+C/A/C)
@@ -4459,7 +4662,6 @@ function renderAnalysisTable() {
     if (analysisFilters.has('quality7') && !(s.peer_cmp && typeof s.peer_cmp.q === 'number' && s.peer_cmp.q >= 7)) return;
     if (analysisFilters.has('redflag') && !(s.rf_score && typeof s.rf_score.score === 'number' && s.rf_score.score < 5)) return;
     if (analysisFilters.has('widemoat') && s.moat_class !== 'wide') return;
-    if (analysisFilters.has('strongbullish') && s.trend_signal !== 'Strong Bullish') return;
     if (analysisFilters.has('profit') && (s.pnl_abs || 0) <= 0) return;
     if (analysisFilters.has('movers') && ![s.movers, s.movers_w, s.movers_m].some(m => m && m !== 'No')) return;
     if (analysisFilters.has('nearath') && !(s.ath_pct != null && s.ath_pct >= -5)) return;
@@ -4467,7 +4669,10 @@ function renderAnalysisTable() {
     if (analysisFilters.has('near52wkl') && !(s.week52_low_pct != null && s.week52_low_pct <= 5)) return;
     if (window._sectorFilter && s.sector_group !== window._sectorFilter) return;
     if (accActive() && !(Array.isArray(s.accounts) && s.accounts.some(a => accSel().includes(a.name)))) return;
-    if (analysisFilters.has('mustbuy') && !s.must_buy) return;
+    if (analysisFilters.has('mbbull') && !(s.mb_status === 'mustbuy' || s.mb_status === 'bullish')) return;
+    // Increase = Alloc add-signal (🏆/💎) AND Trends BUY; Exit = Alloc reduce (🚨) AND Trends EXIT
+    if (analysisFilters.has('increase') && !(/🏆|💎/.test(s.movers_alloc || '') && s.setup === 'BUY')) return;
+    if (analysisFilters.has('exit') && !(/🚨/.test(s.movers_alloc || '') && s.setup === 'EXIT')) return;
     if (analysisFilters.has('loss') && (s.pnl_abs || 0) >= 0) return;
 
     // Per-column funnel filters
@@ -4481,6 +4686,8 @@ function renderAnalysisTable() {
     const fp = (val, dec=1) => val != null ? f(val, dec) + '%' : '—';
     const fVol = (v) => v != null ? v.toFixed(1) + 'x' : '—';
     const volClass = (v) => v == null ? '' : v >= 5 ? 'neg' : v >= 2 ? 'amber' : '';
+    // Volx cells colour by the matching price move: >3% green, <0% red, 0–3% yellow
+    const volRetClass = (r) => r == null ? '' : r > 3 ? 'pos' : r < 0 ? 'neg' : 'amber';
     const locked = (typeof privacyUnlocked !== 'undefined' && !privacyUnlocked);
     const prv = (html) => locked ? '<span style="letter-spacing:2px;color:var(--text3)">●●●</span>' : html;
     // Color helpers
@@ -4500,37 +4707,39 @@ function renderAnalysisTable() {
       <td class="col-mov" style="${moverStyle(s.movers_w, s.ret_1w)};cursor:pointer" title="${esc(moverTitleTF(s,'w'))}" onclick="openMoversTF('${esc(s.ticker)}','w',this)">${s.movers_w || '—'}</td>
       <td class="col-mov" style="${moverStyle(s.movers_m, s.ret_1m)};cursor:pointer" title="${esc(moverTitleTF(s,'m'))}" onclick="openMoversTF('${esc(s.ticker)}','m',this)">${s.movers_m || '—'}</td>
       <td class="col-mov" style="${allocStyle(s.movers_alloc)};cursor:pointer" title="${esc(allocTitle(s.movers_alloc))}" onclick="openMoversTF('${esc(s.ticker)}','alloc',this)">${s.movers_alloc || '—'}</td>
-      <td class="col-ts" style="font-weight:700;color:${ s.trend_score >= 70 ? (s.trend_signal==='Strong Bullish' ? 'var(--green)' : s.trend_signal==='Bullish' ? '#4ade80' : s.trend_signal==='Extended' ? 'var(--amber-text)' : 'var(--text2)') : s.trend_score >= 55 ? 'var(--amber-text)' : s.trend_score >= 35 ? 'var(--text2)' : s.trend_score != null ? 'var(--red-text)' : 'var(--text3)' }">${s.trend_score != null ? s.trend_score : '—'}</td>
-      <td class="col-sig" style="font-size:0.7rem;font-weight:600;color:${ s.trend_signal==='Strong Bullish' ? 'var(--green)' : s.trend_signal==='Bullish' ? '#4ade80' : s.trend_signal==='Extended' ? 'var(--amber-text)' : s.trend_signal==='Watch' ? '#f59e0b' : s.trend_signal==='Bearish' ? 'var(--red-text)' : 'var(--text3)' }">${s.trend_signal || '—'}</td>
+      ${setupCell(s)}
       <td class="${pc(s.ret_1d)}">${fp(s.ret_1d)}</td>
-      <td class="${pc(s.ret_1w)}">${fp(s.ret_1w)}</td>
-      <td class="${pc(s.ret_1m)}">${fp(s.ret_1m)}</td>
-      <td class="${pc(s.ret_6m)}">${fp(s.ret_6m)}</td>
-      <td class="${pc(s.ret_1y)}">${fp(s.ret_1y)}</td>
-      <td class="${pc(s.ret_2y)}">${fp(s.ret_2y)}</td>
-      <td class="${pc(s.ret_3y)}">${fp(s.ret_3y)}</td>
-      <td class="${pc(s.ret_4y)}">${fp(s.ret_4y)}</td>
-      <td class="${pc(s.ret_5y)}">${fp(s.ret_5y)}</td>
-      <td>${prv(f(s.quantity))}</td>
-      <td>${s.ltp != null ? '₹'+f(s.ltp,2) : '—'}</td>
-      <td>${s.buy_avg != null ? '₹'+f(s.buy_avg,2) : '—'}</td>
+      <td class="${pc(s.ret_1w)}">${fp(s.ret_1w, 0)}</td>
+      <td class="${pc(s.ret_1m)}">${fp(s.ret_1m, 0)}</td>
+      <td class="${pc(s.ret_6m)}">${fp(s.ret_6m, 0)}</td>
+      <td class="${pc(s.ret_1y)}">${fp(s.ret_1y, 0)}</td>
+      <td class="${pc(s.ret_2y)}">${fp(s.ret_2y, 0)}</td>
+      <td class="${pc(s.ret_3y)}">${fp(s.ret_3y, 0)}</td>
+      <td class="${pc(s.ret_4y)}">${fp(s.ret_4y, 0)}</td>
+      <td class="${pc(s.ret_5y)}">${fp(s.ret_5y, 0)}</td>
       <td>${prv('₹' + f(s.buy_value))}</td>
       <td>${prv('₹' + f(s.pres_value))}${portPct ? '<br><span style="font-size:0.65rem;color:var(--text3)">'+portPct+'</span>' : ''}</td>
       <td class="${pc(pnlAbs)}">${prv('₹' + f(pnlAbs))}</td>
       <td class="${pc(pnlPct)}">${prv(f(pnlPct,1) + '%')}</td>
+      <td>${prv(f(s.quantity))}</td>
+      <td>${s.ltp != null ? '₹'+f(s.ltp,0) : '—'}</td>
+      <td>${s.buy_avg != null ? '₹'+f(s.buy_avg,0) : '—'}</td>
       ${mgmtTrustCell(s)}
       ${qualCell(s)}
       ${rfCell(s)}
-      <td title="Conviction score (/10) — overall analyst conviction in the thesis" style="text-align:center;font-weight:600;cursor:help;color:${ (s.conviction||0) >= 8 ? 'var(--green)' : (s.conviction||0) >= 6 ? 'var(--amber-text)' : (s.conviction||0) >= 4 ? '#f97316' : (s.conviction||0) >= 1 ? 'var(--red-text)' : 'var(--text3)' }">${s.conviction ? s.conviction+'/10' : '—'}</td>
+      <td title="Conviction score (overall analyst conviction in the thesis)" style="text-align:center;font-weight:600;cursor:help;color:${ (s.conviction||0) >= 8 ? 'var(--green)' : (s.conviction||0) >= 6 ? 'var(--amber-text)' : (s.conviction||0) >= 4 ? '#f97316' : (s.conviction||0) >= 1 ? 'var(--red-text)' : 'var(--text3)' }">${s.conviction ? fmtConv(s.conviction) : '—'}</td>
       <td style="font-size:0.7rem;font-weight:600;color:${ s.moat_class==='wide' ? 'var(--green)' : s.moat_class==='narrow' ? 'var(--amber-text)' : 'var(--text3)' }">${s.moat_class === 'wide' ? '▲ Wide' : s.moat_class === 'narrow' ? '◆ Narrow' : '—'}</td>
       <td class="${volClass(s.vol_30m_ratio)}">${fVol(s.vol_30m_ratio)}</td>
-      <td class="${volClass(s.vol_today_ratio)}">${fVol(s.vol_today_ratio)}</td>
+      <td class="${volRetClass(s.ret_1d)}">${fVol(s.vol_today_ratio)}</td>
+      <td class="${volRetClass(s.ret_1w)}">${fVol(s.vol_week_ratio)}</td>
+      <td class="${volRetClass(s.ret_1m)}">${fVol(s.vol_month_ratio)}</td>
       <td class="neg">${s.week52_high_pct != null ? s.week52_high_pct.toFixed(1)+'%' : '—'}</td>
       <td class="pos">${s.week52_low_pct  != null ? '+'+s.week52_low_pct.toFixed(1)+'%'  : '—'}</td>
       <td class="neg">${s.ath_pct != null ? s.ath_pct.toFixed(1)+'%' : '—'}</td>
-      <td class="pos">${s.atl_pct != null ? '+'+s.atl_pct.toFixed(1)+'%' : '—'}</td>
       <td>${f(s.mcap_cr)}</td>
       <td>${f(s.pe, 1)}</td>
+      <td>${s.forward_pe != null ? f(s.forward_pe, 1) : '—'}</td>
+      <td class="${pegClass(s.peg)}" title="${s.peg != null ? (s.peg_basis === 'fwd' ? 'Forward PEG = Fwd P/E ÷ forward EPS growth (reliable)' : 'Trailing PEG = TTM P/E ÷ PAT growth — base-effect prone; check Fwd P/E') : 'PEG not meaningful (growth ≤0 or no data)'}">${s.peg != null ? s.peg.toFixed(2) + (s.peg_basis === 'fwd' ? 'ᶠ' : '') : '—'}</td>
       <td class="${pbClass(s.price_to_book)}">${f(s.price_to_book, 1)}</td>
       <td class="${evClass(s.ev_ebitda)}">${f(s.ev_ebitda, 1)}</td>
       <td class="${roeClass(s.roe)}">${fp(s.roe)}</td>
@@ -4539,21 +4748,16 @@ function renderAnalysisTable() {
       <td class="${pc(s.pat_cagr)}">${fp(s.pat_cagr)}</td>
       <td class="${pc(s.rev_cagr)}">${fp(s.rev_cagr)}</td>
       <td class="${pc(s.mcap_3y)}">${fp(s.mcap_3y)}</td>
-      <td class="${deClass(s.debt_to_equity)}">${f(s.debt_to_equity, 2)}</td>
-      <td>${f(s.eps, 2)}</td>
-      <td>${fp(s.div_yield, 2)}</td>
+      <td class="${deClass(s.debt_to_equity)}">${f(s.debt_to_equity, 1)}</td>
+      <td>${f(s.eps, 1)}</td>
+      <td>${fp(s.div_yield, 1)}</td>
       <td class="${marginClass(s.gross_margin)}">${fp(s.gross_margin)}</td>
       <td class="${marginClass(s.operating_margin)}">${fp(s.operating_margin)}</td>
       <td class="${marginClass(s.ebitda_margin)}">${fp(s.ebitda_margin)}</td>
       <td class="${marginClass(s.profit_margin)}">${fp(s.profit_margin)}</td>
-      <td class="${roaClass(s.roa)}">${fp(s.roa)}</td>
-      <td class="${pc(s.qtrly_rev_growth)}">${fp(s.qtrly_rev_growth)}</td>
       <td class="${pc(s.qtrly_earn_growth)}">${fp(s.qtrly_earn_growth)}</td>
       <td>${fp(s.insider_pct)}</td>
-      <td style="text-align:center;font-weight:700;color:${ s.must_buy ? 'var(--amber-text)' : 'var(--text3)' }">${s.must_buy ? '★ MB' : '—'}</td>
-      <td class="${pc(s.price_to_200dma_pct)}">${s.price_to_200dma_pct != null ? s.price_to_200dma_pct.toFixed(1)+'%' : '—'}</td>
-      <td class="${pc(s.dma200_slope_30d_pct)}">${s.dma200_slope_30d_pct != null ? s.dma200_slope_30d_pct.toFixed(2)+'%' : '—'}</td>
-      <td style="text-align:center;color:${ s.days_above_200dma_10d >= 7 ? 'var(--green)' : s.days_above_200dma_10d >= 4 ? 'var(--amber-text)' : s.days_above_200dma_10d != null ? 'var(--red-text)' : 'var(--text3)' }">${s.days_above_200dma_10d != null ? s.days_above_200dma_10d+'/10' : '—'}</td>
+      <td style="text-align:center;font-weight:700;font-size:0.7rem;cursor:help;color:${ s.mb_status==='mustbuy' ? 'var(--amber-text)' : s.mb_status==='bullish' ? 'var(--green)' : 'var(--text3)' }" title="MB status (sheet col E): ${s.mb_status || 'others'}">${ s.mb_status==='mustbuy' ? '★ MB' : s.mb_status==='bullish' ? '▲ Bull' : '—' }</td>
     `;
     tbody.appendChild(tr);
     if (Array.isArray(s.accounts) && s.accounts.length) {
@@ -4565,9 +4769,15 @@ function renderAnalysisTable() {
         const inv = (a.invested != null) ? a.invested : ((a.buy_avg || 0) * (a.qty || 0));
         const pres = (s.ltp || 0) * (a.qty || 0);
         const pl = inv > 0 ? ((pres - inv) / inv * 100) : 0;
-        return `<tr><td>${esc(a.name)}</td><td style="text-align:right">${prv((a.qty||0).toLocaleString('en-IN'))}</td><td style="text-align:right">${prv('\u20b9'+f(a.buy_avg))}</td><td style="text-align:right">${prv('\u20b9'+f(inv,0))}</td><td style="text-align:right">${prv('\u20b9'+f(pres,0))}</td><td style="text-align:right;color:${pl>=0?'var(--green-text)':'var(--red-text)'}">${prv((pl>=0?'+':'')+pl.toFixed(1)+'%')}</td></tr>`;
+        return `<tr><td>${esc(a.name)}</td><td style="text-align:right">${prv((a.qty||0).toLocaleString('en-IN'))}</td><td style="text-align:right">${prv('\u20b9'+f(a.buy_avg))}</td><td style="text-align:right">${s.ltp!=null?'\u20b9'+f(s.ltp,2):'\u2014'}</td><td style="text-align:right">${prv('\u20b9'+f(inv,0))}</td><td style="text-align:right">${prv('\u20b9'+f(pres,0))}</td><td style="text-align:right;color:${pl>=0?'var(--green-text)':'var(--red-text)'}">${prv((pl>=0?'+':'')+pl.toFixed(1)+'%')}</td></tr>`;
       }).join('');
-      dr.innerHTML = `<td colspan="99" style="padding:0;background:var(--bg2);"><div style="padding:6px 16px;"><div style="font-size:0.66rem;color:var(--text3);margin-bottom:3px;">\ud83d\udcc2 Held across ${s.accounts.length} account${s.accounts.length>1?'s':''}</div><table class="acct-inline-table" style="border-collapse:collapse;font-size:0.7rem;"><thead><tr style="color:var(--text3)"><th style="text-align:left;padding:2px 12px 2px 0">Account</th><th style="text-align:right;padding:2px 12px">Qty</th><th style="text-align:right;padding:2px 12px">Buy Avg</th><th style="text-align:right;padding:2px 12px">Invested</th><th style="text-align:right;padding:2px 12px">Present</th><th style="text-align:right;padding:2px 12px">P&L%</th></tr></thead><tbody>${accRows}</tbody></table></div></td>`;
+      const tQty = s.accounts.reduce((n, a) => n + (a.qty || 0), 0);
+      const tInv = s.accounts.reduce((n, a) => n + ((a.invested != null) ? a.invested : ((a.buy_avg || 0) * (a.qty || 0))), 0);
+      const tPres = (s.ltp || 0) * tQty;
+      const tPl = tInv > 0 ? ((tPres - tInv) / tInv * 100) : 0;
+      const tBuyAvg = tQty > 0 ? tInv / tQty : 0;
+      const totalRow = `<tr style="font-weight:700;border-top:1px solid var(--border);"><td style="padding-top:3px;">Total</td><td style="text-align:right;padding-top:3px;">${prv(tQty.toLocaleString('en-IN'))}</td><td style="text-align:right;padding-top:3px;">${prv('\u20b9'+f(tBuyAvg))}</td><td style="text-align:right;padding-top:3px;">${s.ltp!=null?'\u20b9'+f(s.ltp,2):'\u2014'}</td><td style="text-align:right;padding-top:3px;">${prv('\u20b9'+f(tInv,0))}</td><td style="text-align:right;padding-top:3px;">${prv('\u20b9'+f(tPres,0))}</td><td style="text-align:right;padding-top:3px;color:${tPl>=0?'var(--green-text)':'var(--red-text)'}">${prv((tPl>=0?'+':'')+tPl.toFixed(1)+'%')}</td></tr>`;
+      dr.innerHTML = `<td colspan="99" style="padding:0;background:var(--bg2);"><div style="padding:6px 16px;"><div style="font-size:0.66rem;color:var(--text3);margin-bottom:3px;">\ud83d\udcc2 Held across ${s.accounts.length} account${s.accounts.length>1?'s':''}</div><table class="acct-inline-table" style="border-collapse:collapse;font-size:0.7rem;"><thead><tr style="color:var(--text3)"><th style="text-align:left;padding:2px 12px 2px 0">Account</th><th style="text-align:right;padding:2px 12px">Qty</th><th style="text-align:right;padding:2px 12px">Buy Avg</th><th style="text-align:right;padding:2px 12px">CMP</th><th style="text-align:right;padding:2px 12px">Invested</th><th style="text-align:right;padding:2px 12px">Present</th><th style="text-align:right;padding:2px 12px">P&L%</th></tr></thead><tbody>${accRows}${totalRow}</tbody></table></div></td>`;
       tbody.appendChild(dr);
     }
     visibleStocks.push(s);
@@ -4609,6 +4819,7 @@ function renderBenchmarks() {
   const cols = [
     ['bench-day', 'ret_1d'],
     ['bench-1m',  'ret_1m'],
+    ['bench-6m',  'ret_6m'],
     ['bench-1y',  'ret_1y'],
     ['bench-3y',  'ret_3y'],
     ['bench-5y',  'ret_5y'],
@@ -4636,7 +4847,7 @@ function renderBenchmarks() {
 // for every account. Click a row to filter · Ctrl/Cmd+Click to combine accounts.
 function summarize(stocks) {
   let invested = 0, current = 0, inProfit = 0, inLoss = 0;
-  let dayC = 0, dB = 0, m1C = 0, m1B = 0, y1C = 0, y1B = 0, y3C = 0, y3B = 0, y5C = 0, y5B = 0;
+  let dayC = 0, dB = 0, m1C = 0, m1B = 0, m6C = 0, m6B = 0, y1C = 0, y1B = 0, y3C = 0, y3B = 0, y5C = 0, y5B = 0;
   stocks.forEach(s => {
     const qty = s.quantity || 0, buy = s.buy_avg || 0, ltp = s.ltp || 0;
     if (buy && qty) invested += buy * qty;
@@ -4645,6 +4856,7 @@ function summarize(stocks) {
       const h = r => (ltp / (1 + (r / 100))) * qty;
       if (s.ret_1d != null) { const x = h(s.ret_1d); dayC += ltp * qty - x; dB += x; }
       if (s.ret_1m != null) { const x = h(s.ret_1m); m1C += ltp * qty - x; m1B += x; }
+      if (s.ret_6m != null) { const x = h(s.ret_6m); m6C += ltp * qty - x; m6B += x; }
       if (s.ret_1y != null) { const x = h(s.ret_1y); y1C += ltp * qty - x; y1B += x; }
     }
     if (buy && qty) { const bv = buy * qty;
@@ -4656,6 +4868,7 @@ function summarize(stocks) {
   const pnlAbs = current - invested;
   return { invested, current, pnlAbs, pnlPct: invested > 0 ? pnlAbs / invested * 100 : 0,
     dayAbs: dayC, dayPct: dB > 0 ? dayC / dB * 100 : 0, m1Pct: m1B > 0 ? m1C / m1B * 100 : 0,
+    m6Pct: m6B > 0 ? m6C / m6B * 100 : 0,
     y1Pct: y1B > 0 ? y1C / y1B * 100 : 0, y3Pct: y3B > 0 ? y3C / y3B * 100 : 0,
     y5Pct: y5B > 0 ? y5C / y5B * 100 : 0, inProfit, inLoss };
 }
@@ -4695,6 +4908,7 @@ function renderAccountwise() {
   const L = v => locked ? '●●●' : '₹' + (v / 100000).toFixed(2) + 'L';
   const pnlCell = (abs, pct) => { if (locked) return '<span>●●●</span>'; const c = abs >= 0 ? 'var(--green)' : 'var(--red-text)'; return `<span style="color:${c}">${abs >= 0 ? '+' : '-'}₹${Math.abs(abs / 100000).toFixed(2)}L (${pct >= 0 ? '+' : ''}${pct.toFixed(1)}%)</span>`; };
   const pctCell = pct => { const c = pct >= 0 ? 'var(--green)' : 'var(--red-text)'; return `<span style="color:${c}">${pct >= 0 ? '+' : ''}${pct.toFixed(1)}%</span>`; };
+  const pctCellR = pct => { const c = pct >= 0 ? 'var(--green)' : 'var(--red-text)'; return `<span style="color:${c}">${pct >= 0 ? '+' : ''}${Math.round(pct)}%</span>`; };
   const sel = accSel();
   const mk = (name, m, isSel) => {
     const dec = m.inProfit + m.inLoss;
@@ -4702,27 +4916,72 @@ function renderAccountwise() {
     return `<tr onclick="onAccountwiseClick(event,'${esc(name)}')" style="cursor:pointer;${isSel ? 'background:var(--bg3);' : ''}">
       <td style="text-align:left;font-weight:700;color:${isSel ? 'var(--purple-text)' : 'var(--text2)'};white-space:nowrap;">${isSel ? '✓ ' : ''}${esc(name)}</td>
       <td>${L(m.invested)}</td><td>${L(m.current)}</td><td>${pnlCell(m.pnlAbs, m.pnlPct)}</td><td>${pnlCell(m.dayAbs, m.dayPct)}</td>
-      <td>${pctCell(m.m1Pct)}</td><td>${pctCell(m.y1Pct)}</td><td>${pctCell(m.y3Pct)}</td><td>${pctCell(m.y5Pct)}</td>
+      <td>${pctCell(m.m1Pct)}</td><td>${pctCell(m.m6Pct)}</td><td>${pctCell(m.y1Pct)}</td><td>${pctCellR(m.y3Pct)}</td><td>${pctCellR(m.y5Pct)}</td>
       <td>${L(m.cash)}</td>
       <td style="white-space:nowrap;"><span style="color:var(--green)">${m.inProfit}</span>/<span style="color:var(--red-text)">${m.inLoss}</span> <span style="color:var(--green)">${wp}</span></td></tr>`;
   };
   const rows = accts.map(name => mk(name, computeAccountMetrics(name), sel.includes(name))).join('');
-  panel.innerHTML = `<style>.acctwise-table th,.acctwise-table td{padding:3px 8px;border-bottom:1px solid var(--border);text-align:right;}.acctwise-table th:first-child,.acctwise-table td:first-child{text-align:left;}.acctwise-table tbody tr:hover{background:var(--bg3);}</style>
+  panel.innerHTML = `<style>.acctwise-table th,.acctwise-table td{padding:3px 3px;border-bottom:1px solid var(--border);text-align:right;white-space:nowrap;}.acctwise-table th:first-child,.acctwise-table td:first-child{text-align:left;padding-left:0;padding-right:3px;max-width:46px;overflow:hidden;text-overflow:ellipsis;}.acctwise-table th:nth-child(2),.acctwise-table td:nth-child(2),.acctwise-table th:nth-child(3),.acctwise-table td:nth-child(3){padding-left:2px;padding-right:2px;font-size:0.6rem;}.acctwise-table th:nth-child(4),.acctwise-table td:nth-child(4){padding-left:2px;padding-right:2px;font-size:0.6rem;}.acctwise-table th:nth-child(5),.acctwise-table td:nth-child(5){padding-left:0;padding-right:2px;font-size:0.6rem;text-align:left;}.acctwise-table th:nth-child(n+6):nth-child(-n+10),.acctwise-table td:nth-child(n+6):nth-child(-n+10){min-width:59px;text-align:left;padding-left:0;}.acctwise-table tbody tr:hover{background:var(--bg3);}</style>
   <div style="font-size:0.62rem;color:var(--text3);margin-bottom:4px;">Per-account summary (${esc(window._holdingType || 'Stocks')}). Click an account to filter · Ctrl/Cmd+Click to combine several · click again to clear.</div>
-  <table class="acctwise-table" style="width:100%;border-collapse:collapse;font-size:0.7rem;white-space:nowrap;min-width:760px;">
-    <thead><tr style="color:var(--text3);"><th>Account</th><th>Invested</th><th>Cur Value</th><th>Overall P&L</th><th>Day P&L</th><th>1M</th><th>1Y</th><th>3Y</th><th>5Y</th><th>Cash</th><th>Win/Loss</th></tr></thead>
+  <table class="acctwise-table" style="width:auto;border-collapse:collapse;font-size:0.66rem;white-space:nowrap;margin-left:0;">
+    <thead><tr style="color:var(--text3);"><th>Account</th><th>Invested</th><th>Cur Value</th><th>Overall P&L</th><th>Day P&L</th><th>1M</th><th>6M</th><th>1Y</th><th>3Y</th><th>5Y</th><th>Cash</th><th>Win/Loss</th></tr></thead>
     <tbody>${rows}</tbody></table>`;
+  alignAccountwise(panel);
+}
+
+// Dynamically line the per-account 1M/6M/1Y/3Y/5Y columns up under the top summary strip.
+// Recomputed on every open, so it survives value-width and window changes.
+function alignAccountwise(panel) {
+  requestAnimationFrame(() => {
+    const tbl = panel.querySelector('.acctwise-table');
+    if (!tbl) return;
+    tbl.style.marginLeft = '0px';
+    const ths = [...panel.querySelectorAll('.acctwise-table thead th')];
+    const byLabel = l => ths.find(t => t.textContent.trim() === l);
+    const dayTh = byLabel('Day P&L'), ovTh = byLabel('Overall P&L');
+    const sL = id => { const e = document.getElementById(id); return e ? e.getBoundingClientRect().left : null; };
+    const d1 = sL('ana-sum-day-abs');
+    const ids = ['ana-sum-1m-abs','ana-sum-6m-abs','ana-sum-1y-abs','ana-sum-3y-abs','ana-sum-5y-abs'];
+    const labels = ['1M','6M','1Y','3Y','5Y'];
+    const lefts = ids.map(sL);
+    const cashE = document.getElementById('ana-sum-cash');
+    const after = cashE ? cashE.getBoundingClientRect().left : (lefts[4] != null ? lefts[4] + 70 : null);
+    // Size each period column to match the summary strip's column pitch.
+    for (let i = 0; i < 5; i++) {
+      const th = byLabel(labels[i]);
+      if (!th || lefts[i] == null) continue;
+      const nl = (i < 4) ? lefts[i + 1] : after;
+      if (nl == null) continue;
+      const w = Math.round(nl - lefts[i]);
+      if (w >= 25 && w <= 200) th.style.minWidth = w + 'px';
+    }
+    // Day P&L spans 1D→1M: content sits under the summary 1D and 1M lands under the summary 1M.
+    if (dayTh && d1 != null && lefts[0] != null) {
+      const w = Math.round(lefts[0] - d1);
+      if (w >= 25 && w <= 200) dayTh.style.minWidth = w + 'px';
+    }
+    // Absorb the leading-columns offset into Overall P&L so Day P&L aligns under the summary 1D
+    // — without shifting the whole table (it still hugs the left edge).
+    requestAnimationFrame(() => {
+      if (!dayTh || !ovTh || d1 == null) return;
+      const delta = Math.round(d1 - dayTh.getBoundingClientRect().left);
+      if (delta > 0) {
+        const cur = parseFloat(ovTh.style.minWidth) || Math.round(ovTh.getBoundingClientRect().width);
+        ovTh.style.minWidth = (cur + delta) + 'px';
+      }
+    });
+  });
 }
 
 function updateSummary(stocks, scope = 'all') {
   let invested = 0, current = 0, inProfit = 0, inLoss = 0;
-  let dayChgVal = 0, m1ChgVal = 0, y1ChgVal = 0, y3ChgVal = 0, y5ChgVal = 0;
+  let dayChgVal = 0, m1ChgVal = 0, m6ChgVal = 0, y1ChgVal = 0, y3ChgVal = 0, y5ChgVal = 0;
   // 3Y/5Y are buy-value-weighted hypotheticals (accumulated separately below).
   // Day/1M/1Y are current-value-weighted; *Base sums exclude holdings with no
   // price for that period so they don't dilute the percentage.
-  let dayBase = 0, m1Base = 0, y1Base = 0, y3Base = 0, y5Base = 0;
+  let dayBase = 0, m1Base = 0, m6Base = 0, y1Base = 0, y3Base = 0, y5Base = 0;
   let ewPnlSum = 0, ewPnlN = 0, ewDaySum = 0, ewDayN = 0;
-  let ewM1Sum  = 0, ewM1N  = 0, ewY1Sum  = 0, ewY1N  = 0;
+  let ewM1Sum  = 0, ewM1N  = 0, ewM6Sum  = 0, ewM6N  = 0, ewY1Sum  = 0, ewY1N  = 0;
   let ewY3Sum  = 0, ewY3N  = 0, ewY5Sum  = 0, ewY5N  = 0;
 
   stocks.forEach(s => {
@@ -4741,6 +5000,7 @@ function updateSummary(stocks, scope = 'all') {
 
       if (s.ret_1d != null) { const h = histValOf(s.ret_1d); dayChgVal += (ltp * qty) - h; dayBase += h; }
       if (s.ret_1m != null) { const h = histValOf(s.ret_1m); m1ChgVal  += (ltp * qty) - h; m1Base  += h; }
+      if (s.ret_6m != null) { const h = histValOf(s.ret_6m); m6ChgVal  += (ltp * qty) - h; m6Base  += h; }
       if (s.ret_1y != null) { const h = histValOf(s.ret_1y); y1ChgVal  += (ltp * qty) - h; y1Base  += h; }
     }
 
@@ -4758,6 +5018,7 @@ function updateSummary(stocks, scope = 'all') {
     if (s.pnl_pct != null)   { ewPnlSum  += s.pnl_pct;  ewPnlN++;  }
     if (s.ret_1d != null)    { ewDaySum  += s.ret_1d;   ewDayN++;  }
     if (s.ret_1m != null)    { ewM1Sum   += s.ret_1m;   ewM1N++;   }
+    if (s.ret_6m != null)    { ewM6Sum   += s.ret_6m;   ewM6N++;   }
     if (s.ret_1y != null)    { ewY1Sum   += s.ret_1y;   ewY1N++;   }
     if (s.ret_3y != null)    { ewY3Sum   += s.ret_3y;   ewY3N++;   }
     if (s.ret_5y != null)    { ewY5Sum   += s.ret_5y;   ewY5N++;   }
@@ -4772,6 +5033,7 @@ function updateSummary(stocks, scope = 'all') {
   const ewPnl = ewPnlN  > 0 ? ewPnlSum  / ewPnlN  : null;
   const ewDay = ewDayN  > 0 ? ewDaySum  / ewDayN  : null;
   const ewM1  = ewM1N   > 0 ? ewM1Sum   / ewM1N   : null;
+  const ewM6  = ewM6N   > 0 ? ewM6Sum   / ewM6N   : null;
   const ewY1  = ewY1N   > 0 ? ewY1Sum   / ewY1N   : null;
   const ewY3  = ewY3N   > 0 ? ewY3Sum   / ewY3N   : null;
   const ewY5  = ewY5N   > 0 ? ewY5Sum   / ewY5N   : null;
@@ -4783,6 +5045,7 @@ function updateSummary(stocks, scope = 'all') {
   
   const dayPct = dayBase > 0 ? (dayChgVal / dayBase * 100) : 0;
   const m1Pct  = m1Base  > 0 ? (m1ChgVal / m1Base * 100) : 0;
+  const m6Pct  = m6Base  > 0 ? (m6ChgVal / m6Base * 100) : 0;
   const y1Pct  = y1Base  > 0 ? (y1ChgVal / y1Base * 100) : 0;
   const y3Pct  = y3Base > 0 ? (y3ChgVal / y3Base * 100) : 0;
   const y5Pct  = y5Base > 0 ? (y5ChgVal / y5Base * 100) : 0;
@@ -4793,12 +5056,12 @@ function updateSummary(stocks, scope = 'all') {
 
   // Dashboard Update
   if (scope === 'all' || scope === 'dashboard') {
-  document.getElementById('sum-invested').textContent = pvt('₹' + fmt(invested, 0));
-  document.getElementById('sum-current').textContent  = pvt('₹' + fmt(current, 0));
+  document.getElementById('sum-invested').textContent = pvt('₹' + fmtLacs(invested));
+  document.getElementById('sum-current').textContent  = pvt('₹' + fmtLacs(current));
 
   const pnlAbsEl = document.getElementById('sum-pnl-abs');
   const pnlPctEl = document.getElementById('sum-pnl-pct');
-  pnlAbsEl.textContent = pvt((pnlAbs >= 0 ? '+' : '-') + '₹' + fmt(Math.abs(pnlAbs), 0));
+  pnlAbsEl.textContent = pvt((pnlAbs >= 0 ? '+' : '-') + '₹' + Math.abs(pnlAbs / 100000).toFixed(2) + 'L');
   pnlAbsEl.className = 'stat-value ' + (locked ? '' : (pnlAbs >= 0 ? 'green' : 'red'));
   pnlPctEl.textContent = pvt(fmtPct(pnlPct));
   pnlPctEl.className = 'stat-value ' + (locked ? '' : (pnlPct >= 0 ? 'green' : 'red'));
@@ -4819,26 +5082,28 @@ function updateSummary(stocks, scope = 'all') {
 
     const aPnlAbs = document.getElementById('ana-sum-pnl-abs');
     const aPnlPct = document.getElementById('ana-sum-pnl-pct');
-    aPnlAbs.textContent = pvt((pnlAbs >= 0 ? '+' : '-') + '₹' + fmt(Math.abs(pnlAbs), 0));
+    aPnlAbs.textContent = pvt((pnlAbs >= 0 ? '+' : '-') + '₹' + Math.abs(pnlAbs / 100000).toFixed(2) + 'L');
     aPnlAbs.className = 'stat-value ' + (locked ? '' : (pnlAbs >= 0 ? 'green' : 'red'));
     aPnlPct.textContent = pvt(`(${fmtPct(pnlPct)})`);
     aPnlPct.className = 'stat-value ' + (locked ? '' : (pnlAbs >= 0 ? 'green' : 'red'));
 
-    const setChg = (absId, pctId, absVal, pctVal) => {
+    const setChg = (absId, pctId, absVal, pctVal, pctDec) => {
       const elAbs = document.getElementById(absId);
       const elPct = document.getElementById(pctId);
       const cls = absVal >= 0 ? 'green' : 'red';
-      elAbs.textContent = pvt((absVal >= 0 ? '+' : '-') + '₹' + fmt(Math.abs(absVal), 0));
+      elAbs.textContent = pvt((absVal >= 0 ? '+' : '-') + '₹' + Math.abs(absVal / 100000).toFixed(2) + 'L');
       elAbs.className = 'stat-value ' + (locked ? '' : cls);
-      elPct.textContent = pvt(`(${fmtPct(pctVal)})`);
+      const pctStr = (pctDec != null) ? ((pctVal >= 0 ? '+' : '') + pctVal.toFixed(pctDec) + '%') : fmtPct(pctVal);
+      elPct.textContent = pvt(`(${pctStr})`);
       elPct.className = 'stat-value ' + (locked ? '' : cls);
     };
 
     setChg('ana-sum-day-abs', 'ana-sum-day-pct', dayChgVal, dayPct);
     setChg('ana-sum-1m-abs',  'ana-sum-1m-pct',  m1ChgVal,  m1Pct);
+    setChg('ana-sum-6m-abs',  'ana-sum-6m-pct',  m6ChgVal,  m6Pct);
     setChg('ana-sum-1y-abs',  'ana-sum-1y-pct',  y1ChgVal,  y1Pct);
-    setChg('ana-sum-3y-abs',  'ana-sum-3y-pct',  y3ChgVal,  y3Pct);
-    setChg('ana-sum-5y-abs',  'ana-sum-5y-pct',  y5ChgVal,  y5Pct);
+    setChg('ana-sum-3y-abs',  'ana-sum-3y-pct',  y3ChgVal,  y3Pct, 0);
+    setChg('ana-sum-5y-abs',  'ana-sum-5y-pct',  y5ChgVal,  y5Pct, 0);
 
     // Equal-weight annotations on Analysis bar
     const setEW = (id, val) => {
@@ -4850,6 +5115,7 @@ function updateSummary(stocks, scope = 'all') {
     setEW('ana-ew-pnl', ewPnl);
     setEW('ana-ew-day', ewDay);
     setEW('ana-ew-1m',  ewM1);
+    setEW('ana-ew-6m',  ewM6);
     setEW('ana-ew-1y',  ewY1);
     setEW('ana-ew-3y',  ewY3);
     setEW('ana-ew-5y',  ewY5);
@@ -5075,7 +5341,7 @@ async function loadData() {
   }
 
   // Merge prices and return data into stocks
-  stocks = stocks.filter(s => prices.hasOwnProperty(s.ticker) && prices[s.ticker]?.ltp != null);
+  stocks = stocks.filter(s => prices.hasOwnProperty(s.ticker) && prices[s.ticker]?.ltp != null && !prices[s.ticker]?.watchlist);
   stocks.forEach(s => {
     const p = prices[s.ticker];
     if (p) {

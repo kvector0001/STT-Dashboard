@@ -54,6 +54,31 @@ This folder contains all the AI analysis prompts used in the Portfolio Dashboard
 **Triggered by:** 📈 Technical Trends button on each ticker card  
 **Output:** Scored summary table (/10), key levels (breakout & breakdown triggers), trend signal and action
 
+### 10. `update_pending_stock_analysis.md`
+**Purpose:** Full agent workflow to detect newly added holdings in the Google Sheet and fill every dataset (fundamentals, management trust, red flags, quality, peer rank), then validate and push  
+**Best for:** VS Code Copilot Agent mode, after buying new stocks  
+**Output:** Updated datasets + regenerated reports + fresh prices + pushed commit, with zero holdings left pending
+
+### 11. `allocation_increase_engine.md`
+**Purpose:** Scan the whole portfolio → shortlist the 20 best 6–12M *increase* candidates → deep web research (screener + filings) → rank all 20 → final 5 to ADD with position sizing + trims  
+**Best for:** VS Code Copilot Agent mode  
+**Output:** Ranked 20 + final 5 with sizing, 300–800-word rationale per company, and `prompt_outputs/top20_increase_<date>.md` + `.xlsx`
+
+### 12. `allocation_exit_engine.md`
+**Purpose:** Scan the whole portfolio → shortlist the 20 weakest / most-at-risk holdings → deep web research → rank worst-first → final 5 to EXIT with capital freed  
+**Best for:** VS Code Copilot Agent mode  
+**Output:** Ranked 20 (worst-first) + final 5 exits, 300–800-word rationale per company, and `prompt_outputs/bottom20_exit_<date>.md` + `.xlsx`
+
+### 13. `qualitative_refresh_engine.md`
+**Purpose:** Quarterly full rebuild of the qualitative deep-analysis data (fundamentals, management trust, red flags, quality, peer rank) for EVERY stock in `stocks.json`, in autonomous batches of 10, with backup + 100% validation + blank-safe fallback  
+**Best for:** VS Code Copilot Agent mode (run once a quarter)  
+**Output:** Refreshed 5 datasets, `qualitative_data/backup_<date>/` copies, and `qualitative_data/refresh_errors_<date>.md`/`.json` error logs for later fixing
+
+### 14. `alpha_doubler_engine.md` 🚀 (mega master)
+**Purpose:** Score the WHOLE universe top-to-bottom, fusing all 5 qualitative datasets + live prices/technicals + the library forms, and hunt the handful of companies that can ~2x in ~12 months irrespective of the index — via a **forensic earnings-inflection module** (completed capex → operating leverage, depreciation roll-off, debt paydown → interest collapse, subsidiary turn, tax normalization — the things a misleading TTM P/E hides) and an **un-priced catalyst module** (past catalysts not yet in price, high-momentum bullish, future catalysts in motion). Also names the weakest holdings to trim/exit to fund the doublers.  
+**Best for:** VS Code Copilot Agent mode or M365 Cowork  
+**Output:** Full-universe ranked table + top-25 hunt list with a `2x ≈ forward-EPS-growth × multiple-re-rating` path and P(double), 300–800-word deep dive per top-15, forensic inflection-evidence with dated screener line items, and `prompt_outputs/alpha_doublers_<date>.md` + `.xlsx` (Universe / HuntList / Inflection-Evidence sheets)
+
 ---
 
 ## How to Use
