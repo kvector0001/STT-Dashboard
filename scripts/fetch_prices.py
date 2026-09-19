@@ -44,6 +44,9 @@ YFINANCE_SYMBOL_OVERRIDES = {
     "INCAP": "INCAP.BO",
     "MAFANG": "MAFANG.NS",   # .BO only has 1 row of history; .NS has full 5y
     "SKFINDUS": "SKFINDUS.NS",  # demerged SKF India Industrial entity (NOT SKFINDIA/SKF India)
+    "RIR": "RIR.BO",  # .NS history begins Jul 2026; .BO history begins Sep 2006
+    "FREDUN": "FREDUN.BO",  # .NS history begins Aug 2026; .BO history begins Mar 2016
+    "INVPRECQ": "INVPRECQ.BO",  # .NS history begins Aug 2026; .BO history begins Jul 2002
 }
 
 # ── Path resolution (Google Sheets vs local vs GitHub Actions) ──────────────
@@ -789,12 +792,15 @@ for _, row in portfolio.iterrows():
                             near_atl  = bool(fetched_atl_pct is not None and fetched_atl_pct <= 2)
                             strong_up = rvol >= 3 and ret_1d >= 3
                             strong_dn = rvol >= 3 and ret_1d <= -3
-                            if   near_ath and strong_up:  fetched_movers = "\U0001f525"   # 🔥 lifetime high breakout
+                            if   (near_ath or near_high) and strong_up and rvol >= 10: fetched_movers = "\U0001f4a5"  # 💥 explosive breakout — extraordinary volume at a fresh high
+                            elif near_ath and strong_up:  fetched_movers = "\U0001f525"   # 🔥 lifetime high breakout
                             elif near_atl and strong_dn:  fetched_movers = "\U0001f9ca"   # 🧊 lifetime low breakdown
                             elif near_high and strong_up: fetched_movers = "\U0001f680"   # 🚀 52-week high breakout
                             elif near_low  and strong_dn: fetched_movers = "\u2744\ufe0f" # ❄️ 52-week low breakdown
-                            elif rvol >= 10 and ar >= 3:
-                                fetched_movers = "\u26a0\ufe0f"  # ⚠️ SUSPECT — abnormal volume spike (>=10x) with |day|>=3%, overrides V/V+P/P
+                            elif (near_ath or near_high) and strong_dn:
+                                fetched_movers = "\U0001f53b"  # 🔻 DISTRIBUTION — heavy-volume down day AT the highs (selling into strength)
+                            elif (near_atl or near_low) and strong_up:
+                                fetched_movers = "\U0001f53c"  # 🔼 ACCUMULATION — heavy-volume up day AT the lows (capitulation buying)
                             else:
                                 _V = rvol >= 4 and ar >= 3
                                 _P = rvol >= 3 and ar >= 6
@@ -832,8 +838,12 @@ for _, row in portfolio.iterrows():
                             if nlo and dn: return "\u2744\ufe0f"
                             at_high = na or nh
                             at_low  = nl or nlo
-                            if (not at_high) and rv >= tr_vol and ret >=  tr_up: return "\U0001f4c8"  # 📈 trending up
-                            if (not at_low)  and rv >= tr_vol and ret <= -tr_up: return "\U0001f4c9"  # 📉 trending down
+                            tr_up_move = rv >= tr_vol and ret >=  tr_up
+                            tr_dn_move = rv >= tr_vol and ret <= -tr_up
+                            if at_high and tr_dn_move: return "\U0001f53b"  # 🔻 distribution at the highs
+                            if at_low  and tr_up_move: return "\U0001f53c"  # 🔼 accumulation at the lows
+                            if (not at_high) and tr_up_move: return "\U0001f4c8"  # 📈 trending up
+                            if (not at_low)  and tr_dn_move: return "\U0001f4c9"  # 📉 trending down
                             return "No"
                         fetched_movers_w = _mover_tf(fetched_vol_week_ratio, ret_1w, 1.5, 8, 8, 1.3, 5)
                         fetched_movers_m = _mover_tf(fetched_vol_month_ratio, ret_1m, 1.3, 12, 12, 1.2, 8)
@@ -841,8 +851,8 @@ for _, row in portfolio.iterrows():
                         # 🏆 STRONG ADD · 💎 ADD · 🌱 START-SMALL · ⏳ HOLD (extended or pullback) · 🚨 REDUCE.
                         # Thresholds calibrated on the live portfolio; CALLED AFTER the 200DMA block below.
                         def _alloc(d, w, m, ext, slope, da, r1m, ts):
-                            down = lambda t: t in ("\U0001f9ca", "\u2744\ufe0f", "\U0001f4c9")
-                            up   = lambda t: t in ("\U0001f525", "\U0001f680", "\U0001f4c8")
+                            down = lambda t: t in ("\U0001f9ca", "\u2744\ufe0f", "\U0001f4c9", "\U0001f53b")
+                            up   = lambda t: t in ("\U0001f525", "\U0001f680", "\U0001f4c8", "\U0001f53c")
                             hard_dn = lambda t: t in ("\U0001f9ca", "\u2744\ufe0f")  # new 52wk/lifetime low
                             m_up, m_dn = up(m), down(m)
                             w_up, w_dn = up(w), down(w)
@@ -861,10 +871,12 @@ for _, row in portfolio.iterrows():
                                 return ""
                             if (ext is not None and ext > 50) or (r1m is not None and r1m > 30):
                                 return "\u23f3"  # ⏳ HOLD/TRIM
-                            if m_up and have_trend and slope >= 1 and ext <= 20 and da is not None and da >= 9 and (r1m is None or r1m <= 20) and not w_dn:
+                            if m_up and have_trend and slope >= 1 and ext <= 35 and da is not None and da >= 9 and (r1m is None or r1m <= 20) and not w_dn:
                                 return "\U0001f3c6"  # 🏆 STRONG ADD (low-risk sweet spot)
                             if m_up and have_trend and slope >= 1 and ext <= 40 and (r1m is None or r1m <= 20) and (da is None or da >= 6) and not w_dn:
                                 return "\U0001f48e"  # 💎 ADD
+                            if up_cat and have_trend and -5 <= ext <= 10 and slope >= 0 and (r1m is None or r1m <= 30):
+                                return "\U0001f48e"  # 💎 RECLAIM ADD (turning 200DMA)
                             if up_cat and (slope is None or slope >= -2) and (r1m is None or r1m <= 28):
                                 return "\U0001f331"  # 🌱 START-SMALL
                             return ""
@@ -1343,7 +1355,7 @@ def sanitise(obj):
 from datetime import date as _date
 _today = _date.today()
 _BLANK_ON_SUSPECT = (
-    "ret_1d", "ret_1w", "ret_1m", "ret_6m", "ret_1y", "ret_2y", "ret_3y", "ret_5y",
+    "ret_1d", "ret_1w", "ret_1m", "ret_6m", "ret_1y", "ret_2y", "ret_3y", "ret_4y", "ret_5y",
     "week52_high", "week52_low", "ath_pct", "atl_pct",
     "vol_today_ratio", "vol_week_ratio", "vol_month_ratio", "vol_30m_ratio",
     "vol_yest_ratio", "vol_30d_ratio", "mcap_3y",

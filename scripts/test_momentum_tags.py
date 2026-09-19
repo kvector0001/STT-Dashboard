@@ -11,7 +11,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from momentum_classifier import (  # noqa: E402
     classify_daily, classify_weekly, classify_monthly, overlay_alloc,
-    FIRE, ROCKET, UP, DOWN, ICE, SNOW, SUSPECT, GEM, TROPHY, SEED, HOUR, SIREN,
+    FIRE, ROCKET, UP, DOWN, ICE, SNOW, SUSPECT, GEM, TROPHY, SEED, HOUR, SIREN, EXPLODE,
 )
 
 
@@ -38,13 +38,15 @@ def test_trending_up():
     d = classify_daily(1.1, 0.5)
     assert w == UP, w
     assert m == UP, m
-    # HAPPYFORGE-like: +32% above a rising 200DMA (past the sweet spot) but early -> ADD
-    assert overlay_alloc(d, w, m, ext=32, slope=7.0, da=10, r1m=17) == GEM
-    # TVSELECT/RATNAVEER-like sweet spot: ext<=20 AND da>=9 -> STRONG ADD
+    # HAPPYFORGE-like: +32% above a rising 200DMA -> within the relaxed 🏆 cap (<=35) -> STRONG ADD
+    assert overlay_alloc(d, w, m, ext=32, slope=7.0, da=10, r1m=17) == TROPHY
+    # sweet spot: ext<=35 AND da>=9 -> STRONG ADD
     assert overlay_alloc(d, w, m, ext=8, slope=2.2, da=10, r1m=13) == TROPHY
-    # ext just over the sweet-spot cap (20) stays a regular ADD, not STRONG
-    assert overlay_alloc(d, w, m, ext=25, slope=2.2, da=10, r1m=13) == GEM
-    # Same tags but 200DMA still flat/turning (slope 0.4) -> not yet confirmed -> START-SMALL
+    # ext just over the relaxed cap (35) stays a regular ADD, not STRONG
+    assert overlay_alloc(d, w, m, ext=40, slope=2.2, da=10, r1m=13) == GEM
+    # RECLAIM tier: ext in -5..10 with a flat-to-up (turning) 200DMA -> ADD
+    assert overlay_alloc(d, w, m, ext=6, slope=0.4, da=10, r1m=10) == GEM
+    # Above the reclaim band with slope still flat -> START-SMALL
     assert overlay_alloc(d, w, m, ext=14, slope=0.4, da=10, r1m=10) == SEED
     # A strong-up weekly that IS near the 52w high must NOT be 📈 (it's a 🚀 breakout).
     assert classify_weekly(1.6, 9.0, near_52wh=True) == ROCKET
@@ -53,12 +55,19 @@ def test_trending_up():
 # --- Worked example 3: suspect pump (daily) --------------------------------
 # rvol 12x and +4% but no clean breakout -> ⚠️ (overrides V/V+P/P).
 def test_suspect_pump():
-    assert classify_daily(12.0, 4.0) == SUSPECT
-    assert classify_daily(12.0, -4.0) == SUSPECT
-    # A genuine breakout still wins over suspect: 12x + 4% AT the ATH is 🔥, not ⚠️.
-    assert classify_daily(12.0, 4.0, near_ath=True) == FIRE
-    # Just below the suspect bar -> falls back to a normal surge code, not ⚠️.
+    # High volume + a 3-6% move -> volume-led surge V (no error tag; V/P/V+P only).
+    assert classify_daily(12.0, 4.0) == "V"
+    assert classify_daily(12.0, -4.0) == "V"
+    # An EXPLOSIVE breakout still wins: 12x + 4% AT the ATH is 💥.
+    assert classify_daily(12.0, 4.0, near_ath=True) == EXPLODE
+    # A normal-volume breakout at the ATH stays 🔥.
+    assert classify_daily(4.0, 4.0, near_ath=True) == FIRE
+    # Volume >=4x with a 3-6% move -> V (only volume standout).
     assert classify_daily(9.0, 4.0) == "V"
+    # High volume AND a big move (>=6%) -> V+P (Zensar-like: 22x, +12%).
+    assert classify_daily(22.0, 12.0) == "V+P"
+    # Big price move on modest volume -> P (only price standout).
+    assert classify_daily(3.5, 8.0) == "P"
 
 
 # --- Boundary: monthly breakout threshold is +/-12% (was +/-15%) -----------

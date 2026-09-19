@@ -9282,5 +9282,27 @@
       "Promoter holding 76.16% in Dec-2025, Mar-2026 and Jun-2026; DIIs 15.64%, FIIs 1.81% at Jun-2026"
     ],
     "change_remark": "NEW: initial coverage — suggested symbol SUDEEP resolved to SUDEEPPHRM (BSE 544619). Based on screener.in consolidated data (2026-09-04), Q1 FY27 results (4 Aug 2026) and earnings call (5 Aug 2026, transcript 11 Aug 2026), IPO documents (listed 28 Nov 2025) and the Jun-2026 shareholding (promoters 76.16%). Company just clears the three-quarter threshold, so all pillars are scored neutrally (6) with Low confidence; accounting red flag 5 for FY26 CFO at 40% of PAT and a 372-day cash cycle; conviction 5 and narrow moat. No current credit rating exists; lock-in expiry behaviour and greenfield ramp (Q3 FY27) are the next checkpoints."
+  },
+  {
+    "ticker": "EMUDHRA",
+    "name": "eMudhra Limited",
+    "sector": "Technology",
+    "nse_symbol": "EMUDHRA",
+    "buy_avg": 623.7324,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
   }
 ]

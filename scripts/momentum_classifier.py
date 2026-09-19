@@ -11,7 +11,8 @@ examples from the spec without spinning up yfinance or a browser.
 Tag vocabulary
 --------------
 Level breakouts / breakdowns (any timeframe):
-  🔥 FIRE    lifetime (all-time) high breakout   — near ATH + strong up
+  � EXPLODE explosive daily breakout — new high on >=10x volume (day >= +3%)
+  �🔥 FIRE    lifetime (all-time) high breakout   — near ATH + strong up
   🧊 ICE     lifetime (all-time) low breakdown   — near ATL + strong down
   🚀 ROCKET  52-week high breakout               — near 52w high + strong up
   ❄️ SNOW    52-week low breakdown               — near 52w low  + strong down
@@ -21,6 +22,9 @@ Trending (weekly & monthly only — meaningful move + volume, NOT yet at an extr
 Daily surge / suspect:
   V, P, V+P  volume / price / both surge codes (daily only)
   ⚠️ SUSPECT abnormal volume spike (>=10x avg) with |day| >= 3% — overrides V/V+P/P
+Distribution / accumulation (daily, at the extremes — a move AGAINST a breakout):
+  🔻 DISTRIB heavy-volume DOWN day at/near the high (selling into strength)
+  🔼 ACCUM   heavy-volume UP day at/near the low (capitulation buying)
 Overlay allocation (post-process across all 3 timeframes):
   💎 GEM     max-conviction increase (confirmed breakout building)
   🌱 SEED    early / start building (pre-breakout trend)
@@ -28,12 +32,15 @@ Overlay allocation (post-process across all 3 timeframes):
   🚨 SIREN   exit / de-rate
 """
 
+EXPLODE = "\U0001f4a5"  # 💥 explosive breakout — extraordinary daily volume at a fresh high
 FIRE = "\U0001f525"     # 🔥
 ICE = "\U0001f9ca"      # 🧊
 ROCKET = "\U0001f680"   # 🚀
 SNOW = "\u2744\ufe0f"   # ❄️
 UP = "\U0001f4c8"       # 📈
 DOWN = "\U0001f4c9"     # 📉
+DISTRIB = "\U0001f53b"  # 🔻 distribution — heavy-volume down day at the highs
+ACCUM = "\U0001f53c"    # 🔼 accumulation — heavy-volume up day at the lows
 SUSPECT = "\u26a0\ufe0f"  # ⚠️
 GEM = "\U0001f48e"      # 💎
 TROPHY = "\U0001f3c6"   # 🏆
@@ -43,8 +50,8 @@ SIREN = "\U0001f6a8"    # 🚨
 
 # Sort rank (higher = stronger bullish / more urgent). Used by the dashboard sort.
 SORT_ORDER = {
-    FIRE: 11, ROCKET: 10, UP: 9, ICE: 8, SNOW: 7, DOWN: 6,
-    "V+P": 4, "V": 3, "P": 2, "No": 1, SUSPECT: 0,
+    EXPLODE: 12, FIRE: 11, ROCKET: 10, UP: 9, ICE: 8, SNOW: 7, DOWN: 6, ACCUM: 5,
+    "V+P": 4, "V": 3, "P": 2, "No": 1, DISTRIB: 0.5, SUSPECT: 0,
 }
 
 
@@ -64,6 +71,9 @@ def classify(rvol, ret, *, near_ath=False, near_atl=False, near_52wh=False,
         return None
     strong_up = rvol >= vol_t and ret >= up_t
     strong_dn = rvol >= vol_t and ret <= -dn_t
+    # Explosive daily breakout — extraordinary single-day volume (>=10x) at a fresh high.
+    if surge and (near_ath or near_52wh) and strong_up and rvol >= 10:
+        return EXPLODE
     # Level breakouts/breakdowns — ATH is checked before 52-week (priority).
     if near_ath and strong_up:
         return FIRE
@@ -77,14 +87,22 @@ def classify(rvol, ret, *, near_ath=False, near_atl=False, near_52wh=False,
     if trend_vol is not None:
         at_high = near_ath or near_52wh
         at_low = near_atl or near_52wl
-        if (not at_high) and rvol >= trend_vol and ret >= trend_up:
+        tr_up = rvol >= trend_vol and ret >= trend_up
+        tr_dn = rvol >= trend_vol and ret <= -trend_up
+        if at_high and tr_dn:
+            return DISTRIB
+        if at_low and tr_up:
+            return ACCUM
+        if (not at_high) and tr_up:
             return UP
-        if (not at_low) and rvol >= trend_vol and ret <= -trend_up:
+        if (not at_low) and tr_dn:
             return DOWN
         return "No"
-    # Daily suspect override — huge volume spike, overrides V/V+P/P (but not breakouts).
-    if suspect and rvol >= 10 and abs(ret) >= 3:
-        return SUSPECT
+    # Distribution / accumulation — heavy volume AGAINST the level (a failed-breakout move).
+    if (near_ath or near_52wh) and strong_dn:
+        return DISTRIB
+    if (near_atl or near_52wl) and strong_up:
+        return ACCUM
     if surge:
         v = rvol >= 4 and abs(ret) >= 3
         p = rvol >= 3 and abs(ret) >= 6
@@ -122,8 +140,8 @@ def overlay_alloc(daily, weekly, monthly, ext=None, slope=None, da=None, r1m=Non
     A monthly/weekly dip in a stock with a RISING 200DMA and TS>=70 is a PULLBACK (HOLD),
     not a REDUCE. Thresholds calibrated on the live portfolio (see repo memory).
     """
-    up = lambda t: t in (FIRE, ROCKET, UP)
-    dn = lambda t: t in (ICE, SNOW, DOWN)
+    up = lambda t: t in (FIRE, ROCKET, UP, ACCUM)
+    dn = lambda t: t in (ICE, SNOW, DOWN, DISTRIB)
     hard_dn = lambda t: t in (ICE, SNOW)
     m_up, m_dn = up(monthly), dn(monthly)
     w_up, w_dn = up(weekly), dn(weekly)
@@ -140,9 +158,11 @@ def overlay_alloc(daily, weekly, monthly, ext=None, slope=None, da=None, r1m=Non
         return ""
     if (ext is not None and ext > 50) or (r1m is not None and r1m > 30):
         return HOUR
-    if m_up and have_trend and slope >= 1 and ext <= 20 and da is not None and da >= 9 and (r1m is None or r1m <= 20) and not w_dn:
+    if m_up and have_trend and slope >= 1 and ext <= 35 and da is not None and da >= 9 and (r1m is None or r1m <= 20) and not w_dn:
         return TROPHY
     if m_up and have_trend and slope >= 1 and ext <= 40 and (r1m is None or r1m <= 20) and (da is None or da >= 6) and not w_dn:
+        return GEM
+    if up_cat and have_trend and -5 <= ext <= 10 and slope >= 0 and (r1m is None or r1m <= 30):
         return GEM
     if up_cat and (slope is None or slope >= -2) and (r1m is None or r1m <= 28):
         return SEED

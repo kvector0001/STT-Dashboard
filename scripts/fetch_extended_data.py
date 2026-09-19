@@ -24,11 +24,9 @@ def save_data(stocks, prices):
         json.dump(prices, f, indent=2, ensure_ascii=False)
 
 def get_return(hist, days):
-    if len(hist) < 2: return None
+    if len(hist) < days: return None
     current = hist['Close'].iloc[-1]
-    # Find the index closest to 'days' ago
-    idx = max(0, len(hist) - days - 1)
-    past = hist['Close'].iloc[idx]
+    past = hist['Close'].iloc[-days]
     if past == 0 or pd.isna(past): return None
     return round(((current / past) - 1) * 100, 2)
 
@@ -84,16 +82,18 @@ def fetch_all():
             stock["rev_cagr"] = round((info.get("revenueGrowth", 0) or 0) * 100, 2)
 
             # 2. Returns (Historical)
-            # Fetch 5 years to cover all periods
-            hist = t_obj.history(period="5y")
+            hist = t_obj.history(period="max")
             if not hist.empty:
                 prices_entry = prices.get(ticker, {})
-                prices_entry["ret_1d"] = get_return(hist, 1)
+                prices_entry["ret_1d"] = get_return(hist, 2)
+                prices_entry["ret_1w"] = get_return(hist, 6)
                 prices_entry["ret_1m"] = get_return(hist, 21)
                 prices_entry["ret_6m"] = get_return(hist, 126)
                 prices_entry["ret_1y"] = get_return(hist, 252)
+                prices_entry["ret_2y"] = get_return(hist, 504)
                 prices_entry["ret_3y"] = get_return(hist, 756)
-                prices_entry["ret_5y"] = get_return(hist, 1260)
+                prices_entry["ret_4y"] = get_return(hist, 1008)
+                prices_entry["ret_5y"] = get_return(hist, 1200)
                 
                 # MCap Growth 3Y is same as Ret 3Y for relative comparison
                 stock["mcap_3y"] = prices_entry["ret_3y"]

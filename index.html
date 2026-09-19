@@ -1340,8 +1340,8 @@
     <button class="analysis-chip" data-afilter="near52wkh" onclick="setAnalysisFilter('near52wkh',this)" title="Within 3% of 52-week high">🔼 Near 52wk High</button>
     <button class="analysis-chip" data-afilter="near52wkl" onclick="setAnalysisFilter('near52wkl',this)" title="Within 5% of 52-week low">🔽 Near 52wk Low</button>
     <button class="analysis-chip" data-afilter="mbbull" onclick="setAnalysisFilter('mbbull',this)" title="Rows flagged MUSTBUY or Bullish in the MB sheet (column E — the MB column)">★ MB/Bullish</button>
-    <button class="analysis-chip" data-afilter="increase" onclick="setAnalysisFilter('increase',this)" title="Add candidates: Alloc says add (🏆/💎) AND the Trends (ST,LT) signal is BUY 🟢">⏫ Increase</button>
-    <button class="analysis-chip" data-afilter="exit" onclick="setAnalysisFilter('exit',this)" title="Exit candidates: Alloc says reduce (🚨) AND the Trends (ST,LT) signal is EXIT 🔴">⏬ Exit</button>
+    <button class="analysis-chip" data-afilter="add" style="border-color:var(--green);color:var(--green);" onclick="setAnalysisFilter('add',this)" title="⏫ ADD — mechanical continuation buy: Setup BUY + monthly up-move + rising 200DMA, not extended (ext −5..40%, 1M ≤30%). Backtested edge — confirm newsflow, then add.">▲ Add</button>
+    <button class="analysis-chip" data-afilter="reversal" style="border-color:#facc15;color:#facc15;" onclick="setAnalysisFilter('reversal',this)" title="🔎 REVERSAL WATCH — deep below ATH (>40%) but jumping (1M >15%). NOT a mechanical buy: check for a genuine fundamental shift first.">🔎 Reversal</button>
     <button class="analysis-chip" data-afilter="loss" onclick="setAnalysisFilter('loss',this)">In Loss</button>
   </div>
 
@@ -1349,21 +1349,22 @@
     <table class="analysis-table">
       <thead>
         <tr>
-          <th onclick="sortAnalysis('name')">Company <span id="sort-name" class="sort-indicator"></span> <span id="clear-all-filters" onclick="event.stopPropagation();clearAllFilters()" title="Clear ALL filters (chips + column funnels + search + sector/account)" style="display:none;cursor:pointer;color:var(--red-text);font-weight:700;font-size:0.6rem;border:1px solid var(--red-text);border-radius:4px;padding:0 4px;margin-left:3px;vertical-align:middle;">✕ clear</span></th>
-          <th class="col-mov" onclick="sortAnalysis('movers')" oncontextmenu="return openMoversBulk('movers',event)" title="Movers — unusual volume + price move, shown by LEVEL. 🔥 LIFETIME-HIGH breakout: at/near all-time high AND vol ≥3× AND day ≥+3%. 🚀 52-WEEK-HIGH breakout: near 52W high AND vol ≥3× AND day ≥+3%. 🧊 LIFETIME-LOW breakdown (EXIT): at/near all-time low AND vol ≥3× AND day ≤−3%. ❄️ 52-WEEK-LOW breakdown: near 52W low AND vol ≥3× AND day ≤−3%. V+P surge: vol ≥4× AND |day| ≥6%. V volume-led: vol ≥4× AND |day| ≥3%. P price-led: vol ≥3× AND |day| ≥6%. Sort: 🔥 &gt; 🚀 &gt; 🧊 &gt; ❄️ &gt; V+P &gt; V &gt; P. Click a cell for a re-rating catalyst prompt. Right-click this header for a combined prompt across all currently-filtered stocks.">Mov(D) <span class="col-filter-icon" data-col="movers" title="Filter" onclick="event.stopPropagation();openColFilter('movers',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-movers" class="sort-indicator"></span></th>
-          <th class="col-mov" onclick="sortAnalysis('movers_w')" oncontextmenu="return openMoversBulk('movers_w',event)" title="WEEKLY breakout/breakdown (5-day) — same 🔥 lifetime-high / 🚀 52wk-high / 🧊 lifetime-low / ❄️ 52wk-low levels. Thresholds: weekly volume ≥1.5× avg AND 5-day move ≥±8%, at that level. Click a cell for a single-stock structural prompt; right-click this header for a combined prompt across all filtered stocks.">Mov(Wk) <span class="col-filter-icon" data-col="movers_w" title="Filter" onclick="event.stopPropagation();openColFilter('movers_w',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-movers_w" class="sort-indicator"></span></th>
-          <th class="col-mov" onclick="sortAnalysis('movers_m')" oncontextmenu="return openMoversBulk('movers_m',event)" title="MONTHLY breakout/breakdown (21-day) — same 🔥/🚀/🧊/❄️ levels. Thresholds: monthly volume ≥1.3× avg AND 21-day move ≥±12%, at that level. Click a cell for a single-stock structural prompt; right-click this header for a combined prompt across all filtered stocks.">Mov(M) <span class="col-filter-icon" data-col="movers_m" title="Filter" onclick="event.stopPropagation();openColFilter('movers_m',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-movers_m" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('name')">Company (<span id="analysis-company-count">0</span>) <span id="sort-name" class="sort-indicator"></span> <span id="clear-all-filters" onclick="event.stopPropagation();clearAllFilters()" title="Clear ALL filters (chips + column funnels + search + sector/account)" style="display:none;cursor:pointer;color:var(--red-text);font-weight:700;font-size:0.6rem;border:1px solid var(--red-text);border-radius:4px;padding:0 4px;margin-left:3px;vertical-align:middle;">✕ clear</span></th>
+          <th class="col-mov" onclick="sortAnalysis('movers')" oncontextmenu="return openMoversBulk('movers',event)" title="Movers — unusual volume + price move, shown by LEVEL. 💥 EXPLOSIVE breakout: new 52W/all-time high on ≥10× volume (day ≥+3%) — something extraordinary. 🔥 LIFETIME-HIGH breakout: at/near all-time high AND vol ≥3× AND day ≥+3%. 🚀 52-WEEK-HIGH breakout: near 52W high AND vol ≥3× AND day ≥+3%. 🧊 LIFETIME-LOW breakdown (EXIT): at/near all-time low AND vol ≥3× AND day ≤−3%. ❄️ 52-WEEK-LOW breakdown: near 52W low AND vol ≥3× AND day ≤−3%. 🔻 DISTRIBUTION: at/near the HIGH but vol ≥3× AND day ≤−3% (selling into strength). 🔼 ACCUMULATION: at/near the LOW but vol ≥3× AND day ≥+3% (capitulation buying). V+P surge: vol ≥4× AND |day| ≥6%. V volume-led: vol ≥4× AND |day| ≥3%. P price-led: vol ≥3× AND |day| ≥6%. Sort: 💥 &gt; 🔥 &gt; 🚀 &gt; 🧊 &gt; ❄️ &gt; 🔼 &gt; V+P &gt; V &gt; P &gt; 🔻. Click a cell for a re-rating catalyst prompt. Right-click this header for a combined prompt across all currently-filtered stocks.">Mov(D) <span class="col-filter-icon" data-col="movers" title="Filter" onclick="event.stopPropagation();openColFilter('movers',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-movers" class="sort-indicator"></span></th>
+          <th class="col-mov" onclick="sortAnalysis('movers_w')" oncontextmenu="return openMoversBulk('movers_w',event)" title="WEEKLY breakout/breakdown (5-day) — same 🔥 lifetime-high / 🚀 52wk-high / 🧊 lifetime-low / ❄️ 52wk-low levels, plus 🔻 distribution (at highs but falling) / 🔼 accumulation (at lows but rising). Thresholds: weekly volume ≥1.5× avg AND 5-day move ≥±8%, at that level. Click a cell for a single-stock structural prompt; right-click this header for a combined prompt across all filtered stocks.">Mov(Wk) <span class="col-filter-icon" data-col="movers_w" title="Filter" onclick="event.stopPropagation();openColFilter('movers_w',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-movers_w" class="sort-indicator"></span></th>
+          <th class="col-mov" onclick="sortAnalysis('movers_m')" oncontextmenu="return openMoversBulk('movers_m',event)" title="MONTHLY breakout/breakdown (21-day) — same 🔥/🚀/🧊/❄️ levels, plus 🔻 distribution (at highs but falling) / 🔼 accumulation (at lows but rising). Thresholds: monthly volume ≥1.3× avg AND 21-day move ≥±12%, at that level. Click a cell for a single-stock structural prompt; right-click this header for a combined prompt across all filtered stocks.">Mov(M) <span class="col-filter-icon" data-col="movers_m" title="Filter" onclick="event.stopPropagation();openColFilter('movers_m',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-movers_m" class="sort-indicator"></span></th>
           <th class="col-mov" onclick="sortAnalysis('movers_alloc')" oncontextmenu="return openMoversBulk('movers_alloc',event)" title="Allocation ACTION = momentum × 200DMA trend (incl. Trend Score). 🏆 STRONG ADD — monthly catalyst in the low-risk sweet spot (≤20% above a RISING 200DMA, holding ≥9/10 days). 💎 ADD/increase — early confirmed re-rating (monthly up, 1M ≤20%, ≤40% above a RISING 200DMA). 🌱 START-SMALL/watch — early, trend not yet confirmed. ⏳ HOLD — already ran (>30% 1M / >50% ext) OR a healthy pullback in a strong uptrend (TS≥70 & 200DMA rising); not a reduce. 🚨 REDUCE — genuine de-rating: new low, below a falling 200DMA, or monthly downtrend without a strong rising 200DMA. Click a cell for a single-stock allocation prompt; right-click this header for a combined prompt across all filtered stocks.">Alloc <span class="col-filter-icon" data-col="movers_alloc" title="Filter" onclick="event.stopPropagation();openColFilter('movers_alloc',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-movers_alloc" class="sort-indicator"></span></th>
           <th class="col-sig" onclick="sortAnalysis('setup')" oncontextmenu="return openSetupBulk(event)" title="TRENDS (ST,LT) — colored dot = the Setup signal, then (Sn-ST, Sn-LT) scores 0-100. Sn(ST)=short-term (RSI/50DMA/volume/1W-1M); Sn(LT)=long-term (Trend Score/relative-strength/6M-1Y/200DMA), reconciled with the Alloc guard. DOTS: 🟢 BUY leader+fresh entry · 🔵 ACCUMULATE leader pulling back · ⚪ HOLD · 🟠 BOUNCE dead-cat · 🔴 EXIT broken · · N/A insufficient history. Click a cell to deep-dive one stock; RIGHT-CLICK this header for ONE combined analysis of ALL filtered stocks.">Trends (ST,LT) <span class="col-filter-icon" data-col="setup" title="Filter" onclick="event.stopPropagation();openColFilter('setup',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-setup" class="sort-indicator"></span></th>
-          <th onclick="sortAnalysis('ret_1d')" title="1-day price return (%)">1D Ret <span id="sort-ret_1d" class="sort-indicator"></span></th>
-          <th onclick="sortAnalysis('ret_1w')" title="~5 trading day (1-week) price return (%)">1W Ret <span id="sort-ret_1w" class="sort-indicator"></span></th>
-          <th onclick="sortAnalysis('ret_1m')" title="~21 trading day (1-month) price return (%)">1M Ret <span id="sort-ret_1m" class="sort-indicator"></span></th>
-          <th onclick="sortAnalysis('ret_6m')" title="~126 trading day (6-month) price return (%)">6M Ret <span id="sort-ret_6m" class="sort-indicator"></span></th>
-          <th onclick="sortAnalysis('ret_1y')" title="~252 trading day (1-year) price return (%)">1Y Ret <span id="sort-ret_1y" class="sort-indicator"></span></th>
-          <th onclick="sortAnalysis('ret_2y')" title="~504 trading day (2-year) price return (%)">2Y Ret <span id="sort-ret_2y" class="sort-indicator"></span></th>
-          <th onclick="sortAnalysis('ret_3y')" title="~756 trading day (3-year) price return (%)">3Y Ret <span id="sort-ret_3y" class="sort-indicator"></span></th>
-          <th onclick="sortAnalysis('ret_4y')" title="~1008 trading day (4-year) price return (%)">4Y Ret <span id="sort-ret_4y" class="sort-indicator"></span></th>
-          <th onclick="sortAnalysis('ret_5y')" title="~1200 trading day (5-year) price return (%)">5Y Ret <span id="sort-ret_5y" class="sort-indicator"></span></th>
+          <th class="col-sig" onclick="sortAnalysis('action')" title="ACTION — the decision. ⏫ ADD = mechanical buy (Setup BUY + monthly up + rising 200DMA, not extended). 🔎 REVERSAL = watch (deep below ATH but jumping — check fundamentals). ✂️ TRIM = watch (heavy-volume distribution at highs). ⏬ EXIT = watch (breakdown below a falling 200DMA). Only ⏫ is a mechanical buy; the rest are research alerts.">Action <span class="col-filter-icon" data-col="action" title="Filter" onclick="event.stopPropagation();openColFilter('action',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-action" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('ret_1d')" title="1-day price return (%)">1D Ret <span class="col-filter-icon" data-col="ret_1d" title="Filter" onclick="event.stopPropagation();openColFilter('ret_1d',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-ret_1d" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('ret_1w')" title="~5 trading day (1-week) price return (%)">1W Ret <span class="col-filter-icon" data-col="ret_1w" title="Filter" onclick="event.stopPropagation();openColFilter('ret_1w',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-ret_1w" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('ret_1m')" title="~21 trading day (1-month) price return (%)">1M Ret <span class="col-filter-icon" data-col="ret_1m" title="Filter" onclick="event.stopPropagation();openColFilter('ret_1m',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-ret_1m" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('ret_6m')" title="~126 trading day (6-month) price return (%)">6M Ret <span class="col-filter-icon" data-col="ret_6m" title="Filter" onclick="event.stopPropagation();openColFilter('ret_6m',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-ret_6m" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('ret_1y')" title="~252 trading day (1-year) price return (%)">1Y Ret <span class="col-filter-icon" data-col="ret_1y" title="Filter" onclick="event.stopPropagation();openColFilter('ret_1y',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-ret_1y" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('ret_2y')" title="~504 trading day (2-year) price return (%)">2Y Ret <span class="col-filter-icon" data-col="ret_2y" title="Filter" onclick="event.stopPropagation();openColFilter('ret_2y',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-ret_2y" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('ret_3y')" title="~756 trading day (3-year) price return (%)">3Y Ret <span class="col-filter-icon" data-col="ret_3y" title="Filter" onclick="event.stopPropagation();openColFilter('ret_3y',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-ret_3y" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('ret_4y')" title="~1008 trading day (4-year) price return (%)">4Y Ret <span class="col-filter-icon" data-col="ret_4y" title="Filter" onclick="event.stopPropagation();openColFilter('ret_4y',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-ret_4y" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('ret_5y')" title="~1200 trading day (5-year) price return (%)">5Y Ret <span class="col-filter-icon" data-col="ret_5y" title="Filter" onclick="event.stopPropagation();openColFilter('ret_5y',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-ret_5y" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('buy_value')">Buy Value <span id="sort-buy_value" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('pres_value')">Present Value <span id="sort-pres_value" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('pnl_abs')">P&L <span id="sort-pnl_abs" class="sort-indicator"></span></th>
@@ -3508,6 +3509,37 @@ function setupCell(s) {
   const tip = `${m.label} — ${SETUP_MEANING[u.key] || ''}. Sn(ST) ${u.st}/100 · Sn(LT) ${u.lt}/100${s.movers_alloc ? ' · Alloc ' + s.movers_alloc : ''}. Click to deep-dive this stock; right-click the header to analyze all filtered stocks together.`;
   return `<td class="col-sig" style="cursor:pointer;text-align:center;" title="${esc(tip)}" onclick="openSetupAnalysis('${esc(s.ticker)}',this)"><span style="display:inline-flex;align-items:center;gap:4px;font-size:0.66rem;font-weight:700;white-space:nowrap;"><span style="color:${m.color};font-size:0.8rem;line-height:1;">${m.emoji}</span><span style="color:var(--text2);">${scores}</span></span></td>`;
 }
+// ════ ACTION — the decision layer (ADD / REVERSAL / TRIM / EXIT) ════
+// Synthesizes Setup + Alloc + Movers into one call. Only ⏫ ADD is a mechanical buy
+// (backtested edge); 🔎/✂️/⏬ are WATCH alerts that route to a fundamental check.
+const ACTION_META = {
+  '⏫': { label: 'ADD', glyph: '▲', color: 'var(--green)', tip: 'ADD (continuation) — Setup BUY + monthly up-move + rising 200DMA, not extended (ext −5..40%, 1M ≤30%). Mechanical BUY (backtested edge). Confirm newsflow, then add.' },
+  '🔎': { label: 'REVERSAL', glyph: '🔎', color: '#facc15', tip: 'REVERSAL WATCH — deep below ATH (>40%) but jumping (1M >15%). NOT a mechanical buy (price signal alone loses). Check for a genuine fundamental shift first.' },
+  '✂️': { label: 'TRIM', glyph: '✂️', color: '#f97316', tip: 'TRIM WATCH — near the highs with a HEAVY-volume monthly drop (vol ≥1.3×) after prior strength: possible distribution. Check if the thesis is breaking before trimming.' },
+  '⏬': { label: 'EXIT', glyph: '▼', color: 'var(--red-text)', tip: 'EXIT WATCH — monthly downtrend below a FALLING 200DMA. NOT a mechanical sell (bounces short-term); exit only on sustained de-rating / broken thesis.' },
+};
+function actionOf(s) {
+  const up = m => m === '🔥' || m === '🚀' || m === '📈' || m === '💥';
+  const dn = m => m === '🧊' || m === '❄️' || m === '📉';
+  const ext = s.price_to_200dma_pct, slope = s.dma200_slope_30d_pct, r1m = s.ret_1m, r6 = s.ret_6m, ath = s.ath_pct, vm = s.vol_month_ratio;
+  const setupKey = (typeof s.setup === 'string') ? s.setup : setupOf(s).key;
+  // ⏫ ADD — mechanical continuation buy
+  if (setupKey === 'BUY' && up(s.movers_m) && slope != null && slope > 0
+      && ext != null && ext >= -5 && ext <= 40 && (r1m == null || r1m <= 30)) return '⏫';
+  // ⏬ EXIT — breakdown below a falling 200DMA
+  if (dn(s.movers_m) && slope != null && slope < 0 && ext != null && ext < 0) return '⏬';
+  // ✂️ TRIM — heavy-volume distribution at the highs
+  if (ath != null && ath > -10 && r1m != null && r1m < -5 && vm != null && vm >= 1.3 && r6 != null && r6 > 20) return '✂️';
+  // 🔎 REVERSAL — deep below ATH but jumping (research)
+  if (ath != null && ath < -40 && r1m != null && r1m > 15) return '🔎';
+  return '';
+}
+function actionCell(s) {
+  const a = s.action || '';
+  if (!a) return '<td class="col-sig" style="text-align:center;color:var(--text3);">—</td>';
+  const m = ACTION_META[a];
+  return `<td class="col-sig" style="text-align:center;cursor:help;" title="${esc(m.tip)}"><span style="font-size:0.9rem;font-weight:800;color:${m.color};">${m.glyph || a}</span></td>`;
+}
 // Deep-dive context + prompt (single or bulk) — the Gate-2 confirmation prompt.
 function _setupCtx(s) {
   const u = setupOf(s);
@@ -3898,6 +3930,26 @@ function _moverTag(s, tf) {
     : (s.movers || null);
 }
 const colFilterDefs = {
+  action: { label: 'Action', type: 'set', get: s => s.action || null,
+    fixedOptions: [ {key:'⏫',label:'▲ Add'}, {key:'🔎',label:'🔎 Reversal'}, {key:'✂️',label:'✂️ Trim'}, {key:'⏬',label:'▼ Exit'} ] },
+  ret_1d: { label: '1D Return', type: 'range', get: s => s.ret_1d,
+    options: [ {key:'below-15', label:'< -15%', min:-Infinity, max:-15}, {key:'minus-15-5', label:'-15% to -5%', min:-15, max:-5}, {key:'minus-5-plus-5', label:'-5% to +5%', min:-5, max:5}, {key:'plus-5-15', label:'+5% to +15%', min:5, max:15}, {key:'above-15', label:'+15% and up', min:15, max:Infinity} ] },
+  ret_1w: { label: '1W Return', type: 'range', get: s => s.ret_1w,
+    options: [ {key:'below-20', label:'< -20%', min:-Infinity, max:-20}, {key:'minus-20-8', label:'-20% to -8%', min:-20, max:-8}, {key:'minus-8-plus-8', label:'-8% to +8%', min:-8, max:8}, {key:'plus-8-20', label:'+8% to +20%', min:8, max:20}, {key:'above-20', label:'+20% and up', min:20, max:Infinity} ] },
+  ret_1m: { label: '1M Return', type: 'range', get: s => s.ret_1m,
+    options: [ {key:'below-30', label:'< -30%', min:-Infinity, max:-30}, {key:'minus-30-10', label:'-30% to -10%', min:-30, max:-10}, {key:'minus-10-plus-10', label:'-10% to +10%', min:-10, max:10}, {key:'plus-10-30', label:'+10% to +30%', min:10, max:30}, {key:'above-30', label:'+30% and up', min:30, max:Infinity} ] },
+  ret_6m: { label: '6M Return', type: 'range', get: s => s.ret_6m,
+    options: [ {key:'below-40', label:'< -40%', min:-Infinity, max:-40}, {key:'minus-40-15', label:'-40% to -15%', min:-40, max:-15}, {key:'minus-15-plus-15', label:'-15% to +15%', min:-15, max:15}, {key:'plus-15-50', label:'+15% to +50%', min:15, max:50}, {key:'above-50', label:'+50% and up', min:50, max:Infinity} ] },
+  ret_1y: { label: '1Y Return', type: 'range', get: s => s.ret_1y,
+    options: [ {key:'below-50', label:'< -50%', min:-Infinity, max:-50}, {key:'minus-50-20', label:'-50% to -20%', min:-50, max:-20}, {key:'minus-20-plus-20', label:'-20% to +20%', min:-20, max:20}, {key:'plus-20-75', label:'+20% to +75%', min:20, max:75}, {key:'above-75', label:'+75% and up', min:75, max:Infinity} ] },
+  ret_2y: { label: '2Y Return', type: 'range', get: s => s.ret_2y,
+    options: [ {key:'below-60', label:'< -60%', min:-Infinity, max:-60}, {key:'minus-60-25', label:'-60% to -25%', min:-60, max:-25}, {key:'minus-25-plus-25', label:'-25% to +25%', min:-25, max:25}, {key:'plus-25-100', label:'+25% to +100%', min:25, max:100}, {key:'above-100', label:'+100% and up', min:100, max:Infinity} ] },
+  ret_3y: { label: '3Y Return', type: 'range', get: s => s.ret_3y,
+    options: [ {key:'below-70', label:'< -70%', min:-Infinity, max:-70}, {key:'minus-70-30', label:'-70% to -30%', min:-70, max:-30}, {key:'minus-30-plus-30', label:'-30% to +30%', min:-30, max:30}, {key:'plus-30-150', label:'+30% to +150%', min:30, max:150}, {key:'above-150', label:'+150% and up', min:150, max:Infinity} ] },
+  ret_4y: { label: '4Y Return', type: 'range', get: s => s.ret_4y,
+    options: [ {key:'below-75', label:'< -75%', min:-Infinity, max:-75}, {key:'minus-75-35', label:'-75% to -35%', min:-75, max:-35}, {key:'minus-35-plus-35', label:'-35% to +35%', min:-35, max:35}, {key:'plus-35-200', label:'+35% to +200%', min:35, max:200}, {key:'above-200', label:'+200% and up', min:200, max:Infinity} ] },
+  ret_5y: { label: '5Y Return', type: 'range', get: s => s.ret_5y,
+    options: [ {key:'below-80', label:'< -80%', min:-Infinity, max:-80}, {key:'minus-80-40', label:'-80% to -40%', min:-80, max:-40}, {key:'minus-40-plus-40', label:'-40% to +40%', min:-40, max:40}, {key:'plus-40-250', label:'+40% to +250%', min:40, max:250}, {key:'above-250', label:'+250% and up', min:250, max:Infinity} ] },
   mgmt_trust_score: { label: 'Mgmt Trust', type: 'range',
     get: s => (s.mgmt_trust && typeof s.mgmt_trust.score === 'number') ? s.mgmt_trust.score : null,
     options: [ {key:'7.5+', label:'7.5 +', min:7.5, max:Infinity}, {key:'5-7.5', label:'5 – 7.5', min:5, max:7.5}, {key:'3-5', label:'3 – 5', min:3, max:5}, {key:'0-3', label:'0 – 3', min:0, max:3} ] },
@@ -4136,6 +4188,8 @@ function openColFilter(field, iconEl) {
   let opts;
   if (def.type === 'range') {
     opts = def.options.map(o => ({ key: o.key, label: o.label }));
+  } else if (def.fixedOptions) {
+    opts = def.fixedOptions.map(o => ({ key: o.key, label: o.label }));
   } else {
     const vals = [...new Set(allStocks.map(s => def.get(s)).filter(v => v != null && v !== ''))].sort();
     opts = vals.map(v => ({ key: String(v), label: String(v) }));
@@ -4380,19 +4434,27 @@ function computeMover(rvol, r, h52, l52, ath, atl, opt) {
   const nearLow  = (l52 != null && l52 <= 2);     // within 2% of 52-week low
   const strongUp = rvol >= volT && r >= upT;
   const strongDn = rvol >= volT && r <= -dnT;
+  // Explosive DAILY breakout — extraordinary single-day volume (≥10×) at a fresh high
+  if (!trend && (nearAth || nearHigh) && strongUp && rvol >= 10) return '💥';
   if (nearAth && strongUp) return '🔥';   // LIFETIME (all-time) high breakout
   if (nearAtl && strongDn) return '🧊';   // LIFETIME (all-time) low breakdown
   if (nearHigh && strongUp) return '🚀';  // 52-week high breakout
   if (nearLow  && strongDn) return '❄️';  // 52-week low breakdown
-  // Trending (weekly/monthly): meaningful move + volume but NOT yet at an extreme
+  // Trending (weekly/monthly): meaningful move + volume. AT an extreme, a move AGAINST the
+  // level is distribution (🔻 at highs) / accumulation (🔼 at lows); otherwise 📈 / 📉.
   if (trend) {
     const atHigh = nearAth || nearHigh, atLow = nearAtl || nearLow;
-    if (!atHigh && rvol >= trend.vol && r >=  trend.up) return '📈';  // 📈 trending up (early re-rating)
-    if (!atLow  && rvol >= trend.vol && r <= -trend.up) return '📉';  // 📉 trending down (early de-rating)
+    const upMove = rvol >= trend.vol && r >=  trend.up;
+    const dnMove = rvol >= trend.vol && r <= -trend.up;
+    if (atHigh && dnMove) return '🔻';   // distribution at the highs
+    if (atLow  && upMove) return '🔼';   // accumulation at the lows
+    if (!atHigh && upMove) return '📈';  // 📈 trending up (early re-rating)
+    if (!atLow  && dnMove) return '📉';  // 📉 trending down (early de-rating)
     return 'No';
   }
-  // Daily SUSPECT override (huge volume spike, possible pump) — overrides V/V+P/P
-  if (opt.suspect && rvol >= 10 && Math.abs(r) >= 3) return '⚠️';
+  // Distribution / accumulation — heavy volume AGAINST the level (a move that fails a breakout)
+  if ((nearAth || nearHigh) && strongDn) return '🔻';  // selling into the highs
+  if ((nearAtl || nearLow)  && strongUp) return '🔼';  // buying the capitulation low
   if (surge) {
     const V = rvol >= 4 && Math.abs(r) >= 3;   // volume-led surge
     const P = rvol >= 3 && Math.abs(r) >= 6;   // price-led surge
@@ -4411,8 +4473,8 @@ function computeMover(rvol, r, h52, l52, ath, atl, opt) {
 function computeAlloc(d, w, m, ctx) {
   ctx = ctx || {};
   const ext = ctx.ext, slope = ctx.slope, da = ctx.da, r1m = ctx.r1m, ts = ctx.ts;
-  const up = t => t === '🔥' || t === '🚀' || t === '📈';
-  const dn = t => t === '🧊' || t === '❄️' || t === '📉';
+  const up = t => t === '🔥' || t === '🚀' || t === '📈' || t === '🔼';
+  const dn = t => t === '🧊' || t === '❄️' || t === '📉' || t === '🔻';
   const hardDn = t => t === '🧊' || t === '❄️';          // new 52wk/lifetime LOW = real breakdown
   const mUp = up(m), mDn = dn(m), wUp = up(w), wDn = dn(w);
   const upCat = mUp || wUp;
@@ -4432,17 +4494,20 @@ function computeAlloc(d, w, m, ctx) {
   // 4) Up-momentum but the sharp move already happened (extended / already ran) → HOLD/TRIM
   if ((ext != null && ext > 50) || (r1m != null && r1m > 30)) return '⏳';
   // 5) STRONG ADD — monthly catalyst in the LOW-RISK sweet spot (near a rising mean & holding)
-  if (mUp && haveTrend && slope >= 1 && ext <= 20 && da != null && da >= 9
+  if (mUp && haveTrend && slope >= 1 && ext <= 35 && da != null && da >= 9
       && (r1m == null || r1m <= 20) && !wDn) return '🏆';
   // 6) ADD (increase) — monthly re-rating, still early, long-term trend rising, not extended
   if (mUp && haveTrend && slope >= 1 && ext <= 40
       && (r1m == null || r1m <= 20) && (da == null || da >= 6) && !wDn) return '💎';
+  // 6b) RECLAIM ADD — reclaiming a turning 200DMA (ext −5..10, slope flat-to-up)
+  if (upCat && haveTrend && ext >= -5 && ext <= 10 && slope >= 0 && (r1m == null || r1m <= 30)) return '💎';
   // 7) START-SMALL / WATCH — early momentum but not yet confirmed
   if (upCat && (slope == null || slope >= -2) && (r1m == null || r1m <= 28)) return '🌱';
   return '';
 }
 function moverStyle(m, r) {
   r = r || 0;
+  if (m === '💥') return 'color:var(--green);font-weight:900;font-size:1.25em';
   if (m === '🔥') return 'color:var(--green);font-weight:800;font-size:1.15em';
   if (m === '🧊') return 'color:var(--red-text);font-weight:800;font-size:1.15em';
   if (m === '🚀') return 'color:var(--green);font-weight:800';
@@ -4450,6 +4515,8 @@ function moverStyle(m, r) {
   if (m === '📈') return 'color:#4ade80;font-weight:700';
   if (m === '📉') return 'color:#f97316;font-weight:700';
   if (m === '⚠️') return 'color:var(--amber-text);font-weight:700';
+  if (m === '🔻') return 'color:var(--red-text);font-weight:800';
+  if (m === '🔼') return 'color:var(--green);font-weight:800';
   if (m === 'V+P' || m === 'V') return r < 0 ? 'color:var(--red-text);font-weight:700' : 'color:var(--amber-text);font-weight:700';
   if (m === 'P') return r < 0 ? 'color:#f97316;font-weight:600' : 'color:var(--green);font-weight:600';
   return 'color:var(--text3)';
@@ -4495,13 +4562,16 @@ function snColor(v) { return v == null ? 'var(--text3)' : v >= 70 ? 'var(--green
 
 // Plain-English meaning of each Movers signal (thresholds calibrated for Indian small/mid-caps)
 const MOVER_MEANING = {
+  '💥': 'EXPLOSIVE breakout — new 52W/all-time high on EXTRAORDINARY volume (≥10× avg), day ≥+3%. Highest-conviction daily breakout — something extraordinary is happening.',
   '🔥': 'LIFETIME-HIGH breakout — at/near all-time high, volume ≥3× avg, day ≥+3%',
   '🚀': '52-WEEK-HIGH breakout — within 2% of 52W high, volume ≥3× avg, day ≥+3%',
   '🧊': 'LIFETIME-LOW breakdown (EXIT) — at/near all-time low, volume ≥3× avg, day ≤−3%',
   '❄️': '52-WEEK-LOW breakdown — within 2% of 52W low, volume ≥3× avg, day ≤−3%',
   '📈': 'Trending UP (early re-rating) — volume + move, not yet at a high (weekly/monthly)',
   '📉': 'Trending DOWN (early de-rating) — volume + move, not yet at a low (weekly/monthly)',
-  '⚠️': 'SUSPECT — abnormal volume spike (≥10× avg) with |day| ≥3%; verify before acting',
+  '⚠️': 'CHURN — huge volume (≥10× avg) but only a moderate move (3–6%): volume not matched by price — verify. A ≥6% move on high volume is a real V+P surge instead.',
+  '🔻': 'DISTRIBUTION — heavy-volume DOWN day at/near the 52W/all-time HIGH (vol ≥3×, day ≤−3%): selling into strength, momentum may be topping',
+  '🔼': 'ACCUMULATION — heavy-volume UP day at/near the 52W/all-time LOW (vol ≥3×, day ≥+3%): capitulation buying, possible reversal',
   'V+P': 'Volume + Price surge: volume ≥4× avg AND |day move| ≥6%',
   'V': 'Volume-led: volume ≥4× avg AND |day move| ≥3%',
   'P': 'Price-led: volume ≥3× avg AND |day move| ≥6%',
@@ -4514,7 +4584,7 @@ function moverTitleTF(s, tf) {
   const vol = tf === 'w' ? s.vol_week_ratio : s.vol_month_ratio;
   const ret = tf === 'w' ? s.ret_1w : s.ret_1m;
   const label = tf === 'w' ? 'Weekly' : 'Monthly';
-  const lvl = { '🔥':'Lifetime-high breakout', '🚀':'52-week-high breakout', '📈':'Trending up (pre-breakout)', '🧊':'Lifetime-low breakdown', '❄️':'52-week-low breakdown', '📉':'Trending down (pre-breakdown)', 'No':'No breakout/breakdown' }[m] || '';
+  const lvl = { '🔥':'Lifetime-high breakout', '🚀':'52-week-high breakout', '📈':'Trending up (pre-breakout)', '🔼':'Accumulation at the lows (buying capitulation)', '🧊':'Lifetime-low breakdown', '❄️':'52-week-low breakdown', '📉':'Trending down (pre-breakdown)', '🔻':'Distribution at the highs (selling into strength)', 'No':'No breakout/breakdown' }[m] || '';
   const nums = [];
   if (vol != null) nums.push(`${label} volume: ${vol.toFixed(1)}× avg`);
   if (ret != null) nums.push(`${label} move: ${ret >= 0 ? '+' : ''}${ret.toFixed(1)}%`);
@@ -4584,6 +4654,7 @@ function renderAnalysisTable() {
       qual_score: (s.peer_cmp && typeof s.peer_cmp.q === 'number') ? s.peer_cmp.q : null,
     };
     row.setup = setupOf(row).key;   // composite Setup signal (for sort/filter)
+    row.action = actionOf(row);     // decision layer (ADD/REVERSAL/TRIM/EXIT) for column/sort/filter
     row.sn_st = (row.rsi14 != null) ? snST(row) : null;        // short-term clock (for ST column)
     row.sn_lt = (row.trend_score != null) ? snLT(row) : null;  // long-term clock (for LT column)
     row.peg = pegOf(row);           // forward-first PEG (for sort/filter)
@@ -4606,6 +4677,12 @@ function renderAnalysisTable() {
       const oA = order[valA] ?? -1, oB = order[valB] ?? -1;
       return analysisSortDir === 'desc' ? oB - oA : oA - oB;
     }
+    // Action sort order: ADD > REVERSAL > (blank) > TRIM > EXIT
+    if (analysisSortBy === 'action') {
+      const order = {'⏫': 5, '🔎': 4, '': 3, '✂️': 2, '⏬': 1};
+      const oA = order[valA] ?? -1, oB = order[valB] ?? -1;
+      return analysisSortDir === 'desc' ? oB - oA : oA - oB;
+    }
     // Setup sort order: BUY > ACCUMULATE > HOLD > BOUNCE > EXIT
     if (analysisSortBy === 'setup') {
       const order = {'BUY': 5, 'ACCUMULATE': 4, 'HOLD': 3, 'BOUNCE': 2, 'EXIT': 1};
@@ -4625,7 +4702,7 @@ function renderAnalysisTable() {
       return analysisSortDir === 'desc' ? oB - oA : oA - oB;
     }
     if (analysisSortBy === 'price_break' || analysisSortBy === 'movers' || analysisSortBy === 'movers_w' || analysisSortBy === 'movers_m') {
-      const order = {'🔥': 11, '🚀': 10, '📈': 9, '🧊': 8, '❄️': 7, '📉': 6, 'V+P': 4, 'V': 3, 'P': 2, 'A+C': 4, 'A': 3, 'C': 2, 'No': 1, '⚠️': 0};
+      const order = {'💥': 12, '🔥': 11, '🚀': 10, '📈': 9, '🧊': 8, '❄️': 7, '📉': 6, '🔼': 5, 'V+P': 4, 'V': 3, 'P': 2, 'A+C': 4, 'A': 3, 'C': 2, 'No': 1, '🔻': 0.5, '⚠️': 0};
       const oA = order[valA] ?? -1, oB = order[valB] ?? -1;
       return analysisSortDir === 'desc' ? oB - oA : oA - oB;
     }
@@ -4670,9 +4747,11 @@ function renderAnalysisTable() {
     if (window._sectorFilter && s.sector_group !== window._sectorFilter) return;
     if (accActive() && !(Array.isArray(s.accounts) && s.accounts.some(a => accSel().includes(a.name)))) return;
     if (analysisFilters.has('mbbull') && !(s.mb_status === 'mustbuy' || s.mb_status === 'bullish')) return;
-    // Increase = Alloc add-signal (🏆/💎) AND Trends BUY; Exit = Alloc reduce (🚨) AND Trends EXIT
-    if (analysisFilters.has('increase') && !(/🏆|💎/.test(s.movers_alloc || '') && s.setup === 'BUY')) return;
-    if (analysisFilters.has('exit') && !(/🚨/.test(s.movers_alloc || '') && s.setup === 'EXIT')) return;
+    // Action filters (backtested gates): ⏫ ADD is a mechanical buy; 🔎/✂️/⏬ are watch alerts.
+    if (analysisFilters.has('add') && s.action !== '⏫') return;
+    if (analysisFilters.has('reversal') && s.action !== '🔎') return;
+    if (analysisFilters.has('trim') && s.action !== '✂️') return;
+    if (analysisFilters.has('exit') && s.action !== '⏬') return;
     if (analysisFilters.has('loss') && (s.pnl_abs || 0) >= 0) return;
 
     // Per-column funnel filters
@@ -4708,6 +4787,7 @@ function renderAnalysisTable() {
       <td class="col-mov" style="${moverStyle(s.movers_m, s.ret_1m)};cursor:pointer" title="${esc(moverTitleTF(s,'m'))}" onclick="openMoversTF('${esc(s.ticker)}','m',this)">${s.movers_m || '—'}</td>
       <td class="col-mov" style="${allocStyle(s.movers_alloc)};cursor:pointer" title="${esc(allocTitle(s.movers_alloc))}" onclick="openMoversTF('${esc(s.ticker)}','alloc',this)">${s.movers_alloc || '—'}</td>
       ${setupCell(s)}
+      ${actionCell(s)}
       <td class="${pc(s.ret_1d)}">${fp(s.ret_1d)}</td>
       <td class="${pc(s.ret_1w)}">${fp(s.ret_1w, 0)}</td>
       <td class="${pc(s.ret_1m)}">${fp(s.ret_1m, 0)}</td>
@@ -4782,6 +4862,9 @@ function renderAnalysisTable() {
     }
     visibleStocks.push(s);
   });
+
+  const companyCount = document.getElementById('analysis-company-count');
+  if (companyCount) companyCount.textContent = visibleStocks.length.toLocaleString('en-IN');
 
   // Summary reflects current filter selection (chips, sector dropdown, account, holdings type, search, or column funnels)
   const anyAnalysisFilter = analysisFilters.size > 0 || !!window._sectorFilter || accActive() || (window._holdingType && window._holdingType !== 'All') || !!searchQ || Object.keys(colFilters).length > 0;
