@@ -113,7 +113,7 @@
       cursor: pointer;
     }
     /* Bigger, easier-to-tap Lock/Unlock button on phones */
-    #lock-btn, #lock-btn-2 {
+    #lock-btn, #lock-btn-2, #lock-btn-3 {
       padding: 7px 14px;
       font-size: 0.9rem;
       font-weight: 700;
@@ -1097,6 +1097,7 @@
 <div class="tabs-bar">
   <div class="tab-item active" id="tab-btn-analysis" onclick="switchTab('analysis')">📈 Dashboard</div>
   <div class="tab-item" id="tab-btn-dashboard" onclick="switchTab('dashboard')">📊 Deep Analysis</div>
+  <div class="tab-item" id="tab-btn-calls" onclick="switchTab('calls')">🗣️ Calls history</div>
 </div>
 
 <div id="view-dashboard" class="tab-content">
@@ -1330,9 +1331,9 @@
     <span style="font-size:0.72rem;color:var(--text3);margin-right:2px;">Filter:</span>
     <button class="analysis-chip active" data-afilter="all" onclick="setAnalysisFilter('all',this)">All</button>
     <button class="analysis-chip" data-afilter="conviction7" onclick="setAnalysisFilter('conviction7',this)">Conv 7+</button>
-    <button class="analysis-chip" data-afilter="trust7" onclick="setAnalysisFilter('trust7',this)">👔 Trust 7+</button>
-    <button class="analysis-chip" data-afilter="quality7" onclick="setAnalysisFilter('quality7',this)">⭐ Quality 7+</button>
-    <button class="analysis-chip" data-afilter="redflag" onclick="setAnalysisFilter('redflag',this)">🚩 Red Flags (&lt;5)</button>
+    <button class="analysis-chip" data-afilter="trust7" onclick="setAnalysisFilter('trust7',this)">👔 Trust &gt;6</button>
+    <button class="analysis-chip" data-afilter="quality7" onclick="setAnalysisFilter('quality7',this)">⭐ Quality &gt;6.5</button>
+    <button class="analysis-chip" data-afilter="redflag" onclick="setAnalysisFilter('redflag',this)">🚩 Red Flags &gt;5</button>
     <button class="analysis-chip" data-afilter="widemoat" onclick="setAnalysisFilter('widemoat',this)">Wide Moat</button>
     <button class="analysis-chip" data-afilter="profit" onclick="setAnalysisFilter('profit',this)">In Profit</button>
     <button class="analysis-chip" data-afilter="movers" onclick="setAnalysisFilter('movers',this)" title="Show any stock moving on ANY timeframe — Daily, Weekly or Monthly (excludes 'No')">Movers</button>
@@ -1340,8 +1341,10 @@
     <button class="analysis-chip" data-afilter="near52wkh" onclick="setAnalysisFilter('near52wkh',this)" title="Within 3% of 52-week high">🔼 Near 52wk High</button>
     <button class="analysis-chip" data-afilter="near52wkl" onclick="setAnalysisFilter('near52wkl',this)" title="Within 5% of 52-week low">🔽 Near 52wk Low</button>
     <button class="analysis-chip" data-afilter="mbbull" onclick="setAnalysisFilter('mbbull',this)" title="Rows flagged MUSTBUY or Bullish in the MB sheet (column E — the MB column)">★ MB/Bullish</button>
-    <button class="analysis-chip" data-afilter="add" style="border-color:var(--green);color:var(--green);" onclick="setAnalysisFilter('add',this)" title="⏫ ADD — mechanical continuation buy: Setup BUY + monthly up-move + rising 200DMA, not extended (ext −5..40%, 1M ≤30%). Backtested edge — confirm newsflow, then add.">▲ Add</button>
-    <button class="analysis-chip" data-afilter="reversal" style="border-color:#facc15;color:#facc15;" onclick="setAnalysisFilter('reversal',this)" title="🔎 REVERSAL WATCH — deep below ATH (>40%) but jumping (1M >15%). NOT a mechanical buy: check for a genuine fundamental shift first.">🔎 Reversal</button>
+    <button class="analysis-chip" data-afilter="add" style="color:var(--green);" onclick="setAnalysisFilter('add',this)" title="⏫ ADD — mechanical continuation buy: Setup BUY + monthly up-move + rising 200DMA, not extended (ext −5..40%, 1M ≤30%). Backtested edge — confirm newsflow, then add.">▲ Add</button>
+    <button class="analysis-chip" data-afilter="reversal" style="color:#b8860b;" onclick="setAnalysisFilter('reversal',this)" title="🔎 REVERSAL WATCH — deep below ATH (>40%) but jumping (1M >15%). NOT a mechanical buy: check for a genuine fundamental shift first.">🔎 Reversal</button>
+    <button class="analysis-chip" data-afilter="shortlist" style="color:var(--green);" onclick="setAnalysisFilter('shortlist',this)" title="BUY watchlist — Quality + clean + active signal: (Conviction ≥7 OR Quality ≥6.8) AND Red-Flags >5 AND Mgmt-Trust >5 AND (▲ Add OR 🔎 Reversal OR an active daily/weekly Mover).">▲ Shortlist</button>
+    <button class="analysis-chip" data-afilter="exits" style="color:var(--red-text);" onclick="setAnalysisFilter('exits',this)" title="EXIT watchlist (mirror of ▲ Shortlist) — a hard ⏬ EXIT action, OR a 🚨 REDUCE alloc together with ≥2 fundamental cracks {Conviction &lt;6, Quality &lt;5.5, Red-Flags &lt;5, Mgmt-Trust &lt;5}. Deliberately narrow — only your most broken, weakest-thesis names.">▼ Exits</button>
     <button class="analysis-chip" data-afilter="loss" onclick="setAnalysisFilter('loss',this)">In Loss</button>
   </div>
 
@@ -1371,6 +1374,8 @@
           <th onclick="sortAnalysis('pnl_pct')">P&L % <span id="sort-pnl_pct" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('quantity')">Qty. <span id="sort-quantity" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('ltp')">CMP <span id="sort-ltp" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('ia_vs_last')" title="IA advisor call — current price vs his LAST recommended price. Green = at/below his call (cheap), yellow/amber = moderately above, red = far above.">IA vs Last <span id="sort-ia_vs_last" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('ia_vs_max')" title="IA advisor call — current price vs his HIGHEST recommended price. Green = at/below, red = far above.">IA vs Max <span id="sort-ia_vs_max" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('buy_avg')" title="Average buying price per share (from the portfolio sheet)">Buy Price <span id="sort-buy_avg" class="sort-indicator"></span></th>
           <th class="cf-narrow" onclick="sortAnalysis('mgmt_trust_score')" title="Management Trust score (/10) — hover a score for the full breakdown">👔 <span class="col-filter-icon" data-col="mgmt_trust_score" title="Filter" onclick="event.stopPropagation();openColFilter('mgmt_trust_score',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-mgmt_trust_score" class="sort-indicator"></span></th>
           <th class="cf-narrow" onclick="sortAnalysis('qual_score')" title="Rating — pure qualitative Quality score (/10): moat, management, capital allocation, pricing power, growth. Hover for breakdown.">⭐ <span class="col-filter-icon" data-col="qual_score" title="Filter" onclick="event.stopPropagation();openColFilter('qual_score',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-qual_score" class="sort-indicator"></span></th>
@@ -1413,6 +1418,22 @@
       </tbody>
     </table>
   </div>
+</div>
+
+<div id="view-calls" class="tab-content">
+  <header class="header">
+    <div class="header-top">
+      <div class="header-actions">
+        <div class="last-updated" id="last-updated-calls" onclick="if(!privacyUnlocked)openPinModal()" title="🔒 Tap to unlock">Loading…</div>
+        <button class="hdr-btn" id="lock-btn-3" onclick="togglePrivacy()" title="Lock/unlock private values">🔒 Lock</button>
+        <button class="hdr-btn" id="theme-toggle-3" onclick="toggleTheme()" title="Toggle dark/light mode">☀️ Light</button>
+        <button class="hdr-btn" onclick="loadIAData()" title="Reload IA calls from the Google Sheet">🔄 Reload IA</button>
+        <button class="hdr-btn" onclick="iaExportExcel()" title="Export the detailed IA call history to Excel" style="padding:4px 8px;display:flex;align-items:center;gap:5px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;"><rect width="24" height="24" rx="3" fill="#1D6F42"/><path d="M6 6l4 6-4 6h2.5l2.5-4 2.5 4H16l-4-6 4-6h-2.5L11 12 8.5 6H6z" fill="white"/></svg><span style="font-size:0.7rem;font-weight:600;">Export calls</span></button>
+      </div>
+    </div>
+  </header>
+  <div id="calls-summary" style="font-size:0.72rem;color:var(--text3);margin:6px 2px;"></div>
+  <div id="calls-history-root" style="padding:2px 4px 40px;"></div>
 </div>
 
 <!-- API KEY SETUP MODAL -->
@@ -1736,7 +1757,7 @@ function renderCard(s) {
   </div>
 
   <div class="holdings-row">
-    Qty: <span>${qty}</span>
+    ${iaCardLink(s)}
   </div>
 
   ${(Array.isArray(s.accounts) && s.accounts.length) ? `
@@ -3843,8 +3864,208 @@ function switchTab(tab) {
     renderAnalysisTable();
   } else if (tab === 'dashboard') {
     renderAll();
+  } else if (tab === 'calls') {
+    renderCallsHistory();
   }
 }
+
+/* ══════════════ IA ADVISOR CALLS (private, read from Google Sheet) ══════════════ */
+const IA_SHEET_ID = '1TSn6HIdcsux4p8cdpU0fx78zKibyxFKnwUUZTHFKfNI';
+let IA_CALLS = {};   // ticker -> {company,status,lastReco,maxReco,signal,held,urgent,blog,ncalls,firstDate,lastDate,maxDate}
+let IA_QUOTES = {};  // ticker -> [{date,action,price,quote,source}]
+let IA_LOADED = false, IA_ERROR = '';
+let callsSearch = '', callsSort = { by: 'vsLast', dir: 'asc' }, callsExpanded = new Set();
+let callsF = { status: new Set(), mustbuy: new Set(), alloc: new Set(), vsLast: new Set(), vsMax: new Set(), cagr: new Set(), age: new Set() };
+let callsMenu = null;
+
+function iaNum(x) { if (typeof x === 'number') return isFinite(x) ? x : null; const n = parseFloat(String(x == null ? '' : x).replace(/[^0-9.\-]/g, '')); return isFinite(n) ? n : null; }
+// gviz cell -> plain value (normalise Google "Date(y,m,d)" cells to YYYY-MM-DD)
+function iaGv(c) { if (!c) return ''; let v = c.v; if (typeof v === 'string') { const m = v.match(/^Date\((\d+),(\d+),(\d+)\)/); if (m) return `${m[1]}-${String(+m[2] + 1).padStart(2, '0')}-${String(+m[3]).padStart(2, '0')}`; } return v == null ? '' : v; }
+function iaGvizRows(resp) { const t = resp.table; return (t.rows || []).map(r => (r.c || []).map(iaGv)); }
+let _iaPending = 0;
+function _iaAfterLoad() {
+  if (_iaPending > 0) return; IA_LOADED = true;
+  try { if (document.getElementById('view-analysis')?.classList.contains('active')) renderAnalysisTable(); } catch (e) {}
+  try { if (document.getElementById('view-calls')?.classList.contains('active')) renderCallsHistory(); } catch (e) {}
+}
+// JSONP load (gviz JSON via <script>) — avoids CORS, which the CSV endpoint lacks.
+function _iaLoadTab(sheet, cbName, handler) {
+  _iaPending++;
+  window[cbName] = function (resp) { try { handler(iaGvizRows(resp)); } catch (e) { IA_ERROR = String((e && e.message) || e); console.warn('IA parse error', e); } _iaPending--; _iaAfterLoad(); };
+  const s = document.createElement('script');
+  s.src = `https://docs.google.com/spreadsheets/d/${IA_SHEET_ID}/gviz/tq?tqx=out:json;responseHandler:${cbName}&headers=1&sheet=${encodeURIComponent(sheet)}`;
+  s.onerror = function () { IA_ERROR = 'Could not reach Google Sheet'; _iaPending--; _iaAfterLoad(); };
+  document.head.appendChild(s);
+}
+function loadIAData() {
+  IA_LOADED = false; IA_ERROR = ''; IA_CALLS = {}; IA_QUOTES = {}; _iaPending = 0;
+  _iaLoadTab('IA Stock Calls', '_iaCbStock', rows => {
+    rows.forEach(r => { if (!r || !r[0]) return;
+      IA_CALLS[String(r[0]).trim()] = { company: r[1] || '', status: r[2] || '', lastReco: iaNum(r[3]), maxReco: iaNum(r[4]),
+        signal: r[10] || '', held: String(r[11] || '').trim().toUpperCase() === 'Y', urgent: String(r[12] || '').trim().toUpperCase() === 'Y',
+        blog: r[13] || '', ncalls: iaNum(r[14]), firstDate: r[15] || '', lastDate: r[16] || '', maxDate: r[17] || '', mustbuy: r[18] || '' };
+    });
+  });
+  _iaLoadTab('IA All Calls', '_iaCbAll', rows => {
+    rows.forEach(r => { if (!r || !r[0]) return; const t = String(r[0]).trim();
+      (IA_QUOTES[t] = IA_QUOTES[t] || []).push({ date: r[2] || '', action: r[3] || '', price: (r[4] === '' || r[4] == null) ? '' : String(r[4]), quote: r[5] || '', source: r[6] || '', mustbuy: r[7] || '' });
+    });
+  });
+}
+function iaColor(v) { if (v == null) return 'var(--text3)'; if (v <= 0) return 'var(--green)'; if (v <= 20) return '#eab308'; if (v <= 40) return '#f59e0b'; return 'var(--red-text)'; }
+function iaVsCell(v) { if (v == null) return '<td style="text-align:right;color:var(--text3)">—</td>'; return `<td style="text-align:right;font-weight:600;color:${iaColor(v)}">${v >= 0 ? '+' : ''}${v.toFixed(0)}%</td>`; }
+function iaCmp(t) { const p = window._prices; if (p && p[t] && p[t].ltp != null) return p[t].ltp; const s = (typeof allStocks !== 'undefined') ? allStocks.find(x => x.ticker === t) : null; return s && s.ltp != null ? s.ltp : null; }
+function iaCagr(reco, cmp, dateStr) { if (!reco || cmp == null || !dateStr) return null; const d = new Date(dateStr); if (isNaN(d.getTime())) return null; const days = (Date.now() - d.getTime()) / 86400000; if (days <= 0) return null; const ratio = cmp / reco; return days >= 365 ? (Math.pow(ratio, 365 / days) - 1) * 100 : (ratio - 1) * 100; }
+// ── bucket + metric helpers ──
+function iaVsBucket(v) { if (v == null) return 'na'; if (v <= 0) return 'disc'; if (v <= 20) return 'b20'; if (v <= 40) return 'b40'; return 'prem'; }
+function iaCagrBucket(v) { if (v == null) return 'na'; if (v < 0) return 'neg'; if (v <= 15) return 'c15'; if (v <= 30) return 'c30'; return 'c30p'; }
+function iaAgeBucket(y) { if (y == null) return 'na'; if (y < 1) return 'a1'; if (y <= 3) return 'a3'; if (y <= 5) return 'a5'; return 'a5p'; }
+function iaAgeYears(dateStr) { if (!dateStr) return null; const d = new Date(dateStr); if (isNaN(d.getTime())) return null; const y = (Date.now() - d.getTime()) / (365.25 * 86400000); return y < 0 ? null : y; }
+function iaAgeFmt(y) { if (y == null) return '—'; return y < 1 ? (y * 12).toFixed(1) + 'm' : y.toFixed(1) + 'y'; }
+function iaHoldingValue(t) { const p = window._prices; if (p && p[t] && p[t].quantity && p[t].ltp) return p[t].quantity * p[t].ltp; return 0; }
+function iaAlloc(t) { const hv = iaHoldingValue(t); if (hv == null || hv === 0) return 'not'; return hv >= 30000 ? 'held' : 'low'; }
+const IA_ALLOC_META = { held: { label: 'Held', color: 'var(--green)' }, low: { label: 'Low', color: '#eab308' }, not: { label: 'Not held', color: 'var(--text3)' } };
+const IA_FILTER_OPTS = {
+  status: null,
+  mustbuy: [['MUSTBUY', '⭐ Must buy'], ['BULLISH', '🔼 Bullish'], ['', '— none']],
+  alloc: [['held', '🟢 Held (≥₹30k)'], ['low', '🟡 Low (<₹30k)'], ['not', '⚪ Not held']],
+  vsLast: [['disc', '🟢 ≤0% (at/below)'], ['b20', '🟡 0–20%'], ['b40', '🟠 20–40%'], ['prem', '🔴 >40%'], ['na', '— no CMP']],
+  vsMax: [['disc', '🟢 ≤0% (at/below)'], ['b20', '🟡 0–20%'], ['b40', '🟠 20–40%'], ['prem', '🔴 >40%'], ['na', '— no CMP']],
+  cagr: [['neg', '🔴 <0%'], ['c15', '0–15%'], ['c30', '15–30%'], ['c30p', '🟢 >30%'], ['na', '—']],
+  age: [['a1', '<1y'], ['a3', '1–3y'], ['a5', '3–5y'], ['a5p', '>5y'], ['na', '—']]
+};
+function iaToggleFilter(field, val) { const s = callsF[field]; if (s.has(val)) s.delete(val); else s.add(val); renderCallsHistory(); }
+function iaOpenMenu(field) { callsMenu = (callsMenu === field ? null : field); renderCallsHistory(); }
+function iaClearAllSets() { Object.values(callsF).forEach(s => s.clear()); }
+function iaClearFilters() { iaClearAllSets(); callsSearch = ''; callsMenu = null; renderCallsHistory(); }
+function iaClearSearch() { callsSearch = ''; const i = document.getElementById('calls-search'); if (i) i.value = ''; renderCallsHistory(); }
+function iaReset() { callsSearch = ''; iaClearAllSets(); callsExpanded = new Set(); callsMenu = null; callsSort = { by: 'vsLast', dir: 'asc' }; const i = document.getElementById('calls-search'); if (i) i.value = ''; renderCallsHistory(); }
+function iaExportExcel() {
+  const rows = [['Ticker', 'Company', 'Date', 'Action', 'IA price', 'Quote', 'Source']];
+  Object.keys(IA_QUOTES).sort().forEach(t => { (IA_QUOTES[t] || []).slice().sort((a, b) => String(b.date).localeCompare(String(a.date))).forEach(m => { rows.push([t, IA_CALLS[t] ? IA_CALLS[t].company : '', m.date, m.action, m.price, m.quote, m.source]); }); });
+  const e2 = s => String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  const body = rows.map(r => '<tr>' + r.map(c => `<td>${e2(c)}</td>`).join('') + '</tr>').join('');
+  const blob = new Blob([`<html xmlns:x="urn:schemas-microsoft-com:office:excel"><head><meta charset="utf-8"></head><body><table>${body}</table></body></html>`], { type: 'application/vnd.ms-excel' });
+  const url = URL.createObjectURL(blob); const a = document.createElement('a'); a.href = url; a.download = 'IA_call_history_' + new Date().toISOString().slice(0, 10) + '.xls'; a.click(); setTimeout(() => URL.revokeObjectURL(url), 2000);
+}
+function iaCardLink(s) {
+  const ia = IA_CALLS[s.ticker];
+  if (!ia) return '<span style="color:var(--text3);font-size:0.72rem;">No IA calls yet</span>';
+  const n = (IA_QUOTES[s.ticker] || []).length || ia.ncalls || '';
+  return `<span style="cursor:pointer;color:var(--purple-text);font-weight:700;font-size:0.78rem;" title="Open IA's full call history for ${esc(s.ticker)}" onclick="goToCallsHistory('${esc(s.ticker)}')">💬 IA calls${n ? ' (' + n + ')' : ''}${ia.status ? ' · ' + esc(ia.status) : ''} →</span>`;
+}
+function goToCallsHistory(t) {
+  callsSearch = t; iaClearAllSets(); callsExpanded = new Set([t]); callsMenu = null;
+  switchTab('calls');
+  const inp = document.getElementById('calls-search'); if (inp) inp.value = t;
+  setTimeout(() => { const el = document.getElementById('ia-row-' + t); if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' }); }, 160);
+}
+function toggleIaExpand(t) { if (callsExpanded.has(t)) callsExpanded.delete(t); else callsExpanded.add(t); renderCallsHistory(); }
+function renderCallsHistory() {
+  const root = document.getElementById('calls-history-root'); if (!root) return;
+  const summaryEl = document.getElementById('calls-summary');
+  if (!document.getElementById('ia-calls-style')) { const st = document.createElement('style'); st.id = 'ia-calls-style'; st.textContent = '.ia-calls-table{font-size:0.82rem;} .ia-calls-table thead th{color:var(--text2);font-weight:700;padding:8px 7px;border-bottom:2px solid var(--border);background:var(--bg3);vertical-align:middle;white-space:nowrap;} .ia-calls-table tbody td{padding:7px 6px;} .ia-calls-table th:nth-child(3),.ia-calls-table td:nth-child(3){min-width:290px;max-width:340px;} .ia-calls-table .ia-sort{cursor:pointer;padding:7px 3px;display:inline-block;} .ia-calls-table .ia-cf{cursor:pointer;margin-left:3px;padding:6px;display:inline-flex;vertical-align:middle;color:var(--text3);opacity:0.7;} .ia-calls-table .ia-cf:hover{color:var(--blue-text);opacity:1;} .ia-calls-table .ia-cf.on{color:var(--blue);opacity:1;}'; document.head.appendChild(st); }
+  if (!IA_LOADED && !Object.keys(IA_CALLS).length) { root.innerHTML = `<div style="padding:24px;color:var(--text2)">${IA_ERROR ? ('⚠️ Could not load IA data: ' + esc(IA_ERROR) + ' ') : 'Loading IA calls…'}<button onclick="loadIAData()" style="margin-left:8px;padding:4px 10px;">Retry</button></div>`; if (summaryEl) summaryEl.textContent = ''; return; }
+  const _mx = Object.values(IA_CALLS).map(c => c.lastDate).filter(Boolean).sort().pop();
+  const _luc = document.getElementById('last-updated-calls'); if (_luc && _mx) _luc.textContent = '📅 Last IA call: ' + _mx;
+  const q = callsSearch.toLowerCase().trim();
+  let items = Object.keys(IA_CALLS).map(t => { const ia = IA_CALLS[t]; const cmp = iaCmp(t);
+    const vsL = (ia.lastReco > 0 && cmp != null) ? (cmp / ia.lastReco - 1) * 100 : null;
+    const vsM = (ia.maxReco > 0 && cmp != null) ? (cmp / ia.maxReco - 1) * 100 : null;
+    const cg = iaCagr(ia.lastReco, cmp, ia.lastDate), age = iaAgeYears(ia.lastDate), alloc = iaAlloc(t), val = iaHoldingValue(t);
+    return { t, ia, cmp, vsL, vsM, cg, age, alloc, val, bVsL: iaVsBucket(vsL), bVsM: iaVsBucket(vsM), bCg: iaCagrBucket(cg), bAge: iaAgeBucket(age) };
+  });
+  IA_FILTER_OPTS.status = Array.from(new Set(Object.values(IA_CALLS).map(c => c.status).filter(Boolean))).sort().map(s => [s, s]);
+  const matchF = (field, val) => callsF[field].size === 0 || callsF[field].has(val);
+  items = items.filter(x => {
+    if (q && !(x.t.toLowerCase().includes(q) || (x.ia.company || '').toLowerCase().includes(q))) return false;
+    return matchF('status', x.ia.status) && matchF('mustbuy', x.ia.mustbuy || '') && matchF('alloc', x.alloc) && matchF('vsLast', x.bVsL) && matchF('vsMax', x.bVsM) && matchF('cagr', x.bCg) && matchF('age', x.bAge);
+  });
+  const dir = callsSort.dir === 'desc' ? -1 : 1, by = callsSort.by;
+  const keyOf = x => ({ ticker: x.t, company: x.ia.company, status: x.ia.status, mustbuy: x.ia.mustbuy, alloc: x.alloc, value: x.val, vsLast: x.vsL, vsMax: x.vsM, cagr: x.cg, age: x.age, last: x.ia.lastReco, max: x.ia.maxReco, cmp: x.cmp, date: x.ia.lastDate })[by];
+  items.sort((a, b) => { let va = keyOf(a), vb = keyOf(b);
+    if (['ticker', 'date', 'status', 'mustbuy', 'alloc', 'company'].includes(by)) return dir * String(va || '').localeCompare(String(vb || ''));
+    if (va == null) return 1; if (vb == null) return -1; return dir * (va - vb);
+  });
+  const nDisc = items.filter(x => x.bVsL === 'disc').length, nPrem = items.filter(x => x.bVsL === 'prem').length;
+  if (summaryEl) summaryEl.innerHTML = `${items.length} stocks · <span style="color:var(--green)">${nDisc} at/below his call</span> · <span style="color:var(--red-text)">${nPrem} &gt;40% above</span> · click a row for the full call history`;
+  const anyF = (field) => callsF[field].size > 0;
+  const th = (k, label, left, ff) => {
+    const arrow = callsSort.by === k ? (callsSort.dir === 'asc' ? ' ↑' : ' ↓') : '';
+    const funnel = ff ? `<span class="ia-cf${anyF(ff) ? ' on' : ''}" onclick="event.stopPropagation();iaOpenMenu('${ff}')" title="Filter"><svg viewBox="0 0 24 24" width="13" height="13"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span>` : '';
+    let menu = '';
+    if (ff && callsMenu === ff) {
+      const opts = IA_FILTER_OPTS[ff] || [];
+      menu = `<div onclick="event.stopPropagation()" style="position:absolute;z-index:50;top:100%;left:0;background:var(--bg);border:1px solid var(--border);border-radius:6px;box-shadow:0 6px 20px rgba(0,0,0,0.4);padding:6px;min-width:160px;text-align:left;font-weight:400;text-transform:none;">
+        ${opts.map(([v, lab]) => `<label style="display:flex;align-items:center;gap:8px;padding:6px 4px;cursor:pointer;font-size:0.78rem;color:var(--text)"><input type="checkbox" ${callsF[ff].has(v) ? 'checked' : ''} onclick="iaToggleFilter('${ff}','${v}')">${esc(lab)}</label>`).join('')}
+        <div style="border-top:1px solid var(--border);margin-top:4px;padding-top:6px;"><span onclick="callsF['${ff}'].clear();renderCallsHistory()" style="cursor:pointer;color:var(--blue-text);font-size:0.74rem;">Clear</span></div>
+      </div>`;
+    }
+    return `<th style="position:relative;text-align:${left ? 'left' : 'right'}"><span class="ia-sort" onclick="callsSort=(callsSort.by==='${k}'?{by:'${k}',dir:(callsSort.dir==='asc'?'desc':'asc')}:{by:'${k}',dir:'asc'});renderCallsHistory()">${label}${arrow}</span>${funnel}${menu}</th>`;
+  };
+  const fmt = (v, d = 0) => v == null ? '—' : (typeof v === 'number' ? v.toLocaleString('en-IN', { minimumFractionDigits: d, maximumFractionDigits: d }) : v);
+  const pct = v => v == null ? '<span style="color:var(--text3)">—</span>' : `<span style="color:${iaColor(v)};font-weight:600">${v >= 0 ? '+' : ''}${v.toFixed(0)}%</span>`;
+  const mbBadge = m => m === 'MUSTBUY' ? '<span style="color:var(--green);font-weight:700">⭐ MB</span>' : m === 'BULLISH' ? '<span style="color:var(--blue-text);font-weight:600">🔼 Bullish</span>' : '';
+  const nF = Object.values(callsF).reduce((n, s) => n + s.size, 0);
+  const has = (f, v) => callsF[f].has(v);
+  const cc = (label, f, v) => `<button onclick="iaToggleFilter('${f}','${v}')" style="padding:3px 9px;border-radius:13px;border:1px solid var(--border);cursor:pointer;font-size:0.7rem;font-weight:600;background:${has(f, v) ? '#7c3aed' : 'var(--bg2)'};color:${has(f, v) ? '#fff' : 'var(--text2)'}">${label}</button>`;
+  const ccAll = `<button onclick="iaClearFilters()" style="padding:3px 9px;border-radius:13px;border:1px solid var(--border);cursor:pointer;font-size:0.7rem;font-weight:600;background:${nF === 0 ? '#7c3aed' : 'var(--bg2)'};color:${nF === 0 ? '#fff' : 'var(--text2)'}">All</button>`;
+  let html = `
+    <div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:6px 0;">
+      <div style="position:relative;display:inline-flex;align-items:center;">
+        <input id="calls-search" value="${esc(callsSearch)}" oninput="callsSearch=this.value;window._csFocus=true;clearTimeout(window._csT);window._csT=setTimeout(renderCallsHistory,200)" placeholder="🔍 Ticker…" style="width:150px;padding:6px 22px 6px 10px;border-radius:8px;border:1px solid var(--border);background:var(--bg2);color:var(--text);font-size:0.8rem;">
+        ${callsSearch ? `<span onclick="iaClearSearch()" title="Clear" style="position:absolute;right:7px;cursor:pointer;color:var(--text3);font-weight:700;font-size:1rem;line-height:1;">×</span>` : ''}
+      </div>
+      <button onclick="iaReset()" title="Reset everything — close all expanded rows, clear search & filters" style="padding:5px 12px;border-radius:8px;border:1px solid var(--border);cursor:pointer;font-size:0.74rem;font-weight:600;background:var(--bg2);color:var(--text2);">↺ Reset</button>
+      ${nF ? `<span onclick="iaClearFilters()" style="cursor:pointer;color:var(--blue-text);font-size:0.72rem;">✕ Clear ${nF} filter${nF > 1 ? 's' : ''}</span>` : '<span style="color:var(--text3);font-size:0.68rem;">▼ = filter · click a header to sort</span>'}
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:6px;margin:0 0 8px;">
+      ${ccAll} ${cc('⭐ Must buy', 'mustbuy', 'MUSTBUY')} ${cc('🔼 Bullish', 'mustbuy', 'BULLISH')} ${cc('🟢 At/below call', 'vsLast', 'disc')} ${cc('🟡 Low premium', 'vsLast', 'b20')} ${cc('Held', 'alloc', 'held')} ${cc('Low held', 'alloc', 'low')} ${cc('Not held', 'alloc', 'not')}
+    </div>
+    <div style="overflow-x:visible;"><table class="ia-calls-table" style="width:100%;border-collapse:collapse;">
+      <thead><tr>
+        <th></th>${th('ticker', 'Ticker (' + items.length + ')', true)}${th('company', 'Company', true)}${th('status', 'IA Call status', true, 'status')}${th('mustbuy', 'Signal', true, 'mustbuy')}${th('alloc', 'Alloc', true, 'alloc')}${th('value', 'Value (L)')}${th('last', 'Last ₹')}${th('max', 'Max ₹')}${th('cmp', 'CMP')}${th('vsLast', 'vs Last', false, 'vsLast')}${th('vsMax', 'vs Max', false, 'vsMax')}${th('cagr', 'CAGR', false, 'cagr')}${th('age', 'Age', false, 'age')}${th('date', 'Date', true)}<th>Blog</th>
+      </tr></thead><tbody>`;
+  items.forEach(x => { const ia = x.ia, exp = callsExpanded.has(x.t), am = IA_ALLOC_META[x.alloc];
+    html += `<tr id="ia-row-${esc(x.t)}" onclick="toggleIaExpand('${esc(x.t)}')" style="cursor:pointer;text-align:right;border-bottom:1px solid var(--border);${exp ? 'background:var(--bg2);' : ''}">
+      <td style="text-align:center;color:var(--purple-text)">${exp ? '▾' : '▸'}</td>
+      <td style="text-align:left;font-weight:700;color:var(--blue-text)">${esc(x.t)}${ia.urgent ? ' <span style="color:var(--red-text)" title="Was urgent on a call date">*</span>' : ''}</td>
+      <td style="text-align:left;color:var(--text2)">${esc(ia.company || '')}</td>
+      <td style="text-align:left">${esc(ia.status || '')}</td>
+      <td style="text-align:left">${mbBadge(ia.mustbuy)}</td>
+      <td style="text-align:left;color:${am.color};font-weight:600">${am.label}</td>
+      <td style="color:var(--text2)">${x.val ? (x.val / 1e5).toFixed(2) + ' L' : '—'}</td>
+      <td>${fmt(ia.lastReco)}</td><td>${fmt(ia.maxReco)}</td><td>${x.cmp != null ? '₹' + fmt(x.cmp) : '—'}</td>
+      <td>${pct(x.vsL)}</td><td>${pct(x.vsM)}</td><td>${pct(x.cg)}</td>
+      <td style="color:var(--text2)">${iaAgeFmt(x.age)}</td>
+      <td style="text-align:left;color:var(--text3)">${esc(ia.lastDate || '')}</td>
+      <td style="text-align:center">${ia.blog ? `<a href="${esc(ia.blog)}" target="_blank" onclick="event.stopPropagation()" title="Open IA's blog post">📝</a>` : ''}</td>
+    </tr>`;
+    if (exp) { const qs = (IA_QUOTES[x.t] || []).slice().sort((a, b) => String(b.date).localeCompare(String(a.date)));
+      qs.forEach(m => { const cp = parseFloat(m.price); const vsl = (x.cmp != null && isFinite(cp) && cp > 0) ? (x.cmp / cp - 1) * 100 : null;
+        html += `<tr class="ia-exp" style="background:var(--bg2);border-top:1px solid var(--border);vertical-align:top;">
+          <td></td><td></td>
+          <td style="white-space:normal;line-height:1.5;padding:8px 6px;color:var(--text);font-size:0.78rem;">${esc(m.quote)}<span style="color:var(--text3);font-size:0.62rem;"> · ${esc(m.source)}</span></td>
+          <td style="text-align:left"><b style="color:var(--purple-text)">${esc(m.action)}</b></td>
+          <td style="text-align:left">${mbBadge(m.mustbuy)}</td>
+          <td></td><td></td>
+          <td style="text-align:right;color:var(--text2)">${m.price ? '₹' + esc(m.price) : ''}</td>
+          <td></td><td></td>
+          <td style="text-align:right">${vsl == null ? '' : `<span style="color:${iaColor(vsl)};font-weight:600">${vsl >= 0 ? '+' : ''}${vsl.toFixed(0)}%</span>`}</td>
+          <td></td><td></td>
+          <td style="color:var(--text2)">${iaAgeFmt(iaAgeYears(m.date))}</td>
+          <td style="text-align:left;color:var(--text3);white-space:nowrap">${esc(m.date)}</td>
+          <td></td>
+        </tr>`;
+      });
+    }
+  });
+  html += `</tbody></table></div>`;
+  root.innerHTML = html;
+  if (window._csFocus) { const i = document.getElementById('calls-search'); if (i) { i.focus(); i.setSelectionRange(i.value.length, i.value.length); } }
+}
+// Kick off IA data load once the page script is ready.
+loadIAData();
 
 function clearAnalysisSearch() {
   const inp = document.getElementById('analysis-search');
@@ -3873,10 +4094,13 @@ function goToCard(ticker) {
   setTimeout(() => {
     const card = document.querySelector(`.card[data-ticker="${ticker}"]`);
     if (card) {
-      card.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      card.style.outline = '2px solid var(--blue)';
-      card.style.transition = 'outline 0.3s';
-      setTimeout(() => { card.style.outline = ''; }, 2000);
+      card.style.scrollMarginTop = '100px';
+      card.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      const light = document.body.classList.contains('light-mode');
+      const orig = card.style.backgroundColor;
+      card.style.transition = 'background-color 0.4s';
+      card.style.backgroundColor = light ? 'rgba(0,0,0,0.10)' : 'rgba(255,255,255,0.14)';
+      setTimeout(() => { card.style.backgroundColor = orig || ''; }, 2600);
     }
   }, 150);
 }
@@ -4450,6 +4674,7 @@ function computeMover(rvol, r, h52, l52, ath, atl, opt) {
     if (atLow  && upMove) return '🔼';   // accumulation at the lows
     if (!atHigh && upMove) return '📈';  // 📈 trending up (early re-rating)
     if (!atLow  && dnMove) return '📉';  // 📉 trending down (early de-rating)
+    if (rvol >= 6) return 'V';           // last resort: heavy volume, price move ignored
     return 'No';
   }
   // Distribution / accumulation — heavy volume AGAINST the level (a move that fails a breakout)
@@ -4462,6 +4687,7 @@ function computeMover(rvol, r, h52, l52, ath, atl, opt) {
     if (V) return 'V';
     if (P) return 'P';
   }
+  if (rvol >= 6) return 'V';   // last resort: heavy volume (≥6×), price move ignored
   return 'No';
 }
 
@@ -4621,6 +4847,93 @@ function nameTooltip(s) {
   return `${s.name || s.ticker}\n\n${parts.join('\n\n')}\n\n(${hint})`;
 }
 
+// Enrich a base stock (already account-adjusted for qty/buy_avg/ltp/pnl) with the
+// client-side derived fields (movers, alloc, setup, action, PEG, clocks) used by the
+// analysis table AND the per-account summary, so both apply identical filter logic.
+function enrichStockRow(s) {
+  const w52hPct = (s.week52_high && s.ltp) ? (s.ltp - s.week52_high) / s.week52_high * 100 : null;
+  const w52lPct = (s.week52_low  && s.ltp) ? (s.ltp - s.week52_low)  / s.week52_low  * 100 : null;
+  const _mvD = (s.vol_today_ratio != null && s.ret_1d != null) ? computeMover(s.vol_today_ratio, s.ret_1d, w52hPct, w52lPct, s.ath_pct, s.atl_pct, {suspect:true}) : (s.movers || null);
+  const _mvW = (s.vol_week_ratio != null && s.ret_1w != null) ? computeMover(s.vol_week_ratio, s.ret_1w, w52hPct, w52lPct, s.ath_pct, s.atl_pct, {volT:1.5, upT:8, dnT:8, surge:false, trend:{vol:1.3, up:5}}) : (s.movers_w || null);
+  const _mvM = (s.vol_month_ratio != null && s.ret_1m != null) ? computeMover(s.vol_month_ratio, s.ret_1m, w52hPct, w52lPct, s.ath_pct, s.atl_pct, {volT:1.3, upT:12, dnT:12, surge:false, trend:{vol:1.2, up:8}}) : (s.movers_m || null);
+  const row = {
+    ...s,
+    buy_value:       (s.buy_value  != null) ? s.buy_value  : (s.buy_avg || 0) * (s.quantity || 0),
+    pres_value:      (s.pres_value != null) ? s.pres_value : (s.ltp || 0) * (s.quantity || 0),
+    week52_high_pct: w52hPct != null ? Math.round(w52hPct * 10) / 10 : null,
+    week52_low_pct:  w52lPct != null ? Math.round(w52lPct * 10) / 10 : null,
+    // Movers v5: recompute client-side (level tags + trending + suspect + overlay)
+    movers: _mvD,
+    movers_w: _mvW,
+    movers_m: _mvM,
+    movers_alloc: computeAlloc(_mvD, _mvW, _mvM, { ext: s.price_to_200dma_pct, slope: s.dma200_slope_30d_pct, da: s.days_above_200dma_10d, r1m: s.ret_1m, ts: s.trend_score }),
+    // Expose conviction/moat from stocks data for sorting
+    conviction: s.conviction || 0,
+    moat_class:  s.moat_class || '',
+    mgmt_trust_score: (s.mgmt_trust && typeof s.mgmt_trust.score === 'number') ? s.mgmt_trust.score : null,
+    rf_score_val: (s.rf_score && typeof s.rf_score.score === 'number') ? s.rf_score.score : null,
+    qual_score: (s.peer_cmp && typeof s.peer_cmp.q === 'number') ? s.peer_cmp.q : null,
+  };
+  row.setup = setupOf(row).key;   // composite Setup signal (for sort/filter)
+  row.action = actionOf(row);     // decision layer (ADD/REVERSAL/TRIM/EXIT) for column/sort/filter
+  row.sn_st = (row.rsi14 != null) ? snST(row) : null;        // short-term clock (for ST column)
+  row.sn_lt = (row.trend_score != null) ? snLT(row) : null;  // long-term clock (for LT column)
+  row.peg = pegOf(row);           // forward-first PEG (for sort/filter)
+  row.peg_basis = pegBasis(row);  // 'fwd' | 'ttm' | ''
+  return row;
+}
+
+// Single source of truth for the analysis-table filters (chips + search + sector +
+// holdings-type + column funnels). skipAccount=true is used by the per-account summary,
+// where each row already represents a single account so the account-select filter must not apply.
+function rowPassesAnalysisFilters(s, skipAccount) {
+  const searchQ = (document.getElementById('analysis-search')?.value || '').toLowerCase().trim();
+  if (searchQ) {
+    const ticker = (s.ticker || '').toLowerCase();
+    const name   = (s.name   || '').toLowerCase();
+    if (!ticker.includes(searchQ) && !name.includes(searchQ)) return false;
+  }
+  const _ht = s.holding_type || 'Stocks';
+  if (window._holdingType && window._holdingType !== 'All' && _ht !== window._holdingType) return false;
+  if (analysisFilters.has('conviction7') && (s.conviction || 0) < 7) return false;
+  if (analysisFilters.has('trust7') && !(s.mgmt_trust && typeof s.mgmt_trust.score === 'number' && s.mgmt_trust.score > 6)) return false;
+  if (analysisFilters.has('quality7') && !(s.peer_cmp && typeof s.peer_cmp.q === 'number' && s.peer_cmp.q > 6.5)) return false;
+  if (analysisFilters.has('redflag') && !(s.rf_score && typeof s.rf_score.score === 'number' && s.rf_score.score > 5)) return false;
+  if (analysisFilters.has('widemoat') && s.moat_class !== 'wide') return false;
+  if (analysisFilters.has('profit') && (s.pnl_abs || 0) <= 0) return false;
+  if (analysisFilters.has('movers') && ![s.movers, s.movers_w, s.movers_m].some(m => m && m !== 'No')) return false;
+  if (analysisFilters.has('nearath') && !(s.ath_pct != null && s.ath_pct >= -5)) return false;
+  if (analysisFilters.has('near52wkh') && !(s.week52_high_pct != null && s.week52_high_pct >= -3)) return false;
+  if (analysisFilters.has('near52wkl') && !(s.week52_low_pct != null && s.week52_low_pct <= 5)) return false;
+  if (window._sectorFilter && s.sector_group !== window._sectorFilter) return false;
+  if (!skipAccount && accActive() && !(Array.isArray(s.accounts) && s.accounts.some(a => accSel().includes(a.name)))) return false;
+  if (analysisFilters.has('mbbull') && !(s.mb_status === 'mustbuy' || s.mb_status === 'bullish')) return false;
+  // Action filters (backtested gates): ⏫ ADD is a mechanical buy; 🔎/✂️/⏬ are watch alerts.
+  if (analysisFilters.has('add') && s.action !== '⏫') return false;
+  if (analysisFilters.has('reversal') && s.action !== '🔎') return false;
+  if (analysisFilters.has('trim') && s.action !== '✂️') return false;
+  if (analysisFilters.has('exit') && s.action !== '⏬') return false;
+  if (analysisFilters.has('shortlist')) {
+    const q1 = (s.conviction || 0) >= 7 || (typeof s.qual_score === 'number' && s.qual_score >= 6.8);
+    const clean = (typeof s.rf_score_val === 'number' && s.rf_score_val > 5) && (typeof s.mgmt_trust_score === 'number' && s.mgmt_trust_score > 5);
+    const active = m => m && m !== 'No' && m !== '—';
+    const signal = s.action === '⏫' || s.action === '🔎' || active(s.movers) || active(s.movers_w);
+    if (!(q1 && clean && signal)) return false;
+  }
+  if (analysisFilters.has('exits')) {
+    // Mirror of ▲ Shortlist. Weakness = how many fundamental cracks the name shows.
+    const weak = ((s.conviction || 0) < 6 ? 1 : 0)
+      + (typeof s.qual_score === 'number' && s.qual_score < 5.5 ? 1 : 0)
+      + (typeof s.rf_score_val === 'number' && s.rf_score_val < 5 ? 1 : 0)
+      + (typeof s.mgmt_trust_score === 'number' && s.mgmt_trust_score < 5 ? 1 : 0);
+    const isExit = s.action === '⏬' || (s.movers_alloc === '🚨' && weak >= 2);
+    if (!isExit) return false;
+  }
+  if (analysisFilters.has('loss') && (s.pnl_abs || 0) >= 0) return false;
+  if (!rowPassesColFilters(s)) return false;
+  return true;
+}
+
 function renderAnalysisTable() {
   const tbody = document.getElementById('analysis-tbody');
   tbody.innerHTML = '';
@@ -4629,37 +4942,11 @@ function renderAnalysisTable() {
   const searchQ = (document.getElementById('analysis-search')?.value || '').toLowerCase().trim();
 
   const stocks = [...allStocks].map(orig => {
-    const s = accountAdjustStock(orig);
-    const w52hPct = (s.week52_high && s.ltp) ? (s.ltp - s.week52_high) / s.week52_high * 100 : null;
-    const w52lPct = (s.week52_low  && s.ltp) ? (s.ltp - s.week52_low)  / s.week52_low  * 100 : null;
-    const _mvD = (s.vol_today_ratio != null && s.ret_1d != null) ? computeMover(s.vol_today_ratio, s.ret_1d, w52hPct, w52lPct, s.ath_pct, s.atl_pct, {suspect:true}) : (s.movers || null);
-    const _mvW = (s.vol_week_ratio != null && s.ret_1w != null) ? computeMover(s.vol_week_ratio, s.ret_1w, w52hPct, w52lPct, s.ath_pct, s.atl_pct, {volT:1.5, upT:8, dnT:8, surge:false, trend:{vol:1.3, up:5}}) : (s.movers_w || null);
-    const _mvM = (s.vol_month_ratio != null && s.ret_1m != null) ? computeMover(s.vol_month_ratio, s.ret_1m, w52hPct, w52lPct, s.ath_pct, s.atl_pct, {volT:1.3, upT:12, dnT:12, surge:false, trend:{vol:1.2, up:8}}) : (s.movers_m || null);
-    const row = {
-      ...s,
-      buy_value:       (s.buy_value  != null) ? s.buy_value  : (s.buy_avg || 0) * (s.quantity || 0),
-      pres_value:      (s.pres_value != null) ? s.pres_value : (s.ltp || 0) * (s.quantity || 0),
-      week52_high_pct: w52hPct != null ? Math.round(w52hPct * 10) / 10 : null,
-      week52_low_pct:  w52lPct != null ? Math.round(w52lPct * 10) / 10 : null,
-      // Movers v5: recompute client-side (level tags + trending + suspect + overlay)
-      movers: _mvD,
-      movers_w: _mvW,
-      movers_m: _mvM,
-      movers_alloc: computeAlloc(_mvD, _mvW, _mvM, { ext: s.price_to_200dma_pct, slope: s.dma200_slope_30d_pct, da: s.days_above_200dma_10d, r1m: s.ret_1m, ts: s.trend_score }),
-      // Expose conviction/moat from stocks data for sorting
-      conviction: s.conviction || 0,
-      moat_class:  s.moat_class || '',
-      mgmt_trust_score: (s.mgmt_trust && typeof s.mgmt_trust.score === 'number') ? s.mgmt_trust.score : null,
-      rf_score_val: (s.rf_score && typeof s.rf_score.score === 'number') ? s.rf_score.score : null,
-      qual_score: (s.peer_cmp && typeof s.peer_cmp.q === 'number') ? s.peer_cmp.q : null,
-    };
-    row.setup = setupOf(row).key;   // composite Setup signal (for sort/filter)
-    row.action = actionOf(row);     // decision layer (ADD/REVERSAL/TRIM/EXIT) for column/sort/filter
-    row.sn_st = (row.rsi14 != null) ? snST(row) : null;        // short-term clock (for ST column)
-    row.sn_lt = (row.trend_score != null) ? snLT(row) : null;  // long-term clock (for LT column)
-    row.peg = pegOf(row);           // forward-first PEG (for sort/filter)
-    row.peg_basis = pegBasis(row);  // 'fwd' | 'ttm' | ''
-    return row;
+    const s = enrichStockRow(accountAdjustStock(orig));
+    const ia = IA_CALLS[s.ticker];
+    s.ia_vs_last = (ia && ia.lastReco > 0 && s.ltp != null) ? (s.ltp / ia.lastReco - 1) * 100 : null;
+    s.ia_vs_max  = (ia && ia.maxReco  > 0 && s.ltp != null) ? (s.ltp / ia.maxReco  - 1) * 100 : null;
+    return s;
   });
 
   // Sort
@@ -4724,38 +5011,7 @@ function renderAnalysisTable() {
   visibleStocks.length = 0;
 
   stocks.forEach(s => {
-    // Filter by search query
-    if (searchQ) {
-      const ticker = (s.ticker || '').toLowerCase();
-      const name   = (s.name   || '').toLowerCase();
-      if (!ticker.includes(searchQ) && !name.includes(searchQ)) return;
-    }
-    // Holdings-type master filter (independent of the chips; defaults to Stocks)
-    const _ht = s.holding_type || 'Stocks';
-    if (window._holdingType && window._holdingType !== 'All' && _ht !== window._holdingType) return;
-    // Filter by chips (multi-select: row must pass ALL active filters)
-    if (analysisFilters.has('conviction7') && (s.conviction || 0) < 7) return;
-    if (analysisFilters.has('trust7') && !(s.mgmt_trust && typeof s.mgmt_trust.score === 'number' && s.mgmt_trust.score >= 7)) return;
-    if (analysisFilters.has('quality7') && !(s.peer_cmp && typeof s.peer_cmp.q === 'number' && s.peer_cmp.q >= 7)) return;
-    if (analysisFilters.has('redflag') && !(s.rf_score && typeof s.rf_score.score === 'number' && s.rf_score.score < 5)) return;
-    if (analysisFilters.has('widemoat') && s.moat_class !== 'wide') return;
-    if (analysisFilters.has('profit') && (s.pnl_abs || 0) <= 0) return;
-    if (analysisFilters.has('movers') && ![s.movers, s.movers_w, s.movers_m].some(m => m && m !== 'No')) return;
-    if (analysisFilters.has('nearath') && !(s.ath_pct != null && s.ath_pct >= -5)) return;
-    if (analysisFilters.has('near52wkh') && !(s.week52_high_pct != null && s.week52_high_pct >= -3)) return;
-    if (analysisFilters.has('near52wkl') && !(s.week52_low_pct != null && s.week52_low_pct <= 5)) return;
-    if (window._sectorFilter && s.sector_group !== window._sectorFilter) return;
-    if (accActive() && !(Array.isArray(s.accounts) && s.accounts.some(a => accSel().includes(a.name)))) return;
-    if (analysisFilters.has('mbbull') && !(s.mb_status === 'mustbuy' || s.mb_status === 'bullish')) return;
-    // Action filters (backtested gates): ⏫ ADD is a mechanical buy; 🔎/✂️/⏬ are watch alerts.
-    if (analysisFilters.has('add') && s.action !== '⏫') return;
-    if (analysisFilters.has('reversal') && s.action !== '🔎') return;
-    if (analysisFilters.has('trim') && s.action !== '✂️') return;
-    if (analysisFilters.has('exit') && s.action !== '⏬') return;
-    if (analysisFilters.has('loss') && (s.pnl_abs || 0) >= 0) return;
-
-    // Per-column funnel filters
-    if (!rowPassesColFilters(s)) return;
+    if (!rowPassesAnalysisFilters(s)) return;
 
     const pnlAbs = (s.pnl_abs || 0);
     const pnlPct = (s.pnl_pct || 0);
@@ -4803,6 +5059,8 @@ function renderAnalysisTable() {
       <td class="${pc(pnlPct)}">${prv(f(pnlPct,1) + '%')}</td>
       <td>${prv(f(s.quantity))}</td>
       <td>${s.ltp != null ? '₹'+f(s.ltp,0) : '—'}</td>
+      ${iaVsCell(s.ia_vs_last)}
+      ${iaVsCell(s.ia_vs_max)}
       <td>${s.buy_avg != null ? '₹'+f(s.buy_avg,0) : '—'}</td>
       ${mgmtTrustCell(s)}
       ${qualCell(s)}
@@ -4871,6 +5129,7 @@ function renderAnalysisTable() {
   // Clear-all button ignores the default 'Stocks' holding-type toggle (it isn't a user filter).
   const _caf = document.getElementById('clear-all-filters'); if (_caf) _caf.style.display = (analysisFilters.size > 0 || !!window._sectorFilter || accActive() || !!searchQ || Object.keys(colFilters).length > 0) ? 'inline-block' : 'none';
   updateSummary(anyAnalysisFilter && visibleStocks.length > 0 ? visibleStocks : allStocks, 'analysis');
+  renderAccountwise();   // keep the per-account summary in sync with the active filters
   const ts = document.getElementById('last-updated').textContent;
   document.getElementById('last-updated-analysis').textContent = ts;
 }
@@ -4965,7 +5224,14 @@ function computeAccountMetrics(name) {
     const a = s.accounts.find(x => x.name === name);
     if (!a) return;
     const qty = a.qty || 0, buyAvg = a.buy_avg || 0, ltp = s.ltp || 0;
-    scoped.push({ ...s, quantity: qty, buy_avg: buyAvg, ltp, pnl_pct: buyAvg > 0 ? (ltp - buyAvg) / buyAvg * 100 : null });
+    const base = { ...s, quantity: qty, buy_avg: buyAvg, ltp,
+      buy_value: buyAvg * qty, pres_value: ltp * qty,
+      pnl_abs: (ltp - buyAvg) * qty, pnl_pct: buyAvg > 0 ? (ltp - buyAvg) / buyAvg * 100 : null };
+    // Apply the SAME chip/search/column filters as the table (skipping the account-select
+    // filter, since this row IS a single account) so the summary reflects the active view.
+    const row = enrichStockRow(base);
+    if (!rowPassesAnalysisFilters(row, true)) return;
+    scoped.push(row);
   });
   const m = summarize(scoped);
   m.cash = (window._cash && window._cash.by_account && window._cash.by_account[name]) || 0;
@@ -5349,6 +5615,7 @@ async function loadData() {
     peerFetch,
     peerRankFetch
   ]);
+  window._prices = prices || {};
   window._mgmtTrust = mgmtTrust || {};
   window._redFlags = redFlags || {};
   window._peerCmp = peerCmp || {};
@@ -5482,7 +5749,7 @@ async function init() {
     setTimeout(renderAnalysisTable, 100);
 
     // Reflect the current lock state on the buttons
-    document.querySelectorAll('#lock-btn, #lock-btn-2').forEach(b => b && (b.textContent = privacyUnlocked ? '🔓 Unlock' : '🔒 Lock'));
+    document.querySelectorAll('#lock-btn, #lock-btn-2, #lock-btn-3').forEach(b => b && (b.textContent = privacyUnlocked ? '🔓 Unlock' : '🔒 Lock'));
     // On first load, if still locked, auto-prompt for the PIN (Esc / Cancel keeps it locked)
     if (!privacyUnlocked && !window._promptedUnlockOnce) {
       window._promptedUnlockOnce = true;
@@ -5777,7 +6044,7 @@ window._accountPins = [];
 function toggleTheme() {
   const light = document.body.classList.toggle('light-mode');
   const label = light ? '🌙 Dark' : '☀️ Light';
-  document.querySelectorAll('#theme-toggle, #theme-toggle-2').forEach(b => b.textContent = label);
+  document.querySelectorAll('#theme-toggle, #theme-toggle-2, #theme-toggle-3').forEach(b => b.textContent = label);
   try { localStorage.setItem('theme', light ? 'light' : 'dark'); } catch(e) {}
 }
 // Restore saved theme
@@ -5785,7 +6052,7 @@ function toggleTheme() {
   try {
     if (localStorage.getItem('theme') === 'light') {
       document.body.classList.add('light-mode');
-      document.querySelectorAll('#theme-toggle, #theme-toggle-2').forEach(b => b && (b.textContent = '🌙 Dark'));
+      document.querySelectorAll('#theme-toggle, #theme-toggle-2, #theme-toggle-3').forEach(b => b && (b.textContent = '🌙 Dark'));
     }
   } catch(e) {}
 })();
@@ -6058,9 +6325,9 @@ function applyPrivacyState() {
   renderAll();
   updateSummary(allStocks);
   if (!privacyUnlocked) {
-    document.querySelectorAll('#lock-btn, #lock-btn-2').forEach(b => b && (b.textContent = '🔒 Locked'));
+    document.querySelectorAll('#lock-btn, #lock-btn-2, #lock-btn-3').forEach(b => b && (b.textContent = '🔒 Locked'));
   } else {
-    document.querySelectorAll('#lock-btn, #lock-btn-2').forEach(b => b && (b.textContent = '🔓 Unlock'));
+    document.querySelectorAll('#lock-btn, #lock-btn-2, #lock-btn-3').forEach(b => b && (b.textContent = '🔓 Unlock'));
   }
 }
 
@@ -6102,7 +6369,7 @@ function submitPin() {
     closePinModal();
     renderAnalysisTable();
     renderAll();
-    document.querySelectorAll('#lock-btn, #lock-btn-2').forEach(b => b && (b.textContent = '🔓 Unlock'));
+    document.querySelectorAll('#lock-btn, #lock-btn-2, #lock-btn-3').forEach(b => b && (b.textContent = '🔓 Unlock'));
     showToast(`🔓 Unlocked${match.name ? ' — ' + match.name : ''}`, 'green');
   } else {
     const errEl = document.getElementById('pin-error');

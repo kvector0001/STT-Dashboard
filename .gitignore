@@ -24,5 +24,11 @@ CLAUDE_CODE_PROMPT.md
 # Access PINs — soft client-side lock, kept local only (not on public site)
 credin/
 
+# Local-only working data — kept out of the public repo/site
+whatsapp_exports/
+IA_call_tracker*.xlsx
+prompt_outputs/whatsapp_calls_*.xlsx
+prompts/whatsapp_tracker/
+
 # Stray working file
 prompts/New Microsoft Excel Worksheet.xlsx

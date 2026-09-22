@@ -807,6 +807,7 @@ for _, row in portfolio.iterrows():
                                 if   _V and _P: fetched_movers = "V+P"
                                 elif _V:        fetched_movers = "V"
                                 elif _P:        fetched_movers = "P"
+                                elif rvol >= 6: fetched_movers = "V"   # last resort: heavy volume (>=6x), price ignored
                                 else:           fetched_movers = "No"
 
                         # Weekly / Monthly volume ratios + breakout/breakdown (level-based)
@@ -844,6 +845,7 @@ for _, row in portfolio.iterrows():
                             if at_low  and tr_up_move: return "\U0001f53c"  # 🔼 accumulation at the lows
                             if (not at_high) and tr_up_move: return "\U0001f4c8"  # 📈 trending up
                             if (not at_low)  and tr_dn_move: return "\U0001f4c9"  # 📉 trending down
+                            if rv >= 6: return "V"   # last resort: heavy volume (>=6x), price ignored
                             return "No"
                         fetched_movers_w = _mover_tf(fetched_vol_week_ratio, ret_1w, 1.5, 8, 8, 1.3, 5)
                         fetched_movers_m = _mover_tf(fetched_vol_month_ratio, ret_1m, 1.3, 12, 12, 1.2, 8)

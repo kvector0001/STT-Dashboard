@@ -97,6 +97,8 @@ def classify(rvol, ret, *, near_ath=False, near_atl=False, near_52wh=False,
             return UP
         if (not at_low) and tr_dn:
             return DOWN
+        if rvol >= 6:
+            return "V"   # last resort: heavy volume (>=6x), price move ignored
         return "No"
     # Distribution / accumulation — heavy volume AGAINST the level (a failed-breakout move).
     if (near_ath or near_52wh) and strong_dn:
@@ -112,6 +114,8 @@ def classify(rvol, ret, *, near_ath=False, near_atl=False, near_52wh=False,
             return "V"
         if p:
             return "P"
+    if rvol >= 6:
+        return "V"   # last resort: heavy volume (>=6x), price move ignored
     return "No"
 
 
