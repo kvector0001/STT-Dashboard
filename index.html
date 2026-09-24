@@ -1119,6 +1119,7 @@
       <a class="hdr-btn" href="prompt_outputs/management_trust_findings.md" download="management_trust_findings.md" title="Download the full Management Trust scoring report for all 151 holdings" style="text-decoration:none;display:inline-flex;align-items:center;">👔 Mgmt Trust Report</a>
       <a class="hdr-btn" href="prompt_outputs/red_flags_findings.md" download="red_flags_findings.md" title="Download the full Red-Flag forensic scan report for all 151 holdings" style="text-decoration:none;display:inline-flex;align-items:center;">🚩 Red Flags Report</a>
     </div>
+    <button class="hdr-btn nav-back-btn" onclick="navBack()" title="Back to where you came from" style="display:none;font-weight:700;">← Back</button>
   </div>
 </header>
 
@@ -1170,7 +1171,7 @@
   <button class="chip chip-profit" data-filter="profit">In Profit</button>
   <button class="chip chip-loss"   data-filter="loss">In Loss</button>
   <button class="chip" data-filter="exited" style="border-color:#6b7280;color:#9ca3af;">📤 Exited</button>
-  <button class="chip chip-high" data-filter="mustbuy">★ Must Buy</button>
+  <button class="chip" data-filter="held" style="border-color:var(--green);color:var(--green);">📥 Held</button>
   <div class="search-wrap">
     <span class="search-icon">🔍</span>
     <input type="search" id="search" placeholder="Ticker or company…" autocomplete="off" />
@@ -1210,6 +1211,7 @@
       <button class="hdr-btn" id="excel-export-btn-2" onclick="exportToExcel()" title="Export portfolio table to Excel (unlock required)" style="padding:4px 8px;display:flex;align-items:center;gap:5px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;"><rect width="24" height="24" rx="3" fill="#1D6F42"/><path d="M7 7h10v2H7zM7 11h10v2H7zM7 15h10v2H7z" fill="white" opacity="0.3"/><path d="M6 6l4 6-4 6h2.5l2.5-4 2.5 4H16l-4-6 4-6h-2.5L11 12 8.5 6H6z" fill="white"/></svg><span style="font-size:0.7rem;font-weight:600;">XLS</span></button>
       <button class="hdr-btn" id="portfolio-extract-btn" onclick="copyPortfolioExtract()" title="Copy a full Portfolio Extract (all metrics, deep analysis, peers, red flags, mgmt) + AI analysis prompt to clipboard (unlock required)" style="padding:4px 10px;font-size:0.7rem;font-weight:600;">🧠 Portfolio Extract</button>
       </div>
+      <button class="hdr-btn nav-back-btn" onclick="navBack()" title="Back to where you came from" style="display:none;font-weight:700;">← Back</button>
     </div>
   </header>
 
@@ -1430,6 +1432,7 @@
         <button class="hdr-btn" onclick="loadIAData()" title="Reload IA calls from the Google Sheet">🔄 Reload IA</button>
         <button class="hdr-btn" onclick="iaExportExcel()" title="Export the detailed IA call history to Excel" style="padding:4px 8px;display:flex;align-items:center;gap:5px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;"><rect width="24" height="24" rx="3" fill="#1D6F42"/><path d="M6 6l4 6-4 6h2.5l2.5-4 2.5 4H16l-4-6 4-6h-2.5L11 12 8.5 6H6z" fill="white"/></svg><span style="font-size:0.7rem;font-weight:600;">Export calls</span></button>
       </div>
+      <button class="hdr-btn nav-back-btn" onclick="navBack()" title="Back to where you came from" style="display:none;font-weight:700;">← Back</button>
     </div>
   </header>
   <div id="calls-summary" style="font-size:0.72rem;color:var(--text3);margin:6px 2px;"></div>
@@ -3837,7 +3840,7 @@ function openResearchTabs(event, ticker, companyName) {
 }
 
 // ── Tabs ───────────────────────────────────────────────────────────────────
-function switchTab(tab) {
+function switchTab(tab, keepNav) {
   document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
   document.querySelectorAll('.tab-item').forEach(i => i.classList.remove('active'));
   document.getElementById('view-' + tab).classList.add('active');
@@ -3867,6 +3870,64 @@ function switchTab(tab) {
   } else if (tab === 'calls') {
     renderCallsHistory();
   }
+  if (!keepNav) { navStack = []; updateBackBtns(); }
+}
+
+// ── Navigation history stack (Back button restores exact page + filters + scroll) ──
+let navStack = [];
+function _navScrollTop() { return window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0; }
+function updateBackBtns() { const on = navStack.length > 0; document.querySelectorAll('.nav-back-btn').forEach(b => { b.style.display = ''; b.style.opacity = on ? '1' : '0.4'; b.style.pointerEvents = on ? 'auto' : 'none'; b.title = on ? 'Back to where you came from' : 'Back (nothing to go back to yet)'; }); }
+function captureNavState() {
+  const active = (document.querySelector('.tab-content.active')?.id || 'view-analysis').replace('view-', '');
+  const snap = { tab: active, scroll: _navScrollTop() };
+  if (active === 'calls') {
+    snap.calls = { search: callsSearch, sort: { ...callsSort }, expanded: new Set(callsExpanded),
+      f: Object.fromEntries(Object.entries(callsF).map(([k, v]) => [k, new Set(v)])) };
+  } else if (active === 'dashboard') {
+    snap.dash = { deep: new Set(deepActiveFilters), activeFilter, search: searchQuery,
+      sector: window._sectorFilter || '', sortKey };
+  } else if (active === 'analysis') {
+    snap.an = { filters: new Set(analysisFilters),
+      colFilters: Object.fromEntries(Object.entries(colFilters || {}).map(([k, v]) => [k, v instanceof Set ? new Set(v) : v])),
+      sortBy: analysisSortBy, sortDir: analysisSortDir,
+      search: (document.getElementById('analysis-search')?.value || '') };
+  }
+  return snap;
+}
+function pushNav() { navStack.push(captureNavState()); updateBackBtns(); }
+function _activateTab(tab) {
+  document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+  document.querySelectorAll('.tab-item').forEach(i => i.classList.remove('active'));
+  document.getElementById('view-' + tab)?.classList.add('active');
+  document.getElementById('tab-btn-' + tab)?.classList.add('active');
+}
+function navBack() {
+  if (!navStack.length) return;
+  const snap = navStack.pop();
+  _activateTab(snap.tab);
+  if (snap.tab === 'calls' && snap.calls) {
+    callsSearch = snap.calls.search; callsSort = { ...snap.calls.sort }; callsExpanded = new Set(snap.calls.expanded);
+    Object.keys(callsF).forEach(k => { callsF[k] = new Set(snap.calls.f[k] || []); });
+    const inp = document.getElementById('calls-search'); if (inp) inp.value = callsSearch;
+    renderCallsHistory();
+  } else if (snap.tab === 'dashboard' && snap.dash) {
+    deepActiveFilters = new Set(snap.dash.deep); activeFilter = snap.dash.activeFilter;
+    searchQuery = snap.dash.search; window._sectorFilter = snap.dash.sector; sortKey = snap.dash.sortKey;
+    document.querySelectorAll('.chip[data-filter]').forEach(b => b.classList.toggle('active', deepActiveFilters.has(b.dataset.filter) || (deepActiveFilters.size === 0 && b.dataset.filter === 'all')));
+    const ds = document.getElementById('search'); if (ds) ds.value = searchQuery;
+    const secSel = document.getElementById('sector-filter-deep'); if (secSel) secSel.value = window._sectorFilter || '';
+    renderAll();
+  } else if (snap.tab === 'analysis' && snap.an) {
+    analysisFilters = new Set(snap.an.filters); colFilters = snap.an.colFilters || {};
+    analysisSortBy = snap.an.sortBy; analysisSortDir = snap.an.sortDir;
+    const as = document.getElementById('analysis-search'); if (as) { as.value = snap.an.search; const sc = document.getElementById('search-clear'); if (sc) sc.style.display = snap.an.search ? '' : 'none'; }
+    document.querySelectorAll('.analysis-chip').forEach(b => b.classList.toggle('active', analysisFilters.has(b.dataset.afilter) || (analysisFilters.size === 0 && b.dataset.afilter === 'all')));
+    if (typeof updateColFilterIcons === 'function') updateColFilterIcons();
+    renderAnalysisTable();
+  }
+  updateBackBtns();
+  const _y = snap.scroll || 0;
+  requestAnimationFrame(() => requestAnimationFrame(() => { window.scrollTo(0, _y); setTimeout(() => window.scrollTo(0, _y), 80); }));
 }
 
 /* ══════════════ IA ADVISOR CALLS (private, read from Google Sheet) ══════════════ */
@@ -3941,12 +4002,45 @@ function iaClearFilters() { iaClearAllSets(); callsSearch = ''; callsMenu = null
 function iaClearSearch() { callsSearch = ''; const i = document.getElementById('calls-search'); if (i) i.value = ''; renderCallsHistory(); }
 function iaReset() { callsSearch = ''; iaClearAllSets(); callsExpanded = new Set(); callsMenu = null; callsSort = { by: 'vsLast', dir: 'asc' }; const i = document.getElementById('calls-search'); if (i) i.value = ''; renderCallsHistory(); }
 function iaExportExcel() {
-  const rows = [['Ticker', 'Company', 'Date', 'Action', 'IA price', 'Quote', 'Source']];
-  Object.keys(IA_QUOTES).sort().forEach(t => { (IA_QUOTES[t] || []).slice().sort((a, b) => String(b.date).localeCompare(String(a.date))).forEach(m => { rows.push([t, IA_CALLS[t] ? IA_CALLS[t].company : '', m.date, m.action, m.price, m.quote, m.source]); }); });
-  const e2 = s => String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-  const body = rows.map(r => '<tr>' + r.map(c => `<td>${e2(c)}</td>`).join('') + '</tr>').join('');
-  const blob = new Blob([`<html xmlns:x="urn:schemas-microsoft-com:office:excel"><head><meta charset="utf-8"></head><body><table>${body}</table></body></html>`], { type: 'application/vnd.ms-excel' });
-  const url = URL.createObjectURL(blob); const a = document.createElement('a'); a.href = url; a.download = 'IA_call_history_' + new Date().toISOString().slice(0, 10) + '.xls'; a.click(); setTimeout(() => URL.revokeObjectURL(url), 2000);
+  const fmtN = (v, d = 2) => (v == null || v === '' || !isFinite(v)) ? '' : Number(v).toFixed(d);
+  const pctN = v => (v == null || !isFinite(v)) ? '' : (v >= 0 ? '+' : '') + v.toFixed(1) + '%';
+  const sigTxt = m => m === 'MUSTBUY' ? 'Must buy' : m === 'BULLISH' ? 'Bullish' : '';
+  const tickers = Object.keys(IA_CALLS).sort();
+
+  // Sheet 1 — collapsed/current view (all computed columns, no commentary)
+  const sumRows = [['Ticker', 'Company', 'IA Call status', 'Signal', 'Alloc', 'Value (L)', 'Last \u20b9', 'Max \u20b9', 'CMP', 'vs Last %', 'vs Max %', 'CAGR %', 'Age', '# Calls', 'First Date', 'Last Date', 'Held', 'Urgent', 'Blog']];
+  tickers.forEach(t => {
+    const ia = IA_CALLS[t], cmp = iaCmp(t);
+    const vsL = (ia.lastReco > 0 && cmp != null) ? (cmp / ia.lastReco - 1) * 100 : null;
+    const vsM = (ia.maxReco > 0 && cmp != null) ? (cmp / ia.maxReco - 1) * 100 : null;
+    const cg = iaCagr(ia.lastReco, cmp, ia.lastDate), age = iaAgeYears(ia.lastDate);
+    const alloc = iaAlloc(t), val = iaHoldingValue(t);
+    sumRows.push([t, ia.company || '', ia.status || '', sigTxt(ia.mustbuy), (IA_ALLOC_META[alloc] ? IA_ALLOC_META[alloc].label : ''),
+      val ? (val / 1e5).toFixed(2) : '', fmtN(ia.lastReco), fmtN(ia.maxReco), cmp != null ? fmtN(cmp) : '',
+      pctN(vsL), pctN(vsM), pctN(cg), iaAgeFmt(age), ia.ncalls || '', ia.firstDate || '', ia.lastDate || '',
+      ia.held ? 'Y' : 'N', ia.urgent ? 'Y' : 'N', ia.blog || '']);
+  });
+
+  // Sheet 2 — expanded view: every quote with commentary + comparison
+  const allRows = [['Ticker', 'Company', 'Date', 'Action', 'Signal', 'IA price', 'CMP', 'CMP vs IA price %', 'Age', 'Source', 'Commentary']];
+  tickers.forEach(t => {
+    const ia = IA_CALLS[t], cmp = iaCmp(t);
+    (IA_QUOTES[t] || []).slice().sort((a, b) => String(b.date).localeCompare(String(a.date))).forEach(m => {
+      const cp = parseFloat(m.price);
+      const vsl = (cmp != null && isFinite(cp) && cp > 0) ? (cmp / cp - 1) * 100 : null;
+      allRows.push([t, ia.company || '', m.date || '', m.action || '', sigTxt(m.mustbuy),
+        (m.price !== '' && m.price != null) ? ('\u20b9' + m.price) : '', cmp != null ? fmtN(cmp) : '', pctN(vsl),
+        iaAgeFmt(iaAgeYears(m.date)), m.source || '', m.quote || '']);
+    });
+  });
+
+  const esc = s => String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  const cell = v => { const s = String(v == null ? '' : v); const isNum = s !== '' && /^-?\d+(\.\d+)?$/.test(s); return `<Cell><Data ss:Type="${isNum ? 'Number' : 'String'}">${esc(s)}</Data></Cell>`; };
+  const sheet = (name, rows) => `<Worksheet ss:Name="${esc(name)}"><Table>` + rows.map(r => '<Row>' + r.map(cell).join('') + '</Row>').join('') + `</Table></Worksheet>`;
+  const xml = `<?xml version="1.0"?>\n<?mso-application progid="Excel.Sheet"?>\n<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet" xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet">`
+    + sheet('Summary', sumRows) + sheet('All Calls', allRows) + `</Workbook>`;
+  const blob = new Blob([xml], { type: 'application/vnd.ms-excel' });
+  const url = URL.createObjectURL(blob); const a = document.createElement('a'); a.href = url; a.download = 'IA_calls_full_' + new Date().toISOString().slice(0, 10) + '.xls'; a.click(); setTimeout(() => URL.revokeObjectURL(url), 2000);
 }
 function iaCardLink(s) {
   const ia = IA_CALLS[s.ticker];
@@ -3955,8 +4049,9 @@ function iaCardLink(s) {
   return `<span style="cursor:pointer;color:var(--purple-text);font-weight:700;font-size:0.78rem;" title="Open IA's full call history for ${esc(s.ticker)}" onclick="goToCallsHistory('${esc(s.ticker)}')">💬 IA calls${n ? ' (' + n + ')' : ''}${ia.status ? ' · ' + esc(ia.status) : ''} →</span>`;
 }
 function goToCallsHistory(t) {
+  pushNav();
   callsSearch = t; iaClearAllSets(); callsExpanded = new Set([t]); callsMenu = null;
-  switchTab('calls');
+  switchTab('calls', true);
   const inp = document.getElementById('calls-search'); if (inp) inp.value = t;
   setTimeout(() => { const el = document.getElementById('ia-row-' + t); if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' }); }, 160);
 }
@@ -3964,7 +4059,7 @@ function toggleIaExpand(t) { if (callsExpanded.has(t)) callsExpanded.delete(t); 
 function renderCallsHistory() {
   const root = document.getElementById('calls-history-root'); if (!root) return;
   const summaryEl = document.getElementById('calls-summary');
-  if (!document.getElementById('ia-calls-style')) { const st = document.createElement('style'); st.id = 'ia-calls-style'; st.textContent = '.ia-calls-table{font-size:0.82rem;} .ia-calls-table thead th{color:var(--text2);font-weight:700;padding:8px 7px;border-bottom:2px solid var(--border);background:var(--bg3);vertical-align:middle;white-space:nowrap;} .ia-calls-table tbody td{padding:7px 6px;} .ia-calls-table th:nth-child(3),.ia-calls-table td:nth-child(3){min-width:290px;max-width:340px;} .ia-calls-table .ia-sort{cursor:pointer;padding:7px 3px;display:inline-block;} .ia-calls-table .ia-cf{cursor:pointer;margin-left:3px;padding:6px;display:inline-flex;vertical-align:middle;color:var(--text3);opacity:0.7;} .ia-calls-table .ia-cf:hover{color:var(--blue-text);opacity:1;} .ia-calls-table .ia-cf.on{color:var(--blue);opacity:1;}'; document.head.appendChild(st); }
+  if (!document.getElementById('ia-calls-style')) { const st = document.createElement('style'); st.id = 'ia-calls-style'; st.textContent = '.ia-calls-table{font-size:0.82rem;} .ia-calls-table thead th{color:var(--text2);font-weight:700;padding:8px 7px;background:var(--bg3);vertical-align:middle;white-space:nowrap;position:sticky;top:0;z-index:10;box-shadow:inset 0 -2px 0 var(--border);} .ia-calls-table tbody td{padding:7px 6px;} .ia-calls-table th:nth-child(3),.ia-calls-table td:nth-child(3){min-width:290px;max-width:340px;} .ia-calls-table th:nth-child(1),.ia-calls-table td:nth-child(1){position:sticky !important;left:0;z-index:6;background:var(--bg);width:28px;min-width:28px;max-width:28px;text-align:center;} .ia-calls-table th:nth-child(2),.ia-calls-table td:nth-child(2){position:sticky !important;left:28px;z-index:6;background:var(--bg);box-shadow:inset -1px 0 0 var(--border);} .ia-calls-table thead th:nth-child(1),.ia-calls-table thead th:nth-child(2){z-index:14;background:var(--bg3);} .ia-calls-table tr.ia-open td:nth-child(1),.ia-calls-table tr.ia-open td:nth-child(2),.ia-calls-table tr.ia-exp td:nth-child(1),.ia-calls-table tr.ia-exp td:nth-child(2){background:var(--bg2);} .ia-calls-table .ia-sort{cursor:pointer;padding:7px 3px;display:inline-block;} .ia-calls-table .ia-cf{cursor:pointer;margin-left:3px;padding:6px;display:inline-flex;vertical-align:middle;color:var(--text3);opacity:0.7;} .ia-calls-table .ia-cf:hover{color:var(--blue-text);opacity:1;} .ia-calls-table .ia-cf.on{color:var(--blue);opacity:1;}'; document.head.appendChild(st); }
   if (!IA_LOADED && !Object.keys(IA_CALLS).length) { root.innerHTML = `<div style="padding:24px;color:var(--text2)">${IA_ERROR ? ('⚠️ Could not load IA data: ' + esc(IA_ERROR) + ' ') : 'Loading IA calls…'}<button onclick="loadIAData()" style="margin-left:8px;padding:4px 10px;">Retry</button></div>`; if (summaryEl) summaryEl.textContent = ''; return; }
   const _mx = Object.values(IA_CALLS).map(c => c.lastDate).filter(Boolean).sort().pop();
   const _luc = document.getElementById('last-updated-calls'); if (_luc && _mx) _luc.textContent = '📅 Last IA call: ' + _mx;
@@ -4001,7 +4096,7 @@ function renderCallsHistory() {
         <div style="border-top:1px solid var(--border);margin-top:4px;padding-top:6px;"><span onclick="callsF['${ff}'].clear();renderCallsHistory()" style="cursor:pointer;color:var(--blue-text);font-size:0.74rem;">Clear</span></div>
       </div>`;
     }
-    return `<th style="position:relative;text-align:${left ? 'left' : 'right'}"><span class="ia-sort" onclick="callsSort=(callsSort.by==='${k}'?{by:'${k}',dir:(callsSort.dir==='asc'?'desc':'asc')}:{by:'${k}',dir:'asc'});renderCallsHistory()">${label}${arrow}</span>${funnel}${menu}</th>`;
+    return `<th style="text-align:${left ? 'left' : 'right'}"><span class="ia-sort" onclick="callsSort=(callsSort.by==='${k}'?{by:'${k}',dir:(callsSort.dir==='asc'?'desc':'asc')}:{by:'${k}',dir:'asc'});renderCallsHistory()">${label}${arrow}</span>${funnel}${menu}</th>`;
   };
   const fmt = (v, d = 0) => v == null ? '—' : (typeof v === 'number' ? v.toLocaleString('en-IN', { minimumFractionDigits: d, maximumFractionDigits: d }) : v);
   const pct = v => v == null ? '<span style="color:var(--text3)">—</span>' : `<span style="color:${iaColor(v)};font-weight:600">${v >= 0 ? '+' : ''}${v.toFixed(0)}%</span>`;
@@ -4022,14 +4117,14 @@ function renderCallsHistory() {
     <div style="display:flex;flex-wrap:wrap;gap:6px;margin:0 0 8px;">
       ${ccAll} ${cc('⭐ Must buy', 'mustbuy', 'MUSTBUY')} ${cc('🔼 Bullish', 'mustbuy', 'BULLISH')} ${cc('🟢 At/below call', 'vsLast', 'disc')} ${cc('🟡 Low premium', 'vsLast', 'b20')} ${cc('Held', 'alloc', 'held')} ${cc('Low held', 'alloc', 'low')} ${cc('Not held', 'alloc', 'not')}
     </div>
-    <div style="overflow-x:visible;"><table class="ia-calls-table" style="width:100%;border-collapse:collapse;">
+    <div style="overflow:auto;max-height:calc(100vh - 190px);"><table class="ia-calls-table" style="width:100%;border-collapse:collapse;">
       <thead><tr>
         <th></th>${th('ticker', 'Ticker (' + items.length + ')', true)}${th('company', 'Company', true)}${th('status', 'IA Call status', true, 'status')}${th('mustbuy', 'Signal', true, 'mustbuy')}${th('alloc', 'Alloc', true, 'alloc')}${th('value', 'Value (L)')}${th('last', 'Last ₹')}${th('max', 'Max ₹')}${th('cmp', 'CMP')}${th('vsLast', 'vs Last', false, 'vsLast')}${th('vsMax', 'vs Max', false, 'vsMax')}${th('cagr', 'CAGR', false, 'cagr')}${th('age', 'Age', false, 'age')}${th('date', 'Date', true)}<th>Blog</th>
       </tr></thead><tbody>`;
   items.forEach(x => { const ia = x.ia, exp = callsExpanded.has(x.t), am = IA_ALLOC_META[x.alloc];
-    html += `<tr id="ia-row-${esc(x.t)}" onclick="toggleIaExpand('${esc(x.t)}')" style="cursor:pointer;text-align:right;border-bottom:1px solid var(--border);${exp ? 'background:var(--bg2);' : ''}">
+    html += `<tr id="ia-row-${esc(x.t)}" class="${exp ? 'ia-open' : ''}" onclick="toggleIaExpand('${esc(x.t)}')" style="cursor:pointer;text-align:right;border-bottom:1px solid var(--border);${exp ? 'background:var(--bg2);' : ''}">
       <td style="text-align:center;color:var(--purple-text)">${exp ? '▾' : '▸'}</td>
-      <td style="text-align:left;font-weight:700;color:var(--blue-text)">${esc(x.t)}${ia.urgent ? ' <span style="color:var(--red-text)" title="Was urgent on a call date">*</span>' : ''}</td>
+      <td style="text-align:left;font-weight:700;"><span onclick="event.stopPropagation();goToCard('${esc(x.t)}')" title="Open ${esc(x.t)} in Deep Analysis" style="color:var(--blue-text);cursor:pointer;text-decoration:underline dotted;">${esc(x.t)}</span>${ia.urgent ? ' <span style="color:var(--red-text)" title="Was urgent on a call date">*</span>' : ''}</td>
       <td style="text-align:left;color:var(--text2)">${esc(ia.company || '')}</td>
       <td style="text-align:left">${esc(ia.status || '')}</td>
       <td style="text-align:left">${mbBadge(ia.mustbuy)}</td>
@@ -4066,6 +4161,12 @@ function renderCallsHistory() {
 }
 // Kick off IA data load once the page script is ready.
 loadIAData();
+// Close an open Calls-history column-filter dropdown when clicking anywhere outside it.
+if (!window._iaMenuCloserAdded) {
+  window._iaMenuCloserAdded = true;
+  document.addEventListener('click', () => { if (callsMenu !== null) { callsMenu = null; renderCallsHistory(); } });
+}
+updateBackBtns();  // show the Back button on every page (greyed until there's history)
 
 function clearAnalysisSearch() {
   const inp = document.getElementById('analysis-search');
@@ -4077,6 +4178,7 @@ function clearAnalysisSearch() {
 
 // ── Navigate to card on Dashboard tab (Deep Analysis) ─────────────────────
 function goToCard(ticker) {
+  pushNav();
   // Clear all Deep Analysis (cards) filters before navigating
   activeFilter = 'all';
   deepActiveFilters.clear();
@@ -4088,7 +4190,7 @@ function goToCard(ticker) {
   if (cardSearch) cardSearch.value = '';
 
   // Switch to Deep Analysis (cards) tab
-  switchTab('dashboard');
+  switchTab('dashboard', true);
 
   // Scroll to the card after render
   setTimeout(() => {
@@ -5495,38 +5597,33 @@ function updateSummary(stocks, scope = 'all') {
 // ── Filter + Sort + Render ─────────────────────────────────────────────────
 function renderAll() {
   if (!window._accountsPopulated && Array.isArray(allStocks) && allStocks.length) { populateAccountDropdown(); window._accountsPopulated = true; }
-  // For 'exited': show stocks that have analysis but are no longer in portfolio (no live price)
-  if (activeFilter === 'exited') {
-    // Load all stocks from stocksMap (before price filtering) — these are stored in allStocksWithAnalysis
+
+  // Held + Exited pool. Default (neither chip) shows BOTH; the Held / Exited chips narrow to one side.
+  const wantHeld = deepActiveFilters.has('held');
+  const wantExited = deepActiveFilters.has('exited');
+  const showHeld = wantHeld || (!wantHeld && !wantExited);
+  const showExited = wantExited || (!wantHeld && !wantExited);
+  let pool = showHeld ? allStocks.slice() : [];
+  if (showExited) {
     const exitedStocks = (window._allStocksRaw || []).filter(s =>
       !allStocks.find(ps => ps.ticker === s.ticker) &&
-      s.moat_class !== 'pending' &&
-      s.moat_type !== 'Pending'
-    );
-    const container = document.getElementById('cards');
-    document.getElementById('results-count').textContent = `Showing ${exitedStocks.length} exited holdings`;
-    if (exitedStocks.length === 0) {
-      container.innerHTML = `<div id="no-results">No exited stocks with analysis found.</div>`;
-    } else {
-      container.innerHTML = exitedStocks.map(s => renderCard({...s, _exited: true})).join('');
-    }
-    updateSummary(exitedStocks, 'dashboard');
-    return;
+      s.moat_class !== 'pending' && s.moat_type !== 'Pending'
+    ).map(s => ({ ...s, _exited: true }));
+    pool = pool.concat(exitedStocks);
   }
 
-  let visible = allStocks.filter(s => {
+  const otherF = new Set([...deepActiveFilters].filter(f => f !== 'held' && f !== 'exited'));
+  let visible = pool.filter(s => {
     // Deep Analysis cards never show non-equity holdings (Gold / Silver / MF)
     if ((s.holding_type || 'Stocks') !== 'Stocks') return false;
     // Sector dropdown (applies regardless of chip selection)
     if (window._sectorFilter && s.sector_group !== window._sectorFilter) return false;
-    // Multi-select: row must pass ALL active deep filters
-    if (deepActiveFilters.size === 0) return true;
-    if (deepActiveFilters.has('wide')   && s.moat_class !== 'wide') return false;
-    if (deepActiveFilters.has('narrow') && s.moat_class !== 'narrow') return false;
-    if (deepActiveFilters.has('high')   && (s.conviction || 0) < 8) return false;
-    if (deepActiveFilters.has('profit') && !(s.pnl_pct != null && s.pnl_pct >= 0)) return false;
-    if (deepActiveFilters.has('loss')   && !(s.pnl_pct != null && s.pnl_pct < 0)) return false;
-    if (deepActiveFilters.has('mustbuy') && !s.must_buy) return false;
+    if (otherF.size === 0) return true;
+    if (otherF.has('wide')   && s.moat_class !== 'wide') return false;
+    if (otherF.has('narrow') && s.moat_class !== 'narrow') return false;
+    if (otherF.has('high')   && (s.conviction || 0) < 8) return false;
+    if (otherF.has('profit') && !(s.pnl_pct != null && s.pnl_pct >= 0)) return false;
+    if (otherF.has('loss')   && !(s.pnl_pct != null && s.pnl_pct < 0)) return false;
     return true;
   });
 
@@ -5575,7 +5672,8 @@ function renderAll() {
   });
 
   const container = document.getElementById('cards');
-  document.getElementById('results-count').textContent = `Showing ${visible.length} of ${allStocks.length} holdings`;
+  const _nExited = visible.filter(s => s._exited).length, _nHeld = visible.length - _nExited;
+  document.getElementById('results-count').textContent = _nExited ? `Showing ${visible.length} · ${_nHeld} held · ${_nExited} exited` : `Showing ${visible.length} of ${allStocks.length} holdings`;
 
   if (visible.length === 0) {
     container.innerHTML = `<div id="no-results">No stocks match your filters.</div>`;

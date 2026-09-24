@@ -1137,7 +1137,7 @@
     "pnl_pct": 38.76,
     "pnl_abs": 70128.3,
     "updated": "2026-09-22 04:14 UTC",
-    "must_buy": false,
+    "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
       {
@@ -1171,7 +1171,7 @@
         "invested": 14725.9
       }
     ],
-    "mb_status": "others",
+    "mb_status": "mustbuy",
     "mcap_cr": 19345.57,
     "pe": 76.23,
     "forward_pe": 46.39,
@@ -1295,7 +1295,7 @@
     "pnl_pct": -43.15,
     "pnl_abs": -384.55,
     "updated": "2026-09-22 04:14 UTC",
-    "must_buy": false,
+    "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
       {
@@ -1311,7 +1311,7 @@
         "invested": 429.7
       }
     ],
-    "mb_status": "others",
+    "mb_status": "mustbuy",
     "mcap_cr": 5246.45,
     "pe": 26.89,
     "forward_pe": 19.64,
@@ -2453,7 +2453,7 @@
     "pnl_pct": 161.99,
     "pnl_abs": 314915.12,
     "updated": "2026-09-22 04:14 UTC",
-    "must_buy": false,
+    "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
       {
@@ -2487,7 +2487,7 @@
         "invested": 567.98
       }
     ],
-    "mb_status": "others",
+    "mb_status": "mustbuy",
     "mcap_cr": 6801.14,
     "pe": 99.6,
     "forward_pe": 51.91,
@@ -3128,7 +3128,7 @@
     "pnl_pct": 5.4,
     "pnl_abs": 3627.5,
     "updated": "2026-09-22 04:14 UTC",
-    "must_buy": false,
+    "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
       {
@@ -3150,7 +3150,7 @@
         "invested": 7303.1
       }
     ],
-    "mb_status": "others",
+    "mb_status": "mustbuy",
     "mcap_cr": 22872.08,
     "pe": 108.95,
     "forward_pe": 39.76,
@@ -3467,7 +3467,7 @@
         "invested": 25205.85
       }
     ],
-    "mb_status": "others",
+    "mb_status": "bullish",
     "mcap_cr": 5130.58,
     "pe": 58.94,
     "forward_pe": 30.72,
@@ -3552,7 +3552,7 @@
         "invested": 19199.95
       }
     ],
-    "mb_status": "others",
+    "mb_status": "bullish",
     "mcap_cr": 1655.46,
     "pe": 30.31,
     "debt_to_equity": 7.057,
@@ -3891,7 +3891,7 @@
     "pnl_pct": 7.78,
     "pnl_abs": 14283.06,
     "updated": "2026-09-22 04:14 UTC",
-    "must_buy": false,
+    "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
       {
@@ -3925,7 +3925,7 @@
         "invested": 12681.65
       }
     ],
-    "mb_status": "others",
+    "mb_status": "mustbuy",
     "mcap_cr": 19428.33,
     "pe": 43.4,
     "forward_pe": 33.68,
@@ -4368,7 +4368,7 @@
     "pnl_pct": 20.58,
     "pnl_abs": 16341.8,
     "updated": "2026-09-22 04:14 UTC",
-    "must_buy": false,
+    "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
       {
@@ -4390,7 +4390,7 @@
         "invested": 19584.0
       }
     ],
-    "mb_status": "others",
+    "mb_status": "mustbuy",
     "mcap_cr": 20815.22,
     "pe": 5.62,
     "forward_pe": 7.69,
@@ -4683,7 +4683,7 @@
     "pnl_pct": 0.47,
     "pnl_abs": 613.35,
     "updated": "2026-09-22 04:14 UTC",
-    "must_buy": false,
+    "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
       {
@@ -4711,7 +4711,7 @@
         "invested": 17812.6
       }
     ],
-    "mb_status": "others",
+    "mb_status": "mustbuy",
     "mcap_cr": 22161.71,
     "pe": 50.76,
     "forward_pe": 38.92,
@@ -5033,7 +5033,7 @@
     "pnl_pct": -4.2,
     "pnl_abs": -6253.9,
     "updated": "2026-09-22 04:14 UTC",
-    "must_buy": false,
+    "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
       {
@@ -5067,7 +5067,7 @@
         "invested": 11628.6
       }
     ],
-    "mb_status": "others",
+    "mb_status": "mustbuy",
     "mcap_cr": 13229.2,
     "pe": 49.43,
     "forward_pe": 35.01,
@@ -5260,7 +5260,7 @@
     "pnl_pct": 20.14,
     "pnl_abs": 22979.63,
     "updated": "2026-09-22 04:14 UTC",
-    "must_buy": false,
+    "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
       {
@@ -5288,7 +5288,7 @@
         "invested": 16826.05
       }
     ],
-    "mb_status": "others",
+    "mb_status": "mustbuy",
     "mcap_cr": 2331.32,
     "pe": 30.98,
     "forward_pe": 22.89,
@@ -5345,7 +5345,7 @@
     "pnl_pct": 74.39,
     "pnl_abs": 68933.55,
     "updated": "2026-09-22 04:14 UTC",
-    "must_buy": false,
+    "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
       {
@@ -5379,7 +5379,7 @@
         "invested": 5808.0
       }
     ],
-    "mb_status": "others",
+    "mb_status": "mustbuy",
     "mcap_cr": 9865.81,
     "pe": 50.4,
     "forward_pe": 61.66,
@@ -5771,7 +5771,7 @@
         "invested": 25016.4
       }
     ],
-    "mb_status": "others",
+    "mb_status": "bullish",
     "mcap_cr": 741.09,
     "pe": 153.85,
     "debt_to_equity": 74.215,
@@ -5906,7 +5906,7 @@
     "pnl_pct": 91.29,
     "pnl_abs": 95194.79,
     "updated": "2026-09-22 04:14 UTC",
-    "must_buy": false,
+    "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
       {
@@ -5928,7 +5928,7 @@
         "invested": 9848.4
       }
     ],
-    "mb_status": "others",
+    "mb_status": "mustbuy",
     "mcap_cr": 1727.71,
     "pe": 39.22,
     "forward_pe": 49.73,
@@ -6079,7 +6079,7 @@
         "invested": 1968.6
       }
     ],
-    "mb_status": "others",
+    "mb_status": "bullish",
     "mcap_cr": 1524.66,
     "pe": 15.01,
     "debt_to_equity": 63.523,
@@ -6283,7 +6283,7 @@
     "pnl_pct": -6.25,
     "pnl_abs": -7159.34,
     "updated": "2026-09-22 04:14 UTC",
-    "must_buy": false,
+    "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
       {
@@ -6305,7 +6305,7 @@
         "invested": 9958.75
       }
     ],
-    "mb_status": "others",
+    "mb_status": "mustbuy",
     "mcap_cr": 37044.0,
     "pe": 11.24,
     "forward_pe": 9.86,
@@ -6362,7 +6362,7 @@
     "pnl_pct": 79.17,
     "pnl_abs": 112661.25,
     "updated": "2026-09-22 04:14 UTC",
-    "must_buy": false,
+    "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
       {
@@ -6390,7 +6390,7 @@
         "invested": 7787.1
       }
     ],
-    "mb_status": "others",
+    "mb_status": "mustbuy",
     "mcap_cr": 12290.59,
     "pe": 43.44,
     "forward_pe": 26.84,
@@ -6691,7 +6691,7 @@
         "invested": 72298.97
       }
     ],
-    "mb_status": "others",
+    "mb_status": "bullish",
     "mcap_cr": 2822.44,
     "pe": 18.25,
     "forward_pe": 21.15,
@@ -7050,7 +7050,7 @@
     "pnl_pct": 173.5,
     "pnl_abs": 178789.7,
     "updated": "2026-09-22 04:14 UTC",
-    "must_buy": false,
+    "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
       {
@@ -7072,7 +7072,7 @@
         "invested": 12124.6
       }
     ],
-    "mb_status": "others",
+    "mb_status": "mustbuy",
     "mcap_cr": 28367.41,
     "pe": 87.47,
     "forward_pe": 50.13,
@@ -7164,7 +7164,7 @@
         "invested": 9662.0
       }
     ],
-    "mb_status": "others",
+    "mb_status": "bullish",
     "mcap_cr": 2591.67,
     "pe": 37.44,
     "forward_pe": 29.32,
@@ -7443,7 +7443,7 @@
     "pnl_pct": 18.03,
     "pnl_abs": 17472.9,
     "updated": "2026-09-22 04:14 UTC",
-    "must_buy": false,
+    "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
       {
@@ -7459,7 +7459,7 @@
         "invested": 19323.0
       }
     ],
-    "mb_status": "others",
+    "mb_status": "mustbuy",
     "mcap_cr": 14139.26,
     "pe": 67.97,
     "forward_pe": 32.96,
@@ -7580,7 +7580,7 @@
     "pnl_pct": 39.19,
     "pnl_abs": 100397.34,
     "updated": "2026-09-22 04:14 UTC",
-    "must_buy": false,
+    "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
       {
@@ -7608,7 +7608,7 @@
         "invested": 13167.3
       }
     ],
-    "mb_status": "others",
+    "mb_status": "mustbuy",
     "mcap_cr": 50008.29,
     "pe": 71.86,
     "forward_pe": 47.5,
@@ -7736,7 +7736,7 @@
     "pnl_pct": -19.72,
     "pnl_abs": -30923.0,
     "updated": "2026-09-22 04:14 UTC",
-    "must_buy": false,
+    "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
       {
@@ -7764,7 +7764,7 @@
         "invested": 14454.3
       }
     ],
-    "mb_status": "others",
+    "mb_status": "mustbuy",
     "mcap_cr": 40505.08,
     "pe": 68.4,
     "forward_pe": 40.21,
@@ -7963,7 +7963,7 @@
     "pnl_pct": -3.47,
     "pnl_abs": -6607.04,
     "updated": "2026-09-22 04:14 UTC",
-    "must_buy": false,
+    "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
       {
@@ -7991,7 +7991,7 @@
         "invested": 9184.7
       }
     ],
-    "mb_status": "others",
+    "mb_status": "mustbuy",
     "mcap_cr": 17781.65,
     "pe": 52.97,
     "forward_pe": 36.15,
@@ -8417,7 +8417,7 @@
     "pnl_pct": 9.26,
     "pnl_abs": 4862.81,
     "updated": "2026-09-22 04:14 UTC",
-    "must_buy": false,
+    "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
       {
@@ -8439,7 +8439,7 @@
         "invested": 3650.0
       }
     ],
-    "mb_status": "others",
+    "mb_status": "mustbuy",
     "mcap_cr": 3976.76,
     "pe": 33.58,
     "forward_pe": 23.0,
@@ -8642,7 +8642,7 @@
     "pnl_pct": 11.23,
     "pnl_abs": 6603.35,
     "updated": "2026-09-22 04:14 UTC",
-    "must_buy": false,
+    "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
       {
@@ -8664,7 +8664,7 @@
         "invested": 10492.0
       }
     ],
-    "mb_status": "others",
+    "mb_status": "mustbuy",
     "mcap_cr": 7197.64,
     "pe": 43.09,
     "debt_to_equity": 28.506,
@@ -8867,7 +8867,7 @@
     "pnl_pct": 119.19,
     "pnl_abs": 107665.2,
     "updated": "2026-09-22 04:14 UTC",
-    "must_buy": false,
+    "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
       {
@@ -8883,7 +8883,7 @@
         "invested": 34267.2
       }
     ],
-    "mb_status": "others",
+    "mb_status": "mustbuy",
     "mcap_cr": 72476.39,
     "pe": 31.4,
     "forward_pe": 25.32,
@@ -9922,7 +9922,7 @@
         "invested": 25902.49
       }
     ],
-    "mb_status": "others",
+    "mb_status": "bullish",
     "mcap_cr": 1203.08,
     "pe": 14.32,
     "forward_pe": 4.18,
@@ -9990,7 +9990,7 @@
         "invested": 24698.32
       }
     ],
-    "mb_status": "others",
+    "mb_status": "bullish",
     "mcap_cr": 1066.07,
     "pe": 34.59,
     "forward_pe": 15.31,
@@ -10456,7 +10456,7 @@
     "pnl_pct": -7.01,
     "pnl_abs": -3641.34,
     "updated": "2026-09-22 04:14 UTC",
-    "must_buy": false,
+    "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
       {
@@ -10472,7 +10472,7 @@
         "invested": 3096.0
       }
     ],
-    "mb_status": "others",
+    "mb_status": "mustbuy",
     "mcap_cr": 13081.97,
     "pe": 8.08,
     "forward_pe": 85.11,
@@ -10667,7 +10667,7 @@
         "invested": 74929.54
       }
     ],
-    "mb_status": "others",
+    "mb_status": "bullish",
     "mcap_cr": 60539.25,
     "pe": 19.23,
     "forward_pe": 20.81,
@@ -11517,7 +11517,7 @@
     "pnl_pct": -12.75,
     "pnl_abs": -7478.07,
     "updated": "2026-09-22 04:14 UTC",
-    "must_buy": false,
+    "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
       {
@@ -11533,7 +11533,7 @@
         "invested": 9991.52
       }
     ],
-    "mb_status": "others",
+    "mb_status": "mustbuy",
     "mcap_cr": 24910.97,
     "pe": 36.02,
     "forward_pe": 13.19,
@@ -14668,7 +14668,8 @@
     "ret_2y": 103.36,
     "ret_3y": 148.86,
     "ret_4y": 182.96,
-    "ret_5y": 194.18
+    "ret_5y": 194.18,
+    "mb_status": "others"
   },
   "GOLDETF": {
     "ltp": 147.7,
@@ -14695,7 +14696,8 @@
     "ret_2y": 107.46,
     "ret_3y": null,
     "ret_4y": null,
-    "ret_5y": null
+    "ret_5y": null,
+    "mb_status": "others"
   },
   "HDFC GOLD ETF FUND OF FUND - DIRECT PLAN": {
     "ltp": 47.1141,
@@ -14797,7 +14799,8 @@
         "buy_avg": 9161.0,
         "invested": 137415.0
       }
-    ]
+    ],
+    "mb_status": "others"
   },
   "SGBAUG28V": {
     "ltp": 15131.04,
@@ -14821,7 +14824,8 @@
         "buy_avg": 5284.0,
         "invested": 100396.0
       }
-    ]
+    ],
+    "mb_status": "others"
   },
   "SGBAUG29V": {
     "ltp": 15174.69,
@@ -14839,7 +14843,8 @@
         "buy_avg": 8829.17,
         "invested": 52975.0
       }
-    ]
+    ],
+    "mb_status": "others"
   },
   "SGBD29VIII": {
     "ltp": 15252.85,
@@ -14857,7 +14862,8 @@
         "buy_avg": 9046.0,
         "invested": 18092.0
       }
-    ]
+    ],
+    "mb_status": "others"
   },
   "SGBFEB29XI": {
     "ltp": 15104.2,
@@ -14875,7 +14881,8 @@
         "buy_avg": 9081.0,
         "invested": 27243.0
       }
-    ]
+    ],
+    "mb_status": "others"
   },
   "SGBJAN30IX": {
     "ltp": 15230.0,
@@ -14893,7 +14900,8 @@
         "buy_avg": 9077.0,
         "invested": 9077.0
       }
-    ]
+    ],
+    "mb_status": "others"
   },
   "SGBJUL28IV": {
     "ltp": 15101.13,
@@ -14911,7 +14919,8 @@
         "buy_avg": 12777.21,
         "invested": 242767.0
       }
-    ]
+    ],
+    "mb_status": "others"
   },
   "SGBMR29XII": {
     "ltp": 15200.0,
@@ -14929,7 +14938,8 @@
         "buy_avg": 9071.0,
         "invested": 9071.0
       }
-    ]
+    ],
+    "mb_status": "others"
   },
   "SGBSEP29VI": {
     "ltp": 15102.45,
@@ -14947,7 +14957,8 @@
         "buy_avg": 9224.33,
         "invested": 27673.0
       }
-    ]
+    ],
+    "mb_status": "others"
   },
   "SILVERAG": {
     "ltp": 226.13,
@@ -14974,7 +14985,8 @@
     "ret_2y": 172.79,
     "ret_3y": 211.76,
     "ret_4y": null,
-    "ret_5y": null
+    "ret_5y": null,
+    "mb_status": "others"
   },
   "SILVERCASE": {
     "ltp": 23.56,
@@ -15001,6 +15013,7 @@
     "ret_2y": null,
     "ret_3y": null,
     "ret_4y": null,
-    "ret_5y": null
+    "ret_5y": null,
+    "mb_status": "others"
   }
 }

@@ -204,9 +204,11 @@ try:
                 if not t or t.replace('.', '').isdigit():
                     continue
                 st = _norm_mb(_r[mb_status_col]) if (mb_status_col is not None and not pd.isna(_r[mb_status_col])) else 'others'
-                MB_STATUS[t] = st
-                if st == 'mustbuy':
-                    MUSTBUY_SET.add(t)
+                # A ticker can appear on several rows; keep the STRONGEST status (mustbuy > bullish > others).
+                _mb_rank = {'mustbuy': 2, 'bullish': 1, 'others': 0}
+                if _mb_rank[st] > _mb_rank.get(MB_STATUS.get(t), -1):
+                    MB_STATUS[t] = st
+        MUSTBUY_SET = {t for t, s in MB_STATUS.items() if s == 'mustbuy'}
         from collections import Counter as _MBC
         print(f"[INFO] Read Must Buy sheet {mb_sheet_name!r}: {len(MB_STATUS)} tickers | {dict(_MBC(MB_STATUS.values()))}")
     else:
