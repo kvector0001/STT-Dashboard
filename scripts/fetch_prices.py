@@ -68,6 +68,87 @@ def download_portfolio():
         print(f"[ERROR] Failed to download from Google Sheets: {e}")
         return None
 
+# ── FIRST STEP: de-duplicate the MB tab (remove re-added "Auto added" rows) ──
+SHEET_ID = "1TSn6HIdcsux4p8cdpU0fx78zKibyxFKnwUUZTHFKfNI"
+
+def _mb_sa_credentials():
+    """Locate a Google service-account credential for WRITING to the sheet.
+    GitHub Actions: JSON string in the GOOGLE_SA_KEY secret. Local: a *.json under C:\\Login\\Zerodha\\Python."""
+    try:
+        from google.oauth2.service_account import Credentials
+    except Exception:
+        return None
+    scopes = ["https://www.googleapis.com/auth/spreadsheets"]
+    raw = os.environ.get("GOOGLE_SA_KEY") or os.environ.get("GCP_SA_KEY")
+    if raw and raw.strip().startswith("{"):
+        try:
+            return Credentials.from_service_account_info(json.loads(raw), scopes=scopes)
+        except Exception as e:
+            print(f"[MB DEDUP] Bad GOOGLE_SA_KEY secret: {e}")
+    path = os.environ.get("GOOGLE_APPLICATION_CREDENTIALS")
+    if not (path and os.path.exists(path)):
+        cands = glob.glob(r"C:\Login\Zerodha\Python\*.json")
+        path = cands[0] if cands else None
+    if path and os.path.exists(path):
+        try:
+            return Credentials.from_service_account_file(path, scopes=scopes)
+        except Exception as e:
+            print(f"[MB DEDUP] Bad SA key file: {e}")
+    return None
+
+def dedupe_mb_sheet():
+    """Remove duplicate auto-added rows from the MB tab. Keeps the FIRST occurrence of
+    each ticker; deletes any LATER row whose 'Auto added' column == 'Auto added' and whose
+    ticker already appeared above. No-op (skips) when gspread / write creds are unavailable,
+    so a read-only run (e.g. GitHub without the secret) still fetches prices normally."""
+    try:
+        import gspread
+    except Exception:
+        print("[MB DEDUP] gspread not installed — skipping.")
+        return
+    creds = _mb_sa_credentials()
+    if creds is None:
+        print("[MB DEDUP] No service-account credentials — skipping (read-only run).")
+        return
+    try:
+        sh = gspread.authorize(creds).open_by_key(SHEET_ID)
+        ws = sh.worksheet("MB")
+        vals = ws.get_all_values()
+        if len(vals) < 2:
+            print("[MB DEDUP] MB tab empty — skipping.")
+            return
+        hdr = vals[0]
+        def _find(names):
+            return next((i for i, h in enumerate(hdr) if str(h).strip().lower() in names), None)
+        sym_i = _find({"symbol", "ticker", "scrip", "stock"})
+        if sym_i is None:
+            sym_i = 0
+        aa_i = _find({"auto added", "autoadded", "auto_added"})
+        if aa_i is None:
+            aa_i = 5  # column F
+        seen, to_del = set(), []
+        for r in range(1, len(vals)):            # row 0 = header
+            row = vals[r]
+            sym = (row[sym_i] if sym_i < len(row) else "").strip().upper()
+            aa = (row[aa_i] if aa_i < len(row) else "").strip().lower() == "auto added"
+            if not sym:
+                continue
+            if sym in seen and aa:
+                to_del.append(r)                 # 0-based grid row index (header = 0)
+            else:
+                seen.add(sym)
+        if not to_del:
+            print("[MB DEDUP] No duplicate auto-added rows found.")
+            return
+        reqs = [{"deleteDimension": {"range": {"sheetId": ws.id, "dimension": "ROWS",
+                 "startIndex": i, "endIndex": i + 1}}} for i in sorted(to_del, reverse=True)]
+        sh.batch_update({"requests": reqs})
+        print(f"[MB DEDUP] Deleted {len(to_del)} duplicate auto-added row(s); {len(vals) - 1 - len(to_del)} unique rows remain.")
+    except Exception as e:
+        print(f"[MB DEDUP] Skipped (error: {e})")
+
+dedupe_mb_sheet()
+
 # Decide which source to use
 portfolio_file = None
 if os.environ.get("GITHUB_ACTIONS"):
