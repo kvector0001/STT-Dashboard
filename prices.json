@@ -5,7 +5,7 @@
     "quantity": 1.0,
     "pnl_pct": 48.44,
     "pnl_abs": 25.12,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -18,11 +18,11 @@
     ],
     "mb_status": "others",
     "mcap_cr": 9350.29,
-    "pe": 54.21,
+    "pe": 53.09,
     "forward_pe": 24.83,
     "forward_eps": 3.1,
     "debt_to_equity": 213.719,
-    "eps": 1.42,
+    "eps": 1.45,
     "book_value": 11.57,
     "div_yield": 65.0,
     "pat_cagr": 20.0,
@@ -60,7 +60,11 @@
     "ret_1w": -4.66,
     "ret_1m": -9.79,
     "ret_6m": -19.45,
-    "ret_1y": -42.81
+    "ret_1y": -42.81,
+    "ret_2y": null,
+    "ret_3y": null,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "ASTERDM": {
     "ltp": 733.95,
@@ -68,7 +72,7 @@
     "quantity": 183.0,
     "pnl_pct": 158.63,
     "pnl_abs": 82381.35,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -93,11 +97,11 @@
     ],
     "mb_status": "others",
     "mcap_cr": 63976.4,
-    "pe": 119.34,
+    "pe": 119.73,
     "forward_pe": 34.77,
     "forward_eps": 21.11,
     "debt_to_equity": 45.921,
-    "eps": 6.15,
+    "eps": 6.13,
     "book_value": 88.8,
     "div_yield": 54.0,
     "pat_cagr": -81.4,
@@ -148,7 +152,7 @@
     "quantity": 101.0,
     "pnl_pct": 635.37,
     "pnl_abs": 144214.9,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -222,7 +226,7 @@
     "quantity": 27.0,
     "pnl_pct": 34.47,
     "pnl_abs": 15931.6,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -297,7 +301,9 @@
     "ret_6m": 139.17,
     "ret_1y": 127.79,
     "ret_2y": 265.6,
-    "ret_3y": 291.53
+    "ret_3y": 291.53,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "AVANTEL": {
     "ltp": 149.22,
@@ -305,7 +311,7 @@
     "quantity": 540.0,
     "pnl_pct": 1014.57,
     "pnl_abs": 73349.23,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -358,7 +364,10 @@
     "ret_1m": -4.76,
     "ret_6m": 9.8,
     "ret_1y": -16.26,
-    "ret_2y": -13.06
+    "ret_2y": -13.06,
+    "ret_3y": null,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "BBOX": {
     "ltp": 812.8,
@@ -366,7 +375,7 @@
     "quantity": 80.0,
     "pnl_pct": 1.07,
     "pnl_abs": 688.0,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -397,11 +406,11 @@
     ],
     "mb_status": "others",
     "mcap_cr": 14435.26,
-    "pe": 62.33,
+    "pe": 62.52,
     "forward_pe": 28.37,
     "forward_eps": 28.65,
     "debt_to_equity": 89.594,
-    "eps": 13.04,
+    "eps": 13.0,
     "book_value": 72.5,
     "div_yield": 13.0,
     "pat_cagr": 12.9,
@@ -452,7 +461,7 @@
     "quantity": 12.0,
     "pnl_pct": null,
     "pnl_abs": null,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -484,7 +493,7 @@
     "vol_week_ratio": 0.9,
     "vol_month_ratio": 0.7,
     "ath_pct": -17.11,
-    "atl_pct": 39468.27,
+    "atl_pct": 39468.28,
     "trend_score": 18,
     "price_to_200dma_pct": -7.11,
     "dma200_slope_30d_pct": -0.25,
@@ -519,7 +528,7 @@
     "quantity": 1.0,
     "pnl_pct": 148.21,
     "pnl_abs": 164.93,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -586,7 +595,7 @@
     "quantity": 51.0,
     "pnl_pct": -16.25,
     "pnl_abs": -4098.4,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -607,7 +616,7 @@
     "mcap_cr": 1470.61,
     "pe": 13.71,
     "debt_to_equity": 2.928,
-    "eps": 30.22,
+    "eps": 30.21,
     "book_value": 142.43,
     "div_yield": 980.0,
     "pat_cagr": 13.2,
@@ -657,7 +666,7 @@
     "quantity": 274.0,
     "pnl_pct": -0.82,
     "pnl_abs": -1420.31,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -746,7 +755,8 @@
     "ret_1y": -0.54,
     "ret_2y": -27.08,
     "ret_3y": 28.04,
-    "ret_4y": 93.98
+    "ret_4y": 93.98,
+    "ret_5y": null
   },
   "GRAPHITE": {
     "ltp": 801.55,
@@ -754,7 +764,7 @@
     "quantity": 135.0,
     "pnl_pct": 3.94,
     "pnl_abs": 4104.55,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -799,7 +809,7 @@
     "vol_week_ratio": 0.42,
     "vol_month_ratio": 2.63,
     "ath_pct": -9.0,
-    "atl_pct": 36774.19,
+    "atl_pct": 36774.18,
     "trend_score": 88,
     "trend_signal": "Extended",
     "price_to_200dma_pct": 19.41,
@@ -835,7 +845,7 @@
     "quantity": 148.0,
     "pnl_pct": 89.06,
     "pnl_abs": 56353.4,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -913,7 +923,7 @@
     "quantity": 449.0,
     "pnl_pct": 200.14,
     "pnl_abs": 210661.01,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -986,7 +996,7 @@
     "quantity": 298.0,
     "pnl_pct": 98.36,
     "pnl_abs": 12250.15,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -1062,7 +1072,7 @@
     "quantity": 1.0,
     "pnl_pct": 65.23,
     "pnl_abs": 145.1,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -1133,7 +1143,7 @@
     "quantity": 123.0,
     "pnl_pct": 32.9,
     "pnl_abs": 63039.1,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -1219,7 +1229,10 @@
     "ret_1m": -4.41,
     "ret_6m": 69.94,
     "ret_1y": 75.08,
-    "ret_2y": 81.24
+    "ret_2y": 81.24,
+    "ret_3y": null,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "LAKSELEC": {
     "ltp": 760.95,
@@ -1227,7 +1240,7 @@
     "quantity": 1.0,
     "pnl_pct": 29.22,
     "pnl_abs": 172.05,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -1293,7 +1306,7 @@
     "quantity": 2.0,
     "pnl_pct": -47.15,
     "pnl_abs": -420.25,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -1366,7 +1379,7 @@
     "quantity": 823.0,
     "pnl_pct": 409.4,
     "pnl_abs": 157514.46,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -1422,7 +1435,7 @@
     "quantity": 1.0,
     "pnl_pct": 167.03,
     "pnl_abs": 199.94,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -1471,7 +1484,7 @@
     "quantity": 18.0,
     "pnl_pct": 363.04,
     "pnl_abs": 104800.65,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -1544,7 +1557,7 @@
     "quantity": 369.0,
     "pnl_pct": 260.13,
     "pnl_abs": 477076.34,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -1623,7 +1636,7 @@
     "quantity": 1.0,
     "pnl_pct": 451.84,
     "pnl_abs": 114.09,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -1689,7 +1702,7 @@
     "quantity": 4.0,
     "pnl_pct": 1299.65,
     "pnl_abs": 114156.35,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -1763,7 +1776,7 @@
     "quantity": 1.0,
     "pnl_pct": 184.23,
     "pnl_abs": 262.8,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -1776,11 +1789,11 @@
     ],
     "mb_status": "others",
     "mcap_cr": 31697.04,
-    "pe": 18.64,
+    "pe": 18.65,
     "forward_pe": 13.26,
     "forward_eps": 30.58,
     "debt_to_equity": 27.26,
-    "eps": 21.75,
+    "eps": 21.74,
     "book_value": 129.97,
     "div_yield": 148.0,
     "pat_cagr": 76.7,
@@ -1831,7 +1844,7 @@
     "quantity": 271.0,
     "pnl_pct": 280.08,
     "pnl_abs": 37603.34,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -1861,7 +1874,7 @@
     "rev_cagr": -16.5,
     "mcap_3y": 164.74,
     "vol_yest_ratio": 0.21,
-    "vol_30m_ratio": 1.44,
+    "vol_30m_ratio": 1.46,
     "vol_today_ratio": 0.24,
     "movers": "No",
     "movers_w": "No",
@@ -1869,7 +1882,7 @@
     "vol_week_ratio": 0.31,
     "vol_month_ratio": 3.33,
     "ath_pct": -59.43,
-    "atl_pct": 55703.86,
+    "atl_pct": 55703.87,
     "trend_score": 70,
     "trend_signal": "Bullish",
     "price_to_200dma_pct": 7.7,
@@ -1907,7 +1920,7 @@
     "quantity": 1129.0,
     "pnl_pct": 12.1,
     "pnl_abs": 36389.48,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -2002,7 +2015,7 @@
     "quantity": 72.0,
     "pnl_pct": 85.62,
     "pnl_abs": 35063.1,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -2027,11 +2040,11 @@
     ],
     "mb_status": "others",
     "mcap_cr": 20648.55,
-    "pe": 68.64,
+    "pe": 69.59,
     "forward_pe": 50.61,
     "forward_eps": 20.86,
     "debt_to_equity": 25.465,
-    "eps": 15.38,
+    "eps": 15.17,
     "book_value": 132.46,
     "div_yield": 6.0,
     "pat_cagr": 115.4,
@@ -2046,7 +2059,7 @@
     "vol_week_ratio": 0.55,
     "vol_month_ratio": 0.72,
     "ath_pct": -1.41,
-    "atl_pct": 4521.62,
+    "atl_pct": 4521.61,
     "trend_score": 75,
     "trend_signal": "Extended",
     "price_to_200dma_pct": 102.51,
@@ -2082,7 +2095,7 @@
     "quantity": 289.0,
     "pnl_pct": 292.9,
     "pnl_abs": 364659.59,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -2154,7 +2167,8 @@
     "ret_1y": 113.14,
     "ret_2y": 285.66,
     "ret_3y": 222.57,
-    "ret_4y": 472.09
+    "ret_4y": 472.09,
+    "ret_5y": null
   },
   "TATACOMM": {
     "ltp": 1654.7,
@@ -2162,7 +2176,7 @@
     "quantity": 30.0,
     "pnl_pct": -6.75,
     "pnl_abs": -3595.4,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -2235,7 +2249,7 @@
     "quantity": 1.0,
     "pnl_pct": 830.78,
     "pnl_abs": 445.3,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -2303,7 +2317,7 @@
     "quantity": 1.0,
     "pnl_pct": 427.58,
     "pnl_abs": 1778.3,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -2366,7 +2380,7 @@
     "quantity": 97.0,
     "pnl_pct": 16.4,
     "pnl_abs": 15144.0,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -2443,7 +2457,9 @@
     "ret_6m": 63.94,
     "ret_1y": 47.82,
     "ret_2y": 92.47,
-    "ret_3y": 211.99
+    "ret_3y": 211.99,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "AEROFLEX": {
     "ltp": 539.6,
@@ -2451,7 +2467,7 @@
     "quantity": 991.0,
     "pnl_pct": 175.06,
     "pnl_abs": 340334.27,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -2533,7 +2549,9 @@
     "ret_6m": 111.68,
     "ret_1y": 207.74,
     "ret_2y": 202.25,
-    "ret_3y": 264.45
+    "ret_3y": 264.45,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "ANURAS": {
     "ltp": 1177.8,
@@ -2541,7 +2559,7 @@
     "quantity": 20.0,
     "pnl_pct": 7.13,
     "pnl_abs": 1568.0,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -2554,11 +2572,11 @@
     ],
     "mb_status": "others",
     "mcap_cr": 13409.23,
-    "pe": 76.93,
+    "pe": 76.33,
     "forward_pe": 29.54,
     "forward_eps": 39.87,
     "debt_to_equity": 41.317,
-    "eps": 15.31,
+    "eps": 15.43,
     "book_value": 293.12,
     "div_yield": 13.0,
     "pat_cagr": -9.4,
@@ -2608,7 +2626,7 @@
     "quantity": 138.0,
     "pnl_pct": -18.05,
     "pnl_abs": -23288.3,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -2647,7 +2665,7 @@
     "vol_week_ratio": 0.97,
     "vol_month_ratio": 0.32,
     "ath_pct": -54.21,
-    "atl_pct": 31185.18,
+    "atl_pct": 31185.19,
     "trend_score": 10,
     "price_to_200dma_pct": -9.82,
     "dma200_slope_30d_pct": -1.8,
@@ -2682,7 +2700,7 @@
     "quantity": 104.0,
     "pnl_pct": 0.27,
     "pnl_abs": 265.2,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -2756,7 +2774,7 @@
     "quantity": 1243.0,
     "pnl_pct": 14.33,
     "pnl_abs": 14363.86,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -2824,7 +2842,7 @@
     "quantity": 1457.0,
     "pnl_pct": 3.35,
     "pnl_abs": 5859.62,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -2909,7 +2927,7 @@
     "quantity": 66.0,
     "pnl_pct": -2.64,
     "pnl_abs": -675.45,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -2927,11 +2945,11 @@
       }
     ],
     "mb_status": "others",
-    "pe": 109.59,
+    "pe": 110.56,
     "forward_pe": 34.65,
     "forward_eps": 10.88,
     "debt_to_equity": 42.145,
-    "eps": 3.44,
+    "eps": 3.41,
     "book_value": 210.14,
     "div_yield": 13.0,
     "pat_cagr": 234.6,
@@ -2981,7 +2999,7 @@
     "quantity": 132.0,
     "pnl_pct": 1.48,
     "pnl_abs": 1057.2,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -3043,7 +3061,10 @@
     "ret_1m": -6.07,
     "ret_6m": 51.83,
     "ret_1y": -13.95,
-    "ret_2y": 2.59
+    "ret_2y": 2.59,
+    "ret_3y": null,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "BOROSCI": {
     "ltp": 114.84,
@@ -3051,7 +3072,7 @@
     "quantity": 222.0,
     "pnl_pct": -16.22,
     "pnl_abs": -4936.44,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -3107,7 +3128,10 @@
     "ret_1m": -10.04,
     "ret_6m": 2.31,
     "ret_1y": -13.43,
-    "ret_2y": -42.74
+    "ret_2y": -42.74,
+    "ret_3y": null,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "CARBORUNIV": {
     "ltp": 1200.5,
@@ -3115,7 +3139,7 @@
     "quantity": 77.0,
     "pnl_pct": 2.46,
     "pnl_abs": 2218.3,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -3146,11 +3170,11 @@
     ],
     "mb_status": "mustbuy",
     "mcap_cr": 22870.17,
-    "pe": 107.96,
+    "pe": 108.06,
     "forward_pe": 39.76,
     "forward_eps": 30.19,
     "debt_to_equity": 10.292,
-    "eps": 11.12,
+    "eps": 11.11,
     "book_value": 204.72,
     "div_yield": 32.0,
     "pat_cagr": 23.5,
@@ -3166,7 +3190,7 @@
     "vol_week_ratio": 2.65,
     "vol_month_ratio": 2.29,
     "ath_pct": -32.67,
-    "atl_pct": 352230.98,
+    "atl_pct": 352231.07,
     "trend_score": 75,
     "trend_signal": "Extended",
     "price_to_200dma_pct": 23.33,
@@ -3202,7 +3226,7 @@
     "quantity": 160.0,
     "pnl_pct": -11.54,
     "pnl_abs": -11471.9,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -3274,7 +3298,7 @@
     "quantity": 208.0,
     "pnl_pct": 4.92,
     "pnl_abs": 10293.15,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -3354,7 +3378,7 @@
     "quantity": 356.0,
     "pnl_pct": 93.76,
     "pnl_abs": 158685.97,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -3435,7 +3459,9 @@
     "ret_6m": 217.53,
     "ret_1y": 121.4,
     "ret_2y": 35.01,
-    "ret_3y": 37.01
+    "ret_3y": 37.01,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "DEEDEV": {
     "ltp": 653.5,
@@ -3443,7 +3469,7 @@
     "quantity": 255.0,
     "pnl_pct": 149.56,
     "pnl_abs": 99868.56,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -3505,7 +3531,10 @@
     "ret_1m": 5.61,
     "ret_6m": 118.12,
     "ret_1y": 139.47,
-    "ret_2y": 118.7
+    "ret_2y": 118.7,
+    "ret_3y": null,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "DIFFNKG": {
     "ltp": 448.15,
@@ -3513,7 +3542,7 @@
     "quantity": 413.0,
     "pnl_pct": 7.38,
     "pnl_abs": 12717.55,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -3584,7 +3613,11 @@
     "ret_1w": 1.48,
     "ret_1m": -7.69,
     "ret_6m": 66.87,
-    "ret_1y": 19.18
+    "ret_1y": 19.18,
+    "ret_2y": null,
+    "ret_3y": null,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "ECOSMOBLTY": {
     "ltp": 105.07,
@@ -3592,7 +3625,7 @@
     "quantity": 5.0,
     "pnl_pct": -35.27,
     "pnl_abs": -286.3,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -3640,7 +3673,7 @@
     "fcf_3yr_avg": 40.25,
     "price_to_book": 2.37,
     "ev_ebitda": 5.31,
-    "week52_high": 261.25,
+    "week52_high": 260.05,
     "week52_low": 103.94,
     "insider_pct": 71.0,
     "ret_1d": -1.21,
@@ -3648,7 +3681,10 @@
     "ret_1m": -7.94,
     "ret_6m": -9.66,
     "ret_1y": -58.2,
-    "ret_2y": -78.89
+    "ret_2y": -78.89,
+    "ret_3y": null,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "EIHOTEL": {
     "ltp": 301.85,
@@ -3656,7 +3692,7 @@
     "quantity": 1.0,
     "pnl_pct": -23.4,
     "pnl_abs": -92.2,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -3724,7 +3760,7 @@
     "quantity": 20.0,
     "pnl_pct": 12.37,
     "pnl_abs": 5015.0,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -3792,7 +3828,7 @@
     "quantity": 342.0,
     "pnl_pct": 5.61,
     "pnl_abs": 8730.82,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -3871,7 +3907,7 @@
     "quantity": 321.0,
     "pnl_pct": 4.03,
     "pnl_abs": 7397.61,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -3908,11 +3944,11 @@
     ],
     "mb_status": "mustbuy",
     "mcap_cr": 18752.14,
-    "pe": 41.98,
+    "pe": 41.92,
     "forward_pe": 32.51,
     "forward_eps": 18.3,
     "debt_to_equity": 23.885,
-    "eps": 14.17,
+    "eps": 14.19,
     "book_value": 70.8,
     "div_yield": 45.0,
     "pat_cagr": 21.1,
@@ -3963,7 +3999,7 @@
     "quantity": 41.0,
     "pnl_pct": -9.4,
     "pnl_abs": -13603.6,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -4030,7 +4066,11 @@
     "ret_1w": -1.11,
     "ret_1m": 0.84,
     "ret_6m": 22.09,
-    "ret_1y": -8.73
+    "ret_1y": -8.73,
+    "ret_2y": null,
+    "ret_3y": null,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "ENTERO": {
     "ltp": 1764.9,
@@ -4038,7 +4078,7 @@
     "quantity": 110.0,
     "pnl_pct": 26.36,
     "pnl_abs": 40497.9,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -4063,11 +4103,11 @@
     ],
     "mb_status": "others",
     "mcap_cr": 7681.39,
-    "pe": 62.41,
+    "pe": 61.24,
     "forward_pe": 30.89,
     "forward_eps": 57.14,
     "debt_to_equity": 38.638,
-    "eps": 28.28,
+    "eps": 28.82,
     "book_value": 388.09,
     "pat_cagr": 37.3,
     "rev_cagr": 38.2,
@@ -4105,7 +4145,10 @@
     "ret_1m": -2.49,
     "ret_6m": 41.58,
     "ret_1y": 59.68,
-    "ret_2y": 29.15
+    "ret_2y": 29.15,
+    "ret_3y": null,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "EPIGRAL": {
     "ltp": 1018.1,
@@ -4113,7 +4156,7 @@
     "quantity": 155.0,
     "pnl_pct": -8.98,
     "pnl_abs": -15566.8,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -4199,7 +4242,7 @@
     "quantity": 27.0,
     "pnl_pct": 200.41,
     "pnl_abs": 25161.3,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -4221,7 +4264,7 @@
     "rev_cagr": 90.7,
     "mcap_3y": 364.35,
     "vol_yest_ratio": 1.13,
-    "vol_30m_ratio": 1.76,
+    "vol_30m_ratio": 1.82,
     "vol_today_ratio": 0.86,
     "movers": "No",
     "movers_w": "No",
@@ -4265,7 +4308,7 @@
     "quantity": 161.0,
     "pnl_pct": 30.92,
     "pnl_abs": 44023.81,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -4290,9 +4333,9 @@
     ],
     "mb_status": "others",
     "mcap_cr": 1483.73,
-    "pe": 41.27,
+    "pe": 40.94,
     "debt_to_equity": 13.04,
-    "eps": 28.05,
+    "eps": 28.28,
     "book_value": 228.86,
     "pat_cagr": 24.5,
     "rev_cagr": 19.5,
@@ -4331,7 +4374,10 @@
     "ret_1m": 14.67,
     "ret_6m": 61.62,
     "ret_1y": 50.78,
-    "ret_2y": 44.59
+    "ret_2y": 44.59,
+    "ret_3y": null,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "GESHIP": {
     "ltp": 1537.8,
@@ -4339,7 +4385,7 @@
     "quantity": 65.0,
     "pnl_pct": 25.89,
     "pnl_abs": 20553.8,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -4420,7 +4466,7 @@
     "quantity": 519.0,
     "pnl_pct": 5.01,
     "pnl_abs": 4496.62,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -4494,7 +4540,7 @@
     "quantity": 1289.0,
     "pnl_pct": -4.05,
     "pnl_abs": -8728.21,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -4580,7 +4626,7 @@
     "quantity": 453.0,
     "pnl_pct": 11.59,
     "pnl_abs": 11052.34,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -4599,11 +4645,11 @@
     ],
     "mb_status": "others",
     "mcap_cr": 5474.13,
-    "pe": 56.35,
+    "pe": 55.42,
     "forward_pe": 27.01,
     "forward_eps": 8.7,
     "debt_to_equity": 26.051,
-    "eps": 4.17,
+    "eps": 4.24,
     "book_value": 61.43,
     "div_yield": 87.0,
     "pat_cagr": -32.4,
@@ -4619,7 +4665,7 @@
     "vol_week_ratio": 8.17,
     "vol_month_ratio": 1.22,
     "ath_pct": -19.3,
-    "atl_pct": 25433.8,
+    "atl_pct": 25433.79,
     "trend_score": 53,
     "price_to_200dma_pct": 28.87,
     "dma200_slope_30d_pct": -0.05,
@@ -4654,7 +4700,7 @@
     "quantity": 66.0,
     "pnl_pct": -3.79,
     "pnl_abs": -4990.05,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -4740,7 +4786,7 @@
     "quantity": 59.0,
     "pnl_pct": 96.45,
     "pnl_abs": 60101.35,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -4802,7 +4848,10 @@
     "ret_1m": -14.28,
     "ret_6m": 70.98,
     "ret_1y": 117.19,
-    "ret_2y": 72.18
+    "ret_2y": 72.18,
+    "ret_3y": null,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "HEGAM": {
     "ltp": 238.25,
@@ -4810,7 +4859,7 @@
     "quantity": 223.0,
     "pnl_pct": -54.95,
     "pnl_abs": -64803.96,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -4848,7 +4897,7 @@
     "vol_week_ratio": 0.81,
     "vol_month_ratio": 0.81,
     "ath_pct": -70.65,
-    "atl_pct": 9587.7,
+    "atl_pct": 9587.69,
     "trend_score": 0,
     "price_to_200dma_pct": -56.94,
     "dma200_slope_30d_pct": -2.14,
@@ -4882,7 +4931,7 @@
     "quantity": 73.0,
     "pnl_pct": 9.61,
     "pnl_abs": 2781.35,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -4901,9 +4950,9 @@
     ],
     "mb_status": "others",
     "mcap_cr": 3018.85,
-    "pe": 87.1,
+    "pe": 82.95,
     "debt_to_equity": 56.224,
-    "eps": 4.99,
+    "eps": 5.24,
     "book_value": 77.8,
     "div_yield": 26.0,
     "pat_cagr": -84.7,
@@ -4955,7 +5004,7 @@
     "quantity": 56.0,
     "pnl_pct": -5.8,
     "pnl_abs": -6136.8,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -5021,7 +5070,11 @@
     "ret_1w": -4.8,
     "ret_1m": 2.22,
     "ret_6m": 29.95,
-    "ret_1y": 19.65
+    "ret_1y": 19.65,
+    "ret_2y": null,
+    "ret_3y": null,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "INDGN": {
     "ltp": 605.15,
@@ -5029,7 +5082,7 @@
     "quantity": 197.0,
     "pnl_pct": 12.87,
     "pnl_abs": 13593.3,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -5103,7 +5156,10 @@
     "ret_1m": -0.04,
     "ret_6m": 29.25,
     "ret_1y": 6.07,
-    "ret_2y": -10.55
+    "ret_2y": -10.55,
+    "ret_3y": null,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "INGERRAND": {
     "ltp": 4195.0,
@@ -5111,7 +5167,7 @@
     "quantity": 34.0,
     "pnl_pct": -4.11,
     "pnl_abs": -6107.7,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -5148,11 +5204,11 @@
     ],
     "mb_status": "mustbuy",
     "mcap_cr": 13242.78,
-    "pe": 49.55,
+    "pe": 49.62,
     "forward_pe": 35.05,
     "forward_eps": 119.7,
     "debt_to_equity": 1.468,
-    "eps": 84.67,
+    "eps": 84.54,
     "book_value": 195.04,
     "div_yield": 177.0,
     "pat_cagr": 19.5,
@@ -5203,7 +5259,7 @@
     "quantity": 10.0,
     "pnl_pct": -13.91,
     "pnl_abs": -2730.3,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -5259,7 +5315,10 @@
     "ret_1m": -1.15,
     "ret_6m": -4.5,
     "ret_1y": -14.54,
-    "ret_2y": 29.55
+    "ret_2y": 29.55,
+    "ret_3y": null,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "INVPRECQ": {
     "ltp": 1518.1,
@@ -5267,7 +5326,7 @@
     "quantity": 152.0,
     "pnl_pct": 22.03,
     "pnl_abs": 41656.15,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -5305,7 +5364,7 @@
     "vol_week_ratio": 0.55,
     "vol_month_ratio": 0.66,
     "ath_pct": 0.0,
-    "atl_pct": 50316.44,
+    "atl_pct": 50316.43,
     "trend_score": 75,
     "trend_signal": "Extended",
     "price_to_200dma_pct": 101.69,
@@ -5322,7 +5381,7 @@
     "fcf_3yr_avg": 4.86,
     "price_to_book": 14.79,
     "ev_ebitda": 44.99,
-    "week52_high": 1543.95,
+    "week52_high": 1553.35,
     "week52_low": 397.15,
     "insider_pct": 65.33,
     "ret_1d": 0.79,
@@ -5341,7 +5400,7 @@
     "quantity": 329.0,
     "pnl_pct": 30.26,
     "pnl_abs": 34527.53,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -5416,7 +5475,10 @@
     "ret_1m": 4.23,
     "ret_6m": 82.51,
     "ret_1y": 56.56,
-    "ret_2y": -34.68
+    "ret_2y": -34.68,
+    "ret_3y": null,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "KENNAMET": {
     "ltp": 4039.6,
@@ -5424,7 +5486,7 @@
     "quantity": 36.0,
     "pnl_pct": 56.93,
     "pnl_abs": 52758.75,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -5470,7 +5532,7 @@
     "div_yield": 97.0,
     "pat_cagr": 184.1,
     "rev_cagr": 47.7,
-    "mcap_3y": 262.17,
+    "mcap_3y": 262.18,
     "vol_yest_ratio": 0.28,
     "vol_30m_ratio": 1.4,
     "vol_today_ratio": 0.6,
@@ -5507,8 +5569,9 @@
     "ret_6m": 65.35,
     "ret_1y": 75.16,
     "ret_2y": 133.09,
-    "ret_3y": 262.17,
-    "ret_4y": 526.49
+    "ret_3y": 262.18,
+    "ret_4y": 526.49,
+    "ret_5y": null
   },
   "KPIGREEN": {
     "ltp": 371.25,
@@ -5516,7 +5579,7 @@
     "quantity": 191.0,
     "pnl_pct": 9.89,
     "pnl_abs": 6384.65,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -5594,7 +5657,7 @@
     "quantity": 24.0,
     "pnl_pct": -0.56,
     "pnl_abs": -111.6,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -5607,13 +5670,13 @@
     ],
     "mb_status": "others",
     "mcap_cr": 14354.75,
-    "pe": 58.54,
+    "pe": 58.5,
     "forward_pe": 41.03,
     "forward_eps": 20.1,
     "roe": 15.19,
     "ocf_cr": 20.08,
     "debt_to_equity": 0.371,
-    "eps": 14.09,
+    "eps": 14.1,
     "book_value": 97.64,
     "div_yield": 55.0,
     "pat_cagr": -18.6,
@@ -5628,7 +5691,7 @@
     "vol_week_ratio": 1.6,
     "vol_month_ratio": 0.74,
     "ath_pct": -17.26,
-    "atl_pct": 22452.74,
+    "atl_pct": 22452.75,
     "trend_score": 77,
     "trend_signal": "Bullish",
     "price_to_200dma_pct": 1.11,
@@ -5666,7 +5729,7 @@
     "quantity": 120.0,
     "pnl_pct": -8.78,
     "pnl_abs": -5622.05,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -5736,7 +5799,9 @@
     "ret_6m": 20.48,
     "ret_1y": -18.97,
     "ret_2y": -20.61,
-    "ret_3y": -39.26
+    "ret_3y": -39.26,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "LCL": {
     "ltp": 581.65,
@@ -5744,7 +5809,7 @@
     "quantity": 170.0,
     "pnl_pct": 3.44,
     "pnl_abs": 3286.15,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -5806,7 +5871,13 @@
     "insider_pct": 0.0,
     "ret_1d": 2.01,
     "ret_1w": 0.23,
-    "ret_1m": 6.96
+    "ret_1m": 6.96,
+    "ret_6m": null,
+    "ret_1y": null,
+    "ret_2y": null,
+    "ret_3y": null,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "LOKESHMACH": {
     "ltp": 341.55,
@@ -5814,7 +5885,7 @@
     "quantity": 621.0,
     "pnl_pct": 1.37,
     "pnl_abs": 2874.3,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -5897,7 +5968,7 @@
     "quantity": 33.0,
     "pnl_pct": -21.14,
     "pnl_abs": -7478.65,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -5968,7 +6039,8 @@
     "ret_1y": -47.76,
     "ret_2y": -59.4,
     "ret_3y": -51.23,
-    "ret_4y": -36.72
+    "ret_4y": -36.72,
+    "ret_5y": null
   },
   "MENONBE": {
     "ltp": 291.1,
@@ -5976,7 +6048,7 @@
     "quantity": 647.0,
     "pnl_pct": 80.62,
     "pnl_abs": 84066.39,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -6056,7 +6128,7 @@
     "quantity": 148.0,
     "pnl_pct": -2.76,
     "pnl_abs": -2569.8,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -6130,7 +6202,7 @@
     "quantity": 72.0,
     "pnl_pct": 62.31,
     "pnl_abs": 12369.95,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -6195,7 +6267,7 @@
     "quantity": 445.0,
     "pnl_pct": 85.04,
     "pnl_abs": 91568.14,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -6279,7 +6351,7 @@
     "quantity": 599.0,
     "pnl_pct": 9.3,
     "pnl_abs": 8794.46,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -6358,7 +6430,7 @@
     "quantity": 204.0,
     "pnl_pct": 4.68,
     "pnl_abs": 6045.7,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -6413,7 +6485,12 @@
     "ret_1d": -1.57,
     "ret_1w": -11.48,
     "ret_1m": -3.8,
-    "ret_6m": 25.5
+    "ret_6m": 25.5,
+    "ret_1y": null,
+    "ret_2y": null,
+    "ret_3y": null,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "NETWEB": {
     "ltp": 4613.0,
@@ -6421,7 +6498,7 @@
     "quantity": 26.0,
     "pnl_pct": 10.54,
     "pnl_abs": 11435.15,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -6491,7 +6568,9 @@
     "ret_6m": 43.1,
     "ret_1y": 28.76,
     "ret_2y": 75.64,
-    "ret_3y": 453.46
+    "ret_3y": 453.46,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "NLCINDIA": {
     "ltp": 255.75,
@@ -6499,7 +6578,7 @@
     "quantity": 402.0,
     "pnl_pct": -10.25,
     "pnl_abs": -11742.14,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -6578,7 +6657,7 @@
     "quantity": 896.0,
     "pnl_pct": 74.11,
     "pnl_abs": 105448.45,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -6609,16 +6688,16 @@
     ],
     "mb_status": "mustbuy",
     "mcap_cr": 11942.89,
-    "pe": 42.34,
+    "pe": 42.21,
     "forward_pe": 26.08,
     "forward_eps": 10.6,
     "debt_to_equity": 17.307,
-    "eps": 6.53,
+    "eps": 6.55,
     "book_value": 50.79,
     "pat_cagr": 20.6,
     "rev_cagr": 19.3,
     "vol_yest_ratio": 1.3,
-    "vol_30m_ratio": 0.6,
+    "vol_30m_ratio": 0.61,
     "vol_today_ratio": 2.62,
     "movers": "No",
     "movers_w": "No",
@@ -6645,7 +6724,12 @@
     "ret_1w": -3.03,
     "ret_1m": -3.37,
     "ret_6m": 39.75,
-    "name": "Park Medi World Limited"
+    "name": "Park Medi World Limited",
+    "ret_1y": null,
+    "ret_2y": null,
+    "ret_3y": null,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "POWERICA": {
     "ltp": 599.75,
@@ -6653,7 +6737,7 @@
     "quantity": 362.0,
     "pnl_pct": 9.85,
     "pnl_abs": 19461.7,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -6724,7 +6808,12 @@
     "ret_1d": 6.54,
     "ret_1w": 7.23,
     "ret_1m": 17.06,
-    "ret_6m": 51.24
+    "ret_6m": 51.24,
+    "ret_1y": null,
+    "ret_2y": null,
+    "ret_3y": null,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "RAMCOSYS": {
     "ltp": 553.7,
@@ -6732,7 +6821,7 @@
     "quantity": 86.0,
     "pnl_pct": 20.68,
     "pnl_abs": 8161.35,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -6805,7 +6894,7 @@
     "quantity": 63.0,
     "pnl_pct": 14.6,
     "pnl_abs": 6663.7,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -6869,7 +6958,8 @@
     "ret_1y": 27.75,
     "ret_2y": 9.56,
     "ret_3y": 42.15,
-    "ret_4y": 185.47
+    "ret_4y": 185.47,
+    "ret_5y": null
   },
   "RATNAMANI": {
     "ltp": 2833.3,
@@ -6877,7 +6967,7 @@
     "quantity": 73.0,
     "pnl_pct": 4.76,
     "pnl_abs": 9406.15,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -6963,7 +7053,7 @@
     "quantity": 859.0,
     "pnl_pct": 75.44,
     "pnl_abs": 122318.25,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -7027,7 +7117,9 @@
     "ret_6m": 136.62,
     "ret_1y": 102.56,
     "ret_2y": 60.02,
-    "ret_3y": 156.01
+    "ret_3y": 156.01,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "RAYMOND": {
     "ltp": 1185.75,
@@ -7035,7 +7127,7 @@
     "quantity": 248.0,
     "pnl_pct": 93.91,
     "pnl_abs": 142411.69,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -7121,7 +7213,7 @@
     "quantity": 97.0,
     "pnl_pct": 111.34,
     "pnl_abs": 47288.4,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -7140,9 +7232,9 @@
     ],
     "mb_status": "others",
     "mcap_cr": 6144.86,
-    "pe": 19.63,
+    "pe": 19.64,
     "debt_to_equity": 48.65,
-    "eps": 47.15,
+    "eps": 47.11,
     "book_value": 307.34,
     "div_yield": 23.0,
     "pat_cagr": 64.0,
@@ -7181,7 +7273,10 @@
     "ret_1m": 14.37,
     "ret_6m": 153.86,
     "ret_1y": 187.81,
-    "ret_2y": 133.74
+    "ret_2y": 133.74,
+    "ret_3y": null,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "RUBICON": {
     "ltp": 1609.0,
@@ -7189,7 +7284,7 @@
     "quantity": 43.0,
     "pnl_pct": 122.69,
     "pnl_abs": 38118.7,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -7208,11 +7303,11 @@
     ],
     "mb_status": "others",
     "mcap_cr": 26634.08,
-    "pe": 97.1,
+    "pe": 92.68,
     "forward_pe": 55.77,
     "forward_eps": 28.85,
     "debt_to_equity": 24.131,
-    "eps": 16.57,
+    "eps": 17.36,
     "book_value": 78.07,
     "div_yield": 9.0,
     "pat_cagr": 82.1,
@@ -7249,7 +7344,12 @@
     "ret_1d": 1.02,
     "ret_1w": -3.72,
     "ret_1m": -11.7,
-    "ret_6m": 107.86
+    "ret_6m": 107.86,
+    "ret_1y": null,
+    "ret_2y": null,
+    "ret_3y": null,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "SALZERELEC": {
     "ltp": 535.65,
@@ -7257,7 +7357,7 @@
     "quantity": 94.0,
     "pnl_pct": -36.7,
     "pnl_abs": -29192.9,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -7329,7 +7429,7 @@
     "quantity": 62.0,
     "pnl_pct": 162.45,
     "pnl_abs": 167406.5,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -7409,7 +7509,7 @@
     "quantity": 109.0,
     "pnl_pct": -12.19,
     "pnl_abs": -25108.9,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -7446,13 +7546,13 @@
     ],
     "mb_status": "bullish",
     "mcap_cr": 2519.96,
-    "pe": 37.18,
+    "pe": 36.38,
     "forward_pe": 28.51,
     "forward_eps": 58.18,
     "roe": 6.99,
     "ocf_cr": -22.83,
     "debt_to_equity": 3.212,
-    "eps": 44.61,
+    "eps": 45.6,
     "book_value": 563.41,
     "div_yield": 157.0,
     "pat_cagr": 144.5,
@@ -7505,7 +7605,7 @@
     "quantity": 65.0,
     "pnl_pct": -6.74,
     "pnl_abs": -598.65,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -7574,7 +7674,7 @@
     "quantity": 94.0,
     "pnl_pct": 184.83,
     "pnl_abs": 46560.08,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -7627,7 +7727,11 @@
     "ret_1w": 6.11,
     "ret_1m": 19.81,
     "ret_6m": 120.35,
-    "ret_1y": 218.44
+    "ret_1y": 218.44,
+    "ret_2y": null,
+    "ret_3y": null,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "SIMPLEXCAS": {
     "ltp": 133.75,
@@ -7635,7 +7739,7 @@
     "quantity": 2135.0,
     "pnl_pct": 10.85,
     "pnl_abs": 27947.58,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -7680,7 +7784,7 @@
     "rev_cagr": 34.8,
     "mcap_3y": 1073.25,
     "vol_yest_ratio": 0.26,
-    "vol_30m_ratio": 2.29,
+    "vol_30m_ratio": 2.3,
     "vol_today_ratio": 0.23,
     "movers": "No",
     "movers_w": "No",
@@ -7689,7 +7793,7 @@
     "vol_week_ratio": 0.57,
     "vol_month_ratio": 2.49,
     "ath_pct": -4.74,
-    "atl_pct": 79118.79,
+    "atl_pct": 79118.8,
     "trend_score": 75,
     "trend_signal": "Extended",
     "price_to_200dma_pct": 33.76,
@@ -7725,7 +7829,7 @@
     "quantity": 40.0,
     "pnl_pct": 15.1,
     "pnl_abs": 14632.9,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -7777,7 +7881,12 @@
     "ret_1d": -3.22,
     "ret_1w": -0.06,
     "ret_1m": -5.55,
-    "ret_6m": 23.79
+    "ret_6m": 23.79,
+    "ret_1y": null,
+    "ret_2y": null,
+    "ret_3y": null,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "SOFTTECH": {
     "ltp": 502.85,
@@ -7785,7 +7894,7 @@
     "quantity": 58.0,
     "pnl_pct": 18.65,
     "pnl_abs": 4584.3,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -7804,9 +7913,9 @@
     ],
     "mb_status": "others",
     "mcap_cr": 696.05,
-    "pe": 137.77,
+    "pe": 139.29,
     "debt_to_equity": 22.788,
-    "eps": 3.65,
+    "eps": 3.61,
     "book_value": 123.95,
     "pat_cagr": 10.3,
     "rev_cagr": 23.2,
@@ -7857,7 +7966,7 @@
     "quantity": 445.0,
     "pnl_pct": 41.69,
     "pnl_abs": 106805.34,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -7925,7 +8034,7 @@
     "price_to_book": 8.48,
     "ev_ebitda": 44.66,
     "week52_high": 844.0,
-    "week52_low": 402.3,
+    "week52_low": 403.3,
     "insider_pct": 27.91,
     "ret_1d": 0.96,
     "ret_1w": 0.82,
@@ -7943,7 +8052,7 @@
     "quantity": 350.0,
     "pnl_pct": 10.5,
     "pnl_abs": 6098.12,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -8013,7 +8122,7 @@
     "quantity": 35.0,
     "pnl_pct": -26.53,
     "pnl_abs": -41587.5,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -8063,7 +8172,7 @@
     "vol_week_ratio": 0.91,
     "vol_month_ratio": 0.49,
     "ath_pct": -41.45,
-    "atl_pct": 465034.18,
+    "atl_pct": 465034.22,
     "trend_score": 30,
     "price_to_200dma_pct": -13.09,
     "dma200_slope_30d_pct": 2.94,
@@ -8098,7 +8207,7 @@
     "quantity": 110.0,
     "pnl_pct": -5.0,
     "pnl_abs": -2491.5,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -8157,7 +8266,12 @@
     "ret_1d": -0.65,
     "ret_1w": -2.26,
     "ret_1m": -7.37,
-    "ret_6m": 11.17
+    "ret_6m": 11.17,
+    "ret_1y": null,
+    "ret_2y": null,
+    "ret_3y": null,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "TREL": {
     "ltp": 28.4,
@@ -8165,7 +8279,7 @@
     "quantity": 1891.0,
     "pnl_pct": 7.44,
     "pnl_abs": 3719.41,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -8225,7 +8339,9 @@
     "ret_6m": 13.83,
     "ret_1y": -11.14,
     "ret_2y": -36.18,
-    "ret_3y": -35.58
+    "ret_3y": -35.58,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "TRITURBINE": {
     "ltp": 543.55,
@@ -8233,7 +8349,7 @@
     "quantity": 329.0,
     "pnl_pct": -6.19,
     "pnl_abs": -11805.24,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -8318,7 +8434,7 @@
     "quantity": 28.0,
     "pnl_pct": 108.99,
     "pnl_abs": 21441.6,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -8350,7 +8466,7 @@
     "vol_week_ratio": 0.62,
     "vol_month_ratio": 0.52,
     "ath_pct": -15.85,
-    "atl_pct": 44020.64,
+    "atl_pct": 44020.63,
     "trend_score": 75,
     "trend_signal": "Extended",
     "price_to_200dma_pct": 39.25,
@@ -8386,7 +8502,7 @@
     "quantity": 533.0,
     "pnl_pct": 11.45,
     "pnl_abs": 8961.76,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -8461,7 +8577,11 @@
     "ret_1w": -6.03,
     "ret_1m": -2.34,
     "ret_6m": 32.67,
-    "ret_1y": -3.64
+    "ret_1y": -3.64,
+    "ret_2y": null,
+    "ret_3y": null,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "VIPULORG": {
     "ltp": 260.8,
@@ -8469,7 +8589,7 @@
     "quantity": 188.0,
     "pnl_pct": -1.54,
     "pnl_abs": -765.59,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -8491,7 +8611,7 @@
     "rev_cagr": 37.7,
     "mcap_3y": 91.37,
     "vol_yest_ratio": 1.27,
-    "vol_30m_ratio": 0.73,
+    "vol_30m_ratio": 0.57,
     "vol_today_ratio": 0.19,
     "movers": "No",
     "movers_w": "No",
@@ -8535,7 +8655,7 @@
     "quantity": 1.0,
     "pnl_pct": -19.21,
     "pnl_abs": -1052.6,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -8548,11 +8668,11 @@
     ],
     "mb_status": "others",
     "mcap_cr": 3830.92,
-    "pe": 36.58,
+    "pe": 35.32,
     "forward_pe": 23.18,
     "forward_eps": 190.97,
     "debt_to_equity": 0.175,
-    "eps": 121.04,
+    "eps": 125.34,
     "book_value": 1266.09,
     "div_yield": 58.0,
     "pat_cagr": 9.5,
@@ -8603,7 +8723,7 @@
     "quantity": 10.0,
     "pnl_pct": 7.87,
     "pnl_abs": 6122.5,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -8683,7 +8803,7 @@
     "quantity": 145.0,
     "pnl_pct": 7.87,
     "pnl_abs": 4130.56,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -8765,7 +8885,7 @@
     "quantity": 307.0,
     "pnl_pct": -3.54,
     "pnl_abs": -1055.99,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -8834,7 +8954,7 @@
     "quantity": 2.0,
     "pnl_pct": -13.23,
     "pnl_abs": -10360.0,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -8908,7 +9028,7 @@
     "quantity": 24.0,
     "pnl_pct": 1.7,
     "pnl_abs": 1490.2,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -8982,7 +9102,7 @@
     "quantity": 246.0,
     "pnl_pct": -37.75,
     "pnl_abs": -35675.19,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -9062,7 +9182,7 @@
     "quantity": 72.0,
     "pnl_pct": 126.54,
     "pnl_abs": 114296.4,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -9100,7 +9220,7 @@
     "vol_week_ratio": 0.62,
     "vol_month_ratio": 1.87,
     "ath_pct": 0.0,
-    "atl_pct": 63073.09,
+    "atl_pct": 63073.1,
     "trend_score": 75,
     "trend_signal": "Extended",
     "price_to_200dma_pct": 109.46,
@@ -9136,7 +9256,7 @@
     "quantity": 198.0,
     "pnl_pct": -2.39,
     "pnl_abs": -1992.39,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -9198,7 +9318,8 @@
     "ret_1y": 1.25,
     "ret_2y": -38.36,
     "ret_3y": -24.63,
-    "ret_4y": 99.29
+    "ret_4y": 99.29,
+    "ret_5y": null
   },
   "KIRLPNU": {
     "ltp": 684.4,
@@ -9206,7 +9327,7 @@
     "quantity": 261.0,
     "pnl_pct": -5.82,
     "pnl_abs": -11046.59,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -9276,7 +9397,9 @@
     "ret_6m": 26.12,
     "ret_1y": 14.36,
     "ret_2y": 8.36,
-    "ret_3y": 124.91
+    "ret_3y": 124.91,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "MSTCLTD": {
     "ltp": 713.05,
@@ -9284,7 +9407,7 @@
     "quantity": 1.0,
     "pnl_pct": 172.16,
     "pnl_abs": 451.05,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -9350,7 +9473,7 @@
     "quantity": 6.0,
     "pnl_pct": 1971.52,
     "pnl_abs": 122058.9,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -9363,11 +9486,11 @@
     ],
     "mb_status": "others",
     "mcap_cr": 27423.89,
-    "pe": 56.33,
+    "pe": 55.08,
     "forward_pe": 43.55,
     "forward_eps": 490.83,
     "debt_to_equity": 16.072,
-    "eps": 379.49,
+    "eps": 388.06,
     "book_value": 1461.02,
     "div_yield": 16.0,
     "pat_cagr": 962.8,
@@ -9418,7 +9541,7 @@
     "quantity": 11.0,
     "pnl_pct": 303.23,
     "pnl_abs": 2686.35,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -9481,7 +9604,7 @@
     "quantity": 245.0,
     "pnl_pct": -9.75,
     "pnl_abs": -4870.6,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -9548,7 +9671,7 @@
     "quantity": 2.0,
     "pnl_pct": -34.26,
     "pnl_abs": -925.6,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -9615,7 +9738,7 @@
     "quantity": 159.0,
     "pnl_pct": -14.06,
     "pnl_abs": -11155.9,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -9689,7 +9812,7 @@
     "quantity": 68.0,
     "pnl_pct": -3.71,
     "pnl_abs": -3617.6,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -9708,11 +9831,11 @@
     ],
     "mb_status": "others",
     "mcap_cr": 16211.57,
-    "pe": 104.89,
+    "pe": 103.78,
     "forward_pe": 43.11,
     "forward_eps": 32.07,
     "debt_to_equity": 231.875,
-    "eps": 13.18,
+    "eps": 13.32,
     "book_value": 396.17,
     "rev_cagr": 109.2,
     "vol_yest_ratio": 18.62,
@@ -9742,7 +9865,12 @@
     "ret_1d": 0.68,
     "ret_1w": 1.09,
     "ret_1m": 10.64,
-    "ret_6m": 70.53
+    "ret_6m": 70.53,
+    "ret_1y": null,
+    "ret_2y": null,
+    "ret_3y": null,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "DATAPATTNS": {
     "ltp": 4221.6,
@@ -9750,7 +9878,7 @@
     "quantity": 5.0,
     "pnl_pct": 97.77,
     "pnl_abs": 10435.0,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -9763,11 +9891,11 @@
     ],
     "mb_status": "others",
     "mcap_cr": 23634.19,
-    "pe": 91.4,
+    "pe": 88.13,
     "forward_pe": 52.14,
     "forward_eps": 80.96,
     "debt_to_equity": 0.304,
-    "eps": 46.19,
+    "eps": 47.9,
     "book_value": 310.08,
     "div_yield": 23.0,
     "pat_cagr": -13.4,
@@ -9809,7 +9937,8 @@
     "ret_1y": 66.48,
     "ret_2y": 69.55,
     "ret_3y": 98.49,
-    "ret_4y": 276.04
+    "ret_4y": 276.04,
+    "ret_5y": null
   },
   "EMBDL": {
     "ltp": 56.33,
@@ -9817,7 +9946,7 @@
     "quantity": 148.0,
     "pnl_pct": -16.66,
     "pnl_abs": -1666.72,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -9830,7 +9959,7 @@
     ],
     "mb_status": "others",
     "debt_to_equity": 53.414,
-    "eps": -6.59,
+    "eps": -6.83,
     "book_value": 71.01,
     "rev_cagr": -68.2,
     "mcap_3y": -23.83,
@@ -9878,7 +10007,7 @@
     "quantity": 70.0,
     "pnl_pct": -2.19,
     "pnl_abs": -805.25,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -9945,7 +10074,7 @@
     "quantity": 149.0,
     "pnl_pct": -21.45,
     "pnl_abs": -2909.97,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -9958,11 +10087,11 @@
     ],
     "mb_status": "others",
     "mcap_cr": 12356.9,
-    "pe": 36.29,
+    "pe": 35.05,
     "forward_pe": 14.9,
     "forward_eps": 4.8,
     "debt_to_equity": 20.631,
-    "eps": 1.97,
+    "eps": 2.04,
     "book_value": 42.66,
     "pat_cagr": -38.3,
     "rev_cagr": -1.5,
@@ -10012,7 +10141,7 @@
     "quantity": 4980.0,
     "pnl_pct": 31.09,
     "pnl_abs": 45366.8,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -10050,7 +10179,7 @@
     "vol_week_ratio": 1.01,
     "vol_month_ratio": 0.81,
     "ath_pct": -39.13,
-    "atl_pct": 8623.47,
+    "atl_pct": 8623.46,
     "trend_score": 75,
     "trend_signal": "Extended",
     "price_to_200dma_pct": 41.3,
@@ -10086,7 +10215,7 @@
     "quantity": 118.0,
     "pnl_pct": -8.03,
     "pnl_abs": -1984.5,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -10140,7 +10269,11 @@
     "ret_1w": -0.36,
     "ret_1m": -0.24,
     "ret_6m": 4.01,
-    "ret_1y": -39.67
+    "ret_1y": -39.67,
+    "ret_2y": null,
+    "ret_3y": null,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "MOSCHIP": {
     "ltp": 198.47,
@@ -10148,7 +10281,7 @@
     "quantity": 91.0,
     "pnl_pct": 14.37,
     "pnl_abs": 2269.32,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -10199,7 +10332,11 @@
     "ret_1w": -4.29,
     "ret_1m": -7.8,
     "ret_6m": 18.44,
-    "ret_1y": -19.72
+    "ret_1y": -19.72,
+    "ret_2y": null,
+    "ret_3y": null,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "PITTIENG": {
     "ltp": 1131.4,
@@ -10207,7 +10344,7 @@
     "quantity": 20.0,
     "pnl_pct": 14.5,
     "pnl_abs": 2865.5,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -10275,7 +10412,7 @@
     "quantity": 50.0,
     "pnl_pct": 43.28,
     "pnl_abs": 5166.9,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -10343,7 +10480,7 @@
     "quantity": 50.0,
     "pnl_pct": -11.41,
     "pnl_abs": -1670.0,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -10415,7 +10552,7 @@
     "quantity": 125.0,
     "pnl_pct": 23.36,
     "pnl_abs": 13818.95,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -10434,9 +10571,9 @@
     ],
     "mb_status": "others",
     "mcap_cr": 5449.72,
-    "pe": 43.18,
+    "pe": 42.99,
     "debt_to_equity": 115.438,
-    "eps": 13.52,
+    "eps": 13.58,
     "book_value": 62.08,
     "div_yield": 44.0,
     "pat_cagr": 127.8,
@@ -10478,7 +10615,8 @@
     "ret_1y": 82.63,
     "ret_2y": 81.3,
     "ret_3y": 265.71,
-    "ret_4y": 543.08
+    "ret_4y": 543.08,
+    "ret_5y": null
   },
   "RAYMONDREL": {
     "ltp": 672.55,
@@ -10486,7 +10624,7 @@
     "quantity": 32.0,
     "pnl_pct": 8.56,
     "pnl_abs": 1697.6,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -10499,9 +10637,9 @@
     ],
     "mb_status": "others",
     "mcap_cr": 4475.92,
-    "pe": 15.79,
+    "pe": 14.92,
     "debt_to_equity": 64.676,
-    "eps": 42.6,
+    "eps": 45.09,
     "book_value": 235.44,
     "div_yield": 30.0,
     "pat_cagr": -18.5,
@@ -10540,7 +10678,11 @@
     "ret_1w": 14.09,
     "ret_1m": 30.15,
     "ret_6m": 60.12,
-    "ret_1y": 14.51
+    "ret_1y": 14.51,
+    "ret_2y": null,
+    "ret_3y": null,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "SCI": {
     "ltp": 272.9,
@@ -10548,7 +10690,7 @@
     "quantity": 172.0,
     "pnl_pct": -9.64,
     "pnl_abs": -5008.74,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -10567,11 +10709,11 @@
     ],
     "mb_status": "mustbuy",
     "mcap_cr": 12711.66,
-    "pe": 7.92,
+    "pe": 7.86,
     "forward_pe": 82.7,
     "forward_eps": 3.3,
     "debt_to_equity": 29.454,
-    "eps": 34.44,
+    "eps": 34.74,
     "book_value": 195.37,
     "div_yield": 276.0,
     "pat_cagr": 75.0,
@@ -10622,7 +10764,7 @@
     "quantity": 25.0,
     "pnl_pct": -5.29,
     "pnl_abs": -1053.65,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -10675,7 +10817,10 @@
     "ret_1m": -2.01,
     "ret_6m": 4.26,
     "ret_1y": -31.11,
-    "ret_2y": -48.98
+    "ret_2y": -48.98,
+    "ret_3y": null,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "STALLION": {
     "ltp": 219.58,
@@ -10683,7 +10828,7 @@
     "quantity": 218.0,
     "pnl_pct": 20.0,
     "pnl_abs": 7977.6,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -10735,7 +10880,11 @@
     "ret_1w": -2.94,
     "ret_1m": 5.77,
     "ret_6m": 88.25,
-    "ret_1y": -4.35
+    "ret_1y": -4.35,
+    "ret_2y": null,
+    "ret_3y": null,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "SUZLON": {
     "ltp": 39.5,
@@ -10743,7 +10892,7 @@
     "quantity": 1011.0,
     "pnl_pct": -29.86,
     "pnl_abs": -17003.5,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -10811,7 +10960,7 @@
     "quantity": 67.0,
     "pnl_pct": -4.91,
     "pnl_abs": -1698.35,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -10831,7 +10980,7 @@
     "mb_status": "others",
     "mcap_cr": 8724.68,
     "debt_to_equity": 142.52,
-    "eps": -50.44,
+    "eps": -51.71,
     "book_value": 164.9,
     "div_yield": 42.0,
     "rev_cagr": 99.1,
@@ -10880,7 +11029,7 @@
     "quantity": 39.0,
     "pnl_pct": -34.59,
     "pnl_abs": -1700.4,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -10935,7 +11084,10 @@
     "ret_1m": -6.0,
     "ret_6m": -8.03,
     "ret_1y": -41.73,
-    "ret_2y": -61.3
+    "ret_2y": -61.3,
+    "ret_3y": null,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "VIYASH": {
     "ltp": 238.05,
@@ -10943,7 +11095,7 @@
     "quantity": 1.0,
     "pnl_pct": 43.53,
     "pnl_abs": 72.2,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -11010,7 +11162,7 @@
     "quantity": 64.0,
     "pnl_pct": 2.23,
     "pnl_abs": 1107.45,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -11027,7 +11179,7 @@
     "forward_pe": 8.23,
     "forward_eps": 96.4,
     "debt_to_equity": 10.126,
-    "eps": 55.99,
+    "eps": 56.01,
     "book_value": 372.01,
     "div_yield": 87.0,
     "pat_cagr": 11.9,
@@ -11042,7 +11194,7 @@
     "vol_week_ratio": 0.58,
     "vol_month_ratio": 0.54,
     "ath_pct": -37.23,
-    "atl_pct": 1392669.51,
+    "atl_pct": 1392669.33,
     "trend_score": 53,
     "price_to_200dma_pct": 22.42,
     "dma200_slope_30d_pct": -0.11,
@@ -11077,7 +11229,7 @@
     "quantity": 110.0,
     "pnl_pct": -26.06,
     "pnl_abs": -5188.7,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -11145,7 +11297,7 @@
     "quantity": 35.0,
     "pnl_pct": -2.67,
     "pnl_abs": -721.15,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -11208,7 +11360,8 @@
     "ret_1y": -4.95,
     "ret_2y": -17.83,
     "ret_3y": 8.43,
-    "ret_4y": 15.32
+    "ret_4y": 15.32,
+    "ret_5y": null
   },
   "FRACTAL": {
     "ltp": 753.15,
@@ -11216,7 +11369,7 @@
     "quantity": 32.0,
     "pnl_pct": -19.4,
     "pnl_abs": -5801.6,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -11229,11 +11382,11 @@
     ],
     "mb_status": "others",
     "mcap_cr": 12951.55,
-    "pe": 39.81,
+    "pe": 39.33,
     "forward_pe": 27.33,
     "forward_eps": 27.56,
     "debt_to_equity": 13.131,
-    "eps": 18.92,
+    "eps": 19.15,
     "book_value": 191.15,
     "pat_cagr": 77.1,
     "rev_cagr": 20.0,
@@ -11264,7 +11417,12 @@
     "ret_1d": 1.49,
     "ret_1w": -1.08,
     "ret_1m": -9.02,
-    "ret_6m": -4.69
+    "ret_6m": -4.69,
+    "ret_1y": null,
+    "ret_2y": null,
+    "ret_3y": null,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "GAUDIUMIVF": {
     "ltp": 113.9,
@@ -11272,7 +11430,7 @@
     "quantity": 1.0,
     "pnl_pct": -1.81,
     "pnl_abs": -2.1,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -11285,9 +11443,9 @@
     ],
     "mb_status": "others",
     "mcap_cr": 829.04,
-    "pe": 35.82,
+    "pe": 35.71,
     "debt_to_equity": 16.133,
-    "eps": 3.18,
+    "eps": 3.19,
     "book_value": 24.42,
     "pat_cagr": -50.0,
     "rev_cagr": 9.1,
@@ -11318,7 +11476,12 @@
     "ret_1d": 1.52,
     "ret_1w": 2.29,
     "ret_1m": -10.82,
-    "ret_6m": 43.63
+    "ret_6m": 43.63,
+    "ret_1y": null,
+    "ret_2y": null,
+    "ret_3y": null,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "JYOTICNC": {
     "ltp": 1059.3,
@@ -11326,7 +11489,7 @@
     "quantity": 14.0,
     "pnl_pct": 48.44,
     "pnl_abs": 4839.8,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -11381,7 +11544,10 @@
     "ret_1m": 7.1,
     "ret_6m": 38.14,
     "ret_1y": 22.99,
-    "ret_2y": -11.73
+    "ret_2y": -11.73,
+    "ret_3y": null,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "RKSWAMY": {
     "ltp": 89.48,
@@ -11389,7 +11555,7 @@
     "quantity": 516.0,
     "pnl_pct": -8.22,
     "pnl_abs": -4134.45,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -11443,7 +11609,10 @@
     "ret_1m": -2.52,
     "ret_6m": 22.16,
     "ret_1y": -39.23,
-    "ret_2y": -63.85
+    "ret_2y": -63.85,
+    "ret_3y": null,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "SCODATUBES": {
     "ltp": 130.14,
@@ -11451,7 +11620,7 @@
     "quantity": 221.0,
     "pnl_pct": 5.82,
     "pnl_abs": 1580.92,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -11509,7 +11678,11 @@
     "ret_1w": 1.0,
     "ret_1m": -0.12,
     "ret_6m": -1.91,
-    "ret_1y": -21.98
+    "ret_1y": -21.98,
+    "ret_2y": null,
+    "ret_3y": null,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "SJVN": {
     "ltp": 59.83,
@@ -11517,7 +11690,7 @@
     "quantity": 807.0,
     "pnl_pct": -17.65,
     "pnl_abs": -10350.99,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "accounts": [
@@ -11591,7 +11764,7 @@
     "quantity": 82.0,
     "pnl_pct": -5.37,
     "pnl_abs": -5315.6,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "accounts": [
@@ -11604,11 +11777,11 @@
     ],
     "mb_status": "others",
     "mcap_cr": 24021.87,
-    "pe": 39.26,
+    "pe": 39.35,
     "forward_pe": 27.45,
     "forward_eps": 41.65,
     "debt_to_equity": 14.532,
-    "eps": 29.12,
+    "eps": 29.05,
     "book_value": 203.45,
     "div_yield": 73.0,
     "pat_cagr": 13.5,
@@ -11659,7 +11832,7 @@
     "quantity": 0.0,
     "pnl_pct": null,
     "pnl_abs": null,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "watchlist": true,
@@ -11716,7 +11889,7 @@
     "quantity": 0.0,
     "pnl_pct": null,
     "pnl_abs": null,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "watchlist": true,
@@ -11776,7 +11949,7 @@
     "quantity": 0.0,
     "pnl_pct": null,
     "pnl_abs": null,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "watchlist": true,
@@ -11834,17 +12007,17 @@
     "quantity": 0.0,
     "pnl_pct": null,
     "pnl_abs": null,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "watchlist": true,
     "mb_status": "others",
     "mcap_cr": 2400.44,
-    "pe": 22.0,
+    "pe": 21.48,
     "forward_pe": 49.98,
     "forward_eps": 42.49,
     "debt_to_equity": 15.116,
-    "eps": 96.53,
+    "eps": 98.85,
     "book_value": 1794.84,
     "div_yield": 166.0,
     "pat_cagr": -29.6,
@@ -11895,7 +12068,7 @@
     "quantity": 0.0,
     "pnl_pct": null,
     "pnl_abs": null,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "watchlist": true,
@@ -11918,7 +12091,7 @@
     "vol_week_ratio": 0.43,
     "vol_month_ratio": 1.4,
     "ath_pct": -22.95,
-    "atl_pct": 13310.19,
+    "atl_pct": 13310.2,
     "trend_score": 88,
     "trend_signal": "Extended",
     "price_to_200dma_pct": 10.71,
@@ -11953,16 +12126,16 @@
     "quantity": 0.0,
     "pnl_pct": null,
     "pnl_abs": null,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "watchlist": true,
     "mcap_cr": 1106.85,
-    "pe": 24.71,
+    "pe": 23.91,
     "forward_pe": 41.27,
     "forward_eps": 8.94,
     "debt_to_equity": 47.195,
-    "eps": 14.93,
+    "eps": 15.43,
     "book_value": 93.63,
     "div_yield": 36.0,
     "pat_cagr": 2173.3,
@@ -12014,7 +12187,7 @@
     "quantity": 0.0,
     "pnl_pct": null,
     "pnl_abs": null,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "watchlist": true,
@@ -12023,7 +12196,7 @@
     "forward_pe": 7.18,
     "forward_eps": 191.0,
     "debt_to_equity": 623.156,
-    "eps": 142.16,
+    "eps": 142.1,
     "book_value": 823.0,
     "div_yield": 9.0,
     "pat_cagr": 39.3,
@@ -12039,7 +12212,7 @@
     "vol_week_ratio": 2.7,
     "vol_month_ratio": 0.67,
     "ath_pct": -36.57,
-    "atl_pct": 66152.53,
+    "atl_pct": 66152.54,
     "trend_score": 0,
     "price_to_200dma_pct": -14.85,
     "dma200_slope_30d_pct": -3.64,
@@ -12073,7 +12246,7 @@
     "quantity": 0.0,
     "pnl_pct": null,
     "pnl_abs": null,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "watchlist": true,
@@ -12083,7 +12256,7 @@
     "forward_pe": 9.02,
     "forward_eps": 25.4,
     "debt_to_equity": 9.102,
-    "eps": 17.77,
+    "eps": 17.76,
     "book_value": 147.98,
     "div_yield": 219.0,
     "pat_cagr": -8.8,
@@ -12125,7 +12298,8 @@
     "ret_1y": -37.65,
     "ret_2y": -58.56,
     "ret_3y": -32.4,
-    "ret_4y": -5.75
+    "ret_4y": -5.75,
+    "ret_5y": null
   },
   "E2E": {
     "ltp": 651.8,
@@ -12133,14 +12307,14 @@
     "quantity": 0.0,
     "pnl_pct": null,
     "pnl_abs": null,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "watchlist": true,
     "mcap_cr": 13391.75,
-    "pe": 247.83,
+    "pe": 237.02,
     "debt_to_equity": 9.441,
-    "eps": 2.63,
+    "eps": 2.75,
     "book_value": 84.05,
     "rev_cagr": 334.1,
     "mcap_3y": 1664.01,
@@ -12188,7 +12362,7 @@
     "quantity": 0.0,
     "pnl_pct": null,
     "pnl_abs": null,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "watchlist": true,
@@ -12230,7 +12404,13 @@
     "insider_pct": 76.02,
     "ret_1d": -1.23,
     "ret_1w": -5.28,
-    "ret_1m": 20.82
+    "ret_1m": 20.82,
+    "ret_6m": null,
+    "ret_1y": null,
+    "ret_2y": null,
+    "ret_3y": null,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "ERIS": {
     "ltp": 1219.3,
@@ -12238,7 +12418,7 @@
     "quantity": 0.0,
     "pnl_pct": null,
     "pnl_abs": null,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "watchlist": true,
@@ -12298,7 +12478,7 @@
     "quantity": 0.0,
     "pnl_pct": null,
     "pnl_abs": null,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "watchlist": true,
@@ -12358,13 +12538,13 @@
     "quantity": 0.0,
     "pnl_pct": null,
     "pnl_abs": null,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "watchlist": true,
     "mcap_cr": 22274.47,
-    "pe": 18.11,
-    "eps": 933.66,
+    "pe": 17.78,
+    "eps": 950.76,
     "book_value": 3127.62,
     "div_yield": 29.0,
     "pat_cagr": 22.8,
@@ -12414,7 +12594,7 @@
     "quantity": 0.0,
     "pnl_pct": null,
     "pnl_abs": null,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "watchlist": true,
@@ -12438,7 +12618,7 @@
     "vol_week_ratio": 1.7,
     "vol_month_ratio": 0.78,
     "ath_pct": -2.83,
-    "atl_pct": 1002650.24,
+    "atl_pct": 1002650.31,
     "trend_score": 88,
     "trend_signal": "Extended",
     "price_to_200dma_pct": 10.84,
@@ -12474,7 +12654,7 @@
     "quantity": 0.0,
     "pnl_pct": null,
     "pnl_abs": null,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "watchlist": true,
@@ -12521,7 +12701,8 @@
     "ret_1y": -11.46,
     "ret_2y": -35.45,
     "ret_3y": 202.46,
-    "ret_4y": 217.23
+    "ret_4y": 217.23,
+    "ret_5y": null
   },
   "GULFOILLUB": {
     "ltp": 1105.8,
@@ -12529,17 +12710,17 @@
     "quantity": 0.0,
     "pnl_pct": null,
     "pnl_abs": null,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "watchlist": true,
     "mb_status": "others",
     "mcap_cr": 5479.85,
-    "pe": 14.67,
+    "pe": 14.71,
     "forward_pe": 10.58,
     "forward_eps": 104.52,
     "debt_to_equity": 35.781,
-    "eps": 75.4,
+    "eps": 75.18,
     "book_value": 311.03,
     "div_yield": 540.0,
     "pat_cagr": 28.0,
@@ -12590,7 +12771,7 @@
     "quantity": 0.0,
     "pnl_pct": null,
     "pnl_abs": null,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "watchlist": true,
@@ -12650,7 +12831,7 @@
     "quantity": 0.0,
     "pnl_pct": null,
     "pnl_abs": null,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "watchlist": true,
@@ -12662,7 +12843,7 @@
     "debt_to_equity": 16.73,
     "eps": 18.69,
     "book_value": 246.55,
-    "div_yield": 137.0,
+    "div_yield": 1.37,
     "pat_cagr": 16.8,
     "rev_cagr": 10.4,
     "mcap_3y": -31.79,
@@ -12710,7 +12891,7 @@
     "quantity": 0.0,
     "pnl_pct": null,
     "pnl_abs": null,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "watchlist": true,
@@ -12766,7 +12947,7 @@
     "quantity": 0.0,
     "pnl_pct": null,
     "pnl_abs": null,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "watchlist": true,
@@ -12821,14 +13002,14 @@
     "quantity": 0.0,
     "pnl_pct": null,
     "pnl_abs": null,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "watchlist": true,
     "mcap_cr": 14677.15,
-    "pe": 40.26,
+    "pe": 39.23,
     "debt_to_equity": 10.101,
-    "eps": 45.91,
+    "eps": 47.12,
     "book_value": 310.3,
     "div_yield": 40.0,
     "pat_cagr": -0.1,
@@ -12879,7 +13060,7 @@
     "quantity": 0.0,
     "pnl_pct": null,
     "pnl_abs": null,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "watchlist": true,
@@ -12940,7 +13121,7 @@
     "quantity": 0.0,
     "pnl_pct": null,
     "pnl_abs": null,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "watchlist": true,
@@ -13000,7 +13181,7 @@
     "quantity": 0.0,
     "pnl_pct": null,
     "pnl_abs": null,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "watchlist": true,
@@ -13025,7 +13206,7 @@
     "vol_week_ratio": 1.39,
     "vol_month_ratio": 0.66,
     "ath_pct": -21.66,
-    "atl_pct": 66739.84,
+    "atl_pct": 66739.83,
     "trend_score": 10,
     "price_to_200dma_pct": -9.43,
     "dma200_slope_30d_pct": -2.09,
@@ -13060,7 +13241,7 @@
     "quantity": 0.0,
     "pnl_pct": null,
     "pnl_abs": null,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "watchlist": true,
@@ -13118,16 +13299,16 @@
     "quantity": 0.0,
     "pnl_pct": null,
     "pnl_abs": null,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "watchlist": true,
     "mcap_cr": 9311.78,
-    "pe": 825.0,
+    "pe": 769.26,
     "forward_pe": 18.07,
     "forward_eps": 31.5,
     "debt_to_equity": 76.199,
-    "eps": 0.69,
+    "eps": 0.74,
     "book_value": 148.06,
     "pat_cagr": -31.1,
     "rev_cagr": -0.1,
@@ -13166,7 +13347,10 @@
     "ret_1m": 11.07,
     "ret_6m": 75.07,
     "ret_1y": 23.98,
-    "ret_2y": 2.32
+    "ret_2y": 2.32,
+    "ret_3y": null,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "MAXIND": {
     "ltp": 160.24,
@@ -13174,7 +13358,7 @@
     "quantity": 0.0,
     "pnl_pct": null,
     "pnl_abs": null,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "watchlist": true,
@@ -13227,7 +13411,7 @@
     "quantity": 0.0,
     "pnl_pct": null,
     "pnl_abs": null,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "watchlist": true,
@@ -13286,7 +13470,7 @@
     "quantity": 0.0,
     "pnl_pct": null,
     "pnl_abs": null,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "watchlist": true,
@@ -13328,16 +13512,16 @@
     "quantity": 0.0,
     "pnl_pct": null,
     "pnl_abs": null,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "watchlist": true,
     "mcap_cr": 64099.44,
-    "pe": 24.38,
+    "pe": 24.39,
     "forward_pe": 16.51,
     "forward_eps": 106.76,
     "debt_to_equity": 15.765,
-    "eps": 72.3,
+    "eps": 72.29,
     "book_value": 492.89,
     "div_yield": 44.0,
     "pat_cagr": 28.9,
@@ -13388,7 +13572,7 @@
     "quantity": 0.0,
     "pnl_pct": null,
     "pnl_abs": null,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "watchlist": true,
@@ -13447,7 +13631,7 @@
     "quantity": 0.0,
     "pnl_pct": null,
     "pnl_abs": null,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "watchlist": true,
@@ -13507,7 +13691,7 @@
     "quantity": 0.0,
     "pnl_pct": null,
     "pnl_abs": null,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "watchlist": true,
@@ -13555,7 +13739,11 @@
     "ret_1w": 7.41,
     "ret_1m": 30.74,
     "ret_6m": 36.31,
-    "ret_1y": -22.88
+    "ret_1y": -22.88,
+    "ret_2y": null,
+    "ret_3y": null,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "PTC": {
     "ltp": 155.75,
@@ -13563,7 +13751,7 @@
     "quantity": 0.0,
     "pnl_pct": null,
     "pnl_abs": null,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "watchlist": true,
@@ -13624,7 +13812,7 @@
     "quantity": 0.0,
     "pnl_pct": null,
     "pnl_abs": null,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "watchlist": true,
@@ -13681,7 +13869,7 @@
     "quantity": 0.0,
     "pnl_pct": null,
     "pnl_abs": null,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "watchlist": true,
@@ -13729,7 +13917,10 @@
     "ret_1m": 4.05,
     "ret_6m": 87.3,
     "ret_1y": 78.63,
-    "ret_2y": 104.87
+    "ret_2y": 104.87,
+    "ret_3y": null,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "RUSTOMJEE": {
     "ltp": 362.95,
@@ -13737,17 +13928,17 @@
     "quantity": 0.0,
     "pnl_pct": null,
     "pnl_abs": null,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "watchlist": true,
     "mb_status": "others",
     "mcap_cr": 4582.15,
-    "pe": 39.28,
+    "pe": 39.24,
     "forward_pe": 12.36,
     "forward_eps": 29.37,
     "debt_to_equity": 51.271,
-    "eps": 9.24,
+    "eps": 9.25,
     "book_value": 226.68,
     "div_yield": 38.0,
     "pat_cagr": 266.7,
@@ -13788,7 +13979,9 @@
     "ret_6m": -3.57,
     "ret_1y": -39.89,
     "ret_2y": -49.8,
-    "ret_3y": -38.27
+    "ret_3y": -38.27,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "SCHNEIDER": {
     "ltp": 1192.7,
@@ -13796,7 +13989,7 @@
     "quantity": 0.0,
     "pnl_pct": null,
     "pnl_abs": null,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "watchlist": true,
@@ -13855,14 +14048,14 @@
     "quantity": 0.0,
     "pnl_pct": null,
     "pnl_abs": null,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": true,
     "holding_type": "Stocks",
     "watchlist": true,
     "mb_status": "mustbuy",
     "mcap_cr": 1021.19,
     "debt_to_equity": 225.406,
-    "eps": -5.65,
+    "eps": -5.66,
     "book_value": 71.51,
     "div_yield": 17.0,
     "rev_cagr": -10.1,
@@ -13911,7 +14104,7 @@
     "quantity": 0.0,
     "pnl_pct": null,
     "pnl_abs": null,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "watchlist": true,
@@ -13935,7 +14128,7 @@
     "vol_week_ratio": 1.79,
     "vol_month_ratio": 0.98,
     "ath_pct": 0.0,
-    "atl_pct": 2569.02,
+    "atl_pct": 2569.03,
     "trend_score": 75,
     "trend_signal": "Extended",
     "price_to_200dma_pct": 31.08,
@@ -13952,7 +14145,7 @@
     "fcf_3yr_avg": 344.71,
     "price_to_book": 7.21,
     "ev_ebitda": 23.66,
-    "week52_high": 4841.1,
+    "week52_high": 4843.0,
     "week52_low": 2525.8,
     "insider_pct": 61.86,
     "ret_1d": 2.24,
@@ -13971,7 +14164,7 @@
     "quantity": 0.0,
     "pnl_pct": null,
     "pnl_abs": null,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "watchlist": true,
@@ -14018,7 +14211,10 @@
     "ret_1m": 1.41,
     "ret_6m": 11.78,
     "ret_1y": -8.81,
-    "ret_2y": 13.79
+    "ret_2y": 13.79,
+    "ret_3y": null,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "SJS": {
     "ltp": 2309.8,
@@ -14026,7 +14222,7 @@
     "quantity": 0.0,
     "pnl_pct": null,
     "pnl_abs": null,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "watchlist": true,
@@ -14086,7 +14282,7 @@
     "quantity": 0.0,
     "pnl_pct": null,
     "pnl_abs": null,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "watchlist": true,
@@ -14144,16 +14340,16 @@
     "quantity": 0.0,
     "pnl_pct": null,
     "pnl_abs": null,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "watchlist": true,
     "mcap_cr": 3520.67,
-    "pe": 13.06,
+    "pe": 13.07,
     "forward_pe": 15.89,
     "forward_eps": 125.9,
     "debt_to_equity": 40.115,
-    "eps": 153.16,
+    "eps": 153.14,
     "book_value": 777.06,
     "div_yield": 378.0,
     "pat_cagr": 152.1,
@@ -14203,7 +14399,7 @@
     "quantity": 0.0,
     "pnl_pct": null,
     "pnl_abs": null,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "watchlist": true,
@@ -14247,7 +14443,12 @@
     "ret_1d": 4.95,
     "ret_1w": -0.16,
     "ret_1m": -2.9,
-    "ret_6m": 98.33
+    "ret_6m": 98.33,
+    "ret_1y": null,
+    "ret_2y": null,
+    "ret_3y": null,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "TVSELECT": {
     "ltp": 374.3,
@@ -14255,7 +14456,7 @@
     "quantity": 0.0,
     "pnl_pct": null,
     "pnl_abs": null,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "watchlist": true,
@@ -14310,7 +14511,7 @@
     "quantity": 0.0,
     "pnl_pct": null,
     "pnl_abs": null,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "watchlist": true,
@@ -14358,7 +14559,9 @@
     "ret_6m": 79.97,
     "ret_1y": 122.72,
     "ret_2y": 93.7,
-    "ret_3y": 60.73
+    "ret_3y": 60.73,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "VIMTALABS": {
     "ltp": 591.4,
@@ -14366,14 +14569,14 @@
     "quantity": 0.0,
     "pnl_pct": null,
     "pnl_abs": null,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "watchlist": true,
     "mcap_cr": 2643.55,
-    "pe": 33.11,
+    "pe": 33.13,
     "debt_to_equity": 0.729,
-    "eps": 17.86,
+    "eps": 17.85,
     "book_value": 102.28,
     "div_yield": 34.0,
     "pat_cagr": 10.7,
@@ -14424,7 +14627,7 @@
     "quantity": 0.0,
     "pnl_pct": null,
     "pnl_abs": null,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "watchlist": true,
@@ -14484,7 +14687,7 @@
     "quantity": 0.0,
     "pnl_pct": null,
     "pnl_abs": null,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Stocks",
     "watchlist": true,
@@ -14584,7 +14787,7 @@
     "quantity": 3272.077,
     "pnl_pct": 1.35,
     "pnl_abs": 1348.42,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "MF",
     "accounts": [
@@ -14602,7 +14805,7 @@
     "quantity": 11266.534,
     "pnl_pct": 1.34,
     "pnl_abs": 3355.17,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "MF",
     "accounts": [
@@ -14620,7 +14823,7 @@
     "quantity": 7500.0,
     "pnl_pct": 47.14,
     "pnl_abs": 290825.0,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Gold",
     "accounts": [
@@ -14630,7 +14833,16 @@
         "buy_avg": 82.26,
         "invested": 616975.0
       }
-    ]
+    ],
+    "ret_1d": -3.05,
+    "ret_1w": -3.93,
+    "ret_1m": -5.25,
+    "ret_6m": 0.05,
+    "ret_1y": 27.76,
+    "ret_2y": 93.24,
+    "ret_3y": 140.27,
+    "ret_4y": 177.08,
+    "ret_5y": 188.82
   },
   "GOLDETF": {
     "ltp": 142.46,
@@ -14638,7 +14850,7 @@
     "quantity": 3393.0,
     "pnl_pct": 54.78,
     "pnl_abs": 171078.38,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Gold",
     "accounts": [
@@ -14648,7 +14860,16 @@
         "buy_avg": 92.04,
         "invested": 312288.4
       }
-    ]
+    ],
+    "ret_1d": -2.92,
+    "ret_1w": -3.82,
+    "ret_1m": -5.41,
+    "ret_6m": 0.35,
+    "ret_1y": 27.56,
+    "ret_2y": 96.51,
+    "ret_3y": 139.56,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "HDFC GOLD ETF FUND OF FUND - DIRECT PLAN": {
     "ltp": 46.5756,
@@ -14656,7 +14877,7 @@
     "quantity": 3973.047,
     "pnl_pct": 270.09,
     "pnl_abs": 135047.05,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Gold",
     "accounts": [
@@ -14674,7 +14895,7 @@
     "quantity": 10106.785,
     "pnl_pct": 221.56,
     "pnl_abs": 332334.14,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Gold",
     "accounts": [
@@ -14698,7 +14919,7 @@
     "quantity": 2713.804,
     "pnl_pct": 1.42,
     "pnl_abs": 1422.85,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "MF",
     "accounts": [
@@ -14716,7 +14937,7 @@
     "quantity": 74916.47,
     "pnl_pct": 6.19,
     "pnl_abs": 63759.57,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "MF",
     "accounts": [
@@ -14740,7 +14961,7 @@
     "quantity": 15.0,
     "pnl_pct": 60.58,
     "pnl_abs": 83251.05,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Gold",
     "accounts": [
@@ -14758,7 +14979,7 @@
     "quantity": 50.0,
     "pnl_pct": 153.97,
     "pnl_abs": 445592.0,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Gold",
     "accounts": [
@@ -14782,7 +15003,7 @@
     "quantity": 6.0,
     "pnl_pct": 68.42,
     "pnl_abs": 36245.0,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Gold",
     "accounts": [
@@ -14800,7 +15021,7 @@
     "quantity": 2.0,
     "pnl_pct": 64.71,
     "pnl_abs": 11708.0,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Gold",
     "accounts": [
@@ -14818,7 +15039,7 @@
     "quantity": 3.0,
     "pnl_pct": 63.38,
     "pnl_abs": 17266.35,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Gold",
     "accounts": [
@@ -14836,7 +15057,7 @@
     "quantity": 1.0,
     "pnl_pct": 65.36,
     "pnl_abs": 5933.0,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Gold",
     "accounts": [
@@ -14854,7 +15075,7 @@
     "quantity": 19.0,
     "pnl_pct": 15.28,
     "pnl_abs": 37084.0,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Gold",
     "accounts": [
@@ -14872,7 +15093,7 @@
     "quantity": 1.0,
     "pnl_pct": 62.51,
     "pnl_abs": 5670.23,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Gold",
     "accounts": [
@@ -14890,7 +15111,7 @@
     "quantity": 3.0,
     "pnl_pct": 60.61,
     "pnl_abs": 16773.71,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Gold",
     "accounts": [
@@ -14908,7 +15129,7 @@
     "quantity": 112.0,
     "pnl_pct": -3.79,
     "pnl_abs": -941.92,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Silver",
     "accounts": [
@@ -14918,7 +15139,16 @@
         "buy_avg": 222.0,
         "invested": 24864.0
       }
-    ]
+    ],
+    "ret_1d": -0.51,
+    "ret_1w": -4.83,
+    "ret_1m": -6.11,
+    "ret_6m": -1.11,
+    "ret_1y": 63.64,
+    "ret_2y": 149.93,
+    "ret_3y": 187.08,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "SILVERCASE": {
     "ltp": 22.25,
@@ -14926,7 +15156,7 @@
     "quantity": 6642.0,
     "pnl_pct": -12.24,
     "pnl_abs": -20605.22,
-    "updated": "2026-09-29 10:32 UTC",
+    "updated": "2026-09-29 12:32 UTC",
     "must_buy": false,
     "holding_type": "Silver",
     "accounts": [
@@ -14936,6 +15166,15 @@
         "buy_avg": 25.35,
         "invested": 168389.72
       }
-    ]
+    ],
+    "ret_1d": -4.36,
+    "ret_1w": -5.9,
+    "ret_1m": -6.53,
+    "ret_6m": -3.61,
+    "ret_1y": 61.22,
+    "ret_2y": null,
+    "ret_3y": null,
+    "ret_4y": null,
+    "ret_5y": null
   }
 }
