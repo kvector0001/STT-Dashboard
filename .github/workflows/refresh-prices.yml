@@ -5,9 +5,19 @@ on:
     - cron: '38 3 * * 1-5'             # 9:08 AM IST — wake scheduler / keepalive
     - cron: '47 3 * * 1-5'             # 9:17 AM IST — daily extended data
     - cron: '7,22,37,52 4-10 * * 1-5'  # market hours — odd minutes to avoid GitHub peak-load drops
-  workflow_dispatch:            # Manual trigger from GitHub Actions tab
+  workflow_dispatch:            # Manual trigger from GitHub Actions tab / cron-job.org
+    inputs:
+      alert:
+        description: 'Send daily movers to Telegram'
+        type: boolean
+        default: false
   repository_dispatch:          # Trigger from browser Refresh button
     types: [refresh-prices]
+
+# One refresh at a time — overlapping runs were racing each other on git push.
+concurrency:
+  group: refresh-prices
+  cancel-in-progress: false
 
 jobs:
   refresh:
@@ -34,6 +44,13 @@ jobs:
           python -m pip install --upgrade pip
           pip install yfinance pandas openpyxl requests gspread google-auth
           python scripts/fetch_prices.py
+
+      - name: Send daily movers to Telegram
+        if: github.event_name == 'workflow_dispatch' && inputs.alert
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python scripts/telegram_alert.py
 
       - name: Fetch extended data (Daily at 3:47 UTC / 9:17 AM IST)
         if: github.event.schedule == '47 3 * * 1-5' || github.event_name == 'workflow_dispatch' || github.event_name == 'repository_dispatch'
