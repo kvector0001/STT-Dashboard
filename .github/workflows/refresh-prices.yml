@@ -1,10 +1,7 @@
 name: Refresh Stock Prices
 
 on:
-  schedule:
-    - cron: '38 3 * * 1-5'             # 9:08 AM IST — wake scheduler / keepalive
-    - cron: '47 3 * * 1-5'             # 9:17 AM IST — daily extended data
-    - cron: '7,22,37,52 4-10 * * 1-5'  # market hours — odd minutes to avoid GitHub peak-load drops
+  # Scheduling is done by cron-job.org (GitHub's own cron ran 5-6h late / mostly dropped).
   workflow_dispatch:            # Manual trigger from GitHub Actions tab / cron-job.org
     inputs:
       alert:
@@ -52,8 +49,7 @@ jobs:
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: python scripts/telegram_alert.py
 
-      - name: Fetch extended data (Daily at 3:47 UTC / 9:17 AM IST)
-        if: github.event.schedule == '47 3 * * 1-5' || github.event_name == 'workflow_dispatch' || github.event_name == 'repository_dispatch'
+      - name: Fetch extended data
         run: python scripts/fetch_extended_data.py
 
       - name: Commit and push changes

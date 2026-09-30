@@ -1,8 +1,7 @@
 name: IA Calls Sync
 
 on:
-  schedule:
-    - cron: '30 1 * * *'        # 7:00 AM IST daily
+  # Triggered daily at 7:00 AM IST by cron-job.org.
   workflow_dispatch:
     inputs:
       full_rebuild:
