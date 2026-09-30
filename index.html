@@ -4044,7 +4044,7 @@ function iaExportRows() {
   const tickers = Object.keys(IA_CALLS).sort();
 
   // Sheet 1 — collapsed/current view (all computed columns, no commentary)
-  const sumRows = [['Ticker', 'Company', 'IA Call status', 'Signal', 'Alloc', 'Value (L)', 'Last buy \u20b9', 'Max buy \u20b9', 'CMP', 'vs Last buy %', 'vs Max buy %', 'CAGR % (since last buy)', 'Last buy age', '# Calls', 'First Date', 'Last call date', 'Held', 'Urgent', 'Blog']];
+  const sumRows = [['Ticker', 'Company', 'IA Call status', 'Signal', 'Alloc', 'Value (L)', 'Last call \u20b9', 'Max call \u20b9', 'CMP', 'vs Last call %', 'vs Max call %', 'CAGR % (since last call)', 'Call age', '# Calls', 'First Date', 'Last call date', 'Held', 'Urgent', 'Blog']];
   tickers.forEach(t => {
     const ia = IA_CALLS[t], cmp = iaCmp(t);
     const vsL = (ia.lastReco > 0 && cmp != null) ? (cmp / ia.lastReco - 1) * 100 : null;
@@ -4123,7 +4123,7 @@ function renderCallsHistory() {
     if (va == null) return 1; if (vb == null) return -1; return dir * (va - vb);
   });
   const nDisc = items.filter(x => x.bVsL === 'disc').length, nPrem = items.filter(x => x.bVsL === 'prem').length;
-  if (summaryEl) summaryEl.innerHTML = `${items.length} stocks · <span style="color:var(--green)">${nDisc} at/below last buy call</span> · <span style="color:var(--red-text)">${nPrem} &gt;40% above</span> · click a row for the full call history`;
+  if (summaryEl) summaryEl.innerHTML = `${items.length} stocks · <span style="color:var(--green)">${nDisc} at/below last call</span> · <span style="color:var(--red-text)">${nPrem} &gt;40% above</span> · click a row for the full call history`;
   const anyF = (field) => callsF[field].size > 0;
   const th = (k, label, left, ff) => {
     const arrow = callsSort.by === k ? (callsSort.dir === 'asc' ? ' ↑' : ' ↓') : '';
@@ -4155,11 +4155,11 @@ function renderCallsHistory() {
       ${nF ? `<span onclick="iaClearFilters()" style="cursor:pointer;color:var(--blue-text);font-size:0.72rem;">✕ Clear ${nF} filter${nF > 1 ? 's' : ''}</span>` : '<span style="color:var(--text3);font-size:0.68rem;">▼ = filter · click a header to sort</span>'}
     </div>
     <div style="display:flex;flex-wrap:wrap;gap:6px;margin:0 0 8px;">
-      ${ccAll} ${cc('⭐ Must buy', 'mustbuy', 'MUSTBUY')} ${cc('🔼 Bullish', 'mustbuy', 'BULLISH')} ${cc('🟢 At/below buy call', 'vsLast', 'disc')} ${cc('🟡 Low premium', 'vsLast', 'b20')} ${cc('Held', 'alloc', 'held')} ${cc('Low held', 'alloc', 'low')} ${cc('Not held', 'alloc', 'not')}
+      ${ccAll} ${cc('⭐ Must buy', 'mustbuy', 'MUSTBUY')} ${cc('🔼 Bullish', 'mustbuy', 'BULLISH')} ${cc('🟢 At/below call', 'vsLast', 'disc')} ${cc('🟡 Low premium', 'vsLast', 'b20')} ${cc('Held', 'alloc', 'held')} ${cc('Low held', 'alloc', 'low')} ${cc('Not held', 'alloc', 'not')}
     </div>
     <div style="overflow:auto;max-height:calc(100vh - 190px);"><table class="ia-calls-table" style="width:100%;border-collapse:collapse;">
       <thead><tr>
-        <th></th>${th('ticker', 'Ticker (' + items.length + ')', true)}${th('company', 'Company', true)}${th('status', 'IA Call status', true, 'status')}${th('mustbuy', 'Signal', true, 'mustbuy')}${th('alloc', 'Alloc', true, 'alloc')}${th('value', 'Value (L)')}${th('last', 'Last buy ₹')}${th('max', 'Max buy ₹')}${th('cmp', 'CMP')}${th('vsLast', 'vs Last buy', false, 'vsLast')}${th('vsMax', 'vs Max buy', false, 'vsMax')}${th('cagr', 'CAGR', false, 'cagr')}${th('age', 'Buy age', false, 'age')}${th('date', 'Date', true)}<th>Blog</th>
+        <th></th>${th('ticker', 'Ticker (' + items.length + ')', true)}${th('company', 'Company', true)}${th('status', 'IA Call status', true, 'status')}${th('mustbuy', 'Signal', true, 'mustbuy')}${th('alloc', 'Alloc', true, 'alloc')}${th('value', 'Value (L)')}${th('last', 'Last call ₹')}${th('max', 'Max call ₹')}${th('cmp', 'CMP')}${th('vsLast', 'vs Last call', false, 'vsLast')}${th('vsMax', 'vs Max call', false, 'vsMax')}${th('cagr', 'CAGR', false, 'cagr')}${th('age', 'Call age', false, 'age')}${th('date', 'Date', true)}<th>Blog</th>
       </tr></thead><tbody>`;
   items.forEach(x => { const ia = x.ia, exp = callsExpanded.has(x.t), am = IA_ALLOC_META[x.alloc];
     html += `<tr id="ia-row-${esc(x.t)}" class="${exp ? 'ia-open' : ''}" onclick="toggleIaExpand('${esc(x.t)}')" style="cursor:pointer;text-align:right;border-bottom:1px solid var(--border);${exp ? 'background:var(--bg2);' : ''}">
