@@ -1258,10 +1258,11 @@ else:
 # Yahoo Finance symbols for these NSE indices are not fully standardised, so we try
 # a list of candidates per index and keep the first that returns history.
 BENCHMARK_SYMBOLS = {
-    "nifty50":     ["^NSEI"],                                  # Nifty 50 index (full history)
-    "smallcap250": ["HDFCSML250.NS", "MOSMALL250.NS"],         # Nifty Smallcap 250 (ETF proxy; ~3y history, no 5y on Yahoo)
-    "midcap400":   ["MID150BEES.NS", "MIDCAPETF.NS", "NIFTYMIDCAP150.NS", "^NSEMDCP50"],  # Nifty Midcap 150 (broad-midcap proxy)
+    "nifty50":     ["^NSEI"],                                                # Nifty 50 index (full history)
+    "smallcap250": ["NIFTYSMLCAP250.NS", "HDFCSML250.NS", "MOSMALL250.NS"],   # official Nifty Smallcap 250 index, then ETF proxies
+    "midcap400":   ["NIFTYMIDCAP150.NS", "MIDCAPETF.NS", "MID150BEES.NS"],    # official Nifty Midcap 150 index, then ETF proxies
 }
+BENCHMARK_MIN_ROWS = 260  # need ~1y of history; newly-listed ETFs otherwise leave 1M-5Y blank
 
 def _ret(hist, n):
     if len(hist) > n:
@@ -1304,6 +1305,7 @@ def _mf_returns(scheme_code):
 # Fallback index-fund scheme codes for periods the ETF can't cover
 BENCHMARK_MF_FALLBACK = {
     "smallcap250": 148519,   # Nippon India Nifty Smallcap 250 Index Fund (history since Oct 2020)
+    "midcap400":   151724,   # HDFC Nifty Midcap 150 Index Fund
 }
 
 benchmarks = {}
@@ -1311,7 +1313,7 @@ for key, candidates in BENCHMARK_SYMBOLS.items():
     for cand in candidates:
         try:
             h = yf.Ticker(cand).history(period="5y")
-            if h is None or h.empty or len(h) < 2:
+            if h is None or h.empty or len(h) < BENCHMARK_MIN_ROWS:
                 continue
             benchmarks[key] = {
                 "symbol": cand,
@@ -1480,6 +1482,13 @@ if _suspect_syms:
 
 with open("prices.json", "w", encoding="utf-8") as f:
     json.dump(sanitise(prices), f, indent=2, ensure_ascii=False)
+
+# ── Action-change event log (ADD / REVERSAL / TRIM / EXIT) — once per day after close ──
+try:
+    from action_log import update_action_log
+    update_action_log(sanitise(prices))
+except Exception as e:
+    print(f"[WARN] Action log update skipped: {e}")
 
 # ── Save updated stocks.json (names populated for placeholders) ───────────────
 with open(stocks_path, "w", encoding="utf-8") as f:

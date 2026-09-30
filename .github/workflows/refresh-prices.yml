@@ -44,6 +44,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add prices.json stocks.json data/portfolio.xlsx
+          if [ -f action_log.json ]; then git add action_log.json; fi
           # Always commit — even empty — so GitHub sees repo activity and keeps cron alive
           if git diff --staged --quiet; then
             git commit --allow-empty -m "chore: keepalive $(date -u +'%Y-%m-%d %H:%M UTC')"

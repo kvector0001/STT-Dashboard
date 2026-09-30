@@ -1,0 +1,40 @@
+name: IA Calls Sync
+
+on:
+  schedule:
+    - cron: '30 1 * * *'        # 7:00 AM IST daily
+  workflow_dispatch:
+    inputs:
+      full_rebuild:
+        description: 'Re-classify every call from scratch (keeps blog rows)'
+        type: boolean
+        default: false
+
+concurrency:
+  group: ia-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read            # reads stocks.json / prices.json only; nothing is committed
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install pandas numpy yfinance gspread google-auth google-api-python-client
+
+      - name: Sync WhatsApp exports -> Google Sheet
+        env:
+          GOOGLE_SA_KEY: ${{ secrets.GOOGLE_SA_KEY }}
+          IA_CONFIG: ${{ secrets.IA_CONFIG }}
+          PYTHONUTF8: '1'
+        run: python scripts/ia/ia_sync.py ${{ inputs.full_rebuild && '--full' || '' }}

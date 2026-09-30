@@ -588,6 +588,10 @@
 
     /* ── HEADER ACTION BUTTONS ── */
     .header-actions { display: flex; align-items: center; gap: 0.5rem; flex-shrink: 0; }
+    /* Keep ← Back pinned top-right on every page, even when a page has many header buttons */
+    .header-top { flex-wrap: nowrap; }
+    .header-top > .header-actions { flex-wrap: wrap; flex-shrink: 1; min-width: 0; }
+    .nav-back-btn { flex-shrink: 0; margin-left: auto; align-self: flex-start; }
     .hdr-btn {
       background: var(--bg3);
       border: 1px solid var(--border);
@@ -1209,7 +1213,8 @@
       <button class="hdr-btn export" onclick="refreshDataBtn()" id="refresh-btn-analysis">🔄 Refresh Data</button>
       <div id="refresh-progress-analysis" style="font-size:0.68rem;color:var(--text3);font-family:var(--mono);"></div>
       <button class="hdr-btn" id="excel-export-btn-2" onclick="exportToExcel()" title="Export portfolio table to Excel (unlock required)" style="padding:4px 8px;display:flex;align-items:center;gap:5px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;"><rect width="24" height="24" rx="3" fill="#1D6F42"/><path d="M7 7h10v2H7zM7 11h10v2H7zM7 15h10v2H7z" fill="white" opacity="0.3"/><path d="M6 6l4 6-4 6h2.5l2.5-4 2.5 4H16l-4-6 4-6h-2.5L11 12 8.5 6H6z" fill="white"/></svg><span style="font-size:0.7rem;font-weight:600;">XLS</span></button>
-      <button class="hdr-btn" id="portfolio-extract-btn" onclick="copyPortfolioExtract()" title="Copy a full Portfolio Extract (all metrics, deep analysis, peers, red flags, mgmt) + AI analysis prompt to clipboard (unlock required)" style="padding:4px 10px;font-size:0.7rem;font-weight:600;">🧠 Portfolio Extract</button>
+      <button class="hdr-btn" onclick="masterExtract()" title="Master extract (Excel): every Dashboard column + fundamental analysis, moat, management trust, red flags, peer analysis, IA call history & commentary, action log (unlock required)" style="padding:4px 10px;font-size:0.7rem;font-weight:600;">📦 Master extract</button>
+      <button class="hdr-btn" onclick="openActionLog()" title="History of Action changes (ADD / REVERSAL / TRIM / EXIT), recorded once a day after market close" style="padding:4px 10px;font-size:0.7rem;font-weight:600;">📜 Action log</button>
       </div>
       <button class="hdr-btn nav-back-btn" onclick="navBack()" title="Back to where you came from" style="display:none;font-weight:700;">← Back</button>
     </div>
@@ -1344,7 +1349,7 @@
     <button class="analysis-chip" data-afilter="near52wkl" onclick="setAnalysisFilter('near52wkl',this)" title="Within 5% of 52-week low">🔽 Near 52wk Low</button>
     <button class="analysis-chip" data-afilter="mbbull" onclick="setAnalysisFilter('mbbull',this)" title="Rows flagged MUSTBUY or Bullish in the MB sheet (column E — the MB column)">★ MB/Bullish</button>
     <button class="analysis-chip" data-afilter="add" style="color:var(--green);" onclick="setAnalysisFilter('add',this)" title="⏫ ADD — mechanical continuation buy: Setup BUY + monthly up-move + rising 200DMA, not extended (ext −5..40%, 1M ≤30%). Backtested edge — confirm newsflow, then add.">▲ Add</button>
-    <button class="analysis-chip" data-afilter="reversal" style="color:#b8860b;" onclick="setAnalysisFilter('reversal',this)" title="🔎 REVERSAL WATCH — deep below ATH (>40%) but jumping (1M >15%). NOT a mechanical buy: check for a genuine fundamental shift first.">🔎 Reversal</button>
+    <button class="analysis-chip" data-afilter="reversal" style="color:#b8860b;" onclick="setAnalysisFilter('reversal',this)" title="🔎 REVERSAL WATCH — surge at any distance from ATH: D = 1D ≥+5% on ≥3× vol · W = 1W ≥+12% on ≥3× weekly vol · M = 1M >+15%. NOT a mechanical buy: check for a genuine fundamental shift first.">🔎 Reversal</button>
     <button class="analysis-chip" data-afilter="shortlist" style="color:var(--green);" onclick="setAnalysisFilter('shortlist',this)" title="BUY watchlist — Quality + clean + active signal: (Conviction ≥7 OR Quality ≥6.8) AND Red-Flags >5 AND Mgmt-Trust >5 AND (▲ Add OR 🔎 Reversal OR an active daily/weekly Mover).">▲ Shortlist</button>
     <button class="analysis-chip" data-afilter="exits" style="color:var(--red-text);" onclick="setAnalysisFilter('exits',this)" title="EXIT watchlist (mirror of ▲ Shortlist) — a hard ⏬ EXIT action, OR a 🚨 REDUCE alloc together with ≥2 fundamental cracks {Conviction &lt;6, Quality &lt;5.5, Red-Flags &lt;5, Mgmt-Trust &lt;5}. Deliberately narrow — only your most broken, weakest-thesis names.">▼ Exits</button>
     <button class="analysis-chip" data-afilter="loss" onclick="setAnalysisFilter('loss',this)">In Loss</button>
@@ -1360,7 +1365,7 @@
           <th class="col-mov" onclick="sortAnalysis('movers_m')" oncontextmenu="return openMoversBulk('movers_m',event)" title="MONTHLY breakout/breakdown (21-day) — same 🔥/🚀/🧊/❄️ levels, plus 🔻 distribution (at highs but falling) / 🔼 accumulation (at lows but rising). Thresholds: monthly volume ≥1.3× avg AND 21-day move ≥±12%, at that level. Click a cell for a single-stock structural prompt; right-click this header for a combined prompt across all filtered stocks.">Mov(M) <span class="col-filter-icon" data-col="movers_m" title="Filter" onclick="event.stopPropagation();openColFilter('movers_m',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-movers_m" class="sort-indicator"></span></th>
           <th class="col-mov" onclick="sortAnalysis('movers_alloc')" oncontextmenu="return openMoversBulk('movers_alloc',event)" title="Allocation ACTION = momentum × 200DMA trend (incl. Trend Score). 🏆 STRONG ADD — monthly catalyst in the low-risk sweet spot (≤20% above a RISING 200DMA, holding ≥9/10 days). 💎 ADD/increase — early confirmed re-rating (monthly up, 1M ≤20%, ≤40% above a RISING 200DMA). 🌱 START-SMALL/watch — early, trend not yet confirmed. ⏳ HOLD — already ran (>30% 1M / >50% ext) OR a healthy pullback in a strong uptrend (TS≥70 & 200DMA rising); not a reduce. 🚨 REDUCE — genuine de-rating: new low, below a falling 200DMA, or monthly downtrend without a strong rising 200DMA. Click a cell for a single-stock allocation prompt; right-click this header for a combined prompt across all filtered stocks.">Alloc <span class="col-filter-icon" data-col="movers_alloc" title="Filter" onclick="event.stopPropagation();openColFilter('movers_alloc',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-movers_alloc" class="sort-indicator"></span></th>
           <th class="col-sig" onclick="sortAnalysis('setup')" oncontextmenu="return openSetupBulk(event)" title="TRENDS (ST,LT) — colored dot = the Setup signal, then (Sn-ST, Sn-LT) scores 0-100. Sn(ST)=short-term (RSI/50DMA/volume/1W-1M); Sn(LT)=long-term (Trend Score/relative-strength/6M-1Y/200DMA), reconciled with the Alloc guard. DOTS: 🟢 BUY leader+fresh entry · 🔵 ACCUMULATE leader pulling back · ⚪ HOLD · 🟠 BOUNCE dead-cat · 🔴 EXIT broken · · N/A insufficient history. Click a cell to deep-dive one stock; RIGHT-CLICK this header for ONE combined analysis of ALL filtered stocks.">Trends (ST,LT) <span class="col-filter-icon" data-col="setup" title="Filter" onclick="event.stopPropagation();openColFilter('setup',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-setup" class="sort-indicator"></span></th>
-          <th class="col-sig" onclick="sortAnalysis('action')" title="ACTION — the decision. ⏫ ADD = mechanical buy (Setup BUY + monthly up + rising 200DMA, not extended). 🔎 REVERSAL = watch (deep below ATH but jumping — check fundamentals). ✂️ TRIM = watch (heavy-volume distribution at highs). ⏬ EXIT = watch (breakdown below a falling 200DMA). Only ⏫ is a mechanical buy; the rest are research alerts.">Action <span class="col-filter-icon" data-col="action" title="Filter" onclick="event.stopPropagation();openColFilter('action',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-action" class="sort-indicator"></span></th>
+          <th class="col-sig" onclick="sortAnalysis('action')" title="ACTION — the decision. ⏫ ADD = mechanical buy (Setup BUY + monthly up + rising 200DMA, not extended). 🔎 REVERSAL = watch (daily/weekly/monthly surge, any distance from ATH — check fundamentals). ✂️ TRIM = watch (heavy-volume distribution at highs). ⏬ EXIT = watch (breakdown below a falling 200DMA). Only ⏫ is a mechanical buy; the rest are research alerts.">Action <span class="col-filter-icon" data-col="action" title="Filter" onclick="event.stopPropagation();openColFilter('action',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-action" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('ret_1d')" title="1-day price return (%)">1D Ret <span class="col-filter-icon" data-col="ret_1d" title="Filter" onclick="event.stopPropagation();openColFilter('ret_1d',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-ret_1d" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('ret_1w')" title="~5 trading day (1-week) price return (%)">1W Ret <span class="col-filter-icon" data-col="ret_1w" title="Filter" onclick="event.stopPropagation();openColFilter('ret_1w',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-ret_1w" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('ret_1m')" title="~21 trading day (1-month) price return (%)">1M Ret <span class="col-filter-icon" data-col="ret_1m" title="Filter" onclick="event.stopPropagation();openColFilter('ret_1m',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-ret_1m" class="sort-indicator"></span></th>
@@ -1376,8 +1381,8 @@
           <th onclick="sortAnalysis('pnl_pct')">P&L % <span id="sort-pnl_pct" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('quantity')">Qty. <span id="sort-quantity" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('ltp')">CMP <span id="sort-ltp" class="sort-indicator"></span></th>
-          <th onclick="sortAnalysis('ia_vs_last')" title="IA advisor call — current price vs his LAST recommended price. Green = at/below his call (cheap), yellow/amber = moderately above, red = far above.">IA vs Last <span id="sort-ia_vs_last" class="sort-indicator"></span></th>
-          <th onclick="sortAnalysis('ia_vs_max')" title="IA advisor call — current price vs his HIGHEST recommended price. Green = at/below, red = far above.">IA vs Max <span id="sort-ia_vs_max" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('ia_vs_last')" title="IA advisor — current price vs the LAST BUY call price (watch/sell mentions ignored). Green = at/below the buy call (cheap), yellow/amber = moderately above, red = far above.">IA vs Last <span id="sort-ia_vs_last" class="sort-indicator"></span></th>
+          <th onclick="sortAnalysis('ia_vs_max')" title="IA advisor — current price vs the HIGHEST BUY call price. Green = at/below, red = far above.">IA vs Max <span id="sort-ia_vs_max" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('buy_avg')" title="Average buying price per share (from the portfolio sheet)">Buy Price <span id="sort-buy_avg" class="sort-indicator"></span></th>
           <th class="cf-narrow" onclick="sortAnalysis('mgmt_trust_score')" title="Management Trust score (/10) — hover a score for the full breakdown">👔 <span class="col-filter-icon" data-col="mgmt_trust_score" title="Filter" onclick="event.stopPropagation();openColFilter('mgmt_trust_score',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-mgmt_trust_score" class="sort-indicator"></span></th>
           <th class="cf-narrow" onclick="sortAnalysis('qual_score')" title="Rating — pure qualitative Quality score (/10): moat, management, capital allocation, pricing power, growth. Hover for breakdown.">⭐ <span class="col-filter-icon" data-col="qual_score" title="Filter" onclick="event.stopPropagation();openColFilter('qual_score',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-qual_score" class="sort-indicator"></span></th>
@@ -1437,6 +1442,23 @@
   </header>
   <div id="calls-summary" style="font-size:0.72rem;color:var(--text3);margin:6px 2px;"></div>
   <div id="calls-history-root" style="padding:2px 4px 40px;"></div>
+</div>
+
+<!-- ACTION LOG MODAL -->
+<div class="modal-overlay" id="action-log-modal" onclick="if(event.target===this)this.classList.remove('open')">
+  <div class="modal-box" style="max-width:1100px;max-height:88vh;">
+    <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+      <div class="modal-title" style="margin-right:auto;">📜 Action log <span id="alog-count" style="font-weight:400;color:var(--text3);font-size:0.78rem;"></span></div>
+      <input id="alog-search" oninput="renderActionLog()" placeholder="🔍 Ticker / name…" style="padding:5px 9px;border-radius:6px;border:1px solid var(--border);background:var(--bg3);color:var(--text);font-size:0.78rem;width:160px;">
+      <select id="alog-to" onchange="renderActionLog()" style="padding:5px 8px;border-radius:6px;border:1px solid var(--border);background:var(--bg3);color:var(--text);font-size:0.78rem;">
+        <option value="">All changes</option><option value="ADD">→ ADD</option><option value="REVERSAL">→ REVERSAL</option><option value="TRIM">→ TRIM</option><option value="EXIT">→ EXIT</option><option value="—">→ (none)</option>
+      </select>
+      <button class="hdr-btn" onclick="exportActionLog()" style="padding:4px 10px;font-size:0.72rem;font-weight:600;">⬇ Extract action log (Excel)</button>
+      <button class="hdr-btn" onclick="document.getElementById('action-log-modal').classList.remove('open')">✕</button>
+    </div>
+    <div style="font-size:0.7rem;color:var(--text3);">One row per change, recorded once a day after the NSE close. Prices/returns are as of that day.</div>
+    <div style="overflow:auto;flex:1;min-height:200px;"><table class="ia-calls-table" id="alog-table" style="width:100%;border-collapse:collapse;"></table></div>
+  </div>
 </div>
 
 <!-- API KEY SETUP MODAL -->
@@ -3538,10 +3560,17 @@ function setupCell(s) {
 // (backtested edge); 🔎/✂️/⏬ are WATCH alerts that route to a fundamental check.
 const ACTION_META = {
   '⏫': { label: 'ADD', glyph: '▲', color: 'var(--green)', tip: 'ADD (continuation) — Setup BUY + monthly up-move + rising 200DMA, not extended (ext −5..40%, 1M ≤30%). Mechanical BUY (backtested edge). Confirm newsflow, then add.' },
-  '🔎': { label: 'REVERSAL', glyph: '🔎', color: '#facc15', tip: 'REVERSAL WATCH — deep below ATH (>40%) but jumping (1M >15%). NOT a mechanical buy (price signal alone loses). Check for a genuine fundamental shift first.' },
+  '🔎': { label: 'REVERSAL', glyph: '🔎', color: '#facc15', tip: 'REVERSAL WATCH — surge at any distance from ATH. D = 1D ≥+5% on ≥3× volume · W = 1W ≥+12% on ≥3× weekly volume · M = 1M >+15%. NOT a mechanical buy (price signal alone loses). Check for a genuine fundamental shift first.' },
   '✂️': { label: 'TRIM', glyph: '✂️', color: '#f97316', tip: 'TRIM WATCH — near the highs with a HEAVY-volume monthly drop (vol ≥1.3×) after prior strength: possible distribution. Check if the thesis is breaking before trimming.' },
   '⏬': { label: 'EXIT', glyph: '▼', color: 'var(--red-text)', tip: 'EXIT WATCH — monthly downtrend below a FALLING 200DMA. NOT a mechanical sell (bounces short-term); exit only on sustained de-rating / broken thesis.' },
 };
+function reversalTf(s) {
+  const tf = [];
+  if (s.ret_1d != null && s.ret_1d >= 5 && s.vol_today_ratio != null && s.vol_today_ratio >= 3) tf.push('D');
+  if (s.ret_1w != null && s.ret_1w >= 12 && s.vol_week_ratio != null && s.vol_week_ratio >= 3) tf.push('W');
+  if (s.ret_1m != null && s.ret_1m > 15) tf.push('M');
+  return tf;
+}
 function actionOf(s) {
   const up = m => m === '🔥' || m === '🚀' || m === '📈' || m === '💥';
   const dn = m => m === '🧊' || m === '❄️' || m === '📉';
@@ -3554,14 +3583,20 @@ function actionOf(s) {
   if (dn(s.movers_m) && slope != null && slope < 0 && ext != null && ext < 0) return '⏬';
   // ✂️ TRIM — heavy-volume distribution at the highs
   if (ath != null && ath > -10 && r1m != null && r1m < -5 && vm != null && vm >= 1.3 && r6 != null && r6 > 20) return '✂️';
-  // 🔎 REVERSAL — deep below ATH but jumping (research)
-  if (ath != null && ath < -40 && r1m != null && r1m > 15) return '🔎';
+  // 🔎 REVERSAL — daily / weekly / monthly surge at any distance from ATH (research)
+  if (reversalTf(s).length) return '🔎';
   return '';
 }
 function actionCell(s) {
   const a = s.action || '';
   if (!a) return '<td class="col-sig" style="text-align:center;color:var(--text3);">—</td>';
   const m = ACTION_META[a];
+  if (a === '🔎') {
+    const tf = reversalTf(s);
+    const badges = tf.map(x => `<span style="display:inline-block;min-width:13px;padding:0 3px;margin-left:2px;border-radius:3px;font-size:0.6rem;font-weight:800;background:#facc15;color:#111;">${x}</span>`).join('');
+    const tip = m.tip + ' | Fired: ' + tf.map(x => ({ D: 'Daily', W: 'Weekly', M: 'Monthly' })[x]).join(' + ');
+    return `<td class="col-sig" style="text-align:center;cursor:help;white-space:nowrap;" title="${esc(tip)}"><span style="font-size:0.9rem;font-weight:800;color:${m.color};">${m.glyph}</span>${badges}</td>`;
+  }
   return `<td class="col-sig" style="text-align:center;cursor:help;" title="${esc(m.tip)}"><span style="font-size:0.9rem;font-weight:800;color:${m.color};">${m.glyph || a}</span></td>`;
 }
 // Deep-dive context + prompt (single or bulk) — the Gate-2 confirmation prompt.
@@ -3868,6 +3903,7 @@ function switchTab(tab, keepNav) {
   } else if (tab === 'dashboard') {
     renderAll();
   } else if (tab === 'calls') {
+    if (!keepNav) callsSort = { by: 'date', dir: 'desc' };
     renderCallsHistory();
   }
   if (!keepNav) { navStack = []; updateBackBtns(); }
@@ -3935,7 +3971,7 @@ const IA_SHEET_ID = '1TSn6HIdcsux4p8cdpU0fx78zKibyxFKnwUUZTHFKfNI';
 let IA_CALLS = {};   // ticker -> {company,status,lastReco,maxReco,signal,held,urgent,blog,ncalls,firstDate,lastDate,maxDate}
 let IA_QUOTES = {};  // ticker -> [{date,action,price,quote,source}]
 let IA_LOADED = false, IA_ERROR = '';
-let callsSearch = '', callsSort = { by: 'vsLast', dir: 'asc' }, callsExpanded = new Set();
+let callsSearch = '', callsSort = { by: 'date', dir: 'desc' }, callsExpanded = new Set();
 let callsF = { status: new Set(), mustbuy: new Set(), alloc: new Set(), vsLast: new Set(), vsMax: new Set(), cagr: new Set(), age: new Set() };
 let callsMenu = null;
 
@@ -3964,7 +4000,7 @@ function loadIAData() {
     rows.forEach(r => { if (!r || !r[0]) return;
       IA_CALLS[String(r[0]).trim()] = { company: r[1] || '', status: r[2] || '', lastReco: iaNum(r[3]), maxReco: iaNum(r[4]),
         signal: r[10] || '', held: String(r[11] || '').trim().toUpperCase() === 'Y', urgent: String(r[12] || '').trim().toUpperCase() === 'Y',
-        blog: r[13] || '', ncalls: iaNum(r[14]), firstDate: r[15] || '', lastDate: r[16] || '', maxDate: r[17] || '', mustbuy: r[18] || '' };
+        blog: r[13] || '', ncalls: iaNum(r[14]), firstDate: r[15] || '', lastDate: r[16] || '', maxDate: r[17] || '', mustbuy: r[18] || '', lastBuyDate: r[19] || '' };
     });
   });
   _iaLoadTab('IA All Calls', '_iaCbAll', rows => {
@@ -3974,7 +4010,7 @@ function loadIAData() {
   });
 }
 function iaColor(v) { if (v == null) return 'var(--text3)'; if (v <= 0) return 'var(--green)'; if (v <= 20) return '#eab308'; if (v <= 40) return '#f59e0b'; return 'var(--red-text)'; }
-function iaVsCell(v) { if (v == null) return '<td style="text-align:right;color:var(--text3)">—</td>'; return `<td style="text-align:right;font-weight:600;color:${iaColor(v)}">${v >= 0 ? '+' : ''}${v.toFixed(0)}%</td>`; }
+function iaVsCell(v, t) { if (v == null) return '<td style="text-align:right;color:var(--text3)">—</td>'; const click = t ? ` onclick="event.stopPropagation();goToCallsHistory('${esc(t)}')" title="Open all IA calls for ${esc(t)}"` : ''; return `<td${click} style="text-align:right;font-weight:600;color:${iaColor(v)};${t ? 'cursor:pointer;text-decoration:underline dotted;' : ''}">${v >= 0 ? '+' : ''}${v.toFixed(0)}%</td>`; }
 function iaCmp(t) { const p = window._prices; if (p && p[t] && p[t].ltp != null) return p[t].ltp; const s = (typeof allStocks !== 'undefined') ? allStocks.find(x => x.ticker === t) : null; return s && s.ltp != null ? s.ltp : null; }
 function iaCagr(reco, cmp, dateStr) { if (!reco || cmp == null || !dateStr) return null; const d = new Date(dateStr); if (isNaN(d.getTime())) return null; const days = (Date.now() - d.getTime()) / 86400000; if (days <= 0) return null; const ratio = cmp / reco; return days >= 365 ? (Math.pow(ratio, 365 / days) - 1) * 100 : (ratio - 1) * 100; }
 // ── bucket + metric helpers ──
@@ -4000,20 +4036,20 @@ function iaOpenMenu(field) { callsMenu = (callsMenu === field ? null : field); r
 function iaClearAllSets() { Object.values(callsF).forEach(s => s.clear()); }
 function iaClearFilters() { iaClearAllSets(); callsSearch = ''; callsMenu = null; renderCallsHistory(); }
 function iaClearSearch() { callsSearch = ''; const i = document.getElementById('calls-search'); if (i) i.value = ''; renderCallsHistory(); }
-function iaReset() { callsSearch = ''; iaClearAllSets(); callsExpanded = new Set(); callsMenu = null; callsSort = { by: 'vsLast', dir: 'asc' }; const i = document.getElementById('calls-search'); if (i) i.value = ''; renderCallsHistory(); }
-function iaExportExcel() {
+function iaReset() { callsSearch = ''; iaClearAllSets(); callsExpanded = new Set(); callsMenu = null; callsSort = { by: 'date', dir: 'desc' }; const i = document.getElementById('calls-search'); if (i) i.value = ''; renderCallsHistory(); }
+function iaExportRows() {
   const fmtN = (v, d = 2) => (v == null || v === '' || !isFinite(v)) ? '' : Number(v).toFixed(d);
   const pctN = v => (v == null || !isFinite(v)) ? '' : (v >= 0 ? '+' : '') + v.toFixed(1) + '%';
   const sigTxt = m => m === 'MUSTBUY' ? 'Must buy' : m === 'BULLISH' ? 'Bullish' : '';
   const tickers = Object.keys(IA_CALLS).sort();
 
   // Sheet 1 — collapsed/current view (all computed columns, no commentary)
-  const sumRows = [['Ticker', 'Company', 'IA Call status', 'Signal', 'Alloc', 'Value (L)', 'Last \u20b9', 'Max \u20b9', 'CMP', 'vs Last %', 'vs Max %', 'CAGR %', 'Age', '# Calls', 'First Date', 'Last Date', 'Held', 'Urgent', 'Blog']];
+  const sumRows = [['Ticker', 'Company', 'IA Call status', 'Signal', 'Alloc', 'Value (L)', 'Last buy \u20b9', 'Max buy \u20b9', 'CMP', 'vs Last buy %', 'vs Max buy %', 'CAGR % (since last buy)', 'Last buy age', '# Calls', 'First Date', 'Last call date', 'Held', 'Urgent', 'Blog']];
   tickers.forEach(t => {
     const ia = IA_CALLS[t], cmp = iaCmp(t);
     const vsL = (ia.lastReco > 0 && cmp != null) ? (cmp / ia.lastReco - 1) * 100 : null;
     const vsM = (ia.maxReco > 0 && cmp != null) ? (cmp / ia.maxReco - 1) * 100 : null;
-    const cg = iaCagr(ia.lastReco, cmp, ia.lastDate), age = iaAgeYears(ia.lastDate);
+    const cg = iaCagr(ia.lastReco, cmp, ia.lastBuyDate), age = iaAgeYears(ia.lastBuyDate);
     const alloc = iaAlloc(t), val = iaHoldingValue(t);
     sumRows.push([t, ia.company || '', ia.status || '', sigTxt(ia.mustbuy), (IA_ALLOC_META[alloc] ? IA_ALLOC_META[alloc].label : ''),
       val ? (val / 1e5).toFixed(2) : '', fmtN(ia.lastReco), fmtN(ia.maxReco), cmp != null ? fmtN(cmp) : '',
@@ -4033,6 +4069,10 @@ function iaExportExcel() {
         iaAgeFmt(iaAgeYears(m.date)), m.source || '', m.quote || '']);
     });
   });
+  return { sumRows, allRows };
+}
+function iaExportExcel() {
+  const { sumRows, allRows } = iaExportRows();
 
   const esc = s => String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
   const cell = v => { const s = String(v == null ? '' : v); const isNum = s !== '' && /^-?\d+(\.\d+)?$/.test(s); return `<Cell><Data ss:Type="${isNum ? 'Number' : 'String'}">${esc(s)}</Data></Cell>`; };
@@ -4067,7 +4107,7 @@ function renderCallsHistory() {
   let items = Object.keys(IA_CALLS).map(t => { const ia = IA_CALLS[t]; const cmp = iaCmp(t);
     const vsL = (ia.lastReco > 0 && cmp != null) ? (cmp / ia.lastReco - 1) * 100 : null;
     const vsM = (ia.maxReco > 0 && cmp != null) ? (cmp / ia.maxReco - 1) * 100 : null;
-    const cg = iaCagr(ia.lastReco, cmp, ia.lastDate), age = iaAgeYears(ia.lastDate), alloc = iaAlloc(t), val = iaHoldingValue(t);
+    const cg = iaCagr(ia.lastReco, cmp, ia.lastBuyDate), age = iaAgeYears(ia.lastBuyDate), alloc = iaAlloc(t), val = iaHoldingValue(t);
     return { t, ia, cmp, vsL, vsM, cg, age, alloc, val, bVsL: iaVsBucket(vsL), bVsM: iaVsBucket(vsM), bCg: iaCagrBucket(cg), bAge: iaAgeBucket(age) };
   });
   IA_FILTER_OPTS.status = Array.from(new Set(Object.values(IA_CALLS).map(c => c.status).filter(Boolean))).sort().map(s => [s, s]);
@@ -4083,7 +4123,7 @@ function renderCallsHistory() {
     if (va == null) return 1; if (vb == null) return -1; return dir * (va - vb);
   });
   const nDisc = items.filter(x => x.bVsL === 'disc').length, nPrem = items.filter(x => x.bVsL === 'prem').length;
-  if (summaryEl) summaryEl.innerHTML = `${items.length} stocks · <span style="color:var(--green)">${nDisc} at/below his call</span> · <span style="color:var(--red-text)">${nPrem} &gt;40% above</span> · click a row for the full call history`;
+  if (summaryEl) summaryEl.innerHTML = `${items.length} stocks · <span style="color:var(--green)">${nDisc} at/below last buy call</span> · <span style="color:var(--red-text)">${nPrem} &gt;40% above</span> · click a row for the full call history`;
   const anyF = (field) => callsF[field].size > 0;
   const th = (k, label, left, ff) => {
     const arrow = callsSort.by === k ? (callsSort.dir === 'asc' ? ' ↑' : ' ↓') : '';
@@ -4115,11 +4155,11 @@ function renderCallsHistory() {
       ${nF ? `<span onclick="iaClearFilters()" style="cursor:pointer;color:var(--blue-text);font-size:0.72rem;">✕ Clear ${nF} filter${nF > 1 ? 's' : ''}</span>` : '<span style="color:var(--text3);font-size:0.68rem;">▼ = filter · click a header to sort</span>'}
     </div>
     <div style="display:flex;flex-wrap:wrap;gap:6px;margin:0 0 8px;">
-      ${ccAll} ${cc('⭐ Must buy', 'mustbuy', 'MUSTBUY')} ${cc('🔼 Bullish', 'mustbuy', 'BULLISH')} ${cc('🟢 At/below call', 'vsLast', 'disc')} ${cc('🟡 Low premium', 'vsLast', 'b20')} ${cc('Held', 'alloc', 'held')} ${cc('Low held', 'alloc', 'low')} ${cc('Not held', 'alloc', 'not')}
+      ${ccAll} ${cc('⭐ Must buy', 'mustbuy', 'MUSTBUY')} ${cc('🔼 Bullish', 'mustbuy', 'BULLISH')} ${cc('🟢 At/below buy call', 'vsLast', 'disc')} ${cc('🟡 Low premium', 'vsLast', 'b20')} ${cc('Held', 'alloc', 'held')} ${cc('Low held', 'alloc', 'low')} ${cc('Not held', 'alloc', 'not')}
     </div>
     <div style="overflow:auto;max-height:calc(100vh - 190px);"><table class="ia-calls-table" style="width:100%;border-collapse:collapse;">
       <thead><tr>
-        <th></th>${th('ticker', 'Ticker (' + items.length + ')', true)}${th('company', 'Company', true)}${th('status', 'IA Call status', true, 'status')}${th('mustbuy', 'Signal', true, 'mustbuy')}${th('alloc', 'Alloc', true, 'alloc')}${th('value', 'Value (L)')}${th('last', 'Last ₹')}${th('max', 'Max ₹')}${th('cmp', 'CMP')}${th('vsLast', 'vs Last', false, 'vsLast')}${th('vsMax', 'vs Max', false, 'vsMax')}${th('cagr', 'CAGR', false, 'cagr')}${th('age', 'Age', false, 'age')}${th('date', 'Date', true)}<th>Blog</th>
+        <th></th>${th('ticker', 'Ticker (' + items.length + ')', true)}${th('company', 'Company', true)}${th('status', 'IA Call status', true, 'status')}${th('mustbuy', 'Signal', true, 'mustbuy')}${th('alloc', 'Alloc', true, 'alloc')}${th('value', 'Value (L)')}${th('last', 'Last buy ₹')}${th('max', 'Max buy ₹')}${th('cmp', 'CMP')}${th('vsLast', 'vs Last buy', false, 'vsLast')}${th('vsMax', 'vs Max buy', false, 'vsMax')}${th('cagr', 'CAGR', false, 'cagr')}${th('age', 'Buy age', false, 'age')}${th('date', 'Date', true)}<th>Blog</th>
       </tr></thead><tbody>`;
   items.forEach(x => { const ia = x.ia, exp = callsExpanded.has(x.t), am = IA_ALLOC_META[x.alloc];
     html += `<tr id="ia-row-${esc(x.t)}" class="${exp ? 'ia-open' : ''}" onclick="toggleIaExpand('${esc(x.t)}')" style="cursor:pointer;text-align:right;border-bottom:1px solid var(--border);${exp ? 'background:var(--bg2);' : ''}">
@@ -4138,15 +4178,18 @@ function renderCallsHistory() {
     </tr>`;
     if (exp) { const qs = (IA_QUOTES[x.t] || []).slice().sort((a, b) => String(b.date).localeCompare(String(a.date)));
       qs.forEach(m => { const cp = parseFloat(m.price); const vsl = (x.cmp != null && isFinite(cp) && cp > 0) ? (x.cmp / cp - 1) * 100 : null;
+        const isBuy = m.action === 'BUY' || m.action === 'BLOG';
+        const actCol = isBuy ? 'var(--green)' : m.action === 'SELL' ? 'var(--red-text)' : 'var(--text3)';
+        const dim = isBuy ? '' : ' title="Market price on the call date — not a BUY call, so not used for Last/Max buy" style="opacity:0.45"';
         html += `<tr class="ia-exp" style="background:var(--bg2);border-top:1px solid var(--border);vertical-align:top;">
           <td></td><td></td>
           <td style="white-space:normal;line-height:1.5;padding:8px 6px;color:var(--text);font-size:0.78rem;">${esc(m.quote)}<span style="color:var(--text3);font-size:0.62rem;"> · ${esc(m.source)}</span></td>
-          <td style="text-align:left"><b style="color:var(--purple-text)">${esc(m.action)}</b></td>
+          <td style="text-align:left"><b style="color:${actCol}">${esc(m.action)}</b></td>
           <td style="text-align:left">${mbBadge(m.mustbuy)}</td>
           <td></td><td></td>
-          <td style="text-align:right;color:var(--text2)">${m.price ? '₹' + esc(m.price) : ''}</td>
+          <td style="text-align:right;color:var(--text2)"><span${dim}>${m.price ? '₹' + esc(m.price) : ''}</span></td>
           <td></td><td></td>
-          <td style="text-align:right">${vsl == null ? '' : `<span style="color:${iaColor(vsl)};font-weight:600">${vsl >= 0 ? '+' : ''}${vsl.toFixed(0)}%</span>`}</td>
+          <td style="text-align:right"><span${dim}>${vsl == null ? '' : `<span style="color:${iaColor(vsl)};font-weight:600">${vsl >= 0 ? '+' : ''}${vsl.toFixed(0)}%</span>`}</span></td>
           <td></td><td></td>
           <td style="color:var(--text2)">${iaAgeFmt(iaAgeYears(m.date))}</td>
           <td style="text-align:left;color:var(--text3);white-space:nowrap">${esc(m.date)}</td>
@@ -4161,6 +4204,48 @@ function renderCallsHistory() {
 }
 // Kick off IA data load once the page script is ready.
 loadIAData();
+
+// ── Action-change log (written by scripts/action_log.py once a day after close) ──
+let ACTION_LOG = null;
+const ALOG_COLS = ['Date', 'Ticker', 'Company', 'From', 'To', 'Reversal TF', 'Setup', 'Alloc', 'CMP ₹', '1D %', '1W %', '1M %'];
+const ALOG_COLOR = { ADD: 'var(--green)', REVERSAL: '#facc15', TRIM: '#f97316', EXIT: 'var(--red-text)' };
+async function openActionLog() {
+  document.getElementById('action-log-modal').classList.add('open');
+  try { ACTION_LOG = await (await fetch('action_log.json?t=' + Date.now())).json(); } catch (e) { ACTION_LOG = { events: [] }; }
+  renderActionLog();
+}
+function _alogRows() {
+  const q = (document.getElementById('alog-search')?.value || '').toLowerCase().trim();
+  const to = document.getElementById('alog-to')?.value || '';
+  return ((ACTION_LOG && ACTION_LOG.events) || []).filter(e =>
+    (!q || (e.ticker || '').toLowerCase().includes(q) || (e.name || '').toLowerCase().includes(q)) && (!to || e.to === to)
+  ).sort((a, b) => String(b.date).localeCompare(String(a.date)) || String(a.ticker).localeCompare(String(b.ticker)));
+}
+function _alogVals(e) {
+  const p = v => (v == null ? '' : (v >= 0 ? '+' : '') + Number(v).toFixed(1));
+  return [e.date, e.ticker, e.name || '', e.from, e.to, e.reversal_tf || '', e.setup || '', e.alloc || '', e.ltp == null ? '' : Number(e.ltp).toFixed(2), p(e.ret_1d), p(e.ret_1w), p(e.ret_1m)];
+}
+function renderActionLog() {
+  const rows = _alogRows();
+  const total = ((ACTION_LOG && ACTION_LOG.events) || []).length;
+  document.getElementById('alog-count').textContent = `(${rows.length} of ${total} changes${ACTION_LOG && ACTION_LOG.last_eval ? ' · last checked ' + ACTION_LOG.last_eval : ''})`;
+  const tbl = document.getElementById('alog-table');
+  if (!rows.length) { tbl.innerHTML = `<tr><td style="padding:18px;color:var(--text3);">${total ? 'No changes match the filter.' : 'No action changes recorded yet. The baseline was taken on 30 Sep 2026; changes are logged once a day after the market close.'}</td></tr>`; return; }
+  const chip = v => `<span style="font-weight:700;color:${ALOG_COLOR[v] || 'var(--text3)'}">${esc(v)}</span>`;
+  tbl.innerHTML = '<thead><tr>' + ALOG_COLS.map(c => `<th style="text-align:left;">${c}</th>`).join('') + '</tr></thead><tbody>'
+    + rows.map(e => { const v = _alogVals(e); return `<tr style="border-bottom:1px solid var(--border);"><td>${esc(v[0])}</td><td><span onclick="document.getElementById('action-log-modal').classList.remove('open');goToCard('${esc(e.ticker)}')" style="cursor:pointer;color:var(--blue-text);font-weight:700;text-decoration:underline dotted;">${esc(v[1])}</span></td><td style="color:var(--text2)">${esc(v[2])}</td><td>${chip(v[3])}</td><td>→ ${chip(v[4])}</td>`
+      + v.slice(5).map(x => `<td>${esc(x)}</td>`).join('') + '</tr>'; }).join('') + '</tbody>';
+}
+function exportActionLog() {
+  const rows = _alogRows();
+  if (!rows.length) { showToast('No action changes to export yet', ''); return; }
+  const x = s => String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  const cell = v => { const s = String(v == null ? '' : v); const num = s !== '' && /^[+-]?\d+(\.\d+)?$/.test(s); return `<Cell><Data ss:Type="${num ? 'Number' : 'String'}">${x(num ? String(parseFloat(s)) : s)}</Data></Cell>`; };
+  const body = [ALOG_COLS, ...rows.map(_alogVals)].map(r => '<Row>' + r.map(cell).join('') + '</Row>').join('');
+  const xml = `<?xml version="1.0"?>\n<?mso-application progid="Excel.Sheet"?>\n<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet" xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"><Worksheet ss:Name="Action log"><Table>${body}</Table></Worksheet></Workbook>`;
+  const url = URL.createObjectURL(new Blob([xml], { type: 'application/vnd.ms-excel' }));
+  const a = document.createElement('a'); a.href = url; a.download = 'action_log_' + new Date().toISOString().slice(0, 10) + '.xls'; a.click(); setTimeout(() => URL.revokeObjectURL(url), 2000);
+}
 // Close an open Calls-history column-filter dropdown when clicking anywhere outside it.
 if (!window._iaMenuCloserAdded) {
   window._iaMenuCloserAdded = true;
@@ -5161,8 +5246,8 @@ function renderAnalysisTable() {
       <td class="${pc(pnlPct)}">${prv(f(pnlPct,1) + '%')}</td>
       <td>${prv(f(s.quantity))}</td>
       <td>${s.ltp != null ? '₹'+f(s.ltp,0) : '—'}</td>
-      ${iaVsCell(s.ia_vs_last)}
-      ${iaVsCell(s.ia_vs_max)}
+      ${iaVsCell(s.ia_vs_last, s.ticker)}
+      ${iaVsCell(s.ia_vs_max, s.ticker)}
       <td>${s.buy_avg != null ? '₹'+f(s.buy_avg,0) : '—'}</td>
       ${mgmtTrustCell(s)}
       ${qualCell(s)}
@@ -6224,56 +6309,6 @@ function unmaskPrivateData() {
   });
 }
 
-// ── Portfolio Extract: full master JSON + Claude analysis prompt → clipboard ─
-function buildPortfolioExtract() {
-  const num = (v) => (typeof v === 'number' && isFinite(v)) ? Math.round(v * 100) / 100 : null;
-  const inv = allStocks.reduce((a, s) => a + (s.buy_avg || 0) * (s.quantity || 0), 0);
-  const cur = allStocks.reduce((a, s) => a + (s.ltp || 0) * (s.quantity || 0), 0);
-
-  // Dump EVERY field present on each holding (fundamentals, qualitative analysis,
-  // quality/sector scores, trend, returns, accounts, peers, red flags, mgmt trust,
-  // etc.) — then add the computed portfolio-level metrics. Nothing is left out.
-  const holdings = allStocks.map(s => {
-    const qty = s.quantity || 0, buy = s.buy_avg || 0, ltp = s.ltp || 0;
-    const present = ltp * qty, invested = buy * qty;
-    return Object.assign({}, s, {
-      invested: num(invested),
-      present_value: num(present),
-      pct_of_portfolio: cur ? num(present / cur * 100) : null,
-    });
-  });
-
-  return {
-    generated_at: new Date().toISOString(),
-    summary: { holdings_count: allStocks.length, invested: num(inv), present_value: num(cur), pnl_abs: num(cur - inv), pnl_pct: inv ? num((cur - inv) / inv * 100) : null },
-    holdings
-  };
-}
-
-function copyPortfolioExtract() {
-  if (typeof privacyUnlocked !== 'undefined' && !privacyUnlocked) { showToast('🔒 Unlock data first', 'amber'); return; }
-  const data = buildPortfolioExtract();
-  const prompt =
-`You are a senior equity portfolio strategist. Analyse the portfolio JSON below and give clear, actionable rebalancing recommendations for the NEXT 6 MONTHS.
-
-Use ALL the data: valuation & fundamentals (PE, PB, ROE, growth, debt), live P&L and position size (% of portfolio), trend/technicals (200DMA, 52wk, ATH%), conviction, moat, management_trust, red_flags and peer_analysis.
-
-Deliver:
-1. INCREASE — holdings to add to (best risk/reward: strong moat + trust + trend, reasonable valuation), with sizing %.
-2. REDUCE / EXIT — over-valued, weak fundamentals, red flags, broken trend, or oversized positions, with trim %.
-3. HOLD — keep as is.
-4. Concentration & sector risks, and any single-stock weight that is too high.
-5. A target action table: ticker | current % | action | target % | one-line reason.
-Be specific, reference the metrics, rank by priority. Indian market context (₹, NSE).
-
-PORTFOLIO JSON:
-${JSON.stringify(data, null, 2)}`;
-  navigator.clipboard.writeText(prompt).then(
-    () => showToast(`✅ Portfolio Extract copied (${data.holdings.length} holdings) — paste into the AI`, 'green'),
-    () => showToast('❌ Clipboard blocked — allow clipboard access', 'red')
-  );
-}
-
 // ── Excel Export ─────────────────────────────────────────────────────────
 function exportToExcel() {
   if (!privacyUnlocked) {
@@ -6415,6 +6450,117 @@ function exportFundamentalsExcel() {
   const date = new Date().toISOString().slice(0, 10);
   XLSX.writeFile(wb, `fundamentals_${date}.xlsx`);
   showToast('✅ Exported ' + rows.length + ' stocks fundamentals to Excel', 'green');
+}
+
+// ── Master extract: every Dashboard column + all qualitative commentary + IA calls + action log ──
+function _mxVal(v) {
+  if (v == null) return '';
+  if (Array.isArray(v)) v = v.map(x => (x && typeof x === 'object') ? JSON.stringify(x) : x).join(' | ');
+  else if (typeof v === 'object') v = JSON.stringify(v);
+  if (typeof v === 'number') return isFinite(v) ? Math.round(v * 100) / 100 : '';
+  const s = String(v);
+  return s.length > 32000 ? s.slice(0, 32000) + '…' : s;  // Excel cell limit is 32,767 chars
+}
+function _mxSheet(wb, name, header, rows) {
+  const ws = XLSX.utils.aoa_to_sheet([header, ...rows.map(r => r.map(_mxVal))]);
+  ws['!cols'] = header.map((h, i) => {
+    const w = Math.max(String(h).length, ...rows.slice(0, 60).map(r => String(_mxVal(r[i])).length));
+    return { wch: Math.min(Math.max(w, 8), 70) };
+  });
+  ws['!freeze'] = { xSplit: 1, ySplit: 1 };
+  XLSX.utils.book_append_sheet(wb, ws, name);
+}
+function _mxIaVs(t, key) {
+  const ia = IA_CALLS[t], c = iaCmp(t);
+  return (ia && ia[key] > 0 && c != null) ? Math.round((c / ia[key] - 1) * 1000) / 10 : null;
+}
+const MX_DASH_COLS = [
+  ['Ticker', 'ticker'], ['Company', 'name'], ['Sector', 'sector'], ['Sector group', 'sector_group'], ['Holding type', s => s.holding_type || 'Stocks'],
+  ['Mov(D)', 'movers'], ['Mov(Wk)', 'movers_w'], ['Mov(M)', 'movers_m'], ['Alloc', 'movers_alloc'],
+  ['Setup', 'setup'], ['Sn(ST)', 'sn_st'], ['Sn(LT)', 'sn_lt'],
+  ['Action', s => (ACTION_META[s.action] || {}).label || ''], ['Reversal TF', s => s.action === '🔎' ? reversalTf(s).join('') : ''],
+  ['1D %', 'ret_1d'], ['1W %', 'ret_1w'], ['1M %', 'ret_1m'], ['6M %', 'ret_6m'], ['1Y %', 'ret_1y'], ['2Y %', 'ret_2y'], ['3Y %', 'ret_3y'], ['4Y %', 'ret_4y'], ['5Y %', 'ret_5y'],
+  ['Buy value', 'buy_value'], ['Present value', 'pres_value'], ['P&L', 'pnl_abs'], ['P&L %', 'pnl_pct'], ['Qty', 'quantity'], ['CMP', 'ltp'], ['Buy price', 'buy_avg'],
+  ['IA call status', s => (IA_CALLS[s.ticker] || {}).status || ''], ['IA vs Last %', s => _mxIaVs(s.ticker, 'lastReco')], ['IA vs Max %', s => _mxIaVs(s.ticker, 'maxReco')],
+  ['Mgmt trust', 'mgmt_trust_score'], ['Quality', 'qual_score'], ['Red-flag score', 'rf_score_val'], ['Conviction', 'conviction'], ['Moat', 'moat_class'],
+  ['Vol 30m/Avg', 'vol_30m_ratio'], ['Volx(D)', 'vol_today_ratio'], ['Volx(Wk)', 'vol_week_ratio'], ['Volx(M)', 'vol_month_ratio'],
+  ['52W High %', 'week52_high_pct'], ['52W Low %', 'week52_low_pct'], ['ATH %', 'ath_pct'], ['ATL %', 'atl_pct'],
+  ['vs 200DMA %', 'price_to_200dma_pct'], ['200DMA slope 30d %', 'dma200_slope_30d_pct'], ['Days >200DMA (10d)', 'days_above_200dma_10d'], ['vs 50DMA %', 'price_to_50dma_pct'], ['RSI14', 'rsi14'], ['Trend score', 'trend_score'],
+  ['Market cap (Cr)', 'mcap_cr'], ['P/E', 'pe'], ['Fwd P/E', 'forward_pe'], ['PEG', 'peg'], ['PEG basis', 'peg_basis'], ['P/B', 'price_to_book'], ['EV/EBITDA', 'ev_ebitda'], ['ROE %', 'roe'],
+  ['Op cash flow (Cr)', 'opcf_3yr_avg'], ['Free cash flow (Cr)', 'fcf_3yr_avg'], ['PAT growth %', 'pat_cagr'], ['Rev growth %', 'rev_cagr'], ['MCap growth 3Y %', 'mcap_3y'],
+  ['Debt/Equity', 'debt_to_equity'], ['EPS', 'eps'], ['Div yield %', 'div_yield'], ['Gross margin %', 'gross_margin'], ['Op margin %', 'operating_margin'], ['EBITDA margin %', 'ebitda_margin'], ['Profit margin %', 'profit_margin'],
+  ['Qtrly earn growth %', 'qtrly_earn_growth'], ['Insider %', 'insider_pct'], ['MB', s => ({ mustbuy: 'MUSTBUY', bullish: 'Bullish', others: 'Others' })[s.mb_status] || ''],
+  ['Accounts', s => (s.accounts || []).map(a => `${a.name}: ${a.qty}`).join(' | ')], ['Price updated', 'updated'],
+];
+const MX_FUND_COLS = [
+  ['Moat type', 'moat_type'], ['Moat class', 'moat_class'], ['Conviction', 'conviction'], ['Moat (analysis)', 'moat'], ['Market leadership', 'leadership'], ['Non-replicable edge', 'non_rep'],
+  ['Tailwinds', 'tailwinds'], ['Risks', 'risks'], ['KPIs to track', 'track'], ['Bull case', 'bull_case'], ['Bear case', 'bear_case'], ['Moat sources', 'moat_sources'], ['Moat trend', 'moat_trend'],
+  ['Pricing power', 'pricing_power'], ['Capital allocation', 'capital_allocation'], ['Reinvestment runway', 'reinvestment_runway'], ['Concentration', 'concentration'],
+  ['Recent news', 'recent_news'], ['Remarks', 'remarks'], ['Latest change remark', 'change_remark'],
+  ['Quality score', 'quality_score'], ['Quality tier', 'quality_tier'], ['Quality rank', s => s.quality_rank != null ? `${s.quality_rank}/${s.quality_of || ''}` : ''],
+];
+function _mxCell(s, get) { return typeof get === 'function' ? get(s) : s[get]; }
+async function masterExtract() {
+  if (!privacyUnlocked) { showToast('🔒 Unlock data first', 'amber'); return; }
+  if (typeof XLSX === 'undefined') { showToast('❌ Excel library not loaded', 'red'); return; }
+  const wb = XLSX.utils.book_new();
+  const today = new Date().toISOString().slice(0, 10);
+
+  // 1. Dashboard — every row with the same derived columns the table shows
+  const held = allStocks.map(enrichStockRow);
+  _mxSheet(wb, 'Dashboard', MX_DASH_COLS.map(c => c[0]), held.map(s => MX_DASH_COLS.map(c => _mxCell(s, c[1]))));
+
+  // Analysis universe = held equities + exited stocks that still have analysis
+  const heldSet = new Set(allStocks.map(s => s.ticker));
+  const exited = (window._allStocksRaw || []).filter(s => !heldSet.has(s.ticker) && s.moat_class !== 'pending' && s.moat_type !== 'Pending');
+  const uni = [...allStocks.filter(s => (s.holding_type || 'Stocks') === 'Stocks').map(s => [s, 'Held']), ...exited.map(s => [s, 'Exited'])];
+  const base = (s, st) => [s.ticker, s.name || '', st, s.sector || ''];
+  const baseHdr = ['Ticker', 'Company', 'Status', 'Sector'];
+
+  // 2. Fundamental analysis + moat
+  _mxSheet(wb, 'Fundamental analysis', [...baseHdr, ...MX_FUND_COLS.map(c => c[0])], uni.map(([s, st]) => [...base(s, st), ...MX_FUND_COLS.map(c => _mxCell(s, c[1]))]));
+
+  // 3/4. Management trust + Red flags (pillar/category score + reason columns)
+  const scored = (label, src, partsKey, extra) => {
+    const keys = [...new Set(uni.flatMap(([s]) => Object.keys(((src[s.ticker] || {})[partsKey]) || {})))];
+    const nice = k => k.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+    const hdr = [...baseHdr, 'Score', 'Verdict', 'Confidence', 'Updated', ...keys.flatMap(k => [`${nice(k)} score`, `${nice(k)} reason`]), ...extra.map(e => e[0]), 'Summary', 'Sources'];
+    const rows = uni.filter(([s]) => src[s.ticker]).map(([s, st]) => {
+      const d = src[s.ticker], parts = d[partsKey] || {};
+      return [...base(s, st), d.score, d.verdict, d.confidence, d.updated, ...keys.flatMap(k => [(parts[k] || {}).score, (parts[k] || {}).reason]), ...extra.map(e => d[e[1]]), d.summary, d.sources];
+    });
+    _mxSheet(wb, label, hdr, rows);
+  };
+  scored('Management trust', window._mgmtTrust || {}, 'pillars', []);
+  scored('Red flags', window._redFlags || {}, 'categories', [['Critical flags', 'critical_flags'], ['Amber flags', 'amber_flags']]);
+
+  // 5. Peer analysis
+  const pc = window._peerCmp || {};
+  const compKeys = [...new Set(uni.flatMap(([s]) => Object.keys(((pc[s.ticker] || s.peer_cmp || {}).comp) || {})))];
+  _mxSheet(wb, 'Peer analysis',
+    [...baseHdr, 'Quality (/10)', 'Tier', 'Confidence', 'Moat class', ...compKeys.map(k => `Score: ${k}`), 'Durability', 'Moat', 'Bull case', 'Bear case', 'Tailwind', 'Risk', 'Peer rank', 'Peers', 'Updated'],
+    uni.map(([s, st]) => [s, st, pc[s.ticker] || s.peer_cmp]).filter(x => x[2]).map(([s, st, p]) => [...base(s, st), p.q, p.tier, p.conf, p.moat_class,
+      ...compKeys.map(k => (p.comp || {})[k]), p.durability, p.moat_txt, p.bull, p.bear, p.tailwind, p.risk, p.rank != null ? `${p.rank}/${p.of || ''}` : '', p.peer, p.updated]));
+
+  // 6/7. IA call history (summary + every call with commentary)
+  const ia = iaExportRows();
+  _mxSheet(wb, 'IA calls summary', ia.sumRows[0], ia.sumRows.slice(1));
+  _mxSheet(wb, 'IA calls commentary', ia.allRows[0], ia.allRows.slice(1));
+
+  // 8. Action log
+  let alog = ACTION_LOG;
+  if (!alog) { try { alog = await (await fetch('action_log.json?t=' + Date.now())).json(); } catch (e) { alog = { events: [] }; } }
+  const ev = ((alog && alog.events) || []).slice().sort((a, b) => String(b.date).localeCompare(String(a.date)));
+  _mxSheet(wb, 'Action log', ALOG_COLS, ev.map(_alogVals));
+
+  // 9. Benchmarks
+  const bm = window._benchmarks || {};
+  const bmName = { nifty50: 'Nifty 50', smallcap250: 'Nifty Smallcap 250', midcap400: 'Nifty Midcap 150' };
+  _mxSheet(wb, 'Benchmarks', ['Index', 'Source symbol', '1D %', '1M %', '6M %', '1Y %', '3Y %', '5Y %'],
+    Object.entries(bm).map(([k, b]) => [bmName[k] || k, b.symbol, b.ret_1d, b.ret_1m, b.ret_6m, b.ret_1y, b.ret_3y, b.ret_5y]));
+
+  XLSX.writeFile(wb, `master_extract_${today}.xlsx`);
+  showToast(`✅ Master extract: ${held.length} holdings · ${exited.length} exited · ${ia.allRows.length - 1} IA calls · ${ev.length} action changes`, 'green');
 }
 
 function applyPrivacyState() {
