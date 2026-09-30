@@ -144,7 +144,8 @@ def action_of(s, bm):
         return "⏬"
     if ath is not None and ath > -10 and r1m is not None and r1m < -5 and vm is not None and vm >= 1.3 and r6 is not None and r6 > 20:
         return "✂️"
-    if reversal_tf(s):
+    # a reversal needs something to reverse: >=25% below ATH AND a flat/falling 200DMA (long downtrend)
+    if ath is not None and ath <= -25 and slope is not None and slope <= 0.5 and reversal_tf(s):
         return "🔎"
     return ""
 

@@ -24,6 +24,9 @@ CLAUDE_CODE_PROMPT.md
 # Access PINs — soft client-side lock, kept local only (not on public site)
 credin/
 
+# Telegram bot credentials — kept local only, never committed
+telegram_config.json
+
 # Local-only working data — kept out of the public repo/site
 whatsapp_exports/
 IA_call_tracker*.xlsx

@@ -681,6 +681,8 @@
       padding-left: 5px !important; padding-right: 5px !important;
       white-space: normal; word-break: break-word; line-height: 1.15;
     }
+    .analysis-table th.col-trend, .analysis-table td.col-trend { width: 50px; min-width: 46px; max-width: 54px; }
+    .analysis-table th.col-movd, .analysis-table td.col-movd { width: 70px; min-width: 66px; max-width: 76px; }
     .analysis-table th.col-mov, .analysis-table th.col-ts, .analysis-table th.col-sig {
       font-size: 0.66rem;
     }
@@ -1349,7 +1351,7 @@
     <button class="analysis-chip" data-afilter="near52wkl" onclick="setAnalysisFilter('near52wkl',this)" title="Within 5% of 52-week low">🔽 Near 52wk Low</button>
     <button class="analysis-chip" data-afilter="mbbull" onclick="setAnalysisFilter('mbbull',this)" title="Rows flagged MUSTBUY or Bullish in the MB sheet (column E — the MB column)">★ MB/Bullish</button>
     <button class="analysis-chip" data-afilter="add" style="color:var(--green);" onclick="setAnalysisFilter('add',this)" title="⏫ ADD — mechanical continuation buy: Setup BUY + monthly up-move + rising 200DMA, not extended (ext −5..40%, 1M ≤30%). Backtested edge — confirm newsflow, then add.">▲ Add</button>
-    <button class="analysis-chip" data-afilter="reversal" style="color:#b8860b;" onclick="setAnalysisFilter('reversal',this)" title="🔎 REVERSAL WATCH — surge at any distance from ATH: D = 1D ≥+5% on ≥3× vol · W = 1W ≥+12% on ≥3× weekly vol · M = 1M >+15%. NOT a mechanical buy: check for a genuine fundamental shift first.">🔎 Reversal</button>
+    <button class="analysis-chip" data-afilter="reversal" style="color:#b8860b;" onclick="setAnalysisFilter('reversal',this)" title="🔎 REVERSAL WATCH — surge out of a long downtrend (≥25% below ATH AND 200DMA flat/falling): D = 1D ≥+5% on ≥3× vol · W = 1W ≥+12% on ≥3× weekly vol · M = 1M >+15%. NOT a mechanical buy: check for a genuine fundamental shift first.">🔎 Reversal</button>
     <button class="analysis-chip" data-afilter="shortlist" style="color:var(--green);" onclick="setAnalysisFilter('shortlist',this)" title="BUY watchlist — Quality + clean + active signal: (Conviction ≥7 OR Quality ≥6.8) AND Red-Flags >5 AND Mgmt-Trust >5 AND (▲ Add OR 🔎 Reversal OR an active daily/weekly Mover).">▲ Shortlist</button>
     <button class="analysis-chip" data-afilter="exits" style="color:var(--red-text);" onclick="setAnalysisFilter('exits',this)" title="EXIT watchlist (mirror of ▲ Shortlist) — a hard ⏬ EXIT action, OR a 🚨 REDUCE alloc together with ≥2 fundamental cracks {Conviction &lt;6, Quality &lt;5.5, Red-Flags &lt;5, Mgmt-Trust &lt;5}. Deliberately narrow — only your most broken, weakest-thesis names.">▼ Exits</button>
     <button class="analysis-chip" data-afilter="loss" onclick="setAnalysisFilter('loss',this)">In Loss</button>
@@ -1360,12 +1362,12 @@
       <thead>
         <tr>
           <th onclick="sortAnalysis('name')">Company (<span id="analysis-company-count">0</span>) <span id="sort-name" class="sort-indicator"></span> <span id="clear-all-filters" onclick="event.stopPropagation();clearAllFilters()" title="Clear ALL filters (chips + column funnels + search + sector/account)" style="display:none;cursor:pointer;color:var(--red-text);font-weight:700;font-size:0.6rem;border:1px solid var(--red-text);border-radius:4px;padding:0 4px;margin-left:3px;vertical-align:middle;">✕ clear</span></th>
-          <th class="col-mov" onclick="sortAnalysis('movers')" oncontextmenu="return openMoversBulk('movers',event)" title="Movers — unusual volume + price move, shown by LEVEL. 💥 EXPLOSIVE breakout: new 52W/all-time high on ≥10× volume (day ≥+3%) — something extraordinary. 🔥 LIFETIME-HIGH breakout: at/near all-time high AND vol ≥3× AND day ≥+3%. 🚀 52-WEEK-HIGH breakout: near 52W high AND vol ≥3× AND day ≥+3%. 🧊 LIFETIME-LOW breakdown (EXIT): at/near all-time low AND vol ≥3× AND day ≤−3%. ❄️ 52-WEEK-LOW breakdown: near 52W low AND vol ≥3× AND day ≤−3%. 🔻 DISTRIBUTION: at/near the HIGH but vol ≥3× AND day ≤−3% (selling into strength). 🔼 ACCUMULATION: at/near the LOW but vol ≥3× AND day ≥+3% (capitulation buying). V+P surge: vol ≥4× AND |day| ≥6%. V volume-led: vol ≥4× AND |day| ≥3%. P price-led: vol ≥3× AND |day| ≥6%. Sort: 💥 &gt; 🔥 &gt; 🚀 &gt; 🧊 &gt; ❄️ &gt; 🔼 &gt; V+P &gt; V &gt; P &gt; 🔻. Click a cell for a re-rating catalyst prompt. Right-click this header for a combined prompt across all currently-filtered stocks.">Mov(D) <span class="col-filter-icon" data-col="movers" title="Filter" onclick="event.stopPropagation();openColFilter('movers',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-movers" class="sort-indicator"></span></th>
+          <th class="col-mov col-movd" onclick="sortAnalysis('movers')" oncontextmenu="return openMoversBulk('movers',event)" title="Movers — unusual volume + price move, shown by LEVEL. 💥 EXPLOSIVE breakout: new 52W/all-time high on ≥10× volume (day ≥+3%) — something extraordinary. 🔥 LIFETIME-HIGH breakout: at/near all-time high AND vol ≥3× AND day ≥+3%. 🚀 52-WEEK-HIGH breakout: near 52W high AND vol ≥3× AND day ≥+3%. 🧊 LIFETIME-LOW breakdown (EXIT): at/near all-time low AND vol ≥3× AND day ≤−3%. ❄️ 52-WEEK-LOW breakdown: near 52W low AND vol ≥3× AND day ≤−3%. 🔻 DISTRIBUTION: at/near the HIGH but vol ≥3× AND day ≤−3% (selling into strength). 🔼 ACCUMULATION: at/near the LOW but vol ≥3× AND day ≥+3% (capitulation buying). V+P surge: vol ≥4× AND |day| ≥6%. V volume-led: vol ≥4× AND |day| ≥3%. P price-led: vol ≥3× AND |day| ≥6%. Sort: 💥 &gt; 🔥 &gt; 🚀 &gt; 🧊 &gt; ❄️ &gt; 🔼 &gt; V+P &gt; V &gt; P &gt; 🔻. Click a cell for a re-rating catalyst prompt. Right-click this header for a combined prompt across all currently-filtered stocks. Second line in a cell = yesterday (D-1) signal; filter and sort use both days.">Mov(D)<br>(D-1) <span class="col-filter-icon" data-col="movers" title="Filter" onclick="event.stopPropagation();openColFilter('movers',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-movers" class="sort-indicator"></span></th>
           <th class="col-mov" onclick="sortAnalysis('movers_w')" oncontextmenu="return openMoversBulk('movers_w',event)" title="WEEKLY breakout/breakdown (5-day) — same 🔥 lifetime-high / 🚀 52wk-high / 🧊 lifetime-low / ❄️ 52wk-low levels, plus 🔻 distribution (at highs but falling) / 🔼 accumulation (at lows but rising). Thresholds: weekly volume ≥1.5× avg AND 5-day move ≥±8%, at that level. Click a cell for a single-stock structural prompt; right-click this header for a combined prompt across all filtered stocks.">Mov(Wk) <span class="col-filter-icon" data-col="movers_w" title="Filter" onclick="event.stopPropagation();openColFilter('movers_w',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-movers_w" class="sort-indicator"></span></th>
           <th class="col-mov" onclick="sortAnalysis('movers_m')" oncontextmenu="return openMoversBulk('movers_m',event)" title="MONTHLY breakout/breakdown (21-day) — same 🔥/🚀/🧊/❄️ levels, plus 🔻 distribution (at highs but falling) / 🔼 accumulation (at lows but rising). Thresholds: monthly volume ≥1.3× avg AND 21-day move ≥±12%, at that level. Click a cell for a single-stock structural prompt; right-click this header for a combined prompt across all filtered stocks.">Mov(M) <span class="col-filter-icon" data-col="movers_m" title="Filter" onclick="event.stopPropagation();openColFilter('movers_m',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-movers_m" class="sort-indicator"></span></th>
           <th class="col-mov" onclick="sortAnalysis('movers_alloc')" oncontextmenu="return openMoversBulk('movers_alloc',event)" title="Allocation ACTION = momentum × 200DMA trend (incl. Trend Score). 🏆 STRONG ADD — monthly catalyst in the low-risk sweet spot (≤20% above a RISING 200DMA, holding ≥9/10 days). 💎 ADD/increase — early confirmed re-rating (monthly up, 1M ≤20%, ≤40% above a RISING 200DMA). 🌱 START-SMALL/watch — early, trend not yet confirmed. ⏳ HOLD — already ran (>30% 1M / >50% ext) OR a healthy pullback in a strong uptrend (TS≥70 & 200DMA rising); not a reduce. 🚨 REDUCE — genuine de-rating: new low, below a falling 200DMA, or monthly downtrend without a strong rising 200DMA. Click a cell for a single-stock allocation prompt; right-click this header for a combined prompt across all filtered stocks.">Alloc <span class="col-filter-icon" data-col="movers_alloc" title="Filter" onclick="event.stopPropagation();openColFilter('movers_alloc',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-movers_alloc" class="sort-indicator"></span></th>
-          <th class="col-sig" onclick="sortAnalysis('setup')" oncontextmenu="return openSetupBulk(event)" title="TRENDS (ST,LT) — colored dot = the Setup signal, then (Sn-ST, Sn-LT) scores 0-100. Sn(ST)=short-term (RSI/50DMA/volume/1W-1M); Sn(LT)=long-term (Trend Score/relative-strength/6M-1Y/200DMA), reconciled with the Alloc guard. DOTS: 🟢 BUY leader+fresh entry · 🔵 ACCUMULATE leader pulling back · ⚪ HOLD · 🟠 BOUNCE dead-cat · 🔴 EXIT broken · · N/A insufficient history. Click a cell to deep-dive one stock; RIGHT-CLICK this header for ONE combined analysis of ALL filtered stocks.">Trends (ST,LT) <span class="col-filter-icon" data-col="setup" title="Filter" onclick="event.stopPropagation();openColFilter('setup',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-setup" class="sort-indicator"></span></th>
-          <th class="col-sig" onclick="sortAnalysis('action')" title="ACTION — the decision. ⏫ ADD = mechanical buy (Setup BUY + monthly up + rising 200DMA, not extended). 🔎 REVERSAL = watch (daily/weekly/monthly surge, any distance from ATH — check fundamentals). ✂️ TRIM = watch (heavy-volume distribution at highs). ⏬ EXIT = watch (breakdown below a falling 200DMA). Only ⏫ is a mechanical buy; the rest are research alerts.">Action <span class="col-filter-icon" data-col="action" title="Filter" onclick="event.stopPropagation();openColFilter('action',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-action" class="sort-indicator"></span></th>
+          <th class="col-sig col-trend" onclick="sortAnalysis('setup')" oncontextmenu="return openSetupBulk(event)" title="TRENDS (ST,LT) — colored dot = the Setup signal, then (Sn-ST, Sn-LT) scores 0-100. Sn(ST)=short-term (RSI/50DMA/volume/1W-1M); Sn(LT)=long-term (Trend Score/relative-strength/6M-1Y/200DMA), reconciled with the Alloc guard. DOTS: 🟢 BUY leader+fresh entry · 🔵 ACCUMULATE leader pulling back · ⚪ HOLD · 🟠 BOUNCE dead-cat · 🔴 EXIT broken · · N/A insufficient history. Click a cell to deep-dive one stock; RIGHT-CLICK this header for ONE combined analysis of ALL filtered stocks.">Trends (ST,LT) <span class="col-filter-icon" data-col="setup" title="Filter" onclick="event.stopPropagation();openColFilter('setup',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-setup" class="sort-indicator"></span></th>
+          <th class="col-sig" onclick="sortAnalysis('action')" title="ACTION — the decision. ⏫ ADD = mechanical buy (Setup BUY + monthly up + rising 200DMA, not extended). 🔎 REVERSAL = watch (daily/weekly/monthly surge out of a long downtrend: ≥25% below ATH + flat/falling 200DMA — check fundamentals). ✂️ TRIM = watch (heavy-volume distribution at highs). ⏬ EXIT = watch (breakdown below a falling 200DMA). Only ⏫ is a mechanical buy; the rest are research alerts.">Action <span class="col-filter-icon" data-col="action" title="Filter" onclick="event.stopPropagation();openColFilter('action',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-action" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('ret_1d')" title="1-day price return (%)">1D Ret <span class="col-filter-icon" data-col="ret_1d" title="Filter" onclick="event.stopPropagation();openColFilter('ret_1d',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-ret_1d" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('ret_1w')" title="~5 trading day (1-week) price return (%)">1W Ret <span class="col-filter-icon" data-col="ret_1w" title="Filter" onclick="event.stopPropagation();openColFilter('ret_1w',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-ret_1w" class="sort-indicator"></span></th>
           <th onclick="sortAnalysis('ret_1m')" title="~21 trading day (1-month) price return (%)">1M Ret <span class="col-filter-icon" data-col="ret_1m" title="Filter" onclick="event.stopPropagation();openColFilter('ret_1m',this)"><svg viewBox="0 0 24 24" width="11" height="11"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="currentColor"/></svg></span> <span id="sort-ret_1m" class="sort-indicator"></span></th>
@@ -2281,7 +2283,7 @@ function applyPastedAnalysis(andPush = false) {
 async function pushAnalysisToGitHub() {
   showToast('⏳ Pushing to GitHub…', '');
   // Build full stocks array without price-only fields
-  const priceFields = new Set(['ltp','buy_avg','quantity','pnl_pct','pnl_abs','updated','mcap_cr','pe','roe','ocf_cr','ret_1d','ret_1w','ret_1m','ret_6m','ret_1y','ret_2y','ret_3y','ret_4y','ret_5y','debt_to_equity','eps','book_value','div_yield','pat_cagr','rev_cagr','mcap_3y','vol_30m_ratio','vol_yest_ratio','vol_today_ratio','gross_margin','operating_margin','ebitda_margin','profit_margin','roa','qtrly_rev_growth','qtrly_earn_growth','fcf_cr','fcf_3yr_avg','opcf_3yr_avg','lfcf_cr','week52_high','week52_low','promoter_holding','insider_pct','price_to_book','ev_ebitda','movers','price_break','trend_score','trend_signal','price_to_200dma_pct','dma200_slope_30d_pct','days_above_200dma_10d','must_buy','name','pres_value','buy_value','week52_high_pct','week52_low_pct','ath_pct','atl_pct','accounts','holding_type']);
+  const priceFields = new Set(['ltp','buy_avg','quantity','pnl_pct','pnl_abs','updated','mcap_cr','pe','roe','ocf_cr','ret_1d','ret_1w','ret_1m','ret_6m','ret_1y','ret_2y','ret_3y','ret_4y','ret_5y','debt_to_equity','eps','book_value','div_yield','pat_cagr','rev_cagr','mcap_3y','vol_30m_ratio','vol_yest_ratio','mv_yest','vol_today_ratio','gross_margin','operating_margin','ebitda_margin','profit_margin','roa','qtrly_rev_growth','qtrly_earn_growth','fcf_cr','fcf_3yr_avg','opcf_3yr_avg','lfcf_cr','week52_high','week52_low','promoter_holding','insider_pct','price_to_book','ev_ebitda','movers','price_break','trend_score','trend_signal','price_to_200dma_pct','dma200_slope_30d_pct','days_above_200dma_10d','must_buy','name','pres_value','buy_value','week52_high_pct','week52_low_pct','ath_pct','atl_pct','accounts','holding_type']);
   const exportData = allStocks.map(s => {
     const out = {};
     Object.entries(s).forEach(([k, v]) => { if (!priceFields.has(k)) out[k] = v; });
@@ -3553,14 +3555,14 @@ function setupCell(s) {
   const u = setupOf(s); const m = SETUP_META[u.key] || SETUP_META.HOLD;
   const scores = (u.key === 'NA') ? '(—)' : `(${u.st},${u.lt})`;
   const tip = `${m.label} — ${SETUP_MEANING[u.key] || ''}. Sn(ST) ${u.st}/100 · Sn(LT) ${u.lt}/100${s.movers_alloc ? ' · Alloc ' + s.movers_alloc : ''}. Click to deep-dive this stock; right-click the header to analyze all filtered stocks together.`;
-  return `<td class="col-sig" style="cursor:pointer;text-align:center;" title="${esc(tip)}" onclick="openSetupAnalysis('${esc(s.ticker)}',this)"><span style="display:inline-flex;align-items:center;gap:4px;font-size:0.66rem;font-weight:700;white-space:nowrap;"><span style="color:${m.color};font-size:0.8rem;line-height:1;">${m.emoji}</span><span style="color:var(--text2);">${scores}</span></span></td>`;
+  return `<td class="col-sig col-trend" style="cursor:pointer;text-align:center;" title="${esc(tip)}" onclick="openSetupAnalysis('${esc(s.ticker)}',this)"><span style="display:inline-flex;flex-direction:column;align-items:center;gap:1px;font-size:0.66rem;font-weight:700;white-space:nowrap;"><span style="color:${m.color};font-size:0.8rem;line-height:1;">${m.emoji}</span><span style="color:var(--text2);">${scores}</span></span></td>`;
 }
 // ════ ACTION — the decision layer (ADD / REVERSAL / TRIM / EXIT) ════
 // Synthesizes Setup + Alloc + Movers into one call. Only ⏫ ADD is a mechanical buy
 // (backtested edge); 🔎/✂️/⏬ are WATCH alerts that route to a fundamental check.
 const ACTION_META = {
   '⏫': { label: 'ADD', glyph: '▲', color: 'var(--green)', tip: 'ADD (continuation) — Setup BUY + monthly up-move + rising 200DMA, not extended (ext −5..40%, 1M ≤30%). Mechanical BUY (backtested edge). Confirm newsflow, then add.' },
-  '🔎': { label: 'REVERSAL', glyph: '🔎', color: '#facc15', tip: 'REVERSAL WATCH — surge at any distance from ATH. D = 1D ≥+5% on ≥3× volume · W = 1W ≥+12% on ≥3× weekly volume · M = 1M >+15%. NOT a mechanical buy (price signal alone loses). Check for a genuine fundamental shift first.' },
+  '🔎': { label: 'REVERSAL', glyph: '🔎', color: '#facc15', tip: 'REVERSAL WATCH — surge out of a long downtrend: stock ≥25% below ATH AND 200DMA flat/falling (30D slope ≤ +0.5%). D = 1D ≥+5% on ≥3× volume · W = 1W ≥+12% on ≥3× weekly volume · M = 1M >+15%. NOT a mechanical buy (price signal alone loses). Check for a genuine fundamental shift first.' },
   '✂️': { label: 'TRIM', glyph: '✂️', color: '#f97316', tip: 'TRIM WATCH — near the highs with a HEAVY-volume monthly drop (vol ≥1.3×) after prior strength: possible distribution. Check if the thesis is breaking before trimming.' },
   '⏬': { label: 'EXIT', glyph: '▼', color: 'var(--red-text)', tip: 'EXIT WATCH — monthly downtrend below a FALLING 200DMA. NOT a mechanical sell (bounces short-term); exit only on sustained de-rating / broken thesis.' },
 };
@@ -3583,8 +3585,8 @@ function actionOf(s) {
   if (dn(s.movers_m) && slope != null && slope < 0 && ext != null && ext < 0) return '⏬';
   // ✂️ TRIM — heavy-volume distribution at the highs
   if (ath != null && ath > -10 && r1m != null && r1m < -5 && vm != null && vm >= 1.3 && r6 != null && r6 > 20) return '✂️';
-  // 🔎 REVERSAL — daily / weekly / monthly surge at any distance from ATH (research)
-  if (reversalTf(s).length) return '🔎';
+  // 🔎 REVERSAL — a surge out of a real downtrend: >=25% below ATH AND a flat/falling 200DMA
+  if (ath != null && ath <= -25 && slope != null && slope <= 0.5 && reversalTf(s).length) return '🔎';
   return '';
 }
 function actionCell(s) {
@@ -3912,7 +3914,20 @@ function switchTab(tab, keepNav) {
 // ── Navigation history stack (Back button restores exact page + filters + scroll) ──
 let navStack = [];
 function _navScrollTop() { return window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0; }
-function updateBackBtns() { const on = navStack.length > 0; document.querySelectorAll('.nav-back-btn').forEach(b => { b.style.display = ''; b.style.opacity = on ? '1' : '0.4'; b.style.pointerEvents = on ? 'auto' : 'none'; b.title = on ? 'Back to where you came from' : 'Back (nothing to go back to yet)'; }); }
+function updateBackBtns() { const on = navStack.length > 0; document.querySelectorAll('.nav-back-btn').forEach(b => { b.style.display = ''; b.style.opacity = on ? '1' : '0.4'; b.style.pointerEvents = on ? 'auto' : 'none'; b.title = on ? 'Back to where you came from' : 'Back (nothing to go back to yet)'; }); _updateFloatBack(); }
+// The header Back button scrolls under the sticky tab bar, so show a floating one once scrolled
+function _updateFloatBack() {
+  let fb = document.getElementById('float-back-btn');
+  if (!fb) {
+    fb = document.createElement('button');
+    fb.id = 'float-back-btn'; fb.className = 'hdr-btn'; fb.textContent = '← Back'; fb.title = 'Back to where you came from';
+    fb.onclick = () => navBack();
+    fb.style.cssText = 'position:fixed;right:18px;bottom:18px;z-index:1000;font-weight:700;padding:8px 16px;box-shadow:0 4px 14px rgba(0,0,0,0.45);display:none;';
+    document.body.appendChild(fb);
+    window.addEventListener('scroll', _updateFloatBack, { passive: true });
+  }
+  fb.style.display = (navStack.length > 0 && _navScrollTop() > 150) ? '' : 'none';
+}
 function captureNavState() {
   const active = (document.querySelector('.tab-content.active')?.id || 'view-analysis').replace('view-', '');
   const snap = { tab: active, scroll: _navScrollTop() };
@@ -4032,8 +4047,20 @@ const IA_FILTER_OPTS = {
   age: [['a1', '<1y'], ['a3', '1–3y'], ['a5', '3–5y'], ['a5p', '>5y'], ['na', '—']]
 };
 function iaToggleFilter(field, val) { const s = callsF[field]; if (s.has(val)) s.delete(val); else s.add(val); renderCallsHistory(); }
+function iaToggleGroup(field, vals) { const s = callsF[field]; const on = vals.every(v => s.has(v)); vals.forEach(v => on ? s.delete(v) : s.add(v)); renderCallsHistory(); }
 function iaOpenMenu(field) { callsMenu = (callsMenu === field ? null : field); renderCallsHistory(); }
 function iaClearAllSets() { Object.values(callsF).forEach(s => s.clear()); }
+// Shortlist = latest call is BUY, advisor rates it Must buy/Bullish, price at/near his call, and we hold little or none
+const IA_SHORTLIST = { status: ['BUY'], mustbuy: ['MUSTBUY', 'BULLISH'], vsLast: ['disc', 'b20'], alloc: ['low', 'not'] };
+function iaShortlistOn() {
+  return Object.entries(callsF).every(([f, s]) => { const want = IA_SHORTLIST[f] || []; return s.size === want.length && want.every(v => s.has(v)); });
+}
+function iaToggleShortlist() {
+  const on = iaShortlistOn();
+  iaClearAllSets();
+  if (!on) Object.entries(IA_SHORTLIST).forEach(([f, vals]) => vals.forEach(v => callsF[f].add(v)));
+  renderCallsHistory();
+}
 function iaClearFilters() { iaClearAllSets(); callsSearch = ''; callsMenu = null; renderCallsHistory(); }
 function iaClearSearch() { callsSearch = ''; const i = document.getElementById('calls-search'); if (i) i.value = ''; renderCallsHistory(); }
 function iaReset() { callsSearch = ''; iaClearAllSets(); callsExpanded = new Set(); callsMenu = null; callsSort = { by: 'date', dir: 'desc' }; const i = document.getElementById('calls-search'); if (i) i.value = ''; renderCallsHistory(); }
@@ -4144,6 +4171,7 @@ function renderCallsHistory() {
   const nF = Object.values(callsF).reduce((n, s) => n + s.size, 0);
   const has = (f, v) => callsF[f].has(v);
   const cc = (label, f, v) => `<button onclick="iaToggleFilter('${f}','${v}')" style="padding:3px 9px;border-radius:13px;border:1px solid var(--border);cursor:pointer;font-size:0.7rem;font-weight:600;background:${has(f, v) ? '#7c3aed' : 'var(--bg2)'};color:${has(f, v) ? '#fff' : 'var(--text2)'}">${label}</button>`;
+  const ccGrp = (label, f, vals) => { const on = vals.every(v => has(f, v)); return `<button onclick="iaToggleGroup('${f}',${esc(JSON.stringify(vals))})" style="padding:3px 9px;border-radius:13px;border:1px solid var(--border);cursor:pointer;font-size:0.7rem;font-weight:600;background:${on ? '#7c3aed' : 'var(--bg2)'};color:${on ? '#fff' : 'var(--text2)'}">${label}</button>`; };
   const ccAll = `<button onclick="iaClearFilters()" style="padding:3px 9px;border-radius:13px;border:1px solid var(--border);cursor:pointer;font-size:0.7rem;font-weight:600;background:${nF === 0 ? '#7c3aed' : 'var(--bg2)'};color:${nF === 0 ? '#fff' : 'var(--text2)'}">All</button>`;
   let html = `
     <div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:6px 0;">
@@ -4155,7 +4183,7 @@ function renderCallsHistory() {
       ${nF ? `<span onclick="iaClearFilters()" style="cursor:pointer;color:var(--blue-text);font-size:0.72rem;">✕ Clear ${nF} filter${nF > 1 ? 's' : ''}</span>` : '<span style="color:var(--text3);font-size:0.68rem;">▼ = filter · click a header to sort</span>'}
     </div>
     <div style="display:flex;flex-wrap:wrap;gap:6px;margin:0 0 8px;">
-      ${ccAll} ${cc('⭐ Must buy', 'mustbuy', 'MUSTBUY')} ${cc('🔼 Bullish', 'mustbuy', 'BULLISH')} ${cc('🟢 At/below call', 'vsLast', 'disc')} ${cc('🟡 Low premium', 'vsLast', 'b20')} ${cc('Held', 'alloc', 'held')} ${cc('Low held', 'alloc', 'low')} ${cc('Not held', 'alloc', 'not')}
+      ${ccAll} <button onclick="iaToggleShortlist()" title="Shortlist: latest call is BUY · Must buy or Bullish · CMP at/below or up to 20% above the last call · Low held or Not held. Click again to clear." style="padding:3px 11px;border-radius:13px;border:1px solid var(--green);cursor:pointer;font-size:0.7rem;font-weight:700;background:${iaShortlistOn() ? 'var(--green)' : 'var(--bg2)'};color:${iaShortlistOn() ? '#fff' : 'var(--green)'}">▲ Shortlist</button> ${cc('🟢 Buy call', 'status', 'BUY')} ${cc('🔴 Sell call', 'status', 'SELL')} ${cc('👁 Watch', 'status', 'WATCH')} ${ccGrp('⭐ Must buy / Bullish', 'mustbuy', ['MUSTBUY', 'BULLISH'])} ${cc('🟢 At/below call', 'vsLast', 'disc')} ${cc('🟡 Low premium', 'vsLast', 'b20')} ${cc('Held', 'alloc', 'held')} ${cc('Low held', 'alloc', 'low')} ${cc('Not held', 'alloc', 'not')}
     </div>
     <div style="overflow:auto;max-height:calc(100vh - 190px);"><table class="ia-calls-table" style="width:100%;border-collapse:collapse;">
       <thead><tr>
@@ -4165,7 +4193,7 @@ function renderCallsHistory() {
     html += `<tr id="ia-row-${esc(x.t)}" class="${exp ? 'ia-open' : ''}" onclick="toggleIaExpand('${esc(x.t)}')" style="cursor:pointer;text-align:right;border-bottom:1px solid var(--border);${exp ? 'background:var(--bg2);' : ''}">
       <td style="text-align:center;color:var(--purple-text)">${exp ? '▾' : '▸'}</td>
       <td style="text-align:left;font-weight:700;"><span onclick="event.stopPropagation();goToCard('${esc(x.t)}')" title="Open ${esc(x.t)} in Deep Analysis" style="color:var(--blue-text);cursor:pointer;text-decoration:underline dotted;">${esc(x.t)}</span>${ia.urgent ? ' <span style="color:var(--red-text)" title="Was urgent on a call date">*</span>' : ''}</td>
-      <td style="text-align:left;color:var(--text2)">${esc(ia.company || '')}</td>
+      <td style="text-align:left;color:var(--text2)">${(allStocks || []).some(s => s.ticker === x.t) ? `<span onclick="event.stopPropagation();goToDashboardRow('${esc(x.t)}')" title="Open ${esc(x.t)} on the Dashboard" style="cursor:pointer;text-decoration:underline dotted;">${esc(ia.company || x.t)}</span>` : esc(ia.company || '')}</td>
       <td style="text-align:left">${esc(ia.status || '')}</td>
       <td style="text-align:left">${mbBadge(ia.mustbuy)}</td>
       <td style="text-align:left;color:${am.color};font-weight:600">${am.label}</td>
@@ -4262,6 +4290,15 @@ function clearAnalysisSearch() {
 }
 
 // ── Navigate to card on Dashboard tab (Deep Analysis) ─────────────────────
+function goToDashboardRow(ticker) {
+  pushNav();
+  switchTab('analysis', true);
+  const inp = document.getElementById('analysis-search');
+  if (inp) { inp.value = ticker; const c = document.getElementById('search-clear'); if (c) c.style.display = ''; }
+  renderAnalysisTable();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
 function goToCard(ticker) {
   pushNav();
   // Clear all Deep Analysis (cards) filters before navigating
@@ -4327,6 +4364,21 @@ function setAnalysisFilter(filter, el) {
 // ── Per-column filters (funnel icon dropdowns) ────────────────────────
 // Recompute a mover tag for one timeframe so the filter option list (built from
 // raw allStocks) matches the recomputed tags shown in the table (incl. 📈/📉/⚠️).
+function _moverTagY(s) {
+  const y = s.mv_yest;
+  return (y && y.v != null && y.r != null) ? computeMover(y.v, y.r, y.h, y.l, y.ath, y.atl, {suspect:true}) : null;
+}
+// Mov(D) filter/sort look at today AND D-1; a D-1 signal replaces today's plain 'No'
+function _moverTagsD(s) {
+  const d = _moverTag(s, 'd'), y = _moverTagY(s);
+  if (!y || y === 'No') return d ? [d] : [];
+  return (!d || d === 'No') ? [y] : [d, y];
+}
+const MOVER_SORT_ORDER = {'💥': 12, '🔥': 11, '🚀': 10, '📈': 9, '🧊': 8, '❄️': 7, '📉': 6, '🔼': 5, 'V+P': 4, 'V': 3, 'P': 2, 'A+C': 4, 'A': 3, 'C': 2, 'No': 1, '🔻': 0.5, '⚠️': 0};
+function _moverRankD(s) {
+  const d = MOVER_SORT_ORDER[s.movers] ?? -1, y = MOVER_SORT_ORDER[s.movers_y] ?? -1;
+  return Math.max(d, y - 0.01);  // same signal: today ranks just above D-1
+}
 function _moverTag(s, tf) {
   const w52hPct = (s.week52_high && s.ltp) ? (s.ltp - s.week52_high) / s.week52_high * 100 : null;
   const w52lPct = (s.week52_low  && s.ltp) ? (s.ltp - s.week52_low)  / s.week52_low  * 100 : null;
@@ -4379,7 +4431,7 @@ const colFilterDefs = {
   peg: { label: 'PEG', type: 'range',
     get: s => { const v = pegOf(s); return (typeof v === 'number') ? v : null; },
     options: [ {key:'<1', label:'< 1 (cheap for growth)', min:-Infinity, max:1}, {key:'1-2', label:'1 – 2 (fair)', min:1, max:2}, {key:'2-3', label:'2 – 3', min:2, max:3}, {key:'3+', label:'> 3 (expensive)', min:3, max:Infinity} ] },
-  movers:   { label: 'Mov(D)',  type: 'set', get: s => _moverTag(s, 'd') },
+  movers:   { label: 'Mov(D)',  type: 'set', get: s => _moverTagsD(s) },
   movers_w: { label: 'Mov(Wk)', type: 'set', get: s => _moverTag(s, 'w') },
   movers_m: { label: 'Mov(M)',  type: 'set', get: s => _moverTag(s, 'm') },
   movers_alloc: { label: 'Alloc', type: 'set', get: s => computeAlloc(_moverTag(s,'d'), _moverTag(s,'w'), _moverTag(s,'m'), { ext: s.price_to_200dma_pct, slope: s.dma200_slope_30d_pct, da: s.days_above_200dma_10d, r1m: s.ret_1m, ts: s.trend_score }) || null },
@@ -4546,6 +4598,8 @@ function rowPassesColFilters(s) {
       let ok = false;
       for (const key of sel) { const o = def.options.find(o => o.key === key); if (o && v >= o.min && v < o.max) { ok = true; break; } }
       if (!ok) return false;
+    } else if (Array.isArray(v)) {
+      if (!v.some(x => sel.has(String(x)))) return false;
     } else {
       if (v == null || !sel.has(String(v))) return false;
     }
@@ -4602,7 +4656,7 @@ function openColFilter(field, iconEl) {
   } else if (def.fixedOptions) {
     opts = def.fixedOptions.map(o => ({ key: o.key, label: o.label }));
   } else {
-    const vals = [...new Set(allStocks.map(s => def.get(s)).filter(v => v != null && v !== ''))].sort();
+    const vals = [...new Set(allStocks.flatMap(s => def.get(s)).filter(v => v != null && v !== ''))].sort();
     opts = vals.map(v => ({ key: String(v), label: String(v) }));
   }
   let html = `<div style="font-size:0.68rem;color:var(--text3);padding:2px 10px 4px;font-weight:700;">Filter: ${esc(def.label)}</div>`;
@@ -5018,7 +5072,9 @@ function moverTitle(s) {
   if (s.week52_low_pct != null) nums.push(`52W low: +${s.week52_low_pct.toFixed(1)}%`);
   const meaning = MOVER_MEANING[s.movers] || '';
   const line = nums.length ? nums.join('  |  ') : 'No intraday data';
-  return meaning ? `${s.movers} \u2014 ${meaning}\n\n${line}  (today)` : `${line}  (today)`;
+  const y = s.mv_yest, my = s.movers_y;
+  const yLine = (y && my) ? `\n\nD-1 (${y.d || 'previous session'}): ${my}${MOVER_MEANING[my] && my !== 'No' ? ' \u2014 ' + MOVER_MEANING[my] : ''}\nVolume: ${Number(y.v).toFixed(1)}\u00d7 avg  |  Day: ${y.r >= 0 ? '+' : ''}${Number(y.r).toFixed(1)}%` : '';
+  return (meaning ? `${s.movers} \u2014 ${meaning}\n\n${line}  (today)` : `${line}  (today)`) + yLine;
 }
 
 // Company-name hover tooltip: pulls the key qualitative analysis from the Deep
@@ -5043,6 +5099,8 @@ function enrichStockRow(s) {
   const _mvD = (s.vol_today_ratio != null && s.ret_1d != null) ? computeMover(s.vol_today_ratio, s.ret_1d, w52hPct, w52lPct, s.ath_pct, s.atl_pct, {suspect:true}) : (s.movers || null);
   const _mvW = (s.vol_week_ratio != null && s.ret_1w != null) ? computeMover(s.vol_week_ratio, s.ret_1w, w52hPct, w52lPct, s.ath_pct, s.atl_pct, {volT:1.5, upT:8, dnT:8, surge:false, trend:{vol:1.3, up:5}}) : (s.movers_w || null);
   const _mvM = (s.vol_month_ratio != null && s.ret_1m != null) ? computeMover(s.vol_month_ratio, s.ret_1m, w52hPct, w52lPct, s.ath_pct, s.atl_pct, {volT:1.3, upT:12, dnT:12, surge:false, trend:{vol:1.2, up:8}}) : (s.movers_m || null);
+  const _y = s.mv_yest;
+  const _mvY = (_y && _y.v != null && _y.r != null) ? computeMover(_y.v, _y.r, _y.h, _y.l, _y.ath, _y.atl, {suspect:true}) : null;
   const row = {
     ...s,
     buy_value:       (s.buy_value  != null) ? s.buy_value  : (s.buy_avg || 0) * (s.quantity || 0),
@@ -5051,6 +5109,7 @@ function enrichStockRow(s) {
     week52_low_pct:  w52lPct != null ? Math.round(w52lPct * 10) / 10 : null,
     // Movers v5: recompute client-side (level tags + trending + suspect + overlay)
     movers: _mvD,
+    movers_y: _mvY,
     movers_w: _mvW,
     movers_m: _mvM,
     movers_alloc: computeAlloc(_mvD, _mvW, _mvM, { ext: s.price_to_200dma_pct, slope: s.dma200_slope_30d_pct, da: s.days_above_200dma_10d, r1m: s.ret_1m, ts: s.trend_score }),
@@ -5175,8 +5234,12 @@ function renderAnalysisTable() {
       const oA = order[valA] ?? -1, oB = order[valB] ?? -1;
       return analysisSortDir === 'desc' ? oB - oA : oA - oB;
     }
-    if (analysisSortBy === 'price_break' || analysisSortBy === 'movers' || analysisSortBy === 'movers_w' || analysisSortBy === 'movers_m') {
-      const order = {'💥': 12, '🔥': 11, '🚀': 10, '📈': 9, '🧊': 8, '❄️': 7, '📉': 6, '🔼': 5, 'V+P': 4, 'V': 3, 'P': 2, 'A+C': 4, 'A': 3, 'C': 2, 'No': 1, '🔻': 0.5, '⚠️': 0};
+    if (analysisSortBy === 'movers') {
+      const oA = _moverRankD(a), oB = _moverRankD(b);
+      return analysisSortDir === 'desc' ? oB - oA : oA - oB;
+    }
+    if (analysisSortBy === 'price_break' || analysisSortBy === 'movers_w' || analysisSortBy === 'movers_m') {
+      const order = MOVER_SORT_ORDER;
       const oA = order[valA] ?? -1, oB = order[valB] ?? -1;
       return analysisSortDir === 'desc' ? oB - oA : oA - oB;
     }
@@ -5225,7 +5288,7 @@ function renderAnalysisTable() {
     const tr = document.createElement('tr');
     tr.innerHTML = `
       <td onclick="toggleAcctCell(this,event)" style="${(Array.isArray(s.accounts) && s.accounts.length) ? 'cursor:pointer;' : ''}" title="${esc(nameTooltip(s))}"><div style="display:flex;align-items:center;gap:4px;">${(Array.isArray(s.accounts) && s.accounts.length) ? `<span class="acct-exp" title="Tap to show ${s.accounts.length} account${s.accounts.length>1?'s':''}" style="color:var(--purple-text);user-select:none;font-weight:700;">\u25b8</span>` : ''}<span style="cursor:pointer;color:var(--blue-text);font-weight:700;font-size:0.72rem;" title="View fundamental analysis card" onclick="event.stopPropagation();goToCard('${esc(s.ticker)}')">${s.ticker}</span>${s.price_suspect ? `<span title="Price taken from your Google Sheet (₹${(s.ltp||0).toLocaleString('en-IN')}) — the yfinance ticker looks mismatched (fetched ₹${(s.yf_ltp||0).toLocaleString('en-IN')}, likely a post-demerger namesake). Returns/momentum are hidden so they don't corrupt summaries." style="cursor:help;color:var(--amber-text);font-size:0.72rem;">⚠️</span>` : ''}</div><span class="research-name" style="cursor:pointer;color:var(--text2);text-decoration:underline dotted;font-size:0.72rem;display:block;margin-top:1px;" data-ticker="${esc(s.ticker)}" data-name="${esc(s.name || s.ticker)}" onclick="event.stopPropagation();openResearchTabsFromEl(event,this)">${esc(s.name || s.ticker)}</span></td>
-      <td class="col-mov" style="${moverStyle(s.movers, s.ret_1d)};cursor:pointer" title="${esc(moverTitle(s))}" onclick="openMoversAnalysis('${esc(s.ticker)}', this)">${s.movers || '—'}</td>
+      <td class="col-mov col-movd" style="${moverStyle(s.movers, s.ret_1d)};cursor:pointer" title="${esc(moverTitle(s))}" onclick="openMoversAnalysis('${esc(s.ticker)}', this)">${s.movers || '—'}${(s.movers_y && s.movers_y !== 'No') ? `<div style="font-size:0.72rem;margin-top:2px;white-space:nowrap;opacity:0.8;"><span style="${moverStyle(s.movers_y, s.mv_yest && s.mv_yest.r)}">${s.movers_y}</span></div>` : ''}</td>
       <td class="col-mov" style="${moverStyle(s.movers_w, s.ret_1w)};cursor:pointer" title="${esc(moverTitleTF(s,'w'))}" onclick="openMoversTF('${esc(s.ticker)}','w',this)">${s.movers_w || '—'}</td>
       <td class="col-mov" style="${moverStyle(s.movers_m, s.ret_1m)};cursor:pointer" title="${esc(moverTitleTF(s,'m'))}" onclick="openMoversTF('${esc(s.ticker)}','m',this)">${s.movers_m || '—'}</td>
       <td class="col-mov" style="${allocStyle(s.movers_alloc)};cursor:pointer" title="${esc(allocTitle(s.movers_alloc))}" onclick="openMoversTF('${esc(s.ticker)}','alloc',this)">${s.movers_alloc || '—'}</td>
@@ -6476,7 +6539,7 @@ function _mxIaVs(t, key) {
 }
 const MX_DASH_COLS = [
   ['Ticker', 'ticker'], ['Company', 'name'], ['Sector', 'sector'], ['Sector group', 'sector_group'], ['Holding type', s => s.holding_type || 'Stocks'],
-  ['Mov(D)', 'movers'], ['Mov(Wk)', 'movers_w'], ['Mov(M)', 'movers_m'], ['Alloc', 'movers_alloc'],
+  ['Mov(D)', 'movers'], ['Mov(D-1)', 'movers_y'], ['Mov(Wk)', 'movers_w'], ['Mov(M)', 'movers_m'], ['Alloc', 'movers_alloc'],
   ['Setup', 'setup'], ['Sn(ST)', 'sn_st'], ['Sn(LT)', 'sn_lt'],
   ['Action', s => (ACTION_META[s.action] || {}).label || ''], ['Reversal TF', s => s.action === '🔎' ? reversalTf(s).join('') : ''],
   ['1D %', 'ret_1d'], ['1W %', 'ret_1w'], ['1M %', 'ret_1m'], ['6M %', 'ret_6m'], ['1Y %', 'ret_1y'], ['2Y %', 'ret_2y'], ['3Y %', 'ret_3y'], ['4Y %', 'ret_4y'], ['5Y %', 'ret_5y'],

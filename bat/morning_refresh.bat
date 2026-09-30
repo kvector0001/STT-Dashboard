@@ -6,7 +6,7 @@ echo   PORTFOLIO MORNING REFRESH
 echo ============================================
 echo.
 
-echo [1/4] Fetching latest prices from Google Sheet + Yahoo...
+echo [1/5] Fetching latest prices from Google Sheet + Yahoo...
 python scripts/fetch_prices.py
 if errorlevel 1 (
     echo.
@@ -16,13 +16,17 @@ if errorlevel 1 (
 )
 echo.
 
-echo [2/4] Syncing with GitHub (pulling any bot commits)...
+echo [2/5] Sending daily movers to Telegram...
+python scripts/telegram_alert.py
+echo.
+
+echo [3/5] Syncing with GitHub (pulling any bot commits)...
 git stash --include-untracked 2>nul
 git pull origin main --no-edit
 git stash pop 2>nul
 
 echo.
-echo [3/4] Staging and committing data...
+echo [4/5] Staging and committing data...
 git add prices.json stocks.json data/portfolio.xlsx
 git commit -m "chore: manual morning refresh %date% %time%"
 if errorlevel 1 (
@@ -30,7 +34,7 @@ if errorlevel 1 (
 )
 
 echo.
-echo [4/4] Pushing to GitHub...
+echo [5/5] Pushing to GitHub...
 git push origin main
 if errorlevel 1 (
     echo.

@@ -641,6 +641,7 @@ for _, row in portfolio.iterrows():
     fetched_pat = None
     fetched_rev = None
     fetched_vol_yest_ratio = None
+    fetched_mv_yest = None
     fetched_vol_30m_ratio = None
     fetched_mover_a = None
     fetched_mover_c = None
@@ -864,6 +865,20 @@ for _, row in portfolio.iterrows():
                         if avg_30d > 0:
                             fetched_vol_today_ratio = round(today_vol / avg_30d, 2)
                             fetched_vol_yest_ratio  = round(yest_vol  / avg_30d, 2)
+                        # D-1 mover inputs, measured as of the previous session's close (frontend runs computeMover on them)
+                        if len(hist) >= 33:
+                            closes_y = hist['Close'].iloc[:-1]
+                            c_y, c_yy = float(closes_y.iloc[-1]), float(closes_y.iloc[-2])
+                            avg_y = float(hist['Volume'].iloc[-32:-2].mean())
+                            hi_y, lo_y = float(hist['High'].iloc[:-1].tail(252).max()), float(hist['Low'].iloc[:-1].tail(252).min())
+                            ath_y, atl_y = float(closes_y.max()), float(closes_y.min())
+                            if avg_y > 0 and c_yy > 0 and min(hi_y, lo_y, ath_y, atl_y) > 0:
+                                fetched_mv_yest = {
+                                    "v": round(yest_vol / avg_y, 2), "r": round((c_y / c_yy - 1) * 100, 2),
+                                    "h": round((c_y / hi_y - 1) * 100, 2), "l": round((c_y / lo_y - 1) * 100, 2),
+                                    "ath": round((c_y / ath_y - 1) * 100, 2), "atl": round((c_y / atl_y - 1) * 100, 2),
+                                    "d": str(closes_y.index[-1].date()),
+                                }
                         # Movers v4: volume + momentum, LIFETIME (all-time) vs 52-week levels
                         if avg_30d > 0 and ret_1d is not None:
                             rvol = today_vol / avg_30d
@@ -1132,6 +1147,8 @@ for _, row in portfolio.iterrows():
         prices[sym]["vol_30m_ratio"] = fetched_vol_30m_ratio
     if fetched_vol_today_ratio is not None:
         prices[sym]["vol_today_ratio"] = fetched_vol_today_ratio
+    if fetched_mv_yest is not None:
+        prices[sym]["mv_yest"] = fetched_mv_yest
     if fetched_vol_yest_ratio is not None:
         prices[sym]["vol_yest_ratio"] = fetched_vol_yest_ratio
     # Movers v4 (🔥 lifetime-high / 🚀 52wk-high / 🧊 lifetime-low / ❄️ 52wk-low / V+P / V / P / No)
@@ -1445,7 +1462,7 @@ _BLANK_ON_SUSPECT = (
     "ret_1d", "ret_1w", "ret_1m", "ret_6m", "ret_1y", "ret_2y", "ret_3y", "ret_4y", "ret_5y",
     "week52_high", "week52_low", "ath_pct", "atl_pct",
     "vol_today_ratio", "vol_week_ratio", "vol_month_ratio", "vol_30m_ratio",
-    "vol_yest_ratio", "vol_30d_ratio", "mcap_3y",
+    "vol_yest_ratio", "vol_30d_ratio", "mcap_3y", "mv_yest",
     "movers", "movers_w", "movers_m", "movers_alloc",
     "trend_score", "trend_signal", "price_to_200dma_pct",
     "dma200_slope_30d_pct", "days_above_200dma_10d",
