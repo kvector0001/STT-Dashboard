@@ -47,6 +47,7 @@ YFINANCE_SYMBOL_OVERRIDES = {
     "RIR": "RIR.BO",  # .NS history begins Jul 2026; .BO history begins Sep 2006
     "FREDUN": "FREDUN.BO",  # .NS history begins Aug 2026; .BO history begins Mar 2016
     "INVPRECQ": "INVPRECQ.BO",  # .NS history begins Aug 2026; .BO history begins Jul 2002
+    "LAKSELEC": "LAKSELEC.BO",  # BSE-only listing; .NS does not exist
 }
 
 # ── Path resolution (Google Sheets vs local vs GitHub Actions) ──────────────
