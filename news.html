@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio News &amp; Filings</title>
+<style>
+  :root { --bg:#0f1117; --bg2:#171a23; --bg3:#222634; --border:#2c3142; --text:#e6e8ef; --text2:#aab0c0; --text3:#7a8196;
+          --blue:#60a5fa; --green:#34d399; --amber:#fbbf24; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg:#f5f6fa; --bg2:#ffffff; --bg3:#eef0f6; --border:#dde1ea; --text:#1b1f2a; --text2:#4b5263; --text3:#7a8196;
+            --blue:#2563eb; --green:#059669; --amber:#b45309; }
+  }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family:-apple-system,Segoe UI,Roboto,sans-serif; background:var(--bg); color:var(--text); font-size:14px; }
+  header { position:sticky; top:0; z-index:5; background:var(--bg2); border-bottom:1px solid var(--border); padding:12px 16px; display:flex; flex-wrap:wrap; gap:10px; align-items:center; }
+  h1 { font-size:1.05rem; margin:0; }
+  .meta { color:var(--text3); font-size:0.75rem; }
+  input[type=search] { flex:1; min-width:160px; padding:7px 10px; border-radius:8px; border:1px solid var(--border); background:var(--bg3); color:var(--text); }
+  label.tog { font-size:0.78rem; color:var(--text2); display:flex; gap:4px; align-items:center; cursor:pointer; }
+  main { max-width:980px; margin:0 auto; padding:12px 16px 40px; }
+  .card { background:var(--bg2); border:1px solid var(--border); border-radius:10px; padding:10px 14px; margin:10px 0; }
+  .hd { display:flex; gap:8px; align-items:baseline; margin-bottom:6px; }
+  .rank { color:var(--text3); font-size:0.72rem; min-width:28px; }
+  .tk { font-weight:800; color:var(--blue); }
+  .nm { color:var(--text2); font-size:0.8rem; }
+  .row { display:flex; gap:8px; padding:4px 0; border-top:1px dashed var(--border); font-size:0.84rem; line-height:1.35; }
+  .row:first-of-type { border-top:none; }
+  .badge { flex:none; font-size:0.62rem; font-weight:700; padding:2px 6px; border-radius:4px; height:fit-content; margin-top:1px; }
+  .b-f { background:rgba(52,211,153,.15); color:var(--green); }
+  .b-n { background:rgba(96,165,250,.15); color:var(--blue); }
+  .dt { flex:none; color:var(--text3); font-size:0.72rem; min-width:78px; margin-top:2px; }
+  a { color:var(--text); text-decoration:none; } a:hover { text-decoration:underline; color:var(--blue); }
+  .src { color:var(--text3); font-size:0.74rem; }
+  .empty { color:var(--text3); text-align:center; padding:40px; }
+  .chips { display:flex; flex-wrap:wrap; gap:6px; width:100%; }
+  .chip { font-size:0.76rem; padding:4px 10px; border-radius:14px; border:1px solid var(--border); background:var(--bg3); color:var(--text2); cursor:pointer; user-select:none; }
+  .chip.on { background:var(--blue); color:#fff; border-color:var(--blue); }
+  .banner { width:100%; font-size:0.76rem; color:var(--amber); }
+  .banner a { color:var(--blue); cursor:pointer; }
+  .ret { font-size:0.75rem; font-weight:700; margin-left:auto; }
+  .up { color:var(--green); } .dn { color:#f87171; }
+  .mv { font-size:0.72rem; color:var(--amber); }
+  select { padding:6px 8px; border-radius:8px; border:1px solid var(--border); background:var(--bg3); color:var(--text); font-size:0.8rem; }
+  .tk { cursor:pointer; } .tk:hover { text-decoration:underline; }
+  .more { font-size:0.74rem; color:var(--blue); cursor:pointer; padding:4px 0 0; }
+</style>
+</head>
+<body>
+<header>
+  <h1>📰 News &amp; Filings</h1>
+  <span class="meta" id="meta">Loading…</span>
+  <input type="search" id="q" placeholder="Search ticker, company or keyword…">
+  <select id="period" title="How far back to show">
+    <option value="2" selected>Last 2 days</option>
+    <option value="7">Last 1 week</option>
+    <option value="30">Last 1 month</option>
+    <option value="61">Last 2 months</option>
+    <option value="183">Last 6 months</option>
+  </select>
+  <label class="tog"><input type="checkbox" id="onlyFilings"> Filings only</label>
+  <div class="chips" id="chips">
+    <span class="chip on" data-f="all">All</span>
+    <span class="chip" data-f="movers" title="Any daily / weekly / monthly mover tag">📈 Movers</span>
+    <span class="chip" data-f="gainers" title="15 biggest 1-day gainers">▲ Top Gainers</span>
+    <span class="chip" data-f="losers" title="15 biggest 1-day losers">▼ Top Losers</span>
+    <span class="chip" data-f="reversal" title=">40% below all-time high but up >15% in a month">🔎 Reversal</span>
+  </div>
+  <div class="banner" id="banner" style="display:none"></div>
+</header>
+<main id="list"><div class="empty">Loading…</div></main>
+<script>
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const safeUrl = u => /^https:\/\//i.test(u || '') ? u : '';
+const fmtDt = iso => { if (!iso) return ''; const d = new Date(iso);
+  return d.toLocaleDateString('en-IN', {day:'2-digit', month:'short'}) + ' ' + d.toLocaleTimeString('en-IN', {hour:'2-digit', minute:'2-digit', hour12:false}); };
+let DATA = { items: [] };
+let PRICES = {};
+let CHIP = 'all';
+const TOP_N = 15;
+// Tickers handed over from the dashboard's current filter (news.html?tk=A,B,C).
+const HANDOFF = (() => { const v = new URLSearchParams(location.search).get('tk'); return v ? new Set(v.split(',').filter(Boolean)) : null; })();
+let useHandoff = !!HANDOFF;
+const SHOW = 5;              // rows per type before "+N more"
+const EXPANDED = new Set();  // tickers whose full list is open
+let FOCUS = null;            // company deep-dive (ticker clicked)
+
+const active = m => m && m !== 'No' && m !== '—';
+function chipSet() {
+  const held = Object.entries(PRICES).filter(([k, p]) => !k.startsWith('_') && p && (p.quantity || 0) > 0);
+  const byRet = held.filter(([, p]) => typeof p.ret_1d === 'number');
+  if (CHIP === 'movers') return new Set(held.filter(([, p]) => active(p.movers) || active(p.movers_w) || active(p.movers_m)).map(([k]) => k));
+  if (CHIP === 'gainers') return new Set(byRet.filter(([, p]) => p.ret_1d > 0).sort((a, b) => b[1].ret_1d - a[1].ret_1d).slice(0, TOP_N).map(([k]) => k));
+  if (CHIP === 'losers') return new Set(byRet.filter(([, p]) => p.ret_1d < 0).sort((a, b) => a[1].ret_1d - b[1].ret_1d).slice(0, TOP_N).map(([k]) => k));
+  if (CHIP === 'reversal') return new Set(held.filter(([, p]) => typeof p.ath_pct === 'number' && p.ath_pct < -40 && typeof p.ret_1m === 'number' && p.ret_1m > 15).map(([k]) => k));
+  return null;
+}
+
+function render() {
+  const q = document.getElementById('q').value.trim().toLowerCase();
+  const onlyF = document.getElementById('onlyFilings').checked;
+  const cutoff = Date.now() - Number(document.getElementById('period').value) * 864e5;
+  const inWin = x => x.dt && new Date(x.dt).getTime() >= cutoff;
+  const set = chipSet();
+  const banner = document.getElementById('banner');
+  banner.style.display = (HANDOFF || FOCUS) ? '' : 'none';
+  if (FOCUS) banner.innerHTML = `Company deep-dive: <b>${esc(FOCUS)}</b> — all filings &amp; news in the selected period · <a id="clearFocus">back to all holdings</a>`;
+  else if (HANDOFF) banner.innerHTML = useHandoff
+    ? `Showing news for the ${HANDOFF.size} stocks in your dashboard filter · <a id="clearHandoff">show all holdings</a>`
+    : `Showing all holdings · <a id="clearHandoff">back to dashboard filter (${HANDOFF.size})</a>`;
+  let nCards = 0, nF = 0, nN = 0;
+  const html = DATA.items.map(it => {
+    if (FOCUS && it.ticker !== FOCUS) return '';
+    if (!FOCUS && useHandoff && !HANDOFF.has(it.ticker)) return '';
+    if (!FOCUS && set && !set.has(it.ticker)) return '';
+    const filings = it.filings.filter(f => inWin(f) && (!q || (it.ticker + ' ' + it.name + ' ' + f.text).toLowerCase().includes(q)));
+    const news = onlyF ? [] : it.news.filter(n => inWin(n) && (!q || (it.ticker + ' ' + it.name + ' ' + n.title).toLowerCase().includes(q)));
+    if (!filings.length && !news.length) return '';
+    nCards++; nF += filings.length; nN += news.length;
+    const full = FOCUS || EXPANDED.has(it.ticker);
+    const fShow = full ? filings : filings.slice(0, SHOW), nShow = full ? news : news.slice(0, SHOW);
+    const hidden = (filings.length - fShow.length) + (news.length - nShow.length);
+    const link = (url, txt) => safeUrl(url) ? `<a href="${esc(url)}" target="_blank" rel="noopener noreferrer">${esc(txt)}</a>` : esc(txt);
+    const p = PRICES[it.ticker] || {};
+    const r = typeof p.ret_1d === 'number' ? `<span class="ret ${p.ret_1d >= 0 ? 'up' : 'dn'}">${p.ret_1d >= 0 ? '+' : ''}${p.ret_1d.toFixed(1)}% 1D</span>` : '';
+    const mv = active(p.movers) ? `<span class="mv">${esc(p.movers)}</span>` : '';
+    return `<div class="card">
+      <div class="hd"><span class="rank">#${it.rank}</span><span class="tk" data-tk="${esc(it.ticker)}" title="Show all news for this company">${esc(it.ticker)}</span>${mv}<span class="nm">${esc(it.name)}</span>${r}</div>
+      ${fShow.map(f => `<div class="row"><span class="badge b-f">NSE FILING</span><span class="dt">${fmtDt(f.dt)}</span><span>${link(f.url, f.text)}</span></div>`).join('')}
+      ${nShow.map(n => `<div class="row"><span class="badge b-n">NEWS</span><span class="dt">${fmtDt(n.dt)}</span><span>${link(n.url, n.title)} <span class="src">· ${esc(n.source)}</span></span></div>`).join('')}
+      ${hidden ? `<div class="more" data-more="${esc(it.ticker)}">+${hidden} more</div>` : ''}
+    </div>`;
+  }).join('');
+  document.getElementById('list').innerHTML = html || '<div class="empty">No filings or news in this period.</div>';
+  const per = document.getElementById('period');
+  document.getElementById('meta').textContent = `${per.options[per.selectedIndex].text} · ${nCards} holdings · ${nF} filings · ${nN} headlines · updated ${fmtDt(DATA.generated)} · largest holding first`;
+}
+
+(async () => {
+  const t = '?t=' + Date.now();
+  const [news, prices] = await Promise.all([
+    fetch('news.json' + t).then(r => r.ok ? r.json() : null).catch(() => null),
+    fetch('prices.json' + t).then(r => r.ok ? r.json() : {}).catch(() => ({})),
+  ]);
+  if (!news) { document.getElementById('list').innerHTML = '<div class="empty">news.json not generated yet.</div>'; document.getElementById('meta').textContent = ''; return; }
+  // Order by current holding value (largest position first); the value itself is never shown.
+  const val = tk => { const p = prices[tk] || {}; return (p.ltp || 0) * (p.quantity || 0); };
+  const order = Object.keys(prices).filter(k => !k.startsWith('_')).sort((a, b) => val(b) - val(a));
+  const rankOf = Object.fromEntries(order.map((k, i) => [k, i + 1]));
+  news.items.forEach(it => it.rank = rankOf[it.ticker] || 999);
+  news.items.sort((a, b) => a.rank - b.rank);
+  DATA = news;
+  PRICES = prices;
+  render();
+})();
+document.getElementById('q').addEventListener('input', render);
+document.getElementById('onlyFilings').addEventListener('change', render);
+document.getElementById('chips').addEventListener('click', e => {
+  const c = e.target.closest('.chip'); if (!c) return;
+  CHIP = c.dataset.f;
+  document.querySelectorAll('.chip').forEach(x => x.classList.toggle('on', x === c));
+  render();
+});
+document.getElementById('banner').addEventListener('click', e => {
+  if (e.target.id === 'clearHandoff') { useHandoff = !useHandoff; render(); }
+  if (e.target.id === 'clearFocus') { FOCUS = null; render(); }
+});
+document.getElementById('period').addEventListener('change', render);
+document.getElementById('list').addEventListener('click', e => {
+  const tk = e.target.closest('[data-tk]');
+  if (tk) { FOCUS = tk.dataset.tk; window.scrollTo(0, 0); render(); return; }
+  const more = e.target.closest('[data-more]');
+  if (more) { EXPANDED.add(more.dataset.more); render(); }
+});
+</script>
+</body>
+</html>

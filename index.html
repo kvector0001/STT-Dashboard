@@ -1230,6 +1230,7 @@
       <div style="display:flex;flex-direction:column;gap:3px;align-items:flex-start;margin-top:6px;">
         <div id="ana-acct-toggle" onclick="toggleAccountwise()" title="Per-account summary (invested, value, P&L, cash). Click an account row to filter · Ctrl/Cmd+Click to combine several accounts." style="cursor:pointer;user-select:none;display:inline-flex;align-items:center;gap:4px;font-size:0.7rem;color:var(--text3);white-space:nowrap;">👥 Accountwise <span id="acct-arrow" style="transition:transform .2s;">▾</span></div>
         <div id="ana-bench-toggle" onclick="toggleBenchmarks()" title="Show benchmark index returns below each return column" style="cursor:pointer;user-select:none;display:inline-flex;align-items:center;gap:4px;font-size:0.7rem;color:var(--text3);white-space:nowrap;">📊 Benchmarks <span id="bench-arrow" style="transition:transform .2s;">▾</span></div>
+        <a href="news.html" target="_blank" rel="noopener" onclick="return openNewsPage(event)" title="Exchange filings + news headlines for your holdings (last 2 days), largest holding first — opens in a new tab. If dashboard filters are active, shows news for just the filtered stocks." style="display:inline-flex;align-items:center;gap:4px;font-size:0.7rem;color:var(--text3);white-space:nowrap;text-decoration:none;">📰 News ↗</a>
       </div>
     </div>
     <div class="stat">
@@ -4287,6 +4288,17 @@ function clearAnalysisSearch() {
   if (inp) inp.value = '';
   if (clr) clr.style.display = 'none';
   renderAnalysisTable();
+}
+
+// Open the News page; when dashboard filters are active, pass just the filtered tickers.
+function openNewsPage(ev) {
+  const searchQ = (document.getElementById('analysis-search')?.value || '').trim();
+  const filtered = analysisFilters.size > 0 || !!window._sectorFilter || accActive() || !!searchQ || Object.keys(colFilters).length > 0;
+  if (!filtered || !visibleStocks.length) return true;
+  if (ev) ev.preventDefault();
+  const tks = [...new Set(visibleStocks.map(s => s.ticker))].join(',');
+  window.open('news.html?tk=' + encodeURIComponent(tks), '_blank', 'noopener');
+  return false;
 }
 
 // ── Navigate to card on Dashboard tab (Deep Analysis) ─────────────────────

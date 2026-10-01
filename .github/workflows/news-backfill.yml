@@ -1,0 +1,43 @@
+name: News Backfill (new holdings)
+
+on:
+  # Triggered nightly by cron-job.org. Only fetches 6-month history for holdings not yet in news.json.
+  workflow_dispatch:
+
+# Shares the refresh lock so both never push news.json at the same time.
+concurrency:
+  group: refresh-prices
+  cancel-in-progress: false
+
+jobs:
+  backfill:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Backfill 6 months for newly added holdings
+        run: python scripts/news_digest.py --fill-new
+
+      - name: Commit and push news.json
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add news.json
+          if git diff --staged --quiet; then
+            echo "No new holdings to backfill."
+          else
+            git commit -m "chore: news backfill for new holdings $(date -u +'%Y-%m-%d')"
+            git pull --rebase origin main
+            git push
+          fi
