@@ -46,7 +46,7 @@ _bns = {base_name(x.get("name", "")) for x in sj if x.get("ticker")}
 GENERIC_TAIL = {"analytics", "technologies", "technology", "tech", "solutions", "systems", "engineering", "engineers",
     "infra", "infrastructure", "industries", "enterprises", "services", "products", "pharmaceuticals", "pharma",
     "healthcare", "hospitals", "hospital", "international", "holdings", "finance", "financial", "capital", "ventures",
-    "labs", "laboratories", "chemicals", "global", "corp", "group"}
+    "labs", "laboratories", "chemicals", "global", "corp", "group", "exploration", "exports", "projects"}
 for x in sj:
     tk = x.get("ticker")
     if not tk or tk == "Cash": continue
