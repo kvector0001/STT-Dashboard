@@ -3,7 +3,7 @@
 1. Downloads the NEWEST WhatsApp export per chat from the shared Google Drive folder (zip -> txt, temp dir only).
 2. Reads the Google Sheet's "IA All Calls" tab as the ledger and "IA Stock Calls" for blog links.
 3. Runs ia_build.py (incremental: only messages newer than the ledger are parsed).
-4. Writes both tabs back in place.
+4. Writes both tabs back in place, plus "IA All Messages" (every message, for free-text search).
 
 Nothing is written to the repo, and no chat text is printed (the repo and its Actions logs are public).
 Secrets: GOOGLE_SA_KEY (service-account JSON) and IA_CONFIG, e.g.
@@ -34,6 +34,10 @@ SC_HDR = ["Ticker", "Company", "Call status", "Last Buy price", "Max Buy price",
           "(Annualised) CAGR% vs Last", "CAGR% vs Max", "Signal", "Held?", "Urgent?", "Blog Link", "#Calls", "First Date",
           "Last Call date", "Max Buy date", "MustBuy", "Last Buy date"]
 AC_HDR = ["Ticker", "Company", "Date", "Action", "IA price", "Quote (verbatim / blog summary)", "Source", "MustBuy", "vs CMP %"]
+# Every advisor message from both chats (incl. ones with no portfolio ticker) for the website's free-text search.
+MSG_TAB, MSG_HDR = "IA All Messages", ["Date", "Source", "Tickers", "Message"]
+NOT_MESSAGES = {"this message was deleted", "you deleted this message", "<media omitted>", "null"}
+SYSTEM_LINE = re.compile(r"^\d{1,2}/\d{1,2}/\d{2,4},\s+\d{1,2}:\d{2}\s*[ap]m\s+-\s+")
 
 
 def _credentials():
@@ -117,13 +121,41 @@ def write_tab(ws, header, rows):
     ws.update(values=values, range_name="A1", value_input_option="RAW")
 
 
+def build_messages(g, old_rows):
+    """Union of the stored archive and this export: one row per message, a copy posted in both chats kept once."""
+    key = lambda t: re.sub(r"[^a-z0-9]", "", t.lower())[:200]
+    by = {}
+    for r in old_rows:
+        r = [str(x) for x in (list(r) + [""] * 4)[:4]]
+        r[3] = "\n".join(ln for ln in r[3].splitlines() if not SYSTEM_LINE.match(ln)).strip()
+        if r[3]:
+            by[key(r[3])] = r
+    for iso, src, t in g["msgs"]:
+        # WhatsApp system lines ("<date>, <time> - <name> left/joined") get glued onto the previous message.
+        t = "\n".join(ln for ln in t.splitlines() if not SYSTEM_LINE.match(ln))
+        t = g["clean_text"](t.replace("<This message was edited>", ""))
+        if len(t) < 20 or t.lower() in NOT_MESSAGES:
+            continue
+        cur = by.get(key(t))
+        if cur:
+            cur[0] = min(cur[0], iso)
+            cur[1] = " + ".join(sorted(set(cur[1].split(" + ")) | {src}))
+            continue
+        by[key(t)] = [iso, src, "", t]
+    for r in by.values():  # re-tag every run so newly added stocks are picked up in old messages too
+        r[2] = ", ".join(g["stocks_in"](r[3]))
+    return sorted(by.values(), key=lambda r: r[0], reverse=True)
+
+
 def main():
     full, dry = "--full" in sys.argv, "--dry-run" in sys.argv
     os.environ["PYTHONUTF8"] = "1"
     creds, cfg = _credentials(), _config()
     sh = gspread.authorize(creds).open_by_key(SHEET_ID)
     ac_ws, sc_ws = _ws(sh, AC_TAB, len(AC_HDR)), _ws(sh, SC_TAB, len(SC_HDR))
+    msg_ws = _ws(sh, MSG_TAB, len(MSG_HDR))
     store = ac_ws.get_all_values()[1:]
+    msg_old = msg_ws.get_all_values()[1:]
     sc_old = sc_ws.get_all_values()[1:]
     blog_links = {r[0]: r[13] for r in sc_old if len(r) > 13 and r[13]}
     print(f"Ledger: {len(store)} calls in the sheet | mode: {'FULL rebuild' if full else 'incremental'}{' | DRY RUN' if dry else ''}")
@@ -134,6 +166,11 @@ def main():
             "IA_STRIP_NAMES": cfg.get("strip_names", []), "IA_STORE": store,
             "IA_BLOG_LINKS": blog_links, "IA_FULL_REBUILD": full})
     calls, quotes = g["calls"], g["allcalls"]
+    messages = build_messages(g, msg_old)
+    untagged = sum(1 for r in messages if not r[2])
+    both = sum(1 for r in messages if " + " in r[1])
+    print(f"Messages archive: {len(messages)} ({len(messages) - len(msg_old):+d}) | {untagged} without a portfolio ticker "
+          f"| {both} posted in both chats, kept once")
     if not quotes:
         sys.exit("Build produced no calls — refusing to overwrite the sheet.")
     if len(quotes) < len(store) and not full:
@@ -143,6 +180,7 @@ def main():
         return
     write_tab(ac_ws, AC_HDR, quotes)
     write_tab(sc_ws, SC_HDR, calls)
+    write_tab(msg_ws, MSG_HDR, messages)
     print(f"Sheet updated: {len(calls)} stocks, {len(quotes)} calls ({len(quotes) - len(store):+d}).")
 
 

@@ -1317,7 +1317,7 @@ def _mf_returns(scheme_code):
     prev = pts[-2][1]
     return {
         "ret_1d": round((latest - prev) / prev * 100, 2) if prev else None,
-        "ret_1m": r(30), "ret_6m": r(182), "ret_1y": r(365), "ret_3y": r(365 * 3), "ret_5y": r(365 * 5),
+        "ret_1w": r(7), "ret_1m": r(30), "ret_6m": r(182), "ret_1y": r(365), "ret_3y": r(365 * 3), "ret_5y": r(365 * 5),
     }
 
 # Fallback index-fund scheme codes for periods the ETF can't cover
@@ -1336,6 +1336,7 @@ for key, candidates in BENCHMARK_SYMBOLS.items():
             benchmarks[key] = {
                 "symbol": cand,
                 "ret_1d": _ret(h, 1),
+                "ret_1w": _ret(h, 5),
                 "ret_1m": _ret(h, 21),
                 "ret_6m": _ret(h, 126),
                 "ret_1y": _ret(h, 252),
@@ -1357,7 +1358,7 @@ for key, scheme in BENCHMARK_MF_FALLBACK.items():
                 if not row:
                     row = {"symbol": f"MF:{scheme}"}
                     benchmarks[key] = row
-                for f in ("ret_1d", "ret_1m", "ret_6m", "ret_1y", "ret_3y", "ret_5y"):
+                for f in ("ret_1d", "ret_1w", "ret_1m", "ret_6m", "ret_1y", "ret_3y", "ret_5y"):
                     if row.get(f) is None and mf.get(f) is not None:
                         row[f] = mf[f]
                 print(f"[INFO] Benchmark {key}: filled long-term returns from index fund {scheme}")

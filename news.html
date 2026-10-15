@@ -7,10 +7,8 @@
 <style>
   :root { --bg:#0f1117; --bg2:#171a23; --bg3:#222634; --border:#2c3142; --text:#e6e8ef; --text2:#aab0c0; --text3:#7a8196;
           --blue:#60a5fa; --green:#34d399; --amber:#fbbf24; }
-  @media (prefers-color-scheme: light) {
-    :root { --bg:#f5f6fa; --bg2:#ffffff; --bg3:#eef0f6; --border:#dde1ea; --text:#1b1f2a; --text2:#4b5263; --text3:#7a8196;
-            --blue:#2563eb; --green:#059669; --amber:#b45309; }
-  }
+  :root.light { --bg:#f5f6fa; --bg2:#ffffff; --bg3:#eef0f6; --border:#dde1ea; --text:#1b1f2a; --text2:#4b5263; --text3:#7a8196;
+                --blue:#2563eb; --green:#059669; --amber:#b45309; }
   * { box-sizing: border-box; }
   body { margin:0; font-family:-apple-system,Segoe UI,Roboto,sans-serif; background:var(--bg); color:var(--text); font-size:14px; }
   header { position:sticky; top:0; z-index:5; background:var(--bg2); border-bottom:1px solid var(--border); padding:12px 16px; display:flex; flex-wrap:wrap; gap:10px; align-items:center; }
@@ -44,24 +42,29 @@
   select { padding:6px 8px; border-radius:8px; border:1px solid var(--border); background:var(--bg3); color:var(--text); font-size:0.8rem; }
   .tk { cursor:pointer; } .tk:hover { text-decoration:underline; }
   .more { font-size:0.74rem; color:var(--blue); cursor:pointer; padding:4px 0 0; }
+  mark { background:#facc15; color:#000; border-radius:2px; padding:0 1px; }
 </style>
 </head>
 <body>
 <header>
   <h1>📰 News &amp; Filings</h1>
   <span class="meta" id="meta">Loading…</span>
-  <input type="search" id="q" placeholder="Search ticker, company or keyword…">
-  <select id="period" title="How far back to show">
-    <option value="2" selected>Last 2 days</option>
-    <option value="7">Last 1 week</option>
-    <option value="30">Last 1 month</option>
-    <option value="61">Last 2 months</option>
-    <option value="183">Last 6 months</option>
-  </select>
+  <input type="search" id="tkq" list="tk-list" placeholder="🏢 Company / ticker…" title="Show one company (or every company whose name/ticker contains this text) — ignores the chips below" style="flex:0 1 210px;">
+  <datalist id="tk-list"></datalist>
+  <input type="search" id="q" placeholder="🔎 Free text in filings &amp; headlines — e.g. order, QIP, USFDA" title="Every word must appear in the filing/headline text">
+  <div class="chips" id="periods" style="width:auto" title="How far back to show">
+    <span class="chip" data-d="1">1D</span>
+    <span class="chip" data-d="2">2D</span>
+    <span class="chip on" data-d="7">1W</span>
+    <span class="chip" data-d="30">1M</span>
+    <span class="chip" data-d="91">3M</span>
+    <span class="chip" data-d="183">6M</span>
+  </div>
   <label class="tog"><input type="checkbox" id="onlyFilings"> Filings only</label>
+  <label class="tog" title="Only business-changing news: orders, deals, results, sales/volumes, legal &amp; regulatory, capacity, management changes. Hides routine filings and market chatter."><input type="checkbox" id="onlyKey"> ⭐ Key news only</label>
   <div class="chips" id="chips">
     <span class="chip on" data-f="all">All</span>
-    <span class="chip" data-f="movers" title="Any daily / weekly / monthly mover tag">📈 Movers</span>
+    <span class="chip" data-f="movers" title="Volume + price movers, today or yesterday: moved 5%+ on 1.5×+ normal volume, or 3%+ on 3×+ volume (same list as Telegram)">📈 Volume + Price Movers</span>
     <span class="chip" data-f="gainers" title="15 biggest 1-day gainers">▲ Top Gainers</span>
     <span class="chip" data-f="losers" title="15 biggest 1-day losers">▼ Top Losers</span>
     <span class="chip" data-f="reversal" title=">40% below all-time high but up >15% in a month">🔎 Reversal</span>
@@ -70,6 +73,13 @@
 </header>
 <main id="list"><div class="empty">Loading…</div></main>
 <script>
+// Follow the dashboard's saved theme; fall back to the OS setting.
+function applyTheme() {
+  let t = null; try { t = localStorage.getItem('theme'); } catch (e) {}
+  const light = t ? t === 'light' : matchMedia('(prefers-color-scheme: light)').matches;
+  document.documentElement.classList.toggle('light', light);
+}
+applyTheme();
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const safeUrl = u => /^https:\/\//i.test(u || '') ? u : '';
 const fmtDt = iso => { if (!iso) return ''; const d = new Date(iso);
@@ -77,7 +87,12 @@ const fmtDt = iso => { if (!iso) return ''; const d = new Date(iso);
 let DATA = { items: [] };
 let PRICES = {};
 let CHIP = 'all';
+let PERIOD = 7;  // days back
+try { document.getElementById('onlyKey').checked = localStorage.getItem('newsKeyOnly') !== '0'; } catch (e) { document.getElementById('onlyKey').checked = true; }
 const TOP_N = 15;
+// Volume + price mover (same rule as Telegram): >=5% on >=1.5x 30-day avg volume, or >=3% on >=3x.
+const isVP = (r, v) => typeof r === 'number' && typeof v === 'number' && ((Math.abs(r) >= 5 && v >= 1.5) || (Math.abs(r) >= 3 && v >= 3));
+const vpHits = p => [['today', p.ret_1d, p.vol_today_ratio], ['yday', p.mv_yest?.r, p.mv_yest?.v]].filter(([, r, v]) => isVP(r, v));
 // Tickers handed over from the dashboard's current filter (news.html?tk=A,B,C).
 const HANDOFF = (() => { const v = new URLSearchParams(location.search).get('tk'); return v ? new Set(v.split(',').filter(Boolean)) : null; })();
 let useHandoff = !!HANDOFF;
@@ -89,7 +104,7 @@ const active = m => m && m !== 'No' && m !== '—';
 function chipSet() {
   const held = Object.entries(PRICES).filter(([k, p]) => !k.startsWith('_') && p && (p.quantity || 0) > 0);
   const byRet = held.filter(([, p]) => typeof p.ret_1d === 'number');
-  if (CHIP === 'movers') return new Set(held.filter(([, p]) => active(p.movers) || active(p.movers_w) || active(p.movers_m)).map(([k]) => k));
+  if (CHIP === 'movers') return new Set(held.filter(([, p]) => vpHits(p).length).map(([k]) => k));
   if (CHIP === 'gainers') return new Set(byRet.filter(([, p]) => p.ret_1d > 0).sort((a, b) => b[1].ret_1d - a[1].ret_1d).slice(0, TOP_N).map(([k]) => k));
   if (CHIP === 'losers') return new Set(byRet.filter(([, p]) => p.ret_1d < 0).sort((a, b) => a[1].ret_1d - b[1].ret_1d).slice(0, TOP_N).map(([k]) => k));
   if (CHIP === 'reversal') return new Set(held.filter(([, p]) => typeof p.ath_pct === 'number' && p.ath_pct < -40 && typeof p.ret_1m === 'number' && p.ret_1m > 15).map(([k]) => k));
@@ -98,9 +113,16 @@ function chipSet() {
 
 function render() {
   const q = document.getElementById('q').value.trim().toLowerCase();
+  const tq = document.getElementById('tkq').value.trim().toLowerCase();
+  const words = q.split(/\s+/).filter(Boolean);
+  const hit = s => words.every(w => String(s || '').toLowerCase().includes(w));
+  const reEsc = s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const re = words.length ? new RegExp('(' + words.map(reEsc).join('|') + ')', 'gi') : null;
+  const hl = s => re ? String(s || '').split(re).map((p, i) => i % 2 ? `<mark>${esc(p)}</mark>` : esc(p)).join('') : esc(s);
   const onlyF = document.getElementById('onlyFilings').checked;
-  const cutoff = Date.now() - Number(document.getElementById('period').value) * 864e5;
-  const inWin = x => x.dt && new Date(x.dt).getTime() >= cutoff;
+  const onlyK = document.getElementById('onlyKey').checked;
+  const cutoff = Date.now() - PERIOD * 864e5;
+  const inWin = x => x.dt && new Date(x.dt).getTime() >= cutoff && (!onlyK || x.key !== false);
   const set = chipSet();
   const banner = document.getElementById('banner');
   banner.style.display = (HANDOFF || FOCUS) ? '' : 'none';
@@ -111,29 +133,35 @@ function render() {
   let nCards = 0, nF = 0, nN = 0;
   const html = DATA.items.map(it => {
     if (FOCUS && it.ticker !== FOCUS) return '';
-    if (!FOCUS && useHandoff && !HANDOFF.has(it.ticker)) return '';
-    if (!FOCUS && set && !set.has(it.ticker)) return '';
-    const filings = it.filings.filter(f => inWin(f) && (!q || (it.ticker + ' ' + it.name + ' ' + f.text).toLowerCase().includes(q)));
-    const news = onlyF ? [] : it.news.filter(n => inWin(n) && (!q || (it.ticker + ' ' + it.name + ' ' + n.title).toLowerCase().includes(q)));
+    if (tq && !(it.ticker.toLowerCase().includes(tq) || String(it.name || '').toLowerCase().includes(tq))) return '';
+    if (!FOCUS && !tq && useHandoff && !HANDOFF.has(it.ticker)) return '';
+    if (!FOCUS && !tq && set && !set.has(it.ticker)) return '';
+    const filings = it.filings.filter(f => inWin(f) && hit(f.text));
+    const news = onlyF ? [] : it.news.filter(n => inWin(n) && hit(n.title + ' ' + n.source));
     if (!filings.length && !news.length) return '';
     nCards++; nF += filings.length; nN += news.length;
     const full = FOCUS || EXPANDED.has(it.ticker);
     const fShow = full ? filings : filings.slice(0, SHOW), nShow = full ? news : news.slice(0, SHOW);
     const hidden = (filings.length - fShow.length) + (news.length - nShow.length);
-    const link = (url, txt) => safeUrl(url) ? `<a href="${esc(url)}" target="_blank" rel="noopener noreferrer">${esc(txt)}</a>` : esc(txt);
+    const link = (url, txt) => safeUrl(url) ? `<a href="${esc(url)}" target="_blank" rel="noopener noreferrer">${hl(txt)}</a>` : hl(txt);
     const p = PRICES[it.ticker] || {};
-    const r = typeof p.ret_1d === 'number' ? `<span class="ret ${p.ret_1d >= 0 ? 'up' : 'dn'}">${p.ret_1d >= 0 ? '+' : ''}${p.ret_1d.toFixed(1)}% 1D</span>` : '';
+    const retTag = (v, lbl) => typeof v === 'number' ? `<span class="${v >= 0 ? 'up' : 'dn'}">${v >= 0 ? '+' : ''}${v.toFixed(1)}% ${lbl}</span>` : '';
+    const r = (typeof p.ret_1d === 'number' || typeof p.ret_1w === 'number')
+      ? `<span class="ret">${[retTag(p.ret_1d, '1D'), retTag(p.ret_1w, '1W')].filter(Boolean).join(' · ')}</span>` : '';
     const mv = active(p.movers) ? `<span class="mv">${esc(p.movers)}</span>` : '';
+    const vp = CHIP === 'movers' ? vpHits(p).map(([l, r, v]) => `<span class="src">${l} ${r >= 0 ? '+' : ''}${r.toFixed(1)}% on ${v.toFixed(1)}× vol</span>`).join(' · ') : '';
     return `<div class="card">
-      <div class="hd"><span class="rank">#${it.rank}</span><span class="tk" data-tk="${esc(it.ticker)}" title="Show all news for this company">${esc(it.ticker)}</span>${mv}<span class="nm">${esc(it.name)}</span>${r}</div>
+      <div class="hd"><span class="rank">#${it.rank}</span><span class="tk" data-tk="${esc(it.ticker)}" title="Show all news for this company">${esc(it.ticker)}</span>${mv}<span class="nm">${esc(it.name)}</span>${r}${vp}</div>
       ${fShow.map(f => `<div class="row"><span class="badge b-f">NSE FILING</span><span class="dt">${fmtDt(f.dt)}</span><span>${link(f.url, f.text)}</span></div>`).join('')}
       ${nShow.map(n => `<div class="row"><span class="badge b-n">NEWS</span><span class="dt">${fmtDt(n.dt)}</span><span>${link(n.url, n.title)} <span class="src">· ${esc(n.source)}</span></span></div>`).join('')}
       ${hidden ? `<div class="more" data-more="${esc(it.ticker)}">+${hidden} more</div>` : ''}
     </div>`;
   }).join('');
-  document.getElementById('list').innerHTML = html || '<div class="empty">No filings or news in this period.</div>';
-  const per = document.getElementById('period');
-  document.getElementById('meta').textContent = `${per.options[per.selectedIndex].text} · ${nCards} holdings · ${nF} filings · ${nN} headlines · updated ${fmtDt(DATA.generated)} · largest holding first`;
+  const per = document.querySelector('#periods .chip.on')?.textContent || '';
+  const searching = q || tq;
+  const tips = [PERIOD < 183 ? '<b>6M</b>' : '', onlyK ? 'untick <b>Key news only</b>' : ''].filter(Boolean).join(' or ');
+  document.getElementById('list').innerHTML = html || `<div class="empty">No ${searching ? 'matching ' : ''}filings or news in the last ${esc(per)}${onlyK ? ' (⭐ Key news only)' : ''}.${searching && tips ? '<br>Try ' + tips + '.' : ''}</div>`;
+  document.getElementById('meta').textContent = `Last ${per} · ${nCards} holdings · ${nF} filings · ${nN} headlines · updated ${fmtDt(DATA.generated)} · largest holding first`;
 }
 
 (async () => {
@@ -151,21 +179,30 @@ function render() {
   news.items.sort((a, b) => a.rank - b.rank);
   DATA = news;
   PRICES = prices;
+  document.getElementById('tk-list').innerHTML = news.items.slice().sort((a, b) => a.ticker.localeCompare(b.ticker))
+    .map(it => `<option value="${esc(it.ticker)}">${esc(it.name || '')}</option>`).join('');
   render();
 })();
 document.getElementById('q').addEventListener('input', render);
+document.getElementById('tkq').addEventListener('input', () => { FOCUS = null; render(); });
 document.getElementById('onlyFilings').addEventListener('change', render);
 document.getElementById('chips').addEventListener('click', e => {
   const c = e.target.closest('.chip'); if (!c) return;
   CHIP = c.dataset.f;
-  document.querySelectorAll('.chip').forEach(x => x.classList.toggle('on', x === c));
+  document.querySelectorAll('#chips .chip').forEach(x => x.classList.toggle('on', x === c));
   render();
 });
 document.getElementById('banner').addEventListener('click', e => {
   if (e.target.id === 'clearHandoff') { useHandoff = !useHandoff; render(); }
   if (e.target.id === 'clearFocus') { FOCUS = null; render(); }
 });
-document.getElementById('period').addEventListener('change', render);
+document.getElementById('periods').addEventListener('click', e => {
+  const c = e.target.closest('.chip'); if (!c) return;
+  PERIOD = Number(c.dataset.d);
+  document.querySelectorAll('#periods .chip').forEach(x => x.classList.toggle('on', x === c));
+  render();
+});
+document.getElementById('onlyKey').addEventListener('change', e => { try { localStorage.setItem('newsKeyOnly', e.target.checked ? '1' : '0'); } catch (err) {} render(); });
 document.getElementById('list').addEventListener('click', e => {
   const tk = e.target.closest('[data-tk]');
   if (tk) { FOCUS = tk.dataset.tk; window.scrollTo(0, 0); render(); return; }

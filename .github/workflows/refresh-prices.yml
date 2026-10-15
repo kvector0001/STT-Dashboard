@@ -52,7 +52,10 @@ jobs:
       - name: Build news.json for the News page
         if: github.event_name == 'workflow_dispatch' && inputs.alert
         continue-on-error: true
-        run: python scripts/news_digest.py --days 2 --json
+        # 3 days covers the Fri 2:30pm -> Mon 9:30am gap; --fill-new adds 6 months only for newly bought stocks.
+        run: |
+          python scripts/news_digest.py --fill-new
+          python scripts/news_digest.py --days 3 --json
 
       - name: Fetch extended data
         run: python scripts/fetch_extended_data.py
@@ -64,6 +67,7 @@ jobs:
           git add prices.json stocks.json data/portfolio.xlsx
           if [ -f action_log.json ]; then git add action_log.json; fi
           if [ -f news.json ]; then git add news.json; fi
+          if [ -f telegram_sent.json ]; then git add telegram_sent.json; fi
           # Always commit — even empty — so GitHub sees repo activity and keeps cron alive
           if git diff --staged --quiet; then
             git commit --allow-empty -m "chore: keepalive $(date -u +'%Y-%m-%d %H:%M UTC')"

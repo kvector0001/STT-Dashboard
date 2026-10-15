@@ -2,9 +2,11 @@
 """Send portfolio alerts to a Telegram chat (percentages only - no rupee values).
 
 What is sent depends on the IST time of the run (or --slot):
-  morning (<11:00)   : daily movers + reversal watch + news & filings for those names
-  midday  (11-14:00) : daily movers only
-  close   (>=14:00)  : daily movers + top gainers/losers (daily + weekly)
+  morning (<11:00)    : daily movers + reversal watch
+  midday  (11-14:00)  : daily movers + key news for volume+price movers
+  close   (14-15:00)  : daily movers + top gainers/losers + key news not sent at 12:30
+  after   (>=15:00)   : nothing (post-close price/action-log refresh only)
+News already sent (telegram_sent.json) is never sent again.
 Meant to run right after fetch_prices.py so the data is fresh.
 
 Flags: --slot morning|midday|close|all   --dry-run (print, don't send)   --get-chat-id
@@ -27,6 +29,8 @@ from momentum_classifier import classify_daily  # noqa: E402
 ROOT = Path(__file__).resolve().parents[1]
 PRICES = ROOT / "prices.json"
 CONFIG = ROOT / "telegram_config.json"
+SENT = ROOT / "telegram_sent.json"
+SENT_KEEP_DAYS = 14
 IST = timezone(timedelta(hours=5, minutes=30))
 TOP_N = 5
 
@@ -178,7 +182,7 @@ def gainers_losers_message(held):
 
 def current_slot():
     h = datetime.now(IST).hour
-    return "morning" if h < 11 else "midday" if h < 14 else "close"
+    return "morning" if h < 11 else "midday" if h < 14 else "close" if h < 15 else "after"
 
 
 def _h(s):
@@ -190,28 +194,85 @@ def _a(url, text):
     return f'<a href="{_h(url)}">{text}</a>' if str(url or "").startswith("https://") else text
 
 
-def news_message(tickers, days=2):
-    """'Why they moved': exchange filings + headlines (tappable links) for the alerted tickers only."""
-    from news_digest import collect
-    data = collect(days, only=set(tickers))
+ITEMS_PER_STOCK = 3
+
+
+def is_vp_move(ret, vol):
+    """Volume + price mover: >=5% move on >=1.5x the 30-day avg volume, or >=3% on >=3x.
+    Same rule as the News page's Movers chip."""
+    if not isinstance(ret, (int, float)) or not isinstance(vol, (int, float)):
+        return False
+    return (abs(ret) >= 5 and vol >= 1.5) or (abs(ret) >= 3 and vol >= 3)
+
+
+def vp_movers(held):
+    """{ticker: [(label, ret %, vol x), ...]} for held stocks that were volume+price movers today or yesterday."""
+    out = {}
+    for tk, s in held:
+        y = s.get("mv_yest") or {}
+        hits = [(lbl, r, v) for lbl, r, v in (("today", s.get("ret_1d"), s.get("vol_today_ratio")),
+                                              ("yday", y.get("r"), y.get("v"))) if is_vp_move(r, v)]
+        if hits:
+            out[tk] = hits
+    return out
+
+
+def load_sent():
+    try:
+        return json.loads(SENT.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return []
+
+
+def save_sent(entries):
+    cutoff = (datetime.now(IST) - timedelta(days=SENT_KEEP_DAYS)).strftime("%Y-%m-%d")
+    SENT.write_text(json.dumps([e for e in entries if e.get("d", "") >= cutoff], indent=1, ensure_ascii=False),
+                    encoding="utf-8")
+
+
+def _was_sent(sent, tk, url, text):
+    from news_digest import _same_story, _story_key
+    k = _story_key(text)
+    return any((url and e.get("u") == url) or
+               (e.get("tk") == tk and (e.get("t") == text or _same_story(k, _story_key(e.get("t", "")))))
+               for e in sent)
+
+
+def news_message(moves, sent, followup=False, days=2):
+    """Key (structural) news for volume+price movers, up to 3 per stock, skipping anything sent before.
+    Returns (text or None, stocks shown, new sent-entries)."""
+    from news_digest import collect, is_key_news
+    data = collect(days, only=set(moves))
     by_tk = {it["ticker"]: it for it in data["items"]}
-    lines = ["\U0001f4f0 <b>Why they moved</b> — filings &amp; news (last 2 days)", ""]
-    shown = 0
-    for tk in tickers:
-        it = by_tk.get(tk)
-        if not it:
+    order = sorted(moves, key=lambda tk: -max(abs(r) for _, r, _ in moves[tk]))
+    today = datetime.now(IST).strftime("%Y-%m-%d")
+    yday = (datetime.now(IST) - timedelta(days=1)).strftime("%Y-%m-%d")
+    title = ("More key news since 12:30" if followup
+             else "Key news (today &amp; yesterday) \u2014 volume + price movers")
+    lines, quiet, new = [f"\U0001f4f0 <b>{title}</b>", ""], [], []
+    for tk in order:
+        it = by_tk.get(tk) or {"filings": [], "news": []}
+        items = [("\U0001f3db", f["url"], f["text"], f"({f['dt'][8:10]}/{f['dt'][5:7]})", f["dt"]) for f in it["filings"]]
+        items += [("\U0001f5de", n["url"], n["title"], f"\u2014 {_h(n['source'])}", n["dt"]) for n in it["news"]]
+        picked = []
+        for icon, url, text, tail, dt in items:
+            if len(picked) == ITEMS_PER_STOCK:
+                break
+            if (dt or "")[:10] < yday or not is_key_news(text) or _was_sent(sent + new, tk, url, text):
+                continue
+            picked.append(f"{icon} {_a(url, text[:140])} {tail}")
+            new.append({"tk": tk, "u": url, "t": text, "d": today})
+        if not picked:
+            quiet.append(tk)
             continue
-        shown += 1
-        lines.append(f"<b>{_h(tk)}</b>")
-        for f in it["filings"][:2]:
-            lines.append(f"\U0001f3db {_a(f['url'], f['text'][:140])} ({f['dt'][8:10]}/{f['dt'][5:7]})")
-        for n in it["news"][:2]:
-            lines.append(f"\U0001f5de {_a(n['url'], n['title'][:140])} — {_h(n['source'])}")
-        lines.append("")
-    if not shown:
-        lines.append("No filings or news found for today's alerted stocks.")
-    lines.append("\U0001f3db = official NSE filing · \U0001f5de = news headline")
-    return "\n".join(lines), shown
+        mv = " \u00b7 ".join(f"{lbl} {_pct(r)} on {v:.1f}\u00d7 vol" for lbl, r, v in moves[tk])
+        lines += [f"<b>{_h(tk)}</b>  ({mv})", *picked, ""]
+    if not new:
+        return None, 0, []
+    if quiet and not followup:
+        lines.append("No new key news: " + ", ".join(_h(t) for t in quiet))
+    lines.append("\U0001f3db = official NSE filing \u00b7 \U0001f5de = news headline")
+    return "\n".join(lines), len(order) - len(quiet), new
 
 
 def send(token, chat_id, text, html=False):
@@ -285,27 +346,33 @@ def main():
         return find_chat_id()
     slot = sys.argv[sys.argv.index("--slot") + 1] if "--slot" in sys.argv else current_slot()
     dry = "--dry-run" in sys.argv
+    if slot == "after":
+        print("Telegram alert: post-close refresh - nothing sent.")
+        return 0
 
     held = load_held()
+    messages, summary = [], []
     today, yest, ydate = daily_movers(held)
-    messages = [(format_message(today, yest, ydate), False)]
-    summary = [f"{len(today)} today, {len(yest)} yesterday"]
-    alerted = [r["ticker"] for r in today + yest]
+    messages.append((format_message(today, yest, ydate), False))
+    summary.append(f"{len(today)} today, {len(yest)} yesterday")
     if slot in ("morning", "all"):
-        msg, n, rev = reversal_message(held)
+        msg, n, _ = reversal_message(held)
         messages.append((msg, False))
         summary.append(f"{n} reversal")
-        alerted += rev
     if slot in ("close", "all"):
         messages.append((gainers_losers_message(held), False))
         summary.append("gainers/losers")
-    alerted = list(dict.fromkeys(alerted))
-    # News goes out once a day (morning) to keep the chat quiet.
-    if slot in ("morning", "all") and alerted and "--no-news" not in sys.argv:
-        msg, n = news_message(alerted)
-        messages.append((msg, True))
-        summary.append(f"news for {n}/{len(alerted)}")
+    new_sent = []
+    moves = vp_movers(held)
+    if slot in ("midday", "close", "all") and moves and "--no-news" not in sys.argv:
+        msg, n, new_sent = news_message(moves, load_sent(), followup=slot == "close")
+        if msg:
+            messages.append((msg, True))
+        summary.append(f"key news for {n}/{len(moves)} volume+price movers")
 
+    if not messages:
+        print(f"Telegram alert [{slot}]: nothing new to send.")
+        return 0
     if dry:
         print("\n\n==========\n\n".join(m for m, _ in messages))
         return 0
@@ -320,6 +387,8 @@ def main():
     # Send to every chat even if one fails.
     results = [send(token, cid, m, html) for cid in chat_ids for m, html in messages]
     ok = all(results)
+    if new_sent and any(results):
+        save_sent(load_sent() + new_sent)
     print(f"Telegram alert [{slot}] {'sent' if ok else 'FAILED'} to {len(chat_ids)} chat(s): {', '.join(summary)}.")
     return 0 if ok else 1
 

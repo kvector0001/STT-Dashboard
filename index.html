@@ -1104,6 +1104,7 @@
   <div class="tab-item active" id="tab-btn-analysis" onclick="switchTab('analysis')">📈 Dashboard</div>
   <div class="tab-item" id="tab-btn-dashboard" onclick="switchTab('dashboard')">📊 Deep Analysis</div>
   <div class="tab-item" id="tab-btn-calls" onclick="switchTab('calls')">🗣️ Calls history</div>
+  <div class="tab-item" id="tab-btn-news" onclick="switchTab('news')">📰 News</div>
 </div>
 
 <div id="view-dashboard" class="tab-content">
@@ -1256,6 +1257,15 @@
       <div class="bench-block" id="bench-day" style="display:none;"></div>
     </div>
     <div class="stat" style="margin-left:1.75rem;">
+      <div class="stat-label">1W</div>
+      <div id="ana-sum-1w-group" style="display: flex; gap: 8px; align-items: baseline;">
+        <div class="stat-value" id="ana-sum-1w-abs">—</div>
+        <div class="stat-value" id="ana-sum-1w-pct">—</div>
+      </div>
+      <div style="font-size:0.65rem;color:var(--text3);margin-top:1px;" id="ana-ew-1w"></div>
+      <div class="bench-block" id="bench-1w" style="display:none;"></div>
+    </div>
+    <div class="stat">
       <div class="stat-label">1M</div>
       <div id="ana-sum-1m-group" style="display: flex; gap: 8px; align-items: baseline;">
         <div class="stat-value" id="ana-sum-1m-abs">—</div>
@@ -1428,6 +1438,10 @@
       </tbody>
     </table>
   </div>
+</div>
+
+<div id="view-news" class="tab-content">
+  <iframe id="news-frame" title="News &amp; Filings" style="width:100%;height:calc(100vh - 56px);border:0;display:block;"></iframe>
 </div>
 
 <div id="view-calls" class="tab-content">
@@ -3908,6 +3922,10 @@ function switchTab(tab, keepNav) {
   } else if (tab === 'calls') {
     if (!keepNav) callsSort = { by: 'date', dir: 'desc' };
     renderCallsHistory();
+  } else if (tab === 'news') {
+    const nf = document.getElementById('news-frame');
+    if (!nf.getAttribute('src')) nf.src = 'news.html';   // load on first open only
+    else nf.contentWindow?.applyTheme?.();
   }
   if (!keepNav) { navStack = []; updateBackBtns(); }
 }
@@ -4002,16 +4020,17 @@ function _iaAfterLoad() {
   try { if (document.getElementById('view-calls')?.classList.contains('active')) renderCallsHistory(); } catch (e) {}
 }
 // JSONP load (gviz JSON via <script>) — avoids CORS, which the CSV endpoint lacks.
-function _iaLoadTab(sheet, cbName, handler) {
+function _iaLoadTab(sheet, cbName, handler, onFail) {
   _iaPending++;
-  window[cbName] = function (resp) { try { handler(iaGvizRows(resp)); } catch (e) { IA_ERROR = String((e && e.message) || e); console.warn('IA parse error', e); } _iaPending--; _iaAfterLoad(); };
+  window[cbName] = function (resp) { try { handler(iaGvizRows(resp)); } catch (e) { IA_ERROR = String((e && e.message) || e); console.warn('IA parse error', e); if (onFail) onFail(); } _iaPending--; _iaAfterLoad(); };
   const s = document.createElement('script');
   s.src = `https://docs.google.com/spreadsheets/d/${IA_SHEET_ID}/gviz/tq?tqx=out:json;responseHandler:${cbName}&headers=1&sheet=${encodeURIComponent(sheet)}`;
-  s.onerror = function () { IA_ERROR = 'Could not reach Google Sheet'; _iaPending--; _iaAfterLoad(); };
+  s.onerror = function () { IA_ERROR = 'Could not reach Google Sheet'; if (onFail) onFail(); _iaPending--; _iaAfterLoad(); };
   document.head.appendChild(s);
 }
 function loadIAData() {
   IA_LOADED = false; IA_ERROR = ''; IA_CALLS = {}; IA_QUOTES = {}; _iaPending = 0;
+  if (callsFree) { IA_MSGS = null; loadIaMessages(); } else IA_MSGS = null;
   _iaLoadTab('IA Stock Calls', '_iaCbStock', rows => {
     rows.forEach(r => { if (!r || !r[0]) return;
       IA_CALLS[String(r[0]).trim()] = { company: r[1] || '', status: r[2] || '', lastReco: iaNum(r[3]), maxReco: iaNum(r[4]),
@@ -4124,6 +4143,47 @@ function goToCallsHistory(t) {
   setTimeout(() => { const el = document.getElementById('ia-row-' + t); if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' }); }, 160);
 }
 function toggleIaExpand(t) { if (callsExpanded.has(t)) callsExpanded.delete(t); else callsExpanded.add(t); renderCallsHistory(); }
+// ── Free search over every IA message (sheet tab "IA All Messages", loaded on first use) ──
+let IA_MSGS = null, callsFree = false, freeQ = '', freeShow = 100;
+function loadIaMessages() {
+  if (IA_MSGS) return; IA_MSGS = [];
+  _iaLoadTab('IA All Messages', '_iaCbMsgs', rows => {
+    IA_MSGS = rows.filter(r => r && r[3]).map(r => ({ date: String(r[0] || ''), source: String(r[1] || ''),
+      tickers: String(r[2] || '').split(',').map(s => s.trim()).filter(Boolean), text: String(r[3]) }));
+    IA_MSGS.forEach(m => m.lc = (m.text + ' ' + m.tickers.join(' ')).toLowerCase());
+    IA_MSGS.loaded = true;
+  }, () => { IA_MSGS.failed = true; });
+}
+function iaFreeOpen(q) { callsFree = true; freeShow = 100; if (q != null) freeQ = q; loadIaMessages(); window._cfFocus = true; renderCallsHistory(); }
+function iaFreeClose() { callsFree = false; window._cfFocus = false; renderCallsHistory(); }
+function iaFreeHtml() {
+  const words = freeQ.toLowerCase().split(/\s+/).filter(w => w.length >= 2);
+  const loaded = IA_MSGS && IA_MSGS.loaded;
+  const hits = loaded && words.length ? IA_MSGS.filter(m => words.every(w => m.lc.includes(w))) : [];
+  const reEsc = s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const re = words.length ? new RegExp('(' + words.map(reEsc).join('|') + ')', 'gi') : null;
+  const hl = s => re ? s.split(re).map((p, i) => i % 2 ? `<mark style="background:#facc15;color:#000;border-radius:2px;">${esc(p)}</mark>` : esc(p)).join('') : esc(s);
+  const tkChip = t => IA_CALLS[t]
+    ? `<span onclick="iaFreeClose();goToCallsHistory('${esc(t)}')" title="Open IA calls for ${esc(t)}" style="cursor:pointer;color:var(--purple-text);font-weight:700;text-decoration:underline dotted;">${esc(t)}</span>`
+    : `<span style="color:var(--text2);font-weight:600;">${esc(t)}</span>`;
+  let body;
+  if (!loaded) body = `<div style="padding:20px;color:var(--text2)">${IA_MSGS && IA_MSGS.failed ? '⚠️ Could not load messages. <button onclick="IA_MSGS=null;loadIaMessages();renderCallsHistory()" style="margin-left:8px;padding:4px 10px;">Retry</button>' : 'Loading all IA messages…'}</div>`;
+  else if (!words.length) { const ds = IA_MSGS.map(m => m.date).filter(Boolean).sort();
+    body = `<div style="padding:20px;color:var(--text2);line-height:1.6">Searches the full text of all <b>${IA_MSGS.length}</b> IA messages (broadcasts + 1:1 chat, ${esc(ds[0] || '')} → ${esc(ds[ds.length - 1] || '')}), including stocks that aren't in the portfolio.<br>Type one or more words — e.g. <i>GNG electronic</i>, <i>order book</i>, <i>QIP</i>. Every word must appear.</div>`; }
+  else if (!hits.length) body = `<div style="padding:20px;color:var(--text2)">No message contains ${words.map(w => '“' + esc(w) + '”').join(' + ')}.</div>`;
+  else body = hits.slice(0, freeShow).map(m => `<div style="border-bottom:1px solid var(--border);padding:10px 6px;">
+      <div style="font-size:0.7rem;color:var(--text3);margin-bottom:4px;display:flex;flex-wrap:wrap;gap:8px;"><b style="color:var(--text2)">${esc(m.date)}</b><span>${esc(m.source)}</span>${m.tickers.length ? '<span>· ' + m.tickers.map(tkChip).join(', ') + '</span>' : ''}</div>
+      <div style="white-space:pre-wrap;line-height:1.5;font-size:0.82rem;color:var(--text);">${hl(m.text)}</div></div>`).join('')
+    + (hits.length > freeShow ? `<div style="padding:12px;text-align:center;"><button onclick="freeShow+=200;renderCallsHistory()" style="padding:5px 14px;border-radius:8px;border:1px solid var(--border);background:var(--bg2);color:var(--text2);cursor:pointer;">Show ${Math.min(200, hits.length - freeShow)} more of ${hits.length - freeShow}</button></div>` : '');
+  return `<div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:6px 0 8px;">
+      <div style="position:relative;display:inline-flex;align-items:center;">
+        <input id="calls-free" value="${esc(freeQ)}" oninput="freeQ=this.value;freeShow=100;window._cfFocus=true;clearTimeout(window._cfT);window._cfT=setTimeout(renderCallsHistory,200)" placeholder="💬 Search all IA messages…" style="width:280px;padding:6px 22px 6px 10px;border-radius:8px;border:1px solid #7c3aed;background:var(--bg2);color:var(--text);font-size:0.8rem;">
+        ${freeQ ? `<span onclick="freeQ='';renderCallsHistory()" title="Clear" style="position:absolute;right:7px;cursor:pointer;color:var(--text3);font-weight:700;font-size:1rem;line-height:1;">×</span>` : ''}
+      </div>
+      <button onclick="iaFreeClose()" style="padding:5px 12px;border-radius:8px;border:1px solid var(--border);cursor:pointer;font-size:0.74rem;font-weight:600;background:var(--bg2);color:var(--text2);">← Back to calls table</button>
+      ${words.length && loaded ? `<span style="color:var(--text2);font-size:0.74rem;">${hits.length} message${hits.length === 1 ? '' : 's'}, newest first</span>` : ''}
+    </div><div style="overflow:auto;max-height:calc(100vh - 190px);">${body}</div>`;
+}
 function renderCallsHistory() {
   const root = document.getElementById('calls-history-root'); if (!root) return;
   const summaryEl = document.getElementById('calls-summary');
@@ -4131,6 +4191,12 @@ function renderCallsHistory() {
   if (!IA_LOADED && !Object.keys(IA_CALLS).length) { root.innerHTML = `<div style="padding:24px;color:var(--text2)">${IA_ERROR ? ('⚠️ Could not load IA data: ' + esc(IA_ERROR) + ' ') : 'Loading IA calls…'}<button onclick="loadIAData()" style="margin-left:8px;padding:4px 10px;">Retry</button></div>`; if (summaryEl) summaryEl.textContent = ''; return; }
   const _mx = Object.values(IA_CALLS).map(c => c.lastDate).filter(Boolean).sort().pop();
   const _luc = document.getElementById('last-updated-calls'); if (_luc && _mx) _luc.textContent = '📅 Last IA call: ' + _mx;
+  if (callsFree) {
+    root.innerHTML = iaFreeHtml();
+    if (summaryEl) summaryEl.textContent = 'Free search — every IA message, including stocks not in the portfolio';
+    if (window._cfFocus) { const i = document.getElementById('calls-free'); if (i) { i.focus(); i.setSelectionRange(i.value.length, i.value.length); } }
+    return;
+  }
   const q = callsSearch.toLowerCase().trim();
   let items = Object.keys(IA_CALLS).map(t => { const ia = IA_CALLS[t]; const cmp = iaCmp(t);
     const vsL = (ia.lastReco > 0 && cmp != null) ? (cmp / ia.lastReco - 1) * 100 : null;
@@ -4181,6 +4247,7 @@ function renderCallsHistory() {
         ${callsSearch ? `<span onclick="iaClearSearch()" title="Clear" style="position:absolute;right:7px;cursor:pointer;color:var(--text3);font-weight:700;font-size:1rem;line-height:1;">×</span>` : ''}
       </div>
       <button onclick="iaReset()" title="Reset everything — close all expanded rows, clear search & filters" style="padding:5px 12px;border-radius:8px;border:1px solid var(--border);cursor:pointer;font-size:0.74rem;font-weight:600;background:var(--bg2);color:var(--text2);">↺ Reset</button>
+      <button onclick="iaFreeOpen(callsSearch)" title="Search the full text of every IA message — including stocks that aren't in the portfolio" style="padding:5px 12px;border-radius:8px;border:1px solid #7c3aed;cursor:pointer;font-size:0.74rem;font-weight:700;background:var(--bg2);color:var(--purple-text);">💬 Free search</button>
       ${nF ? `<span onclick="iaClearFilters()" style="cursor:pointer;color:var(--blue-text);font-size:0.72rem;">✕ Clear ${nF} filter${nF > 1 ? 's' : ''}</span>` : '<span style="color:var(--text3);font-size:0.68rem;">▼ = filter · click a header to sort</span>'}
     </div>
     <div style="display:flex;flex-wrap:wrap;gap:6px;margin:0 0 8px;">
@@ -4228,6 +4295,7 @@ function renderCallsHistory() {
     }
   });
   html += `</tbody></table></div>`;
+  if (!items.length && q) html += `<div style="padding:16px;color:var(--text2);">No stock matches “${esc(callsSearch)}”. <span onclick="iaFreeOpen(callsSearch)" style="cursor:pointer;color:var(--purple-text);font-weight:700;text-decoration:underline;">💬 Search all IA messages for “${esc(callsSearch)}” →</span></div>`;
   root.innerHTML = html;
   if (window._csFocus) { const i = document.getElementById('calls-search'); if (i) { i.focus(); i.setSelectionRange(i.value.length, i.value.length); } }
 }
@@ -5422,6 +5490,7 @@ function renderBenchmarks() {
   ];
   const cols = [
     ['bench-day', 'ret_1d'],
+    ['bench-1w',  'ret_1w'],
     ['bench-1m',  'ret_1m'],
     ['bench-6m',  'ret_6m'],
     ['bench-1y',  'ret_1y'],
@@ -5451,7 +5520,7 @@ function renderBenchmarks() {
 // for every account. Click a row to filter · Ctrl/Cmd+Click to combine accounts.
 function summarize(stocks) {
   let invested = 0, current = 0, inProfit = 0, inLoss = 0;
-  let dayC = 0, dB = 0, m1C = 0, m1B = 0, m6C = 0, m6B = 0, y1C = 0, y1B = 0, y3C = 0, y3B = 0, y5C = 0, y5B = 0;
+  let dayC = 0, dB = 0, w1C = 0, w1B = 0, m1C = 0, m1B = 0, m6C = 0, m6B = 0, y1C = 0, y1B = 0, y3C = 0, y3B = 0, y5C = 0, y5B = 0;
   stocks.forEach(s => {
     const qty = s.quantity || 0, buy = s.buy_avg || 0, ltp = s.ltp || 0;
     if (buy && qty) invested += buy * qty;
@@ -5459,6 +5528,7 @@ function summarize(stocks) {
       current += ltp * qty;
       const h = r => (ltp / (1 + (r / 100))) * qty;
       if (s.ret_1d != null) { const x = h(s.ret_1d); dayC += ltp * qty - x; dB += x; }
+      if (s.ret_1w != null) { const x = h(s.ret_1w); w1C += ltp * qty - x; w1B += x; }
       if (s.ret_1m != null) { const x = h(s.ret_1m); m1C += ltp * qty - x; m1B += x; }
       if (s.ret_6m != null) { const x = h(s.ret_6m); m6C += ltp * qty - x; m6B += x; }
       if (s.ret_1y != null) { const x = h(s.ret_1y); y1C += ltp * qty - x; y1B += x; }
@@ -5471,7 +5541,7 @@ function summarize(stocks) {
   });
   const pnlAbs = current - invested;
   return { invested, current, pnlAbs, pnlPct: invested > 0 ? pnlAbs / invested * 100 : 0,
-    dayAbs: dayC, dayPct: dB > 0 ? dayC / dB * 100 : 0, m1Pct: m1B > 0 ? m1C / m1B * 100 : 0,
+    dayAbs: dayC, dayPct: dB > 0 ? dayC / dB * 100 : 0, w1Pct: w1B > 0 ? w1C / w1B * 100 : 0, m1Pct: m1B > 0 ? m1C / m1B * 100 : 0,
     m6Pct: m6B > 0 ? m6C / m6B * 100 : 0,
     y1Pct: y1B > 0 ? y1C / y1B * 100 : 0, y3Pct: y3B > 0 ? y3C / y3B * 100 : 0,
     y5Pct: y5B > 0 ? y5C / y5B * 100 : 0, inProfit, inLoss };
@@ -5526,21 +5596,21 @@ function renderAccountwise() {
     const wp = dec > 0 ? Math.round(m.inProfit / dec * 100) + '%' : '—';
     return `<tr onclick="onAccountwiseClick(event,'${esc(name)}')" style="cursor:pointer;${isSel ? 'background:var(--bg3);' : ''}">
       <td style="text-align:left;font-weight:700;color:${isSel ? 'var(--purple-text)' : 'var(--text2)'};white-space:nowrap;">${isSel ? '✓ ' : ''}${esc(name)}</td>
-      <td>${L(m.invested)}</td><td>${L(m.current)}</td><td>${pnlCell(m.pnlAbs, m.pnlPct)}</td><td>${pnlCell(m.dayAbs, m.dayPct)}</td>
-      <td>${pctCell(m.m1Pct)}</td><td>${pctCell(m.m6Pct)}</td><td>${pctCell(m.y1Pct)}</td><td>${pctCellR(m.y3Pct)}</td><td>${pctCellR(m.y5Pct)}</td>
+      <td>${L(m.invested)}</td><td>${L(m.current)}</td><td>${pnlCell(m.pnlAbs, m.pnlPct)}</td><td>${pctCell(m.dayPct)}</td>
+      <td>${pctCell(m.w1Pct)}</td><td>${pctCell(m.m1Pct)}</td><td>${pctCell(m.m6Pct)}</td><td>${pctCell(m.y1Pct)}</td><td>${pctCellR(m.y3Pct)}</td><td>${pctCellR(m.y5Pct)}</td>
       <td>${L(m.cash)}</td>
       <td style="white-space:nowrap;"><span style="color:var(--green)">${m.inProfit}</span>/<span style="color:var(--red-text)">${m.inLoss}</span> <span style="color:var(--green)">${wp}</span></td></tr>`;
   };
   const rows = accts.map(name => mk(name, computeAccountMetrics(name), sel.includes(name))).join('');
-  panel.innerHTML = `<style>.acctwise-table th,.acctwise-table td{padding:3px 3px;border-bottom:1px solid var(--border);text-align:right;white-space:nowrap;}.acctwise-table th:first-child,.acctwise-table td:first-child{text-align:left;padding-left:0;padding-right:3px;max-width:46px;overflow:hidden;text-overflow:ellipsis;}.acctwise-table th:nth-child(2),.acctwise-table td:nth-child(2),.acctwise-table th:nth-child(3),.acctwise-table td:nth-child(3){padding-left:2px;padding-right:2px;font-size:0.6rem;}.acctwise-table th:nth-child(4),.acctwise-table td:nth-child(4){padding-left:2px;padding-right:2px;font-size:0.6rem;}.acctwise-table th:nth-child(5),.acctwise-table td:nth-child(5){padding-left:0;padding-right:2px;font-size:0.6rem;text-align:left;}.acctwise-table th:nth-child(n+6):nth-child(-n+10),.acctwise-table td:nth-child(n+6):nth-child(-n+10){min-width:59px;text-align:left;padding-left:0;}.acctwise-table tbody tr:hover{background:var(--bg3);}</style>
+  panel.innerHTML = `<style>.acctwise-table th,.acctwise-table td{padding:3px 3px;border-bottom:1px solid var(--border);text-align:right;white-space:nowrap;}.acctwise-table th:first-child,.acctwise-table td:first-child{text-align:left;padding-left:0;padding-right:3px;max-width:46px;overflow:hidden;text-overflow:ellipsis;}.acctwise-table th:nth-child(2),.acctwise-table td:nth-child(2),.acctwise-table th:nth-child(3),.acctwise-table td:nth-child(3){padding-left:2px;padding-right:2px;font-size:0.6rem;}.acctwise-table th:nth-child(4),.acctwise-table td:nth-child(4){padding-left:2px;padding-right:2px;font-size:0.6rem;}.acctwise-table th:nth-child(5),.acctwise-table td:nth-child(5){padding-left:0;padding-right:2px;font-size:0.6rem;text-align:left;}.acctwise-table th:nth-child(n+6):nth-child(-n+11),.acctwise-table td:nth-child(n+6):nth-child(-n+11){min-width:40px;text-align:left;padding-left:0;}.acctwise-table tbody tr:hover{background:var(--bg3);}</style>
   <div style="font-size:0.62rem;color:var(--text3);margin-bottom:4px;">Per-account summary (${esc(window._holdingType || 'Stocks')}). Click an account to filter · Ctrl/Cmd+Click to combine several · click again to clear.</div>
   <table class="acctwise-table" style="width:auto;border-collapse:collapse;font-size:0.66rem;white-space:nowrap;margin-left:0;">
-    <thead><tr style="color:var(--text3);"><th>Account</th><th>Invested</th><th>Cur Value</th><th>Overall P&L</th><th>Day P&L</th><th>1M</th><th>6M</th><th>1Y</th><th>3Y</th><th>5Y</th><th>Cash</th><th>Win/Loss</th></tr></thead>
+    <thead><tr style="color:var(--text3);"><th>Account</th><th>Invested</th><th>Cur Value</th><th>Overall</th><th>1D</th><th>1W</th><th>1M</th><th>6M</th><th>1Y</th><th>3Y</th><th>5Y</th><th>Cash</th><th>Win/Loss</th></tr></thead>
     <tbody>${rows}</tbody></table>`;
   alignAccountwise(panel);
 }
 
-// Dynamically line the per-account 1M/6M/1Y/3Y/5Y columns up under the top summary strip.
+// Dynamically line the per-account 1W/1M/6M/1Y/3Y/5Y columns up under the top summary strip.
 // Recomputed on every open, so it survives value-width and window changes.
 function alignAccountwise(panel) {
   requestAnimationFrame(() => {
@@ -5549,24 +5619,25 @@ function alignAccountwise(panel) {
     tbl.style.marginLeft = '0px';
     const ths = [...panel.querySelectorAll('.acctwise-table thead th')];
     const byLabel = l => ths.find(t => t.textContent.trim() === l);
-    const dayTh = byLabel('Day P&L'), ovTh = byLabel('Overall P&L');
+    const dayTh = byLabel('1D'), ovTh = byLabel('Overall');
     const sL = id => { const e = document.getElementById(id); return e ? e.getBoundingClientRect().left : null; };
     const d1 = sL('ana-sum-day-abs');
-    const ids = ['ana-sum-1m-abs','ana-sum-6m-abs','ana-sum-1y-abs','ana-sum-3y-abs','ana-sum-5y-abs'];
-    const labels = ['1M','6M','1Y','3Y','5Y'];
+    const ids = ['ana-sum-1w-abs','ana-sum-1m-abs','ana-sum-6m-abs','ana-sum-1y-abs','ana-sum-3y-abs','ana-sum-5y-abs'];
+    const labels = ['1W','1M','6M','1Y','3Y','5Y'];
+    const N = ids.length;
     const lefts = ids.map(sL);
     const cashE = document.getElementById('ana-sum-cash');
-    const after = cashE ? cashE.getBoundingClientRect().left : (lefts[4] != null ? lefts[4] + 70 : null);
+    const after = cashE ? cashE.getBoundingClientRect().left : (lefts[N - 1] != null ? lefts[N - 1] + 70 : null);
     // Size each period column to match the summary strip's column pitch.
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < N; i++) {
       const th = byLabel(labels[i]);
       if (!th || lefts[i] == null) continue;
-      const nl = (i < 4) ? lefts[i + 1] : after;
+      const nl = (i < N - 1) ? lefts[i + 1] : after;
       if (nl == null) continue;
       const w = Math.round(nl - lefts[i]);
       if (w >= 25 && w <= 200) th.style.minWidth = w + 'px';
     }
-    // Day P&L spans 1D→1M: content sits under the summary 1D and 1M lands under the summary 1M.
+    // Day P&L spans 1D→1W: content sits under the summary 1D and 1W lands under the summary 1W.
     if (dayTh && d1 != null && lefts[0] != null) {
       const w = Math.round(lefts[0] - d1);
       if (w >= 25 && w <= 200) dayTh.style.minWidth = w + 'px';
@@ -5580,18 +5651,34 @@ function alignAccountwise(panel) {
         const cur = parseFloat(ovTh.style.minWidth) || Math.round(ovTh.getBoundingClientRect().width);
         ovTh.style.minWidth = (cur + delta) + 'px';
       }
+      // Final pass: table padding/borders leave a few px of drift — measure each column and trim the one before it.
+      const targets = [['1D', d1], ...labels.map((l, i) => [l, lefts[i]]), ['Cash', after]];
+      const textLeft = th => th.getBoundingClientRect().left + (parseFloat(getComputedStyle(th).paddingLeft) || 0);
+      for (let pass = 0; pass < 4; pass++) {
+        let moved = false;
+        for (let k = 1; k < targets.length; k++) {
+          const th = byLabel(targets[k][0]), prev = byLabel(targets[k - 1][0]);
+          if (!th || !prev || targets[k][1] == null) continue;
+          const d = targets[k][1] - textLeft(th);
+          if (Math.abs(d) < 0.5 || Math.abs(d) > 30) continue;
+          const pw = parseFloat(prev.style.minWidth) || prev.getBoundingClientRect().width;
+          prev.style.minWidth = (pw + d).toFixed(1) + 'px';
+          moved = true;
+        }
+        if (!moved) break;
+      }
     });
   });
 }
 
 function updateSummary(stocks, scope = 'all') {
   let invested = 0, current = 0, inProfit = 0, inLoss = 0;
-  let dayChgVal = 0, m1ChgVal = 0, m6ChgVal = 0, y1ChgVal = 0, y3ChgVal = 0, y5ChgVal = 0;
+  let dayChgVal = 0, w1ChgVal = 0, m1ChgVal = 0, m6ChgVal = 0, y1ChgVal = 0, y3ChgVal = 0, y5ChgVal = 0;
   // 3Y/5Y are buy-value-weighted hypotheticals (accumulated separately below).
   // Day/1M/1Y are current-value-weighted; *Base sums exclude holdings with no
   // price for that period so they don't dilute the percentage.
-  let dayBase = 0, m1Base = 0, m6Base = 0, y1Base = 0, y3Base = 0, y5Base = 0;
-  let ewPnlSum = 0, ewPnlN = 0, ewDaySum = 0, ewDayN = 0;
+  let dayBase = 0, w1Base = 0, m1Base = 0, m6Base = 0, y1Base = 0, y3Base = 0, y5Base = 0;
+  let ewPnlSum = 0, ewPnlN = 0, ewDaySum = 0, ewDayN = 0, ewW1Sum = 0, ewW1N = 0;
   let ewM1Sum  = 0, ewM1N  = 0, ewM6Sum  = 0, ewM6N  = 0, ewY1Sum  = 0, ewY1N  = 0;
   let ewY3Sum  = 0, ewY3N  = 0, ewY5Sum  = 0, ewY5N  = 0;
 
@@ -5610,6 +5697,7 @@ function updateSummary(stocks, scope = 'all') {
       const histValOf = (retPct) => (ltp / (1 + (retPct / 100))) * qty;
 
       if (s.ret_1d != null) { const h = histValOf(s.ret_1d); dayChgVal += (ltp * qty) - h; dayBase += h; }
+      if (s.ret_1w != null) { const h = histValOf(s.ret_1w); w1ChgVal  += (ltp * qty) - h; w1Base  += h; }
       if (s.ret_1m != null) { const h = histValOf(s.ret_1m); m1ChgVal  += (ltp * qty) - h; m1Base  += h; }
       if (s.ret_6m != null) { const h = histValOf(s.ret_6m); m6ChgVal  += (ltp * qty) - h; m6Base  += h; }
       if (s.ret_1y != null) { const h = histValOf(s.ret_1y); y1ChgVal  += (ltp * qty) - h; y1Base  += h; }
@@ -5628,6 +5716,7 @@ function updateSummary(stocks, scope = 'all') {
     // Equal-weight return accumulation
     if (s.pnl_pct != null)   { ewPnlSum  += s.pnl_pct;  ewPnlN++;  }
     if (s.ret_1d != null)    { ewDaySum  += s.ret_1d;   ewDayN++;  }
+    if (s.ret_1w != null)    { ewW1Sum   += s.ret_1w;   ewW1N++;   }
     if (s.ret_1m != null)    { ewM1Sum   += s.ret_1m;   ewM1N++;   }
     if (s.ret_6m != null)    { ewM6Sum   += s.ret_6m;   ewM6N++;   }
     if (s.ret_1y != null)    { ewY1Sum   += s.ret_1y;   ewY1N++;   }
@@ -5643,6 +5732,7 @@ function updateSummary(stocks, scope = 'all') {
   // Equal-weight averages (simple avg of % returns = equal allocation)
   const ewPnl = ewPnlN  > 0 ? ewPnlSum  / ewPnlN  : null;
   const ewDay = ewDayN  > 0 ? ewDaySum  / ewDayN  : null;
+  const ewW1  = ewW1N   > 0 ? ewW1Sum   / ewW1N   : null;
   const ewM1  = ewM1N   > 0 ? ewM1Sum   / ewM1N   : null;
   const ewM6  = ewM6N   > 0 ? ewM6Sum   / ewM6N   : null;
   const ewY1  = ewY1N   > 0 ? ewY1Sum   / ewY1N   : null;
@@ -5655,6 +5745,7 @@ function updateSummary(stocks, scope = 'all') {
   const pnlPct = invested > 0 ? (pnlAbs / invested * 100) : 0;
   
   const dayPct = dayBase > 0 ? (dayChgVal / dayBase * 100) : 0;
+  const w1Pct  = w1Base  > 0 ? (w1ChgVal / w1Base * 100) : 0;
   const m1Pct  = m1Base  > 0 ? (m1ChgVal / m1Base * 100) : 0;
   const m6Pct  = m6Base  > 0 ? (m6ChgVal / m6Base * 100) : 0;
   const y1Pct  = y1Base  > 0 ? (y1ChgVal / y1Base * 100) : 0;
@@ -5710,6 +5801,7 @@ function updateSummary(stocks, scope = 'all') {
     };
 
     setChg('ana-sum-day-abs', 'ana-sum-day-pct', dayChgVal, dayPct);
+    setChg('ana-sum-1w-abs',  'ana-sum-1w-pct',  w1ChgVal,  w1Pct);
     setChg('ana-sum-1m-abs',  'ana-sum-1m-pct',  m1ChgVal,  m1Pct);
     setChg('ana-sum-6m-abs',  'ana-sum-6m-pct',  m6ChgVal,  m6Pct);
     setChg('ana-sum-1y-abs',  'ana-sum-1y-pct',  y1ChgVal,  y1Pct);
@@ -5725,6 +5817,7 @@ function updateSummary(stocks, scope = 'all') {
     };
     setEW('ana-ew-pnl', ewPnl);
     setEW('ana-ew-day', ewDay);
+    setEW('ana-ew-1w',  ewW1);
     setEW('ana-ew-1m',  ewM1);
     setEW('ana-ew-6m',  ewM6);
     setEW('ana-ew-1y',  ewY1);
@@ -6304,6 +6397,7 @@ function toggleTheme() {
   const label = light ? '🌙 Dark' : '☀️ Light';
   document.querySelectorAll('#theme-toggle, #theme-toggle-2, #theme-toggle-3').forEach(b => b.textContent = label);
   try { localStorage.setItem('theme', light ? 'light' : 'dark'); } catch(e) {}
+  document.getElementById('news-frame')?.contentWindow?.applyTheme?.();
 }
 // Restore saved theme
 (function() {
@@ -6631,8 +6725,8 @@ async function masterExtract() {
   // 9. Benchmarks
   const bm = window._benchmarks || {};
   const bmName = { nifty50: 'Nifty 50', smallcap250: 'Nifty Smallcap 250', midcap400: 'Nifty Midcap 150' };
-  _mxSheet(wb, 'Benchmarks', ['Index', 'Source symbol', '1D %', '1M %', '6M %', '1Y %', '3Y %', '5Y %'],
-    Object.entries(bm).map(([k, b]) => [bmName[k] || k, b.symbol, b.ret_1d, b.ret_1m, b.ret_6m, b.ret_1y, b.ret_3y, b.ret_5y]));
+  _mxSheet(wb, 'Benchmarks', ['Index', 'Source symbol', '1D %', '1W %', '1M %', '6M %', '1Y %', '3Y %', '5Y %'],
+    Object.entries(bm).map(([k, b]) => [bmName[k] || k, b.symbol, b.ret_1d, b.ret_1w, b.ret_1m, b.ret_6m, b.ret_1y, b.ret_3y, b.ret_5y]));
 
   XLSX.writeFile(wb, `master_extract_${today}.xlsx`);
   showToast(`✅ Master extract: ${held.length} holdings · ${exited.length} exited · ${ia.allRows.length - 1} IA calls · ${ev.length} action changes`, 'green');

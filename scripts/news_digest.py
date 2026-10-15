@@ -32,6 +32,7 @@ NOISE = re.compile(r"trading window|newspaper|certificate under|loss of share|du
                    r"investor complaint|scrutini[sz]er|closure of|record date|esop|esos|"
                    r"reg\.? ?74|74 ?\(5\)|compliances-certificate|book closure|"
                    r"proceedings of (the )?(\d+\w+ )?annual general meeting|voting results|"
+                   r"notice of (the )?(\d+\w+ )?annual general meeting|agm proceedings|^shareholders meeting$|"
                    r"copy of (the )?annual report|notice of (the )?agm", re.I)
 # Headlines that only restate the price move.
 PRICE_ONLY = re.compile(r"share price (today|live)|stock price today|shares? (rise|fall|gain|drop)s? \d|"
@@ -61,14 +62,73 @@ FILLER_SOURCES = {"univest", "marketsmojo", "kalkine india", "simplywall.st", "e
                   "value research", "marketbeat", "yahoo finance singapore", "openpr.com",
                   "ein presswire", "issuewire.com"}
 # Headlines about a same-named foreign company (US/EU listings, currencies, legal forms).
-FOREIGN = re.compile(r"\b(?:nyse|nasdaq|xetra|otc|asx|tsx|han)\s*:|\binc\.?(?=[\s,)]|$)|\boyj\b|\bplc\b|€|\beur\b|\bgmbh\b", re.I)
+FOREIGN = re.compile(r"\b(?:nyse|nasdaq|xetra|otc|asx|tsx|han)\s*:|\binc\.?(?=[\s,)]|$)|\boyj\b|\bplc\b|€|\beur\b|\bsek\b|\bgmbh\b", re.I)
 # Names shared with a global parent or a common word: keep only headlines with Indian-market context.
 AMBIGUOUS = {"INGERRAND", "SIEMENS", "ENRIN", "SKFINDUS", "REDINGTON", "GRAPHITE", "POWERINDIA",
              "KENNAMET", "WENDT", "IONEXCHANG", "INCAP", "BBOX", "DLINKINDIA", "HONAUT",
-             "SCHNEIDER", "INOXINDIA", "CESC", "MUKANDLTD"}
-INDIA_CTX = re.compile(r"\b(?:ltd|limited|nse|bse|sensex|nifty|india|indian|crore|lakh|shares?|stock|fy\d\d|q[1-4])\b|₹|\brs\.?\s?\d", re.I)
+             "SCHNEIDER", "INOXINDIA", "CESC", "MUKANDLTD", "RAYMOND", "EIHOTEL", "NLCINDIA",
+             "JNKINDIA", "RKSWAMY", "WHIRLPOOL", "TRIVENIPT"}
+INDIA_CTX = re.compile(r"\b(?:ltd|limited|nse|bse|sensex|nifty|india|indian|crores?|lakhs?|shares|fy\d\d|q[1-4]|sebi|rbi|nclt|"
+                       r"mumbai|delhi|bengaluru|bangalore|pune|chennai|hyderabad|kolkata|ahmedabad|noida|gurugram|thane|"
+                       r"gujarat|maharashtra|andhra|telangana|karnataka|tamil nadu|rajasthan|odisha|kerala|punjab|haryana|"
+                       r"kotak|motilal|icici|hdfc|axis|nuvama|emkay|ambit|sharekhan|anand rathi|jm financial|prabhudas|"
+                       r"bombay|share price)\b"
+                       r"|₹|\brs\.?\s?\d", re.I)
+# Well-known namesakes that share a holding's name.
+NAMESAKES = {"RAYMOND": re.compile(r"raymond james|st\.? raymond|raymond weil|raymond chandler|raymond stauffer", re.I)}
 _STOP = {"the", "and", "for", "with", "from", "after", "shares", "share", "stock", "stocks", "price",
          "limited", "india", "crore", "order", "orders", "company", "today", "news", "into", "over"}
+# Date/scheduling announcements (next earnings call, record date, board-meeting dates...) - not news.
+SCHEDULE = re.compile(r"(?:schedules?|to (?:hold|host)|hosts?|sets?)\b[^.]{0,40}\b(?:earnings|conference|con\.?) call|"
+                      r"(?:earnings|conference) call (?:on|at|scheduled|for)\b|"
+                      r"analysts?/institutional investor meet|schedule of (?:analyst|meet)|"
+                      r"(?:to |scheduled to )?meet(?:s|ing)? (?:with )?analysts|"
+                      r"analysts? (?:and investors? )?meet|investors? meets?\b|investor conference|"
+                      r"record date|ex[- ]?dividend|ex[- ]date|last (?:day|chance) to buy|dividend history|payment date|"
+                      r"board meeting intimation|intimation of board meeting|prior intimation|"
+                      r"board (?:meeting )?to (?:meet|consider)|to (?:announce|declare|consider)\b[^.]{0,40}\bresults|"
+                      r"results? date|e-voting schedule", re.I)
+MAX_NEWS_PER_DAY = 3
+# Structural, business-changing events (used for the Telegram "key news" digest).
+KEY_NEWS = re.compile(r"\b(?:orders?|order book|order inflow|contracts?|tenders?|l1|lo[ai]|letter of (?:award|intent)|"
+                      r"bags?|secures?|wins?|won|awarded|acqui\w*|stake|merger|amalgamat\w*|demerg\w*|takeover|"
+                      r"open offer|divest\w*|slump sale|results?|earnings|net profit|profit|loss|revenue|ebitda|"
+                      r"margins?|guidance|buyback|bonus|split|fund ?rais\w*|qip|rights issue|preferential|ipo|"
+                      r"offer for sale|ofs|block deal|bulk deal|pledg\w*|court|tribunal|nclt|nclat|sebi|cci|"
+                      r"penalt\w*|fine[ds]?|raids?|probe|investigat\w*|fraud|show[- ]cause|gst|tax demand|"
+                      r"income tax|litigation|arbitra\w*|lawsuit|insolven\w*|default\w*|usfda|fda|warning letter|"
+                      r"form 483|eir|licen[cs]e\w*|patent|plant|facility|factor(?:y|ies)|capacity|expan\w*|"
+                      r"capex|commission\w*|greenfield|brownfield|shutdown|fire|strike|accident|joint venture|jv|"
+                      r"mou|partner\w*|agreement|tie-?up|collaborat\w*|ceo|cfo|coo|managing director|chairman|"
+                      r"auditor|resign\w*|steps? down|credit rating|crisil|icra|care ratings|launch\w*|"
+                      r"sales|bookings|pre-?sales|volumes?|q[1-4]|fy\d\d|cto|dispos\w*|subsidiar\w*|"
+                      r"price (?:hike|increase|cut)s?|"
+                      r"invest(?:s|ed|ing|ment)?)\b", re.I)
+# Market commentary that mentions a business word but doesn't report an event.
+COMMENTARY = re.compile(r"why is (?:the )?stock|should (?:you|investors)|buy,? sell or hold|target price|"
+                        r"price target|\bupside\b|\bdownside\b|sector stocks|stocks? (?:today|in focus|to watch)|"
+                        r"ahead of|multibagger|buying opportunity|nse sought clarification|\?\s*$", re.I)
+# Routine people/payout events - not key news (unless they also carry a resignation or a corporate action).
+NOT_KEY = re.compile(r"\b(?:re-?)?appoint\w*|\bnamed (?:as )?(?:the )?(?:new )?(?:ceo|cfo|coo|cto|md|chairman|director|auditor)|"
+                     r"\bdividend\w*|\bgovernor\b", re.I)
+KEEP_ANYWAY = re.compile(r"resign\w*|steps? down|quits?\b|bonus|buyback|split|demerg\w*", re.I)
+
+
+def is_key_news(text):
+    """Structural news (orders, deals, results, legal/regulatory, capacity, resignations) - not price chatter,
+    appointments or dividends."""
+    t = text or ""
+    if NOT_KEY.search(t) and not KEEP_ANYWAY.search(t):
+        return False
+    if t.count(",") >= 4 or re.search(r"\btargets\b|\bpreview\b|transcript", t, re.I):  # multi-stock lists, previews
+        return False
+    return bool(KEY_NEWS.search(t)) and not COMMENTARY.search(t)
+
+
+def is_schedule(text):
+    """Date/scheduling announcement. Kept if it also carries real news (transcript, demerger, buyback...)."""
+    return bool(SCHEDULE.search(text or "")) and not re.search(
+        r"transcript|demerg|merger|amalgamat|buyback|acqui|bonus issue|stock split", text or "", re.I)
 
 
 # Boilerplate wrapped around every NSE filing text; removed so only the crux remains.
@@ -89,9 +149,11 @@ _GENERIC_DESC = {"general updates", "updates", "press release", "general update"
 def crux(desc, text):
     """'Company has informed the Exchange about X' -> 'X' (prefixed with the category when it adds info)."""
     t = " ".join((text or "").split())
-    if re.search(r"significant movement in price", t, re.I):
+    m = re.search(r"significant (movement in price|increase in volume)", t, re.I)
+    if m:
         responded = re.search(r"submitted (?:their|its) (?:response|reply)", t, re.I)
-        return "Price movement — NSE sought clarification; " + ("company has responded" if responded else "response awaited")
+        what = "Price movement" if "price" in m.group(1).lower() else "Spurt in volume"
+        return f"{what} — NSE sought clarification; " + ("company has responded" if responded else "response awaited")
     for pat in _BOILER:
         t = re.sub(pat, "", t, flags=re.I).strip(" .,:-'\"“”")
     if t:
@@ -147,7 +209,7 @@ def filings(sess, symbol, since):
         if dt < since:
             continue
         desc, text = a.get("desc") or "", a.get("attchmntText") or ""
-        if NOISE.search(desc) or NOISE.search(text):
+        if NOISE.search(desc) or NOISE.search(text) or is_schedule(f"{desc} {text}"):
             continue
         c = crux(desc, text)
         # NSE returns newest first, so the first of a near-duplicate pair (e.g. query then response) wins.
@@ -177,10 +239,51 @@ def _same_story(a, b):
     return bool(wa and wb) and len(wa & wb) / min(len(wa), len(wb)) >= 0.6
 
 
+def _key_words(name):
+    return [w for w in re.findall(r"[A-Za-z]+", _clean_name(name)) if len(w) > 2][:2]
+
+
+_SIBLINGS = {}
+
+
+def _longer_siblings(name):
+    """Clean names of other holdings that start with this holding's name plus more words."""
+    base = _clean_name(name).lower()
+    if base not in _SIBLINGS:
+        try:
+            names = {_clean_name(n).lower() for _, _, n in held_stocks()}
+        except Exception:
+            names = set()
+        _SIBLINGS[base] = [n for n in names if n != base and n.startswith(base + " ")]
+    return _SIBLINGS[base]
+
+
+def keep_headline(ticker, name, body, source=""):
+    """All headline filters in one place (also re-applied to the stored archive)."""
+    title = f"{body} - {source}"
+    if not body or PRICE_ONLY.search(title) or FOREIGN.search(title) or LOW_IMPACT.search(body):
+        return False
+    if is_schedule(body):
+        return False
+    if not MATERIAL.search(body) or source.lower() in FILLER_SOURCES:
+        return False
+    kw = _key_words(name)
+    # The company's name must appear in the headline.
+    if kw and not all(w.lower() in body.lower() for w in kw):
+        return False
+    if ticker in NAMESAKES and NAMESAKES[ticker].search(body):
+        return False
+    # "Cyient" must not pick up "Cyient DLM" (another holding whose name extends this one).
+    if any(s in body.lower() for s in _longer_siblings(name)):
+        return False
+    # Names that collide with unrelated companies/people/places: need Indian-market context.
+    if ticker in AMBIGUOUS and not INDIA_CTX.search(body):
+        return False
+    return True
+
+
 def headlines(ticker, name, days, max_n=3):
     clean = _clean_name(name)
-    # First word(s) of the name must appear in the headline, to avoid same-name foreign companies' noise.
-    key_words = [w for w in re.findall(r"[A-Za-z]+", clean) if len(w) > 2][:2]
     q = quote(f'"{clean}" when:{days}d')
     try:
         r = requests.get(f"https://news.google.com/rss/search?q={q}&hl=en-IN&gl=IN&ceid=IN:en",
@@ -193,15 +296,7 @@ def headlines(ticker, name, days, max_n=3):
         title = (it.findtext("title") or "").strip()
         body, _, source = title.rpartition(" - ")
         body, source = (body or title).strip(), source.strip()
-        if not body or PRICE_ONLY.search(title) or FOREIGN.search(title) or LOW_IMPACT.search(body):
-            continue
-        if not MATERIAL.search(body):
-            continue
-        if source.lower() in FILLER_SOURCES:
-            continue
-        if key_words and not all(w.lower() in body.lower() for w in key_words):
-            continue
-        if ticker in AMBIGUOUS and not INDIA_CTX.search(body):
+        if not keep_headline(ticker, name, body, source):
             continue
         k = _story_key(body)
         if any(_same_story(k, o) for o in keys):
@@ -269,8 +364,23 @@ def merge_archive(new, backfilled_now=()):
     cutoff = (datetime.now(IST) - timedelta(days=KEEP_DAYS)).isoformat()
     items = []
     for cur in by.values():
-        cur["filings"] = sorted((f for f in cur["filings"] if (f["dt"] or "") >= cutoff), key=lambda x: x["dt"], reverse=True)
-        cur["news"] = sorted((n for n in cur["news"] if (n["dt"] or "") >= cutoff), key=lambda x: x["dt"], reverse=True)
+        cur["filings"] = sorted((f for f in cur["filings"] if (f["dt"] or "") >= cutoff
+                                 and not is_schedule(f["text"]) and not NOISE.search(f["text"])),
+                                key=lambda x: x["dt"], reverse=True)
+        for f in cur["filings"]:
+            f["key"] = is_key_news(f["text"])
+        # Re-check stored headlines so filter improvements also clean older entries.
+        news = sorted((n for n in cur["news"] if (n["dt"] or "") >= cutoff
+                       and keep_headline(cur["ticker"], cur.get("name", ""), n["title"], n.get("source", ""))),
+                      key=lambda x: x["dt"], reverse=True)
+        per_day = {}
+        cur["news"] = []
+        for n in news:
+            d = n["dt"][:10]
+            if per_day.get(d, 0) < MAX_NEWS_PER_DAY:
+                per_day[d] = per_day.get(d, 0) + 1
+                n["key"] = is_key_news(n["title"])
+                cur["news"].append(n)
         if cur["filings"] or cur["news"]:
             items.append(cur)
     return {"generated": new["generated"], "keep_days": KEEP_DAYS, "backfilled": sorted(backfilled), "items": items}
@@ -281,6 +391,14 @@ def main():
     limit = int(sys.argv[sys.argv.index("--limit") + 1]) if "--limit" in sys.argv else None
     backfill = "--backfill" in sys.argv
     only, done = None, ()
+    if "--refilter" in sys.argv:
+        # Clean the stored archive with the current filters, without fetching anything.
+        old = json.loads(ARCHIVE.read_text(encoding="utf-8"))
+        arch = merge_archive({"generated": old.get("generated"), "items": []})
+        ARCHIVE.write_text(json.dumps(arch, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+        print(f"refilter: {sum(len(i['filings']) for i in old['items'])} -> {sum(len(i['filings']) for i in arch['items'])} filings, "
+              f"{sum(len(i['news']) for i in old['items'])} -> {sum(len(i['news']) for i in arch['items'])} headlines")
+        return
     if "--fill-new" in sys.argv:
         old = json.loads(ARCHIVE.read_text(encoding="utf-8")) if ARCHIVE.exists() else {}
         only = {tk for tk, _, _ in held_stocks()} - set(old.get("backfilled", []))

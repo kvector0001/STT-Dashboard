@@ -1,7 +1,7 @@
 name: News Backfill (new holdings)
 
 on:
-  # Triggered nightly by cron-job.org. Only fetches 6-month history for holdings not yet in news.json.
+  # Manual only - the regular price refresh already runs --fill-new. Kept for a one-off rerun from the Actions tab.
   workflow_dispatch:
 
 # Shares the refresh lock so both never push news.json at the same time.
