@@ -302,6 +302,10 @@ def _row(r):
     r = list(r) + [""] * (9 - len(r))
     return [str(x) if x is not None else "" for x in r[:9]]
 _store = [_row(r) for r in STORE_ROWS if r and str(r[0]).strip()]
+# A sell that mentions funds is a sell to raise money for other buys, not a negative view: SELL_F.
+FUND_RE = re.compile(r"\bfund(?:s|ing)?\b", re.I)
+for r in _store:
+    if r[3] == "SELL" and FUND_RE.search(r[5]): r[3] = "SELL_F"
 if FULL_REBUILD:
     _store = [r for r in _store if r[3] == "BLOG"]
 # retry prices for stored calls that have none (e.g. an earlier Yahoo symbol miss)
@@ -317,6 +321,7 @@ _seen = {(r[0], r[2], r[5]) for r in _store if len(r) > 5}
 _bf = [0]
 def add_call(tk, iso, src, action, quote, mb):
     if len(quote) < 15: return
+    if action == "SELL" and FUND_RE.search(quote): action = "SELL_F"
     if (tk, iso, quote) in _seen: return  # already in the ledger (CUTOFF day is re-scanned)
     px = price_on(tk, iso)  # always use market close on the call date
     if px is None: px = stated_price(quote)  # fallback only when yfinance has no data
@@ -352,7 +357,7 @@ for tk, rows in per.items():
     rows_sorted = sorted(rows, key=lambda r: r[2])
     # BLOG rows are the advisor's published picks, so they count as buy calls
     buys = [r for r in rows_sorted if r[3] in ("BUY", "BLOG") and r[4] not in ("", None)]
-    decisive = [r for r in rows_sorted if r[3] in ("BUY", "SELL", "BLOG")]
+    decisive = [r for r in rows_sorted if r[3] in ("BUY", "SELL", "SELL_F", "BLOG")]
     status = ("BUY" if decisive[-1][3] == "BLOG" else decisive[-1][3]) if decisive else "WATCH"
     lastp = round(float(buys[-1][4]), 2) if buys else ""
     maxr = max(buys, key=lambda r: float(r[4])) if buys else None

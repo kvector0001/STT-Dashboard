@@ -243,6 +243,47 @@ def _key_words(name):
     return [w for w in re.findall(r"[A-Za-z]+", _clean_name(name)) if len(w) > 2][:2]
 
 
+_BOILER_WORDS = {"industries", "industry", "press", "release", "titled", "hereby", "submit", "submitted", "exchange",
+                 "general", "update", "outcome", "meeting", "board", "directors", "regulation", "disclosure",
+                 "intimation", "pursuant", "held", "informed", "respect", "attached", "herewith", "listing"}
+
+
+def _event_key(text, name):
+    """Like _story_key but ignores the company's own name, filing boilerplate and plural endings."""
+    nums, words = _story_key(text)
+    own = {w.lower() for w in re.findall(r"[A-Za-z]{4,}", name or "")}
+    stem = lambda w: w[:-1] if len(w) > 4 and w.endswith("s") and not w.endswith("ss") else w
+    return nums, {stem(w) for w in words if w not in own} - _BOILER_WORDS
+
+
+def _same_event(a, b):
+    (na, wa), (nb, wb) = a, b
+    # A shared distinctive figure (3+ digits or a decimal, e.g. 202 crore / 92.95) marks the same event.
+    if any(len(n) >= 3 or "." in n for n in na & nb):
+        return True
+    return len(wa) >= 3 and len(wb) >= 3 and len(wa & wb) / min(len(wa), len(wb)) >= 0.6
+
+
+def mark_duplicates(name, filings, news, days=2):
+    """Group a company's filings + headlines that report the same event (within `days`); set dup=True on all
+    but one per group. The visible item is the most informative one (most distinct words; a filing wins ties)."""
+    items = [("f", f, f["text"]) for f in filings] + [("n", n, n["title"]) for n in news]
+    keys = [_event_key(t, name) for _, _, t in items]
+    parent = list(range(len(items)))
+    find = lambda i: i if parent[i] == i else find(parent[i])
+    for i in range(len(items)):
+        for j in range(i + 1, len(items)):
+            if _days_apart(items[i][1]["dt"], items[j][1]["dt"]) <= days and _same_event(keys[i], keys[j]):
+                parent[find(j)] = find(i)
+    groups = {}
+    for i in range(len(items)):
+        groups.setdefault(find(i), []).append(i)
+    for idx in groups.values():
+        main = max(idx, key=lambda i: (len(keys[i][1]) + len(keys[i][0]), items[i][0] == "f"))
+        for i in idx:
+            items[i][1]["dup"] = i != main
+
+
 _SIBLINGS = {}
 
 
@@ -381,6 +422,7 @@ def merge_archive(new, backfilled_now=()):
                 per_day[d] = per_day.get(d, 0) + 1
                 n["key"] = is_key_news(n["title"])
                 cur["news"].append(n)
+        mark_duplicates(cur.get("name", ""), cur["filings"], cur["news"])
         if cur["filings"] or cur["news"]:
             items.append(cur)
     return {"generated": new["generated"], "keep_days": KEEP_DAYS, "backfilled": sorted(backfilled), "items": items}

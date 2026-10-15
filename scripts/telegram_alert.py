@@ -241,9 +241,11 @@ def _was_sent(sent, tk, url, text):
 def news_message(moves, sent, followup=False, days=2):
     """Key (structural) news for volume+price movers, up to 3 per stock, skipping anything sent before.
     Returns (text or None, stocks shown, new sent-entries)."""
-    from news_digest import collect, is_key_news
+    from news_digest import collect, is_key_news, mark_duplicates
     data = collect(days, only=set(moves))
     by_tk = {it["ticker"]: it for it in data["items"]}
+    for it in data["items"]:
+        mark_duplicates(it.get("name", ""), it["filings"], it["news"])
     order = sorted(moves, key=lambda tk: -max(abs(r) for _, r, _ in moves[tk]))
     today = datetime.now(IST).strftime("%Y-%m-%d")
     yday = (datetime.now(IST) - timedelta(days=1)).strftime("%Y-%m-%d")
@@ -252,8 +254,8 @@ def news_message(moves, sent, followup=False, days=2):
     lines, quiet, new = [f"\U0001f4f0 <b>{title}</b>", ""], [], []
     for tk in order:
         it = by_tk.get(tk) or {"filings": [], "news": []}
-        items = [("\U0001f3db", f["url"], f["text"], f"({f['dt'][8:10]}/{f['dt'][5:7]})", f["dt"]) for f in it["filings"]]
-        items += [("\U0001f5de", n["url"], n["title"], f"\u2014 {_h(n['source'])}", n["dt"]) for n in it["news"]]
+        items = [("\U0001f3db", f["url"], f["text"], f"({f['dt'][8:10]}/{f['dt'][5:7]})", f["dt"]) for f in it["filings"] if not f.get("dup")]
+        items += [("\U0001f5de", n["url"], n["title"], f"\u2014 {_h(n['source'])}", n["dt"]) for n in it["news"] if not n.get("dup")]
         picked = []
         for icon, url, text, tail, dt in items:
             if len(picked) == ITEMS_PER_STOCK:

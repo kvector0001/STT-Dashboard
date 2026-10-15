@@ -22,12 +22,19 @@
   .rank { color:var(--text3); font-size:0.72rem; min-width:28px; }
   .tk { font-weight:800; color:var(--blue); }
   .nm { color:var(--text2); font-size:0.8rem; }
-  .row { display:flex; gap:8px; padding:4px 0; border-top:1px dashed var(--border); font-size:0.84rem; line-height:1.35; }
+  .row { padding:5px 0; border-top:1px dashed var(--border); font-size:0.86rem; line-height:1.4; }
   .row:first-of-type { border-top:none; }
-  .badge { flex:none; font-size:0.62rem; font-weight:700; padding:2px 6px; border-radius:4px; height:fit-content; margin-top:1px; }
-  .b-f { background:rgba(52,211,153,.15); color:var(--green); }
-  .b-n { background:rgba(96,165,250,.15); color:var(--blue); }
-  .dt { flex:none; color:var(--text3); font-size:0.72rem; min-width:78px; margin-top:2px; }
+  .row .src { white-space:nowrap; }
+  .nse { color:var(--green); font-weight:700; }
+  .hd { flex-wrap:wrap; row-gap:2px; }
+  @media (max-width: 600px) {
+    header { position:static; padding:10px 12px; gap:8px; }
+    main { padding:6px 8px 30px; }
+    .card { padding:8px 10px; margin:8px 0; }
+    .rank, .nm { display:none; }
+    .ret { margin-left:auto; }
+    #tkq, #q { flex:1 1 100%; }
+  }
   a { color:var(--text); text-decoration:none; } a:hover { text-decoration:underline; color:var(--blue); }
   .src { color:var(--text3); font-size:0.74rem; }
   .empty { color:var(--text3); text-align:center; padding:40px; }
@@ -82,6 +89,7 @@ function applyTheme() {
 applyTheme();
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const safeUrl = u => /^https:\/\//i.test(u || '') ? u : '';
+const fmtDay = iso => iso ? new Date(iso).toLocaleDateString('en-IN', { day: 'numeric', month: 'short' }) : '';
 const fmtDt = iso => { if (!iso) return ''; const d = new Date(iso);
   return d.toLocaleDateString('en-IN', {day:'2-digit', month:'short'}) + ' ' + d.toLocaleTimeString('en-IN', {hour:'2-digit', minute:'2-digit', hour12:false}); };
 let DATA = { items: [] };
@@ -122,7 +130,7 @@ function render() {
   const onlyF = document.getElementById('onlyFilings').checked;
   const onlyK = document.getElementById('onlyKey').checked;
   const cutoff = Date.now() - PERIOD * 864e5;
-  const inWin = x => x.dt && new Date(x.dt).getTime() >= cutoff && (!onlyK || x.key !== false);
+  const inWin = x => x.dt && !x.dup && new Date(x.dt).getTime() >= cutoff && (!onlyK || x.key !== false);
   const set = chipSet();
   const banner = document.getElementById('banner');
   banner.style.display = (HANDOFF || FOCUS) ? '' : 'none';
@@ -141,9 +149,12 @@ function render() {
     if (!filings.length && !news.length) return '';
     nCards++; nF += filings.length; nN += news.length;
     const full = FOCUS || EXPANDED.has(it.ticker);
-    const fShow = full ? filings : filings.slice(0, SHOW), nShow = full ? news : news.slice(0, SHOW);
-    const hidden = (filings.length - fShow.length) + (news.length - nShow.length);
     const link = (url, txt) => safeUrl(url) ? `<a href="${esc(url)}" target="_blank" rel="noopener noreferrer">${hl(txt)}</a>` : hl(txt);
+    const rows = filings.map(f => ({ dt: f.dt, body: link(f.url, f.text), tag: '<b class="nse">NSE</b>' }))
+      .concat(news.map(n => ({ dt: n.dt, body: link(n.url, n.title), tag: esc(n.source) })))
+      .sort((a, b) => String(b.dt).localeCompare(String(a.dt)));
+    const shown = full ? rows : rows.slice(0, SHOW);
+    const hidden = rows.length - shown.length;
     const p = PRICES[it.ticker] || {};
     const retTag = (v, lbl) => typeof v === 'number' ? `<span class="${v >= 0 ? 'up' : 'dn'}">${v >= 0 ? '+' : ''}${v.toFixed(1)}% ${lbl}</span>` : '';
     const r = (typeof p.ret_1d === 'number' || typeof p.ret_1w === 'number')
@@ -152,8 +163,7 @@ function render() {
     const vp = CHIP === 'movers' ? vpHits(p).map(([l, r, v]) => `<span class="src">${l} ${r >= 0 ? '+' : ''}${r.toFixed(1)}% on ${v.toFixed(1)}× vol</span>`).join(' · ') : '';
     return `<div class="card">
       <div class="hd"><span class="rank">#${it.rank}</span><span class="tk" data-tk="${esc(it.ticker)}" title="Show all news for this company">${esc(it.ticker)}</span>${mv}<span class="nm">${esc(it.name)}</span>${r}${vp}</div>
-      ${fShow.map(f => `<div class="row"><span class="badge b-f">NSE FILING</span><span class="dt">${fmtDt(f.dt)}</span><span>${link(f.url, f.text)}</span></div>`).join('')}
-      ${nShow.map(n => `<div class="row"><span class="badge b-n">NEWS</span><span class="dt">${fmtDt(n.dt)}</span><span>${link(n.url, n.title)} <span class="src">· ${esc(n.source)}</span></span></div>`).join('')}
+      ${shown.map(x => `<div class="row">${x.body} <span class="src">· ${fmtDay(x.dt)} · ${x.tag}</span></div>`).join('')}
       ${hidden ? `<div class="more" data-more="${esc(it.ticker)}">+${hidden} more</div>` : ''}
     </div>`;
   }).join('');

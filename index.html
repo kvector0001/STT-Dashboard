@@ -4251,7 +4251,7 @@ function renderCallsHistory() {
       ${nF ? `<span onclick="iaClearFilters()" style="cursor:pointer;color:var(--blue-text);font-size:0.72rem;">✕ Clear ${nF} filter${nF > 1 ? 's' : ''}</span>` : '<span style="color:var(--text3);font-size:0.68rem;">▼ = filter · click a header to sort</span>'}
     </div>
     <div style="display:flex;flex-wrap:wrap;gap:6px;margin:0 0 8px;">
-      ${ccAll} <button onclick="iaToggleShortlist()" title="Shortlist: latest call is BUY · Must buy or Bullish · CMP at/below or up to 20% above the last call · Low held or Not held. Click again to clear." style="padding:3px 11px;border-radius:13px;border:1px solid var(--green);cursor:pointer;font-size:0.7rem;font-weight:700;background:${iaShortlistOn() ? 'var(--green)' : 'var(--bg2)'};color:${iaShortlistOn() ? '#fff' : 'var(--green)'}">▲ Shortlist</button> ${cc('🟢 Buy call', 'status', 'BUY')} ${cc('🔴 Sell call', 'status', 'SELL')} ${cc('👁 Watch', 'status', 'WATCH')} ${ccGrp('⭐ Must buy / Bullish', 'mustbuy', ['MUSTBUY', 'BULLISH'])} ${cc('🟢 At/below call', 'vsLast', 'disc')} ${cc('🟡 Low premium', 'vsLast', 'b20')} ${cc('Held', 'alloc', 'held')} ${cc('Low held', 'alloc', 'low')} ${cc('Not held', 'alloc', 'not')}
+      ${ccAll} <button onclick="iaToggleShortlist()" title="Shortlist: latest call is BUY · Must buy or Bullish · CMP at/below or up to 20% above the last call · Low held or Not held. Click again to clear." style="padding:3px 11px;border-radius:13px;border:1px solid var(--green);cursor:pointer;font-size:0.7rem;font-weight:700;background:${iaShortlistOn() ? 'var(--green)' : 'var(--bg2)'};color:${iaShortlistOn() ? '#fff' : 'var(--green)'}">▲ Shortlist</button> ${cc('🟢 Buy call', 'status', 'BUY')} ${cc('🔴 Sell call', 'status', 'SELL')} ${cc('� Sell for funds', 'status', 'SELL_F')} ${cc('�👁 Watch', 'status', 'WATCH')} ${ccGrp('⭐ Must buy / Bullish', 'mustbuy', ['MUSTBUY', 'BULLISH'])} ${cc('🟢 At/below call', 'vsLast', 'disc')} ${cc('🟡 Low premium', 'vsLast', 'b20')} ${cc('Held', 'alloc', 'held')} ${cc('Low held', 'alloc', 'low')} ${cc('Not held', 'alloc', 'not')}
     </div>
     <div style="overflow:auto;max-height:calc(100vh - 190px);"><table class="ia-calls-table" style="width:100%;border-collapse:collapse;">
       <thead><tr>
@@ -4275,7 +4275,7 @@ function renderCallsHistory() {
     if (exp) { const qs = (IA_QUOTES[x.t] || []).slice().sort((a, b) => String(b.date).localeCompare(String(a.date)));
       qs.forEach(m => { const cp = parseFloat(m.price); const vsl = (x.cmp != null && isFinite(cp) && cp > 0) ? (x.cmp / cp - 1) * 100 : null;
         const isBuy = m.action === 'BUY' || m.action === 'BLOG';
-        const actCol = isBuy ? 'var(--green)' : m.action === 'SELL' ? 'var(--red-text)' : 'var(--text3)';
+        const actCol = isBuy ? 'var(--green)' : m.action === 'SELL' ? 'var(--red-text)' : m.action === 'SELL_F' ? '#f59e0b' : 'var(--text3)';
         const dim = isBuy ? '' : ' title="Market price on the call date — not a BUY call, so not used for Last/Max buy" style="opacity:0.45"';
         html += `<tr class="ia-exp" style="background:var(--bg2);border-top:1px solid var(--border);vertical-align:top;">
           <td></td><td></td>
@@ -5587,7 +5587,7 @@ function renderAccountwise() {
   if (!accts.length) { panel.innerHTML = '<div style="color:var(--text3);font-size:0.75rem;">No account data.</div>'; return; }
   const locked = (typeof privacyUnlocked !== 'undefined' && !privacyUnlocked);
   const L = v => locked ? '●●●' : '₹' + (v / 100000).toFixed(2) + 'L';
-  const pnlCell = (abs, pct) => { if (locked) return '<span>●●●</span>'; const c = abs >= 0 ? 'var(--green)' : 'var(--red-text)'; return `<span style="color:${c}">${abs >= 0 ? '+' : '-'}₹${Math.abs(abs / 100000).toFixed(2)}L (${pct >= 0 ? '+' : ''}${pct.toFixed(1)}%)</span>`; };
+  const pnlCell = (abs, pct) => { if (locked) return '<span>●●●</span>'; const c = abs >= 0 ? 'var(--green)' : 'var(--red-text)'; return `<span style="color:${c}">${abs >= 0 ? '+' : '-'}₹${Math.abs(abs / 100000).toFixed(2)}L (${pct >= 0 ? '+' : ''}${pct.toFixed(0)}%)</span>`; };
   const pctCell = pct => { const c = pct >= 0 ? 'var(--green)' : 'var(--red-text)'; return `<span style="color:${c}">${pct >= 0 ? '+' : ''}${pct.toFixed(1)}%</span>`; };
   const pctCellR = pct => { const c = pct >= 0 ? 'var(--green)' : 'var(--red-text)'; return `<span style="color:${c}">${pct >= 0 ? '+' : ''}${Math.round(pct)}%</span>`; };
   const sel = accSel();
@@ -5602,7 +5602,7 @@ function renderAccountwise() {
       <td style="white-space:nowrap;"><span style="color:var(--green)">${m.inProfit}</span>/<span style="color:var(--red-text)">${m.inLoss}</span> <span style="color:var(--green)">${wp}</span></td></tr>`;
   };
   const rows = accts.map(name => mk(name, computeAccountMetrics(name), sel.includes(name))).join('');
-  panel.innerHTML = `<style>.acctwise-table th,.acctwise-table td{padding:3px 3px;border-bottom:1px solid var(--border);text-align:right;white-space:nowrap;}.acctwise-table th:first-child,.acctwise-table td:first-child{text-align:left;padding-left:0;padding-right:3px;max-width:46px;overflow:hidden;text-overflow:ellipsis;}.acctwise-table th:nth-child(2),.acctwise-table td:nth-child(2),.acctwise-table th:nth-child(3),.acctwise-table td:nth-child(3){padding-left:2px;padding-right:2px;font-size:0.6rem;}.acctwise-table th:nth-child(4),.acctwise-table td:nth-child(4){padding-left:2px;padding-right:2px;font-size:0.6rem;}.acctwise-table th:nth-child(5),.acctwise-table td:nth-child(5){padding-left:0;padding-right:2px;font-size:0.6rem;text-align:left;}.acctwise-table th:nth-child(n+6):nth-child(-n+11),.acctwise-table td:nth-child(n+6):nth-child(-n+11){min-width:40px;text-align:left;padding-left:0;}.acctwise-table tbody tr:hover{background:var(--bg3);}</style>
+  panel.innerHTML = `<style>.acctwise-table th,.acctwise-table td{padding:3px 3px;border-bottom:1px solid var(--border);text-align:right;white-space:nowrap;}.acctwise-table th:first-child,.acctwise-table td:first-child{text-align:left;padding-left:0;padding-right:3px;max-width:46px;overflow:hidden;text-overflow:ellipsis;}.acctwise-table th:nth-child(2),.acctwise-table td:nth-child(2),.acctwise-table th:nth-child(3),.acctwise-table td:nth-child(3){padding-left:2px;padding-right:2px;font-size:0.6rem;}.acctwise-table th:nth-child(4),.acctwise-table td:nth-child(4){padding-left:2px;padding-right:1cm;font-size:0.6rem;}.acctwise-table th:nth-child(5),.acctwise-table td:nth-child(5){padding-left:0;padding-right:2px;font-size:0.6rem;text-align:left;}.acctwise-table th:nth-child(n+6):nth-child(-n+11),.acctwise-table td:nth-child(n+6):nth-child(-n+11){min-width:40px;text-align:left;padding-left:0;}.acctwise-table tbody tr:hover{background:var(--bg3);}</style>
   <div style="font-size:0.62rem;color:var(--text3);margin-bottom:4px;">Per-account summary (${esc(window._holdingType || 'Stocks')}). Click an account to filter · Ctrl/Cmd+Click to combine several · click again to clear.</div>
   <table class="acctwise-table" style="width:auto;border-collapse:collapse;font-size:0.66rem;white-space:nowrap;margin-left:0;">
     <thead><tr style="color:var(--text3);"><th>Account</th><th>Invested</th><th>Cur Value</th><th>Overall</th><th>1D</th><th>1W</th><th>1M</th><th>6M</th><th>1Y</th><th>3Y</th><th>5Y</th><th>Cash</th><th>Win/Loss</th></tr></thead>
@@ -5652,7 +5652,7 @@ function alignAccountwise(panel) {
         ovTh.style.minWidth = (cur + delta) + 'px';
       }
       // Final pass: table padding/borders leave a few px of drift — measure each column and trim the one before it.
-      const targets = [['1D', d1], ...labels.map((l, i) => [l, lefts[i]]), ['Cash', after]];
+      const targets = [['Overall', null], ['1D', d1], ...labels.map((l, i) => [l, lefts[i]]), ['Cash', after]];
       const textLeft = th => th.getBoundingClientRect().left + (parseFloat(getComputedStyle(th).paddingLeft) || 0);
       for (let pass = 0; pass < 4; pass++) {
         let moved = false;
@@ -5765,7 +5765,7 @@ function updateSummary(stocks, scope = 'all') {
   const pnlPctEl = document.getElementById('sum-pnl-pct');
   pnlAbsEl.textContent = pvt((pnlAbs >= 0 ? '+' : '-') + '₹' + Math.abs(pnlAbs / 100000).toFixed(2) + 'L');
   pnlAbsEl.className = 'stat-value ' + (locked ? '' : (pnlAbs >= 0 ? 'green' : 'red'));
-  pnlPctEl.textContent = pvt(fmtPct(pnlPct));
+  pnlPctEl.textContent = pvt((pnlPct >= 0 ? '+' : '') + pnlPct.toFixed(0) + '%');
   pnlPctEl.className = 'stat-value ' + (locked ? '' : (pnlPct >= 0 ? 'green' : 'red'));
   // EW annotation on Overall P&L
   const sumEwEl = document.getElementById('sum-ew-pnl');
@@ -5786,7 +5786,7 @@ function updateSummary(stocks, scope = 'all') {
     const aPnlPct = document.getElementById('ana-sum-pnl-pct');
     aPnlAbs.textContent = pvt((pnlAbs >= 0 ? '+' : '-') + '₹' + Math.abs(pnlAbs / 100000).toFixed(2) + 'L');
     aPnlAbs.className = 'stat-value ' + (locked ? '' : (pnlAbs >= 0 ? 'green' : 'red'));
-    aPnlPct.textContent = pvt(`(${fmtPct(pnlPct)})`);
+    aPnlPct.textContent = pvt(`(${pnlPct >= 0 ? '+' : ''}${pnlPct.toFixed(0)}%)`);
     aPnlPct.className = 'stat-value ' + (locked ? '' : (pnlAbs >= 0 ? 'green' : 'red'));
 
     const setChg = (absId, pctId, absVal, pctVal, pctDec) => {
@@ -5809,13 +5809,13 @@ function updateSummary(stocks, scope = 'all') {
     setChg('ana-sum-5y-abs',  'ana-sum-5y-pct',  y5ChgVal,  y5Pct, 0);
 
     // Equal-weight annotations on Analysis bar
-    const setEW = (id, val) => {
+    const setEW = (id, val, dec) => {
       const el = document.getElementById(id);
       if (!el) return;
-      el.textContent = ewFmt(val);
+      el.textContent = dec != null && val != null ? `(EW: ${val >= 0 ? '+' : ''}${val.toFixed(dec)}%)` : ewFmt(val);
       el.style.color = val != null ? (val >= 0 ? 'var(--green)' : 'var(--red-text)') : 'var(--text3)';
     };
-    setEW('ana-ew-pnl', ewPnl);
+    setEW('ana-ew-pnl', ewPnl, 0);
     setEW('ana-ew-day', ewDay);
     setEW('ana-ew-1w',  ewW1);
     setEW('ana-ew-1m',  ewM1);
