@@ -737,6 +737,17 @@ for _, row in portfolio.iterrows():
                         fetched_atl_pct = round((curr_price - atl_v) / atl_v * 100, 2)
                 except Exception:
                     pass
+                # 1D vs the official previous close: Yahoo's daily history sometimes skips a day, which made
+                # the bar-to-bar 1D show the PREVIOUS day's move (e.g. ELECON missing 14-Oct).
+                try:
+                    _fi = ticker_obj.fast_info
+                    _pc, _lp = _fi.get("previousClose"), _fi.get("lastPrice") or ltp
+                    if _pc and _lp and _pc > 0:
+                        _r = round((float(_lp) - float(_pc)) / float(_pc) * 100, 2)
+                        if abs(_r) <= 25:  # NSE bands cap a day at 20%; anything larger is a bad quote
+                            ret_1d = _r
+                except Exception:
+                    pass
             else:
                 # Fallback to fast_info
                 fi = ticker_obj.fast_info
@@ -748,14 +759,6 @@ for _, row in portfolio.iterrows():
                 # Fetch company info for name, sector, market cap, P/E, ROE, and other metrics
                 try:
                     info = ticker_obj.info
-                    # 1D from the live quote: Yahoo's daily history sometimes skips a day, which made the
-                    # bar-to-bar 1D show the PREVIOUS day's move (e.g. ELECON missing 14-Oct).
-                    _pc = info.get("regularMarketPreviousClose") or info.get("previousClose")
-                    _lp = info.get("regularMarketPrice") or info.get("currentPrice") or ltp
-                    if _pc and _lp and _pc > 0:
-                        _r = round((float(_lp) - float(_pc)) / float(_pc) * 100, 2)
-                        if abs(_r) <= 25:  # NSE bands cap a day at 20%; anything larger is a bad quote
-                            ret_1d = _r
                     fetched_name = info.get("longName") or info.get("shortName")
                     fetched_sector = info.get("sector") or info.get("industry")
                     
