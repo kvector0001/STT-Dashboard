@@ -30,7 +30,8 @@ UA = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.3
       "Accept-Language": "en-US,en;q=0.9"}
 
 # Routine compliance filings that rarely move a stock.
-NOISE = re.compile(r"trading window|newspaper|certificate under|loss of share|duplicate|"
+NOISE = re.compile(r"trading window|newspaper|certificate under|loss of share|duplicate|structural digital database|"
+                   r"\bsdd\b|compliance certificate|"
                    r"investor complaint|scrutini[sz]er|closure of|record date|esop|esos|"
                    r"reg\.? ?74|74 ?\(5\)|compliances-certificate|book closure|"
                    r"proceedings of (the )?(\d+\w+ )?annual general meeting|voting results|"
@@ -112,7 +113,7 @@ COMMENTARY = re.compile(r"why is (?:the )?stock|should (?:you|investors)|buy,? s
                         r"ahead of|multibagger|buying opportunity|nse sought clarification|\?\s*$", re.I)
 # Routine people/payout events - not key news (unless they also carry a resignation or a corporate action).
 NOT_KEY = re.compile(r"\b(?:re-?)?appoint\w*|\bnamed (?:as )?(?:the )?(?:new )?(?:ceo|cfo|coo|cto|md|chairman|director|auditor)|"
-                     r"\bdividend\w*|\bgovernor\b", re.I)
+                     r"\bdividend\w*|\bgovernor\b|encumbrance", re.I)
 KEEP_ANYWAY = re.compile(r"resign\w*|steps? down|quits?\b|bonus|buyback|split|demerg\w*", re.I)
 
 
@@ -121,6 +122,8 @@ def is_key_news(text):
     appointments or dividends."""
     t = text or ""
     if NOT_KEY.search(t) and not KEEP_ANYWAY.search(t):
+        return False
+    if re.search(r"company secretary|compliance officer", t, re.I) and not re.search(r"\b(?:ceo|cfo|managing director|chairman|auditor)\b", t, re.I):
         return False
     if t.count(",") >= 4 or re.search(r"\btargets\b|\bpreview\b|transcript", t, re.I):  # multi-stock lists, previews
         return False

@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
     inputs:
       alert:
-        description: 'Ignored (lets a cloned movers cron job call this too)'
+        description: 'Also send the weekend key-news message to Telegram'
         type: boolean
         default: false
 
@@ -32,6 +32,14 @@ jobs:
       - name: Install dependencies
         run: pip install requests pypdf
 
+      - name: Weekend key news to Telegram
+        if: inputs.alert
+        continue-on-error: true
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python scripts/telegram_alert.py --weekend
+
       - name: Scan filings + news, summarise new key filings
         run: |
           python scripts/news_digest.py --fill-new
@@ -43,6 +51,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add news.json
+          if [ -f telegram_sent.json ]; then git add telegram_sent.json; fi
           if git diff --staged --quiet; then
             echo "No new news."
           else

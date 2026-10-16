@@ -238,39 +238,49 @@ def _was_sent(sent, tk, url, text):
                for e in sent)
 
 
+def _collect(tickers, days, max_news=3):
+    from news_digest import collect, mark_duplicates
+    data = collect(days, only=set(tickers), max_news=max_news)
+    for it in data["items"]:
+        mark_duplicates(it.get("name", ""), it["filings"], it["news"])
+    return {it["ticker"]: it for it in data["items"]}
+
+
+def _pick(it, tk, sent, since):
+    """Up to ITEMS_PER_STOCK unsent key items dated >= since -> (message lines, new sent-entries)."""
+    from news_digest import is_key_news, summarize_pdf
+    today = datetime.now(IST).strftime("%Y-%m-%d")
+    items = [("\U0001f3db", f["url"], f["text"], f"({f['dt'][8:10]}/{f['dt'][5:7]})", f["dt"]) for f in it["filings"] if not f.get("dup")]
+    items += [("\U0001f5de", n["url"], n["title"], f"\u2014 {_h(n['source'])}", n["dt"]) for n in it["news"] if not n.get("dup")]
+    lines, new = [], []
+    for icon, url, text, tail, dt in items:
+        if len(new) == ITEMS_PER_STOCK:
+            break
+        if (dt or "")[:10] < since or not is_key_news(text) or _was_sent(sent + new, tk, url, text):
+            continue
+        lines.append(f"{icon} {_a(url, text[:140])} {tail}")
+        if icon == "\U0001f3db" and url.endswith(".pdf"):
+            summary = summarize_pdf(url, text)
+            if summary:
+                lines.append(f"     <i>{_h(summary)}</i>")
+        new.append({"tk": tk, "u": url, "t": text, "d": today})
+    return lines, new
+
+
 def news_message(moves, sent, followup=False, days=2):
     """Key (structural) news for volume+price movers, up to 3 per stock, skipping anything sent before.
     Returns (text or None, stocks shown, new sent-entries)."""
-    from news_digest import collect, is_key_news, mark_duplicates, summarize_pdf
-    data = collect(days, only=set(moves))
-    by_tk = {it["ticker"]: it for it in data["items"]}
-    for it in data["items"]:
-        mark_duplicates(it.get("name", ""), it["filings"], it["news"])
+    by_tk = _collect(moves, days)
     order = sorted(moves, key=lambda tk: -max(abs(r) for _, r, _ in moves[tk]))
-    today = datetime.now(IST).strftime("%Y-%m-%d")
     yday = (datetime.now(IST) - timedelta(days=1)).strftime("%Y-%m-%d")
-    title = ("More key news since 12:30" if followup
-             else "Key news (today &amp; yesterday) \u2014 volume + price movers")
+    title = "More key news since 12:30" if followup else "Key news (today &amp; yesterday) \u2014 volume + price movers"
     lines, quiet, new = [f"\U0001f4f0 <b>{title}</b>", ""], [], []
     for tk in order:
-        it = by_tk.get(tk) or {"filings": [], "news": []}
-        items = [("\U0001f3db", f["url"], f["text"], f"({f['dt'][8:10]}/{f['dt'][5:7]})", f["dt"]) for f in it["filings"] if not f.get("dup")]
-        items += [("\U0001f5de", n["url"], n["title"], f"\u2014 {_h(n['source'])}", n["dt"]) for n in it["news"] if not n.get("dup")]
-        picked = []
-        for icon, url, text, tail, dt in items:
-            if len(picked) == ITEMS_PER_STOCK:
-                break
-            if (dt or "")[:10] < yday or not is_key_news(text) or _was_sent(sent + new, tk, url, text):
-                continue
-            picked.append(f"{icon} {_a(url, text[:140])} {tail}")
-            if icon == "\U0001f3db" and url.endswith(".pdf"):
-                summary = summarize_pdf(url, text)
-                if summary:
-                    picked.append(f"     <i>{_h(summary)}</i>")
-            new.append({"tk": tk, "u": url, "t": text, "d": today})
+        picked, got = _pick(by_tk.get(tk) or {"filings": [], "news": []}, tk, sent + new, yday)
         if not picked:
             quiet.append(tk)
             continue
+        new += got
         mv = " \u00b7 ".join(f"{lbl} {_pct(r)} on {v:.1f}\u00d7 vol" for lbl, r, v in moves[tk])
         lines += [f"<b>{_h(tk)}</b>  ({mv})", *picked, ""]
     if not new:
@@ -279,6 +289,31 @@ def news_message(moves, sent, followup=False, days=2):
         lines.append("No new key news: " + ", ".join(_h(t) for t in quiet))
     lines.append("\U0001f3db = official NSE filing \u00b7 \U0001f5de = news headline")
     return "\n".join(lines), len(order) - len(quiet), new
+
+
+def weekend_message(held, sent):
+    """Weekend: top gainers of the week (1W) and month (1M) + the key news behind them (never repeated).
+    News window: last 7 days for weekly gainers, last 30 days for monthly gainers."""
+    wk = [(tk, v) for tk, v in _top(held, "ret_1w")[0]]
+    mo = [(tk, v) for tk, v in _top(held, "ret_1m")[0]]
+    by_tk = _collect({tk for tk, _ in wk + mo}, 30, max_news=8)
+    now = datetime.now(IST)
+    lines, new, shown = [f"\U0001f3c6 <b>Weekend \u2014 top gainers &amp; the news behind them</b> ({now:%a %d %b})", ""], [], set()
+    for label, rows, field, back in (("THIS WEEK (1W)", wk, "ret_1w", 7), ("THIS MONTH (1M)", mo, "ret_1m", 30)):
+        lines.append(f"<b>{label}</b>")
+        since = (now - timedelta(days=back)).strftime("%Y-%m-%d")
+        for tk, v in rows:
+            lines.append(f"<b>{_h(tk)}</b>  {_pct(v)}")
+            if tk in shown:
+                lines.append("   news above")
+                continue
+            shown.add(tk)
+            picked, got = _pick(by_tk.get(tk) or {"filings": [], "news": []}, tk, sent + new, since)
+            new += got
+            lines += picked or ["   no new key news"]
+        lines.append("")
+    lines.append("\U0001f3db = official NSE filing \u00b7 \U0001f5de = news headline")
+    return "\n".join(lines), len(shown), new
 
 
 def send(token, chat_id, text, html=False):
@@ -351,6 +386,8 @@ def main():
     if "--get-chat-id" in sys.argv:
         return find_chat_id()
     slot = sys.argv[sys.argv.index("--slot") + 1] if "--slot" in sys.argv else current_slot()
+    if "--weekend" in sys.argv:
+        slot = "weekend"
     dry = "--dry-run" in sys.argv
     if slot == "after":
         print("Telegram alert: post-close refresh - nothing sent.")
@@ -358,9 +395,16 @@ def main():
 
     held = load_held()
     messages, summary = [], []
-    today, yest, ydate = daily_movers(held)
-    messages.append((format_message(today, yest, ydate), False))
-    summary.append(f"{len(today)} today, {len(yest)} yesterday")
+    new_sent = []
+    if slot == "weekend":
+        # No trading: top weekly/monthly gainers + the key news behind them.
+        msg, n, new_sent = weekend_message(held, load_sent())
+        messages.append((msg, True))
+        summary.append(f"weekend gainers ({n} stocks)")
+    else:
+        today, yest, ydate = daily_movers(held)
+        messages.append((format_message(today, yest, ydate), False))
+        summary.append(f"{len(today)} today, {len(yest)} yesterday")
     if slot in ("morning", "all"):
         msg, n, _ = reversal_message(held)
         messages.append((msg, False))
@@ -368,7 +412,6 @@ def main():
     if slot in ("close", "all"):
         messages.append((gainers_losers_message(held), False))
         summary.append("gainers/losers")
-    new_sent = []
     moves = vp_movers(held)
     if slot in ("midday", "close", "all") and moves and "--no-news" not in sys.argv:
         msg, n, new_sent = news_message(moves, load_sent(), followup=slot == "close")
