@@ -313,6 +313,9 @@ def weekend_message(held, sent):
             lines += picked or ["   no new key news"]
         lines.append("")
     lines.append("\U0001f3db = official NSE filing \u00b7 \U0001f5de = news headline")
+    # Prices don't move on weekends: after the first Saturday run, only send when there is new news.
+    if not new and not (now.weekday() == 5 and now.hour < 14):
+        return None, len(shown), []
     return "\n".join(lines), len(shown), new
 
 
@@ -399,7 +402,8 @@ def main():
     if slot == "weekend":
         # No trading: top weekly/monthly gainers + the key news behind them.
         msg, n, new_sent = weekend_message(held, load_sent())
-        messages.append((msg, True))
+        if msg:
+            messages.append((msg, True))
         summary.append(f"weekend gainers ({n} stocks)")
     else:
         today, yest, ydate = daily_movers(held)
