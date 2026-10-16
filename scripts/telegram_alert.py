@@ -241,7 +241,7 @@ def _was_sent(sent, tk, url, text):
 def news_message(moves, sent, followup=False, days=2):
     """Key (structural) news for volume+price movers, up to 3 per stock, skipping anything sent before.
     Returns (text or None, stocks shown, new sent-entries)."""
-    from news_digest import collect, is_key_news, mark_duplicates
+    from news_digest import collect, is_key_news, mark_duplicates, summarize_pdf
     data = collect(days, only=set(moves))
     by_tk = {it["ticker"]: it for it in data["items"]}
     for it in data["items"]:
@@ -263,6 +263,10 @@ def news_message(moves, sent, followup=False, days=2):
             if (dt or "")[:10] < yday or not is_key_news(text) or _was_sent(sent + new, tk, url, text):
                 continue
             picked.append(f"{icon} {_a(url, text[:140])} {tail}")
+            if icon == "\U0001f3db" and url.endswith(".pdf"):
+                summary = summarize_pdf(url, text)
+                if summary:
+                    picked.append(f"     <i>{_h(summary)}</i>")
             new.append({"tk": tk, "u": url, "t": text, "d": today})
         if not picked:
             quiet.append(tk)

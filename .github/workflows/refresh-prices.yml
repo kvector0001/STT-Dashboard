@@ -32,7 +32,7 @@ jobs:
           python-version: '3.11'
 
       - name: Install dependencies
-        run: pip install yfinance pandas openpyxl gspread google-auth
+        run: pip install yfinance pandas openpyxl gspread google-auth pypdf
 
       - name: Fetch prices
         env:
@@ -52,10 +52,12 @@ jobs:
       - name: Build news.json for the News page
         if: github.event_name == 'workflow_dispatch' && inputs.alert
         continue-on-error: true
-        # 3 days covers the Fri 2:30pm -> Mon 9:30am gap; --fill-new adds 6 months only for newly bought stocks.
+        # 3 days covers the Fri 2:30pm -> Mon 9:30am gap; --fill-new adds 6 months only for newly bought stocks;
+        # --summarize reads each new key filing's PDF once (rule-based, no AI).
         run: |
           python scripts/news_digest.py --fill-new
           python scripts/news_digest.py --days 3 --json
+          python scripts/news_digest.py --summarize 3
 
       - name: Fetch extended data
         run: python scripts/fetch_extended_data.py

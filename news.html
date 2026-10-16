@@ -26,6 +26,7 @@
   .row:first-of-type { border-top:none; }
   .row .src { white-space:nowrap; }
   .nse { color:var(--green); font-weight:700; }
+  .sum { color:var(--text2); font-size:0.78rem; line-height:1.35; margin-top:2px; padding-left:8px; border-left:2px solid var(--border); }
   .hd { flex-wrap:wrap; row-gap:2px; }
   @media (max-width: 600px) {
     header { position:static; padding:10px 12px; gap:8px; }
@@ -150,7 +151,7 @@ function render() {
     nCards++; nF += filings.length; nN += news.length;
     const full = FOCUS || EXPANDED.has(it.ticker);
     const link = (url, txt) => safeUrl(url) ? `<a href="${esc(url)}" target="_blank" rel="noopener noreferrer">${hl(txt)}</a>` : hl(txt);
-    const rows = filings.map(f => ({ dt: f.dt, body: link(f.url, f.text), tag: '<b class="nse">NSE</b>' }))
+    const rows = filings.map(f => ({ dt: f.dt, body: link(f.url, f.text), tag: '<b class="nse">NSE</b>', sum: f.summary || '' }))
       .concat(news.map(n => ({ dt: n.dt, body: link(n.url, n.title), tag: esc(n.source) })))
       .sort((a, b) => String(b.dt).localeCompare(String(a.dt)));
     const shown = full ? rows : rows.slice(0, SHOW);
@@ -163,7 +164,7 @@ function render() {
     const vp = CHIP === 'movers' ? vpHits(p).map(([l, r, v]) => `<span class="src">${l} ${r >= 0 ? '+' : ''}${r.toFixed(1)}% on ${v.toFixed(1)}× vol</span>`).join(' · ') : '';
     return `<div class="card">
       <div class="hd"><span class="rank">#${it.rank}</span><span class="tk" data-tk="${esc(it.ticker)}" title="Show all news for this company">${esc(it.ticker)}</span>${mv}<span class="nm">${esc(it.name)}</span>${r}${vp}</div>
-      ${shown.map(x => `<div class="row">${x.body} <span class="src">· ${fmtDay(x.dt)} · ${x.tag}</span></div>`).join('')}
+      ${shown.map(x => `<div class="row">${x.body} <span class="src">· ${fmtDay(x.dt)} · ${x.tag}</span>${x.sum ? `<div class="sum">${hl(x.sum)}</div>` : ''}</div>`).join('')}
       ${hidden ? `<div class="more" data-more="${esc(it.ticker)}">+${hidden} more</div>` : ''}
     </div>`;
   }).join('');

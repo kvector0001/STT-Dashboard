@@ -6,7 +6,9 @@ Usage: python scripts/news_digest.py [--days 2] [--limit N] [--json] [--backfill
   --json      merges the latest items (default: today + yesterday) into news.json, the rolling 6-month archive.
   --backfill  one-off: fills the archive with the last 6 months for every holding.
   --fill-new  nightly: 6-month backfill only for holdings not yet in the archive's backfilled list.
+  --summarize N  adds a short rule-based summary (no AI) to key filings of the last N days, read from the PDF.
 """
+import io
 import json
 import re
 import sys
@@ -374,6 +376,134 @@ def collect(days, limit=None, only=None, max_news=3):
             "checked": len(stocks), "items": items}
 
 
+# ── Rule-based filing summary (no AI): the 1-2 most fact-dense sentences of the filing PDF ──
+_PDF_BOILER = re.compile(
+    r"dear sir|dear madam|madam|regulation\s*\d+|sebi\s*\(|lodr|listing obligations|take (?:the )?(?:same|this|it) on (?:your )?record"
+    r"|yours (?:faithfully|truly|sincerely)|for and on behalf|company secretary|compliance officer|\bcin\b|registered office"
+    r"|corporate office|\btel\b|e-?mail|www\.|@|bse limited|national stock exchange|scrip code|security code|symbol\s*:"
+    r"|^\s*(?:sub|subject|ref)\b|enclos|annexure|phone|fax|dalal street|bandra|digitally signed|membership no|\bdin\b"
+    r"|we wish to inform|this is to inform|please find|kindly|thanking you|disclosure under|intimation under"
+    r"|in compliance with|in terms of|pursuant to|the details as required|is attached|are attached|herewith"
+    r"|review engagement|we conducted|independent auditor|in accordance with the standard|our responsibility|true and fair"
+    r"|notice is hereby|extra-?ordinary general|e-?voting|book closure|letter no\.|vide (?:its|our) letter"
+    r"|\bis (?:a|an|one of the) (?:leading|focused|diversified|premier|integrated|global|well|trusted|largest)|about (?:us|the company)"
+    r"|since (?:its )?inception|headquartered|founded in|is listed on|for more information|forward[- ]looking|safe harbo", re.I)
+_FACT = re.compile(r"₹|\brs\.?\s?\d|\binr\b|crore|\bcr\b|lakh|million|billion|\d+(?:\.\d+)?\s?%|\bmw\b|\bgw\b|\bmwp\b|tonnes|\bmtpa\b|\bkm\b", re.I)
+_EVENT = re.compile(r"order|contract|award|letter of|acqui|capacity|expan|approv|commission|merger|demerg|stake|invest|revenue"
+                    r"|profit|ebitda|margin|plant|facility|subsidiary|joint venture|agreement|mou|penalt|tax|court|tribunal"
+                    r"|fund|allot|issue|launch|project|customer|client|execution|deliver|complet|period of|months", re.I)
+_ABBREV = re.compile(r"\b(?:rs|no|ltd|pvt|mr|ms|mrs|dr|co|inc|approx|viz|i\.e|e\.g|nos|sr|jr|st|vs|govt|dept)\.$", re.I)
+# SEBI disclosure-form lines that carry no news ("whether related party", "any other disclosures"...).
+_FORM_NOISE = re.compile(r"any other disclosure|no other special rights|brief details of|whether (?:the|any|such)|related party|"
+                         r"not applicable|\bn\.?a\.?\b|\bisin\b|does not result in|promoter group|interest in the entity|"
+                         r"governmental or regulatory approval|^\s*\(?[a-j]\)|^\s*\(?[ivx]+\)|\bsr\.? no\b|particulars", re.I)
+_ACTION = re.compile(r"has (?:received|bagged|secured|been awarded|won|signed|entered into|acquired|approved|incorporated|"
+                     r"commissioned|completed|launched|reaffirmed|upgraded|assigned)|have (?:received|bagged|secured)", re.I)
+
+
+def _to_crore(num, unit):
+    v = float(num.replace(",", ""))
+    unit = (unit or "").lower()
+    if unit.startswith("lakh"):
+        v /= 100
+    elif unit.startswith(("million", "mn")):
+        v /= 10
+    elif unit.startswith(("billion", "bn")):
+        v *= 100
+    elif not unit.startswith(("crore", "cr")) and v >= 1e5:
+        v /= 1e7  # plain rupees
+    return f"{v:,.2f}".rstrip("0").rstrip(".")
+
+
+def _order_summary(text):
+    """SEBI order-disclosure form -> 'Order worth ₹X crore from Y — nature; execute by Z'."""
+    m = re.search(r"(?:broad consideration|size of (?:the )?order)[^₹\d]{0,120}?(?:₹|rs\.?|inr)\s*([\d,]+(?:\.\d+)?)\s*(crores?|cr\b|lakhs?|million|mn|billion|bn)?",
+                  text, re.I)
+    if not m:
+        return ""
+    stop = r"(?=\s+(?:\(?[a-j]\)|\(?[ivx]+\)|\d+\.\s|nature|significant|whether|broad|time period|name of|domestic|international)|[;|]|$)"
+    who = re.search(r"name of the entity[^:;]{0,60}?(?:awarding|awarded|to whom)[^:;]{0,60}?[:;]\s*(.{3,90}?)" + stop, text, re.I)
+    what = re.search(r"nature of (?:the )?order[^:;]{0,40}?[:;]\s*(.{5,110}?)" + stop, text, re.I)
+    when = re.search(r"(?:time period|to be executed)[^:;]{0,60}?[:;]\s*(.{3,45}?)" + stop, text, re.I)
+    s = f"Order worth ₹{_to_crore(m.group(1), m.group(2))} crore"
+    if who:
+        s += f" from {who.group(1).strip(' .,-')}"
+    if what:
+        s += f" — {what.group(1).strip(' .,-')}"
+    if when:
+        s += f"; to be executed by {when.group(1).strip(' .,-')}"
+    return s
+
+
+def _sentences(text):
+    parts, buf = [], ""
+    # sentence ends, plus numbered form items ("3. Shareholding ...")
+    for piece in re.split(r"(?<=[.;])\s+(?=[A-Z(₹])|\s+\d{1,2}\.\s+(?=[A-Z])", text):
+        buf = f"{buf} {piece}".strip() if buf else piece
+        if not _ABBREV.search(buf) and not re.search(r"\b[A-Z]\.$", buf):  # "Mr. Vishal C." is an initial, not an end
+            parts.append(buf)
+            buf = ""
+    if buf:
+        parts.append(buf)
+    return parts
+
+
+def summarize_pdf(url, title=""):
+    """Best 1-2 fact sentences from a filing PDF ('' when nothing useful / scanned image / not a PDF)."""
+    try:
+        from pypdf import PdfReader
+        r = requests.get(url, headers=UA, timeout=25)
+        if not r.ok or len(r.content) > 6_000_000 or not r.content.startswith(b"%PDF"):
+            return ""
+        text = " ".join((p.extract_text() or "") for p in PdfReader(io.BytesIO(r.content)).pages[:4])
+    except Exception:
+        return ""
+    text = re.sub(r"\s+", " ", text).strip()
+    text = re.sub(r"(?:[-—–_x^/|•*]\s*){2,}|\bpage \d+ of \d+\b", " ", text, flags=re.I)
+    order = _order_summary(text)
+    if order:
+        return order[:260]
+    scored = []
+    for i, s in enumerate(_sentences(text)):
+        s = re.sub(r"^(?:size of (?:the )?agreement|nature and details of .{0,60}?passed|details of .{0,40}?:|brief description[^:]*:"
+                   r"|date of receipt of .{0,140}?authority)\s*",
+                   "", s.strip(" -•*:"), flags=re.I)
+        if not 40 <= len(s) <= 500 or _PDF_BOILER.search(s) or _FORM_NOISE.search(s):
+            continue
+        if sum(c.isalpha() for c in s) < len(s) * 0.55 or len(re.findall(r"\d+(?:[.,]\d+)*", s)) > 8:
+            continue  # tables / number grids
+        score = 3 * len(_FACT.findall(s)) + 2 * min(len(_EVENT.findall(s)), 3) + (1 if re.search(r"\d", s) else 0)
+        score += 4 if _ACTION.search(s) else 0
+        if score >= 3:
+            scored.append((score, i, s))
+    if not scored:
+        return ""
+    top = sorted(scored, reverse=True)
+    summary = top[0][2]
+    if len(top) > 1 and len(summary) + len(top[1][2]) < 200:
+        summary = " ".join(s for _, _, s in sorted(top[:2], key=lambda x: x[1]))
+    if len(summary) > 200:
+        summary = summary[:200].rsplit(" ", 1)[0].rstrip(",;(") + "…"
+    # Skip when it only repeats the filing's own title.
+    if summary and _same_story(_story_key(summary), _story_key(title)) and len(summary) < len(title) + 40:
+        return ""
+    return summary
+
+
+def summarize_filings(arch, days, force=False):
+    """Add f['summary'] once to key, non-duplicate filings of the last `days` days. Returns how many were processed."""
+    cutoff = (datetime.now(IST) - timedelta(days=days)).isoformat()
+    n = 0
+    for it in arch.get("items", []):
+        for f in it["filings"]:
+            if ("summary" in f and not force) or not f.get("key") or f.get("dup") or (f["dt"] or "") < cutoff or not f.get("url"):
+                continue
+            f["summary"] = summarize_pdf(f["url"], f["text"])
+            n += 1
+            time.sleep(0.3)
+    return n
+
+
 def _days_apart(a, b):
     try:
         return abs((datetime.fromisoformat(a) - datetime.fromisoformat(b)).days)
@@ -429,6 +559,13 @@ def merge_archive(new, backfilled_now=()):
 
 
 def main():
+    if "--summarize" in sys.argv:
+        n_days = int(sys.argv[sys.argv.index("--summarize") + 1])
+        arch = json.loads(ARCHIVE.read_text(encoding="utf-8"))
+        done = summarize_filings(arch, n_days, force="--force" in sys.argv)
+        ARCHIVE.write_text(json.dumps(arch, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+        print(f"summarize: {done} key filing(s) from the last {n_days} days processed")
+        return
     days = int(sys.argv[sys.argv.index("--days") + 1]) if "--days" in sys.argv else 2
     limit = int(sys.argv[sys.argv.index("--limit") + 1]) if "--limit" in sys.argv else None
     backfill = "--backfill" in sys.argv
