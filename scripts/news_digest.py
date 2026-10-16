@@ -110,10 +110,10 @@ KEY_NEWS = re.compile(r"\b(?:orders?|order book|order inflow|contracts?|tenders?
 # Market commentary that mentions a business word but doesn't report an event.
 COMMENTARY = re.compile(r"why is (?:the )?stock|should (?:you|investors)|buy,? sell or hold|target price|"
                         r"price target|\bupside\b|\bdownside\b|sector stocks|stocks? (?:today|in focus|to watch)|"
-                        r"ahead of|multibagger|buying opportunity|nse sought clarification|\?\s*$", re.I)
+                        r"ahead of|multibagger|opportunit\w*|nse sought clarification|\?\s*$", re.I)
 # Routine people/payout events - not key news (unless they also carry a resignation or a corporate action).
 NOT_KEY = re.compile(r"\b(?:re-?)?appoint\w*|\bnamed (?:as )?(?:the )?(?:new )?(?:ceo|cfo|coo|cto|md|chairman|director|auditor)|"
-                     r"\bdividend\w*|\bgovernor\b|encumbrance", re.I)
+                     r"\bdividend\w*|\bgovernor\b|encumbrance|voting results|\bagm\b", re.I)
 KEEP_ANYWAY = re.compile(r"resign\w*|steps? down|quits?\b|bonus|buyback|split|demerg\w*", re.I)
 
 

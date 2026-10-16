@@ -114,7 +114,7 @@ def _section(title, rows, empty):
         lines.append(f"  {empty}")
         return lines
     for r in rows:
-        ret = f"{r['ret']:+.1f}%" if isinstance(r["ret"], (int, float)) else "\u2014"
+        ret = _pct(r["ret"])
         vol = f"{r['vol']:.0f}\u00d7" if isinstance(r["vol"], (int, float)) else "\u2014"
         lines.append(f"{r['tag']}  {r['ticker']}   {ret} \u00b7 {vol} vol")
     return lines
@@ -139,7 +139,11 @@ def format_message(today, yest, ydate=None):
 
 
 def _pct(v):
-    return f"{v:+.1f}%" if isinstance(v, (int, float)) else "\u2014"
+    # Telegram has no font colours, so a coloured dot marks direction.
+    if not isinstance(v, (int, float)):
+        return "\u2014"
+    dot = "\U0001f7e2" if v >= 0 else "\U0001f534"
+    return f"{dot} {v:+.1f}%"
 
 
 def reversal_message(held):
@@ -292,14 +296,16 @@ def news_message(moves, sent, followup=False, days=2):
 
 
 def weekend_message(held, sent):
-    """Weekend: top gainers of the week (1W) and month (1M) + the key news behind them (never repeated).
-    News window: last 7 days for weekly gainers, last 30 days for monthly gainers."""
-    wk = [(tk, v) for tk, v in _top(held, "ret_1w")[0]]
-    mo = [(tk, v) for tk, v in _top(held, "ret_1m")[0]]
-    by_tk = _collect({tk for tk, _ in wk + mo}, 30, max_news=8)
+    """Weekend: top-5 gainers AND losers of the week (1W) and month (1M) + the key news behind them (never repeated).
+    News window: last 7 days for the weekly lists, last 30 days for the monthly lists."""
+    wk_up, wk_dn = _top(held, "ret_1w")
+    mo_up, mo_dn = _top(held, "ret_1m")
+    by_tk = _collect({tk for tk, _ in wk_up + wk_dn + mo_up + mo_dn}, 30, max_news=8)
     now = datetime.now(IST)
-    lines, new, shown = [f"\U0001f3c6 <b>Weekend \u2014 top gainers &amp; the news behind them</b> ({now:%a %d %b})", ""], [], set()
-    for label, rows, field, back in (("THIS WEEK (1W)", wk, "ret_1w", 7), ("THIS MONTH (1M)", mo, "ret_1m", 30)):
+    lines, new, shown = [f"\U0001f3c6 <b>Weekend \u2014 top gainers &amp; losers and the news behind them</b> ({now:%a %d %b})", ""], [], set()
+    groups = (("THIS WEEK \u2014 \u25b2 GAINERS", wk_up, 7), ("THIS WEEK \u2014 \u25bc LOSERS", wk_dn, 7),
+              ("THIS MONTH \u2014 \u25b2 GAINERS", mo_up, 30), ("THIS MONTH \u2014 \u25bc LOSERS", mo_dn, 30))
+    for label, rows, back in groups:
         lines.append(f"<b>{label}</b>")
         since = (now - timedelta(days=back)).strftime("%Y-%m-%d")
         for tk, v in rows:
