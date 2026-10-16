@@ -44,6 +44,7 @@ jobs:
 
       - name: Send daily movers to Telegram
         if: github.event_name == 'workflow_dispatch' && inputs.alert
+        continue-on-error: true
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}

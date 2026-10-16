@@ -424,10 +424,14 @@ def main():
         summary.append("gainers/losers")
     moves = vp_movers(held)
     if slot in ("midday", "close", "all") and moves and "--no-news" not in sys.argv:
-        msg, n, new_sent = news_message(moves, load_sent(), followup=slot == "close")
-        if msg:
-            messages.append((msg, True))
-        summary.append(f"key news for {n}/{len(moves)} volume+price movers")
+        # A news failure must never stop the movers tables from going out.
+        try:
+            msg, n, new_sent = news_message(moves, load_sent(), followup=slot == "close")
+            if msg:
+                messages.append((msg, True))
+            summary.append(f"key news for {n}/{len(moves)} volume+price movers")
+        except Exception as e:
+            print(f"  news part failed ({type(e).__name__}: {e}) - sending movers only")
 
     if not messages:
         print(f"Telegram alert [{slot}]: nothing new to send.")

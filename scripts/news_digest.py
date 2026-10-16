@@ -420,7 +420,7 @@ def _to_crore(num, unit):
 
 def _order_summary(text):
     """SEBI order-disclosure form -> 'Order worth ₹X crore from Y — nature; execute by Z'."""
-    m = re.search(r"(?:broad consideration|size of (?:the )?order)[^₹\d]{0,120}?(?:₹|rs\.?|inr)\s*([\d,]+(?:\.\d+)?)\s*(crores?|cr\b|lakhs?|million|mn|billion|bn)?",
+    m = re.search(r"(?:broad consideration|size of (?:the )?order)[^₹\d]{0,120}?(?:₹|rs\.?|inr)\s*(\d[\d,]*(?:\.\d+)?)\s*(crores?|cr\b|lakhs?|million|mn|billion|bn)?",
                   text, re.I)
     if not m:
         return ""
@@ -452,7 +452,14 @@ def _sentences(text):
 
 
 def summarize_pdf(url, title=""):
-    """Best 1-2 fact sentences from a filing PDF ('' when nothing useful / scanned image / not a PDF)."""
+    """Best 1-2 fact sentences from a filing PDF ('' when nothing useful / scanned image / not a PDF). Never raises."""
+    try:
+        return _summarize_pdf(url, title)
+    except Exception:
+        return ""
+
+
+def _summarize_pdf(url, title):
     try:
         from pypdf import PdfReader
         r = requests.get(url, headers=UA, timeout=25)
