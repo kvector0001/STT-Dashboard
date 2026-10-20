@@ -87,7 +87,7 @@
     "div_yield": 0,
     "pat_cagr": 170.6,
     "rev_cagr": 13.4,
-    "mcap_3y": NaN,
+    "mcap_3y": 66.48,
     "quality_score": 6.8,
     "quality_tier": "Above-average",
     "quality_rank": 37,
@@ -132,7 +132,7 @@
     "debt_to_equity": 13.045,
     "eps": 19.23,
     "book_value": 149.623,
-    "div_yield": 9.0,
+    "div_yield": 10.0,
     "pat_cagr": 86.0,
     "rev_cagr": 68.3,
     "mcap_3y": 182.5,
@@ -183,7 +183,7 @@
     "div_yield": 0,
     "pat_cagr": 363.9,
     "rev_cagr": 130.4,
-    "mcap_3y": NaN,
+    "mcap_3y": 180.18,
     "quality_score": 7.9,
     "quality_tier": "High quality",
     "quality_rank": 11,
@@ -228,7 +228,7 @@
     "debt_to_equity": 86.608,
     "eps": 12.52,
     "book_value": 127.161,
-    "div_yield": 18.0,
+    "div_yield": 19.0,
     "pat_cagr": 22.1,
     "rev_cagr": 31.6,
     "mcap_3y": null,
@@ -374,7 +374,7 @@
     "div_yield": 45.0,
     "pat_cagr": -81.4,
     "rev_cagr": 21.6,
-    "mcap_3y": NaN,
+    "mcap_3y": 172.81,
     "quality_score": 6.3,
     "quality_tier": "Above-average",
     "quality_rank": 61,
@@ -466,7 +466,7 @@
     "debt_to_equity": 16.072,
     "eps": 387.97,
     "book_value": 1461.02,
-    "div_yield": 17.0,
+    "div_yield": 18.0,
     "pat_cagr": 962.8,
     "rev_cagr": 119.2,
     "mcap_3y": 410.42,
@@ -607,10 +607,10 @@
     "debt_to_equity": 2.928,
     "eps": 30.72,
     "book_value": 142.427,
-    "div_yield": 619.0,
+    "div_yield": 629.0,
     "pat_cagr": 13.2,
     "rev_cagr": 30.5,
-    "mcap_3y": NaN,
+    "mcap_3y": 46.02,
     "quality_score": 6.2,
     "quality_tier": "Above-average",
     "quality_rank": 68,
@@ -654,10 +654,10 @@
     "debt_to_equity": 64.646,
     "eps": 12.99,
     "book_value": 151.72,
-    "div_yield": 110.0,
+    "div_yield": 112.0,
     "pat_cagr": -15.0,
     "rev_cagr": -1.1,
-    "mcap_3y": NaN,
+    "mcap_3y": -33.43,
     "quality_score": 5.4,
     "quality_tier": "Average",
     "quality_rank": 125,
@@ -751,7 +751,7 @@
     "div_yield": 160.0,
     "pat_cagr": 604.7,
     "rev_cagr": 101.6,
-    "mcap_3y": NaN,
+    "mcap_3y": 557.83,
     "quality_score": 6.4,
     "quality_tier": "Above-average",
     "quality_rank": 58,
@@ -885,7 +885,7 @@
     "debt_to_equity": 3.021,
     "eps": 28.16,
     "book_value": 80.581,
-    "div_yield": 36.0,
+    "div_yield": 37.0,
     "pat_cagr": -23.5,
     "rev_cagr": 6.0,
     "mcap_3y": 219.71,
@@ -932,7 +932,7 @@
     "debt_to_equity": 3.212,
     "eps": 45.54,
     "book_value": 563.415,
-    "div_yield": 150.0,
+    "div_yield": 158.0,
     "pat_cagr": 144.5,
     "rev_cagr": 125.7,
     "mcap_3y": 64.49,
@@ -1027,7 +1027,7 @@
     "debt_to_equity": 5.015,
     "eps": 50.37,
     "book_value": 442.505,
-    "div_yield": 143.0,
+    "div_yield": 145.0,
     "pat_cagr": 15.9,
     "rev_cagr": 23.9,
     "mcap_3y": 17.92,
@@ -1076,7 +1076,7 @@
     "debt_to_equity": 51.79,
     "eps": 27.12,
     "book_value": 156.921,
-    "div_yield": 365.0,
+    "div_yield": 366.0,
     "pat_cagr": 0.6,
     "rev_cagr": 4.6,
     "mcap_3y": 109.22,
@@ -1175,7 +1175,7 @@
     "div_yield": 6.0,
     "pat_cagr": -65.3,
     "rev_cagr": -16.5,
-    "mcap_3y": NaN,
+    "mcap_3y": 165.02,
     "quality_score": 4.6,
     "quality_tier": "Below-average",
     "quality_rank": 152,
@@ -1268,10 +1268,10 @@
     "debt_to_equity": 88.776,
     "eps": 25.18,
     "book_value": 335.162,
-    "div_yield": 50.0,
+    "div_yield": 51.0,
     "pat_cagr": -54.3,
     "rev_cagr": 12.9,
-    "mcap_3y": NaN,
+    "mcap_3y": 29.59,
     "quality_score": 5.8,
     "quality_tier": "Average",
     "quality_rank": 97,
@@ -1316,10 +1316,10 @@
     "debt_to_equity": 25.279,
     "eps": 8.13,
     "book_value": 33.074,
-    "div_yield": 71.0,
+    "div_yield": 74.0,
     "pat_cagr": 68.0,
     "rev_cagr": 36.6,
-    "mcap_3y": NaN,
+    "mcap_3y": 91.19,
     "quality_score": 5.8,
     "quality_tier": "Average",
     "quality_rank": 98,
@@ -1411,7 +1411,7 @@
     "debt_to_equity": 21.319,
     "eps": 4.5,
     "book_value": 52.357,
-    "div_yield": 239.0,
+    "div_yield": 245.0,
     "pat_cagr": 21.1,
     "rev_cagr": 7.8,
     "mcap_3y": null,
@@ -1557,7 +1557,7 @@
     "div_yield": 0,
     "pat_cagr": 51.6,
     "rev_cagr": 4.2,
-    "mcap_3y": NaN,
+    "mcap_3y": -40.95,
     "quality_score": 4.9,
     "quality_tier": "Below-average",
     "quality_rank": 148,
@@ -1602,10 +1602,10 @@
     "debt_to_equity": 1.465,
     "eps": 74.3,
     "book_value": 846.818,
-    "div_yield": 17.0,
+    "div_yield": 18.0,
     "pat_cagr": 46.3,
     "rev_cagr": 70.9,
-    "mcap_3y": NaN,
+    "mcap_3y": 172.45,
     "quality_score": 5.3,
     "quality_tier": "Average",
     "quality_rank": 134,
@@ -1651,7 +1651,7 @@
     "debt_to_equity": 3.102,
     "eps": 13.9,
     "book_value": 78.397,
-    "div_yield": 23.0,
+    "div_yield": 24.0,
     "pat_cagr": -14.3,
     "rev_cagr": -17.4,
     "mcap_3y": null,
@@ -1798,7 +1798,7 @@
     "div_yield": 0,
     "pat_cagr": -36.0,
     "rev_cagr": 7.1,
-    "mcap_3y": NaN,
+    "mcap_3y": 82.02,
     "quality_score": 6.2,
     "quality_tier": "Above-average",
     "quality_rank": 70,
@@ -2037,7 +2037,7 @@
     "debt_to_equity": 0.778,
     "eps": 25.0,
     "book_value": 165.254,
-    "div_yield": 39.0,
+    "div_yield": 40.0,
     "pat_cagr": 7.9,
     "rev_cagr": 14.9,
     "mcap_3y": -50.41,
@@ -2181,7 +2181,7 @@
     "debt_to_equity": 8.121,
     "eps": 20.71,
     "book_value": 265.614,
-    "div_yield": 158.0,
+    "div_yield": 162.0,
     "pat_cagr": -75.6,
     "rev_cagr": 19.0,
     "mcap_3y": null,
@@ -2233,7 +2233,7 @@
     "div_yield": 31.0,
     "pat_cagr": 113.1,
     "rev_cagr": 57.5,
-    "mcap_3y": NaN,
+    "mcap_3y": 207.31,
     "quality_score": 6.0,
     "quality_tier": "Above-average",
     "quality_rank": 83,
@@ -2328,10 +2328,10 @@
     "debt_to_equity": 6.295,
     "eps": 11.28,
     "book_value": 299.886,
-    "div_yield": 91.0,
+    "div_yield": 94.0,
     "pat_cagr": 28.4,
     "rev_cagr": 26.6,
-    "mcap_3y": NaN,
+    "mcap_3y": 58.98,
     "quality_score": 5.8,
     "quality_tier": "Average",
     "quality_rank": 99,
@@ -2524,7 +2524,7 @@
     "debt_to_equity": 42.145,
     "eps": 3.38,
     "book_value": 210.137,
-    "div_yield": 14.0,
+    "div_yield": 15.0,
     "pat_cagr": 234.6,
     "rev_cagr": 10.0,
     "mcap_3y": 30.45,
@@ -2573,7 +2573,7 @@
     "debt_to_equity": 41.317,
     "eps": 15.38,
     "book_value": 293.12,
-    "div_yield": 13.0,
+    "div_yield": 14.0,
     "pat_cagr": -9.4,
     "rev_cagr": 34.8,
     "mcap_3y": 26.16,
@@ -2624,7 +2624,7 @@
     "div_yield": 0,
     "pat_cagr": 0,
     "rev_cagr": 0,
-    "mcap_3y": NaN,
+    "mcap_3y": -83.77,
     "quality_score": 5.1,
     "quality_tier": "Average",
     "quality_rank": 146,
@@ -2666,10 +2666,10 @@
     "debt_to_equity": 18.938,
     "eps": 0.89,
     "book_value": 31.276,
-    "div_yield": 133.0,
+    "div_yield": 130.0,
     "pat_cagr": 0,
     "rev_cagr": -45.7,
-    "mcap_3y": NaN,
+    "mcap_3y": 109.19,
     "quality_score": 5.9,
     "quality_tier": "Average",
     "quality_rank": 94,
@@ -2715,7 +2715,7 @@
     "debt_to_equity": 25.465,
     "eps": 14.16,
     "book_value": 132.457,
-    "div_yield": 6.0,
+    "div_yield": 7.0,
     "pat_cagr": 115.4,
     "rev_cagr": 44.9,
     "mcap_3y": 397.98,
@@ -2811,7 +2811,7 @@
     "debt_to_equity": 0.265,
     "eps": 20.18,
     "book_value": 96.127,
-    "div_yield": 94.0,
+    "div_yield": 98.0,
     "pat_cagr": 32.5,
     "rev_cagr": 7.6,
     "mcap_3y": 105.02,
@@ -2860,7 +2860,7 @@
     "debt_to_equity": 25.059,
     "eps": 17.18,
     "book_value": 202.122,
-    "div_yield": 734.0,
+    "div_yield": 737.0,
     "pat_cagr": -49.8,
     "rev_cagr": 19.1,
     "mcap_3y": 46.16,
@@ -2912,7 +2912,7 @@
     "div_yield": 32.0,
     "pat_cagr": 110.2,
     "rev_cagr": 22.7,
-    "mcap_3y": NaN,
+    "mcap_3y": -40.12,
     "quality_score": 5.2,
     "quality_tier": "Average",
     "quality_rank": 141,
@@ -2961,7 +2961,7 @@
     "div_yield": 2.0,
     "pat_cagr": 281.4,
     "rev_cagr": 90.7,
-    "mcap_3y": NaN,
+    "mcap_3y": 392.18,
     "quality_score": 5.4,
     "quality_tier": "Average",
     "quality_rank": 130,
@@ -3007,7 +3007,7 @@
     "debt_to_equity": 9.102,
     "eps": 17.71,
     "book_value": 147.983,
-    "div_yield": 229.0,
+    "div_yield": 236.0,
     "pat_cagr": -8.8,
     "rev_cagr": 1.2,
     "mcap_3y": -36.91,
@@ -3154,10 +3154,10 @@
     "debt_to_equity": 35.781,
     "eps": 77.16,
     "book_value": 311.026,
-    "div_yield": 468.0,
+    "div_yield": 481.0,
     "pat_cagr": 28.0,
     "rev_cagr": 30.6,
-    "mcap_3y": NaN,
+    "mcap_3y": 124.71,
     "quality_score": 6.0,
     "quality_tier": "Above-average",
     "quality_rank": 84,
@@ -3206,7 +3206,7 @@
     "div_yield": 25.0,
     "pat_cagr": -13.4,
     "rev_cagr": 16.8,
-    "mcap_3y": NaN,
+    "mcap_3y": 93.91,
     "quality_score": 7.4,
     "quality_tier": "High quality",
     "quality_rank": 17,
@@ -3301,7 +3301,7 @@
     "debt_to_equity": 53.253,
     "eps": 19.73,
     "book_value": 136.344,
-    "div_yield": 41.0,
+    "div_yield": 42.0,
     "pat_cagr": 0,
     "rev_cagr": 26.9,
     "mcap_3y": 111.88,
@@ -3350,10 +3350,10 @@
     "debt_to_equity": 15.116,
     "eps": 99.9,
     "book_value": 1794.841,
-    "div_yield": 143.0,
+    "div_yield": 145.0,
     "pat_cagr": -29.6,
     "rev_cagr": 17.7,
-    "mcap_3y": NaN,
+    "mcap_3y": 35.84,
     "quality_score": 5.3,
     "quality_tier": "Average",
     "quality_rank": 136,
@@ -3399,7 +3399,7 @@
     "debt_to_equity": 164.311,
     "eps": 11.7,
     "book_value": 94.474,
-    "div_yield": 442.0,
+    "div_yield": 450.0,
     "pat_cagr": 3.8,
     "rev_cagr": 5.4,
     "mcap_3y": 66.41,
@@ -3446,10 +3446,10 @@
     "debt_to_equity": 8.621,
     "eps": 20.05,
     "book_value": 327.871,
-    "div_yield": 59.0,
+    "div_yield": 60.0,
     "pat_cagr": -29.4,
     "rev_cagr": 12.1,
-    "mcap_3y": NaN,
+    "mcap_3y": -48.87,
     "quality_score": 5.2,
     "quality_tier": "Average",
     "quality_rank": 142,
@@ -3540,7 +3540,7 @@
     "debt_to_equity": 64.676,
     "eps": 47.11,
     "book_value": 235.441,
-    "div_yield": 31.0,
+    "div_yield": 32.0,
     "pat_cagr": -18.5,
     "rev_cagr": 40.7,
     "mcap_3y": null,
@@ -3590,7 +3590,7 @@
     "div_yield": 0,
     "pat_cagr": 266.7,
     "rev_cagr": 72.2,
-    "mcap_3y": NaN,
+    "mcap_3y": -39.23,
     "quality_score": 5.2,
     "quality_tier": "Average",
     "quality_rank": 143,
@@ -3681,7 +3681,7 @@
     "debt_to_equity": 2.817,
     "eps": 10.78,
     "book_value": 70.469,
-    "div_yield": 127.0,
+    "div_yield": 130.0,
     "pat_cagr": 25.2,
     "rev_cagr": 27.6,
     "mcap_3y": 14.49,
@@ -3775,10 +3775,10 @@
     "debt_to_equity": 0.175,
     "eps": 127.62,
     "book_value": 1266.086,
-    "div_yield": 59.0,
+    "div_yield": 60.0,
     "pat_cagr": 9.5,
     "rev_cagr": 11.0,
-    "mcap_3y": NaN,
+    "mcap_3y": 12.98,
     "quality_score": 5.6,
     "quality_tier": "Average",
     "quality_rank": 113,
@@ -3822,10 +3822,10 @@
     "debt_to_equity": 26.051,
     "eps": 4.34,
     "book_value": 61.429,
-    "div_yield": 98.0,
+    "div_yield": 100.0,
     "pat_cagr": -32.4,
     "rev_cagr": 30.7,
-    "mcap_3y": NaN,
+    "mcap_3y": 48.98,
     "quality_score": 6.0,
     "quality_tier": "Above-average",
     "quality_rank": 85,
@@ -3869,10 +3869,10 @@
     "debt_to_equity": 38.581,
     "eps": 37.3,
     "book_value": 406.471,
-    "div_yield": 115.0,
+    "div_yield": 113.0,
     "pat_cagr": 381.5,
     "rev_cagr": 71.0,
-    "mcap_3y": NaN,
+    "mcap_3y": 17.08,
     "quality_score": 6.4,
     "quality_tier": "Above-average",
     "quality_rank": 56,
@@ -3919,7 +3919,7 @@
     "div_yield": 186.0,
     "pat_cagr": 59.8,
     "rev_cagr": 14.5,
-    "mcap_3y": NaN,
+    "mcap_3y": -16.31,
     "quality_score": 6.2,
     "quality_tier": "Above-average",
     "quality_rank": 73,
@@ -3966,7 +3966,7 @@
     "div_yield": 0,
     "pat_cagr": 145.3,
     "rev_cagr": 49.8,
-    "mcap_3y": NaN,
+    "mcap_3y": 264.02,
     "quality_score": 6.7,
     "quality_tier": "Above-average",
     "quality_rank": 43,
@@ -4013,7 +4013,7 @@
     "div_yield": 244.0,
     "pat_cagr": 174.9,
     "rev_cagr": 34.4,
-    "mcap_3y": NaN,
+    "mcap_3y": 28.75,
     "quality_score": 6.0,
     "quality_tier": "Above-average",
     "quality_rank": 86,
@@ -4061,7 +4061,7 @@
     "div_yield": 0,
     "pat_cagr": 0,
     "rev_cagr": 9.6,
-    "mcap_3y": NaN,
+    "mcap_3y": 10.86,
     "quality_score": 5.3,
     "quality_tier": "Average",
     "quality_rank": 139,
@@ -4156,7 +4156,7 @@
     "div_yield": 37.0,
     "pat_cagr": -9.1,
     "rev_cagr": 25.8,
-    "mcap_3y": NaN,
+    "mcap_3y": -42.68,
     "quality_score": 4.4,
     "quality_tier": "Below-average",
     "quality_rank": 156,
@@ -4487,10 +4487,10 @@
     "debt_to_equity": 6.409,
     "eps": 259.86,
     "book_value": 1188.123,
-    "div_yield": 382.0,
+    "div_yield": 379.0,
     "pat_cagr": 159.4,
     "rev_cagr": 66.9,
-    "mcap_3y": NaN,
+    "mcap_3y": 95.63,
     "quality_score": 6.7,
     "quality_tier": "Above-average",
     "quality_rank": 40,
@@ -4535,7 +4535,7 @@
     "debt_to_equity": 42.166,
     "eps": 52.66,
     "book_value": 492.563,
-    "div_yield": 42.0,
+    "div_yield": 43.0,
     "pat_cagr": -83.4,
     "rev_cagr": 7.1,
     "mcap_3y": 10.46,
@@ -4583,10 +4583,10 @@
     "debt_to_equity": 2.476,
     "eps": 10.81,
     "book_value": 45.551,
-    "div_yield": 81.0,
+    "div_yield": 83.0,
     "pat_cagr": -21.2,
     "rev_cagr": 19.2,
-    "mcap_3y": NaN,
+    "mcap_3y": 17.68,
     "quality_score": 8.2,
     "quality_tier": "Best-in-class",
     "quality_rank": 4,
@@ -4631,10 +4631,10 @@
     "debt_to_equity": 23.885,
     "eps": 14.88,
     "book_value": 70.8,
-    "div_yield": 47.0,
+    "div_yield": 50.0,
     "pat_cagr": 21.1,
     "rev_cagr": 22.6,
-    "mcap_3y": NaN,
+    "mcap_3y": 10.52,
     "quality_score": 7.5,
     "quality_tier": "High quality",
     "quality_rank": 16,
@@ -4730,7 +4730,7 @@
     "div_yield": 97.0,
     "pat_cagr": 184.1,
     "rev_cagr": 47.7,
-    "mcap_3y": NaN,
+    "mcap_3y": 259.81,
     "quality_score": 6.6,
     "quality_tier": "Above-average",
     "quality_rank": 45,
@@ -4823,7 +4823,7 @@
     "debt_to_equity": 110.358,
     "eps": 23.58,
     "book_value": 155.242,
-    "div_yield": 152.0,
+    "div_yield": 158.0,
     "pat_cagr": -42.3,
     "rev_cagr": 23.3,
     "mcap_3y": 92.02,
@@ -4872,7 +4872,7 @@
     "debt_to_equity": 536.837,
     "eps": 78.93,
     "book_value": 433.112,
-    "div_yield": 468.0,
+    "div_yield": 469.0,
     "pat_cagr": 2.1,
     "rev_cagr": 0.8,
     "mcap_3y": 61.21,
@@ -4920,7 +4920,7 @@
     "debt_to_equity": 226.528,
     "eps": 1.62,
     "book_value": 36.207,
-    "div_yield": 278.0,
+    "div_yield": 293.0,
     "pat_cagr": -1.7,
     "rev_cagr": 52.0,
     "mcap_3y": -21.57,
@@ -5016,10 +5016,10 @@
     "debt_to_equity": 1.468,
     "eps": 83.47,
     "book_value": 195.045,
-    "div_yield": 185.0,
+    "div_yield": 182.0,
     "pat_cagr": 19.5,
     "rev_cagr": 20.3,
-    "mcap_3y": NaN,
+    "mcap_3y": 49.24,
     "quality_score": 6.1,
     "quality_tier": "Above-average",
     "quality_rank": 74,
@@ -5259,7 +5259,7 @@
     "div_yield": 69.0,
     "pat_cagr": 3.8,
     "rev_cagr": -63.3,
-    "mcap_3y": NaN,
+    "mcap_3y": 76.38,
     "quality_score": 6.0,
     "quality_tier": "Above-average",
     "quality_rank": 81,
@@ -5304,7 +5304,7 @@
     "debt_to_equity": 29.454,
     "eps": 34.74,
     "book_value": 195.37,
-    "div_yield": 263.0,
+    "div_yield": 272.0,
     "pat_cagr": 75.0,
     "rev_cagr": 40.3,
     "mcap_3y": 98.0,
@@ -5450,7 +5450,7 @@
     "debt_to_equity": 2.381,
     "eps": 39.4,
     "book_value": 228.933,
-    "div_yield": 101.0,
+    "div_yield": 104.0,
     "pat_cagr": 22.3,
     "rev_cagr": 14.2,
     "mcap_3y": -8.22,
@@ -5499,7 +5499,7 @@
     "debt_to_equity": 0.309,
     "eps": 42.91,
     "book_value": 298.728,
-    "div_yield": 119.0,
+    "div_yield": 122.0,
     "pat_cagr": 0,
     "rev_cagr": 0,
     "mcap_3y": null,
@@ -5685,7 +5685,7 @@
     "debt_to_equity": 16.041,
     "eps": 33.29,
     "book_value": 128.408,
-    "div_yield": 243.0,
+    "div_yield": 252.0,
     "pat_cagr": 37.6,
     "rev_cagr": 21.7,
     "mcap_3y": 75.36,
@@ -5732,10 +5732,10 @@
     "debt_to_equity": 14.488,
     "eps": 3.83,
     "book_value": 43.846,
-    "div_yield": 43.0,
+    "div_yield": 44.0,
     "pat_cagr": 6.7,
     "rev_cagr": 2.6,
-    "mcap_3y": NaN,
+    "mcap_3y": 77.09,
     "quality_score": 6.1,
     "quality_tier": "Above-average",
     "quality_rank": 78,
@@ -5780,10 +5780,10 @@
     "debt_to_equity": 27.26,
     "eps": 22.49,
     "book_value": 129.97,
-    "div_yield": 156.0,
+    "div_yield": 162.0,
     "pat_cagr": 76.7,
     "rev_cagr": 34.6,
-    "mcap_3y": NaN,
+    "mcap_3y": 154.62,
     "quality_score": 5.8,
     "quality_tier": "Average",
     "quality_rank": 100,
@@ -5831,7 +5831,7 @@
     "div_yield": 77.0,
     "pat_cagr": 40.8,
     "rev_cagr": 16.4,
-    "mcap_3y": NaN,
+    "mcap_3y": 42.85,
     "quality_score": 6.8,
     "quality_tier": "Above-average",
     "quality_rank": 39,
@@ -5970,10 +5970,10 @@
     "debt_to_equity": 4.666,
     "eps": 11.28,
     "book_value": 84.147,
-    "div_yield": 50.0,
+    "div_yield": 49.0,
     "pat_cagr": 246.3,
     "rev_cagr": 14.5,
-    "mcap_3y": NaN,
+    "mcap_3y": 36.96,
     "quality_score": 7.3,
     "quality_tier": "High quality",
     "quality_rank": 21,
@@ -6205,10 +6205,10 @@
     "debt_to_equity": 56.224,
     "eps": 5.43,
     "book_value": 77.797,
-    "div_yield": 26.0,
+    "div_yield": 28.0,
     "pat_cagr": -84.7,
     "rev_cagr": 5.9,
-    "mcap_3y": NaN,
+    "mcap_3y": -20.77,
     "quality_score": 4.6,
     "quality_tier": "Below-average",
     "quality_rank": 154,
@@ -6254,7 +6254,7 @@
     "debt_to_equity": 0.075,
     "eps": 84.72,
     "book_value": 1269.35,
-    "div_yield": 25.0,
+    "div_yield": 26.0,
     "pat_cagr": 63.2,
     "rev_cagr": 36.6,
     "mcap_3y": -46.36,
@@ -6303,7 +6303,7 @@
     "debt_to_equity": 158.765,
     "eps": 23.1,
     "book_value": 153.697,
-    "div_yield": 31.0,
+    "div_yield": 32.0,
     "pat_cagr": -17.7,
     "rev_cagr": 15.1,
     "mcap_3y": 73.32,
@@ -6355,7 +6355,7 @@
     "div_yield": 0,
     "pat_cagr": 0,
     "rev_cagr": -10.1,
-    "mcap_3y": NaN,
+    "mcap_3y": 172.61,
     "quality_score": 3.9,
     "quality_tier": "Below-average",
     "quality_rank": 158,
@@ -6401,10 +6401,10 @@
     "debt_to_equity": 0.371,
     "eps": 14.56,
     "book_value": 97.636,
-    "div_yield": 56.0,
+    "div_yield": 58.0,
     "pat_cagr": -18.6,
     "rev_cagr": 3.6,
-    "mcap_3y": NaN,
+    "mcap_3y": 33.72,
     "quality_score": 4.0,
     "quality_tier": "Below-average",
     "quality_rank": 157,
@@ -6850,7 +6850,7 @@
     "div_yield": 7.0,
     "pat_cagr": 130.0,
     "rev_cagr": 18.9,
-    "mcap_3y": NaN,
+    "mcap_3y": 462.6,
     "sector_group": "Capital Goods",
     "moat": "Bhavnagar-based lost-wax investment-castings maker (since 1975; 3,060 MTPA capacity incl. ~100 MTPA vacuum induction melting) in ferrous, non-ferrous, nickel and cobalt super-alloys, supplying fully machined, ready-to-use components to auto OEMs (Maruti, M&M, Tata Motors, Royal Enfield) and vacuum castings for aerospace, defence (incl. a long-term export contract with Israel Weapon Industries) and medical implants. Auto share cut to 64% of FY26 revenue from 78% in FY22; 4 MW captive solar plant commissioned in FY26 lowers power cost.",
     "leadership": "Small but long-established niche player led by CMD Piyush Tamboli; promoters 51.97%. FY26 revenue ₹188 Cr (+14%), OPM 16.8% (+288 bps), PAT ₹11.8 Cr (+94%), ROCE 14%, ROE 12.5%, CFO ₹26 Cr. Q1 FY27 (Jun-26, results 13 Aug 2026) revenue ₹53.4 Cr (+21%), OPM 20.7% (15.0% YoY), PAT ₹5.0 Cr (+129%) — fifth straight quarter of margin expansion. CARE upgraded to BBB/Stable (9 Jul 2026). 1:1 bonus in FY26; 10% dividend approved at the 51st AGM (13 Aug 2026). Mkt cap ~₹1,280 Cr, P/E ~86, stock +179% in one year (3 Sep 2026).",
@@ -7027,10 +7027,10 @@
     "debt_to_equity": 35.976,
     "eps": 8.49,
     "book_value": 112.936,
-    "div_yield": 33.0,
+    "div_yield": 34.0,
     "pat_cagr": -91.6,
     "rev_cagr": 20.1,
-    "mcap_3y": NaN,
+    "mcap_3y": -26.16,
     "sector_group": "Water / Environment",
     "change_remark": "De-rated on dated deterioration: execution 6 to 5, capital_allocation 6 to 5.5 after Q4 FY26 (26 May 2026) OPM 2.3%, PAT -62% and Q1 FY27 (5 Aug 2026) EBITDA 4.5%, PAT ₹3.1 Cr (-94%), Treatment Solutions EBIT -₹18 Cr, FY26 CFO -₹28 Cr, borrowings ₹482 Cr. red_flags.financial 6 to 5, accounting/business 6 to 5.5; comp.mgmt/capital/pricing each -0.5 (q 6.5 to 5.8). Conviction 6 to 5; own peer score 7.2 to 6.5; placeholder peers swapped for EMS and Concord Enviro; best_own now Thermax. IEEFL SEBI ₹22.02 Cr deposit (SAT 12 Aug 2026) added as amber flag. HOLD retained. Re-verified (2nd pass): Reviewer fix: promoter_profile text corrected — the company is led by Executive Chairman Rajesh Sharma with the Sharma and Patni families as promoter group (62nd AGM notice 18 Aug 2026; company board page), not 'the Patni family'; score unchanged at 6. Staged q is 6.0 (the remark's 5.8 is a typo)."
   },
@@ -7111,7 +7111,7 @@
     "div_yield": 0,
     "pat_cagr": 113.0,
     "rev_cagr": 15.4,
-    "mcap_3y": NaN
+    "mcap_3y": 91.7
   },
   {
     "ticker": "VIPULORG",
@@ -7154,10 +7154,10 @@
     "debt_to_equity": 45.189,
     "eps": 4.84,
     "book_value": 65.18,
-    "div_yield": 33.0,
+    "div_yield": 34.0,
     "pat_cagr": 54.7,
     "rev_cagr": 37.7,
-    "mcap_3y": NaN
+    "mcap_3y": 79.84
   },
   {
     "ticker": "AVTNPL",
@@ -7199,10 +7199,10 @@
     "debt_to_equity": 20.311,
     "eps": 5.57,
     "book_value": 36.729,
-    "div_yield": 89.0,
+    "div_yield": 90.0,
     "pat_cagr": 155.0,
     "rev_cagr": 82.2,
-    "mcap_3y": NaN
+    "mcap_3y": 24.15
   },
   {
     "ticker": "BEPL",
@@ -7290,10 +7290,10 @@
     "debt_to_equity": 1.482,
     "eps": 68.5,
     "book_value": 684.581,
-    "div_yield": 197.0,
+    "div_yield": 200.0,
     "pat_cagr": 301.1,
     "rev_cagr": 38.0,
-    "mcap_3y": NaN
+    "mcap_3y": 38.87
   },
   {
     "ticker": "ELECON",
@@ -7336,7 +7336,7 @@
     "debt_to_equity": 14.401,
     "eps": 10.91,
     "book_value": 111.727,
-    "div_yield": 42.0,
+    "div_yield": 43.0,
     "pat_cagr": 9.7,
     "rev_cagr": 10.5,
     "mcap_3y": 26.84
@@ -7382,10 +7382,10 @@
     "debt_to_equity": 25.751,
     "eps": 63.64,
     "book_value": 514.919,
-    "div_yield": 50.0,
+    "div_yield": 51.0,
     "pat_cagr": -37.9,
     "rev_cagr": 16.3,
-    "mcap_3y": NaN
+    "mcap_3y": 0.57
   },
   {
     "ticker": "GPPL",
@@ -7428,10 +7428,10 @@
     "debt_to_equity": 1.544,
     "eps": 11.57,
     "book_value": 48.709,
-    "div_yield": 601.0,
+    "div_yield": 602.0,
     "pat_cagr": 41.7,
     "rev_cagr": 32.5,
-    "mcap_3y": NaN
+    "mcap_3y": 54.95
   },
   {
     "ticker": "LCL",
@@ -7523,7 +7523,7 @@
     "div_yield": 40.0,
     "pat_cagr": -43.4,
     "rev_cagr": -8.5,
-    "mcap_3y": NaN
+    "mcap_3y": -1.18
   },
   {
     "ticker": "RSYSTEMS",
@@ -7566,10 +7566,10 @@
     "debt_to_equity": 28.616,
     "eps": 15.84,
     "book_value": 92.692,
-    "div_yield": 612.0,
+    "div_yield": 622.0,
     "pat_cagr": -26.6,
     "rev_cagr": 30.5,
-    "mcap_3y": NaN
+    "mcap_3y": -43.21
   },
   {
     "ticker": "SIMPLEXCAS",
@@ -7615,7 +7615,7 @@
     "div_yield": 0,
     "pat_cagr": 24.6,
     "rev_cagr": 34.8,
-    "mcap_3y": NaN
+    "mcap_3y": 1032.04
   },
   {
     "ticker": "TMCV",
@@ -7704,7 +7704,7 @@
     "debt_to_equity": 1.68,
     "eps": 33.74,
     "book_value": 207.438,
-    "div_yield": 295.0,
+    "div_yield": 292.0,
     "pat_cagr": 0.9,
     "rev_cagr": 8.9,
     "mcap_3y": 0.53
@@ -7753,7 +7753,7 @@
     "div_yield": 34.0,
     "pat_cagr": 20.9,
     "rev_cagr": 1.8,
-    "mcap_3y": NaN
+    "mcap_3y": -21.42
   },
   {
     "ticker": "SIEMENS",
@@ -7799,7 +7799,7 @@
     "div_yield": 50.0,
     "pat_cagr": 406.1,
     "rev_cagr": 14.8,
-    "mcap_3y": NaN
+    "mcap_3y": 69.14
   },
   {
     "ticker": "TIMETECHNO",
@@ -7842,10 +7842,10 @@
     "debt_to_equity": 17.605,
     "eps": 10.63,
     "book_value": 82.796,
-    "div_yield": 84.0,
+    "div_yield": 86.0,
     "pat_cagr": 12.2,
     "rev_cagr": 25.1,
-    "mcap_3y": NaN
+    "mcap_3y": 127.39
   },
   {
     "ticker": "RAMRAT",
@@ -7888,10 +7888,10 @@
     "debt_to_equity": 115.438,
     "eps": 13.94,
     "book_value": 62.077,
-    "div_yield": 44.0,
+    "div_yield": 45.0,
     "pat_cagr": 127.8,
     "rev_cagr": 88.6,
-    "mcap_3y": NaN
+    "mcap_3y": 313.97
   },
   {
     "ticker": "CYIENT",
@@ -7934,10 +7934,10 @@
     "debt_to_equity": 7.528,
     "eps": 34.04,
     "book_value": 514.316,
-    "div_yield": 268.0,
+    "div_yield": 273.0,
     "pat_cagr": -32.4,
     "rev_cagr": 21.3,
-    "mcap_3y": NaN
+    "mcap_3y": -26.35
   },
   {
     "ticker": "AGI",
@@ -7980,10 +7980,10 @@
     "debt_to_equity": 10.126,
     "eps": 57.98,
     "book_value": 372.015,
-    "div_yield": 93.0,
+    "div_yield": 96.0,
     "pat_cagr": 11.9,
     "rev_cagr": 14.2,
-    "mcap_3y": NaN
+    "mcap_3y": -17.09
   },
   {
     "ticker": "ASAHIINDIA",
@@ -8029,7 +8029,7 @@
     "div_yield": 22.0,
     "pat_cagr": 153.2,
     "rev_cagr": 15.0,
-    "mcap_3y": NaN
+    "mcap_3y": 50.75
   },
   {
     "ticker": "MMFL",
@@ -8072,10 +8072,10 @@
     "debt_to_equity": 126.624,
     "eps": 36.42,
     "book_value": 201.986,
-    "div_yield": 76.0,
+    "div_yield": 79.0,
     "pat_cagr": 78.3,
     "rev_cagr": 16.3,
-    "mcap_3y": NaN
+    "mcap_3y": 20.69
   },
   {
     "ticker": "SUNDRMFAST",
@@ -8116,10 +8116,10 @@
     "debt_to_equity": 14.532,
     "eps": 29.51,
     "book_value": 203.449,
-    "div_yield": 77.0,
+    "div_yield": 78.0,
     "pat_cagr": 13.5,
     "rev_cagr": 20.4,
-    "mcap_3y": NaN
+    "mcap_3y": -8.85
   },
   {
     "ticker": "SOFTTECH",
@@ -8163,7 +8163,7 @@
     "div_yield": 0,
     "pat_cagr": 10.3,
     "rev_cagr": 23.2,
-    "mcap_3y": NaN
+    "mcap_3y": 141.88
   },
   {
     "ticker": "SIGNATURE",
@@ -8251,7 +8251,7 @@
     "div_yield": 11.0,
     "pat_cagr": 12.9,
     "rev_cagr": 23.9,
-    "mcap_3y": NaN
+    "mcap_3y": 402.45
   },
   {
     "ticker": "E2E",
@@ -8427,7 +8427,7 @@
     "div_yield": 0,
     "pat_cagr": 0,
     "rev_cagr": 15.8,
-    "mcap_3y": NaN
+    "mcap_3y": -68.21
   },
   {
     "ticker": "KIRLOSENG",
@@ -8471,7 +8471,7 @@
     "div_yield": 35.0,
     "pat_cagr": -19.9,
     "rev_cagr": 13.4,
-    "mcap_3y": NaN
+    "mcap_3y": 314.18
   },
   {
     "ticker": "MAXESTATES",
@@ -8604,7 +8604,7 @@
     "div_yield": 0,
     "pat_cagr": -69.8,
     "rev_cagr": 4.8,
-    "mcap_3y": NaN
+    "mcap_3y": 214.5
   },
   {
     "ticker": "ANANTRAJ",
@@ -8733,10 +8733,10 @@
     "debt_to_equity": 40.115,
     "eps": 158.46,
     "book_value": 777.056,
-    "div_yield": 223.0,
+    "div_yield": 228.0,
     "pat_cagr": 152.1,
     "rev_cagr": 7.1,
-    "mcap_3y": NaN
+    "mcap_3y": 113.94
   },
   {
     "ticker": "BEML",
@@ -8824,7 +8824,7 @@
     "div_yield": 42.0,
     "pat_cagr": -0.1,
     "rev_cagr": 12.9,
-    "mcap_3y": NaN
+    "mcap_3y": 111.52
   },
   {
     "ticker": "ASHAPURMIN",
@@ -8869,7 +8869,7 @@
     "div_yield": 43.0,
     "pat_cagr": 5.0,
     "rev_cagr": 19.2,
-    "mcap_3y": NaN
+    "mcap_3y": 50.26
   },
   {
     "ticker": "CHOLAHLDNG",
@@ -8914,7 +8914,7 @@
     "div_yield": 10.0,
     "pat_cagr": 39.3,
     "rev_cagr": 13.9,
-    "mcap_3y": NaN
+    "mcap_3y": 18.13
   },
   {
     "ticker": "GLENMARK",
@@ -8959,7 +8959,7 @@
     "div_yield": 11.0,
     "pat_cagr": 930.7,
     "rev_cagr": 23.1,
-    "mcap_3y": NaN
+    "mcap_3y": 191.37
   },
   {
     "ticker": "GMRP&UI",
@@ -9004,7 +9004,7 @@
     "div_yield": 0,
     "pat_cagr": 0,
     "rev_cagr": 3.4,
-    "mcap_3y": NaN
+    "mcap_3y": 176.27
   },
   {
     "ticker": "HAL",
@@ -9046,10 +9046,10 @@
     "debt_to_equity": 0.16,
     "eps": 140.22,
     "book_value": 613.676,
-    "div_yield": 90.0,
+    "div_yield": 91.0,
     "pat_cagr": 14.9,
     "rev_cagr": 14.4,
-    "mcap_3y": NaN
+    "mcap_3y": 164.25
   },
   {
     "ticker": "OBEROIRLTY",
@@ -9094,7 +9094,7 @@
     "div_yield": 47.0,
     "pat_cagr": 0.2,
     "rev_cagr": -6.1,
-    "mcap_3y": NaN
+    "mcap_3y": 51.29
   },
   {
     "ticker": "SJS",
@@ -9139,7 +9139,7 @@
     "div_yield": 17.0,
     "pat_cagr": 111.4,
     "rev_cagr": 24.5,
-    "mcap_3y": NaN
+    "mcap_3y": 198.29
   },
   {
     "ticker": "SMLMAH",
@@ -9226,7 +9226,7 @@
     "debt_to_equity": 0.729,
     "eps": 17.66,
     "book_value": 102.279,
-    "div_yield": 38.0,
+    "div_yield": 40.0,
     "pat_cagr": 10.7,
     "rev_cagr": 11.8,
     "mcap_3y": 84.35
@@ -9274,7 +9274,7 @@
     "div_yield": 22.0,
     "pat_cagr": 8.0,
     "rev_cagr": 53.1,
-    "mcap_3y": NaN
+    "mcap_3y": 349.45
   },
   {
     "ticker": "M&M",
@@ -9361,10 +9361,10 @@
     "debt_to_equity": 6.067,
     "eps": 31.65,
     "book_value": 275.197,
-    "div_yield": 69.0,
+    "div_yield": 70.0,
     "pat_cagr": -0.2,
     "rev_cagr": 18.1,
-    "mcap_3y": NaN
+    "mcap_3y": 163.86
   },
   {
     "ticker": "ELANTAS",
@@ -9406,7 +9406,7 @@
     "debt_to_equity": null,
     "eps": 231.93,
     "book_value": 1392.583,
-    "div_yield": 5.0,
+    "div_yield": 6.0,
     "pat_cagr": 80.4,
     "rev_cagr": 35.0,
     "mcap_3y": null
@@ -9498,7 +9498,7 @@
     "div_yield": 0,
     "pat_cagr": 0,
     "rev_cagr": 9.7,
-    "mcap_3y": NaN
+    "mcap_3y": 118.55
   },
   {
     "ticker": "PURVA",
@@ -9543,7 +9543,7 @@
     "div_yield": 0,
     "pat_cagr": 0,
     "rev_cagr": 61.8,
-    "mcap_3y": NaN
+    "mcap_3y": 85.43
   },
   {
     "ticker": "ERIS",
@@ -9584,10 +9584,10 @@
     "debt_to_equity": 60.545,
     "eps": 47.97,
     "book_value": 285.483,
-    "div_yield": 126.0,
+    "div_yield": 129.0,
     "pat_cagr": 18.8,
     "rev_cagr": 12.6,
-    "mcap_3y": NaN
+    "mcap_3y": 36.75
   },
   {
     "ticker": "ABREL",
@@ -9632,7 +9632,7 @@
     "div_yield": 22.0,
     "pat_cagr": 0,
     "rev_cagr": 29.7,
-    "mcap_3y": NaN
+    "mcap_3y": 3.07
   },
   {
     "ticker": "MAXIND",
@@ -9676,7 +9676,7 @@
     "div_yield": 0,
     "pat_cagr": 0,
     "rev_cagr": 66.0,
-    "mcap_3y": NaN
+    "mcap_3y": 10.75
   },
   {
     "ticker": "EXIDEIND",
@@ -9717,7 +9717,7 @@
     "debt_to_equity": 11.308,
     "eps": 10.96,
     "book_value": 163.586,
-    "div_yield": 54.0,
+    "div_yield": 56.0,
     "pat_cagr": 28.3,
     "rev_cagr": 17.7,
     "mcap_3y": 42.18
@@ -9761,7 +9761,7 @@
     "debt_to_equity": 47.195,
     "eps": 15.41,
     "book_value": 93.634,
-    "div_yield": 36.0,
+    "div_yield": 38.0,
     "pat_cagr": 2173.3,
     "rev_cagr": 51.1,
     "mcap_3y": 2.87
@@ -9809,7 +9809,7 @@
     "div_yield": 0,
     "pat_cagr": 10.5,
     "rev_cagr": 2.9,
-    "mcap_3y": NaN
+    "mcap_3y": 53.33
   },
   {
     "ticker": "UNIPARTS",
@@ -9851,10 +9851,10 @@
     "debt_to_equity": 17.771,
     "eps": 41.08,
     "book_value": 192.826,
-    "div_yield": 218.0,
+    "div_yield": 224.0,
     "pat_cagr": 63.6,
     "rev_cagr": 26.9,
-    "mcap_3y": NaN
+    "mcap_3y": 46.59
   },
   {
     "ticker": "RISHABH",
@@ -9899,7 +9899,7 @@
     "div_yield": 29.0,
     "pat_cagr": -4.5,
     "rev_cagr": 4.2,
-    "mcap_3y": NaN
+    "mcap_3y": 54.06
   },
   {
     "ticker": "SUDEEPPHRM",
@@ -9977,7 +9977,7 @@
     "div_yield": 22.0,
     "pat_cagr": 29.3,
     "rev_cagr": 29.5,
-    "mcap_3y": NaN
+    "mcap_3y": 13.92
   },
   {
     "ticker": "HEGAM",
@@ -10007,7 +10007,7 @@
     "debt_to_equity": 16.73,
     "eps": 18.33,
     "book_value": 246.553,
-    "div_yield": 151.0,
+    "div_yield": 155.0,
     "pat_cagr": 16.8,
     "rev_cagr": 10.4,
     "mcap_3y": -35.16
@@ -10040,7 +10040,7 @@
     "debt_to_equity": 111.455,
     "eps": 43.77,
     "book_value": 105.355,
-    "div_yield": 116.0,
+    "div_yield": 122.0,
     "pat_cagr": 97.5,
     "rev_cagr": 20.7,
     "mcap_3y": 0.7
@@ -10142,6 +10142,6 @@
     "div_yield": 0,
     "pat_cagr": 0,
     "rev_cagr": 86.2,
-    "mcap_3y": NaN
+    "mcap_3y": -24.81
   }
 ]
