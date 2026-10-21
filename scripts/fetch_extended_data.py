@@ -85,7 +85,7 @@ def fetch_all():
             hist = t_obj.history(period="max")
             if not hist.empty:
                 prices_entry = prices.get(ticker, {})
-                prices_entry["ret_1d"] = get_return(hist, 2)
+                # ret_1d stays as fetch_prices set it (live quote vs previous close); bar-to-bar breaks when Yahoo skips a day.
                 prices_entry["ret_1w"] = get_return(hist, 6)
                 prices_entry["ret_1m"] = get_return(hist, 21)
                 prices_entry["ret_6m"] = get_return(hist, 126)
