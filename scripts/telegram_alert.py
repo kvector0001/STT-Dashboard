@@ -2,10 +2,10 @@
 """Send portfolio alerts to a Telegram chat (percentages only - no rupee values).
 
 What is sent depends on the IST time of the run (or --slot):
-  morning (<11:00)    : daily movers + reversal watch
-  midday  (11-14:00)  : daily movers + key news for volume+price movers
-  close   (14-15:00)  : daily movers + top gainers/losers + key news not sent at 12:30
+  morning / midday / close (9:30, 12:30, 2:30) : two messages, each with unsent key news per stock
+      1. Price moves ±5% (any volume)   2. Price + volume moves (today or yesterday)
   after   (>=15:00)   : nothing (post-close price/action-log refresh only)
+  --weekend           : top 5 gainers/losers of the week and month + the news behind them
 News already sent (telegram_sent.json) is never sent again.
 Meant to run right after fetch_prices.py so the data is fresh.
 
@@ -199,13 +199,7 @@ def _a(url, text):
 
 
 ITEMS_PER_STOCK = 3
-BIG_OPEN_MOVE = 5.0   # 9:30: any holding moving this much, whatever the volume
-
-
-def _big_list(big):
-    rows = sorted(big.items(), key=lambda kv: -abs(kv[1][0][1]))
-    return "\n".join([f"\u26a1 Big moves at the open (\u00b1{BIG_OPEN_MOVE:.0f}%) \u2014 no new key news", ""] +
-                      [f"{tk}   {_pct(v[0][1])}" for tk, v in rows])
+BIG_MOVE = 5.0   # "price only" message: any holding moving this much today, whatever the volume
 
 
 def is_vp_move(ret, vol):
@@ -278,28 +272,56 @@ def _pick(it, tk, sent, since):
     return lines, new
 
 
-def news_message(moves, sent, followup=False, days=2, title=None):
-    """Key (structural) news for volume+price movers, up to 3 per stock, skipping anything sent before.
-    Returns (text or None, stocks shown, new sent-entries)."""
-    by_tk = _collect(moves, days)
-    order = sorted(moves, key=lambda tk: -max(abs(r) for _, r, _ in moves[tk]))
+def moves_message(title, note, rows, by_tk, sent, empty):
+    """One weekday message: each stock's line, then its unsent key news (today/yesterday, up to 3).
+    rows = [(ticker, header line)] in display order. Returns (text, new sent-entries)."""
     yday = (datetime.now(IST) - timedelta(days=1)).strftime("%Y-%m-%d")
-    title = title or ("More key news since 12:30" if followup else "Key news (today &amp; yesterday) \u2014 volume + price movers")
-    lines, quiet, new = [f"\U0001f4f0 <b>{title}</b>", ""], [], []
-    for tk in order:
-        picked, got = _pick(by_tk.get(tk) or {"filings": [], "news": []}, tk, sent + new, yday)
-        if not picked:
-            quiet.append(tk)
-            continue
-        new += got
-        mv = " \u00b7 ".join(f"{lbl} {_pct(r)}" + (f" on {v:.1f}\u00d7 vol" if v else "") for lbl, r, v in moves[tk])
-        lines += [f"<b>{_h(tk)}</b>  ({mv})", *picked, ""]
-    if not new:
-        return None, 0, []
-    if quiet and not followup:
-        lines.append("No new key news: " + ", ".join(_h(t) for t in quiet))
-    lines.append("\U0001f3db = official NSE filing \u00b7 \U0001f5de = news headline")
-    return "\n".join(lines), len(order) - len(quiet), new
+    lines, new = [f"<b>{title}</b>", f"<i>{note}</i>", ""], []
+    if not rows:
+        lines.append(empty)
+        return "\n".join(lines), new
+    for tk, head in rows:
+        picked = []
+        if by_tk is not None:
+            try:
+                picked, got = _pick(by_tk.get(tk) or {"filings": [], "news": []}, tk, sent + new, yday)
+                new += got
+            except Exception as e:  # a news problem must never stop the price lines
+                print(f"  news for {tk} failed ({type(e).__name__}: {e})")
+        lines.append(head)
+        if picked:
+            lines += picked + [""]
+    if new:
+        lines += ["", "\U0001f3db = official NSE filing \u00b7 \U0001f5de = news headline"]
+    return "\n".join(lines).rstrip(), new
+
+
+def weekday_messages(held, sent, with_news=True):
+    """The two weekday messages (9:30, 12:30, 2:30): price-only moves, then price + volume moves, each with news."""
+    now = datetime.now(IST)
+    big = sorted(((tk, s["ret_1d"]) for tk, s in held
+                  if isinstance(s.get("ret_1d"), (int, float)) and abs(s["ret_1d"]) >= BIG_MOVE), key=lambda x: -abs(x[1]))
+    vp = sorted(vp_movers(held).items(), key=lambda kv: -max(abs(r) for _, r, _ in kv[1]))
+    by_tk = None
+    if with_news:
+        try:
+            by_tk = _collect({tk for tk, _ in big} | {tk for tk, _ in vp}, 2)
+        except Exception as e:
+            print(f"  news fetch failed ({type(e).__name__}: {e}) - sending prices only")
+    tags = dict(held)
+    msg1, new1 = moves_message(
+        f"\u26a1 Price moves \u00b1{BIG_MOVE:.0f}% \u2014 {now:%a %d %b, %H:%M}", "Any holding moving 5%+ today, whatever the volume",
+        [(tk, f"<b>{_h(tk)}</b>  {_pct(r)}") for tk, r in big], by_tk, sent, "No holding has moved \u00b15% today.")
+    vp_rows = []
+    for tk, hits in vp:
+        tag = tags[tk].get("movers")
+        head = " \u00b7 ".join(f"{lbl} {_pct(r)} on {v:.1f}\u00d7 vol" for lbl, r, v in hits)
+        vp_rows.append((tk, f"<b>{_h(tk)}</b>  {head}" + (f"  {_h(tag)}" if tag not in BLANK else "")))
+    msg2, new2 = moves_message(
+        f"\U0001f4ca Price + volume moves \u2014 {now:%a %d %b, %H:%M}",
+        "5%+ on 1.5\u00d7 normal volume, or 3%+ on 3\u00d7 \u2014 today or yesterday",
+        vp_rows, by_tk, sent + new1, "No price + volume movers.")
+    return [msg1, msg2], new1 + new2
 
 
 def weekend_message(held, sent):
@@ -456,37 +478,9 @@ def main():
             messages.append((msg, True))
         summary.append(f"weekend gainers ({n} stocks)")
     else:
-        today, yest, ydate = daily_movers(held)
-        messages.append((format_message(today, yest, ydate), False))
-        summary.append(f"{len(today)} today, {len(yest)} yesterday")
-    if slot in ("morning", "all"):
-        msg, n, _ = reversal_message(held)
-        messages.append((msg, False))
-        summary.append(f"{n} reversal")
-        # At the open volume is still thin, so mover tags miss big gaps: list every ±5% move with its news.
-        big = {tk: [("today", s["ret_1d"], None)] for tk, s in held
-               if isinstance(s.get("ret_1d"), (int, float)) and abs(s["ret_1d"]) >= BIG_OPEN_MOVE}
-        if big and "--no-news" not in sys.argv:
-            try:
-                msg, n, new_sent = news_message(big, load_sent(), title=f"Big moves at the open (\u00b1{BIG_OPEN_MOVE:.0f}%) \u2014 key news")
-                messages.append((msg or _big_list(big), bool(msg)))
-                summary.append(f"{len(big)} big opening moves")
-            except Exception as e:
-                print(f"  news part failed ({type(e).__name__}: {e})")
-                messages.append((_big_list(big), False))
-    if slot in ("close", "all"):
-        messages.append((gainers_losers_message(held), False))
-        summary.append("gainers/losers")
-    moves = vp_movers(held)
-    if slot in ("midday", "close", "all") and moves and "--no-news" not in sys.argv:
-        # A news failure must never stop the movers tables from going out.
-        try:
-            msg, n, new_sent = news_message(moves, load_sent(), followup=slot == "close")
-            if msg:
-                messages.append((msg, True))
-            summary.append(f"key news for {n}/{len(moves)} volume+price movers")
-        except Exception as e:
-            print(f"  news part failed ({type(e).__name__}: {e}) - sending movers only")
+        msgs, new_sent = weekday_messages(held, load_sent(), "--no-news" not in sys.argv)
+        messages += [(m, True) for m in msgs]
+        summary.append("price moves + price/volume moves")
 
     if not messages:
         print(f"Telegram alert [{slot}]: nothing new to send.")
