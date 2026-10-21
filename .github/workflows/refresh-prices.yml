@@ -43,12 +43,26 @@ jobs:
           python scripts/fetch_prices.py
 
       - name: Send daily movers to Telegram
+        id: tg
         if: github.event_name == 'workflow_dispatch' && inputs.alert
         continue-on-error: true
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: python scripts/telegram_alert.py
+
+      # Prices weren't live yet (e.g. Yahoo slow at the open): wait 30 min, refresh again, send that slot then.
+      - name: Retry Telegram in 30 minutes if prices were stale
+        if: steps.tg.outputs.stale == 'true'
+        continue-on-error: true
+        env:
+          GOOGLE_SA_KEY: ${{ secrets.GOOGLE_SA_KEY }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          sleep 1800
+          python scripts/fetch_prices.py
+          python scripts/telegram_alert.py --slot ${{ steps.tg.outputs.slot }} --retry
 
       - name: Build news.json for the News page
         if: github.event_name == 'workflow_dispatch' && inputs.alert
@@ -77,4 +91,9 @@ jobs:
           else
             git commit -m "chore: refresh prices $(date -u +'%Y-%m-%d %H:%M UTC')"
           fi
-          git push
+          # Another run may have pushed meanwhile: merge it (this run's fresher files win) and retry.
+          for i in 1 2 3; do
+            git pull --no-rebase -X ours --no-edit origin main && git push && exit 0
+            sleep 10
+          done
+          exit 1

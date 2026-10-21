@@ -199,6 +199,13 @@ def _a(url, text):
 
 
 ITEMS_PER_STOCK = 3
+BIG_OPEN_MOVE = 5.0   # 9:30: any holding moving this much, whatever the volume
+
+
+def _big_list(big):
+    rows = sorted(big.items(), key=lambda kv: -abs(kv[1][0][1]))
+    return "\n".join([f"\u26a1 Big moves at the open (\u00b1{BIG_OPEN_MOVE:.0f}%) \u2014 no new key news", ""] +
+                      [f"{tk}   {_pct(v[0][1])}" for tk, v in rows])
 
 
 def is_vp_move(ret, vol):
@@ -271,13 +278,13 @@ def _pick(it, tk, sent, since):
     return lines, new
 
 
-def news_message(moves, sent, followup=False, days=2):
+def news_message(moves, sent, followup=False, days=2, title=None):
     """Key (structural) news for volume+price movers, up to 3 per stock, skipping anything sent before.
     Returns (text or None, stocks shown, new sent-entries)."""
     by_tk = _collect(moves, days)
     order = sorted(moves, key=lambda tk: -max(abs(r) for _, r, _ in moves[tk]))
     yday = (datetime.now(IST) - timedelta(days=1)).strftime("%Y-%m-%d")
-    title = "More key news since 12:30" if followup else "Key news (today &amp; yesterday) \u2014 volume + price movers"
+    title = title or ("More key news since 12:30" if followup else "Key news (today &amp; yesterday) \u2014 volume + price movers")
     lines, quiet, new = [f"\U0001f4f0 <b>{title}</b>", ""], [], []
     for tk in order:
         picked, got = _pick(by_tk.get(tk) or {"filings": [], "news": []}, tk, sent + new, yday)
@@ -285,7 +292,7 @@ def news_message(moves, sent, followup=False, days=2):
             quiet.append(tk)
             continue
         new += got
-        mv = " \u00b7 ".join(f"{lbl} {_pct(r)} on {v:.1f}\u00d7 vol" for lbl, r, v in moves[tk])
+        mv = " \u00b7 ".join(f"{lbl} {_pct(r)}" + (f" on {v:.1f}\u00d7 vol" if v else "") for lbl, r, v in moves[tk])
         lines += [f"<b>{_h(tk)}</b>  ({mv})", *picked, ""]
     if not new:
         return None, 0, []
@@ -391,6 +398,29 @@ def find_chat_id():
     return 0
 
 
+def prices_are_live(held, max_age_min=45):
+    """True when this run really fetched today's prices: most holdings were updated in the last `max_age_min`
+    minutes and most show a non-zero 1D move (all-zero = market data not open yet / stale fallback)."""
+    now = datetime.now(timezone.utc)
+    fresh = moved = 0
+    for _, s in held:
+        try:
+            upd = datetime.strptime(str(s.get("updated", ""))[:16], "%Y-%m-%d %H:%M").replace(tzinfo=timezone.utc)
+            fresh += (now - upd) <= timedelta(minutes=max_age_min)
+        except ValueError:
+            pass
+        moved += isinstance(s.get("ret_1d"), (int, float)) and s["ret_1d"] != 0
+    n = max(len(held), 1)
+    return fresh / n >= 0.8 and moved / n >= 0.5, fresh, moved
+
+
+def _gh_output(**kv):
+    path = os.environ.get("GITHUB_OUTPUT")
+    if path:
+        with open(path, "a", encoding="utf-8") as fh:
+            fh.writelines(f"{k}={v}\n" for k, v in kv.items())
+
+
 def main():
     if "--get-chat-id" in sys.argv:
         return find_chat_id()
@@ -398,11 +428,25 @@ def main():
     if "--weekend" in sys.argv:
         slot = "weekend"
     dry = "--dry-run" in sys.argv
+    retry = "--retry" in sys.argv
     if slot == "after":
         print("Telegram alert: post-close refresh - nothing sent.")
         return 0
 
     held = load_held()
+    if slot != "weekend" and not dry and "--skip-live-check" not in sys.argv:
+        live, fresh, moved = prices_are_live(held)
+        if not live:
+            print(f"Prices not live yet ({fresh}/{len(held)} updated recently, {moved} with a 1D move).")
+            if not retry:
+                _gh_output(stale="true", slot=slot)  # the workflow refreshes again in 30 min and re-runs this slot
+                return 0
+            token, chat_ids = load_config()
+            warn = (f"\u26a0\ufe0f {datetime.now(IST):%a %d %b %H:%M} \u2014 live prices still not available after a retry. "
+                    "Movers alert skipped; please check the dashboard.")
+            for cid in chat_ids:
+                send(token, cid, warn)
+            return 0
     messages, summary = [], []
     new_sent = []
     if slot == "weekend":
@@ -419,6 +463,17 @@ def main():
         msg, n, _ = reversal_message(held)
         messages.append((msg, False))
         summary.append(f"{n} reversal")
+        # At the open volume is still thin, so mover tags miss big gaps: list every ±5% move with its news.
+        big = {tk: [("today", s["ret_1d"], None)] for tk, s in held
+               if isinstance(s.get("ret_1d"), (int, float)) and abs(s["ret_1d"]) >= BIG_OPEN_MOVE}
+        if big and "--no-news" not in sys.argv:
+            try:
+                msg, n, new_sent = news_message(big, load_sent(), title=f"Big moves at the open (\u00b1{BIG_OPEN_MOVE:.0f}%) \u2014 key news")
+                messages.append((msg or _big_list(big), bool(msg)))
+                summary.append(f"{len(big)} big opening moves")
+            except Exception as e:
+                print(f"  news part failed ({type(e).__name__}: {e})")
+                messages.append((_big_list(big), False))
     if slot in ("close", "all"):
         messages.append((gainers_losers_message(held), False))
         summary.append("gainers/losers")
