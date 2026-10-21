@@ -58,7 +58,9 @@ MATERIAL = re.compile(r"\b(?:orders?|contract|wins?|bags?|secures?|acqui\w*|stak
                       r"joint venture|mou|partner\w*|agreement|tie-up|appoint\w*|resign\w*|ceo|cfo|auditor|"
                       r"default|insolven\w*|nclt|court|sebi|launch\w*|allot\w*|invest\w*|jump\w*|surg\w*|"
                       r"soar\w*|plung\w*|slump\w*|crash\w*|rall\w*|zoom\w*|slip\w*|fall\w*|drop\w*|"
-                      r"declin\w*|pressure|backlog)\b|₹|\brs\.?\s?\d|crore", re.I)
+                      r"declin\w*|pressure|backlog|breach\w*|hack\w*|compromis\w*|crack\w*|leak\w*|cyber\w*|"
+                      r"outage|revok\w*|ban(?:s|ned)?|block(?:s|ed|ing)?|suspend\w*|suspension|recall\w*|blacklist\w*|"
+                      r"delist\w*|cancel\w*|terminat\w*)\b|₹|\brs\.?\s?\d|crore", re.I)
 # Auto-generated / filler publishers.
 FILLER_SOURCES = {"univest", "marketsmojo", "kalkine india", "simplywall.st", "equitymaster",
                   "investment guru india", "ad hoc news", "siam.in", "traders union",
@@ -105,6 +107,8 @@ KEY_NEWS = re.compile(r"\b(?:orders?|order book|order inflow|contracts?|tenders?
                       r"mou|partner\w*|agreement|tie-?up|collaborat\w*|ceo|cfo|coo|managing director|chairman|"
                       r"auditor|resign\w*|steps? down|credit rating|crisil|icra|care ratings|launch\w*|"
                       r"sales|bookings|pre-?sales|volumes?|q[1-4]|fy\d\d|cto|dispos\w*|subsidiar\w*|"
+                      r"breach\w*|hack\w*|compromis\w*|cracked|leak\w*|cyber ?attack|outage|revok\w*|ban(?:s|ned)?|"
+                      r"block(?:s|ed|ing)?|suspend\w*|suspension|recall\w*|blacklist\w*|delist\w*|cancel\w*|terminat\w*|"
                       r"price (?:hike|increase|cut)s?|"
                       r"invest(?:s|ed|ing|ment)?)\b", re.I)
 # Market commentary that mentions a business word but doesn't report an event.
