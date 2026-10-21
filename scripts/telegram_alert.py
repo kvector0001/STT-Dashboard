@@ -256,17 +256,17 @@ def _pick(it, tk, sent, since):
     """Up to ITEMS_PER_STOCK unsent key items dated >= since -> (message lines, new sent-entries)."""
     from news_digest import is_key_news, summarize_pdf
     today = datetime.now(IST).strftime("%Y-%m-%d")
-    items = [("\U0001f3db", f["url"], f["text"], f"({f['dt'][8:10]}/{f['dt'][5:7]})", f["dt"]) for f in it["filings"] if not f.get("dup")]
-    items += [("\U0001f5de", n["url"], n["title"], f"\u2014 {_h(n['source'])}", n["dt"]) for n in it["news"] if not n.get("dup")]
+    items = [("\U0001f3db", f["url"], f["text"], f"({f['dt'][8:10]}/{f['dt'][5:7]})", f["dt"], f.get("summary")) for f in it["filings"] if not f.get("dup")]
+    items += [("\U0001f5de", n["url"], n["title"], f"\u2014 {_h(n['source'])}", n["dt"], None) for n in it["news"] if not n.get("dup")]
     lines, new = [], []
-    for icon, url, text, tail, dt in items:
+    for icon, url, text, tail, dt, stored in items:
         if len(new) == ITEMS_PER_STOCK:
             break
         if (dt or "")[:10] < since or not is_key_news(text) or _was_sent(sent + new, tk, url, text):
             continue
         lines.append(f"{icon} {_a(url, text[:140])} {tail}")
         if icon == "\U0001f3db" and url.endswith(".pdf"):
-            summary = summarize_pdf(url, text)
+            summary = stored if stored is not None else summarize_pdf(url, text)
             if summary:
                 lines.append(f"     <i>{_h(summary)}</i>")
         new.append({"tk": tk, "u": url, "t": text, "d": today})
@@ -331,10 +331,26 @@ RED_FLAG = re.compile(r"breach|hack|compromis|cracked|leak|cyber|fraud|raid|prob
                       r"form 483|show[- ]cause|litigation|court|tribunal|shutdown|\bfire\b|strike|accident|outage|loss", re.I)
 
 
+def _fresh_archive(held, max_age_min=60):
+    """news.json items for held stocks if the archive was rebuilt in the last `max_age_min` minutes, else None."""
+    try:
+        arch = json.loads((ROOT / "news.json").read_text(encoding="utf-8"))
+        age = datetime.now(IST) - datetime.fromisoformat(arch["generated"])
+    except (OSError, ValueError, KeyError, TypeError):
+        return None
+    if age > timedelta(minutes=max_age_min):
+        return None
+    tickers = {tk for tk, _ in held}
+    return {it["ticker"]: it for it in arch.get("items", []) if it["ticker"] in tickers}
+
+
 def digest_message(held, sent):
     """Key news across ALL holdings (today + yesterday) that hasn't been sent yet, red flags first.
     Catches big news before the stock moves (e.g. eMudhra's certificate-key compromise)."""
-    by_tk = _collect([tk for tk, _ in held], 2)
+    # The news workflow scans every holding just before this step, so reuse that instead of fetching again.
+    by_tk = _fresh_archive(held)
+    if by_tk is None:
+        by_tk = _collect([tk for tk, _ in held], 2)
     yday = (datetime.now(IST) - timedelta(days=1)).strftime("%Y-%m-%d")
     pct = {tk: s.get("ret_1d") for tk, s in held}
     red, other, new = [], [], []

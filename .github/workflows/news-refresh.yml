@@ -32,6 +32,14 @@ jobs:
       - name: Install dependencies
         run: pip install requests pypdf
 
+      - name: Scan filings + news, summarise new key filings
+        continue-on-error: true
+        run: |
+          python scripts/news_digest.py --fill-new
+          python scripts/news_digest.py --days 3 --json
+          python scripts/news_digest.py --summarize 3
+
+      # After the scan, so the digest reads the fresh news.json instead of scanning all holdings again.
       - name: Key news to Telegram (weekend summary / weekday evening digest)
         if: inputs.alert
         continue-on-error: true
@@ -39,12 +47,6 @@ jobs:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: python scripts/telegram_alert.py --news-run
-
-      - name: Scan filings + news, summarise new key filings
-        run: |
-          python scripts/news_digest.py --fill-new
-          python scripts/news_digest.py --days 3 --json
-          python scripts/news_digest.py --summarize 3
 
       - name: Commit and push news.json
         run: |
