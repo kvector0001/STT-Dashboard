@@ -17,6 +17,7 @@ TELEGRAM_BOT_TOKEN / TELEGRAM_CHAT_ID environment variables.
 """
 import json
 import os
+import re
 import sys
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
@@ -324,6 +325,39 @@ def weekday_messages(held, sent, with_news=True):
     return [msg1, msg2], new1 + new2
 
 
+# Negative / risk events that deserve to be read first in the digest.
+RED_FLAG = re.compile(r"breach|hack|compromis|cracked|leak|cyber|fraud|raid|probe|investigat|penalt|\bfine[ds]?\b|default|"
+                      r"insolven|nclt|resign|steps? down|downgrade|block|\bban|suspend|revok|recall|delist|warning letter|"
+                      r"form 483|show[- ]cause|litigation|court|tribunal|shutdown|\bfire\b|strike|accident|outage|loss", re.I)
+
+
+def digest_message(held, sent):
+    """Key news across ALL holdings (today + yesterday) that hasn't been sent yet, red flags first.
+    Catches big news before the stock moves (e.g. eMudhra's certificate-key compromise)."""
+    by_tk = _collect([tk for tk, _ in held], 2)
+    yday = (datetime.now(IST) - timedelta(days=1)).strftime("%Y-%m-%d")
+    pct = {tk: s.get("ret_1d") for tk, s in held}
+    red, other, new = [], [], []
+    for tk in sorted(by_tk):
+        picked, got = _pick(by_tk[tk], tk, sent + new, yday)
+        if not picked:
+            continue
+        new += got
+        block = [f"<b>{_h(tk)}</b>  1D {_pct(pct.get(tk))}", *picked, ""]
+        (red if any(RED_FLAG.search(e["t"]) for e in got) else other).append(block)
+    if not new:
+        return None, 0, []
+    now = datetime.now(IST)
+    lines = [f"\U0001f4f0 <b>Key news for your holdings \u2014 {now:%a %d %b, %H:%M}</b>",
+             "<i>All holdings, today &amp; yesterday, not sent before</i>", ""]
+    if red:
+        lines += ["\U0001f6a8 <b>RED FLAGS</b>", ""] + [l for b in red for l in b]
+    if other:
+        lines += ["\U0001f4cc <b>OTHER KEY NEWS</b>", ""] + [l for b in other for l in b]
+    lines.append("\U0001f3db = official NSE filing \u00b7 \U0001f5de = news headline")
+    return "\n".join(lines), len(red) + len(other), new
+
+
 def weekend_message(held, sent):
     """Weekend: top-5 gainers AND losers of the week (1W) and month (1M) + the key news behind them (never repeated).
     News window: last 7 days for the weekly lists, last 30 days for the monthly lists."""
@@ -449,6 +483,10 @@ def main():
     slot = sys.argv[sys.argv.index("--slot") + 1] if "--slot" in sys.argv else current_slot()
     if "--weekend" in sys.argv:
         slot = "weekend"
+    if "--digest" in sys.argv:
+        slot = "digest"
+    if "--news-run" in sys.argv:  # news-only workflow: weekend summary at weekends, evening digest on weekdays
+        slot = "weekend" if datetime.now(IST).weekday() >= 5 else "digest"
     dry = "--dry-run" in sys.argv
     retry = "--retry" in sys.argv
     if slot == "after":
@@ -456,7 +494,7 @@ def main():
         return 0
 
     held = load_held()
-    if slot != "weekend" and not dry and "--skip-live-check" not in sys.argv:
+    if slot not in ("weekend", "digest") and not dry and "--skip-live-check" not in sys.argv:
         live, fresh, moved = prices_are_live(held)
         if not live:
             print(f"Prices not live yet ({fresh}/{len(held)} updated recently, {moved} with a 1D move).")
@@ -477,6 +515,16 @@ def main():
         if msg:
             messages.append((msg, True))
         summary.append(f"weekend gainers ({n} stocks)")
+    if slot in ("weekend", "digest"):
+        # Then any other key news across ALL holdings that hasn't been sent yet.
+        try:
+            msg, n, got = digest_message(held, load_sent() + new_sent)
+            if msg:
+                messages.append((msg, True))
+                new_sent += got
+            summary.append(f"digest: key news for {n} holdings")
+        except Exception as e:
+            print(f"  digest failed ({type(e).__name__}: {e})")
     else:
         msgs, new_sent = weekday_messages(held, load_sent(), "--no-news" not in sys.argv)
         messages += [(m, True) for m in msgs]

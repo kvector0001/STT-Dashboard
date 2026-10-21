@@ -32,13 +32,13 @@ jobs:
       - name: Install dependencies
         run: pip install requests pypdf
 
-      - name: Weekend key news to Telegram
+      - name: Key news to Telegram (weekend summary / weekday evening digest)
         if: inputs.alert
         continue-on-error: true
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-        run: python scripts/telegram_alert.py --weekend
+        run: python scripts/telegram_alert.py --news-run
 
       - name: Scan filings + news, summarise new key filings
         run: |

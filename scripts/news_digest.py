@@ -62,7 +62,7 @@ MATERIAL = re.compile(r"\b(?:orders?|contract|wins?|bags?|secures?|acqui\w*|stak
                       r"outage|revok\w*|ban(?:s|ned)?|block(?:s|ed|ing)?|suspend\w*|suspension|recall\w*|blacklist\w*|"
                       r"delist\w*|cancel\w*|terminat\w*)\b|₹|\brs\.?\s?\d|crore", re.I)
 # Auto-generated / filler publishers.
-FILLER_SOURCES = {"univest", "marketsmojo", "kalkine india", "simplywall.st", "equitymaster",
+FILLER_SOURCES = {"univest", "marketsmojo", "kalkine india", "simplywall.st", "equitymaster", "ad-hoc-news",
                   "investment guru india", "ad hoc news", "siam.in", "traders union",
                   "value research", "marketbeat", "yahoo finance singapore", "openpr.com",
                   "ein presswire", "issuewire.com"}
@@ -81,6 +81,10 @@ INDIA_CTX = re.compile(r"\b(?:ltd|limited|nse|bse|sensex|nifty|india|indian|cror
                        r"|₹|\brs\.?\s?\d", re.I)
 # Well-known namesakes that share a holding's name.
 NAMESAKES = {"RAYMOND": re.compile(r"raymond james|st\.? raymond|raymond weil|raymond chandler|raymond stauffer", re.I)}
+# Names shared with a foreign parent / common word: the headline must name the Indian company itself.
+MUST_NAME = {"GRAPHITE": re.compile(r"graphite india", re.I),
+             "SKFINDUS": re.compile(r"skf india", re.I),
+             "KSB": re.compile(r"ksb (?:ltd|limited|india|pumps?)|ksb share", re.I)}
 _STOP = {"the", "and", "for", "with", "from", "after", "shares", "share", "stock", "stocks", "price",
          "limited", "india", "crore", "order", "orders", "company", "today", "news", "into", "over"}
 # Date/scheduling announcements (next earnings call, record date, board-meeting dates...) - not news.
@@ -92,7 +96,7 @@ SCHEDULE = re.compile(r"(?:schedules?|to (?:hold|host)|hosts?|sets?)\b[^.]{0,40}
                       r"record date|ex[- ]?dividend|ex[- ]date|last (?:day|chance) to buy|dividend history|payment date|"
                       r"board meeting intimation|intimation of board meeting|prior intimation|"
                       r"board (?:meeting )?to (?:meet|consider)|to (?:announce|declare|consider)\b[^.]{0,40}\bresults|"
-                      r"results? date|e-voting schedule", re.I)
+                      r"results? date|e-voting schedule|plant visit|site visit|to host investor", re.I)
 MAX_NEWS_PER_DAY = 3
 # Structural, business-changing events (used for the Telegram "key news" digest).
 KEY_NEWS = re.compile(r"\b(?:orders?|order book|order inflow|contracts?|tenders?|l1|lo[ai]|letter of (?:award|intent)|"
@@ -114,10 +118,10 @@ KEY_NEWS = re.compile(r"\b(?:orders?|order book|order inflow|contracts?|tenders?
 # Market commentary that mentions a business word but doesn't report an event.
 COMMENTARY = re.compile(r"why is (?:the )?stock|should (?:you|investors)|buy,? sell or hold|target price|"
                         r"price target|\bupside\b|\bdownside\b|sector stocks|stocks? (?:today|in focus|to watch)|"
-                        r"ahead of|multibagger|opportunit\w*|nse sought clarification|\?\s*$", re.I)
+                        r"ahead of|multibagger|opportunit\w*|nse sought clarification|\bsets\b[^.]{0,25}\btarget\b|\?\s*$", re.I)
 # Routine people/payout events - not key news (unless they also carry a resignation or a corporate action).
 NOT_KEY = re.compile(r"\b(?:re-?)?appoint\w*|\bnamed (?:as )?(?:the )?(?:new )?(?:ceo|cfo|coo|cto|md|chairman|director|auditor)|"
-                     r"\bdividend\w*|\bgovernor\b|encumbrance|voting results|\bagm\b", re.I)
+                     r"\bdividend\w*|\bgovernor\b|encumbrance|voting results|\bagm\b|\besg\b", re.I)
 KEEP_ANYWAY = re.compile(r"resign\w*|steps? down|quits?\b|bonus|buyback|split|demerg\w*", re.I)
 
 
@@ -315,13 +319,15 @@ def keep_headline(ticker, name, body, source=""):
         return False
     if is_schedule(body):
         return False
-    if not MATERIAL.search(body) or source.lower() in FILLER_SOURCES:
+    if not MATERIAL.search(body) or any(f in source.lower() for f in FILLER_SOURCES):
         return False
     kw = _key_words(name)
     # The company's name must appear in the headline.
     if kw and not all(w.lower() in body.lower() for w in kw):
         return False
     if ticker in NAMESAKES and NAMESAKES[ticker].search(body):
+        return False
+    if ticker in MUST_NAME and not MUST_NAME[ticker].search(body):
         return False
     # "Cyient" must not pick up "Cyient DLM" (another holding whose name extends this one).
     if any(s in body.lower() for s in _longer_siblings(name)):
