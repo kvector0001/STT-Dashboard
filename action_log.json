@@ -51,7 +51,7 @@
   "ECOSMOBLTY": "",
   "EIHOTEL": "",
   "EIMCOELECO": "",
-  "ELECON": "⏬",
+  "ELECON": "",
   "ELGIEQUIP": "",
   "ENRIN": "",
   "ENTERO": "",
@@ -125,8 +125,8 @@
   "NEULANDLAB": "",
   "SUVEN": "",
   "TIMETECHNO": "",
-  "WHIRLPOOL": "⏬",
-  "ZENSARTECH": "",
+  "WHIRLPOOL": "",
+  "ZENSARTECH": "🔎",
   "CLEANMAX": "",
   "DATAPATTNS": "",
   "ELDEHSG": "",
@@ -169,7 +169,7 @@
   "CMSINFO": "",
   "E2E": "",
   "ELANTAS": "",
-  "ERIS": "",
+  "ERIS": "⏬",
   "EXIDEIND": "",
   "FORCEMOT": "",
   "GLENMARK": "",
@@ -213,7 +213,7 @@
   "ACE": "",
   "TIL": ""
  },
- "last_eval": "2026-10-23",
+ "last_eval": "2026-10-26",
  "events": [
   {
    "date": "2026-10-15",
@@ -1054,6 +1054,62 @@
    "ret_1d": -1.76,
    "ret_1w": -14.42,
    "ret_1m": -25.06
+  },
+  {
+   "date": "2026-10-26",
+   "ticker": "ELECON",
+   "name": "ELECON",
+   "from": "EXIT",
+   "to": "—",
+   "reversal_tf": "",
+   "setup": "EXIT",
+   "alloc": "🚨",
+   "ltp": 424.05,
+   "ret_1d": 0.9,
+   "ret_1w": -11.62,
+   "ret_1m": -7.53
+  },
+  {
+   "date": "2026-10-26",
+   "ticker": "WHIRLPOOL",
+   "name": "WHIRLPOOL",
+   "from": "EXIT",
+   "to": "—",
+   "reversal_tf": "",
+   "setup": "EXIT",
+   "alloc": "🚨",
+   "ltp": 803.35,
+   "ret_1d": 1.69,
+   "ret_1w": -5.5,
+   "ret_1m": -5.87
+  },
+  {
+   "date": "2026-10-26",
+   "ticker": "ZENSARTECH",
+   "name": "ZENSARTECH",
+   "from": "—",
+   "to": "REVERSAL",
+   "reversal_tf": "M",
+   "setup": "HOLD",
+   "alloc": "",
+   "ltp": 505.3,
+   "ret_1d": 2.39,
+   "ret_1w": -0.48,
+   "ret_1m": 19.58
+  },
+  {
+   "date": "2026-10-26",
+   "ticker": "ERIS",
+   "name": "ERIS",
+   "from": "—",
+   "to": "EXIT",
+   "reversal_tf": "",
+   "setup": "EXIT",
+   "alloc": "🚨",
+   "ltp": 1105.2,
+   "ret_1d": 1.58,
+   "ret_1w": -3.43,
+   "ret_1m": -13.29
   }
  ]
 }
