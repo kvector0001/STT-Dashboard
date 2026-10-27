@@ -44,7 +44,7 @@
   "BOROSCI": "",
   "CARBORUNIV": "",
   "CENTENKA": "",
-  "CYIENT": "🔎",
+  "CYIENT": "",
   "CYIENTDLM": "",
   "DEEDEV": "",
   "DIFFNKG": "",
@@ -162,14 +162,14 @@
   "ABREL": "",
   "ANANTRAJ": "",
   "ASHAPURMIN": "",
-  "BBL": "",
+  "BBL": "🔎",
   "BEML": "",
   "BIRLACABLE": "",
   "CHOLAHLDNG": "",
   "CMSINFO": "",
   "E2E": "",
   "ELANTAS": "",
-  "ERIS": "⏬",
+  "ERIS": "🔎",
   "EXIDEIND": "",
   "FORCEMOT": "",
   "GLENMARK": "",
@@ -213,7 +213,7 @@
   "ACE": "",
   "TIL": ""
  },
- "last_eval": "2026-10-26",
+ "last_eval": "2026-10-27",
  "events": [
   {
    "date": "2026-10-15",
@@ -1110,6 +1110,48 @@
    "ret_1d": 1.58,
    "ret_1w": -3.43,
    "ret_1m": -13.29
+  },
+  {
+   "date": "2026-10-27",
+   "ticker": "CYIENT",
+   "name": "CYIENT",
+   "from": "REVERSAL",
+   "to": "—",
+   "reversal_tf": "",
+   "setup": "HOLD",
+   "alloc": "🌱",
+   "ltp": 1182.3,
+   "ret_1d": -4.88,
+   "ret_1w": 0.84,
+   "ret_1m": 8.0
+  },
+  {
+   "date": "2026-10-27",
+   "ticker": "BBL",
+   "name": "BBL",
+   "from": "—",
+   "to": "REVERSAL",
+   "reversal_tf": "DM",
+   "setup": "BOUNCE",
+   "alloc": "",
+   "ltp": 2585.8,
+   "ret_1d": 14.48,
+   "ret_1w": 6.86,
+   "ret_1m": 19.55
+  },
+  {
+   "date": "2026-10-27",
+   "ticker": "ERIS",
+   "name": "ERIS",
+   "from": "EXIT",
+   "to": "REVERSAL",
+   "reversal_tf": "D",
+   "setup": "BOUNCE",
+   "alloc": "🚨",
+   "ltp": 1198.4,
+   "ret_1d": 8.43,
+   "ret_1w": 6.96,
+   "ret_1m": -4.81
   }
  ]
 }
