@@ -10143,5 +10143,27 @@
     "pat_cagr": 0,
     "rev_cagr": 86.2,
     "mcap_3y": -27.9
+  },
+  {
+    "ticker": "FINCABLES",
+    "name": "Finolex Cables Limited",
+    "sector": "Industrials",
+    "nse_symbol": "FINCABLES",
+    "buy_avg": 1166.8857,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
   }
 ]
