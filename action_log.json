@@ -26,7 +26,7 @@
   "POWERINDIA": "",
   "REDINGTON": "",
   "RIR": "",
-  "RSYSTEMS": "",
+  "RSYSTEMS": "⏬",
   "SHILPAMED": "",
   "SYRMA": "",
   "TATACOMM": "",
@@ -64,7 +64,7 @@
   "GREAVESCOT": "",
   "GRINDWELL": "",
   "HAPPYFORGE": "",
-  "HEGAM": "🔎",
+  "HEGAM": "",
   "IKS": "",
   "INDGN": "",
   "INGERRAND": "",
@@ -74,7 +74,7 @@
   "KENNAMET": "",
   "KPIGREEN": "",
   "KSB": "",
-  "LANDMARK": "⏬",
+  "LANDMARK": "",
   "LCL": "",
   "LOKESHMACH": "",
   "MAPMYINDIA": "",
@@ -126,7 +126,7 @@
   "SUVEN": "",
   "TIMETECHNO": "",
   "WHIRLPOOL": "",
-  "ZENSARTECH": "",
+  "ZENSARTECH": "🔎",
   "CLEANMAX": "",
   "DATAPATTNS": "",
   "ELDEHSG": "",
@@ -214,7 +214,7 @@
   "TIL": "",
   "FINCABLES": ""
  },
- "last_eval": "2026-10-28",
+ "last_eval": "2026-10-29",
  "events": [
   {
    "date": "2026-10-15",
@@ -1237,6 +1237,62 @@
    "ret_1d": -1.13,
    "ret_1w": 3.44,
    "ret_1m": -4.93
+  },
+  {
+   "date": "2026-10-29",
+   "ticker": "RSYSTEMS",
+   "name": "RSYSTEMS",
+   "from": "—",
+   "to": "EXIT",
+   "reversal_tf": "",
+   "setup": "BOUNCE",
+   "alloc": "🚨",
+   "ltp": 252.4,
+   "ret_1d": 0.08,
+   "ret_1w": -0.39,
+   "ret_1m": -13.01
+  },
+  {
+   "date": "2026-10-29",
+   "ticker": "HEGAM",
+   "name": "HEGAM",
+   "from": "REVERSAL",
+   "to": "—",
+   "reversal_tf": "",
+   "setup": "BOUNCE",
+   "alloc": "🚨",
+   "ltp": 243.37,
+   "ret_1d": 6.4,
+   "ret_1w": 18.33,
+   "ret_1m": 2.15
+  },
+  {
+   "date": "2026-10-29",
+   "ticker": "LANDMARK",
+   "name": "LANDMARK",
+   "from": "EXIT",
+   "to": "—",
+   "reversal_tf": "",
+   "setup": "EXIT",
+   "alloc": "🚨",
+   "ltp": 448.0,
+   "ret_1d": 2.35,
+   "ret_1w": 0.52,
+   "ret_1m": -8.01
+  },
+  {
+   "date": "2026-10-29",
+   "ticker": "ZENSARTECH",
+   "name": "ZENSARTECH",
+   "from": "—",
+   "to": "REVERSAL",
+   "reversal_tf": "M",
+   "setup": "HOLD",
+   "alloc": "",
+   "ltp": 537.3,
+   "ret_1d": 8.11,
+   "ret_1w": 7.2,
+   "ret_1m": 25.24
   }
  ]
 }
