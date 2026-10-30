@@ -7,7 +7,7 @@
   "AVANTEL": "",
   "BBOX": "",
   "BEL": "",
-  "BOROLTD": "",
+  "BOROLTD": "🔎",
   "DLINKINDIA": "",
   "EMUDHRA": "⏬",
   "GRAPHITE": "",
@@ -26,7 +26,7 @@
   "POWERINDIA": "",
   "REDINGTON": "",
   "RIR": "",
-  "RSYSTEMS": "⏬",
+  "RSYSTEMS": "",
   "SHILPAMED": "",
   "SYRMA": "",
   "TATACOMM": "",
@@ -162,7 +162,7 @@
   "ABREL": "",
   "ANANTRAJ": "",
   "ASHAPURMIN": "",
-  "BBL": "🔎",
+  "BBL": "",
   "BEML": "",
   "BIRLACABLE": "",
   "CHOLAHLDNG": "",
@@ -204,7 +204,7 @@
   "SMLMAH": "",
   "STYRENIX": "",
   "SUDEEPPHRM": "",
-  "TVSELECT": "",
+  "TVSELECT": "⏬",
   "UNIPARTS": "",
   "VIMTALABS": "",
   "WABAG": "",
@@ -212,9 +212,10 @@
   "TRIVENIPT": "",
   "ACE": "",
   "TIL": "",
-  "FINCABLES": ""
+  "FINCABLES": "",
+  "INTELLECT": ""
  },
- "last_eval": "2026-10-29",
+ "last_eval": "2026-10-30",
  "events": [
   {
    "date": "2026-10-15",
@@ -1293,6 +1294,62 @@
    "ret_1d": 8.11,
    "ret_1w": 7.2,
    "ret_1m": 25.24
+  },
+  {
+   "date": "2026-10-30",
+   "ticker": "BOROLTD",
+   "name": "BOROLTD",
+   "from": "—",
+   "to": "REVERSAL",
+   "reversal_tf": "DW",
+   "setup": "HOLD",
+   "alloc": "🌱",
+   "ltp": 286.4,
+   "ret_1d": 19.98,
+   "ret_1w": 21.43,
+   "ret_1m": -2.38
+  },
+  {
+   "date": "2026-10-30",
+   "ticker": "RSYSTEMS",
+   "name": "RSYSTEMS",
+   "from": "EXIT",
+   "to": "—",
+   "reversal_tf": "",
+   "setup": "EXIT",
+   "alloc": "🚨",
+   "ltp": 250.85,
+   "ret_1d": -0.61,
+   "ret_1w": 0.68,
+   "ret_1m": -7.74
+  },
+  {
+   "date": "2026-10-30",
+   "ticker": "BBL",
+   "name": "BBL",
+   "from": "REVERSAL",
+   "to": "—",
+   "reversal_tf": "",
+   "setup": "BOUNCE",
+   "alloc": "🚨",
+   "ltp": 2330.4,
+   "ret_1d": -4.85,
+   "ret_1w": 2.77,
+   "ret_1m": 11.23
+  },
+  {
+   "date": "2026-10-30",
+   "ticker": "TVSELECT",
+   "name": "TVSELECT",
+   "from": "—",
+   "to": "EXIT",
+   "reversal_tf": "",
+   "setup": "EXIT",
+   "alloc": "🚨",
+   "ltp": 363.65,
+   "ret_1d": -2.05,
+   "ret_1w": -1.09,
+   "ret_1m": -12.62
   }
  ]
 }
