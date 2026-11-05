@@ -73,7 +73,11 @@
     "ret_1w": 9.08,
     "ret_1m": 5.16,
     "ret_6m": -34.1,
-    "ret_1y": -42.11
+    "ret_1y": -42.11,
+    "ret_2y": null,
+    "ret_3y": null,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "ASTERDM": {
     "ltp": 719.55,
@@ -338,7 +342,9 @@
     "ret_6m": 67.26,
     "ret_1y": 74.71,
     "ret_2y": 250.15,
-    "ret_3y": 297.01
+    "ret_3y": 297.01,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "AVANTEL": {
     "ltp": 140.43,
@@ -412,7 +418,10 @@
     "ret_1m": -8.38,
     "ret_6m": -10.43,
     "ret_1y": -19.76,
-    "ret_2y": -14.66
+    "ret_2y": -14.66,
+    "ret_3y": null,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "BBOX": {
     "ltp": 856.85,
@@ -1375,7 +1384,10 @@
     "ret_1m": -4.11,
     "ret_6m": 28.58,
     "ret_1y": 63.63,
-    "ret_2y": 81.35
+    "ret_2y": 81.35,
+    "ret_3y": null,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "INTELLECT": {
     "ltp": 534.65,
@@ -2542,7 +2554,8 @@
     "ret_1y": 84.24,
     "ret_2y": 286.51,
     "ret_3y": 138.58,
-    "ret_4y": 407.13
+    "ret_4y": 407.13,
+    "ret_5y": null
   },
   "TATACOMM": {
     "ltp": 1713.7,
@@ -2882,7 +2895,9 @@
     "ret_6m": 25.01,
     "ret_1y": 30.42,
     "ret_2y": 60.52,
-    "ret_3y": 154.45
+    "ret_3y": 154.45,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "ZENSARTECH": {
     "ltp": 565.75,
@@ -3077,7 +3092,9 @@
     "ret_6m": 30.76,
     "ret_1y": 201.57,
     "ret_2y": 185.23,
-    "ret_3y": 245.52
+    "ret_3y": 245.52,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "ANURAS": {
     "ltp": 1151.8,
@@ -3668,7 +3685,10 @@
     "ret_1m": 6.47,
     "ret_6m": 17.78,
     "ret_1y": -10.78,
-    "ret_2y": 18.6
+    "ret_2y": 18.6,
+    "ret_3y": null,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "BOROSCI": {
     "ltp": 107.78,
@@ -3749,7 +3769,10 @@
     "ret_1m": -6.3,
     "ret_6m": -12.69,
     "ret_1y": -21.97,
-    "ret_2y": -36.88
+    "ret_2y": -36.88,
+    "ret_3y": null,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "CARBORUNIV": {
     "ltp": 1084.6,
@@ -4129,7 +4152,9 @@
     "ret_6m": 91.56,
     "ret_1y": 76.44,
     "ret_2y": 27.79,
-    "ret_3y": 18.53
+    "ret_3y": 18.53,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "DEEDEV": {
     "ltp": 603.05,
@@ -4208,7 +4233,10 @@
     "ret_1m": -3.37,
     "ret_6m": 31.97,
     "ret_1y": 144.6,
-    "ret_2y": 150.85
+    "ret_2y": 150.85,
+    "ret_3y": null,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "DIFFNKG": {
     "ltp": 417.75,
@@ -4297,7 +4325,10 @@
     "ret_1m": -7.75,
     "ret_6m": 32.8,
     "ret_1y": 13.76,
-    "ret_2y": -4.4
+    "ret_2y": -4.4,
+    "ret_3y": null,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "ECOSMOBLTY": {
     "ltp": 118.48,
@@ -4376,7 +4407,10 @@
     "ret_1m": 9.46,
     "ret_6m": -15.86,
     "ret_1y": -43.34,
-    "ret_2y": -68.98
+    "ret_2y": -68.98,
+    "ret_3y": null,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "EIHOTEL": {
     "ltp": 307.75,
@@ -4832,7 +4866,8 @@
     "ret_1y": -40.85,
     "ret_2y": -55.86,
     "ret_3y": -17.52,
-    "ret_4y": 24.01
+    "ret_4y": 24.01,
+    "ret_5y": null
   },
   "ENRIN": {
     "ltp": 2859.0,
@@ -4915,7 +4950,11 @@
     "ret_1w": 1.66,
     "ret_1m": -14.5,
     "ret_6m": -8.93,
-    "ret_1y": -10.69
+    "ret_1y": -10.69,
+    "ret_2y": null,
+    "ret_3y": null,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "ENTERO": {
     "ltp": 1754.1,
@@ -5001,7 +5040,10 @@
     "ret_1m": 2.38,
     "ret_6m": 38.59,
     "ret_1y": 58.31,
-    "ret_2y": 28.26
+    "ret_2y": 28.26,
+    "ret_3y": null,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "EPIGRAL": {
     "ltp": 943.95,
@@ -5264,7 +5306,10 @@
     "ret_1m": -1.14,
     "ret_6m": 41.4,
     "ret_1y": 51.25,
-    "ret_2y": 28.5
+    "ret_2y": 28.5,
+    "ret_3y": null,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "GESHIP": {
     "ltp": 1460.0,
@@ -5797,7 +5842,10 @@
     "ret_1m": -2.67,
     "ret_6m": 33.65,
     "ret_1y": 85.27,
-    "ret_2y": 73.16
+    "ret_2y": 73.16,
+    "ret_3y": null,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "HEGAM": {
     "ltp": 295.42,
@@ -6049,7 +6097,11 @@
     "ret_1w": 2.71,
     "ret_1m": 1.14,
     "ret_6m": 3.63,
-    "ret_1y": 11.97
+    "ret_1y": 11.97,
+    "ret_2y": null,
+    "ret_3y": null,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "INDGN": {
     "ltp": 613.35,
@@ -6144,7 +6196,10 @@
     "ret_1m": 1.03,
     "ret_6m": 15.93,
     "ret_1y": 11.59,
-    "ret_2y": -9.51
+    "ret_2y": -9.51,
+    "ret_3y": null,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "INGERRAND": {
     "ltp": 3993.4,
@@ -6321,7 +6376,10 @@
     "ret_1m": -10.66,
     "ret_6m": -29.73,
     "ret_1y": -26.94,
-    "ret_2y": -5.99
+    "ret_2y": -5.99,
+    "ret_3y": null,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "INVPRECQ": {
     "ltp": 1374.5,
@@ -6501,7 +6559,10 @@
     "ret_1m": -11.07,
     "ret_6m": 9.3,
     "ret_1y": 35.96,
-    "ret_2y": -38.91
+    "ret_2y": -38.91,
+    "ret_3y": null,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "KENNAMET": {
     "ltp": 3800.5,
@@ -6854,7 +6915,9 @@
     "ret_6m": 15.71,
     "ret_1y": -25.01,
     "ret_2y": -21.44,
-    "ret_3y": -40.34
+    "ret_3y": -40.34,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "LCL": {
     "ltp": 520.45,
@@ -6935,7 +6998,13 @@
     "insider_pct": 68.66,
     "ret_1d": -3.66,
     "ret_1w": -2.19,
-    "ret_1m": -16.61
+    "ret_1m": -16.61,
+    "ret_6m": null,
+    "ret_1y": null,
+    "ret_2y": null,
+    "ret_3y": null,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "LOKESHMACH": {
     "ltp": 387.6,
@@ -7634,7 +7703,12 @@
     "ret_1d": -3.09,
     "ret_1w": -4.05,
     "ret_1m": -6.0,
-    "ret_6m": 10.66
+    "ret_6m": 10.66,
+    "ret_1y": null,
+    "ret_2y": null,
+    "ret_3y": null,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "NETWEB": {
     "ltp": 4023.5,
@@ -7725,7 +7799,9 @@
     "ret_6m": -6.43,
     "ret_1y": -1.9,
     "ret_2y": 55.67,
-    "ret_3y": 365.36
+    "ret_3y": 365.36,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "NLCINDIA": {
     "ltp": 241.47,
@@ -7906,7 +7982,12 @@
     "ret_1w": 10.46,
     "ret_1m": -9.86,
     "ret_6m": -0.67,
-    "name": "Park Medi World Limited"
+    "name": "Park Medi World Limited",
+    "ret_1y": null,
+    "ret_2y": null,
+    "ret_3y": null,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "POWERICA": {
     "ltp": 494.55,
@@ -7996,7 +8077,12 @@
     "ret_1d": -1.04,
     "ret_1w": -0.34,
     "ret_1m": -17.71,
-    "ret_6m": 0.51
+    "ret_6m": 0.51,
+    "ret_1y": null,
+    "ret_2y": null,
+    "ret_3y": null,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "RAMCOSYS": {
     "ltp": 544.4,
@@ -8344,7 +8430,9 @@
     "ret_6m": 109.2,
     "ret_1y": 146.69,
     "ret_2y": 108.52,
-    "ret_3y": 209.03
+    "ret_3y": 209.03,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "RAYMOND": {
     "ltp": 1130.7,
@@ -8520,7 +8608,10 @@
     "ret_1m": -7.73,
     "ret_6m": 69.75,
     "ret_1y": 163.51,
-    "ret_2y": 130.28
+    "ret_2y": 130.28,
+    "ret_3y": null,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "RUBICON": {
     "ltp": 1740.6,
@@ -8598,7 +8689,11 @@
     "ret_1w": 11.63,
     "ret_1m": 10.47,
     "ret_6m": 83.14,
-    "ret_1y": 190.17
+    "ret_1y": 190.17,
+    "ret_2y": null,
+    "ret_3y": null,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "SALZERELEC": {
     "ltp": 487.05,
@@ -8767,7 +8862,7 @@
     "ret_1y": 193.38,
     "ret_2y": 190.47,
     "ret_3y": 392.29,
-    "ret_4y": 535.31,
+    "ret_4y": 535.3,
     "ret_5y": 482.14
   },
   "SASKEN": {
@@ -9020,7 +9115,11 @@
     "ret_1w": 3.75,
     "ret_1m": 7.7,
     "ret_6m": 105.63,
-    "ret_1y": 226.63
+    "ret_1y": 226.63,
+    "ret_2y": null,
+    "ret_3y": null,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "SIMPLEXCAS": {
     "ltp": 131.6,
@@ -9191,7 +9290,12 @@
     "ret_1d": -1.52,
     "ret_1w": -1.62,
     "ret_1m": -12.46,
-    "ret_6m": 12.59
+    "ret_6m": 12.59,
+    "ret_1y": null,
+    "ret_2y": null,
+    "ret_3y": null,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "SOFTTECH": {
     "ltp": 449.9,
@@ -9623,7 +9727,12 @@
     "ret_1d": 6.52,
     "ret_1w": 7.18,
     "ret_1m": 0.27,
-    "ret_6m": -0.04
+    "ret_6m": -0.04,
+    "ret_1y": null,
+    "ret_2y": null,
+    "ret_3y": null,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "TREL": {
     "ltp": 24.12,
@@ -9701,7 +9810,9 @@
     "ret_6m": -14.1,
     "ret_1y": -16.91,
     "ret_2y": -36.24,
-    "ret_3y": -46.14
+    "ret_3y": -46.14,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "TRITURBINE": {
     "ltp": 515.1,
@@ -9971,7 +10082,11 @@
     "ret_1w": 8.42,
     "ret_1m": -5.77,
     "ret_6m": 8.12,
-    "ret_1y": 2.5
+    "ret_1y": 2.5,
+    "ret_2y": null,
+    "ret_3y": null,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "VIPULORG": {
     "ltp": 217.35,
@@ -10610,7 +10725,14 @@
     "week52_low": 410.1,
     "insider_pct": 74.84,
     "ret_1d": 0.07,
-    "ret_1w": 5.06
+    "ret_1w": 5.06,
+    "ret_1m": null,
+    "ret_6m": null,
+    "ret_1y": null,
+    "ret_2y": null,
+    "ret_3y": null,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "WELCORP": {
     "ltp": 2385.6,
@@ -10776,7 +10898,8 @@
     "ret_1y": -21.2,
     "ret_2y": -51.32,
     "ret_3y": -40.78,
-    "ret_4y": 51.18
+    "ret_4y": 51.18,
+    "ret_5y": null
   },
   "KIRLPNU": {
     "ltp": 571.65,
@@ -10866,7 +10989,9 @@
     "ret_6m": -27.8,
     "ret_1y": 1.11,
     "ret_2y": -13.27,
-    "ret_3y": 73.46
+    "ret_3y": 73.46,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "MSTCLTD": {
     "ltp": 592.3,
@@ -11308,7 +11433,12 @@
     "ret_1d": 2.19,
     "ret_1w": 1.1,
     "ret_1m": -8.07,
-    "ret_6m": 9.44
+    "ret_6m": 9.44,
+    "ret_1y": null,
+    "ret_2y": null,
+    "ret_3y": null,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "DATAPATTNS": {
     "ltp": 3959.9,
@@ -11774,7 +11904,11 @@
     "ret_1w": 10.79,
     "ret_1m": -0.31,
     "ret_6m": -9.73,
-    "ret_1y": -37.9
+    "ret_1y": -37.9,
+    "ret_2y": null,
+    "ret_3y": null,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "MOSCHIP": {
     "ltp": 170.57,
@@ -11845,7 +11979,11 @@
     "ret_1w": 7.98,
     "ret_1m": -12.62,
     "ret_6m": -25.21,
-    "ret_1y": -31.71
+    "ret_1y": -31.71,
+    "ret_2y": null,
+    "ret_3y": null,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "PITTIENG": {
     "ltp": 934.55,
@@ -12170,8 +12308,9 @@
     "ret_6m": 16.58,
     "ret_1y": 67.94,
     "ret_2y": 78.91,
-    "ret_3y": 311.44,
-    "ret_4y": 421.05
+    "ret_3y": 311.45,
+    "ret_4y": 421.05,
+    "ret_5y": null
   },
   "RAYMONDREL": {
     "ltp": 561.85,
@@ -12247,7 +12386,11 @@
     "ret_1w": 3.62,
     "ret_1m": -19.94,
     "ret_6m": -11.27,
-    "ret_1y": -10.34
+    "ret_1y": -10.34,
+    "ret_2y": null,
+    "ret_3y": null,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "SCI": {
     "ltp": 263.45,
@@ -12402,7 +12545,9 @@
     "ret_6m": -18.93,
     "ret_1y": -33.06,
     "ret_2y": -48.8,
-    "ret_3y": 46.44
+    "ret_3y": 46.44,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "SJVN": {
     "ltp": 57.55,
@@ -12564,7 +12709,11 @@
     "ret_1w": 9.39,
     "ret_1m": -10.32,
     "ret_6m": 22.71,
-    "ret_1y": -29.25
+    "ret_1y": -29.25,
+    "ret_2y": null,
+    "ret_3y": null,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "SUZLON": {
     "ltp": 38.59,
@@ -12803,7 +12952,10 @@
     "ret_1m": 2.59,
     "ret_6m": -7.76,
     "ret_1y": -36.04,
-    "ret_2y": -56.98
+    "ret_2y": -56.98,
+    "ret_3y": null,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "VIYASH": {
     "ltp": 232.82,
@@ -13193,7 +13345,8 @@
     "ret_1y": -1.7,
     "ret_2y": -2.5,
     "ret_3y": 9.32,
-    "ret_4y": 44.88
+    "ret_4y": 44.88,
+    "ret_5y": null
   },
   "FRACTAL": {
     "ltp": 809.45,
@@ -13264,7 +13417,12 @@
     "ret_1d": -3.14,
     "ret_1w": 7.98,
     "ret_1m": 12.22,
-    "ret_6m": -26.52
+    "ret_6m": -26.52,
+    "ret_1y": null,
+    "ret_2y": null,
+    "ret_3y": null,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "GAUDIUMIVF": {
     "ltp": 105.57,
@@ -13328,7 +13486,12 @@
     "ret_1d": -1.54,
     "ret_1w": -4.95,
     "ret_1m": -1.8,
-    "ret_6m": -12.04
+    "ret_6m": -12.04,
+    "ret_1y": null,
+    "ret_2y": null,
+    "ret_3y": null,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "JYOTICNC": {
     "ltp": 1022.2,
@@ -13406,7 +13569,10 @@
     "ret_1m": -4.56,
     "ret_6m": 32.2,
     "ret_1y": 17.47,
-    "ret_2y": 1.28
+    "ret_2y": 1.28,
+    "ret_3y": null,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "RKSWAMY": {
     "ltp": 83.78,
@@ -13477,7 +13643,10 @@
     "ret_1m": -4.97,
     "ret_6m": -8.16,
     "ret_1y": -35.43,
-    "ret_2y": -63.03
+    "ret_2y": -63.03,
+    "ret_3y": null,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "SCODATUBES": {
     "ltp": 110.21,
@@ -13553,7 +13722,11 @@
     "ret_1w": 2.91,
     "ret_1m": -10.31,
     "ret_6m": -25.65,
-    "ret_1y": -31.2
+    "ret_1y": -31.2,
+    "ret_2y": null,
+    "ret_3y": null,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "SUNDRMFAST": {
     "ltp": 1097.4,
@@ -14264,7 +14437,8 @@
     "ret_1y": -41.17,
     "ret_2y": -61.02,
     "ret_3y": -38.38,
-    "ret_4y": -24.24
+    "ret_4y": -24.24,
+    "ret_5y": null
   },
   "E2E": {
     "ltp": 512.5,
@@ -14389,7 +14563,12 @@
     "ret_1d": -4.11,
     "ret_1w": -6.24,
     "ret_1m": -12.5,
-    "ret_6m": 26.11
+    "ret_6m": 26.11,
+    "ret_1y": null,
+    "ret_2y": null,
+    "ret_3y": null,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "ERIS": {
     "ltp": 1229.9,
@@ -14745,7 +14924,8 @@
     "ret_1y": -21.81,
     "ret_2y": -23.01,
     "ret_3y": 173.11,
-    "ret_4y": 225.63
+    "ret_4y": 225.63,
+    "ret_5y": null
   },
   "GULFOILLUB": {
     "ltp": 1085.5,
@@ -14946,7 +15126,13 @@
     "insider_pct": 59.09,
     "ret_1d": 19.75,
     "ret_1w": 25.99,
-    "ret_1m": 14.26
+    "ret_1m": 14.26,
+    "ret_6m": null,
+    "ret_1y": null,
+    "ret_2y": null,
+    "ret_3y": null,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "HINDWAREAP": {
     "ltp": 171.92,
@@ -15489,7 +15675,10 @@
     "ret_1m": -7.06,
     "ret_6m": 22.14,
     "ret_1y": 8.5,
-    "ret_2y": -10.77
+    "ret_2y": -10.77,
+    "ret_3y": null,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "MAXIND": {
     "ltp": 149.69,
@@ -15951,7 +16140,11 @@
     "ret_1w": 6.72,
     "ret_1m": 0.69,
     "ret_6m": 14.2,
-    "ret_1y": -19.12
+    "ret_1y": -19.12,
+    "ret_2y": null,
+    "ret_3y": null,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "PTC": {
     "ltp": 141.38,
@@ -16158,7 +16351,9 @@
     "ret_6m": 30.15,
     "ret_1y": 57.75,
     "ret_2y": 92.05,
-    "ret_3y": 24.34
+    "ret_3y": 24.34,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "RUSTOMJEE": {
     "ltp": 360.0,
@@ -16226,7 +16421,9 @@
     "ret_6m": -16.22,
     "ret_1y": -37.57,
     "ret_2y": -47.38,
-    "ret_3y": -38.76
+    "ret_3y": -38.76,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "SCHNEIDER": {
     "ltp": 1135.8,
@@ -16500,7 +16697,10 @@
     "ret_1m": -15.03,
     "ret_6m": -23.69,
     "ret_1y": -7.75,
-    "ret_2y": 1.84
+    "ret_2y": 1.84,
+    "ret_3y": null,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "SJS": {
     "ltp": 2028.4,
@@ -16783,7 +16983,12 @@
     "ret_1d": 6.59,
     "ret_1w": 5.33,
     "ret_1m": 1.7,
-    "ret_6m": 77.36
+    "ret_6m": 77.36,
+    "ret_1y": null,
+    "ret_2y": null,
+    "ret_3y": null,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "TRIVENI": {
     "ltp": 243.15,
@@ -16983,7 +17188,9 @@
     "ret_6m": 29.97,
     "ret_1y": 54.52,
     "ret_2y": 80.05,
-    "ret_3y": 49.95
+    "ret_3y": 49.95,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "VIMTALABS": {
     "ltp": 507.3,
@@ -17287,7 +17494,15 @@
         "buy_avg": 82.26,
         "invested": 616975.0
       }
-    ]
+    ],
+    "ret_1w": 1.51,
+    "ret_1m": -2.44,
+    "ret_6m": -5.09,
+    "ret_1y": 18.51,
+    "ret_2y": 78.55,
+    "ret_3y": 139.18,
+    "ret_4y": 166.78,
+    "ret_5y": 183.9
   },
   "GOLDETF": {
     "ltp": 138.89,
@@ -17305,7 +17520,15 @@
         "buy_avg": 92.04,
         "invested": 312288.4
       }
-    ]
+    ],
+    "ret_1w": 1.41,
+    "ret_1m": -2.6,
+    "ret_6m": -4.96,
+    "ret_1y": 22.38,
+    "ret_2y": 80.28,
+    "ret_3y": 139.84,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "HDFC GOLD ETF FUND OF FUND - DIRECT PLAN": {
     "ltp": 42.5256,
@@ -17575,7 +17798,15 @@
         "buy_avg": 222.0,
         "invested": 24864.0
       }
-    ]
+    ],
+    "ret_1w": -1.1,
+    "ret_1m": -14.68,
+    "ret_6m": -25.41,
+    "ret_1y": 25.4,
+    "ret_2y": 88.67,
+    "ret_3y": 160.23,
+    "ret_4y": null,
+    "ret_5y": null
   },
   "SILVERCASE": {
     "ltp": 18.79,
@@ -17593,6 +17824,14 @@
         "buy_avg": 25.35,
         "invested": 168389.72
       }
-    ]
+    ],
+    "ret_1w": -1.31,
+    "ret_1m": -15.13,
+    "ret_6m": -25.97,
+    "ret_1y": 25.72,
+    "ret_2y": null,
+    "ret_3y": null,
+    "ret_4y": null,
+    "ret_5y": null
   }
 }
