@@ -1,59 +1,5 @@
 [
  {
-  "tk": "EMUDHRA",
-  "u": "https://news.google.com/rss/articles/CBMifkFVX3lxTE5wMlZ1TTZsSzYzbGJnWXhQeUlyOTFFY2xiY29YRVBQRnZMNnB6a3VvTEhpYmRKTXhKNGVXbGJjSUdSeml0VzlIbGJGaWI2VVU0X2VyQ2R1Unkxd1IwNzQ2dWpkS0Q4ZldYY183ZU53R0pETzZIQk5uRmIxWHEyUQ?oc=5",
-  "t": "Compromised eMudhra intermediate certificates",
-  "d": "2026-10-22"
- },
- {
-  "tk": "EMUDHRA",
-  "u": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPZF81NHlYMHZCN0M2enVfcDF3dkZFQzR3N3NQUERycDNGRVZmUHRVQXR2MFV0blg5dEhOdDF2VWJPdVZSZmhuLVJSWHN4a0NfUl9jVEhrSUxXNWtMVl96dmRwc01nY3RrdjN6MXFNRTRNOVF1elJfUUIxNVdaVlVpLTNybw?oc=5",
-  "t": "eMudhra CA Key Compromise: Weak Keys, Risks and Fixes",
-  "d": "2026-10-22"
- },
- {
-  "tk": "EMUDHRA",
-  "u": "https://news.google.com/rss/articles/CBMib0FVX3lxTE80VGRFN3IxUm0yYjkxS3FVVVIxejZOQ1BDdFA4dEg5dU5QemJyU1Q3YVJ1Qmxhdk5jY1VCbUc5b05aOEEtTkVYVzFGZkZCN3l3aEwtZWdZQllrLU41c19Ld0I0YkI5U2pQdjNiY2paSQ?oc=5",
-  "t": "eMudhra CA Compromise: Fireblocks Response & Next Steps",
-  "d": "2026-10-22"
- },
- {
-  "tk": "SIEMENS",
-  "u": "https://news.google.com/rss/articles/CBMingFBVV95cUxOUEsyLWdTZDl6Z3FFa1J5aHh6MzNMZUJyYXJRV0RJU25xUlpvb1BTUEQ0d1FSaE9kc2hqTFk5VEhXQURkNlhxMEpMNHBzWEIwQmgzQzdHV2F2VWdzX0tNeXJLVWl5enJjWW5iQzc1aHZIaEVhR1RLZFJrNlQ5dGhaa0MxRVNlZmZabTBJaGktUEtod2hpUzBJR29iTy0zdw?oc=5",
-  "t": "Siemens revenue rises 14.6% in Q6 FY26 amid strong order growth",
-  "d": "2026-10-22"
- },
- {
-  "tk": "WENDT",
-  "u": "https://nsearchives.nseindia.com/corporate/WENDT_21102026154043_pr_covering_letter_sd.pdf",
-  "t": "Unaudited financial results for the quarter ended 30th September 2026",
-  "d": "2026-10-22"
- },
- {
-  "tk": "WENDT",
-  "u": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNWUZDTEpud29LbnFfOU9XaTFtcXptUTkxZTc3ODVVREU1ZFJkSlVMdVdDNjdhdXU4d3U1Y2ZCSUNSVUNfaTRTTVV3d0VNaWRQb194cXNkeENDN25ocnp5U2RJMzBlV2x5bTFsRHUxUXpuZ2pENXdQSHpsSGxXS1I3ZUU4elhEOGxWY2s2LWQwYmpKMmdzbG1kN2tOdGtndFpNWmFHeTRpcE1ZVWJvZExGRWh3VjRHeFHSAb4BQVVfeXFMTVRJZXN6QUJQTjEyYkI0aGNSWkhwa0tZM1JpTkdhdWNycWdubjR5VDhTbHh0QnpVU2p1S0p1Ujg1LXJ1V0hkR0pUSmlYYnJJMUxMenZLQ1NDbHhsY21rQmlUTV9YRXRvVFY2MHFfSGpjSDczZVpIeFk5ZzhXZ2tiejNqOFhCN2JxanZLNUNPUEZUcG1mREgzOTlhVHFINjZaZzNSNS12YnFqMjFkVGJpcUtTZlZwZ0VzNkNld01Ddw?oc=5",
-  "t": "Wendt’s consolidated net profit doubles in Q2 FY27",
-  "d": "2026-10-22"
- },
- {
-  "tk": "WENDT",
-  "u": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQVHJNQlYyRW9tM2hLbUVlQXUtNDBXaTNGZDhob0txWlZRV2FoemRuN1VLN2tzc3ZYSkZ3Y0RlRFVHN0FIel9uTGxza3o2YXU1UDRaVVM3NjROSVJFUTQ4NDg3Q05mc0Q2bVI1Wkxlei1aNnVYcEJSTmJ5eWtLemM2dzFyZjliYXI4U3ZVOF82akhzLUpqNmhoRVkxLUU?oc=5",
-  "t": "Wendt Reports Q2 Net Profit Of ₹5.5 Crore With Revenue Up At ₹72.5 Crore",
-  "d": "2026-10-22"
- },
- {
-  "tk": "EMUDHRA",
-  "u": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxNUzJkaVFfZWhrNjE3TlBKN05CQ1NwT3haZ0Z4SUFoTVBZZGRIN3RWcGNzak1QLTNjRXJJaFJKNzFjcDBMZFItM3hZNDlUR2tpQ1Y0eEJQdDJ2aU5KNWg3NGY5RGRIcHdjVnVqOU40R2piclZXR3h5Zm13ZTdkSEpqMmtOSUpUQ2dWRURoRzVQQ2tKdzFTa3VuQ2RSTFgzemV6SGV2ZjNpMDlUcDdMbFZpd013eWhoOGNJd21zZmQ1bnVHaURQOWZ2ejRIOHM3NG9neVRoQkp0VENJNVpyMWJsdUtPSnV3b2JaUS1n?oc=5",
-  "t": "A private key with the value 4: IFF writes to eMudhra, CERT-In and MeitY on the compromise of eMudhra’s certificate authority keys",
-  "d": "2026-10-22"
- },
- {
-  "tk": "FRACTAL",
-  "u": "https://nsearchives.nseindia.com/corporate/FRACTAL_22102026135419_SE_Intimation_Clarification_on_Volume_Movement.pdf",
-  "t": "Clarification on Volume Movement",
-  "d": "2026-10-22"
- },
- {
   "tk": "CYIENT",
   "u": "https://nsearchives.nseindia.com/corporate/CYIENT_22102026162546_OutcomeFinalSigned.pdf",
   "t": "Outcome of Board Meeting — Cyient Limited has submitted to the Exchange, the financial results for the period ended September 30, 2026",
@@ -2314,5 +2260,215 @@
   "u": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQRnd0M1Z5ajhtU25BMHBoT2tzU1V3aHVPUUVMbXFIdHZVektXSFd1LXhUbVZtV091ZzU2dmJhQnVvM29MN3ljSkZNWnRfbGFVV2g3VThRLUFWLXhmTDJGN0JhdnNGbmhtaUwyMkoyNGJMRXVobE5sZTd1c0R6WTVITzhKZ0ZQb3V0WHdvSGt0aUt6ZG9ZQVRUVlJYYkhuLVRSRmJScVFCaW9sT3VTb2xaY3EyZjNocUx2bTZJSUJzNjhwVTFY?oc=5",
   "t": "Entero Healthcare Solutions Q2 2027 Earnings Call Is Live",
   "d": "2026-11-05"
+ },
+ {
+  "tk": "RPTECH",
+  "u": "https://nsearchives.nseindia.com/corporate/RASHI2024_05112026211903_Press_Release.pdf",
+  "t": "Rashi Peripherals Delivers Highest-Ever PAT Q2-2027 with YOY Growth of 120% and YTD of 94%; Advances 'One Platform. Multiple Engines' Strategy with Foray into New Growth Businesses",
+  "d": "2026-11-06"
+ },
+ {
+  "tk": "RPTECH",
+  "u": "https://nsearchives.nseindia.com/corporate/RASHI2024_05112026200643_Financial_Results_Q2_2026-27.pdf",
+  "t": "Outcome of Board Meeting — Rashi Peripherals Limited has submitted to the Exchange, the financial results for the period ended September 30, 2026",
+  "d": "2026-11-06"
+ },
+ {
+  "tk": "RPTECH",
+  "u": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNcnFrS2trOVV0QTYyVERoc0NUZ2wzMVNlZlpuSGtFWmZyclFzQVRKVUpCLThwa01fYUZrNTRNbTFIdlkxWnJZSmVQSEhDaF9Wd0NLdGlHUlVIclBfc1FzX2lBcHJiSi1CU28tMVVzOEM2UWc2bWtzVHdFS0Ric2pETFNsbjJSSlU5b3NtcFlBeEJiWnFobERySDR2UzctVFpMZTZRVlNMNkZvd3BaNDNIVUVPUHowQm05aEpxdTdaLVFXTFdXTnRpUUdYbmRpQmo0bFFjMg?oc=5",
+  "t": "Rashi Peripherals Sept-Quarter Consol Net Profit 1.25 Billion Rupees",
+  "d": "2026-11-06"
+ },
+ {
+  "tk": "THERMAX",
+  "u": "https://nsearchives.nseindia.com/corporate/THERMAXNSE_05112026180056_SEIntimationBMOutcome.pdf",
+  "t": "Outcome of Board Meeting — Thermax Limited has submitted to the Exchange, the financial results for the period ended September 30, 2026",
+  "d": "2026-11-06"
+ },
+ {
+  "tk": "THERMAX",
+  "u": "https://nsearchives.nseindia.com/corporate/THERMAXNSE_05112026152702_SEIntimationGSTPenalty_Nov2026.pdf",
+  "t": "Action(s) taken or orders passed",
+  "d": "2026-11-06"
+ },
+ {
+  "tk": "THERMAX",
+  "u": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNckJVWE1DeTFTRDEzc1FWWjlCbXpmMl94dFBuNmt1cERRZG5HVjdxQTJ4QV9mU1Fza295ZkpWQnZwWVhjNWF4aFpXWDFuQ1pEX25ZZWlPY1BHWEo2SVNCYVJla1BkS000aGZDTGJSMWc0T1IxWXdmTmptcTg5am9oelhUWk1sNDdPTmNwdlJobzdqV19mUjB0STdNMVQ1clprOFdraHNtN1JnVVktXzFPbFJTZVNMQQ?oc=5",
+  "t": "Thermax Q2 Results: Net profit falls 4% as higher input costs, project impairment hit profitability - CNBC TV18",
+  "d": "2026-11-06"
+ },
+ {
+  "tk": "MMFL",
+  "u": "https://nsearchives.nseindia.com/corporate/MMFL_05112026202204_MMFLUAFR30SEP2026.pdf",
+  "t": "Outcome of Board Meeting — MM Forgings Limited has submitted to the Exchange, the financial results for the period ended September 30, 2026",
+  "d": "2026-11-06"
+ },
+ {
+  "tk": "MMFL",
+  "u": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNUnB5QUFaandtdHRLaHJqM2lrLVRNMzYtMnlac1c5am9Ea1lzU01IZGNfVW1mTXJLZTRGOFpxSzNibFNmUDl0VWYycTFVSXRBWGExU0JlX0ZFY2J4em00TFRnV2lja3NaN1hOc3JMWFIxS0I5THJtWUFCMGxQZ1MwYWR5cl9jVEwtNlZSV0RLbEVqUjdFMnN2cWFBbkpfRGYwYlE?oc=5",
+  "t": "M M Forgings Limited Reports 16% Q1 FY27 Sales Growth",
+  "d": "2026-11-06"
+ },
+ {
+  "tk": "MMFL",
+  "u": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPcmt3ZTFUVXQ5b25ldktFMjNCS3NGckFOb2F3Y1hqNkxNaTl3TVlYb1B4bFYzLVBYMEUxcGt1LVZ0am55b01RYmtvSk1FSm8zSUVDVHVoSEp3bVZCVE1meFFjZGJoam8yenlWTDYxOWRLaUV0ZUFlcmFBVkNvbUtId2Y3V1c4MmZRRXZTN2NwSlBaVnYwVC1IOENNWFlJdWxrSlRnaDRjdURBRnlDOUIzYzN3?oc=5",
+  "t": "MM Forgings Q2 revenue rises 42%, core PBT jumps 140%",
+  "d": "2026-11-06"
+ },
+ {
+  "tk": "RATEGAIN",
+  "u": "https://nsearchives.nseindia.com/corporate/RATEGAIN_05112026173256_PR_051126.pdf",
+  "t": "Financial results",
+  "d": "2026-11-06"
+ },
+ {
+  "tk": "RATEGAIN",
+  "u": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxPQ0sxY0NSc2p6YVgzOEhUakNESjltUjBobFF5YUpjWG1aaUxLTzBUemx6aVFTbmxpNDhrc2Q2WVlqdU1SQnNUTjNfdDlISERvV1N0c185WjdqSldTRXVwcjM2TUV6Nk5nMVpFZEtISjZic05lM2tkeEowNTZPNmppYVp2bHV1NTN6WWRXLTl3QzhkNkdZbFZ5U2UzLWVWVWduZUdGSVdETkhyT18yd1hwM3gtNWpqUkx4QXczUjlib1lWR2JRVVlWSzRtR29TV1FVRVFLWUdiWDg4bEx4dDVmTC1zZ2NUdGs?oc=5",
+  "t": "RateGain Travel Technologies Limited Reports Earnings Results for the Second Quarter and Six Months Ended September 30, 2026",
+  "d": "2026-11-06"
+ },
+ {
+  "tk": "RATEGAIN",
+  "u": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOeUpzX2E0VkFnQmZVRXdJZkFIQ1hsbWZucVlKWHViVldScXVTNkFkYUd1a244ZnNwS3ZLMWxScm1FRVo2OVBfeWxZNmJ5Sms5V2loclM0WXFmTXg1Y01DbFNkUDFWZDYtdnJYTDZNOFpKZ2R2a3hqRGFYQ0o1TUFNbXgyUkxVUXczOVBNUWRSQUdqVHpTempHaEl0S3RKOF9UTGxlMVM4UG1DOVdWZjR6cHBWOUxjYlZwLXNCbUdiS3RGRm5mazBwSnJKOVlvUdIBzgFBVV95cUxOeUpzX2E0VkFnQmZVRXdJZkFIQ1hsbWZucVlKWHViVldScXVTNkFkYUd1a244ZnNwS3ZLMWxScm1FRVo2OVBfeWxZNmJ5Sms5V2loclM0WXFmTXg1Y01DbFNkUDFWZDYtdnJYTDZNOFpKZ2R2a3hqRGFYQ0o1TUFNbXgyUkxVUXczOVBNUWRSQUdqVHpTempHaEl0S3RKOF9UTGxlMVM4UG1DOVdWZjR6cHBWOUxjYlZwLXNCbUdiS3RGRm5mazBwSnJKOVlvUQ?oc=5",
+  "t": "RateGain Travel Q2 consolidated net profit up 46.5 pc at Rs 74.72 cr",
+  "d": "2026-11-06"
+ },
+ {
+  "tk": "HAPPYFORGE",
+  "u": "https://nsearchives.nseindia.com/corporate/9876964720_05112026163018_Outcome05112026.pdf",
+  "t": "Expansion in capacity",
+  "d": "2026-11-06"
+ },
+ {
+  "tk": "HAPPYFORGE",
+  "u": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNa0ZBanZrdVdQZGdXUGR3Tm91WkxHRE0yd0UyRGNJcnRScGE3akFJSElpRktiYkoxbmxDM0ZSZmVNRUVmNWdnNGxsX2F1SGV2cHN6X2NIN2lGbVNoN0xWSG1yUW1sMURPWloyM01FanlldGRDbFBXa3laa3FIeFFUWWQ1cnZVc1k2QTE4aHVENVlaeEkwVGRfWkFTRE53MktDZ3ZKdzV5d3p0anA2b0xkdQ?oc=5",
+  "t": "Happy Forgings Limited lifted EBITDA per kg to 75 rupees",
+  "d": "2026-11-06"
+ },
+ {
+  "tk": "HAPPYFORGE",
+  "u": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNTm9uOUx2Z2RNa0t5d2k0RFhoNjRWQmFxdk5KSkxNWHY0TTh5RHVYS0tVdjBjcm13UjdSUzNmWlVFOHJNcEtsNjgtRllDSWZ5T3hVcElwajR4Wk1FNFVGZkFjZ3hqaU5oTnVkUnFwQ3pCRUltOWxvbDBIYTdFdXdPSG9hU1FpNHNNZFFzUUVoekU3Mm9zYTQ4NlJ5Rkp3NUE40gGoAUFVX3lxTE53OUNrTDRnTU93ODhnRW1GY3N0UXBVdF9kSDVmcElXMjktb29wUFBqNjRNLTZuWnZKYy00XzRSQjJqaWF5ZVo0N18xM2hjZGU1ZTVFUjg0NXd6ZUhTQzBJek1uRlJYeUFrYU9ObkxfdGtrU1dTWi1xQXp3OXlxLVZVT2J4UVowNWRVdGdadUtMY1JuaHZOdms0bVhfbk9TX2JVMlRkU3QyWQ?oc=5",
+  "t": "Happy Forgings Q2 Net Profit Rises 33% to Rs 97.5 Crore",
+  "d": "2026-11-06"
+ },
+ {
+  "tk": "POWERICA",
+  "u": "https://nsearchives.nseindia.com/corporate/PowericaNSE_05112026222830_OutcomeofBM.pdf",
+  "t": "Sale of 1,22,500 equity shares of Windstride Power Private Limited, wholly owned subsidiary of the Company representing 49% of its paid up share capital to GE Renewable R&D India Private Limited",
+  "d": "2026-11-06"
+ },
+ {
+  "tk": "POWERICA",
+  "u": "https://nsearchives.nseindia.com/corporate/PowericaNSE_05112026221213_OutcomeofBM.pdf",
+  "t": "Press Release for Q2 & HY1 for FY 2026-27",
+  "d": "2026-11-06"
+ },
+ {
+  "tk": "POWERICA",
+  "u": "https://nsearchives.nseindia.com/corporate/PowericaNSE_05112026213124_Board_meeting_outcome.pdf",
+  "t": "Outcome of Board Meeting — Powerica Limited has submitted to the Exchange, the financial results for the period ended September 30, 2026",
+  "d": "2026-11-06"
+ },
+ {
+  "tk": "GIPCL",
+  "u": "https://nsearchives.nseindia.com/corporate/Gipcl7868_05112026162948_GIPCL_SE_BM_Outcome_05112026_signed.pdf",
+  "t": "Outcome of Board Meeting — GIPCL has submitted to the Exchange, the financial results for the period ended September 30, 2026",
+  "d": "2026-11-06"
+ },
+ {
+  "tk": "JNKINDIA",
+  "u": "https://nsearchives.nseindia.com/corporate/JNKINDIA23_05112026195207_Outcome_with_annexures_final.pdf",
+  "t": "Integrated Filing- Financial — Unaudited (Standalone and Consolidated) Financial Results for the quarter and half year ended September 30, 2026 alongwith limited review report",
+  "d": "2026-11-06"
+ },
+ {
+  "tk": "JNKINDIA",
+  "u": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQU1BKWXBPd25aR2lhUXZyamw4QzJaSDVJUk9qMGpqZ2JyUWtzYmhRTHlmX3hZWTVuSEx0MVZFbzNDeFh3R01zMklHLVBaT1ZoZ3B0T1JNMVI1ODlCUVNleUNQczRjUm9CQ1gxLUQtWnRDZjNibFVMNDdLU1hXcEJ2d1R4UnpJX2NSTzFnMDdDVUNtMWxILWRuX2sxVlVwQV80VldzNFlWZWxFOTA?oc=5",
+  "t": "JNK India Limited Sets November 5 Meeting for September Results",
+  "d": "2026-11-06"
+ },
+ {
+  "tk": "JNKINDIA",
+  "u": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPLXc5ZjhLRmxHT21FTjBxV3ViOENyZ1lrNTZuVjRBRnMwRnVrVVMtXzl2U1JVeHViZVZ1X2JYakk5bXJTemhMcmlKMERRLUxpTExfWUJxNWIySWtXNkNKUDIzM2t0T3pmZ2FncjlMZkJyWXpJaVRSOG9HVGhUVXFqMldYQ1BwdHl3Sy0ySTJHUXMzc1dBdm9Zc0E1ZWphbU9rSmFaX1g3Sk5BUDdz?oc=5",
+  "t": "JNK India net profit jumps 60% in Q2FY27 on higher revenue",
+  "d": "2026-11-06"
+ },
+ {
+  "tk": "INOXINDIA",
+  "u": "https://nsearchives.nseindia.com/corporate/team_sandeshc_05112026162759_Dis7.pdf",
+  "t": "Disclosure under SEBI Takeover Regulations",
+  "d": "2026-11-06"
+ },
+ {
+  "tk": "INOXINDIA",
+  "u": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNVUFKN0xDVlJHRVpOdC1UcjRXbHpNTExwUVotN0RYTGFKYUNkbUItc0Q4LUUzaldRMmZSbmhfREZOTzB5Y2QzZlBGRThnQ29IZUdKdHVKS1hyUVNteVp0NTBqbUo5WjRDSTJoVENwMTRBSnhxVFhnN1ZtOGdoTF8tTk1WN3RoZ0hBUUM4T3B4M3BoX0ZMRlJnTXByTFREMXM0a2hvS1RHNXRRYXM?oc=5",
+  "t": "PVR Inox promoter releases pledge on 8.22 lakh shares",
+  "d": "2026-11-06"
+ },
+ {
+  "tk": "IKS",
+  "u": "https://nsearchives.nseindia.com/corporate/IKS2006_05112026221504_20261105PressReleaseSEUpload.pdf",
+  "t": "IKS Health s Q2 FY27 Earnings Reflect Strong Momentum with 104 % Revenue and 62.5% EBITDA YoY Growth",
+  "d": "2026-11-06"
+ },
+ {
+  "tk": "IKS",
+  "u": "https://nsearchives.nseindia.com/corporate/IKS2006_05112026214823_Outcome-05112026SEupload.pdf",
+  "t": "Outcome of Board Meeting — Inventurus Knowledge Solutions Limited has submitted to the Exchange, the financial results for the period ended September 30, 2026",
+  "d": "2026-11-06"
+ },
+ {
+  "tk": "IKS",
+  "u": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOUGpqWnZSUkNXLVZUSTNmM0dJYzhueWdCYWRxb1ZjMmp4S3ZQdVFuR3hndlM1bE4yX2Z2ZWRqanMySHZSUTF4dVlkMXlIdHFMTGRpc3FwZ3NIcWc3d0M4TGsyOVZ4WXlucXZOU0RBTVI2MG1WXzBhMVlRR2Z2M3RXZ3p3OTJLU011NTJLR2cyeHp1UUFOdnh3cUV6NjhTU3pJdmJWOXl4RkRiOW1vdWhzLUFEYm80SlZDUnpZQ001Mk9IaGRSTWZ6OQ?oc=5",
+  "t": "Inventurus Knowledge Solutions Q2 2027 Earnings Call Is Live",
+  "d": "2026-11-06"
+ },
+ {
+  "tk": "RPTECH",
+  "u": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNVkxJbWJEdFZPZngwX3BnLW1xZUVvcU5SUG12UHZQY0xqUTFncGQ2SGgtdEd3STN5MmVPanpNalRlTmRhVUMtcGJ6UUIyN21YTEhGZ2p4a3psR2tiNlY5M3cwZ2NxckhqUUd4ekNuczBhLVItbVdRdUVjLTZWNGpHR0V6d1VQNkE?oc=5",
+  "t": "Rashi Peripherals Reports Second Quarter EBITDA Growth",
+  "d": "2026-11-06"
+ },
+ {
+  "tk": "THERMAX",
+  "u": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPZ1d1VEtsSDFlV2Vfa2p6MV9oeHRFT29wNldESGlZN3JfSFh6cHFIQzMxWlc0TTZLR0RsOTBicXNmSHUweFBhdDVTTUZjRDZzd0xlSDFRLVA3WDdUSW05N2hMV2NxVnBhVUQxdjh2d2k4R1dvWjFtM1FYMW5aMy1id0hhOGdMTzE3cHl1eG8yWDQ2TExLSzREcGxEdElVS3dtT2NabWt0V09pZw?oc=5",
+  "t": "Thermax Ltd Q2 revenue rose 11% as PBT margin fell to 6.1%",
+  "d": "2026-11-06"
+ },
+ {
+  "tk": "BLUEJET",
+  "u": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPNm9HNnQ4a1ZkN1JmMHE1bjNNVmJ1WVhCYjk3LTFfMUJBYVlXYWlWLUNQalVSb1RLS3ZhYXdBQWM1MzlSb3VkT3AxTVpsMk1LZVRXcnNZalNqWTU4QnFYVi1uYjgxV2ZlWXBROUdZdTZxUU51TkxwM0NFekd6R1NUS1lqLU02VDFLeW5vVWVJTjBJWjlmbnh6dDhWdDlsem9MdjYzM2s3SWUzZGhjbEVNQWJ6QmNsTW1mXzZV?oc=5",
+  "t": "Blue Jet Healthcare Limited raises Rs 800 crore via QIP allotment",
+  "d": "2026-11-06"
+ },
+ {
+  "tk": "BLUEJET",
+  "u": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQeFNYN3p2clBKa1hxNDVFNTN1YjRGeHkzOUl1aDJKaG03YWZZbXA1dENxZlJHTkFLbGRMRHJOMWtWTWFlU0QyYk5SUE1wZ1BidlJ1cnpOWFNHQ0hpdWhrVW5fSzBkN0lra3FtVWRvY1BJTTh4c2dhSkpRaFRvV2p0VUdNb2VfNGdGVmxhUWQ5eEdlTVA2TXBVOFQ0UUEyNGtWRkZEbUtfLS14NmlCX3pkOWNtb2tKVWhZVlE?oc=5",
+  "t": "Blue Jet Healthcare Q2 2027 Earnings Call Is Live",
+  "d": "2026-11-06"
+ },
+ {
+  "tk": "BLUEJET",
+  "u": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOM2c0ZGNhUExweFNYMzZiM0ZMMGdEYk1RWUZYWnV2cUJ2WDlvcTRDcVo1a3BzLWVQSjczcTJmN01QRmhKYmFWMlR0T0Z6QVNZSE5vaGc2TklvbGdVNnRRS19CY1pObnJCemgtNzhmcmF2d1ZzcjluZ1NNUUZHcTdMQ3hqVUVuZlNoN1ZBYkd2dXgxTE45bHc?oc=5",
+  "t": "Blue Jet Healthcare Posts Q2 EBITDA Of ₹119 Crore With 31.6% Margin",
+  "d": "2026-11-06"
+ },
+ {
+  "tk": "JNKINDIA",
+  "u": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQbEwweTU5a3Z4al82RDVReWJ5RU9rWjRyMUxjajVPRzl2eEZDb0lZOThrck5EeDVSdC1TcWN6QTZieVY1Wl9ma0JzVFNOVXE3RWkzc1VKOUdPOEM5TEMzbWR1bk1uOGN4MndWXzRuWG1NLUV0Y2JHVVRxWUlyOEpfeWNrVjhHdno0MUFPQ29ZOWI3Q2M?oc=5",
+  "t": "JNK India Reports Q2 EBITDA Of ₹17.28 Crore With Margins At 9.39%",
+  "d": "2026-11-06"
+ },
+ {
+  "tk": "BIOCON",
+  "u": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPQmtaLWt1ZmVGNzl5R1dTRkU0YnRHN3RZWmxyWnR3TGszMy14NHltaVVTblgyQUxDZmhXYkxDQkoyTHRhN1JzelhkcGZBWUlLajlsLVRad1owYUJwTzRRUnJLdVJLT09vRzJ2cEszWm0tenh3TDhMb3dHRXpBWmZSaGZ1eWZjcWxYbFgxNjctM3BmclZIQmpSZ0Y2Zkg1VVFqMlI3WUZXYm81RGt0SThUOVNaRGV0Q1k5SkY0YkNaNGtoeHZfZ0xVU9IBzgFBVV95cUxNVWVVQnVpNU9RUHJkMzgzOTEyUVJFZEo0blFhejJ4d1psWEJfZG5CZU1XdDU3a2pZVmJXYXhjQk5uelpwTTdrdUJnbmEzajgxQi0zbTBabk5UWjNudXNxNEpNbm56ejdVWGJsQnluWXFtTUYydWpfRUJzaGZEQ1ZYdWtKdmNlNEFQeFM5Ul9vRjUyb1FJNHVIMlUxeV9hc3RmMmVCUTNjdUk2dnVSRzBUZFFKR2ZOOUVKVXBhVzBBS2FnZmloc19vb0xZQlRjQQ?oc=5",
+  "t": "Biocon share price rises nearly 6% despite 52% dip in Q2 profit",
+  "d": "2026-11-06"
+ },
+ {
+  "tk": "BIOCON",
+  "u": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQX3JRSWZWMEUxVEVqWHVxZVNSUm9Od01KZ0tyejRuT3U4ODVMNHFJVThoeDk2ZWJub201Tll2NG1NVG1JczNxMHNBTXVqNDEtd3Q4SHhvVHZrQ040blRhek1HeGdOVU9vTHBiRzUyMUQtSWl2akFHZnZYajNkUW85VE1wOEVsUTM4ZWNQWXprWWlOLUlUWVJOYVhhaGZ3czEyUmJUQ1Rrc3VqRmxsdzJEMjlyZDJ5Rm9CSTlUOUJB?oc=5",
+  "t": "Biocon Limited secures Pebrilzo launches and USD 400m Brazil deal",
+  "d": "2026-11-06"
  }
 ]
