@@ -163,7 +163,7 @@
   "ANANTRAJ": "",
   "ASHAPURMIN": "",
   "BBL": "🔎",
-  "BEML": "",
+  "BEML": "⏫",
   "BIRLACABLE": "",
   "CHOLAHLDNG": "",
   "CMSINFO": "",
@@ -215,7 +215,7 @@
   "FINCABLES": "",
   "INTELLECT": "⏬"
  },
- "last_eval": "2026-11-10",
+ "last_eval": "2026-11-11",
  "events": [
   {
    "date": "2026-10-15",
@@ -1882,6 +1882,20 @@
    "ret_1d": -1.31,
    "ret_1w": 5.89,
    "ret_1m": 1.8
+  },
+  {
+   "date": "2026-11-11",
+   "ticker": "BEML",
+   "name": "BEML",
+   "from": "—",
+   "to": "ADD",
+   "reversal_tf": "",
+   "setup": "BUY",
+   "alloc": "🏆",
+   "ltp": 2112.0,
+   "ret_1d": 5.97,
+   "ret_1w": 2.94,
+   "ret_1m": 8.28
   }
  ]
 }
