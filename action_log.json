@@ -72,7 +72,7 @@
   "INVPRECQ": "",
   "JNKINDIA": "",
   "KENNAMET": "",
-  "KPIGREEN": "🔎",
+  "KPIGREEN": "",
   "KSB": "",
   "LANDMARK": "",
   "LCL": "",
@@ -108,7 +108,7 @@
   "TREL": "",
   "TRITURBINE": "",
   "UNIVCABLES": "",
-  "URBANCO": "",
+  "URBANCO": "⏫",
   "VIPULORG": "",
   "VSTTILLERS": "",
   "WENDT": "",
@@ -154,7 +154,7 @@
   "GAUDIUMIVF": "",
   "HLEGLAS": "",
   "JYOTICNC": "",
-  "MMFL": "⏫",
+  "MMFL": "",
   "RKSWAMY": "",
   "SCODATUBES": "",
   "SJVN": "",
@@ -215,7 +215,7 @@
   "FINCABLES": "",
   "INTELLECT": "⏬"
  },
- "last_eval": "2026-11-17",
+ "last_eval": "2026-11-18",
  "events": [
   {
    "date": "2026-10-15",
@@ -2302,6 +2302,48 @@
    "ret_1d": 2.53,
    "ret_1w": 2.84,
    "ret_1m": 9.22
+  },
+  {
+   "date": "2026-11-18",
+   "ticker": "KPIGREEN",
+   "name": "KPIGREEN",
+   "from": "REVERSAL",
+   "to": "—",
+   "reversal_tf": "",
+   "setup": "BOUNCE",
+   "alloc": "🚨",
+   "ltp": 325.9,
+   "ret_1d": 1.51,
+   "ret_1w": -4.29,
+   "ret_1m": 3.51
+  },
+  {
+   "date": "2026-11-18",
+   "ticker": "MMFL",
+   "name": "MMFL",
+   "from": "ADD",
+   "to": "—",
+   "reversal_tf": "",
+   "setup": "HOLD",
+   "alloc": "",
+   "ltp": 659.05,
+   "ret_1d": -0.81,
+   "ret_1w": 5.84,
+   "ret_1m": 29.57
+  },
+  {
+   "date": "2026-11-18",
+   "ticker": "URBANCO",
+   "name": "URBANCO",
+   "from": "—",
+   "to": "ADD",
+   "reversal_tf": "",
+   "setup": "BUY",
+   "alloc": "🌱",
+   "ltp": 172.73,
+   "ret_1d": 6.16,
+   "ret_1w": 6.15,
+   "ret_1m": 21.23
   }
  ]
 }
