@@ -16,7 +16,7 @@
   "INCAP": "",
   "INDUSTOWER": "",
   "INOXINDIA": "",
-  "LAKSELEC": "",
+  "LAKSELEC": "⏫",
   "LATENTVIEW": "",
   "MAFANG": "",
   "MON100": "",
@@ -37,7 +37,7 @@
   "ANURAS": "",
   "ARE&M": "",
   "ASAHIINDIA": "",
-  "AVTNPL": "",
+  "AVTNPL": "⏫",
   "BEPL": "",
   "BIOCON": "",
   "BLUEJET": "",
@@ -48,7 +48,7 @@
   "CYIENTDLM": "",
   "DEEDEV": "",
   "DIFFNKG": "",
-  "ECOSMOBLTY": "🔎",
+  "ECOSMOBLTY": "",
   "EIHOTEL": "",
   "EIMCOELECO": "",
   "ELECON": "",
@@ -159,7 +159,7 @@
   "SCODATUBES": "",
   "SJVN": "",
   "SUNDRMFAST": "",
-  "ABREL": "🔎",
+  "ABREL": "",
   "ANANTRAJ": "",
   "ASHAPURMIN": "",
   "BBL": "",
@@ -215,7 +215,7 @@
   "FINCABLES": "",
   "INTELLECT": "⏬"
  },
- "last_eval": "2026-11-18",
+ "last_eval": "2026-11-19",
  "events": [
   {
    "date": "2026-10-15",
@@ -2344,6 +2344,62 @@
    "ret_1d": 6.16,
    "ret_1w": 6.15,
    "ret_1m": 21.23
+  },
+  {
+   "date": "2026-11-19",
+   "ticker": "LAKSELEC",
+   "name": "LAKSELEC",
+   "from": "—",
+   "to": "ADD",
+   "reversal_tf": "",
+   "setup": "BUY",
+   "alloc": "🏆",
+   "ltp": 868.9,
+   "ret_1d": 2.19,
+   "ret_1w": 4.31,
+   "ret_1m": 11.35
+  },
+  {
+   "date": "2026-11-19",
+   "ticker": "AVTNPL",
+   "name": "AVTNPL",
+   "from": "—",
+   "to": "ADD",
+   "reversal_tf": "",
+   "setup": "BUY",
+   "alloc": "💎",
+   "ltp": 103.12,
+   "ret_1d": -1.13,
+   "ret_1w": 3.81,
+   "ret_1m": 12.52
+  },
+  {
+   "date": "2026-11-19",
+   "ticker": "ECOSMOBLTY",
+   "name": "ECOSMOBLTY",
+   "from": "REVERSAL",
+   "to": "—",
+   "reversal_tf": "",
+   "setup": "EXIT",
+   "alloc": "🚨",
+   "ltp": 121.11,
+   "ret_1d": -1.87,
+   "ret_1w": 0.98,
+   "ret_1m": 13.8
+  },
+  {
+   "date": "2026-11-19",
+   "ticker": "ABREL",
+   "name": "ABREL",
+   "from": "REVERSAL",
+   "to": "—",
+   "reversal_tf": "",
+   "setup": "BOUNCE",
+   "alloc": "🚨",
+   "ltp": 1225.8,
+   "ret_1d": -1.38,
+   "ret_1w": 2.32,
+   "ret_1m": 13.14
   }
  ]
 }
