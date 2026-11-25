@@ -10242,5 +10242,27 @@
     "pat_cagr": 139.1,
     "rev_cagr": 43.2,
     "mcap_3y": null
+  },
+  {
+    "ticker": "ENNATURE",
+    "name": "Ennature Bio Pharma Private Limited",
+    "sector": "Healthcare",
+    "nse_symbol": "ENNATURE",
+    "buy_avg": 161.9344,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
   }
 ]
