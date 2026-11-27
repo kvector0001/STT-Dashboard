@@ -10275,5 +10275,27 @@
     "pat_cagr": 0,
     "rev_cagr": 0,
     "mcap_3y": null
+  },
+  {
+    "ticker": "HEGRAPHITE",
+    "name": "auto",
+    "sector": "Pending",
+    "nse_symbol": "HEGRAPHITE",
+    "buy_avg": 485.8102,
+    "moat_type": "Pending",
+    "moat_class": "pending",
+    "conviction": 0,
+    "moat": "Analysis pending — add manually or re-run Claude.ai analysis",
+    "leadership": "Pending",
+    "non_rep": "Pending",
+    "tailwinds": [
+      "Pending analysis"
+    ],
+    "risks": [
+      "Pending analysis"
+    ],
+    "track": [
+      "Add tracking KPIs"
+    ]
   }
 ]
